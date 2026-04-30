@@ -1,0 +1,856 @@
+Title: Plant quantum biology: The quantum dimension of plant responses to stress
+
+URL Source: https://www.sciencedirect.com/science/article/pii/S2667064X25001988
+
+Markdown Content:
+1. Introduction
+---------------
+
+Plant biology traditionally explains stress responses through classical physics and biochemistry. However, growing evidence indicates that quantum phenomena, typically associated with the microscopic realm, may significantly influence biological processes (Pooam et al., 2019). This emerging discipline, termed quantum biology (QB) (McFadden and Al-Khalili, 2018), investigates the potential role of quantum mechanics (QM) in vital plant functions, including photosynthesis, light perception, and stress response (Kim et al., 2021).
+
+A fundamental principle of QM is wave-particle duality, which posits that particles like electrons and photons exhibit both wave-like and particle-like characteristics. This concept is quantified by the de Broglie relation:(1)λ=h/p where _λ_ is the wavelength of the particle, _h_ is Planck's constant, and _p_ represents the momentum of the particle. The momentum is a measure of a particle's mass in motion and is calculated as _p_ = _mv_, where _m_ is the mass of the particle and _v_ is its velocity. This equation highlights that particles with a momentum possess a corresponding wavelength, a crucial aspect when considering electron transfer and energy propagation in biological systems (Zhao et al., 2016).
+
+Another QM concept is superposition, describing a quantum system's ability to exist in multiple states concurrently until measured. For instance, an electron can simultaneously possess multiple spin states. This superposition can be mathematically expressed as a linear combination of basis states:(2)∣Ψ〉=α∣0〉+β∣1〉where ∣Ψ⟩ represents the quantum state of the system and is a vector in a Hilbert space, a complex vector space that describes all possible states of the quantum system. ∣0⟩ and ∣1⟩ are the basis states (e.g., spin-up and spin-down), whereas α and β are complex numbers called amplitudes. They are coefficients that determine the probability of finding the system in each basis state. The squares of the magnitudes of these amplitudes, ∣α∣2 and ∣β∣2, represent the probabilities of measuring the system in the ∣0⟩ and ∣1⟩ states, respectively. The sum of these probabilities must be 1 (i.e., ∣α∣2 + ∣β∣2 = 1). This equation captures the essence of quantum superposition, where a system can exist in multiple states at once until a measurement forces it to choose one (Forcer et al., 2002).
+
+Closely related to superposition is quantum entanglement (QE), a phenomenon where two or more particles become correlated such that their quantum states are intrinsically linked, irrespective of the distance between them (Harney, 2020). This correlation is described by a joint quantum state that cannot be factored into individual states for each particle. Additionally, quantum tunneling (QT) enables particles to traverse potential energy barriers that would be classically forbidden. The probability of tunneling is dependent on the barrier's height and width, and is characterized by an exponential decay:(3)T∝e−2 κ L
+
+Here, _T_ represents the transmission probability, indicating the likelihood of a particle successfully tunneling through the barrier. A higher T signifies a greater probability of tunneling. _κ_ is the decay constant, dependent on the barrier height and the particle's mass, and _L_ is the width of the potential energy barrier. This phenomenon is critical for electron transfer in biological systems, particularly in enzyme-catalyzed reactions and charge separation during photosynthesis (Onuchic et al., 2008).
+
+Furthermore, the time evolution of a quantum system is governed by the Hamiltonian operator (Ĥ), which represents the total energy of the system. Ĥ can be expressed as the sum of the kinetic energy operator and the potential energy operator (H^=T^+V^). Its eigenvalues, representing the allowed energy levels of the system, are the possible values obtained when Ĥ operates in a state. The Hamiltonian plays a central role in QM, analogous to the role of energy in classical mechanics (Ardenghi et al., 2011).
+
+The time-dependent Schrödinger equation describes how the quantum state of a system evolves over time:(4)H^ψ(t)=i ℏ∂∂t ψ(t)where _i_ is the imaginary unit, ℏ is the reduced Planck constant, (∂/∂t)ψ(t) represents the time derivative of the quantum state ψ (t), Ĥ is the Hamiltonian operator and Ψ(t) is the time-dependent quantum state of the system (Schulze-Halberg, 2010). For example, in the context of electron transfer in photosynthetic complexes, Ĥ encompasses terms representing the kinetic energy of the electrons, the potential energy arising from interactions between electrons and surrounding molecules, and the potential energy induced by external fields. The eigenvalues of Ĥ correspond to the system's allowed energy levels, and the associated eigenvectors represent the stationary states. Transitions between these energy levels can occur via the absorption or emission of photons, a process fundamental to photosynthesis and light perception (Negulescu, 2021).
+
+In the context of plant stress responses, understanding the Ĥ of relevant quantum systems, such as photosynthetic complexes or photoreceptors, is critical for elucidating the mechanisms by which plants optimize energy transfer and respond to environmental cues. Variations in environmental factors, like light intensity or temperature, alter Ĥ, thereby influencing the evolution of the system's quantum state (Richter et al., 2008; Schoffman et al., 2020).
+
+Within the broader context of plant stress responses, these quantum phenomena may contribute to several processes, including: (i) enhanced energy transfer efficiency in photosynthetic light-harvesting complexes, enabling plants to optimize energy capture under fluctuating light conditions; (ii) sensitive detection of environmental cues through quantum coherence in photoreceptors, facilitating rapid adaptation to stress; (iii) efficient radical scavenging via quantum spin correlations, minimizing oxidative damage; and (iv) fine-tuning of metabolic pathways through quantum tunneling in enzyme-catalyzed reactions, optimizing resource allocation under stress.
+
+This review aims to explore the accumulating evidence supporting the role of QB in plant stress responses, critically evaluate the current state of research, and highlight the potential implications for developing stress-resilient crops. By elucidating the quantum dimension of plant biology, we may unlock novel strategies to enhance plant productivity and sustainability in a changing climate.
+
+2. A quantum of photosynthesis: light harvesting and energy transfer
+--------------------------------------------------------------------
+
+Photosynthetic light harvesting exemplifies the extraordinary efficiency of biological systems in utilizing solar energy, and QM is essential for understanding its underlying mechanisms. Photosynthetic organisms achieve near-unity quantum efficiency, converting absorbed photons into chemical energy with minimal loss. This efficiency is critical for sustaining life on Earth, enabling plants and other photosynthetic organisms to thrive even under low-light conditions. Energy absorbed by light-harvesting complexes is rapidly and efficiently transferred to reaction centers, where it is converted into chemical energy. This transfer occurs on ultrafast timescales (femtoseconds to picoseconds), minimizing energy dissipation (Schmid, 2008). Photosynthetic organisms have evolved sophisticated light-harvesting systems capable of adapting to a wide range of light conditions, from intense sunlight to deep shade. Quantum coherence (QC) may enhance energy transfer efficiency by allowing the system to explore multiple energy pathways concurrently (Uthailiang et al., 2025). The efficiency and speed of energy transfer observed in photosynthetic systems exceed the limits predicted by classical physics alone. QC and QE have emerged as key quantum phenomena potentially contributing to this remarkable process. However, stronger evidence supports the role of QC in explaining the observed efficiency and speed of energy transfer in photosynthetic complexes, whereas while QE remains a topic of active research and some theoretical models suggest its potential involvement, direct experimental evidence in photosynthetic systems is currently less robust. For instance, recent research has established a link between exciton condensation and exciton transport in room-temperature light harvesting. By modeling the Fenna-Matthews-Olson (FMO) complex with explicit consideration of intrachromophore electron correlation, an amplification of the exciton population through an exciton-condensate-like mechanism has been observed, leading to a significant enhancement of the exciton transfer rate, reaching nearly 100 % (Schouten et al., 2023). In a recent paper, the overall kinetics beyond ultrafast events were found to be governed by vibrational relaxation and cooling, providing a unified picture of chlorophyll relaxation dynamics (Keil et al., 2025).
+
+In photosynthesis, QC describes the ability of excitons (energy excitations) to exist in multiple electronic states concurrently (Mančal, 2020). This enables excitation energy to explore multiple pathways within the light-harvesting complex, potentially identifying the most efficient route to the reaction center (Cui et al., 2024). Conversely, decoherence, caused by environmental interactions, disrupts this process (Rathbone et al., 2018). While the initial observation of long-lived oscillations in photosynthetic complexes suggested the presence of QC as a potential contributor to efficient energy transfer, the precise nature of this coherence remains a subject of ongoing debate. Two primary interpretations have emerged: electronic coherence (EC), involving the superposition of electronic excited states (Yen and Cheng, 2010), and vibronic coherence (VC), arising from vibronic coupling between electronic and vibrational degrees of freedom (Fuller et al., 2014). Ultrafast spectroscopic techniques, particularly two-dimensional electronic spectroscopy (2DES)(see 2.2 below), have revealed oscillatory signals consistent with both electronic and vibronic timescales. Evidence for EC includes the energy gap dependence of some observed lifetimes, which aligns with exciton Hamiltonian models (He et al., 2018). Conversely, the matching of oscillation frequencies to vibrational modes, strong temperature dependence, and results from isotopic labeling experiments point towards a significant role for VC and vibronic coupling (Chen et al., 2016). Theoretical frameworks are increasingly incorporating vibronic interactions to explain experimental findings. It is now recognized that the observed quantum signatures likely involve a complex interplay of both electronic and vibrational dynamics, and the relative contribution of each to the remarkable efficiency of photosynthesis continues to be an active and exciting area of research.
+
+Upon photon absorption by a chromophore in a light-harvesting complex, an electronic excitation, an exciton is generated (Rathbone et al., 2018). This exciton represents the energy that needs to be transferred to the reaction center. QC allows the exciton to exist as a superposition of multiple electronic states (Fassioli et al., 2014). This superposition implies that the exciton is delocalized, existing as a wave-like distribution across multiple chromophores rather than localized to a single chromophore or energy level (Zhu et al., 2024). Consequently, the exciton exhibits wave-like behavior, simultaneously exploring various energy transfer pathways. This wave-like propagation facilitates the sampling of different routes to the reaction center without committing to a specific pathway. Decoherence causes the superposition to collapse, forcing the exciton to localize to a single chromophore and follow a defined pathway. The protein scaffold surrounding the chromophores plays a critical role in minimizing decoherence and prolonging coherence (Mančal, 2020).
+
+QE involves the correlation of quantum states between different chromophores (light-absorbing molecules) within the light-harvesting complex. When chromophores are entangled, their quantum states become interconnected, such that the state of one chromophore is dependent on the state of another, irrespective of their separation within the complex (Aref'eva and Volovich, 2017). This correlation can potentially enhance energy transfer by coordinating the movement of excitons and minimizing energy dissipation.
+
+Mathematically, an entangled state cannot be expressed as a simple product of individual chromophore states. Instead, it must be described by a joint quantum state. If we consider a simplified system of two chromophores, A and B, within a light-harvesting complex, a possible entangled state for this system can be represented as:(5)|Ψ〉=(1/√2)(|A*〉|B〉+|A〉|B*〉)where |Ψ⟩ represents the overall quantum state of the system, (1/√2) is the normalization factor, ∣A∗⟩∣B⟩ represents the configuration where chromophore A is excited and chromophore B is in its ground state, whereas ∣A⟩∣B*⟩ represents the configuration where chromophore A is in its ground state and chromophore B is excited. The sign “+” indicates a quantum superposition, meaning the system exists in both configurations simultaneously. Eq. (5) describes an entangled state because the state of chromophore A is intrinsically linked to the state of chromophore B, a correlation that transcends classical information and represents a fundamental quantum property. The system exists in a superposition of both possibilities until a measurement is made, upon which it collapses into one of the two configurations. The equal weighting imparted by the normalization factor to each configuration indicates a 50 % probability of measuring either configuration. This entangled state exemplifies a correlation that cannot be achieved in classical physics. An open question is whether this type of correlation plays a role in enhancing energy transfer efficiency within photosynthetic systems.
+
+The interplay of QC and QE may enable photosynthetic organisms to optimize energy transfer in complex and dynamic environments (Su and Man, 2015). Recent advancements in ultrafast spectroscopy have provided evidence for the presence of these quantum phenomena in various photosynthetic organisms, suggesting their potential functional significance (Fleming and Scholes, 2024). However, the exact role and extent of their contribution remain a subject of ongoing research and debate.
+
+There are several examples of light-harvesting complexes and quantum phenomena. The FMO complex, found in green sulfur bacteria, is one of the most extensively studied light-harvesting complexes in the context of QB (Kundu and Chandrashekar, 2022). It functions as a bridge, transferring excitation energy from the chlorosome antenna to the reaction center (Wen et al., 2009). Ultrafast spectroscopy experiments have revealed long-lived QC in the FMO complex, even at physiological temperatures (Panitchayangkoon et al., 2010). This coherence may contribute to the efficient and robust energy transfer observed in these bacteria. The specific arrangement of bacteriochlorophyll molecules within the FMO complex is thought to play a role in maintaining coherence and guiding energy flow (Thyrhaug et al., 2018).
+
+Photosystem II (PSII), found in plants, algae, and cyanobacteria, is a crucial component of photosynthesis, responsible for water splitting and oxygen evolution (Vinyard et al., 2019). While PSII research has primarily focused on its catalytic activity, there's growing interest in the potential role of quantum effects in its light-harvesting and energy transfer processes. The potential for QC and QE in the antenna complexes associated with PSII has been investigated and the complex array of chlorophyll molecules within PSII's antenna complexes makes it a potential site for quantum phenomena (Li et al., 2021).
+
+Hamiltonian models have been used to simulate energy transfer in light-harvesting complexes (Naicker et al., 2022), incorporating the positions and orientations of chromophores, as well as their interactions with each other and the environment. By analyzing Ĥ, the most probable energy transfer pathways and the efficiency of the process can be assessed (Liu et al., 2024a). However, light-harvesting complexes operate in a warm, aqueous environment, subject to diverse noise sources, including thermal fluctuations generating vibrations of the protein scaffold and solvent molecules, and protein dynamics involving motions of the chromophore-surrounding protein (Cui et al., 2024). Environmental noise introduces time-dependent fluctuations to Ĥ. These fluctuations can disrupt QC and QE, leading to decoherence. The noise can modify chromophore energy levels and their coupling, altering energy transfer pathways (Chin et al., 2010). Decoherence arises from environmental interactions causing the quantum system to become entangled with the environment, resulting in a loss of phase coherence. The decoherence timescale is critical for determining the extent to which quantum effects contribute to energy transfer (Cai, 2019).
+
+### 2.1. Ultrafast spectroscopy and the persistence of coherence
+
+Ultrafast spectroscopy has revolutionized the understanding of energy transfer dynamics in photosynthetic complexes (Maiuri et al., 2020). By probing molecular events on femtosecond to picosecond timescales, these techniques have provided compelling evidence for quantum coherence in photosynthetic organisms, even under physiological conditions (Harush and Dubi, 2023).
+
+Ultrafast spectroscopy typically employs a pump-probe technique. A short laser pulse (the pump) excites the sample, initiating energy transfer processes (Tomita and Matsuoka, 1986). A subsequent, time-delayed laser pulse (the probe) probes the excited state dynamics (Maiuri et al., 2020). By varying the delay time between the pump and probe pulses, the evolution of the excited state can be tracked and the energy transfer pathways can be observed (Zigmantas et al., 2022) (Fig. 1 A). Techniques like two-dimensional electronic spectroscopy (2DES) can reveal quantum coherence by detecting oscillatory signals that arise from the superposition of electronic states (Novelli et al., 2020; Schlau-Cohen et al., 2011). These oscillations provide direct evidence of coherent energy transfer (Cipolloni et al., 2017) (Fig 1 B). QC can persist in photosynthetic complexes even at room temperature and in physiological buffer solutions, challenging the notion that it's a fragile, low-temperature phenomenon, and coherence lasts for hundreds of femtoseconds to picoseconds, suggesting that it could play a functional role in energy transfer (Panitchayangkoon et al., 2010).
+
+1.   Download: Download high-res image (343KB)
+2.   Download: Download full-size image
+
+Fig. 1. Ultrafast spectroscopy and two-dimensional electronic spectroscopy (2DES). (A) Ultrafast spectroscopy utilizes a pump-probe method to track excited state evolution and energy transfer pathways by varying the delay between pump and probe laser pulses. (B) 2DES detects oscillatory signals from electronic state superposition, providing direct evidence of quantum coherence (adapted from Cipolloni et al., 2017).
+
+The observation of persistent QC in photosynthetic complexes under physiological conditions using ultrafast spectroscopy strongly suggests a significant role for quantum effects in facilitating efficient energy transfer; however, the definitive extent and mechanisms of this contribution are still under investigation. The protein scaffold facilitates this process (Panitchayangkoon et al., 2010).
+
+### 2.2. Protein scaffolding and energy flow
+
+The protein environment influences QC and energy transfer. The protein scaffold provides a precise and rigid structural framework that holds the chromophores (light-absorbing molecules) in specific positions and orientations (Kawakami et al., 2022). This framework establishes a specific chromophore network that enables efficient energy flow. The protein environment will also determine the distance between the chromophores, thereby determining electronic coupling. Acting as a protective shield, the protein environment minimizes chromophore interactions with the surrounding solvent and other environmental factors, reducing decoherence. The rigid protein structure maintains chromophore positioning and electronic coupling (Roscioli et al., 2018), crucial for optimizing energy transfer pathways and minimizing energy loss. Furthermore, the protein environment fine-tunes chromophore energy levels, creating an energy gradient that facilitates efficient energy transfer. This tuning is achieved through interactions between chromophores and specific amino acid residues (Slavov et al., 2020), affecting the Ĥ of the system. The protein scaffold also creates specific energy transfer pathways, guiding excitation energy along optimal routes (Müh et al., 2007). This guidance involves specific chromophore-protein interactions and the complex's overall structure (Mirkovic et al., 2017). The protein can create a funnel-like structure, that guides the energy to the reaction center (Yang et al., 2022). Maintaining precise inter-chromophore distances and orientations, the protein preserves electronic coupling, essential for energy transfer (Hsu, 2009).
+
+Protein dynamics, such as conformational changes and vibrational motions, can influence energy transfer pathways and coherence lifetimes (Brecht et al., 2009), an area of ongoing research. Thus, the protein environment is not merely a passive scaffold; it actively participates in energy transfer, maintaining QC, tuning energy levels, and guiding energy flow (Fresch et al., 2020). Through precise control of its structure and dynamics, photosynthetic organisms have evolved highly efficient light-harvesting systems that minimize decoherence and optimize energy flow. For example, in the FMO complex, the protein scaffold's specific arrangement of bacteriochlorophyll molecules facilitates efficient energy transfer to the reaction center (Wen et al., 2010).
+
+### 2.3. Biomimicry and artificial light-harvesting systems
+
+Based on quantum phenomena in natural light-harvesting complexes, biomimicry aims to develop efficient, sustainable artificial systems (Stevens et al., 2022). These systems replicate QC and QE by precisely arranging chromophores using materials like self-assembling peptides (Bischoff et al., 2023), quantum dots (Wagner et al., 2019) and organic nanostructures (Song et al., 2021). This approach minimizes decoherence and optimizes energy transfer, potentially enhancing photosynthetic efficiency in crops. Recently, the self-assembly of synthetic chlorophyll derivatives into highly ordered antenna aggregates that closely mimic the structure and function of natural light-harvesting complexes has been demonstrated, highlighting that quantum-inspired design in this field is not solely theoretical and providing a tangible step towards creating functional biomimetic systems (Matsubara et al., 2024). Nanoparticle-mediated delivery of light-harvesting molecules further improves light absorption (Liu et al., 2024b). Synthetic chromophore assemblies that mimic natural arrangements have also been developed, demonstrating the potential of biomimicry to inspire novel technologies (Curti et al., 2023). While current synthetic systems at best approach the complexity and efficiency of natural light-harvesting systems, the application of quantum principles within biomimetic designs has potential for future sustainable energy and food solutions. Continued advancements in nanotechnology, materials science, and QB may eventually pave the way for impactful applications; however, direct experimental evidence demonstrating significant improvements in crop yield through these specific approaches is still an area of active research and development.
+
+### 2.4. The debate on long-lived coherence
+
+The observation of long-lived QC in photosynthetic light-harvesting complexes has generated a lively debate regarding its functional significance (Panitchayangkoon et al., 2010). Proponents argue coherence enhances energy transfer by enabling simultaneous exploration of multiple pathways, persisting on biologically relevant timescales and providing robustness against environmental noise (Hildner et al., 2013; Matarèse et al., 2023; McCord et al., 2024; Zhu et al., 2022). Critics contend it's a structural byproduct, with classical mechanisms adequately explaining energy transfer, and question coherence's persistence amidst rapid decoherence (Marais et al., 2018).
+
+While compelling evidence suggests that coherence may play a role in enhancing energy transfer efficiency, challenges remain in distinguishing between quantum and classical explanations. Further research, including advanced experimental techniques and theoretical modeling, will be crucial for resolving this debate and gaining a deeper understanding of the quantum mechanisms underlying photosynthesis.
+
+3. Quantum biology of magnetosensitivity in plants
+--------------------------------------------------
+
+Plants, like many other organisms, exhibit remarkable sensitivity to magnetic fields (MFs), influencing various physiological processes, including growth, development, and circadian rhythms (Maffei, 2022). For instance, studies have demonstrated that the directional growth of roots can be altered by the application of MFs (Hasenstein et al., 2022). While classical biophysical mechanisms struggle to fully account for such effects, the precise mechanisms underlying this magnetosensitivity remain a topic of active research. QB has emerged as a promising framework for understanding how plants detect and respond to MF variations. A central hypothesis is the role of cryptochromes, blue-light photoreceptors, as potential magnetosensors, operating through the radical pair mechanism (RPM) (Thoradit et al., 2023). The RPM postulates that MFs can influence the interconversion between singlet and triplet spin states of radical pairs (RPs) formed within cryptochromes. Specifically, the flavin adenine dinucleotide (FAD) cofactor within cryptochrome absorbs a photon and becomes reduced, forming a radical pair with a neighboring amino acid, often a tryptophan residue. This results in the formation of a radical pair consisting of the reduced flavin radical (FAD•−) and a tryptophan radical (Trp•+) (Denton et al., 2024). These spin state transitions, governed by QM, alter the reaction kinetics and product formation, ultimately triggering downstream signaling pathways that mediate plant responses to MFs. The sensitivity of RP reactions to weak MFs arises from the elusive influence of these fields on the spin dynamics of the radicals. This is because the interconversion between the singlet and triplet spin states of the radical pair is governed by the QM property of electron spin, a phenomenon that lies outside the realm of classical physics (Solov’yov and Schulten, 2012).
+
+While cryptochromes are the most well-studied magnetosensors in other organisms, theoretical work suggests that alternative mechanisms involving RP formation might also play a role in plant magnetosensitivity. One such hypothetical mechanism involves the assembly of iron-sulfur (Fe-S) clusters, essential cofactors in numerous enzymes. Fe-S clusters are considered potential magnetosensors due to their biogenesis pathways, which involve the formation of transient radical species (Parmagnani et al., 2022a). The magnetic moments of the iron ions within these clusters could then influence the spin dynamics of these RPs, potentially allowing for the transduction of MF information into biochemical signals (Hore and Mouritsen, 2016). However, it is important to note that direct experimental evidence for this mechanism in plants is currently lacking.
+
+### 3.1. The radical pair mechanism
+
+Among the various proposed mechanisms for MF perception, the RPM of chemical magnetosensing provides a suitable explanation for the observed alterations in redox reaction rates, and subsequent changes in free radical and ROS concentrations, observed in diverse organisms, including plants, animals, and humans (Albaqami et al., 2020; Bertea et al., 2015b; Pooam et al., 2019, 2020b). The theoretical framework of the RPM indicates that MFs, with strengths comparable to the geomagnetic field (GMF), although seemingly too weak to directly initiate cellular biochemical reactions, can interact with transient reaction intermediates, influencing the reaction rates of these processes. Specifically in plants, studies have shown that MF-induced modulation of cryptochrome signaling and/or redox reactions can lead to alterations in cellular ROS synthesis (Parmagnani et al., 2022b; Pooam et al., 2020a).
+
+Spin interactions, despite involving energies significantly lower than thermal energy, _k_ B _T_ (Hayashi, 2004), exert significant effects on chemical reactions. It is established that applied MFs and magnetic isotope substitution can modify the rates and product yields of free-radical reactions, involving the formation of short-lived paramagnetic intermediates in non-equilibrium electron spin states. Organic RPs are the most common origin of these spin-chemical effects. Typically formed in a singlet (S) or triplet (T) state through spin-conserving reactions, these RPs undergo coherent interconversion between their S and T states. This interconversion is governed by Zeeman, hyperfine, exchange, and dipolar interactions between the electrons and coupled nuclear spins (Hore et al., 2020). Applied MFs influence the extent and timing of this S↔T interconversion, thereby affecting the yields of spin-selective products formed from the S and T states (Jones, 2016).
+
+A characteristic scenario in the RPM involves the creation of a spin-correlated RP. Consider, for instance, the formation of a RP with initially parallel electron spins from an electronically excited triplet state. The spin dynamics can be visualized using vector representations of the RP spin states, as shown in Fig. 2 A. The individual electron spins are constrained to cones aligned with the quantization axis, either upward (α-spin) or downward (β-spin). The resultant spin orientation is either 1, aligned parallel (**_T_+**), perpendicular (**T 0**), or antiparallel (**T**) to the quantization axis, or 0 (**S**). The corresponding spin eigenfunctions are α 1 α 2 for _T_+, β 1 β 2 for T, 1 2(α 1 β 2+β 1 α 2) for T 0 and 1 2(α 1 β 2−β 1 α 2) for S. Fig. 2 A illustrates a phase relationship between the spins of different electrons. However, the phase relationship that distinguishes S and T 0 operates between the spin function products α 1 β 2 and β 2 α 1, rather than between the spins of individual electrons (Steiner and Ulrich, 1989).
+
+1.   Download: Download high-res image (247KB)
+2.   Download: Download full-size image
+
+Fig. 2. Radical Pair Spin States and Magnetic Field Dependence (MFD). (**A**) Vector representation of radical pair spin states, showing triplet states (_T_+, T-, T 0) and the singlet state (S) [adapted from Steiner and Ulrich (1989)]. Fig. 2 B (B) Phenomenological magnetic field dependence (MFD) curves for reaction yields, illustrating various response patterns. Dotted lines indicate sign inversion of effects due to changes in precursor multiplicity within the radical pair mechanism (RPM) [adapted from Steiner and Ulrich (1989)].
+
+The dominant internal factor influencing electron spin motion is isotropic hyperfine coupling, where accurate determination of isotropic hyperfine coupling constants relies on precise calculation of electron density at nuclei possessing non-zero magnetic moments, a process known as Fermi contact first-order interaction (Chipman and Rassolov, 1997). The effective magnetic field, denoted as _B_, is the vector sum of an external magnetic field, _B_ 0, and a composite MF resulting from the hyperfine couplings (_hfc_) of nuclear spins within the radical, as expressed in the following equation.(6)B=B 0+B h f c
+
+In the absence of a MF, the total spin angular momentum of electrons and nuclei remains conserved, necessitating a reciprocal change in nuclear spin to compensate for any alteration in electron spin (Steiner and Ulrich, 1989). When considering the MF dependence (MFD) of chemical reaction yields mediated by the RPM, three distinct scenarios, or combinations thereof, can be considered, as proposed by Sakaguchi et al. (1980). Fig. 2 B illustrates these phenomenological cases of MFD in reaction yields. In the first scenario, the suppression of hyperfine coupling-induced S↔_T_+,- transitions by a MF reveals a saturation behavior in product yield (R S). This behavior is characterized by parameters such as B 1/2, the field where half of the saturation effect is obtained, and B s, the onset of saturation, though the latter's definition is somewhat imprecise. The yield exhibits a rapid increase at low fields and remains relatively constant above B s. In the second scenario, a monotonically increasing MFD curve necessitates significantly high MFs to achieve saturation. The yield decreases with increasing magnetic field due to S-T 0 conversion via the electronic Zeeman term. A combination of the first and second scenarios (case 1,2) results in a yield that initially increases with increasing magnetic field, characterized by the field values B m, corresponding to the maximum, and B c, the zero-line crossing. In the final scenario (case 3), RPs experience a moderate but constant exchange interaction, characterized by B m, the field at the maximum, and ΔB, corresponding to the width of the resonance.
+
+According to the RPM, the singlet-triplet conversion rate is diminished at low fields (hyperfine mechanism) and augmented at high fields (Δ _g_ mechanism). When a MF surpasses the hyperfine interaction, the triplet states _T_+,- are separated from the remaining energy levels due to the Zeeman interaction, as expressed in the following equation:(7)E z=μ B g j B e x t m j where _µ B_ is the Bohr magneton, _g j_ is the Landé _g_-factor, _B ext_ is the applied MF and _m j_ is the magnetic moment. Consequently, spin-dependent kinetics become MF-dependent. The Zeeman interaction with the external magnetic field alters the energy levels of the RP, modifying the extent and frequency of S ↔ T, thereby inducing MF effects (MFEs) on the radical pair's lifetime and the yields of reaction products (Zollitsch et al., 2018). The MFE develops during the lifetime of the spin-correlated radical pair (RP1) and is inherited by downstream products. Thus, the time- and wavelength-dependence of the MFE can provide insights into F•−, even when its spectral signature is challenging to discern in Δ _A_ data deconvolution (Zollitsch et al., 2018).
+
+A prominent example of MFE is the flavin-based radical pair system. In these proteins, photoexcitation of the flavin adenine dinucleotide (FAD) cofactor in its fully oxidized redox state, FAD+, generates a singlet excited state, 1 FAD*, which is subsequently reduced on a picosecond timescale through sequential electron transfers along a chain of tryptophan or guanosine residues, yielding the singlet radical pair, 1[FAD• Trp•+] (Evans et al., 2015). In radical pairs formed through photo-induced electron transfer reactions in sensor proteins, magnetic sensitivity arises from the interplay between coherent quantum spin dynamics and the spin-selective reactivity of spin-correlated radicals, resulting in a signaling state yield dependent on the intensity and direction of the external MF. RP-based sensors may also exhibit enhanced sensitivity through interactions with their dynamic environment, a feature observed in various aspects of QB (Kattnig and Hore, 2017).
+
+In the current model, the spin-selective reaction channel is charge recombination (rate constant _k b_) within the singlet state of the RP, regenerating the protein's ground state. The RP state also undergoes proton transfer reactions, which occur with equal rate constants (_k f_) for singlet and triplet pairs, to produce a secondary, long-lived RP state, S, assumed to be, or to lead to, the protein's biochemical signaling state. Significant MF-induced changes in the signaling state S yield occur when the following conditions are met: the singlet recombination timescale (_k b−1_) is comparable to or shorter than the S formation timescale (_k f−1_), much shorter than the electron spin relaxation time (∼1 μs or possibly longer), and longer than the coherent singlet-triplet interconversion time. These criteria imply that the radicals must be in proximity, otherwise charge recombination will be too slow. Fig. 3 A depicts the classical RPM.
+
+1.   Download: Download high-res image (280KB)
+2.   Download: Download full-size image
+
+Fig. 3. Reaction Schemes Illustrating the Radical Pair Mechanism (RPM) of Magnetoreception. **(A) Classical two-radical RPM**: This depicts the fundamental steps. In cryptochromes, photo-excited flavin (F) transfers an electron to tryptophan (W), forming a spin-correlated RP. The singlet state of this RP can undergo charge recombination (rate constant _k b_) to regenerate the protein's ground state. Concurrently, both singlet and triplet RP states can undergo proton transfer reactions (rate constant _k f_) to produce a longer-lived secondary RP state (S), which is thought to initiate the protein's biochemical signaling. Adapted from Kattnig and Hore (2017). **(B) Three-radical RPM with scavenger interaction:** This expanded model includes a radical scavenging reaction involving the primary RP. Here, A•− is typically the reduced flavin radical (FAD•− or its protonated form, FADH•) derived from cryptochrome, and B•+ represents the other radical of the initial pair (its exact nature is still debated). A•− can react with an external scavenger radical (C•). This additional spin-dependent interaction is proposed to enhance the sensitivity of the RPM to magnetic fields. Adapted from Kattnig (2017).
+
+Detailed calculations for the FAD•−/W•+ RP indicated that the observable differences in signaling state yield across varying magnetic field directions might be surprisingly small (Kattnig et al., 2016b). Hore and colleagues noted that the observed compass performance in animals, particularly regarding sensor acuity, functionality under minimal light conditions, and sensitivity to weak radio frequency magnetic fields, surpasses these theoretical predictions (Hore and Mouritsen, 2016; Kattnig et al., 2016a). This discrepancy suggests the presence of a potent, yet unidentified, amplification mechanism and a remarkable resistance to decoherence. To address this, the same research group proposed an expanded reaction scheme (Fig. 3 B), which is predicted to significantly (by an order of magnitude or more) enhance compass sensitivity through the "chemical Zeno effect" (Letuta and Berdinskii, 2015). This effect pertains to the influence of spin-dependent recombination on the singlet-triplet RP evolution rate and frequency. Their model posits a spin-selective reaction involving one radical from the initial pair and an external spin-bearing scavenger. This scavenger, initially uncorrelated with the RP, acquires correlation through its spin-selective reactivity, mirroring the behavior of f-pairs. This additional reaction is shown to induce singlet-triplet conversion within the original radical pair, acting as a spin-selective reaction pathway. Consequently, contrary to prior models, spin-selective recombination of the primary RP (as depicted in Fig. 3 A) becomes non-essential, allowing for greater inter-radical distances than previously considered necessary for efficient charge recombination. This implies that tryptophan tetrads, or systems involving freely diffusing radicals, can also generate substantial MFE, and that the adverse effects of inter-radical exchange and dipolar interactions can be mitigated. The spin dynamics in these three-radical systems are characterized by doublet-quartet conversions, as opposed to the singlet-triplet interconversions observed in the classical RPM. The doublet state can be represented as a singlet within the A/B or A/C manifold, coupled with a doublet radical, as illustrated in Fig. 3 B These singlet substates, however, are not mutually orthogonal. Therefore, this advanced model proposes a way to potentially overcome some of the limitations inherent in the classical RPM, such as the strict requirements for inter-radical distance, potentially enabling more efficient and versatile magnetic field detection.
+
+### 3.2. Quantum biology of plant cryptochromes
+
+Advanced spectroscopic methods, including time-resolved electron paramagnetic resonance (EPR) and transient absorption spectroscopy, have been used to examine RP dynamics within plant cryptochromes (Biskup et al., 2011). These studies have provided insights into the spin dynamics, radical lifetimes, and the influence of MFs on the singlet-triplet interconversion (Suzuki et al., 2005). Quantum models are used to simulate the RPM, incorporating factors such as protein dynamics, solvent effects, and hyperfine interactions (Antill and Vatai, 2024). These models are helping to refine our understanding of how weak MFs can influence RPs reactions.
+
+MF-dependent changes in RP spin states can induce conformational changes in cryptochromes, initiating downstream signaling (DeOliveira and Crane, 2024). Current research emphasizes the identification of specific amino acid residues and structural domains involved in these conformational changes (Wang and Lin, 2025). Computational simulations and structural biology techniques are being used to model the coupling between RP spin states and protein dynamics (Antill and Vatai, 2024). The objective is to elucidate how these conformational changes are transduced into biochemical signals.
+
+Plants possess multiple cryptochrome isoforms, each exhibiting distinct functions and MF sensitivities. The specific roles of these isoforms in mediating plant responses to MFs are under active investigation (Aguida et al., 2024). The influence of the different isoforms in the plant circadian clock, and the modulation of this mechanism by MFs, represents an active area of research (Tang et al., 2022). Cryptochrome MF sensitivity and activity can also be modulated by other environmental factors, including light intensity, temperature, and the presence of redox-active molecules (Pooam et al., 2019).
+
+While the RPM is primarily based on spin dynamics, the potential role of QC in cryptochrome function is receiving increasing attention (Thoradit et al., 2023). QC may enhance cryptochrome sensitivity to weak MFs and influence RP reaction efficiency (Denton et al., 2024). Spectroscopic techniques are being employed to prove potential coherence effects in cryptochromes (Goett-Zink and Kottke, 2021), representing an ongoing research area.
+
+The potential application of cryptochromes as biomolecular magnetic sensors is being explored (Liedvogel and Mouritsen, 2010). This aims to facilitate the development of biosensors for detecting weak MF, with potential applications in navigation, medical diagnostics, and environmental monitoring (Ritz et al., 2010). The development of artificial cryptochromes for use as magnetic sensors is a very active research area (Liedvogel and Mouritsen, 2010).
+
+Developing more accurate quantum models that can account for the complexity of cryptochrome function is essential to unravel the precise signaling pathways that link cryptochrome activation to downstream physiological responses. Exploring the potential technological applications of cryptochromes as MF sensors represents a promising area of future research.
+
+### 3.3. Quantum biology of plant magnetosensitivity through iron-sulfur (Fe-S) cluster assembly
+
+Fe-S clusters are essential cofactors in various enzymes involved in electron transfer, redox reactions, and other vital cellular processes (Gomez-Casati et al., 2021). During Fe-S cluster assembly, transient RPs can form. These RPs, involving the iron ions within the clusters, are inherently sensitive to MFs due to the magnetic moments of the iron ions (Hore and Mouritsen, 2016). The spin dynamics of these RPs, influenced by MFs, could potentially transduce MF information into biochemical signals (Thoradit et al., 2023). The presence of Fe-S clusters in various plant proteins raises the possibility that these clusters could contribute to plant magnetosensitivity (Parmagnani et al., 2022a). Enzymes containing Fe-S clusters participate in processes such as photosynthesis, respiration, and nitrogen fixation (Lu, 2018). MFs could potentially modulate the activity of these enzymes by affecting the spin dynamics of RPs formed during Fe–S cluster assembly. This modulation might result in alterations in plant metabolism and signaling, potentially impacting physiological responses. Indeed, numerous studies have documented tangible effects of magnetic field exposure on plant systems. For instance, exposure to specific magnetic field strengths has been shown to influence enzyme activity in various metabolic pathways (Radhakrishnan, 2019). Furthermore, alterations in plant growth and development, including root elongation, shoot height, and biomass accumulation, have been observed under magnetic field treatments (Bertea et al., 2015a). Some research even suggests that magnetic fields can affect hormonal signaling pathways, leading to changes in stress responses and developmental processes (Fiorillo et al., 2023). These observed effects provide empirical support for the hypothesis that magnetic fields can interact with fundamental biochemical processes in plants, potentially through mechanisms involving radical pair spin dynamics during crucial processes like Fe–S cluster assembly. Moreover, the magnetic moments of iron ions in Fe–S clusters can give rise to hyperfine interactions (which represent the very weak magnetic fields generated by the magnetic moments of atomic nuclei in the vicinity of the unpaired electrons) that influence the spin dynamics of RPs and their sensitivity to MFs (Rodgers and Hore, 2009).
+
+Accurate description of the spin dynamics of RPs in Fe–S clusters and their interactions with MFs requires QM models, along with investigation of QC within the Fe-S clusters. While cryptochromes are considered primary magnetosensors in plants, studies in other organisms, such as the migratory insect investigated by Zhang et al. (2023), which explored the transcriptional crosstalk between cryptochromes and iron-sulfur cluster assembly, suggest a potential for Fe–S clusters to play a supporting or modulating role in magnetoresponse. However, further experimental work is crucial to elucidate the specific roles of Fe–S clusters in plant magnetosensitivity and to distinguish their contribution from that of cryptochromes. Fe–S clusters are involved in redox signaling, which is also relevant to cryptochrome function. Direct observation and characterization of RPs formed during Fe–S cluster assembly in living plant cells will help to distinguish the contributions of Fe–S clusters from those of cryptochromes to plant magnetosensitivity. Developing theoretical models that accurately describe the QM interactions within Fe–S clusters and exploring the potential for Fe–S cluster-based magnetic sensors will provide new insights into how plants perceive and respond to MFs. This research could contribute to the development of advanced magnetic biosensors.
+
+### 3.4. Potential applications of magnetosensitivity in agriculture and environmental monitoring
+
+Understanding how MFs influence plant growth and development could lead to strategies for optimizing crop yields. Investigating the effects of weak MFs on seed germination, root development, and flowering time (Maffei, 2014) opens the possibility of using MF treatments to enhance plant productivity and stress tolerance in crops. For instance, controlled MF environments could be used to optimize growth conditions for crops in greenhouses or vertical farms. This optimization could involve manipulating MFs to modulate nutrient uptake (Narayana et al., 2018), water use efficiency (Selim and El-Nady, 2011), and overall plant health (Sarraf et al., 2020).
+
+Plants, with their inherent sensitivity to MFs, could serve as biomonitors for detecting variations in the GMF or anthropogenic MFs. Changes in plant growth patterns or physiological responses could indicate variations in MF strength or direction. Moreover, MFs can interact with other environmental stressors, such as light, temperature, and pollutants. This interaction could lead to the development of plant-based biosensors for assessing environmental stress levels, including electromagnetic pollution. Finally, the GMF is subject to variations, and these variations could interact with climate change effects (Kilifarska et al., 2015). Studying plant responses to MFs could provide insights into the complex interactions between MFs and climate change.
+
+4. Quantum biochemistry: the effects on enzyme catalysis
+--------------------------------------------------------
+
+Enzymes play a pivotal role in plant metabolism, acting as catalysts that accelerate biochemical reactions. Their influence extends to virtually every physiological process, from photosynthesis to stress responses (Cooper, 2000). Enzymes like Rubisco (ribulose-1,5-bisphosphate carboxylase/oxygenase) are crucial for carbon fixation in the Calvin-Benson cycle (Hazra et al., 2015), and enzymes within the thylakoid membrane facilitate light-dependent reactions, including the water splitting (Renger and Kühn, 2007) and ATP synthesis (Junge and Nelson, 2015). Enzymes activity is finely tuned to respond to environmental cues and developmental signals (Westfall et al., 2013). The study of quantum effects within enzymatic reactions in plants is an active research area, potentially revealing new insights into the efficiency and regulation of critical plant processes.
+
+The field of quantum biochemistry is emerging as a powerful framework for understanding the intricacies of biological processes, particularly enzyme catalysis, by incorporating the principles of QM. Quantum biochemistry recognizes that molecules, especially at atomic and subatomic levels, exhibit QM behavior. This field seeks to apply QM to understand and explain biochemical reactions, potentially revealing mechanisms inaccessible through classical models. Quantum phenomena relevant to enzyme catalysis include QT and QC.
+
+In enzymology, QT allows particles, like electrons or protons, to pass through energy barriers that they classically cannot overcome. QT is believed to play a significant role in enzyme-catalyzed reactions, particularly those involving hydrogen transfer. In classical mechanics, a particle needs sufficient kinetic energy to overcome an energy barrier to proceed with a reaction. QT allows a particle to "tunnel" through an energy barrier, even if its energy is less than the barrier height and the probability, _P_, of a particle tunneling through the potential energy barrier is derived from the Schrödinger Equation and is described as(8)P=exp(−4 a π h 2 m(V−E))
+
+Where _V_ is the potential barrier, _E_ is the kinetic energy possessed by the particle, _a_ is the thickness of the barrier, _m_ is mass of the particle and _h_ is Plank constant (6.6260 × 10−34 m 2 kg/s). Therefore, the probability of an object tunneling through a barrier decreases with the object's increasing mass and with the increasing gap between the energy of the object and the energy of the barrier. And although the wave function never quite reaches 0 (as can be determined from the functionality), this explains how tunneling is frequent on nanoscale, but negligible at the macroscopic level. This occurs because the particle's wave function has a non-zero probability of existing on the other side of the barrier. In chemical reactions, this means that reactants can transition to products even if they lack the classical energy required (Schreiner, 2020).
+
+QT can significantly increase reaction rates, especially for reactions involving light particles like protons and electrons. By bypassing the classical energy barrier, tunneling provides an alternative reaction pathway with lower activation energy. Tunneling can affect kinetic parameters, such as the rate constant (_k_), the activation energy (_E a_) and the pre-exponential factor (_A_) in the Arrhenius equation(9)K=A e−Ea/RT
+
+The temperature dependence of reaction rates may deviate from the classical Arrhenius behavior due to tunneling (Jonsson et al., 1996). Isotope effects are also very important. Because heavier isotopes tunnel less efficiently than lighter isotopes, reactions that involve tunneling can exhibit very large isotope effects, which can be measured (Miyazaki, 2002). By allowing reactions to proceed faster, and with less energy, enzymes can increase the efficiency of metabolic pathways.
+
+The Potential Energy Surface (PES) describes the potential energy of the reactants and products as a function of their atomic coordinates. The Ĥ is used to calculate the PES, which is crucial for understanding reaction pathways and tunneling probabilities. The shape of the PES, including the height and width of energy barriers, determines the likelihood of tunneling (Qiu and Schreiner, 2023). Indeed, enzymes can manipulate the PES by lowering the energy barrier, narrowing the barrier width, thereby increasing tunneling probability and stabilizing the transition state, the highest energy point on the reaction coordinate (Zottola, 2009). By precisely positioning substrates and catalytic residues, enzymes can optimize the PES for tunneling.
+
+Quantum biochemistry offers the potential to provide more accurate descriptions of reaction mechanisms, explain the extraordinary efficiency of enzyme catalysis, uncover novel strategies for manipulating biochemical reactions, and better understand the fine-tuned nature of how enzymes function.
+
+### 4.1. Computational modeling of enzyme reactions
+
+Advances in computing hardware and software have enabled more sophisticated simulations of enzyme reactions (Chipot, 2024). This allows for the inclusion of larger systems and more accurate QM calculations. QM/molecular mechanical (MM) methods have become increasingly popular for modeling enzyme reactions (Magalhães et al., 2020). These methods combine QM calculations for the active site, where electronic rearrangements occur, with MM calculations for the rest of the enzyme, which provides the structural context (Vidossich and Magistrato, 2014). Techniques like metadynamics and umbrella sampling allow for more efficient exploration of the potential energy surface, including transition states and reaction pathways (Kuryla et al., 2025). Developments in force fields have improved the accuracy of MM calculations, leading to more reliable simulations of enzyme dynamics. QM/MM simulations allow researchers to study the electronic structure of the active site during catalysis. They can provide insights into reaction mechanisms, transition state geometries, and the role of specific residues (Brunk and Rothlisberger, 2015). QM/MM are very useful for calculating tunneling probabilities, and other quantum effects. Combining QM/MM methods with advanced sampling techniques can improve the accuracy of simulations (van der Kamp and Mulholland, 2013). A collaborative approach that combines experimental and computational methods is crucial for advancing our understanding of QT in biology. Experimental data can validate computational models, and computational models can help to interpret experimental results. There is a large need for new experimental methods that can probe quantum effects within biological systems.
+
+### 4.2. Manipulating enzyme catalysis through quantum engineering
+
+Quantum engineering aims to control and manipulate quantum phenomena to achieve desired outcomes (Bohn et al., 2017). In the context of enzymes, this involves exploring design principles and theoretical models aimed at enhancing quantum effects like QT and QC (Table 1). While direct experimental manipulation and observation of enhanced quantum effects in engineered enzymes remain a challenging and actively developing area, these studies offer crucial theoretical guidelines and potential approaches for future research.
+
+Table 1. Theoretical design principles and potential modification strategies for enhancing quantum effects in enzymes.
+
+| **Design or modification** | **Study type** | **References** |
+| --- | --- | --- |
+| Optimize catalytic efficiency. | Theoretical model | (Caudillo-Flores et al., 2021) |
+| Create enzymes with novel functionalities. | Design principle | (Eberhart et al., 2025) |
+| Precisely positioning catalytic residues to minimize tunneling distances and maximize tunneling probabilities. | Theoretical model | (Moser et al., 2010) |
+| Designing active sites that create optimal potential energy surfaces for tunneling. | Simulation | (Li et al., 2023) |
+| Modifying enzyme structures to enhance specific vibrational modes that promote tunneling. | Theoretical model | (Johannissen et al., 2015) |
+| Creating coupling between vibrational modes and electron or proton transfer. | Model systems | (Reece et al., 2006) |
+| Integrating quantum dots or other nanomaterials into enzyme structures to enhance electron transfer or light harvesting. | Efficacy in compound synthesis | (Lee et al., 2024) |
+| Creating artificial enzyme-nanomaterial hybrids with enhanced catalytic activity. | Development and applications | (Altinkaynak et al., 2016) |
+| Designing enzymes that use light to trigger, or enhance, quantum effects. | Development of quantum sensors | (Cimini et al., 2019) |
+| Creating artificial enzymes from scratch using computational design and synthetic biology techniques. | Theoretical model | (Mariz et al., 2021) |
+| Incorporating quantum engineering principles into the design process to optimize catalytic efficiency. | Simulation | (Fradkin and Kivelson, 2012) |
+| Using directed evolution to modify natural enzymes and select for variants with enhanced quantum effects. | Assessment of the effectiveness | (Nannemann et al., 2011) |
+| Screening enzyme libraries for improved catalytic activity and quantum properties. | Trends in enzyme engineering | (Ndochinwa et al., 2024) |
+| Precisely changing amino acid residues within the active site to change the potential energy surface, and therefore the tunneling probability. | Transition state theory | (Pu et al., 2006) |
+
+Quantum engineering principles hold significant promise for various biotechnology applications. For instance, Ndochinwa et al. (2024) explore the use of quantum machine learning to optimize enzyme design for improved production of biofuels and pharmaceuticals, suggesting computational strategies for identifying more efficient catalysts. About plant productivity, Kubis and Bar-Even (2019) discuss the inherent limitations of RuBisCO and propose quantum-inspired approaches, such as manipulating electron transfer pathways, as theoretical ways to enhance its efficiency and boost crop yields through computational modeling. Furthermore, the principles of quantum coherence observed in natural photosynthetic systems inspire the development of artificial photosynthetic systems with the potential for improved carbon sequestration, although direct applications in crop engineering are still under investigation (Engel, 2011). QM also offers tools for environmental biotechnology. Saravanan et al. (2021) utilize quantum chemical calculations to elucidate the mechanisms of pollutant-degrading enzymes, providing insights for the rational design of more effective bioremediation tools in silico. Similarly, the application of quantum computing to model and optimize complex bioremediation systems is analyzed, suggesting potential pathways for enhanced efficiency through computational analysis (Somma et al., 2021). In biosensing, a theoretical framework for designing enzyme-based biosensors that use QT for enhanced sensitivity and specificity is employed (Pei et al., 2025). Finally, computational methods are used to analyze the electronic structure of nitrogenase, aiming to identify potential QM factors that could be manipulated to increase efficiency in silico, potentially reducing the need for energy-intensive industrial nitrogen fixation (Ma et al., 2022). Table 2 summarizes these potential applications.
+
+Table 2. Potential applications of quantum engineering in biotechnology.
+
+| **Potential applications** | **Study Type** | **References** |
+| --- | --- | --- |
+| Improving the production of biofuels, pharmaceuticals, and other valuable chemicals. | Theoretical | (Ndochinwa et al., 2024) |
+| Engineering RuBisCO or other carbon fixation enzymes to enhance their efficiency, boosting crop yields. | Theoretical | (Kubis and Bar-Even, 2019) |
+| Developing crops with improved photosynthetic efficiency and carbon sequestration. | Proof-of-concept | (Engel, 2011) |
+| Designing enzymes for the degradation of pollutants and the removal of toxic substances from the environment. | Computational | (Saravanan et al., 2021) |
+| Creating bioremediation systems with enhanced efficiency and specificity. | Computational | (Somma et al., 2021) |
+| Developing enzymes for biosensors with enhanced sensitivity and specificity. | Theoretical | (Pei et al., 2025) |
+| Engineering nitrogenase, the enzyme complex responsible for nitrogen fixation, to increase its efficiency | Proof-of-concept | (Ma et al., 2022) |
+
+Quantum engineering of enzyme catalysis is a promising field with the potential to revolutionize biotechnology and agriculture. By manipulating quantum effects, enzymes with unprecedented catalytic capabilities can be created. This field is still in its early stages, but has immense potential for addressing global challenges related to energy, food, and the environment.
+
+5. Quantum biology and plant stress
+-----------------------------------
+
+Plants are constantly exposed to various environmental stresses, and their ability to perceive and respond effectively is crucial for survival and productivity (Balestrini et al., 2024). Recent advancements in the field of plant QB suggest that QM phenomena play a significant role in these stress responses. While classical biochemistry and molecular biology provide a robust understanding of many processes, quantum effects such as superposition, QE and QT may offer novel explanations for the remarkable efficiency and sensitivity observed in plant stress perception and signaling. For instance, the initial steps of light perception in photoreceptors, crucial for acclimating to light stress, are theorized to involve ultrafast quantum processes (Erofeeva, 2024). Similarly, the efficiency of enzymatic reactions involved in detoxification pathways under oxidative stress might be influenced by QT. Furthermore, the intricate communication networks within plants that respond to biotic stresses like herbivory and pathogenicity (Bulut et al., 2025) might potentially involve QC to enhance the speed and coordination of signaling across different cellular compartments. Following this overview of the potential involvement of QM, I will proceed to explore specific examples of how these principles might operate in plant responses to light, temperature, oxidative, and biotic stresses, highlighting the interplay between quantum and classical mechanisms.
+
+**Light stress.** Plants possess photoprotective mechanisms to dissipate excess light energy and prevent photodamage (Shuang et al., 2022). QC within light-harvesting complexes may facilitate more efficient exploration of the energy, potentially allowing excitation energy to rapidly locate and transfer to quenching sites associated with Non-Photochemical Quenching (NPQ)(Zerah Harush and Dubi, 2023). In theory, optimizing the paths of energy dissipation may involve QC by enabling faster and more directed energy transfer towards quenchers. NPQ is a major photoprotective mechanism that involves the dissipation of excess energy as heat (Levin et al., 2024). Quantum effects, particularly QC, may influence the dynamics of NPQ activation. For instance, coherent energy transfer could facilitate the rapid delivery of excitation energy to the xanthophyll cycle pigments responsible for thermal dissipation, optimizing the speed and efficiency of NPQ activation (Murchie and Ruban, 2020). Under high light stress, excess excitation energy can lead to the formation of ROS and photodamage. QC may optimize the transfer of excitation energy away from the reaction centers and chlorophyll molecules that generate ROS, directing it towards photoprotective pathways like NPQ or energy sinks (Usselman et al., 2016). This optimized and directed energy flow, facilitated by coherence, could minimize the probability of harmful side reactions and ROS production. It is possible that quantum effects help to optimize the function of energy sinks, which are molecules that absorb excess energy. This optimization could help to prevent the over accumulation of energy, and therefore photodamage. The xanthophyll cycle involves the interconversion of xanthophyll pigments, which play a crucial role in NPQ (Nan et al., 2022). QC might influence the electronic transitions involved in the xanthophyll pigment conversions, potentially optimizing the speed and efficiency of NPQ activation and sustained quenching (Berman et al., 2017). Coherent superposition of electronic states could allow for faster and more efficient transitions between the light-harvesting and quenching conformations of these pigments. Computational studies have explored the role of QC in energy transfer and NPQ (Calhoun and Fleming, 2011), providing insights into the potential mechanisms by which quantum effects optimize light stress responses. Advanced spectroscopic techniques are being used to probe the dynamics of excitation energy transfer and NPQ (Nanda et al., 2025), providing experimental evidence for the potential role of quantum effects in light stress responses. There is a large body of work that shows that QC plays a role in the light harvesting complexes of plants and algae, helping to understand how plants deal with, and regulate, light energy (Harush and Dubi, 2023).
+
+**Oxidative stress.** ROS scavenging often involves radical reactions, where unpaired electrons play a crucial role (Phaniendra et al., 2015). The RPM, involving quantum spin correlations, could influence the rates and pathways of these radical scavenging reactions. The spin state of radical pairs can determine whether they react to form non-radical products, contributing to ROS detoxification, or undergo other reactions (Ivanov et al., 2017). Emerging hypotheses suggests that the RPM, particularly within photoreceptor proteins like cryptochromes, might also be involved in the production of ROS as a signaling molecule under specific light conditions (El-Esawi et al., 2017; Perez and Brown, 2014; Sahu et al., 2022). The light-induced photoreduction of the flavin cofactor in cryptochromes can lead to the formation of superoxide radicals, a key ROS species, potentially contributing to downstream signaling pathways (El-Esawi et al., 2017). Quantum spin correlations may influence the specificity and efficiency of ROS signaling pathways (Matarèse et al., 2023) and the very short-lived nature of ROS, and their interactions, may be influenced by quantum effects. Several enzymes are involved in ROS production and detoxification (Wang et al., 2018). These enzymes catalyze reactions involving electron or proton transfer, which could be influenced by QT, that could enhance the rates of these reactions, improving ROS scavenging efficiency. Many ROS detoxification reactions involve electron transfers, and these transfers can be enhanced by QT. Quantum effects could optimize the efficiency of antioxidant systems by enhancing the rates of ROS scavenging reactions, minimizing oxidative damage and protecting plant cells from ROS-induced stress. QC could influence the transfer of energy within antioxidant molecules, optimizing their ability to quench ROS. Fe-S clusters can participate in electron transfer and ROS detoxification (Lim, 2024). As discussed above, the electronic properties of Fe-S clusters are influenced by quantum effects, such as electron delocalization and spin correlations. These quantum effects could optimize the efficiency of Fe-S cluster-mediated ROS processing (Parmagnani et al., 2022b). By exploring the QM aspects of oxidative stress responses, we can gain a deeper understanding of how plants protect themselves from ROS damage and develop strategies for enhancing crop resilience.
+
+**Temperature stress**. Protein folding and stability are highly temperature-dependent processes (Taskent et al., 2008). Quantum effects, such as vibrational energy transfer and QT, may influence the dynamics of protein folding (Deniz et al., 2021; Luo, 2012). The way that proteins respond to changes in vibrational energy, due to temperature changes, might involve QM principles. Temperature stress can induce conformational changes in proteins, leading to denaturation and aggregation. It is conceivable that quantum effects could influence the pathways and rates of these conformational changes, and the fine-tuning of protein structures to maintain stability might involve QM contributions. To protect themselves from high temperatures plants activate heat shock responses, including the modulation of heat shock proteins (HSPs) and other protective enzymes (Albertos et al., 2022). One speculation is that QT could potentially enhance the rates of enzyme-catalyzed reactions involved in the heat shock response, such as those in detoxification and protein repair, thereby improving the efficiency of this response. However, direct experimental evidence supporting this specific role of QT in plant heat shock enzymes requires further investigation. Chaperone proteins assist in protein folding and prevent protein aggregation under temperature stress (Park and Seo, 2015). Quantum effects might optimize the efficiency of chaperone proteins by influencing their interactions with unfolded proteins, potentially minimizing protein aggregation and cellular damage. However, the mechanistic details and empirical support for such a role of quantum phenomena in chaperone function in plants are currently lacking and represent an open question for future research. The photosynthetic apparatus is also highly sensitive to temperature stress (Hu et al., 2020) and the thylakoid membrane, where photosynthesis occurs, is very sensitive to temperature (Kulke et al., 2023). By exploring the QM aspects of temperature stress responses, we can gain a deeper understanding of how plants cope with temperature extremes and develop strategies for enhancing crop resilience.
+
+**Plant biotic stress**. Plants, in addition to facing a myriad of abiotic challenges, are constantly under threat from biotic stresses, primarily from herbivores and pathogenic microbes (bacteria, fungi, viruses, and oomycetes) (Dixit et al., 2024). Quantum effects, while perhaps less directly studied in this context compared to abiotic stresses, may still play subtle but potentially significant roles in the efficiency and specificity of these complex biotic stress responses.
+
+Herbivore attack triggers a range of plant defense responses, including the release of volatile organic compounds (VOCs) that can attract natural enemies of the herbivores or warn neighboring plants and organisms (Digilio et al., 2012; Russo et al., 2022). These VOC emissions often involve complex biochemical pathways catalyzed by enzymes. QT might potentially influence the rates of key enzymatic reactions involved in VOC biosynthesis, allowing for a rapid and efficient release of these defensive signals upon herbivore detection. The precise and timely production of specific VOC blends is crucial for effective defense, and QT might contribute to the kinetic optimization of these pathways. Furthermore, herbivore feeding can induce rapid changes in plant cell membrane potential and calcium signaling (Zebelo and Maffei, 2015). These early signaling events are critical for activating downstream defense responses. While the primary mechanisms are likely classical ion transport, it cannot be excluded that QC within membrane protein complexes might influence the efficiency and speed of these initial signal transduction processes, allowing for a faster and more coordinated response to herbivore attack. Exploring the potential for quantum effects in the dynamics of membrane receptors and ion channels under herbivore stress requires further investigation.
+
+The speed and localization of the hypersensitive response (HR), a localized programmed cell death at the infection site (Balint-Kurti, 2019), are critical for limiting pathogen spread. QE, while highly speculative in this context, could theoretically play a role in the rapid and coordinated activation of defense mechanisms within the infected and surrounding cells. If signaling molecules or reactive species involved in HR exhibit QE, it might allow for faster and more non-local communication of the defense signal. However, significant experimental evidence would be required to support such a hypothesis.
+
+More plausibly, quantum spin correlations within RP formed during pathogen-induced oxidative bursts could influence the specificity and efficiency of ROS signaling in defense. As seen in abiotic stress, the spin state of radical intermediates can determine their reaction pathways and lifetimes (Ivanov et al., 2017). By possibly influencing these spin dynamics, weak magnetic fields (potentially even the GMF) could theoretically modulate the plant's susceptibility or resistance to certain pathogens, although this remains a largely unexplored area. Enzymes involved in the synthesis of antimicrobial compounds, such as phytoalexins, often catalyze complex reactions involving electron and proton transfer. QT could again play a role in enhancing the rates of these defense-related metabolic pathways, allowing for a more rapid accumulation of protective compounds at the site of infection. Investigating the kinetics of key enzymes in phytoalexin biosynthesis under pathogen attack, with a focus on potential QT contributions, could provide valuable insights.
+
+Future research employing advanced spectroscopic techniques and theoretical modeling, specifically focused on the dynamics of signaling molecules, enzymatic reactions, and radical chemistry during plant-pathogen and plant-herbivore interactions, is needed to explore these intriguing possibilities. Understanding the potential quantum dimensions of plant biotic stress responses could open new horizons for enhancing plant immunity and developing novel crop protection strategies.
+
+Fig. 4 summarizes the connections between QB and plant stress.
+
+1.   Download: Download high-res image (1MB)
+2.   Download: Download full-size image
+
+Fig. 4. Schematic representation of quantum biology and plant stress. The figure illustrates how plants respond to various environmental stresses, emphasizing the proposed roles of quantum effects (quantum coherence in optimizing energy transfer in light harvesting and NPQ, radical pair mechanisms in modulating ROS reactions and signaling, and quantum tunneling in enhancing enzyme activity under temperature stress) to sustain plant survival and productivity. Italics indicates hypothetical links to quantum effects.
+
+6. Concluding remarks
+---------------------
+
+This review summarizes the current advances in plant QB, describing the influence of quantum phenomena on some fundamental plant processes. QC and QE are involved in the efficiency of photosynthetic light harvesting and energy transfer and enable plants to thrive in diverse light environments. Cryptochromes and iron-sulfur cluster assembly might act as potential quantum sensors and open new research opportunities to better understand plant magnetosensitivity. The RPM, a basic quantum process, offers a compelling explanation for how plants perceive and respond to subtle variations in MF, influencing growth, development, and circadian rhythms. Quantum effects have an impact on enzyme catalysis and QT may significantly enhance reaction rates and substrate specificity, optimizing plant metabolism under varying environmental conditions.
+
+Overall, these quantum processes impact plant stress responses. Light, oxidative, biotic and temperature stress, all pose significant challenges to plant survival and QC, spin correlations and QT might potentially modulate these responses, offering new paths for developing stress-tolerant crops.
+
+The intricate interplay of QC, QE, RPM, and QT, suggests that plants operate beyond classical expectations. The potential to exploit these quantum principles for agricultural innovation and environmental sustainability is evident. However, significant challenges remain. The complexity of biological systems, the short-lived nature of quantum phenomena, and the limitations of current experimental techniques necessitate a concerted effort to develop more refined methodologies and theoretical models.
+
+Future research must focus on directly observing and manipulating quantum effects in living plants, bridging the gap between fundamental science and practical applications. By adopting the quantum perspective, we can unlock new strategies for enhancing plant productivity, mitigating environmental stress, and fostering a sustainable future. Research into quantum plant biology has the potential to improve our understanding of plant life itself.
+
+Outstanding questions
+---------------------
+
+Plant quantum biology is a new emerging research area that gathers several aspect of plant biology. Five key questions address the practical application of quantum biology and the challenge of moving from theoretical understanding to real-world manipulation. How can we precisely manipulate and control quantum effects (coherence, entanglement, tunneling, radical pair mechanisms) in living plants in vivo to enhance agricultural traits (e.g., stress tolerance, photosynthetic efficiency)? What are the specific molecular mechanisms by which quantum sensing (magnetosensitivity via cryptochromes and iron-sulfur clusters) influences plant growth, development, and circadian rhythms? How do quantum effects modulate plant stress responses (light, temperature, biotic stress) at a molecular level, and can we develop robust theoretical models to predict and optimize these responses? To what extent does quantum tunneling contribute to enzyme reaction rates and substrate specificity in plant metabolism, and how can we leverage this knowledge to improve enzymatic processes? How can we effectively bridge the gap between fundamental quantum biology research and practical agricultural applications to achieve enhanced sustainability in plant production?
+
+Funding sources
+---------------
+
+This work was supported by the University of Turin Local Grant RILO2024
+
+Declaration of generative AI in scientific writing
+--------------------------------------------------
+
+During the preparation of this work, the author used Gemini in order to improve text clarity. After using this tool/service, the author reviewed and edited the content as needed and takes full responsibility for the content of the published article.
+
+CRediT authorship contribution statement
+----------------------------------------
+
+**Massimo E. Maffei:** Writing – review & editing, Writing – original draft, Visualization, Validation, Supervision, Resources, Project administration, Methodology, Investigation, Funding acquisition, Conceptualization.
+
+Declaration of competing interest
+---------------------------------
+
+The author declares that he has no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+References
+----------
+
+1.   Aguida et al., 2024 B. Aguida, J. Babo, S. Baouz, N. Jourdan, M. Procopio, M.A. El-Esawi, D. Engle, S. Mills, S. Wenkel, A. Huck, K. Berg-Sørensen, S.C. Kampranis, J. Link, M. Ahmad
+
+Seeing' the electromagnetic spectrum: spotlight on the cryptochrome photocycle 
+2.   Albaqami et al., 2020 Arabidopsis cryptochrome is responsive to radiofrequency (RF) electromagnetic fields 
+3.   Albertos et al., 2022 P. Albertos, G. Dündar, P. Schenk, S. Carrera, P. Cavelius, T. Sieberer, B. Poppenberger
+
+Transcription factor BES1 interacts with HSFA1 to promote heat stress resistance of plants 
+4.   Altinkaynak et al., 2016 C. Altinkaynak, S. Tavlasoglu, N. ÿzdemir, I. Ocsoy
+
+A new generation approach in enzyme immobilization: organic-inorganic hybrid nanoflowers with enhanced catalytic activity and stability 
+5.   Antill and Vatai, 2024 L.M. Antill, E. Vatai
+
+RadicalPy: a tool for spin dynamics simulations 
+6.   Ardenghi et al., 2011 J.S. Ardenghi, M. Castagnino, O. Lombardi
+
+Modal-hamiltonian interpretation of quantum mechanics and casimir operators: the road toward quantum field theory 
+7.   Aref'eva and Volovich, 2017 I. Aref'eva, I. Volovich
+
+Holographic Photosynthesis and Entanglement entropy, 38th International Workshop of Infinite Dimensional Analysis and Quantum Probability and Related Topics (IDAQ) 
+World Scientific Publ Co Pte Ltd, Noda, Japan (2017), pp. 231-250
+
+8.   Balestrini et al., 2024 R. Balestrini, F. Sillo, R. Boussageon, D. Wipf, P.E. Courty
+
+The hidden side of interaction: microbes and roots get together to improve plant resilience 
+9.   Balint-Kurti, 2019 P. Balint-Kurti
+
+The plant hypersensitive response: concepts, control and consequences 
+10.   Berman et al., 2017 G.P. Berman, A.I. Nesterov, S. Gurvitz, R.T. Sayre
+
+Possible role of interference, protein noise, and sink effects in nonphotochemical quenching in photosynthetic complexes 
+11.   Bertea et al., 2015a C.M. Bertea, R. Narayana, C. Agliassa, C.T. Rodgers, M.E. Maffei
+
+Geomagnetic field (Gmf) and plant evolution: investigating the effects of Gmf reversal on _arabidopsis thaliana_ development and gene expression 
+J. Vis. Exp., 8 (2015), Article e53286, 10.3791/53286
+
+12.   Bertea et al., 2015b C.M. Bertea, R. Narayana, C. Agliassa, C.T. Rodgers, M.E. Maffei
+
+Geomagnetic field (GMF) and plant evolution: investigating the effects of GMF reversal on _Arabidospis thaliana_ development and gene expression 
+J. Vis. Exp., 105 (2015), Article e53286
+
+13.   Bischoff et al., 2023 A.J. Bischoff, L.M. Hamerlynck, A.J. Li, T.D. Roberts, N.S. Ginsberg, M.B. Francis
+
+Protein-based model for energy transfer between photosynthetic light-harvesting complexes is constructed using a direct Protein–Protein conjugation strategy 
+14.   Biskup et al., 2011 T. Biskup, K. Hitomi, E.D. Getzoff, S. Krapf, T. Koslowski, E. Schleicher, S. Weber
+
+Unexpected electron transfer in cryptochrome identified by time-resolved EPR spectroscopy 
+15.   Bohn et al., 2017 J.L. Bohn, A.M. Rey, J. Ye
+
+Cold molecules: progress in quantum engineering of chemistry and quantum matter 
+16.   Brecht et al., 2009 M. Brecht, V. Radics, J.B. Nieder, R. Bittl
+
+Protein dynamics-induced variation of excitation energy transfer pathways 
+17.   Brunk and Rothlisberger, 2015 E. Brunk, U. Rothlisberger
+
+Mixed quantum mechanical/molecular mechanical molecular dynamics simulations of biological systems in ground and electronically excited states 
+18.   Bulut et al., 2025 M. Bulut, E. Karakas, A.R. Fernie
+
+Metabolic responses to multi-stress: an update 
+19.   Cai, 2019 X. Cai
+
+Quantum dynamics in a fluctuating environment 
+Entropy, 21 (2019), p. 1040
+
+20.   Calhoun and Fleming, 2011 T.R. Calhoun, G.R. Fleming
+
+Quantum coherence in photosynthetic complexes 
+21.   Caudillo-Flores et al., 2021 U. Caudillo-Flores, O. Avilés-García, G. Alonso-Núñez, A. Kubacka, M. Fernández-García
+
+Assessing quantitatively charge carrier fate in 4-chlorophenol photocatalytic degradation using globular titania catalysts: implications in quantum efficiency calculation 
+22.   Chen et al., 2016 H. Chen, X. Wang, A. Fang, H. Li
+
+Phonon-assisted excitation energy transfer in photosynthetic systems 
+23.   Chin et al., 2010 A.W. Chin, A. Datta, F. Caruso, S.F. Huelga, M.B. Plenio
+
+Noise-assisted energy transfer in quantum networks and light-harvesting complexes 
+24.   Chipman and Rassolov, 1997 D.M. Chipman, V.A. Rassolov
+
+New operators for calculation of indirect nuclear spin-spin coupling constants 
+25.   Chipot, 2024 C. Chipot
+
+Recent advances in simulation software and force fields: their importance in theoretical and computational chemistry and biophysics 
+26.   Cimini et al., 2019 V. Cimini, M. Mellini, G. Rampioni, M. Sbroscia, L. Leoni, M. Barbieri, I. Gianani
+
+Adaptive tracking of enzymatic reactions with quantum light 
+27.   Cipolloni et al., 2017 M. Cipolloni, B. Fresch, I. Occhiuto, P. Rukin, K.G. Komarova, A. Cecconello, I. Willner, R.D. Levine, F. Remacle, E. Collini
+
+Coherent electronic and nuclear dynamics in a rhodamine heterodimer-DNA supramolecular complex 
+28.   Cooper, 2000 G.M. Cooper
+
+The Central role of enzymes as biological catalysts 
+G.M. Cooper (Ed.), The Cell: A Molecular Approach, Sinauer Associates, SunderlandMA (2000)
+
+29.   Cui et al., 2024 X. Cui, Y. Yan, J. Wei
+
+Theoretical study on the excitation energy transfer dynamics in the Phycoerythrin PE555 light-harvesting complex 
+30.   Curti et al., 2023 M. Curti, V. Maffeis, L.G. Teixeira Alves Duarte, S. Shareef, L.X. Hallado, C. Curutchet, E. Romero
+
+Engineering excitonically coupled dimers in an artificial protein for light harvesting via computational modeling 
+31.   Deniz et al., 2021 E. Deniz, L. Valiño-Borau, J.G. Löffler, K.B. Eberl, A. Gulzar, S. Wolf, P.M. Durkin, R. Kaml, N. Budisa, G. Stock, J. Bredenbeck
+
+Through bonds or contacts? Mapping protein vibrational energy transfer using non-canonical amino acids 
+32.   Denton et al., 2024 M.C.J. Denton, L.D. Smith, W. Xu, J. Pugsley, A. Toghill, D.R. Kattnig
+
+Magnetosensitivity of tightly bound radical pairs in cryptochrome is enabled by the quantum Zeno effect 
+33.   DeOliveira and Crane, 2024 C.C. DeOliveira, B.R. Crane
+
+A structural decryption of cryptochromes 
+34.   Digilio et al., 2012 M.C. Digilio, C. Pasquale, I. Luigi, E. Guerrieri
+
+Interactions between tomato volatile organic compounds and aphid behaviour 
+35.   Dixit et al., 2024 S. Dixit, P. Sivalingam, R. Baskaran, M. Senthil-Kumar, P. Ghosh
+
+Plant responses to concurrent abiotic and biotic stress: unravelling physiological and morphological mechanisms 
+36.   Eberhart et al., 2025 M.E. Eberhart, A.N. Alexandrova, P. Ajmera, D. Bím, S.S. Chaturvedi, S. Vargas, T.R. Wilson
+
+Methods for theoretical treatment of local fields in proteins and enzymes 
+37.   El-Esawi et al., 2017 M. El-Esawi, L.-D. Arthaut, N. Jourdan, A. d’Harlingue, J. Link, C.F. Martino, M. Ahmad
+
+Blue-light induced biosynthesis of ROS contributes to the signaling mechanism of Arabidopsis cryptochrome 
+38.   Engel, 2011 G.S. Engel
+
+Quantum coherence in photosynthesis 
+39.   Erofeeva, 2024 E.A. Erofeeva
+
+Plant hormesis: the energy aspect of low and high-dose stresses 
+40.   Evans et al., 2015 E.W. Evans, J. Li, J.G. Storey, K. Maeda, K.B. Henbest, C.A. Dodson, P.J. Hore, S.R. Mackenzie, C.R. Timmel
+
+Sensitive fluorescence-based detection of magnetic field effects in photoreactions of flavins 
+41.   Fassioli et al., 2014 F. Fassioli, R. Dinshaw, P.C. Arpin, G.D. Scholes
+
+Photosynthetic light harvesting: excitons and coherence 
+42.   Fiorillo et al., 2023 A. Fiorillo, A.S. Parmagnani, S. Visconti, G. Mannino, L. Camoni, M.E. Maffei
+
+14-3-3 Proteins and the plasma membrane H(+)-ATPase are involved in Maize (Zea mays) magnetic induction 
+43.   Fleming and Scholes, 2024 G.R. Fleming, G.D. Scholes
+
+The development and applications of multidimensional biomolecular spectroscopy illustrated by photosynthetic light harvesting 
+44.   Forcer et al., 2002 T.M. Forcer, A.J.G. Hey, D.A. Ross, P.G.R. Smith
+
+Superposition, entanglement and quantum computation 
+Quantum Inf. Comput., 2 (2002), pp. 97-116
+
+45.   Fradkin and Kivelson, 2012 E. Fradkin, S.A. Kivelson
+
+High-temperature superconductivity ineluctable complexity 
+46.   Fresch et al., 2020 E. Fresch, E. Meneghin, A. Agostini, H. Paulsen, D. Carbonera, E. Collini
+
+How the protein environment can tune the energy, the coupling, and the ultrafast dynamics of interacting chlorophylls: the example of the water-soluble chlorophyll protein 
+47.   Fuller et al., 2014 F. Fuller, J. Pan, A. Gelzinis, V. Butkus, S. Senlik, D. Wilcox, C. Yocum, L. Valkunas, D. Abramavicius, J. Ogilvie
+
+Vibronic coherence in oxygenic photosynthesis 
+48.   Goett-Zink and Kottke, 2021 L. Goett-Zink, T. Kottke
+
+Plant cryptochromes illuminated: a spectroscopic perspective on the mechanism 
+49.   Gomez-Casati et al., 2021 D.F. Gomez-Casati, M.V. Busi, J. Barchiesi, M.A. Pagani, N.S. Marchetti-Acosta, A. Terenzi
+
+Fe-S protein synthesis in green algae mitochondria 
+50.   Harney, 2020 M. Harney
+
+The effects of quantum entanglement on chromatin and gene expression 
+51.   Harush and Dubi, 2023 E.Z. Harush, Y. Dubi
+
+Signature of quantum coherence in the exciton energy pathways of the LH2 photosynthetic complex 
+52.   Hasenstein et al., 2022 K.H. Hasenstein, M.R. Park, S.P. John, C. Ajala
+
+High-gradient magnetic fields and starch metabolism: results from a space experiment 
+53.   Hayashi, 2004 H. Hayashi
+
+Introduction to Dynamic Spin Chemistry 
+World Scientific Publishe, Singapore (2004)
+
+54.   Hazra et al., 2015 S. Hazra, J.N. Henderson, K. Liles, M.T. Hilton, R.M. Wachter
+
+Regulation of ribulose-1,5-bisphosphate carboxylase/oxygenase (rubisco) activase: product inhibition, cooperativity, and magnesium activation 
+55.   He et al., 2018 B. He, M. Ming, C. Liu, G. Wang, L. Qin, Y. Li
+
+Energy transfer in the light-harvesting complexes of purple bacteria 
+56.   Hildner et al., 2013 R. Hildner, D. Brinks, J.B. Nieder, R.J. Cogdell, N.F. van Hulst
+
+Quantum coherent energy transfer over varying pathways in single light-harvesting complexes 
+57.   Hore et al., 2020 P.J. Hore, K.L. Ivanov, M.R. Wasielewski
+
+Spin chemistry 
+58.   Hore and Mouritsen, 2016 P.J. Hore, H. Mouritsen
+
+The radical-pair mechanism of magnetoreception 
+59.   Hsu, 2009 C.-P. Hsu
+
+The electronic couplings in electron transfer and excitation energy transfer 
+60.   Hu et al., 2020 S. Hu, Y. Ding, C. Zhu
+
+Sensitivity and responses of chloroplasts to heat stress in plants 
+61.   Ivanov et al., 2017 K.L. Ivanov, A. Wagenpfahl, C. Deibel, J. Matysik
+
+Spin-chemistry concepts for spintronics scientists 
+62.   Johannissen et al., 2015 L.O. Johannissen, S. Hay, N.S. Scrutton
+
+Nuclear quantum tunnelling in enzymatic reactions - an enzymologist's perspective 
+63.   Jones, 2016 A.R. Jones
+
+Magnetic field effects in proteins 
+64.   Jonsson et al., 1996 T. Jonsson, M.H. Glickman, S. Sun, J.P. Klinman
+
+Experimental evidence for extensive tunneling of hydrogen in the lipoxygenase reaction: implications for enzyme catalysis 
+65.   Junge and Nelson, 2015 W. Junge, N. Nelson
+
+ATP synthase 
+R.D. Kornberg (Ed.), Annual Review of Biochemistry, Annual Review of Biochemistry, 84, Annual Reviews, Palo Alto (2015), pp. 631-657
+
+66.   Kattnig, 2017 D.R. Kattnig
+
+Radical-pair-based magnetoreception amplified by Radical scavenging: resilience to spin relaxation 
+67.   Kattnig et al., 2016a D.R. Kattnig, E.W. Evans, V. Dejean, C.A. Dodson, M.I. Wallace, S.R. Mackenzie, C.R. Timmel, P.J. Hore
+
+Chemical amplification of magnetic field effects relevant to avian magnetoreception 
+68.   Kattnig and Hore, 2017 D.R. Kattnig, P.J. Hore
+
+The sensitivity of a radical pair compass magnetoreceptor can be significantly amplified by radical scavengers 
+69.   Kattnig et al., 2016b D.R. Kattnig, I.A. Solov'yov, P.J. Hore
+
+Electron spin relaxation in cryptochrome-based magnetoreception 
+70.   Kawakami et al., 2022 K. Kawakami, T. Hamaguchi, Y. Hirose, D. Kosumi, M. Miyata, N. Kamiya, K. Yonekura
+
+Core and rod structures of a thermophilic cyanobacterial light-harvesting phycobilisome 
+71.   Keil et al., 2025 E. Keil, A. Kumar, L. Bäuml, S. Reiter, E. Thyrhaug, S. Moser, C.D.P. Duffy, R. de Vivie-Riedle, J. Hauer
+
+Reassessing the role and lifetime of Qx in the energy transfer dynamics of chlorophyll a 
+72.   Kilifarska et al., 2015 N.A. Kilifarska, V.G. Bakhmutov, G.V. Melnyk
+
+Geomagnetic field and climate variability. 2. Probable mechanism 
+Geofiz. Zh., 37 (2015), pp. 66-92
+
+73.   Kim et al., 2021 Y. Kim, F. Bertagna, E.M. D’Souza, D.J. Heyes, L.O. Johannissen, E.T. Nery, A. Pantelias, A. Sanchez-Pedreño Jimenez, L. Slocombe, M.G. Spencer, J. Al-Khalili, G.S. Engel, S. Hay, S.M. Hingley-Wilson, K. Jeevaratnam, A.R. Jones, D.R. Kattnig, R. Lewis, M. Sacchi, N.S. Scrutton, S.R.P. Silva, J. McFadden
+
+Quantum biology: an update and perspective 
+Quantum Rep., 3 (2021), pp. 80-126
+
+74.   Kubis and Bar-Even, 2019 A. Kubis, A. Bar-Even
+
+Synthetic biology approaches for improving photosynthesis 
+75.   Kulke et al., 2023 M. Kulke, S.M. Weraduwage, T.D. Sharkey, J.V. Vermaas
+
+Nanoscale simulation of the thylakoid membrane response to extreme temperatures 
+76.   Kundu and Chandrashekar, 2022 M. Kundu, C.M. Chandrashekar
+
+Non-markovianity between site pairs in FMO complex using discrete-time quantum jump model 
+77.   Kuryla et al., 2025 D. Kuryla, G. Csányi, A.C.T. van Duin, A. Michaelides
+
+Efficient exploration of reaction pathways using reaction databases and active learning 
+78.   Lee et al., 2024 B. Lee, L. Ilsong, K. Gui-Min, K. Jayeong, P. Joongjai, D.C. Lee
+
+Light-driven chemical production with Quantum dot-Biohybrid system: a review 
+79.   Letuta and Berdinskii, 2015 A.S. Letuta, V.L. Berdinskii
+
+Chemical Zeno effect-A new mechanism of spin catalysis in radical triads 
+80.   Levin et al., 2024 G. Levin, M. Yasmin, O. Liran, R. Hanna, O. Kleifeld, G. Horev, F.-A. Wollman, G. Schuster, W.J. Nawrocki
+
+Processes independent of nonphotochemical quenching protect a high-light-tolerant desert alga from oxidative stress 
+81.   Li et al., 2023 F. Li, X. Yang, X. Liu, J. Cao, W. Bian
+
+An ab initio neural network potential energy surface for the dimer of formic acid and further quantum tunneling dynamics 
+82.   Li et al., 2021 L.F. Li, S.C. Zhao, L.X. Xu
+
+Charge-transport enhanced by the quantum entanglement in the photosystem II reaction center 
+83.   Liedvogel and Mouritsen, 2010 M. Liedvogel, H. Mouritsen
+
+Cryptochromes–a potential magnetoreceptor: what do we know and what do we want to know? 
+84.   Lim, 2024 J.K. Lim
+
+Theoretical hypothesis in a direct electron transfer between non-interacting Fe-S proteins within an artificial fusion 
+85.   Liu et al., 2024a J. Liu, J. Yang, G. Zhu, J. Li, Y. Li, Y. Zhai, H. Song, Y. Yang, H. Li
+
+Revealing the ultrafast energy transfer pathways in energetic materials: time-dependent and quantum State-resolved 
+86.   Liu et al., 2024b J. Liu, D. Zhang, L. Bao, T. Mao, L. Zhao, C. Liu, G. Huang, Y. Zhai
+
+Plant nanobiotechnology: a new strategy to enhance crop photosynthesis 
+87.   Lu, 2018 Y. Lu
+
+Assembly and transfer of iron–Sulfur clusters in the plastid 
+88.   Luo, 2012 L.F. Luo
+
+Protein photo-folding and quantum folding theory 
+89.   Ma et al., 2022 J. Ma, Z. Song, Y. Zhou, H. Han
+
+Iron–Molybdenum quantum dots for enhancing the nitrogenase activity of nodules 
+90.   Maffei, 2014 M.E. Maffei
+
+Magnetic field effects on plant growth, development, and evolution 
+91.   Maffei, 2022 M.E. Maffei
+
+Magnetoreception in plants 
+U. Shoogo, S. Tsukasa (Eds.), Bioelectromagnetism History, Foundations and Applications, CRC Press, Boca Raton, FL, U.S.A. (2022), pp. 191-214
+
+92.   Magalhães et al., 2020 R.P. Magalhães, H.S. Fernandes, S.F. Sousa
+
+Modelling enzymatic mechanisms with QM/MM approaches: current status and future challenges 
+93.   Maiuri et al., 2020 M. Maiuri, M. Garavelli, G. Cerullo
+
+Ultrafast spectroscopy: state of the art and open challenges 
+94.   Mančal, 2020 T. Mančal
+
+A decade with quantum coherence: how our past became classical and the future turned quantum 
+95.   Marais et al., 2018 A. Marais, B. Adams, A.K. Ringsmuth, M. Ferretti, J.M. Gruber, R. Hendrikx, M. Schuld, S.L. Smith, I. Sinayskiy, T.P.J. Krüger, F. Petruccione, R. van Grondelle
+
+The future of quantum biology 
+96.   Mariz et al., 2021 B.d.P. Mariz, S. Carvalho, I.L. Batalha, A.S. Pina
+
+Artificial enzymes bringing together computational design and directed evolution 
+97.   Matarèse et al., 2023 B.F.E. Matarèse, A. Rusin, C. Seymour, C. Mothersill
+
+Quantum biology and the potential role of entanglement and tunneling in non-targeted effects of ionizing radiation: a review and proposed model 
+98.   Matsubara et al., 2024 S. Matsubara, S. Shoji, H. Tamiaki
+
+Biomimetic light-harvesting antennas via the self-assembly of chemically programmed chlorophylls 
+99.   McCord et al., 2024 J.J. McCord, S. Dogra, G.S. Paraoanu
+
+Coherent interaction-free detection of noise 
+100.   McFadden and Al-Khalili, 2018 J. McFadden, J. Al-Khalili
+
+The origins of quantum biology 
+101.   Mirkovic et al., 2017 T. Mirkovic, E.E. Ostroumov, J.M. Anna, R. van Grondelle, Govindjee, G.D. Scholes
+
+Light absorption and energy transfer in the antenna complexes of photosynthetic organisms 
+102.   Miyazaki, 2002 T. Miyazaki
+
+Large isotope effects in tunneling chemical reactions 
+103.   Moser et al., 2010 C.C. Moser, J.L. Anderson, P.L. Dutton
+
+Guidelines for tunneling in enzymes 
+104.   Müh et al., 2007 F. Müh, M.E.-A. Madjet, J. Adolphs, A. Abdurahman, B. Rabenstein, H. Ishikita, E.-W. Knapp, T. Renger
+
+α-helices direct excitation energy flow in the Fenna–Matthews–Olson protein 
+105.   Murchie and Ruban, 2020 E.H. Murchie, A.V. Ruban
+
+Dynamic non-photochemical quenching in plants: from molecular mechanism to productivity 
+Plant J.: Cell Mol. Biol., 101 (2020), pp. 885-896, 10.1111/tpj.14601
+
+106.   Naicker et al., 2022 K. Naicker, I. Sinayskiy, F. Petruccione
+
+Machine learning for excitation energy transfer dynamics 
+107.   Nan et al., 2022 G.-N. Nan, X.-Q. Zhou, X.-M. Zhang, Q.-S. Zhang, Z.-M. Hu, R.-P. Huang, D. Zhang
+
+Xanthophyll cycle-related non-photochemical quenching protects Sargassum thunbergii from high light-induced photoinhibition 
+108.   Nanda et al., 2025 S. Nanda, M. Cainzos, T. Shutova, N. Fataftah, V. Fleig, J. Lihavainen-Bag, P. Bag, A.R. Holzwarth, S. Jansson
+
+Spillover is the dominant non-photochemical quenching mechanism in angiosperms 
+109.   Nannemann et al., 2011 D.P. Nannemann, W.R. Birmingham, R.A. Scism, B.O. Bachmann
+
+Assessing directed evolution methods for the generation of biosynthetic enzymes with potential in drug biosynthesis 
+110.   Narayana et al., 2018 R. Narayana, J. Fliegmann, I. Paponov, M.E. Maffei
+
+Reduction of geomagnetic field (GMF) to near null magnetic field (NNMF) affects _Arabidopsis thalian_ a root mineral nutrition 
+111.   Ndochinwa et al., 2024 O.G. Ndochinwa, Q.Y. Wang, O.C. Amadi, T.N. Nwagu, C.I. Nnamchi, E.S. Okeke, A.N. Moneke
+
+Current status and emerging frontiers in enzyme engineering: an industrial perspective 
+112.   Negulescu, 2021 C. Negulescu
+
+Decoherence rhapsody in the photosynthesis process 
+Commun. Math. Sci. (2021), pp. 947-975
+
+113.   Novelli et al., 2020 F. Novelli, J.O. Tollerud, D. Prabhakaran, J.A. Davis
+
+Persistent coherence of quantum superpositions in an optimally doped cuprate revealed by 2D spectroscopy 
+114.   Onuchic et al., 2008 J.N. Onuchic, C. Kobayashi, K.K. Baldridge
+
+Quantum tunneling in biological reactions: the interplay between theory and experiments 
+J. Braz. Chem. Soc., 19 (2008), pp. 206-210
+
+115.   Panitchayangkoon et al., 2010 G. Panitchayangkoon, D. Hayes, K.A. Fransted, J.R. Caram, E. Harel, J. Wen, R.E. Blankenship, G.S. Engel
+
+Long-lived quantum coherence in photosynthetic complexes at physiological temperature 
+116.   Park and Seo, 2015 C.J. Park, Y.S. Seo
+
+Heat Shock proteins: a review of the molecular chaperones for plant immunity 
+117.   Parmagnani et al., 2022a A.S. Parmagnani, S. D'Alessandro, M.E. Maffei
+
+Iron-sulfur complex assembly: potential players of magnetic induction in plants 
+118.   Parmagnani et al., 2022b A.S. Parmagnani, G. Mannino, M.E. Maffei
+
+Transcriptomics and metabolomics of reactive oxygen species modulation in near-null magnetic field-induced arabidopsis thaliana 
+Biomolecules, 12 (2022), p. 1824
+
+119.   Pei et al., 2025 S.H. Pei, S. Dhondt, S. Babity, D. Brambilla
+
+Rational design of a new class of versatile enzyme-based biosensors 
+120.   Perez and Brown, 2014 I.B. Perez, P.J. Brown
+
+The role of ROS signaling in cross-tolerance: from model to crop 
+121.   Phaniendra et al., 2015 A. Phaniendra, D.B. Jestadi, L. Periyasamy
+
+Free radicals: properties, sources, targets, and their implication in various diseases 
+122.   Pooam et al., 2019 M. Pooam, L.-D. Arthaut, D. Burdick, J. Link, C.F. Martino, M. Ahmad
+
+Magnetic sensitivity mediated by the Arabidopsis blue-light receptor cryptochrome occurs during flavin reoxidation in the dark 
+123.   Pooam et al., 2020a M. Pooam, M. El-Esawi, B. Aguida, M. Ahmad
+
+Arabidopsis cryptochrome and quantum biology: new insights for plant science and crop improvement 
+124.   Pooam et al., 2020b M. Pooam, N. Jourdan, M. El Esawi, R.M. Sherrard, M. Ahmad
+
+HEK293 cell response to static magnetic fields via the radical pair mechanism may explain therapeutic effects of pulsed electromagnetic fields 
+125.   Pu et al., 2006 J. Pu, J. Gao, D.G. Truhlar
+
+Multidimensional tunneling, recrossing, and the transmission coefficient for enzymatic reactions 
+126.   Qiu and Schreiner, 2023 G. Qiu, P.R. Schreiner
+
+The intrinsic barrier width and its role in chemical reactivity 
+127.   Radhakrishnan, 2019 R. Radhakrishnan
+
+Magnetic field regulates plant functions, growth and enhances tolerance against environmental stresses 
+128.   Rathbone et al., 2018 H.W. Rathbone, J.A. Davis, K.A. Michie, S.C. Goodchild, N.O. Robertson, P.M.G. Curmi
+
+Coherent phenomena in photosynthetic light harvesting: part two-observations in biological systems 
+129.   Reece et al., 2006 S.Y. Reece, J.M. Hodgkiss, J. Stubbe, D.G. Nocera
+
+Proton-coupled electron transfer: the mechanistic underpinning for radical transport and catalysis in biology 
+Philos. Trans. R. Soc. L., B Biol. Sci., 361 (2006), pp. 1351-1364, 10.1098/rstb.2006.1874
+
+130.   Renger and Kühn, 2007 G. Renger, P. Kühn
+
+Reaction pattern and mechanism of light induced oxidative water splitting in photosynthesis 
+131.   Richter et al., 2008 M. Richter, T. Renger, A. Knorr
+
+A Bloch equation approach to intensity dependent optical spectra of light harvesting complex II 
+132.   Ritz et al., 2010 T. Ritz, T. Yoshii, C. Helfrich-Foerster, M. Ahmad
+
+Cryptochrome: a photoreceptor with the properties of a magnetoreceptor? 
+133.   Rodgers and Hore, 2009 C.T. Rodgers, P.J. Hore
+
+Chemical magnetoreception in birds: the radical pair mechanism 
+134.   Roscioli et al., 2018 J.D. Roscioli, S. Ghosh, A.M. LaFountain, H.A. Frank, W.F. Beck
+
+Structural tuning of quantum decoherence and coherent energy transfer in photosynthetic light harvesting 
+135.   Russo et al., 2022 A. Russo, P. Susanna, R. Michelina, M., M.M, F. Loreto
+
+Volatile organic compounds in the interaction between plants and beneficial microorganisms 
+136.   Sahu et al., 2022 P.K. Sahu, K. Jayalakshmi, J. Tilgam, A. Gupta, Y. Nagaraju, A. Kumar, S. Hamid, H.V. Singh, T. Minkina, V.D. Rajput, M.V.S. Rajawat
+
+ROS generated from biotic stress: effects on plants and alleviation by endophytic microbes 
+137.   Sakaguchi et al., 1980 Y. Sakaguchi, H. Hayashi, S. Nagakura
+
+Classification of the external magnetic field effects on the photodecomposition reaction of dibenzoyl peroxide 
+138.   Saravanan et al., 2021 A. Saravanan, P.S. Kumar, D.-V.N. Vo, S. Jeevanantham, S. Karishma, P.R. Yaashikaa
+
+A review on catalytic-enzyme degradation of toxic environmental pollutants: microbial enzymes 
+139.   Sarraf et al., 2020 M. Sarraf, S. Kataria, H. Taimourya, L.O. Santos, E.D. Menegatti, M. Jain, M. Ihtisham, S.L. Liu
+
+Magnetic field (MF) applications in plants: an overview 
+140.   Schlau-Cohen et al., 2011 G.S. Schlau-Cohen, A. Ishizaki, G.R. Fleming
+
+Two-dimensional electronic spectroscopy and photosynthesis: fundamentals and applications to photosynthetic light-harvesting 
+141.   Schmid, 2008 V.H.R. Schmid
+
+Light-harvesting complexes of vascular plants 
+142.   Schoffman et al., 2020 H. Schoffman, W.M. Brown, Y. Paltiel, N. Keren, E.M. Gauger
+
+Structure-based hamiltonian model for IsiA uncovers a highly robust pigment-protein complex 
+143.   Schouten et al., 2023 A.O. Schouten, L.M. Sager-Smith, D.A. Mazziotti
+
+Exciton-condensate-like amplification of energy transport in light harvesting 
+144.   Schreiner, 2020 P.R. Schreiner
+
+Quantum mechanical tunneling is essential to understanding chemical reactivity 
+145.   Schulze-Halberg, 2010 A. Schulze-Halberg
+
+Explicit higher-dimensional Darboux transformations for the time-dependent Schrodinger equation, Jairo Charris seminar on algebraic aspects of Darboux transformations 
+Quantum Integrable Systems and Supersymmetric Quantum Mechanics American Mathematical Society, Univ Sergio Arboleda, Santa Marta, Colombia (2010), pp. 165-180
+
+146.   Selim and El-Nady, 2011 A.F.H. Selim, M.F. El-Nady
+
+Physio-anatomical responses of drought stressed tomato plants to magnetic field 
+147.   Shuang et al., 2022 S.-P. Shuang, J.-Y. Zhang, Z. Cun, H.-M. Wu, J. Hong, J.-W. Chen
+
+A comparison of photoprotective mechanism in different light-demanding plants under dynamic light conditions 
+148.   Slavov et al., 2020 C. Slavov, T. Fischer, A. Barnoy, H. Shin, A.G. Rao, C. Wiebeler, X. Zeng, Y. Sun, Q. Xu, A. Gutt, K.H. Zhao, W. Gärtner, X. Yang, I. Schapiro, J. Wachtveitl
+
+The interplay between chromophore and protein determines the extended excited state dynamics in a single-domain phytochrome 
+149.   Solov’yov and Schulten, 2012 I.A. Solov’yov, K. Schulten
+
+Reaction kinetics and mechanism of magnetic field effects in cryptochrome 
+150.   Somma et al., 2021 S. Somma, E. Reverchon, L. Baldino
+
+Water purification of classical and emerging organic pollutants: an extensive review 
+151.   Song et al., 2021 Q. Song, S. Goia, J. Yang, S.C.L. Hall, M. Staniforth, V.G. Stavros, S. Perrier
+
+Efficient artificial light-harvesting system based on supramolecular peptide nanotubes in water 
+152.   Steiner and Ulrich, 1989 U.E. Steiner, T. Ulrich
+
+Magnetic field effects in chemical kinetics and related phenomena 
+153.   Stevens et al., 2022 L. Stevens, D. Bidwell, M. Fehler, A. Singhal
+
+The art and science of biomimicry—abstracting design principles from nature 
+N. Rezaei (Ed.), Transdisciplinarity, Springer International Publishing, Cham (2022), pp. 649-687
+
+154.   Su and Man, 2015 F. Su, Z.X. Man
+
+Controlling coherence transfer of dimer interacting with independent environments 
+155.   Suzuki et al., 2005 T. Suzuki, T. Miura, K. Maeda, T. Arai
+
+Spin dynamics of the radical pair in a low magnetic field studied by the transient absorption detected magnetic field effect on the reaction yield and switched external magnetic field 
+156.   Tang et al., 2022 L.-S. Tang, F. Zi-Xuan, T. Xiao-Fei, H. Shi-Min, J. Cheng, C. An-Qi, D.-L. Ren
+
+The influences and regulatory mechanisms of magnetic fields on circadian rhythms 
+157.   Taskent et al., 2008 H. Taskent, J.H. Cho, D.P. Raleigh
+
+Temperature-dependent Hammond behavior in a protein-folding reaction: analysis of transition-state movement and ground-state effects 
+158.   Thoradit et al., 2023 T. Thoradit, K. Thongyoo, K. Kamoltheptawin, L. Tunprasert, M.A. El-Esawi, B. Aguida, N. Jourdan, K. Buddhachat, M. Pooam
+
+Cryptochrome and quantum biology: unraveling the mysteries of plant magnetoreception 
+159.   Thyrhaug et al., 2018 E. Thyrhaug, R. Tempelaar, M.J.P. Alcocer, K. Žídek, D. Bína, J. Knoester, T.L.C. Jansen, D. Zigmantas
+
+Identification and characterization of diverse coherences in the Fenna–Matthews–Olson complex 
+160.   Tomita and Matsuoka, 1986 M. Tomita, M. Matsuoka
+
+Ultrafast pump–probe measurement using intensity correlation of incoherent light 
+161.   Usselman et al., 2016 R.J. Usselman, C. Chavarriaga, P.R. Castello, M. Procopio, T. Ritz, E.A. Dratz, D.J. Singel, C.F. Martino
+
+The quantum biology of reactive oxygen species partitioning impacts cellular bioenergetics 
+162.   Uthailiang et al., 2025 T. Uthailiang, O. Suntijitrungruang, P. Issarakul, P. Pongkitiwanichakul, S. Boonchui
+
+Investigation of quantum trajectories in photosynthetic light harvesting through a quantum stochastic approach 
+163.   van der Kamp and Mulholland, 2013 M.W. van der Kamp, A.J. Mulholland
+
+Combined quantum mechanics/molecular mechanics (QM/MM) methods in computational enzymology 
+164.   Vidossich and Magistrato, 2014 P. Vidossich, A. Magistrato
+
+QM/MM molecular dynamics studies of metal binding proteins 
+Biomolecules, 4 (2014), pp. 616-645
+
+165.   Vinyard et al., 2019 D.J. Vinyard, S.L. Badshah, M.R. Riggio, D. Kaur, A.R. Fanguy, M.R. Gunner
+
+Photosystem II oxygen-evolving complex photoassembly displays an inverse H/D solvent isotope effect under chloride-limiting conditions 
+166.   Wagner et al., 2019 A.M. Wagner, J.M. Knipe, G. Orive, N.A. Peppas
+
+Quantum dots in biomedical applications 
+167.   Wang and Lin, 2025 X. Wang, C. Lin
+
+The two action mechanisms of plant cryptochromes 
+168.   Wang et al., 2018 Y. Wang, R. Branicky, A. Noë, S. Hekimi
+
+Superoxide dismutases: dual roles in controlling ROS damage and regulating ROS signaling 
+169.   Wen et al., 2010 J. Wen, J. Harada, K. Buyle, K. Yuan, H. Tamiaki, H. Oh-Oka, R.A. Loomis, R.E. Blankenship
+
+Characterization of an FMO variant of chlorobaculum tepidum carrying bacteriochlorophyll a esterified by geranylgeraniol 
+170.   Wen et al., 2009 J. Wen, H. Zhang, M.L. Gross, R.E. Blankenship
+
+Membrane orientation of the FMO antenna protein from chlorobaculum tepidum as determined by mass spectrometry-based footprinting 
+171.   Westfall et al., 2013 C.S. Westfall, A.M. Muehler, J.M. Jez
+
+Enzyme action in the regulation of plant hormone responses 
+172.   Yang et al., 2022 S.J. Yang, E.A. Arsenault, K. Orcutt, M. Iwai, Y. Yoneda, G.R. Fleming
+
+From antenna to reaction center: pathways of ultrafast energy and charge transfer in photosystem II 
+173.   Yen and Cheng, 2010 T. Yen, Y. Cheng
+
+Electronic coherence effects in photosynthetic light harvesting 
+22nd Solvay Conference on Chemistry - Quantum Effects in Chemistry and Biology, Brussels, Belgium, Elsevier Science Bv (2010)
+
+174.   Zebelo and Maffei, 2015 S.A. Zebelo, M.E. Maffei
+
+Role of early signalling events in plant-insect interactions 
+175.   Zerah Harush and Dubi, 2023 E. Zerah Harush, Y. Dubi
+
+Signature of quantum coherence in the exciton energy pathways of the LH2 photosynthetic complex 
+176.   Zhang et al., 2023 Y.N. Zhang, Y. Zhang, J.Y. Zhao, J.L. He, Z. Xuanyuan, W.D. Pan, G.A. Sword, F.J. Chen, G.J. Wan
+
+Probing transcriptional crosstalk between cryptochromes and iron-sulfur cluster assembly 1 (MagR) in the magnetoresponse of a migratory insect 
+177.   Zhao et al., 2016 B.S. Zhao, W.Q. Zhang, W. Schöllkopf
+
+Universal diffraction of atoms and molecules from a quantum reflection grating 
+178.   Zhu et al., 2024 R. Zhu, W. Li, Z. Zhen, J. Zou, G. Liao, J. Wang, Z. Wang, H. Chen, S. Qin, Y. Weng
+
+Quantum phase synchronization via exciton-vibrational energy dissipation sustains long-lived coherence in photosynthetic antennas 
+179.   Zhu et al., 2022 R. Zhu, M. Ruan, H. Li, X. Leng, J. Zou, J. Wang, H. Chen, Z. Wang, Y. Weng
+
+Vibrational and vibronic coherences in the energy transfer process of light-harvesting complex II revealed by two-dimensional electronic spectroscopy 
+180.   Zigmantas et al., 2022 D. Zigmantas, T. Polívka, P. Persson, V. Sundström
+
+Ultrafast laser spectroscopy uncovers mechanisms of light energy conversion in photosynthesis and sustainable energy materials 
+181.   Zollitsch et al., 2018 T.M. Zollitsch, L.E. Jarocha, C. Bialas, K.B. Henbest, G. Kodali, P.L. Dutton, C.C. Moser, C.R. Timmel, P.J. Hore, S.R. Mackenzie
+
+Magnetically sensitive radical photochemistry of non-natural flavoproteins 
+182.   Zottola, 2009 M.A. Zottola
+
+A partial exploration of the potential energy surfaces of SCN and HSCN: implications for the enzyme-mediated detoxification of cyanide 
+
+© 2025 The Author. Published by Elsevier B.V.

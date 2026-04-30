@@ -1,0 +1,1752 @@
+Title: How can I revert a single file to a previous version?
+
+URL Source: https://stackoverflow.com/questions/2733873/how-can-i-revert-a-single-file-to-a-previous-version
+
+Markdown Content:
+git - How can I revert a single file to a previous version? - Stack Overflow
+
+===============
+
+By clicking “Sign up”, you agree to our terms of service and acknowledge you have read our privacy policy.
+
+ Sign up with Google
+
+ Sign up with GitHub
+
+OR
+==
+
+Email 
+
+Password 
+
+Sign up
+
+Already have an account? Log in
+
+Skip to main content
+
+Stack Overflow
+1.   About
+2.   Products
+3.   For Teams
+
+1.   Stack Overflow for Teams Where developers & technologists share private knowledge with coworkers
+2.   Advertising Reach devs & technologists worldwide about your product, service or employer brand
+3.   Knowledge Solutions Data licensing offering for businesses to build and improve AI tools and models
+4.   Labs The future of collective knowledge sharing
+5.   About the company Visit the blog
+
+Loading…
+
+1.   
+### current community
+
+   
+
+    *   Stack Overflow help chat 
+    *    Meta Stack Overflow
+
+### your communities
+
+Sign up or log in to customize your list. 
+
+### more stack exchange communities
+
+company blog
+
+3.   Log in
+4.   Sign up
+
+Let's set up your homepage Select a few topics you're interested in:
+====================================================================
+
+python javascript c#reactjs java android html flutter c++node.js typescript css r php angular next.js spring-boot machine-learning sql excel ios azure docker
+
+Or search from our full list:
+
+*   javascript
+*   python
+*   java
+*   c#
+*   php
+*   android
+*   html
+*   jquery
+*   c++
+*   css
+*   ios
+*   sql
+*   mysql
+*   r
+*   reactjs
+*   node.js
+*   arrays
+*   c
+*   asp.net
+*   json
+*   python-3.x
+*   .net
+*   ruby-on-rails
+*   sql-server
+*   swift
+*   django
+*   angular
+*   objective-c
+*   excel
+*   pandas
+*   angularjs
+*   regex
+*   typescript
+*   ruby
+*   linux
+*   ajax
+*   iphone
+*   vba
+*   xml
+*   laravel
+*   spring
+*   asp.net-mvc
+*   database
+*   wordpress
+*   string
+*   flutter
+*   postgresql
+*   mongodb
+*   wpf
+*   windows
+*   xcode
+*   amazon-web-services
+*   bash
+*   git
+*   oracle-database
+*   spring-boot
+*   dataframe
+*   azure
+*   firebase
+*   list
+*   multithreading
+*   docker
+*   vb.net
+*   react-native
+*   eclipse
+*   algorithm
+*   powershell
+*   macos
+*   visual-studio
+*   numpy
+*   image
+*   forms
+*   scala
+*   function
+*   vue.js
+*   performance
+*   twitter-bootstrap
+*   selenium
+*   winforms
+*   kotlin
+*   loops
+*   express
+*   dart
+*   hibernate
+*   sqlite
+*   matlab
+*   python-2.7
+*   shell
+*   rest
+*   apache
+*   entity-framework
+*   android-studio
+*   csv
+*   maven
+*   linq
+*   qt
+*   dictionary
+*   unit-testing
+*   asp.net-core
+*   facebook
+*   apache-spark
+*   tensorflow
+*   file
+*   swing
+*   class
+*   unity-game-engine
+*   sorting
+*   date
+*   authentication
+*   go
+*   symfony
+*   t-sql
+*   opencv
+*   matplotlib
+*   .htaccess
+*   google-chrome
+*   for-loop
+*   datetime
+*   codeigniter
+*   perl
+*   http
+*   validation
+*   sockets
+*   google-maps
+*   object
+*   uitableview
+*   xaml
+*   oop
+*   visual-studio-code
+*   if-statement
+*   cordova
+*   ubuntu
+*   web-services
+*   email
+*   android-layout
+*   github
+*   spring-mvc
+*   elasticsearch
+*   kubernetes
+*   selenium-webdriver
+*   ms-access
+*   ggplot2
+*   user-interface
+*   parsing
+*   pointers
+*   google-sheets
+*   c++11
+*   security
+*   machine-learning
+*   google-apps-script
+*   ruby-on-rails-3
+*   templates
+*   flask
+*   nginx
+*   variables
+*   exception
+*   sql-server-2008
+*   gradle
+*   debugging
+*   tkinter
+*   delphi
+*   listview
+*   jpa
+*   asynchronous
+*   web-scraping
+*   haskell
+*   pdf
+*   jsp
+*   ssl
+*   amazon-s3
+*   google-cloud-platform
+*   jenkins
+*   testing
+*   xamarin
+*   wcf
+*   batch-file
+*   generics
+*   npm
+*   ionic-framework
+*   network-programming
+*   unix
+*   recursion
+*   google-app-engine
+*   mongoose
+*   visual-studio-2010
+*   .net-core
+*   android-fragments
+*   assembly
+*   animation
+*   math
+*   svg
+*   session
+*   rust
+*   intellij-idea
+*   hadoop
+*   curl
+*   join
+*   winapi
+*   next.js
+*   django-models
+*   laravel-5
+*   url
+*   heroku
+*   http-redirect
+*   tomcat
+*   google-cloud-firestore
+*   inheritance
+*   webpack
+*   image-processing
+*   gcc
+*   keras
+*   swiftui
+*   asp.net-mvc-4
+*   logging
+*   dom
+*   matrix
+*   pyspark
+*   actionscript-3
+*   button
+*   post
+*   optimization
+*   firebase-realtime-database
+*   web
+*   jquery-ui
+*   cocoa
+*   xpath
+*   iis
+*   d3.js
+*   javafx
+*   firefox
+*   xslt
+*   internet-explorer
+*   caching
+*   select
+*   asp.net-mvc-3
+*   opengl
+*   events
+*   asp.net-web-api
+*   plot
+*   dplyr
+*   encryption
+*   magento
+*   stored-procedures
+*   search
+*   amazon-ec2
+*   ruby-on-rails-4
+*   memory
+*   canvas
+*   audio
+*   multidimensional-array
+*   random
+*   jsf
+*   vector
+*   redux
+*   cookies
+*   input
+*   facebook-graph-api
+*   flash
+*   indexing
+*   xamarin.forms
+*   arraylist
+*   ipad
+*   cocoa-touch
+*   data-structures
+*   video
+*   azure-devops
+*   model-view-controller
+*   serialization
+*   apache-kafka
+*   jdbc
+*   woocommerce
+*   razor
+*   routes
+*   awk
+*   mod-rewrite
+*   servlets
+*   excel-formula
+*   beautifulsoup
+*   filter
+*   docker-compose
+*   iframe
+*   aws-lambda
+*   design-patterns
+*   text
+*   visual-c++
+*   django-rest-framework
+*   cakephp
+*   mobile
+*   android-intent
+*   struct
+*   react-hooks
+*   methods
+*   groovy
+*   mvvm
+*   lambda
+*   ssh
+*   checkbox
+*   time
+*   ecmascript-6
+*   grails
+*   google-chrome-extension
+*   installation
+*   cmake
+*   sharepoint
+*   shiny
+*   spring-security
+*   jakarta-ee
+*   plsql
+*   android-recyclerview
+*   core-data
+*   types
+*   sed
+*   meteor
+*   android-activity
+*   activerecord
+*   bootstrap-4
+*   websocket
+*   graph
+*   replace
+*   group-by
+*   scikit-learn
+*   vim
+*   file-upload
+*   junit
+*   boost
+*   memory-management
+*   sass
+*   async-await
+*   import
+*   deep-learning
+*   error-handling
+*   eloquent
+*   dynamic
+*   soap
+*   dependency-injection
+*   silverlight
+*   layout
+*   apache-spark-sql
+*   charts
+*   deployment
+*   browser
+*   gridview
+*   svn
+*   while-loop
+*   google-bigquery
+*   vuejs2
+*   highcharts
+*   dll
+*   ffmpeg
+*   view
+*   foreach
+*   makefile
+*   plugins
+*   redis
+*   c#-4.0
+*   reporting-services
+*   jupyter-notebook
+*   unicode
+*   merge
+*   reflection
+*   https
+*   server
+*   google-maps-api-3
+*   twitter
+*   oauth-2.0
+*   extjs
+*   terminal
+*   axios
+*   pip
+*   split
+*   cmd
+*   pytorch
+*   encoding
+*   django-views
+*   collections
+*   database-design
+*   hash
+*   netbeans
+*   automation
+*   data-binding
+*   ember.js
+*   build
+*   tcp
+*   pdo
+*   sqlalchemy
+*   apache-flex
+*   entity-framework-core
+*   concurrency
+*   mysqli
+*   command-line
+*   spring-data-jpa
+*   printing
+*   react-redux
+*   java-8
+*   lua
+*   html-table
+*   ansible
+*   neo4j
+*   service
+*   jestjs
+*   parameters
+*   enums
+*   material-ui
+*   flexbox
+*   module
+*   promise
+*   visual-studio-2012
+*   outlook
+*   web-applications
+*   firebase-authentication
+*   webview
+*   uwp
+*   jquery-mobile
+*   utf-8
+*   datatable
+*   python-requests
+*   parallel-processing
+*   colors
+*   drop-down-menu
+*   scipy
+*   scroll
+*   tfs
+*   hive
+*   count
+*   syntax
+*   ms-word
+*   twitter-bootstrap-3
+*   ssis
+*   fonts
+*   rxjs
+*   constructor
+*   google-analytics
+*   file-io
+*   three.js
+*   paypal
+*   powerbi
+*   graphql
+*   cassandra
+*   discord
+*   graphics
+*   compiler-errors
+*   gwt
+*   socket.io
+*   react-router
+*   backbone.js
+*   solr
+*   memory-leaks
+*   url-rewriting
+*   datatables
+*   nlp
+*   oauth
+*   terraform
+*   datagridview
+*   drupal
+*   zend-framework
+*   oracle11g
+*   knockout.js
+*   triggers
+*   neural-network
+*   interface
+*   django-forms
+*   angular-material
+*   casting
+*   jmeter
+*   google-api
+*   linked-list
+*   path
+*   timer
+*   arduino
+*   django-templates
+*   proxy
+*   orm
+*   directory
+*   windows-phone-7
+*   parse-platform
+*   visual-studio-2015
+*   cron
+*   conditional-statements
+*   push-notification
+*   functional-programming
+*   primefaces
+*   pagination
+*   model
+*   jar
+*   xamarin.android
+*   hyperlink
+*   uiview
+*   vbscript
+*   visual-studio-2013
+*   google-cloud-functions
+*   gitlab
+*   azure-active-directory
+*   jwt
+*   download
+*   swift3
+*   sql-server-2005
+*   process
+*   configuration
+*   rspec
+*   pygame
+*   properties
+*   combobox
+*   callback
+*   windows-phone-8
+*   linux-kernel
+*   safari
+*   scrapy
+*   permissions
+*   emacs
+*   x86
+*   clojure
+*   scripting
+*   raspberry-pi
+*   scope
+*   io
+*   azure-functions
+*   expo
+*   compilation
+*   responsive-design
+*   mongodb-query
+*   nhibernate
+*   angularjs-directive
+*   request
+*   bluetooth
+*   binding
+*   reference
+*   dns
+*   architecture
+*   3d
+*   playframework
+*   pyqt
+*   version-control
+*   discord.js
+*   doctrine-orm
+*   package
+*   f#
+*   rubygems
+*   get
+*   sql-server-2012
+*   autocomplete
+*   tree
+*   openssl
+*   datepicker
+*   kendo-ui
+*   jackson
+*   yii
+*   controller
+*   grep
+*   nested
+*   xamarin.ios
+*   static
+*   null
+*   statistics
+*   transactions
+*   active-directory
+*   datagrid
+*   dockerfile
+*   uiviewcontroller
+*   webforms
+*   discord.py
+*   sas
+*   computer-vision
+*   phpmyadmin
+*   notifications
+*   duplicates
+*   mocking
+*   pycharm
+*   youtube
+*   yaml
+*   nullpointerexception
+*   menu
+*   blazor
+*   sum
+*   plotly
+*   bitmap
+*   asp.net-mvc-5
+*   visual-studio-2008
+*   yii2
+*   floating-point
+*   css-selectors
+*   stl
+*   electron
+*   android-listview
+*   jsf-2
+*   time-series
+*   cryptography
+*   ant
+*   hashmap
+*   character-encoding
+*   stream
+*   msbuild
+*   asp.net-core-mvc
+*   sdk
+*   google-drive-api
+*   jboss
+*   selenium-chromedriver
+*   joomla
+*   devise
+*   cors
+*   navigation
+*   cuda
+*   anaconda
+*   background
+*   frontend
+*   multiprocessing
+*   binary
+*   pyqt5
+*   camera
+*   iterator
+*   linq-to-sql
+*   mariadb
+*   onclick
+*   android-jetpack-compose
+*   ios7
+*   microsoft-graph-api
+*   rabbitmq
+*   android-asynctask
+*   tabs
+*   amazon-dynamodb
+*   laravel-4
+*   environment-variables
+*   uicollectionview
+*   insert
+*   linker
+*   xsd
+*   coldfusion
+*   console
+*   continuous-integration
+*   upload
+*   textview
+*   ftp
+*   opengl-es
+*   macros
+*   operating-system
+*   mockito
+*   localization
+*   formatting
+*   xml-parsing
+*   vuejs3
+*   json.net
+*   type-conversion
+*   data.table
+*   kivy
+*   timestamp
+*   integer
+*   calendar
+*   segmentation-fault
+*   android-ndk
+*   prolog
+*   drag-and-drop
+*   char
+*   crash
+*   jasmine
+*   automated-tests
+*   geometry
+*   dependencies
+*   azure-pipelines
+*   android-gradle-plugin
+*   fortran
+*   itext
+*   sprite-kit
+*   mfc
+*   header
+*   attributes
+*   firebase-cloud-messaging
+*   nosql
+*   format
+*   nuxt.js
+*   odoo
+*   db2
+*   jquery-plugins
+*   event-handling
+*   jenkins-pipeline
+*   julia
+*   leaflet
+*   nestjs
+*   annotations
+*   flutter-layout
+*   keyboard
+*   postman
+*   textbox
+*   arm
+*   visual-studio-2017
+*   stripe-payments
+*   gulp
+*   libgdx
+*   synchronization
+*   timezone
+*   uikit
+*   azure-web-app-service
+*   dom-events
+*   xampp
+*   wso2
+*   crystal-reports
+*   namespaces
+*   aggregation-framework
+*   android-emulator
+*   swagger
+*   uiscrollview
+*   google-sheets-formula
+*   jvm
+*   sequelize.js
+*   chart.js
+*   com
+*   snowflake-cloud-data-platform
+*   subprocess
+*   geolocation
+*   webdriver
+*   html5-canvas
+*   garbage-collection
+*   centos
+*   dialog
+*   sql-update
+*   numbers
+*   concatenation
+*   widget
+*   qml
+*   tuples
+*   set
+*   java-stream
+*   mapreduce
+*   ionic2
+*   smtp
+*   windows-10
+*   android-edittext
+*   rotation
+*   modal-dialog
+*   spring-data
+*   nuget
+*   radio-button
+*   doctrine
+*   http-headers
+*   grid
+*   sonarqube
+*   lucene
+*   xmlhttprequest
+*   listbox
+*   switch-statement
+*   initialization
+*   internationalization
+*   components
+*   boolean
+*   apache-camel
+*   google-play
+*   serial-port
+*   gdb
+*   ios5
+*   ldap
+*   return
+*   youtube-api
+*   pivot
+*   eclipse-plugin
+*   latex
+*   frameworks
+*   tags
+*   containers
+*   github-actions
+*   c++17
+*   subquery
+*   dataset
+*   asp-classic
+*   foreign-keys
+*   label
+*   embedded
+*   uinavigationcontroller
+*   copy
+*   delegates
+*   struts2
+*   google-cloud-storage
+*   migration
+*   protractor
+*   base64
+*   queue
+*   find
+*   uibutton
+*   sql-server-2008-r2
+*   arguments
+*   composer-php
+*   append
+*   jaxb
+*   stack
+*   zip
+*   tailwind-css
+*   cucumber
+*   autolayout
+*   ide
+*   entity-framework-6
+*   iteration
+*   popup
+*   r-markdown
+*   windows-7
+*   airflow
+*   vb6
+*   g++
+*   ssl-certificate
+*   hover
+*   clang
+*   jqgrid
+*   range
+*   gmail
+
+Next You’ll be prompted to create an account to view your personalized homepage.
+
+1.       1.   Home
+    2.   Questions
+    3.   AI Assist Labs
+    4.   Tags
+
+    6.   Challenges
+    7.   Chat
+    8.   Articles
+    9.   Users
+
+    11.   Jobs
+    12.   Companies
+    13.   Collectives 
+    14.   Communities for your favorite technologies. Explore all Collectives
+
+2.   Teams Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+
+Try Teams for free Explore Teams 
+3.   Teams
+4.   Ask questions, find answers and collaborate at work with Stack Overflow for Teams. Explore Teams
+
+##### Collectives™ on Stack Overflow
+
+Find centralized, trusted content and collaborate around the technologies you use most.
+
+Learn more about Collectives
+
+**Teams**
+
+Q&A for work
+
+Connect and share knowledge within a single location that is structured and easy to search.
+
+Learn more about Teams
+
+Hang on, you can't upvote just yet.
+===================================
+
+You'll need to complete a few actions and gain 15 reputation points before being able to upvote. **Upvoting** indicates when questions and answers are useful. What's reputation and how do I get it?
+
+Instead, you can save this post to reference later.
+
+ Save this post for later Not now
+
+Thanks for your vote! 
+
+ You now have 5 free votes weekly.
+==========================================================
+
+Free votes
+*   count toward the total vote score
+*   does not give reputation to the author
+
+Continue to help good content that is interesting, well-researched, and useful, rise to the top! To gain full voting privileges, earn reputation.
+
+Got it!Go to help center to learn more
+
+How can I revert a single file to a previous version? [duplicate]
+=================================================================
+
+Ask Question
+
+Asked 15 years, 6 months ago
+
+Modified 4 years, 8 months ago
+
+Viewed 940k times 
+
+This question shows research effort; it is useful and clear
+
+ 888 
+
+Save this question.
+
+Show activity on this post.
+
+**This question already has answers here**: 
+
+How can I reset or revert a file to a specific revision? (37 answers) 
+
+Closed 11 years ago.
+
+The community reviewed whether to reopen this question 1 year ago and left it closed:
+
+> Original close reason(s) were not resolved
+
+Is there a way to go through different commits on a file. Say I modified a file 5 times and I want to go back to change 2, after I already committed and pushed to a repository.
+
+In my understanding the only way is to keep many branches, have I got that right? If I'm right I'm gonna have hundreds of branches in a few days, so I'm probably not understanding it really.
+
+Could anyone clear that up please?
+
+*   git
+*   revert
+
+Share
+
+Share a link to this question 
+
+Copy link CC BY-SA 4.0
+
+Improve this question
+
+ Follow 
+
+Follow this question to receive notifications
+
+edited Feb 25, 2021 at 14:46
+
+Mus
+
+7,570 25 25 gold badges 93 93 silver badges 144 144 bronze badges
+
+ asked Apr 28, 2010 at 23:44
+
+georgeliquor georgeliquor
+
+8,923 3 3 gold badges 18 18 silver badges 4 4 bronze badges
+
+4
+
+*   1  Do you want to revert the file back to change two permanently, or do you temporarily want to pull out change 2 to see what the file looked like at the time?Jim Hurne  –Jim Hurne 2010-04-28 23:55:45 +00:00 Commented Apr 28, 2010 at 23:55  
+*     I still use SVN daily and git only a little so I can't help with your question - but thought you might be interested in this resource - the book 'Pro Git' is available online here - progit.org/book I own and have read the book - it is excellent, too bad I don't get to use git at the moment sounds like you just need to get a historical version of your file and then recommit the old version, not branch?house9  –house9 2010-04-28 23:58:41 +00:00 Commented Apr 28, 2010 at 23:58  
+*     @Jim Hurne: Yes, I want to revert the file back permantently @house9: Thanks I'll take a look at that book. The historical bit sounds good, how is it done?georgeliquor  –georgeliquor 2010-04-29 00:05:46 +00:00 Commented Apr 29, 2010 at 0:05  
+*   1  The answers below are **very old**. It's just **git restore --source <hash> filename**. Deets: stackoverflow.com/a/78120460/294884 Fattie  –Fattie 2025-04-17 11:52:42 +00:00 Commented Apr 17 at 11:52  
+
+Add a comment|
+
+5 Answers 5
+-----------
+
+ Sorted by:  Reset to default
+
+This answer is useful
+
+ 1181 
+
+Save this answer.
+
+Show activity on this post.
+
+Let's start with a qualitative description of what we want to do (much of this is said in Ben Straub's answer). We've made some number of commits, five of which changed a given file, and we want to revert the file to one of the previous versions. First of all, git doesn't keep version numbers for individual files. It just tracks content - a commit is essentially a snapshot of the work tree, along with some metadata (e.g. commit message). So, we have to know which commit has the version of the file we want. Once we know that, we'll need to make a new commit reverting the file to that state. (We can't just muck around with history, because we've already pushed this content, and editing history messes with everyone else.)
+
+So let's start with finding the right commit. You can see the commits which have made modifications to given file(s) very easily:
+
+```
+git log path/to/file
+```
+
+If your commit messages aren't good enough, and you need to see what was done to the file in each commit, use the `-p/--patch` option:
+
+```
+git log -p path/to/file
+```
+
+Or, if you prefer the graphical view of gitk
+
+```
+gitk path/to/file
+```
+
+You can also do this once you've started gitk through the view menu; one of the options for a view is a list of paths to include.
+
+Either way, you'll be able to find the SHA1 (hash) of the commit with the version of the file you want. Now, all you have to do is this:
+
+```
+# get the version of the file from the given commit
+git checkout <commit> path/to/file
+# and commit this modification
+git commit
+```
+
+(The checkout command first reads the file into the index, then copies it into the work tree, so there's no need to use `git add` to add it to the index in preparation for committing.)
+
+If your file may not have a simple history (e.g. renames and copies), see VonC's excellent comment. `git` can be directed to search more carefully for such things, at the expense of speed. If you're confident the history's simple, you needn't bother.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 2.5
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Oct 26, 2010 at 12:48
+
+ answered Apr 29, 2010 at 0:26
+
+Cascabel Cascabel
+
+501k 75 75 gold badges 385 385 silver badges 319 319 bronze badges
+
+ Sign up to request clarification or add additional context in comments. 
+
+11 Comments
+-----------
+
+Add a comment
+
+VonC
+
+VonC Over a year ago
+
+Shouldn't you use also `-C` or `--find-copies-harder` to detect renames _and copies_, plus `--follow` to continue listing the history of a file beyond renames? Given the emphasis of your answer on _file content_, it might be good to complete it by mentioning its natural consequence: the **inference** aspect (see stackoverflow.com/questions/612580/…)
+
+2010-04-29T04:00:43.723Z+00:00
+
+18
+
+Reply
+
+*   Copy link
+
+WickyNilliams
+
+WickyNilliams Over a year ago
+
+Fantastic explanation. Not only did you answer the question perfectly, you also furthered my understanding. I'd never seen `gitk` before either - amazing!
+
+2013-03-25T21:49:29.303Z+00:00
+
+4
+
+Reply
+
+*   Copy link
+
+Michael Lang
+
+Michael Lang Over a year ago
+
+One nice thing to add is that if the change you're reverting is a file rename, you'll need a different workflow. You'll need something like git log --diff-filter=D --summary in order to find the desired commit, and remove the file with the new name.
+
+2013-12-23T22:50:19.457Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+Ed Randall
+
+Ed Randall Over a year ago
+
+Will `git checkout head~3 filename` not work?
+
+2016-09-27T12:16:14.523Z+00:00
+
+2
+
+Reply
+
+*   Copy link
+
+Cascabel
+
+Cascabel Over a year ago
+
+@EdRandall Sure, `HEAD~3` will work, if the commit you want is the one three before HEAD. In general you may not be totally confident, so I covered how to figure out which commit you actually want.
+
+2016-09-27T15:23:54.277Z+00:00
+
+2
+
+Reply
+
+*   Copy link
+
+Add a comment|Show 6 more comments
+
+This answer is useful
+
+ 125 
+
+Save this answer.
+
+Show activity on this post.
+
+Git is very flexible. You shouldn't need hundreds of branches to do what you are asking. If you want to revert the state all the way back to the 2nd change (and it is indeed a change that was already committed and pushed), use `git revert`. Something like:
+
+```
+git revert a4r9593432
+```
+
+where a4r9593432 is the starting characters of the hash of the commit you want to back out.
+
+If the commit contains changes to many files, but you just want to revert just one of the files, you can use `git reset` (the 2nd or 3rd form):
+
+```
+git reset a4r9593432 -- path/to/file.txt
+# the reverted state is added to the staging area, ready for commit
+git diff --cached path/to/file.txt        # view the changes
+git commit
+git checkout HEAD path/to/file.txt        # make the working tree match HEAD
+```
+
+But this is pretty complex, and git reset is dangerous. Use `git checkout <hash> <file path>` instead, as Jefromi suggests.
+
+If you just want to view what the file looked like in commit x, you can use `git show`:
+
+```
+git show a4r9593432:path/to/file.txt
+```
+
+For all of the commands, there are many ways to refer to a commit other than via the commit hash (see Naming Commits in the Git User Manual).
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Jun 22, 2020 at 12:33
+
+mmoya
+
+2,238 1 1 gold badge 25 25 silver badges 35 35 bronze badges
+
+ answered Apr 29, 2010 at 0:29
+
+Jim Hurne Jim Hurne
+
+7,399 6 6 gold badges 46 46 silver badges 45 45 bronze badges
+
+6 Comments
+----------
+
+Add a comment
+
+Alex Budovski
+
+Alex Budovski Over a year ago
+
+Won't the `git revert` just back out _one_ change though -- not "revert the state all the way back to the 2nd change"?
+
+2010-04-29T00:44:19.24Z+00:00
+
+6
+
+Reply
+
+*   Copy link
+
+Jim Hurne
+
+Jim Hurne Over a year ago
+
+@Alex - Yes, you are correct. Good catch! Only the changes introduced in the given commit are backed out. It is painful, but you could use multiple calls to `get revert` to back out all of the commits to a certain point in time. Or you can do something like what you suggest in your answer with `git diff` and `git apply`.
+
+2010-04-29T02:03:59.063Z+00:00
+
+1
+
+Reply
+
+*   Copy link
+
+Paŭlo Ebermann
+
+Paŭlo Ebermann Over a year ago
+
+Also, `git revert` is not for one specific file, but for the whole repository.
+
+2015-03-04T13:01:53.793Z+00:00
+
+18
+
+Reply
+
+*   Copy link
+
+Dmytro Shevchenko
+
+Dmytro Shevchenko Over a year ago
+
+@PaŭloEbermann Yes, but it will only revert the files affected in the specified commit.
+
+2017-06-23T07:22:43.863Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+Adam Plocher
+
+Adam Plocher Over a year ago
+
+Can we have our cake and eat it to? Is it possible to revert a single commit from a single file and leave other future changes in place?
+
+2018-07-17T15:17:34.62Z+00:00
+
+9
+
+Reply
+
+*   Copy link
+
+Add a comment|Show 1 more comment
+
+This answer is useful
+
+ 11 
+
+Save this answer.
+
+Show activity on this post.
+
+Git doesn't think in terms of file versions. A version in git is a snapshot of the entire tree.
+
+Given this, what you really want is a tree that has the latest content of most files, but with the contents of one file the same as it was 5 commits ago. This will take the form of a new commit on top of the old ones, and the latest version of the tree will have what you want.
+
+I don't know if there's a one-liner that will revert a single file to the contents of 5 commits ago, but the lo-fi solution should work: checkout `master~5`, copy the file somewhere else, checkout `master`, copy the file back, then commit.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Jul 21, 2014 at 15:48
+
+gd1
+
+11.4k 7 7 gold badges 52 52 silver badges 88 88 bronze badges
+
+ answered Apr 29, 2010 at 0:08
+
+Ben Straub Ben Straub
+
+5,784 3 3 gold badges 30 30 silver badges 43 43 bronze badges
+
+1 Comment
+---------
+
+Add a comment
+
+Cascabel
+
+Cascabel Over a year ago
+
+The one-liner you're asking for is checkout on a single file instead of the entire work tree; see my answer.
+
+2010-04-29T00:27:20.717Z+00:00
+
+8
+
+Reply
+
+*   Copy link
+
+This answer is useful
+
+ 9 
+
+Save this answer.
+
+Show activity on this post.
+
+You can take a diff that undoes the changes you want and commit that.
+
+E.g. If you want to undo the changes in the range `from..to`, do the following
+
+```
+git diff to..from > foo.diff  # get a reverse diff
+patch < foo.diff
+git commit -a -m "Undid changes from..to".
+```
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 2.5
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Apr 29, 2010 at 0:16
+
+Alex Budovski Alex Budovski
+
+18.6k 6 6 gold badges 56 56 silver badges 58 58 bronze badges
+
+6 Comments
+----------
+
+Add a comment
+
+Cascabel
+
+Cascabel Over a year ago
+
+A few problems. If you want to create a patch, it needs to be the patch for only the file in question (`git diff to..from path/to/file`). To apply a patch, you should use `git apply` instead of patch. And there's no need to use a patch at all in this case; see my answer.
+
+2010-04-29T00:28:54.957Z+00:00
+
+3
+
+Reply
+
+*   Copy link
+
+kgadek
+
+kgadek Over a year ago
+
+Still helpful, as you can edit the diff (ie. revert only part of changes).
+
+2013-08-01T12:18:57.7Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+John Whitley
+
+John Whitley Over a year ago
+
+@Jefromi There is absolutely a reason to use a patch, because your answer is NOT equivalent to revert: it will obliterate all changes since the offending commit, not just undo the changes of that one commit as `git revert` would do. A file- and commit- specific patch is a far more precise and semantically correct change.
+
+2015-05-04T23:51:50.143Z+00:00
+
+3
+
+Reply
+
+*   Copy link
+
+Rudie
+
+Rudie Over a year ago
+
+@Jefromi This answer doesn't do the same as your answer. This answer reverts one commit. Your answer reverts one file. This one happens to be exactly what I needed.
+
+2015-09-07T13:31:23.853Z+00:00
+
+2
+
+Reply
+
+*   Copy link
+
+Kipr
+
+Kipr Over a year ago
+
+To elaborate on this answer I would suggest this one-liner: `git diff -R <revision>^! -- path/to/file | git apply`.
+
+2022-12-15T17:09:58.127Z+00:00
+
+1
+
+Reply
+
+*   Copy link
+
+Add a comment|Show 1 more comment
+
+This answer is useful
+
+ 9 
+
+Save this answer.
+
+Show activity on this post.
+
+Extracted from here: http://git.661346.n2.nabble.com/Revert-a-single-commit-in-a-single-file-td6064050.html
+
+```
+git revert <commit> 
+ git reset 
+ git add <path> 
+ git commit ... 
+ git reset --hard # making sure you didn't have uncommited changes earlier
+```
+
+It worked very fine to me.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Oct 22, 2013 at 21:10
+
+Felipe Felipe
+
+17.3k 11 11 gold badges 72 72 silver badges 96 96 bronze badges
+
+4 Comments
+----------
+
+Add a comment
+
+Antonio Medeiros
+
+Antonio Medeiros Over a year ago
+
+Intuitively, before reading your answer, I did `git revert`, `git reset` and `git add`, then I searched before commiting to see if I was doing right. +1 for your answer!
+
+2015-11-17T12:07:26.063Z+00:00
+
+1
+
+Reply
+
+*   Copy link
+
+Antonio Medeiros
+
+Antonio Medeiros Over a year ago
+
+Do you know if reverting a single file that way, git recognizes I'm actually reverting a file?
+
+2015-11-17T12:08:30.357Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+Antonio Medeiros
+
+Antonio Medeiros Over a year ago
+
+`gitk` shows as `new file`
+
+2015-11-17T12:16:30.047Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+Joshua
+
+Joshua Over a year ago
+
+@AntonioViniciusMenezesMedei: It doesn't work, as you discovered. It shows you reverting all the changes and adding all the other files as if you did them fresh.
+
+2019-01-22T23:47:20.53Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+Add a comment
+
+Start asking to get answers
+
+Find the answer to your question by asking.
+
+Ask question
+
+Explore related questions
+
+*   git
+*   revert
+
+See similar questions with these tags.
+
+*    The Overflow Blog 
+*    Your runbooks are obsolete in the age of agents 
+*    Featured on Meta 
+*     A First Look: Stack Overflow Redesign 
+*     Community Asks Sprint Announcement - October/November 2025 
+*     Upcoming opinion-based questions alpha experiment on Stack Overflow 
+
+Report this ad
+
+Community activity
+
+Last 1 hr
+
+*   Users online activity  8132 users online 
+*    15 questions 
+*    13 answers 
+*    39 comments 
+*    157 upvotes 
+
+Popular tags
+
+java c#android.net python javascript
+
+Popular unanswered question
+
+How to add multiple children based on single ternary operator in Flutter Row
+
+flutter row conditional-operator
+
+Pulkit Goyal
+*   327
+
+4 hours ago
+
+#### Linked
+
+5880 How can I reset or revert a file to a specific revision?
+
+0 How to uncommit changes to a specific file two commits ago
+
+89 How do programmers work together on a project?
+
+56 How does Git solve the merging problem?
+
+27 Git: Reset a modified file to the state in another branch?
+
+24 Git revert certain files
+
+18 Revert changes to a specific file from a specific commit
+
+207 Rollback file to much earlier version using Git
+
+2 How to revert committed changes to files of a certain type in git
+
+1 Git - revert everything under a specific directory to how it was at a given SHA
+
+See more linked questions
+
+#### Related
+
+7608 How do I revert a Git repository to a previous commit?
+
+11976 How can I rename a local Git branch?
+
+5880 How can I reset or revert a file to a specific revision?
+
+8862 How can I check out a remote Git branch?
+
+2715 How do I safely merge a Git branch into master?
+
+1765 How can I reconcile detached HEAD with master/origin?
+
+8580 How do I make Git forget about a file that was tracked, but is now in .gitignore?
+
+2751 How do I revert all local changes in Git managed project to previous state?
+
+5089 How can I delete a remote tag?
+
+3298 How can I change the commit author for a single commit?
+
+#### Hot Network Questions
+
+*    In the Shema, is it Yahweh or God that is said to be "one"?
+*    I do a SHA256 hash calculation, but SHA256 doesn’t match the officially hash value
+*    Is 1,111,111,111,111,111,111 prime?
+*    Solving system of equations with one affine and two cubic equations
+*    How filesystem blocks relate to NVMe blocks
+*    How to create and animate a topological deformation between two dimer configurations in TikZ?
+*    Is a topology determined by its converging nets?
+*    What is that extra exhaust on the RS-68
+*    The usefulness of the material implication
+*    Would this coating suit for isolating the copper side of a stripboard from outside world?
+*    Python program that iterates over audio files with a progress bar interface
+*    Meaning of diagonal lines extending SW from half notes? Photo attached
+*    Could lightning occur in fog or mist?
+*    Xubuntu Linux 25.10 - not available automatically
+*    Identify Redundant Regex
+*    Two triangles in a light bulb
+*    A replacement for alcohol in bars
+*    How do I find what's causing a task to be slow, when CPU, memory, disk and network are not used at 100%?
+*    Do multiple credit cards help or hurt credit score for young person with no credit yet?
+*    Enolizability of different enolizable sites
+*    Red Shift Puzzle
+*    How should I keep oven moisture down when roasting vegetables?
+*    Weaker notion of a complex derivative
+*    Is this third-party cantrip, Quick Knot, balanced for a cantrip? If not, how can I make it more balanced?
+
+Why are you flagging this comment?
+==================================
+
+Probable spam. 
+This comment promotes a product, service or website while failing to disclose the author's affiliation.
+
+ 
+
+Unfriendly or contains harassment/bigotry/abuse. 
+This comment is unkind, insulting or attacks another person or group. Learn more in our Abusive behavior policy.
+
+ 
+
+Not needed. 
+This comment is not relevant to the post.
+
+ 
+
+Enter at least 6 characters
+
+Something else. 
+A problem not listed above. Try to be as specific as possible.
+
+ 
+
+Enter at least 6 characters
+
+Flag comment Cancel
+
+You have 0 flags left today
+
+##### Stack Overflow
+
+*   Questions
+*   Help
+*   Chat
+
+##### Products
+
+*   Teams
+*   Advertising
+*   Talent
+
+##### Company
+
+*   About
+*   Press
+*   Work Here
+*   Legal
+*   Privacy Policy
+*   Terms of Service
+*   Contact Us
+*    Your Privacy Choices 
+*   Cookie Policy
+
+##### Stack Exchange Network
+
+*   Technology
+*   Culture & recreation
+*   Life & arts
+*   Science
+*   Professional
+*   Business
+*   API
+*   Data
+
+*   Blog
+*   Facebook
+*   Twitter
+*   LinkedIn
+*   Instagram
+
+Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under CC BY-SA. rev 2025.10.21.35661
+
+By continuing to use this website, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our Cookie Policy. By exiting this window, default cookies will be accepted. To reject cookies, select an option from below.
+
+Necessary cookies only
+
+Customize settings

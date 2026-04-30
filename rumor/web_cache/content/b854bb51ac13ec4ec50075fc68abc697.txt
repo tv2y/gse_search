@@ -1,0 +1,952 @@
+Title: FEMA Individual Assistance Grants for Disaster Survivors: Summary of Data and Analysis
+
+URL Source: https://www.congress.gov/crs-product/R48310
+
+Published Time: Sun, 26 Oct 2025 11:17:14 GMT
+
+Markdown Content:
+Introduction
+
+Some Members of Congress ask about the amount of funding the Federal Emergency Management Agency's (FEMA's) provides to disaster survivors, and the reasons for such award amounts. While FEMA makes such data publicly available through its OpenFEMA Data Sets, a challenge is that many of the available datasets—including the dataset CRS used for this report, "Individuals and Households Program—Valid Registrations—v1"—are large files with more records than can be opened and explored using traditionally available tools, such as Microsoft Excel. As such, in order to help address selected congressional questions related to funding provided to disaster survivors, and to make such publicly available data more readily accessible to congressional offices, CRS conducted an exploratory data analysis on the existing FEMA dataset. This report summarizes CRS's analysis of certain aspects of FEMA's publicly available data on the financial assistance provided to eligible disaster survivors through the Individuals and Households Program (IHP), a program which is intended to help eligible disaster survivors with uninsured or underinsured necessary expenses and serious needs resulting from a disaster that cannot be otherwise met.1 To the extent possible, the analysis in this report is accompanied by comprehensive comparative data visualizations, such as maps, figures, and tables summarizing FEMA's data, to aid in visualization of the key findings. The data are also presented with dimensions of geography and other key characteristics (homeowner and renter status, insurance coverage, gross household income, and household size).2
+
+Familiarity with FEMA's statutory and regulatory authorities, as well as policies, may cause stakeholders to draw connections between aspects of FEMA's IHP program implementation and the provision of financial assistance. Publicly available data can provide insight into potential _correlations_ between the amount and number of awards of financial assistance that FEMA has provided to disaster survivors through the IHP and policy changes, as an example; however, additional research would be necessary to establish _causation_. Despite this limitation, analysis of publicly available data may be helpful when considering whether the effect of statutory, regulatory, and policy changes—when taken with other factors—are meeting congressional intent and FEMA's goals related to the provision of assistance.
+
+This report explores FEMA's publicly available Individual Assistance (IA) data for the financial assistance that FEMA provided to eligible disaster survivors through the IHP following emergencies and major disasters that were declared on or after October 15, 2002 (when FEMA's regulations first implementing the IHP went into effect for presidentially declared emergencies and major disasters), through March 21, 2024 (when FEMA's amendments to its IHP regulations, which increased eligibility for certain types of IHP assistance, took effect). CRS also compared IHP data prior to and following the enactment of the Disaster Recovery Reform Act of 2018 (DRRA, Division D of P.L. 115-254), which amended the Stafford Act to change the maximum amount of financial assistance individuals and households may be eligible to receive for a single emergency or major disaster—creating the potential for disaster survivors to receive more than double the financial assistance they may previously have been eligible to receive.3 (See **Appendix A** for further information on the time period selected).
+
+CRS developed the research questions guiding the exploration and analysis of FEMA's data based on common congressional questions and topics of interest related to IHP award amounts, including
+
+*   How many presidentially declared emergencies and major disasters were declared authorizing IA? (See associated section and **Figure 1**.)
+*   How many disaster survivors received IHP assistance? (See associated section and **Figure 2**, **Figure 3**, and **Figure 4**.)
+*   Do average IHP awards vary by incident type? (See associated section and **Figure 5** and **Figure 6**.)
+*   What is the average IHP award a disaster survivor receives, and did it increase following DRRA's enactment? (See associated section and **Table 2** and **Figure 7**.)
+*   What are the average IHP awards for Housing Assistance and Other Needs Assistance, and did they increase following DRRA's enactment? (See associated section, **Table 3**, and **Figure 8** and **Figure 9**.)
+*   Did more people receive the maximum award amounts for Housing Assistance and Other Needs Assistance after DRRA's enactment? (See associated section and **Table 4**.)
+*   Do homeowners receive more FEMA assistance than renters? (See associated section and **Figure 10**.)
+*   Does FEMA provide more assistance to uninsured and underinsured disaster survivors? (See associated section, **Table 5** and **Table 6**, and **Figure 11** and **Figure 12**.)
+*   How does an IHP applicant's characteristics, such as their household income and, household composition affect their IHP award amounts? (See associated section, **Table 7** and **Figure 13**, and **Table 8**, **Table 9**, and **Table 10**.)
+
+This report begins with a brief overview of how IHP assistance is authorized to contextualize the analysis. Next, a brief explanation of the methodology used to analyze the publicly available FEMA IHP program data, as well as the limitations of the data, is provided. The report then presents CRS's analysis of the data, accompanied by maps, tables, and figures. This report concludes by offering selected congressional considerations related to collecting and making publicly available additional data through FEMA's public datasets.
+
+Process for Authorizing and Providing IHP Assistance
+
+Declaring Stafford Act Emergencies and Major Disasters Authorizing IA-IHP
+
+When an incident is of such severity and magnitude that effective response is beyond the capabilities of the affected state, local, tribal, and territorial governments, and federal assistance is necessary, the President is authorized to declare an emergency or major disaster under the Robert T. Stafford Disaster Relief and Emergency Assistance Act (Stafford Act).4 The declaration also designates the type(s) of assistance to be made available (e.g., Individual Assistance), and the affected area(s) that are eligible for such assistance (e.g., counties, municipalities).5
+
+FEMA may provide several forms of assistance to help disaster survivors recover if Individual Assistance (IA) is authorized.6 The Individuals and Households Program is one form of IA. It allows FEMA to provide financial assistance (i.e., a grant) and direct assistance for housing (i.e., FEMA obtains and provides housing directly to the disaster survivor), as well as financial assistance for other needs (referred to as Other Needs Assistance or ONA), to eligible individuals and households who have uninsured or underinsured necessary expenses and serious needs as a result of a disaster that cannot be met through other means or forms of assistance.7
+
+Applying for IHP Assistance
+
+After the President authorizes IA pursuant to a Stafford Act declaration, affected disaster survivors can register with FEMA to submit an application for IHP assistance.8 After the disaster survivor submits their IHP application and FEMA's inspection is complete (if one is needed to verify the applicant's disaster-caused real and personal property losses),9 FEMA can provide a determination regarding the IHP applicant's eligibility, including the types and amounts of assistance.10 This report focuses on IHP applicants who were found eligible for financial assistance for housing and/or ONA through the IHP (referred to as IHP recipients).11
+
+Eligible IHP Applicants
+
+IHP applicants must meet general eligibility requirements—they must
+
+1. be a U.S. citizen, noncitizen national, or "qualified alien"12 (or the parent or guardian of such a minor residing in the same household);
+
+2. have their identity verified by FEMA;
+
+3. have disaster-caused needs that cannot be met through their insurance or other forms of disaster assistance; and
+
+4. have necessary expenses and serious needs that were directly caused by a declared disaster.
+
+Some categories of "aliens" who are lawfully present in the U.S. are ineligible for IHP assistance (e.g., temporary tourist visa holders).
+
+Each type of IHP assistance requires that additional eligibility conditions be met, and may require additional documentation.
+
+(FEMA _Individual Assistance Program and Policy Guide (IAPPG)_, v. 1.1, FP 104-009-03, May 2021, pp. 46-47, https://www.fema.gov/sites/default/files/documents/fema_iappg-1.1.pdf; for additional discussion of considerations related to IHP eligibility, see CRS Report R47015, FEMA's Individuals and Households Program (IHP)—Implementation and Considerations for Congress, by Elizabeth M. Webster(section on "Applicant Eligibility").)
+
+Considerations Affecting IHP Award Amounts
+
+The amount of financial assistance disaster survivors receive varies based on their personal circumstances, as well as statutory limits on IHP award amounts.
+
+With regard to personal circumstances, IHP award amounts depend on several factors, including whether the applicant owns or rents the damaged property (as homeowners are eligible for more forms of IHP assistance than renters), the household size; the type(s) of assistance being requested and the associated eligibility criteria and limitations (the subcategories of financial Housing Assistance and ONA are listed in **Table 1**);13 the loss amount determined by FEMA's inspection; and whether and to what extent the applicant's real and personal property losses were insured.14 Additional considerations that could affect average IHP award amount may include the type of incident and resulting damages and where the incident occurred (e.g., repair costs may vary by market price in different locations).
+
+With regard to the statutory limitations, there are funding caps on some forms of IHP financial assistance. Some forms of Housing Assistance and all forms of Other Needs Assistance are subject to the maximum amount of financial assistance, with some exceptions.15 For example, in FY2024, the maximum amount of financial assistance for housing was $42,500 (adjusted annually), and the maximum amount of financial assistance for other needs was also $42,500 (adjusted annually).16
+
+Table 1. Types of IHP Financial Housing Assistance and Other Needs Assistance
+
+Financial Housing Assistance a Other Needs Assistance
+Lodging Expense Reimbursement
+
+Rental Assistance and Continued Temporary Housing Assistance
+
+Home Repair Assistance
+
+Home Replacement Assistance Critical Needs Assistance b
+
+Personal Property Assistance
+
+Transportation Assistance
+
+Group Flood Insurance Policy
+
+Funeral Assistance
+
+Medical and Dental Assistance
+
+Childcare Assistance
+
+Assistance for Miscellaneous Items
+
+Moving and Storage Assistance
+
+Clean and Sanitize Assistance
+
+**Source****s****:**CRS's reproduction of "Figure 5: Housing Assistance" and "Figure 28: Other Needs Assistance, Non-SBA-Dependent and SBA-Dependent" of the FEMA _Individual Assistance Program and Policy Guide (IAPPG)_, v. 1.1, FP 104-009-03, May 2021, pp. 44 and 146, https://www.fema.gov/sites/default/files/documents/fema_iappg-1.1.pdf; Memorandum from Keith Turi, FEMA Assistant Administrator, Recovery Directorate to FEMA Regional Administrators, "RE: Amendment to FP 104-009-03, Individual Assistance Program and Policy Guide, Version 1.1," September 2, 2021, pp. 11-12, https://www.fema.gov/sites/default/files/documents/fema_iappg-policy-amendments-memo.pdf; DHS/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 3990-4125, January 22, 2024; and FEMA, "Voluntary Organization Information Sharing for Engagement VOISE Partner Call: Reforming Individual Assistance," January 25, 2023 (see slide on "The Future of FEMA Individual Assistance").
+
+**Notes:**The different types of Housing Assistance may constitute either financial or direct assistance; however, all types of ONA are forms of financial assistance.
+
+a. This report considers only IHP financial assistance, so only the forms of financial Housing Assistance are listed in this table. The forms of Direct Housing Assistance are Multi-Family Lease and Repair, Transportable Temporary Housing Units, Direct Lease, and Permanent Housing Construction.
+
+b. Serious Needs Assistance replaced Critical Needs Assistance, and Displacement Assistance was added as a form of ONA after March 22, 2024, when FEMA's amended IHP regulations went into effect. Serious Needs Assistance and Displacement Assistance are not included in the table because they were implemented after the period of consideration for this report.
+
+Methodology
+
+This report provides CRS's analysis of FEMA's publicly available data on IHP financial assistance awards.17 The statistical software package R was used to parse, compile, and analyze the data used in this report, which come from the OpenFEMA dataset, "Individuals and Households Program—Valid Registrations—v1." The data presented and analyzed in this report represent a snapshot in time: the data were pulled for analysis on August 14, 2024.
+
+As noted above, this report considers IHP financial assistance provided during the period from October 15, 2002, through March 21, 2024. Some of the analysis in this report compares data prior to and following the enactment of the Disaster Recovery Reform Act of 2018 (DRRA, Division D of P.L. 115-254), which amended the Stafford Act to change the maximum amount of financial assistance individuals and households may be eligible to receive for a single emergency or major disaster.18
+
+*   The period from October 15, 2002-July 31, 2017, is hereinafter referred to as the "pre-DRRA period." 
+*   The period from August 1, 2017-March 21, 2024, is hereinafter referred to as the "post-DRRA period." 
+
+IHP award amounts included in this report reflect the award amounts at the time they were provided and have not been adjusted for inflation.
+
+Data Limitations
+
+Data used were pulled from the OpenFEMA dataset, "Individuals and Households Program—Valid Registrations—v1." While FEMA provides a data dictionary, many of the variable names and descriptions are more generalized definitions of what the variables represent. For example, while discrete disaster numbers are assigned by state per Stafford Act declared incident, there are some disaster numbers listed in the IHP dataset alongside multiple state abbreviations. CRS cannot confirm the cause of this.19
+
+While there are over seventy (70) data fields present in the data, the majority of variables are Boolean, which allows for two response options (0 or 1). This limits the overall descriptive nature of the dataset. The remaining data fields cover a variety of information, such as location, age, housing, damage, and time. However, given the wide array of topics covered, only a handful of questions about each topic are answered within the dataset. This limits the depth of comprehensive policy analysis that may be extracted from this dataset.
+
+The OpenFEMA Dataset derives from the National Emergency Management Information System (NEMIS) with raw, unedited, and self-reported information. Only uniform data cleaning practices were performed, so results may be impacted by human error present in self-reporting. More information about data limitations and access to the dataset may be found here: https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1.
+
+A detailed methodology is presented in **Appendix A**.
+
+Data Analysis
+
+The following sections detail CRS's exploration and analysis of FEMA's data, with accompanying visualizations.
+
+Supporting background information on FEMA's IHP statutory authorities, regulations, and policies can be found in **Appendix B**.
+
+Data Analysis: Declarations Authorizing IHP Assistance
+
+Defining "State"
+
+The President may declare a Stafford Act declaration of emergency or major disaster at the request of the governor of a state, or chief executive of a federally recognized tribe.
+
+Stafford Act Section 102(4) defines "state" to mean "any State of the United States, the District of Columbia, Puerto Rico, the Virgin Islands, Guam, American Samoa, and the Commonwealth of the Northern Mariana Islands" (42 U.S.C. §5122(4)).
+
+In addition, the Republic of Marshall Islands and the Federated States of Micronesia are eligible to request a declaration and receive assistance through the Compacts of Free Association (FEMA, "How a Disaster Gets Declared," last updated July 22, 2024, https://www.fema.gov/disaster/how-declared). Additional information on FEMA's ability to provide assistance to citizens of the Freely Associated States can be found in **Appendix C**.
+
+This section establishes some context-setting information related to the number and types of declared Stafford Act incidents for which IHP assistance was provided, counts of IHP recipients, and average IHP award amounts by incident type. It provides CRS's exploration and analysis of FEMA's data related to answering the following questions:
+
+*   How many presidentially declared emergencies and major disasters were declared authorizing IA?
+*   How many disaster survivors received IHP assistance?
+*   Do average IHP awards vary by incident type?
+
+How many presidentially declared emergencies and major disasters were declared authorizing IA?
+
+This section presents the count of declared emergencies and major disasters authorizing IA-IHP assistance.
+
+The President declares an emergency or major disaster under the Stafford Act separately for each affected state, territory, or tribe when federal assistance is warranted. CRS totaled the number of Stafford Act declared emergencies and major disasters for which disaster survivors received IHP assistance for the entire period considered (October 15, 2002, through March 21, 2024), and mapped that information by state, as depicted in **Figure 1**.20
+
+A total of 535 incidents were declared—to include both emergencies and major disasters—for which IHP assistance was authorized and provided during the overall period of October 15, 2002-March 21, 2024. CRS found that, throughout the entire period considered, Stafford Act-declared incidents for which IHP assistance was provided were generally concentrated in FEMA Regions 4 and 6, with individual states in other FEMA Regions, such as Regions 9, 7, and 3, also having higher incident counts across the periods considered.21
+
+Figure 1. Count of Stafford Act Declared Incidents with IA-IHP Recipients by State
+
+October 15, 2002-March 21, 2024
+
+**Sources:** Created by CRS using data from the U.S. Census Bureau and ESRI based on CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:** Presidential Stafford Act declarations for which IA-IHP assistance was not authorized are not depicted herein.
+
+This figure represents the count of Stafford Act declared incidents by state for which there were IHP recipients from that state who received assistance for a declared emergency or major disaster. Note that this may not align with the discrete count of incidents based on disaster number (see **Table 2** for the discrete count by disaster declaration number).
+
+The maps include the state and territory abbreviations, including AS = American Samoa; FM = Federated States of Micronesia; GU = Guam; MP = Commonwealth of the Northern Mariana Islands; PR = Puerto Rico; VI = U.S. Virgin Islands. Information regarding assistance provided to the Freely Associated States of the Republic of the Marshall Islands, the Federated States of Micronesia, and the Republic of Palau can be found in **Appendix C**.
+
+How many disaster survivors received IHP assistance?
+
+This section presents the count of IHP recipients.
+
+**Figure 2** depicts the total count of IHP recipients (i.e., IHP applicants who were eligible for and received an IHP assistance award during the period considered), by state for the entire period considered (October 15, 2002, through March 21, 2024).
+
+CRS found that, throughout the entire period considered, the states with the highest concentrations of IHP recipients were in FEMA Regions 2, 4, 5, 6, and 9, which generally aligned with the states with the most declared incidents for which IHP assistance was provided (see above).
+
+Figure 2. Count of IHP Recipients by State
+
+October 15, 2002-March 21, 2024
+
+**Source:** Created by CRS using data from the U.S. Census Bureau and ESRI based on CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:** Presidential Stafford Act declarations for which IA-IHP assistance was not authorized are not depicted herein.
+
+The maps include the state and territory abbreviations, including AS = American Samoa; FM = Federated States of Micronesia; GU = Guam; MP = Commonwealth of the Northern Mariana Islands; PR = Puerto Rico; VI = U.S. Virgin Islands. Information regarding assistance provided to the Freely Associated States of the Republic of the Marshall Islands, the Federated States of Micronesia, and the Republic of Palau can be found in **Appendix C**.
+
+**Figure 3** and **Figure 4** present maps depicting the count of incidents declared pre-DRRA (left map) and the count of associated IHP recipients (right map); and the count of incidents declared post-DRRA (left map) and the count of associated IHP recipients (right map), respectively. The "Methodology" section explains how these time periods were selected.
+
+*   During the nearly 15-year pre-DRRA period, from October 15, 2002, through July 31, 2017, there were 347 declared Stafford Act incidents by state for which IHP assistance was provided to approximately 4.8 million eligible IHP applicants.
+*   During the nearly 7-year post-DRRA period, from August 1, 2017, through March 21, 2024, there were 188 declared Stafford Act incidents by state for which IHP assistance was provided to approximately 4.8 million eligible IHP applicants.
+
+While the number of incidents in the post-DRRA period was a little over half that of the pre-DRRA period, both periods had approximately the same number of applicants (i.e., the number of applicants has essentially doubled in the post-DRRA period).
+
+Figure 3. Pre-DRRA Count of Stafford Act Declared Incidents and Count of IHP Recipients by State
+
+October 15, 2002-July 31, 2017
+
+**Source:** Created by CRS using data from the U.S. Census Bureau and ESRI based on CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:** Presidential Stafford Act declarations for which IA-IHP assistance was not authorized are not depicted herein.
+
+The figure on the left represents the count of Stafford Act declared incidents by state for which there were IHP recipients from that state who received assistance for a declared emergency or major disaster. Note that this may not align with the discrete count of incidents based on disaster number (see **Table 2** for the discrete count by disaster declaration number).
+
+The maps include the state and territory abbreviations, including AS = American Samoa; FM = Federated States of Micronesia; GU = Guam; MP = Commonwealth of the Northern Mariana Islands; PR = Puerto Rico; VI = U.S. Virgin Islands. Information regarding assistance provided to the Freely Associated States of the Republic of the Marshall Islands, the Federated States of Micronesia, and the Republic of Palau can be found in **Appendix C**.
+
+Figure 4. Post-DRRA Count of Stafford Act Declared Incidents and Count of IHP Recipients by State
+
+August 1, 2017-March 21, 2024
+
+**Source:** Created by CRS using data from the U.S. Census Bureau and ESRI based on CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:**Presidential Stafford Act declarations for which IA-IHP assistance was not authorized are not depicted herein.
+
+The figure on the left represents the count of Stafford Act declared incidents by state for which there were IHP recipients from that state who received assistance for a declared emergency or major disaster. Note that this may not align with the discrete count of incidents based on disaster number (see **Table 2** for the discrete count by disaster declaration number).
+
+The maps include the state and territory abbreviations, including AS = American Samoa; FM = Federated States of Micronesia; GU = Guam; MP = Commonwealth of the Northern Mariana Islands; PR = Puerto Rico; VI = U.S. Virgin Islands. Information regarding assistance provided to the Freely Associated States of the Republic of the Marshall Islands, the Federated States of Micronesia, and the Republic of Palau can be found in **Appendix C**.
+
+Do average IHP awards vary by incident type?
+
+This section presents the average IHP awards by incident type.
+
+**Figure 5** depicts average IHP award amounts by incident type (e.g., fire, hurricane), and the count of each incident type. Volcanic eruptions were the incident type associated with the highest average IHP award amount of $13,019. However, there was only one such incident in the period considered. Tornadoes were the incident type associated with the lowest average IHP award amount of $2,391. There were 18 such incidents in the period considered.
+
+Of the incident types FEMA catalogs, the most frequently declared incidents in the period preceding August 1, 2017, were Severe Storms (225 of which were declared between October 15, 2002, and July 31, 2017; and 258 for the overall period considered). From August 1, 2017, through March 21, 2024, the most frequently declared incidents were Biological (i.e., the declarations for the Coronavirus Disease 2019 [COVID-19] pandemic, of which there were 56 such declarations), and the next most common natural hazard incident type occurring in this period were hurricanes (36 of which were declared between August 1, 2017, and March 21, 2024; and 92 for the overall period considered).
+
+Some incident types result in larger average IHP awards, and some states are vulnerable to incident types that may result in damages and impacts that are more costly to address (e.g., fires have resulted in a higher IHP average award amount than hurricanes). **Figure 6** depicts the single incident type that resulted in the most IHP recipients, by state—for each state, this may reflect a single incident or multiple incidents (e.g., some states had the most IHP recipients associate with the COVID-19 pandemic, and some states had multiple hurricanes that together had the most IHP recipients).
+
+Figure 5. Count of Incidents by Incident Type and Average IHP Award Amounts by Incident Type
+
+October 15, 2002-March 21, 2024
+
+**Source:** CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Note:** FEMA provides data visualizations by state and territory related to housing assistance, which includes data on incidents affecting such states and territories (FEMA, "Disaster Housing Assistance," last updated March 21, 2024, https://www.fema.gov/data-visualization/disaster-housing-assistance).
+
+Figure 6. Incident Type with the Most IHP Recipients by State
+
+October 15, 2002-March 21, 2024
+
+**Source:** Created by CRS using data from the U.S. Census Bureau and ESRI based on CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:** This figure reflects the single incident type in each state that resulted in the highest number of IHP recipients (i.e., the count of IHP recipients); this does not depict an average. Further, this figure does not reflect the total sum of like incidents (e.g., a state may have more of a certain incident type than is reflected in this figure, but this figure depicts whatever incident type had the most associated IHP recipients).
+
+This figure represents the count of Stafford Act declared incidents by state for which there were IHP recipients from that state who received assistance for a declared emergency or major disaster. Note that this may not align with the discrete count of incidents based on disaster number (see **Table 2** for the discrete count by disaster declaration number).
+
+The "Biological" incidents referenced in the figure are the Coronavirus Disease 2019 (COVID-19) pandemic major disaster declarations. FEMA's Individual Assistance provided for COVID-19 was limited to COVID-19 Funeral Assistance under Other Needs Assistance. For further information, see CRS Report R47048, _FEMA's Role in the COVID-19 Federal Pandemic Response_, coordinated by Erica A. Lee (see the section on "Individual Assistance (IA) for Funeral Costs, Lost Wages, and Crisis Counseling").
+
+FEMA provides data visualizations by state and territory related to housing assistance, which includes data on incidents affecting such states and territories (FEMA, "Disaster Housing Assistance," last updated March 21, 2024, https://www.fema.gov/data-visualization/disaster-housing-assistance). For the Pacific Ocean Territories, including American Samoa, the Commonwealth of the Northern Mariana Islands, and Guam, as well as the Federated States of Micronesia, this figure's reference to hurricanes is actually referring to typhoons (the incident type listed for such territories in FEMA's dataset). Information regarding assistance provided to the Freely Associated States of the Republic of the Marshall Islands, the Federated States of Micronesia, and the Republic of Palau can be found in **Appendix C**.
+
+Data Analysis: Average IHP Award Amounts
+
+This section considers the IHP assistance provided to eligible disaster survivors, including state-level average IHP award amounts and awards in the context of IHP recipient characteristics (i.e., homeowner and renter status, insurance coverage, gross household income, and household size). It provides CRS's exploration and analysis of FEMA's data related to answering the following questions:
+
+*   What is the average IHP award a disaster survivor receives, and did it increase following DRRA's enactment?
+*   What are the average IHP awards for Housing Assistance and Other Needs Assistance, and did they increase following DRRA's enactment?
+*   Did more people receive the maximum award amounts for Housing Assistance and Other Needs Assistance after DRRA's enactment?
+*   Do homeowners receive more FEMA assistance than renters?
+*   Does FEMA provide more assistance to uninsured and underinsured disaster survivors?
+*   How does an IHP applicant's characteristics, such as their household income and household composition, affect their IHP award amounts?
+
+What is the average IHP award a disaster survivor receives, and did it increase following DRRA's enactment?
+
+This section presents the average IHP award amounts by state, including for the pre- and post-DRRA periods, as well as for the overall period considered.
+
+CRS calculated the average IHP award by state, using the count of IHP recipients and the IHP award amounts by state.
+
+CRS found that, in general, geographically (i.e., at the state level), the average IHP award amount increased in the post-DRRA period, as depicted in **Figure 7**.22 However, despite the average award increase at the state level, the overall U.S. average IHP award amount declined post-DRRA, as depicted in **Table 2**.23
+
+This overall decrease in the average award amount in the post-DRRA period, could, at least in part, be due to the back-to-back-to-back Hurricanes Harvey, Irma, and Maria.24 Of the total count of IHP recipients in the post-DRRA period (4,791,888 IHP recipients), these declarations resulted in a total of 1,654,721 IHP recipients (34.5% of the total count of IHP recipients in the post-DRRA period). There were 1,251,673 IHP recipients from Florida, Louisiana, and Puerto Rico, which was 75.6% of the IHP recipients from Hurricanes Harvey, Irma, and Maria. Further, in general in the post-DRRA period, disaster survivors from Florida, Louisiana, and Puerto Rico comprised 66.5% of the IHP recipients (3,187,897 disaster survivors)—inclusive of the Hurricanes Harvey, Irma, and Maria major disaster declarations, as well as other declarations received by such states. Of the $14.5 billion in IHP assistance provided to disaster survivors in the post-DRRA period, $6.38 billion (44.0%) was provided to IHP recipients from Florida, Louisiana, and Puerto Rico. Additionally, disaster survivors from Florida, Louisiana, and Puerto Rico received the lowest IHP average award amounts (they were the only states to receive an average award amount of less than $2,500).25 As described above, the amount of financial assistance disaster survivors receive varies based on various factors (see "Considerations Affecting IHP Award Amounts" for further discussion).
+
+**Table 2** provides the U.S. national-level count of the incidents, count of the IHP recipients, and average IHP award amounts for the overall, and pre- and post-DRRA periods.
+
+Table 2. U.S. Average IHP Awards
+
+October 15, 2002-March 21, 2024
+
+Period Considered Count of Declared Incidents Count of IHP Recipients Average IHP Award ($)
+Pre-DRRA
+
+_October 15, 2002-_
+
+_July 31, 2017_ 347 4,848,032$3,859
+Post-DRRA
+
+_August 1, 2017-_
+
+_March 21, 2024_ 188 4,791,888$3,029
+Overall
+
+_October 15, 2002-_
+
+_March 21, 2024_ 535 9,639,920$3,446
+
+**Source:**CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Note:**The count of incidents include both emergencies and major disasters for which IHP assistance was authorized and provided to disaster survivors.
+
+**Figure 7** depicts the average IHP award by state for the pre-DRRA (left map), overall (middle map), and post-DRRA (right map) periods.
+
+Figure 7. Average IHP Awards by State
+
+October 15, 2002-March 21, 2024
+
+**Sources:** Created by CRS using data from the U.S. Census Bureau and ESRI based on CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:** Presidential Stafford Act declarations for which IA-IHP assistance was not authorized are not depicted herein.
+
+The maps include the state and territory abbreviations (e.g., AS = American Samoa; FM = Federated States of Micronesia; GU = Guam; MP = Commonwealth of the Northern Mariana Islands; PR = Puerto Rico; VI = U.S. Virgin Islands). Information regarding assistance provided to the Freely Associated States of the Republic of the Marshall Islands, the Federated States of Micronesia, and the Republic of Palau can be found in **Appendix C**.
+
+What are the average IHP awards for Housing Assistance and Other Needs Assistance, and did they increase following DRRA's enactment?
+
+This section presents the average Housing Assistance (HA) and Other Needs Assistance (ONA) award amounts, including for the pre- and post-DRRA periods, as well as for the overall period considered.
+
+CRS calculated the average IHP award amounts (inclusive of Housing Assistance and ONA). CRS found that the average IHP award amount—inclusive of both Housing Assistance and ONA together—decreased post-DRRA, but taken separately, the average Housing Assistance award amount increased post-DRRA, and the average ONA award amount decreased post-DRRA, as depicted in **Table 3**. The average HA and ONA awards are depicted in **Figure 8** and **Figure 9**, respectively.
+
+Table 3. U.S. Housing Assistance and ONA Award Averages
+
+October 15, 2002-March 21, 2024
+
+Period Considered IHP Award Average HA Award Average ONA Award Average
+Pre-DRRA
+
+_October 15, 2002-_
+
+_July 31, 2017_$3,859$3,687$2,131
+Post-DRRA
+
+_August 1, 2017-_
+
+_March 21, 2024_$3,029$4,253$1,686
+Overall
+
+_October 15, 2002-_
+
+_March 21, 2024_$3,446$3,876$1,856
+
+**Source:**CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:**IHP = Individuals and Households Program;HA = Housing Assistance; ONA = Other Needs Assistance.
+
+**Figure 8** depicts the average award amounts for Housing Assistance pre-DRRA (left) and post-DRRA (right), with the dotted line representing the overall average Housing Assistance award amount for the entire period considered (October 15, 2002-March 21, 2024).
+
+Figure 8. IHP Housing Assistance Award Averages Pre- and Post-DRRA
+
+October 15, 2002-March 21, 2024
+
+**Source:** CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:** DRRA = Disaster Recovery Reform Act of 2018 (DRRA, Division D of P.L. 115-254); HA = Housing Assistance. The average awards depicted in this table are inclusive of owners and renters.
+
+**Figure 9** depicts the average award amounts for ONA pre-DRRA (left) and post-DRRA (right), with the dotted line representing the overall average ONA award amount for the entire period considered (October 15, 2002-March 21, 2024).
+
+Figure 9. IHP ONA Award Averages Pre- and Post-DRRA
+
+October 15, 2002-March 21, 2024
+
+**Source:** CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:** DRRA = Disaster Recovery Reform Act of 2018 (DRRA, Division D of P.L. 115-254); ONA = Other Needs Assistance. The average awards depicted in this table are inclusive of owners and renters.
+
+Did more people receive the maximum award amounts for Housing Assistance and Other Needs Assistance after DRRA's enactment?
+
+This section presents the count and percentage of IHP recipients who received the maximum amount of financial assistance with the combined IHP cap (inclusive of Housing Assistance and Other Needs Assistance), pre-DRRA, and with the split caps for Housing Assistance and Other Needs Assistance, post-DRRA.
+
+CRS analyzed the data for the pre-DRRA period when the financial assistance FEMA provided to IHP recipients for housing and other needs combined to count towards the statutory maximum amount of financial assistance that FEMA could provide to an individual or household for a single emergency or major disaster (cap), by considering the count of IHP recipients who received the maximum IHP grant allotment (inclusive of both Housing Assistance and ONA) pre-DRRA. As depicted in **Table 4**, CRS's analysis found that 1.47% of the total number of IHP award recipients in the pre-DRRA period received the maximum amount of IHP financial assistance (inclusive of both Housing Assistance and ONA).26
+
+CRS also analyzed the data for the post-DRRA period when the caps on Housing Assistance and ONA were separated, by considering the count of IHP recipients who received the maximum Housing Assistance grant allotment and the maximum ONA grant allotment post-DRRA. As depicted in **Table 4**, CRS's analysis found that 10.8% of the total number of IHP award recipients in the post-DRRA period received the maximum amount of financial assistance for Housing Assistance in the post-DRRA period, and 0.0009% of the total number of IHP award recipients received the maximum amount of financial assistance for ONA in the post-DRRA period—of the 4.8 million IHP recipients in the post-DRRA period, 42 hit the ONA cap.27
+
+As shown in **Table 4**, post-DRRA, the percentage of IHP award recipients who received the maximum amount of financial assistance for housing was higher than the overall percentage of IHP recipients who hit the pre-DRRA IHP assistance cap (inclusive of Housing Assistance and ONA).
+
+Table 4. Counts of Recipients of the Maximum Amount of Financial Assistance for IHP, Housing Assistance, and ONA
+
+October 15, 2002-March 21, 2024
+
+Period Considered Total Count of IHP Recipients Count and (Percentage) of Recipients: IHP Maximum Count and (Percentage) of Recipients: HA Maximum Count and (Percentage) of Recipients: ONA Maximum
+Pre-DRRA
+
+_October 15, 2002-_
+
+_July 31, 2017_ 4,848,032 NA NA
+Post-DRRA
+
+_August 1, 2017-_
+
+_March 21, 2024_ 4,791,888 NA 515,770 (10.8%)42 (0.0009%)
+
+**Source:**CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:**IHP = Individuals and Households Program;HA = Housing Assistance; ONA = Other Needs Assistance; NA = Not Applicable. Four (4) disaster survivors maxed out both Housing Assistance and ONA in the post-DRRA period. Those four are included in the above counts.
+
+Do homeowners receive more FEMA assistance than renters?
+
+This section presents the average IHP awards for homeowners and renters, including for the pre- and post-DRRA periods, as well as for the overall period considered.
+
+CRS analyzed the data related to average IHP award amounts for homeowners and renters by calculating the average IHP award amounts based on IHP recipients' homeowner or renter status. The results of CRS's data analysis found that
+
+*   In the pre-DRRA period, renters received the highest IHP awards (inclusive of Housing Assistance and ONA) and ONA awards, and homeowners received the highest Housing Assistance awards. 
+*   In the post-DRRA period, however, homeowners received the highest IHP awards and Housing Assistance awards, and renters received the highest ONA awards. 
+*   The difference between the average IHP awards received by homeowners and renters increased in the post-DRRA period. 
+*   Additionally, generally, the average IHP award amounts decreased in the post-DRRA period, with the exceptions of Housing Assistance awards received by homeowners and people with an unknown homeowner/renter status, which increased in the post-DRRA period.28
+
+**Figure 10** depicts the average financial awards for Other Needs Assistance (ONA awards received), Housing Assistance (HA awards received), and Individuals and Households Program assistance (IHP awards received, which is inclusive of both ONA and Housing Assistance), broken down by homeowner (light blue) and renter (dark blue) status, and unknown (gray) status, and presented for the pre-DRRA (October 15, 2002-July 31, 2017), overall (October 15, 2002-March 21, 2024), and post-DRRA (August 1, 2017-March 21, 2024) periods. The dotted lines represent the average IHP award amount for the period depicted across all IHP applicant owner, renter, and unknown statuses.
+
+Figure 10. Average IHP, HA, and ONA Awards by Homeowner and Renter Status
+
+October 15, 2002-March 21, 2024
+
+**Source:** CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:** DRRA = Disaster Recovery Reform Act of 2018 (DRRA, Division D of P.L. 115-254); ONA = Other Needs Assistance; HA = Housing Assistance; IHP = Individuals and Households Program (inclusive of both ONA and HA). The dotted line represents the average IHP award amount for the period depicted across all IHP applicant homeowner, renter, and unknown statuses. Applicants with unknown homeowner/renter status are listed in the figure as "Unknown."
+
+Does FEMA provide more assistance to uninsured and underinsured disaster survivors?
+
+Insurance Requirements
+
+Most homeowners are required by their lender to have homeowners insurance. However, only homeowners in the Special Flood Hazard Area (SFHA) with a federally backed mortgage and homeowners who have previously received federal financial assistance from FEMA for flood-damaged real and personal property that is, or will be, in a designated SFHA and can be insured under the National Flood Insurance Program (NFIP), are required to have flood insurance.29
+
+Additionally, renters who have previously received federal financial assistance from FEMA for flood-damaged NFIP-insurable personal property are required to have flood insurance.30
+
+This section presents the count of and average IHP awards for IHP recipients with and without insurance in effect.
+
+CRS analyzed data related to insurance coverage in effect—including both homeowners and flood insurance, which may help address a disaster survivor's housing and other needs. IHP assistance does not cover all disaster-caused losses,31 and it "is not intended to return the home to its pre-disaster condition."32 Further, the IHP is not intended to serve as a substitute for insurance.33 However, IHP assistance is intended to help address IHP applicants' uninsured and underinsured disaster-caused expenses and serious needs, and applicants must inform FEMA of all insurance coverage available to address their disaster-caused needs before FEMA will consider their eligibility for federal assistance.34 This is because FEMA is prohibited, by statute, from providing benefits that duplicate assistance that another entity or agency was primarily responsible for providing—insurance comes first in the sequence for delivering assistance.35
+
+CRS calculated the average IHP awards and average Housing Assistance awards that IHP recipients with and without homeowners insurance received from October 15, 2002, through March 21, 2024, as reflected in **Table 5**. **Figure 11** depicts the Housing Assistance award averages based on IHP recipients' homeowner status and whether or not they maintained homeowners insurance. Homeowners with homeowners insurance (the left column) received slightly lower average Housing Assistance awards than all homeowners (the center column, which reflects homeowners with and without homeowners insurance). As a point of comparison, the average Housing Assistance award amount for all IHP recipients (inclusive of homeowners and renters) is included (the right column).
+
+In addition, CRS evaluated assistance provided to address flood damage, and calculated the average IHP awards and average Housing Assistance awards that IHP recipients with and without flood insurance who experienced flood damage received from October 15, 2002, through March 21, 2024, as reflected in **Table 6**.36**Figure 12** depicts the Housing Assistance award averages based on IHP recipients' homeowner status and whether or not they maintained flood insurance for incidents resulting in flood damage. Homeowners with flood insurance (the left column) generally received slightly higher average Housing Assistance awards than all applicants with flood insurance (the center column, which is inclusive of homeowners and renters with flood insurance). As a point of comparison, the average Housing Assistance award amount for all IHP recipients (inclusive of homeowners and renters) is included (the right column).
+
+The results of CRS's data analysis found that IHP recipients without insurance generally received higher IHP awards than IHP recipients with insurance. That said, these results should not be taken alone to lead to the conclusion that insured disaster survivors do not receive as much overall assistance to support their recovery. Instead, insurance should be viewed as one source of recovery assistance—disaster survivors may receive assistance from multiple sources, including insurance, the IHP, and other state and federal programs.37
+
+Table 5. Average IHP Awards for Recipients with and without Homeowners Insurance
+
+October 15, 2002-March 21, 2024
+
+IHP Recipients Count of IHP Recipients Average IHP Award Count of HA Recipients Average HA Award
+Homeowners with Homeowners Insurance 3,247,137$3,301 2,051,475$4,381
+Homeowners without Homeowners Insurance 2,425,646$3,958 1,608,995$4,526
+
+**Source:**CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:**This table reflects homeowners with and without homeowners insurance who received IHP and HA assistance. IHP = Individuals and Households Program;and HA = Housing Assistance.
+
+Table 6. Average IHP Awards for Recipients with and without Flood Insurance Who Experienced Flood Damage
+
+October 15, 2002-March 21, 2024
+
+IHP Recipients Count of IHP Recipients Average IHP Award Count of HA Recipients Average HA Award
+All Recipients with Flood Insurance 305,549$4,565 284,269$4,196
+Homeowners with Flood Insurance 295,530$4,569 275,279$4,217
+Renters with Flood Insurance 9,997$4,445 8,972$3,558
+All Recipients without Flood Insurance 1,994,369$6,296 1,764,409$5,603
+Homeowners without Flood Insurance 1,396,692$6,757 1,337,718$6,271
+Renters without Flood Insurance 597,501$5,218 426,616$3,509
+
+**Source:**CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:**This table reflects homeowners and renters with and without flood insurance, who experienced flood damage, and received IHP and HA assistance pursuant to a flood. IHP = Individuals and Households Program;HA = Housing Assistance; and NA = Not Applicable. Of the individuals with flood insurance who received IHP assistance, 22 were an unknown homeowner/renter status. Of the individuals without flood insurance who received IHP assistance, 176 were an unknown homeowner/renter status. Of the individuals with flood insurance who received HA, 18 were an unknown homeowner/renter status. Of the individuals without flood insurance who received HA, 75 were an unknown homeowner/renter status.
+
+Figure 11. Average Housing Assistance Awards by Homeowners Insurance Status
+
+October 15, 2002-March 21, 2024
+
+**Source:** CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:** "All Homeowner Recipients" is inclusive of homeowners with and without homeowners insurance; "All Recipients" is inclusive of homeowners and renters with and without homeowners insurance.
+
+Figure 12. Average Housing Assistance Awards by Flood Insurance Status for Recipients with Flood Damage
+
+October 15, 2002-March 21, 2024
+
+**Source:** CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes: "**All Recipients with Flood Insurance" is inclusive of homeowners and renters; "All Recipients" is inclusive of homeowners and renters with and without flood insurance. This figure only considers incidents for which there was flood damage.
+
+How does an IHP applicant's characteristics, such as their household income and household composition, affect their IHP award amount?
+
+This section presents information on the count and percentage of IHP recipients who fell within different gross household income ranges, as well as the average IHP award amounts received by homeowners and renters in the different gross household income ranges. It also depicts the average IHP award amounts of IHP recipients—including homeowners, renters, and all IHP recipients—with different household composition numbers who fell within different gross household income ranges.
+
+Some Member of Congress, stakeholders, and media outlets have expressed concern that FEMA IHP assistance helps "higher-income" households more than "lower-income" households.38 To examine this concern, CRS calculated the average IHP award amounts provided to homeowners and renters based on their gross household income (see **Table 7** and **Figure 13**). In addition, CRS also calculated the average IHP award amounts by IHP recipients' gross household income and household composition (i.e., the number of household members; see **Table 8**, **Table 9**, and **Table 10**).
+
+CRS found that renters making between $120,001 and $175,000 received the highest average IHP award amount, and renters also received the lowest average IHP award amount—specifically renters whose self-reported gross income was $0, which may include people who self-reported $0 income, as well as individuals who did not report their income, or in some cases reported they were self-employed (according to the description of the data fields provided for the FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1"). CRS also found, of the total number of IHP recipients, more than half made less than or equal to $30,000 (5.16 million individuals and households comprising 53.6% of the total number of IHP award recipients, which excludes recipients reporting $0 income 39). Thus, for the income brackets considered herein, IHP recipients in the higher brackets received higher average IHP award amounts, but a larger number of disaster survivors in the lower brackets received an IHP award. This is consistent with FEMA's general conclusion that lower-income households have higher uptake of IHP awards, but the average award amount for such households is lower.40
+
+Gross Household Income
+
+CRS considered average IHP award amounts provided to homeowners and renters in the context of the following discrete gross income levels as presented in FEMA's publicly available dataset:
+
+*   $0
+*   <$15,000
+*   $15,000-$30,000
+*   $30,001-$60,000
+*   $60,001-$120,000
+*   $120,001-$175,000
+*   >$175,000
+
+**Table 7** depicts the number (count) and overall percentage of IHP recipients (inclusive of all IHP recipients), homeowner recipients, and renter recipients, by gross income.
+
+Table 7. IHP Applicants Who Received an Award by Gross Income
+
+October 15, 2002-March 21, 2024
+
+Gross Income IHP Recipient Count IHP Recipient Percentage Homeowner Recipient Count Homeowner Recipient Percentage Renter Recipient Count Renter Recipient Percentage
+$0 1,064,609 11.0%573,626 5.95%488,550 5.07%
+<$15,000 2,786,024 28.9%1,356,369 14.1%1,422,138 14.8%
+$15,000-$30,000 2,376,794 24.7%1,307,405 13.6%1,063,753 11.0%
+$30,001-$60,000 1,992,616 20.7%1,331,165 13.8%656,736 6.81%
+$60,001-$120,000 1,066,478 11.1%827,426 8.58%236,306 2.45%
+$120,001-$175,000 201,013 2.09%159,440 1.65%41,229 0.43%
+>$175,000 152,383 1.58%117,349 1.22%34,698 0.36%
+
+**Source:**CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Note****s****:**According to the description of the data fields provided for the FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1," applicants whose income is listed as $0 may include people who self-reported $0 income, as well as individuals who did not report their income, or in some cases reported they were self-employed. There were three (3) eligible IHP applicants with no listed income, and they are not included in this table. The percentages of IHP recipients associated with the IHP, Homeowner, and Renter recipient counts were rounded, which caused the total percentage to not equal 100%.
+
+**Figure 13** depicts the average IHP awards by homeowner (light blue) and renter (dark blue) status, and gross household income, broken out by the discrete gross income levels listed above. CRS found
+
+*   The highest average IHP award amount was provided to renters making at least $120,001. Such individuals received an average IHP award amount of more than $5,000. 
+*   The lowest average IHP award amount was provided to renters whose income is listed as $0.41 Such individuals receive an average IHP award of less than $3,000.42
+
+Figure 13. Average IHP Award Amounts by Homeowner/Renter Status and Gross Household Income
+
+October 15, 2002-March 21, 2024
+
+**Source:** CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Note:** "$-" represents $0. According to the description of the data fields provided for the FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1," applicants whose income is listed as $0 may include people who self-reported $0 income, as well as individuals who did not report their income, or in some cases reported they were self-employed. This figure does not depict recipients with an unknown homeowner or renter status. IHP recipients with an unknown homeowner or renter status comprised 23,727 (0.25%) of IHP recipients overall.
+
+Gross Household Income and Household Composition
+
+CRS calculated the average IHP award amounts provided to homeowners and renters in the context of the above-listed discrete gross income levels by household composition (i.e., household sizes ranging from 1 to >5 people), as depicted in **Table 8** and **Table 9**, respectively. **Table 10** depicts the average IHP award amounts provided to IHP recipients (inclusive of homeowners, renters, and people with an unknown homeowner/renter status). CRS found that renters making at least $120,001 with a household composition of 2-3 members received the highest average IHP award amount, and the lowest average IHP award amount was generally provided to renters with a household composition of one member.43
+
+Table 8. Homeowner Average IHP Awards by Household Composition and Gross Household Income
+
+October 15, 2002-March 21, 2024
+
+Gross Income Household Composition
+1 2 3 4 5>5
+$0$2,741$3,666$3,567$3,700$4,187$5,083
+<$15,000$3,531$3,612$3,925$4,125$4,422$4,861
+$15,000-$30,000$3,477$3,491$3,696$3,886$4,359$4,911
+$30,001-$60,000$3,062$3,375$3,416$3,493$3,951$4,715
+$60,001-$120,000$2,940$3,401$3,346$3,432$3,842$4,509
+$120,001-$175,000$3,244$3,629$3,658$3,709$4,102$4,874
+>$175,000$3,377$4,042$3,967$4,048$4,441$5,010
+
+**Source:**CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:** According to the description of the data fields provided for the FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1," applicants whose income is listed as $0 may include people who self-reported $0 income, as well as individuals who did not report their income, or in some cases reported they were self-employed. This table does not include people with an unknown homeowner status.
+
+Table 9. Renter Average IHP Awards by Household Composition and Gross Household Income
+
+October 15, 2002-March 21, 2024
+
+Gross Income Household Composition
+1 2 3 4 5>5
+$0$1,935$3,086$2,862$2,561$2,773$3,202
+<$15,000$2,926$3,325$3,224$3,130$3,352$3,649
+$15,000-$30,000$2,609$3,727$3,586$3,290$3,457$3,713
+$30,001-$60,000$2,172$4,228$3,836$3,003$3,241$3,630
+$60,001-$120,000$1,901$5,221$4,875$3,039$2,966$3,429
+$120,001-$175,000$1,946$5,981$6,034$3,869$3,171$3,395
+>$175,000$2,148$6,006$5,900$3,536$3,168$3,786
+
+**Source:**CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:** According to the description of the data fields provided for the FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1," applicants whose income is listed as $0 may include people who self-reported $0 income, as well as individuals who did not report their income, or in some cases reported they were self-employed. This table does not include people with an unknown renter status.
+
+Table 10. IHP Recipient Average IHP Awards by Household Composition and Gross Household Income
+
+October 15, 2002-March 21, 2024
+
+Gross Income Household Composition
+1 2 3 4 5>5
+$0$2,319$3,415$3,243$3,271$3,658$4,362
+<$15,000$3,235$3,472$3,524$3,554$3,808$4,178
+$15,000-$30,000$3,077$3,586$3,642$3,609$3,935$4,344
+$30,001-$60,000$2,736$3,662$3,559$3,358$3,746$4,385
+$60,001-$120,000$2,693$3,938$3,698$3,386$3,732$4,353
+$120,001-$175,000$3,007$4,413$4,178$3,716$4,049$4,764
+>$175,000$3,044$4,725$4,457$4,014$4,362$4,910
+
+**Source:**CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:** According to the description of the data fields provided for the FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1," applicants whose income is listed as $0 may include people who self-reported $0 income, as well as individuals who did not report their income, or in some cases reported they were self-employed. This table is inclusive of both homeowners and renters, as well as people with an unknown homeowner/renter status. There were three (3) eligible IHP applicants with no listed income, and they are not included in this table.
+
+Considerations for Congress
+
+FEMA regularly publishes data on the financial assistance it provides through the Individuals and Households Program.44 Still, FEMA acknowledges the existence of evidence gaps in its _2022-2026 Strategic Plan_, which the agency states that it plans to address through research questions and data projects.45 Some of the research questions FEMA has identified directly relate to the provision of assistance to disaster survivors—including questions related to whether race, ethnicity, sex, socioeconomic status, and disability status affect the provision of assistance.46 While FEMA's _Strategic Plan_ does not currently list any data projects to address such questions, in August 2022, FEMA began collecting information from IHP applicants on a voluntary basis related to race, ethnicity, gender, status as an enrolled member of a tribal nation, highest level of education, and marital status, with the stated purpose of determining whether "any inequities exist in the distribution of disaster assistance and to assess changes to policies and procedures to better assist underserved communities if such inequities are found."47 This information, and other information FEMA currently collects, or may have the ability to collect in the future, have the potential to further inform evaluations of FEMA's IHP implementation and outcomes, and support congressional oversight activities; however, consideration may need to be given, including to any statutory and data privacy considerations, should Congress wish for FEMA to publish such information in its publicly available OpenFEMA Data Sets, and consideration may need to be given to what might need to occur to publish such information. For example, Congress could consider tasking FEMA to determine whether any changes would need to be made to FEMA's current data systems and policies, such as whether changes would need to be made to FEMA's National Emergency Management Information System (NEMIS) or the data collection mechanisms that feed into NEMIS, or the Privacy Act Statement associated with FEMA's "Equity Demographics Questions" form.48
+
+The following sections offer selected congressional considerations related to the currently available public data for the IHP, including potential options for expanding the information that is made available for research and program analysis.
+
+Collection of Additional Data Fields
+
+FEMA's OpenFEMA Data Sets on the IHP provide a significant amount of information related to disaster survivors and their assistance disposition, but the available data is still limited. While the OpenFEMA dataset "Individuals and Households Program—Valid Registrations—v1" was used in this report, and is the most comprehensive and expansive public-facing dataset FEMA provides on the IHP,49 still, it does not
+
+*   report the net insurance settlement proceeds received by the IHP applicant. Instead, the dataset only notes whether or not the registrant has homeowners or flood insurance.50 Congress could consider requiring FEMA to evaluate whether the agency could collect and report on net insurance settlement proceeds, as these may affect an IHP recipient's award amount, and could support an evaluation of unmet needs.51
+*   indicate whether an IHP applicant was required to have flood insurance for their real and/or personal property as a result of receiving federal financial assistance for flood-related damage resulting from a previous emergency or major disaster. While the dataset does state whether or not the IHP applicant has flood insurance, it does not note whether such insurance was required, nor does it indicate whether or not the IHP applicant was found ineligible for certain types of assistance on the basis of the flood insurance requirement.52 Congress could consider requiring FEMA to evaluate whether the agency could collect and report on whether the IHP applicant was required to have flood insurance.
+*   disaggregate assistance provided for the different types of Other Needs Assistance. With the exception of Personal Property Assistance, IHP award amounts provided for the different types of ONA are reported on together (i.e., there is a data field for the amount of Personal Property Assistance awarded, and there is one for the total dollar amount awarded for ONA, but no further granularity is provided).53 Congress could consider requiring FEMA to evaluate whether it might be possible to separate out the award amounts provided for the different types of ONA, similar to what is done for Personal Property Assistance.54 Additionally, FEMA established two new forms of ONA pursuant to the rule that went into effect on March 22, 2024: Serious Needs Assistance (which replaced Critical Needs Assistance), and Displacement Assistance. These forms of assistance are intended to immediately provide financial assistance to eligible applicants to help them pay for emergency supplies and to obtain temporary housing, respectively. Congress may wish to consider requiring FEMA to evaluate whether the agency could collect and separately report data on the financial assistance provided to IHP applicants for ONA, including these new forms of ONA, similar to how the financial forms of Housing Assistance are presented separately.
+*   provide more granularity regarding the number of individuals living in the household (i.e., household composition). Currently, the "Individuals and Households Program—Valid Registrations—v1" dataset reports on the number of such individuals up to 5 and then just indicates that there are >5 individuals in the household.55 Congress could consider requiring FEMA to evaluate its ability to provide the total household count in its dataset. 
+
+Additional IHP data-collection-related considerations Congress might wish to explore include
+
+*   denoting whether an IHP applicant household is a past IHP award recipient at that address, to include the number of times an individual or household has received IHP assistance;
+*   including area-adjusted poverty data in the public dataset, which FEMA includes in some products;
+*   citing FEMA's reason for denying IHP assistance to an IHP applicant. The dataset notes whether an IHP applicant was found eligible for assistance, but in the event they are not, the dataset does not list the reason for the denial; and
+*   indicating whether the applicant appealed FEMA's determination, including related to eligibility for assistance and award amount.
+
+Selected Other Considerations
+
+Although FEMA makes information on the costs of financial Housing Assistance and ONA publicly available through the "OpenFEMA Data Sets" for Individual Assistance, as well as the declared disasters web pages for presidentially declared Stafford Act emergencies and major disasters, Direct Housing Assistance information is not generally publicly available. According to FEMA, such information would have to be requested through the Freedom of Information Act (FOIA) or Privacy Act.56
+
+In December 2020, the U.S. Government Accountability Office (GAO) reported that FEMA "does not track cost data for direct housing programs."57 GAO provided recommendations to FEMA to enable the agency to make changes to its data system to capture cost data and allow it to analyze the full cost of providing assistance under each program.58 In August 2023, FEMA stated they are
+
+in the process of building a new system to support the needs of the Individuals and Households Program, including tracking the life cycle of FEMA's housing assistance programs and, potentially, associated costs. The development of the new system will be completed in 2027.59
+
+Congress could consider requesting status updates from FEMA on its progress towards updating its data system and could require FEMA to assess the feasibility of publicly reporting on the costs associated with the provision of assistance through its Direct Housing Assistance programs, or requiring FEMA to publish Direct Housing Assistance data in the IA OpenFEMA Data Sets or separately (e.g., through "by-the-numbers" releases, as has been done for some past disasters).
+
+Conclusion
+
+FEMA provided approximately $33.2 billion in financial assistance to disaster survivors through the IHP for 535 declared emergencies and major disasters that occurred between October 15, 2002, and March 21, 2024, which includes the period following DRRA's enactment, which had the potential to more than double FEMA's financial awards for Housing Assistance and Other Needs Assistance (although this was not borne out by CRS's analysis of the data).
+
+To further understand the outcomes of statutory and regulatory changes, as well as policy adjustments, Congress could consider requiring FEMA to make additional data on IHP applicants and recipients publicly available. Congress could also consider requiring FEMA to identify inequities in the distribution of disaster assistance by applicant characteristic, including race, ethnicity, sex, socioeconomic status, and disability status, and to evaluate such characteristic-based inequities in the context of its currently available data—evaluating whether factors such as gross income, the value of real and personal property, and insurance are the factors primarily influencing award amounts, or if disparate outcomes are influenced by applicant characteristics. Congress could also require FEMA to identify potential solutions for addressing any such inequities it its provision of disaster assistance.
+
+Further, Congress could consider requiring FEMA to provide additional data regarding the assistance provided, such as direct housing assistance and more granular data on the forms of ONA. This could enhance congressional oversight of program outcomes and costs.
+
+Congress may also wish to monitor future trends in the provision of federal disaster assistance to disaster survivors, including to evaluate the need for and potential effects of future statutory, regulatory, and policy changes, while acknowledging that other factors also affect the provision of assistance (e.g., the unique characteristics of an individual IHP applicant; external forces, such as potential trends in disasters of increasing frequency, severity, and cost; economic factors).
+
+Appendix A. Methodology
+
+Methodology
+
+The data used in this report come from the OpenFEMA dataset, "Individuals and Households Program—Valid Registrations—v1."60 The dataset is not static and is subject to change, so all calculations presented in this report were completed on data pulled on August 14, 2024, download completed 9:30 AM EDT, and represent a snapshot in time. The declaration dates were filtered to not include data from disasters reported on or after March 22, 2024. The data also include some active disasters that may still have open IHP applications.
+
+State-Level Data Analysis
+
+The data considered in this report includes presidential Stafford Act declarations of emergency and major disaster that were requested by the governors of affected states and territories, and the chief executives of affected federally recognized tribal governments. While tribal declarations can be requested and received independently of a state declaration, for purposes of this report, declarations are reported at the state level.
+
+This report considers the period from October 15, 2002, through March 21, 2024.
+
+*   October 15, 2002, is the established origin date because emergencies and major disasters declared on or after this date fall under FEMA's amended regulations, which implemented Section 206(a) of the Disaster Mitigation Act of 2000 (DMA2K, P.L. 106-390), "by consolidating 'Temporary Housing Assistance' and 'Individual and Family Grant Programs' into a single program called 'Federal Assistance to Individuals and Households.'"61
+*   March 21, 2024, is the established cutoff date for the data considered in this report because emergencies and major disasters declared on or after March 22, 2024, fall under FEMA's amended regulations governing the Individual Assistance program—and specifically the Individuals and Households Program.62 The regulations amended by this rule affect some of the IHP programs and eligibility considerations discussed in this report. This report does not evaluate the effects of the changes to the IHP regulations and instead considers the period preceding the rule's effective date.
+
+Additionally, this report compares data from periods prior to and following the enactment of the Disaster Recovery Reform Act of 2018 (DRRA, Division D of P.L. 115-254) because DRRA amended the Stafford Act to change the maximum amount of financial assistance individuals and households may be eligible to receive for a single emergency or major disaster.63 These amendments went into effect for emergencies and major disasters declared by the President on or after August 1, 2017.64 Thus, the period from October 15, 2002-July 31, 2017, is referred to as the "pre-DRRA period," and the period from August 1, 2017-March 21, 2024, is referred to as the "post-DRRA period" herein.
+
+IHP award amounts included in this report reflect the award amounts at the time they were provided and have not been adjusted for inflation.
+
+The statistical software package R was used to parse, compile, and analyze the dataset.65 The only data cleaning methods implemented by CRS were uniform variable changes, such as cutting string variables, redefining classes, and changing amounts that were equal to zero (0) to Not Applicable (NA). The data were looked at through three lenses:
+
+*   1. overall; 
+*   2. before DRRA's enactment (i.e., pre-DRRA); and 
+*   3. after DRRA's enactment (i.e., post-DRRA). 
+
+As described above, DRRA's amendments to the Stafford Act went into effect for emergencies and major disasters declared on or after August 1, 2017, and as such, this date was used to define both data subsets. All grant amounts that were equal to zero ($0) were removed for average calculations in all three datasets. Averages were calculated using the mean and aggregate functions while counts were calculated using the count, group by, summarize, and table functions, depending on arithmetic need.
+
+Results were validated by peer reviewers and the R code was reviewed during the data validation process.
+
+Data
+
+The data variables provided in the OpenFEMA dataset, "Individuals and Households Program—Valid Registrations—v1" that CRS used to calculate the statistics discussed in this report are listed and defined below. The statistics discussed in this report are
+
+*   Overall average IHP awards by state;
+*   Overall average IHP awards by incident type;
+*   Overall average IHP awards by homeowner and renter status;
+*   Average IHP award amounts pre- and post-DRRA;
+*   Count of IHP recipients who received the maximum amount of financial assistance for Housing Assistance and ONA, both pre- and post-DRRA;
+*   Overall average IHP awards for recipients, stratified by whether they have homeowners insurance;
+*   Overall average IHP awards for recipients with flood damage, stratified by whether they have flood insurance;
+*   Overall average IHP awards based on homeowner and renter status, stratified by gross income; and
+*   Overall average IHP awards based on household composition.
+
+**Table A-1** also includes a column describing how the variables were used for purposes of the statistical calculations run by CRS in R.
+
+Data Fields and Definitions
+
+The data fields provided in the OpenFEMA dataset, "Individuals and Households Program—Valid Registrations—v1" that CRS used to calculate the statistics discussed in this report are listed and defined in **Table A-1**, and there is also a column describing their use for purposes of statistical calculations run by CRS in the statistical software package R.
+
+Table A-1. Variable Names, Definitions, and Uses
+
+OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1"
+
+Variable Name Definition Use
+incidentType Refers to the type of disaster that resulted in the application.Averages calculated by incident type.
+declarationDate The date of the disaster declaration.All calculations calculating pre- and post-DRRA statistics.
+disasterNumber Identification number used to track which specific disaster an application refers to.Total number of declared incidents per state and territory.
+damagedStateAbbreviation The abbreviation of the state where the applicant's disaster-damaged dwelling is located.All state-related calculations.
+householdComposition The number of people living in a specific household referenced in the application.Averages based on household count.
+grossIncome A categorical variable measuring the self- reported gross income of applicants.All income-related calculations.
+ownRent Refers to whether an applicant owns or rents their residence, or if the status is unknown.Averages based on homeowner or renter status; counts based on homeowner or renter status.
+homeOwnersInsurance A Boolean variable which refers to whether an applicant has homeowners insurance.Averages based on whether an applicant has homeowners insurance.
+floodInsurance A Boolean variable which refers to whether an applicant has flood insurance.Average IHP and HA grants based on whether an applicant has flood insurance.
+ihpEligible A Boolean variable referencing whether an applicant is eligible for and received assistance through the Individuals and Households Program.All qualified IHP-related calculations.
+ihpAmount The awarded IHP grant total per applicant.All IHP averages.
+haEligible A Boolean variable referencing whether an applicant is eligible for and received housing assistance.Counts based on whether the applicant has insurance, including homeowners or flood insurance.
+haAmount The awarded HA grant per applicant.All HA averages.
+onaEligible A Boolean variable referencing whether an applicant is eligible for and received ONA.Counts based on whether the applicant has insurance, including homeowners or flood insurance.
+onaAmount The awarded ONA grant per applicant.All ONA averages.
+floodDamage A Boolean variable referencing whether an applicant had flood damage.All flood insurance calculations.
+ihpMax A Boolean variable referencing whether an applicant received the maximum IHP grant allotment.IHP max count
+haMax A Boolean variable referencing whether an applicant received the maximum HA grant allotment.HA max count.
+onaMax A Boolean variable referencing whether an applicant received the maximum ONA grant allotment.ONA max count.
+rpfvl The FEMA-evaluated value of disaster-caused damage to an applicant's real property.All RPFVL related calculations.
+ppfvl The FEMA-evaluated value of disaster-caused damage to an applicant's personal property.All PPFVL related calculations.
+personalPropertyAmount The awarded personal property amount per applicant.All personal property assistance related calculations.
+personalPropertyEligible A Boolean variable referencing whether an applicant was eligible for and received personal property assistance.Count of eligible personal property assistance applicants.
+repairAssistanceAmount The awarded repair assistance amount per applicant.All repair assistance related calculations.
+repairAssistanceEligible A Boolean variable referencing whether an applicant was eligible for and received repair assistance.Count of eligible repair assistance applicants.
+
+**Source:** CRS's interpretation of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s). See "Data Fields" table.
+
+**Notes:**IHP = Individuals and Households Program; HA = Housing Assistance; ONA = Other Needs Assistance; RPFVL = Real Property FEMA Verified Loss Amount; PPFVL = Personal Property FEMA Verified Loss Amount. Each Variable Name comes from the variable in the "Name" column of the FEMA Data Field in the OpenFEMA dataset, "Individuals and Households Program—Valid Registrations—v1." The Definitions are CRS's interpretation of the "Description" column associated with each named variable. Use refers to how CRS has used the data for purposes of the statistical calculations run by CRS in R. The IHP refers to the Individuals and Households Program; HA refers to Housing Assistance; and ONA refers to Other Needs Assistance.
+
+**Booleans** are binary variables that have two possible values and are typically coded as 0 or 1—in this case, when noted in the table above, the Boolean variables indicate whether the applicant did or did not have homeowners or flood insurance, whether the applicant did or did not have flood damage, and whether the applicant did or did not receive the maximum amount of financial assistance for the IHP (pre-DRRA), and HA and ONA (post-DRRA).
+
+FEMA Data Caveats
+
+The description of FEMA's OpenFEMA dataset, "Individuals and Households Program—Valid Registrations—v1" explains that the data come from FEMA's National Emergency Management Information System (NEMIS), rather than FEMA's official financial systems, and that it includes "raw, unedited, self-reported content and is subject to a small percentage of human error."66 It also states that full dataset is refreshed annually and that data from the last 18 months are refreshed weekly. The descriptions also states "[t]his dataset is not intended to be used for any official federal financial reporting."67
+
+FEMA also provides terms and conditions, as well as citation requirements for its datasets.
+
+This product uses the Federal Emergency Management Agency's OpenFEMA API, but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).68
+
+Appendix B. IHP Data Analysis Background Information
+
+This appendix provides background information on FEMA's statutory authorities, regulations, and policies, to provide additional context for this report. CRS's analysis of FEMA's IHP financial assistance award data is presented in the "Data Analysis: Average IHP Award Amounts" section of the report. The results of CRS's data analysis may relate to a number of considerations, and while potential associations may be made between FEMA's policies, regulations, and statutory authorities and the IHP financial assistance awards, additional research would be needed to establish causation.
+
+Average IHP Awards by State Background Information
+
+Federal assistance is intended to supplement, rather than supplant, the state, local, territory, or tribal government's response and recovery efforts. For this reason, state, territory, and tribal governments do not automatically receive a presidential declaration of emergency or major disaster, nor do they automatically receive Individual Assistance.69 Instead, generally, the governor of the affected state or territory or the chief executive of the affected tribal government must request that the President declare an emergency or major disaster authorizing IA.70 Thus, Stafford Act declarations are authorized for the affected state, territory, or tribe.71
+
+As explained in the section on "Applying for IHP Assistance," the amount of financial assistance IHP applicants receive varies, including based on their unique circumstances (e.g., insurance coverage, IHP-eligible losses) and statutory limits on IHP award amounts. Additional considerations that could affect average IHP awards may include the type of incident and resulting damages (e.g., as depicted in **Figure 5**, some incident types have higher IHP average award amounts associated with them, which could be due to factors such as more extensive damage to real and personal property), and the location of the incident—although the maximum amount of financial assistance is the same for all affected states, territories, and tribes, according to FEMA's guidance:
+
+Home Repair Assistance award amounts are based on repair or replacement of components that are of average quality, size, or capacity.72
+
+FEMA has explained that the agency bases these award amounts on local costs—more specifically, on localized average repair costs (i.e., FEMA does not have a flat rate for Home Repair Assistance costs for different components).73
+
+Additionally, in the period following the enactment of the Disaster Mitigation Act of 2000 (DMA2K, P.L. 106-390) in October 2000 through March 2024, Congress took different actions with regard to managing disaster-associated costs. DMA2K was expressly intended to "control the Federal costs of disaster assistance."74 DMA2K itself and FEMA's corresponding regulations sought to limit the amount of IHP financial assistance provided, including by establishing sub-caps that limited the amount of Home Repair and Home Replacement assistance FEMA could provide to not exceed $5,000 and $10,000, respectively (adjusted annually based on the Consumer Price Index), as well as limiting the total amount of IHP financial assistance to $25,000 for a single major disaster (adjusted annually based on the Consumer Price Index).75 Since DMA2K's enactment, however, congressional action has indicated Congress's intent to increase the amount of assistance FEMA can provide to disaster survivors. The Post-Katrina Emergency Management Reform Act of 2006 (PKEMRA, Title VI of P.L. 109-295) removed the sub-caps for Home Repair and Home Replacement.76 Additionally, the Disaster Recovery Reform Act of 2018 (DRRA, Division D of P.L. 115-254) effectively increased the amount of financial assistance an individual or household could potentially receive for a single emergency or major disaster by establishing separate caps of equal amounts for the maximum amount of financial assistance eligible individuals and households may receive for financial Housing Assistance and ONA, and by not counting some forms of financial assistance toward the caps.77 However, despite the trend in congressional action towards increasing the amount of federal financial assistance FEMA may provide to disaster survivors, FEMA's own regulations continued to limit the assistance it provided to disaster survivors.78
+
+Average IHP Awards for Housing and Other Needs
+
+As described above and listed in **Table 1**, FEMA may provide IHP awards for Housing Assistance and ONA. As explained above, the amount of financial assistance IHP applicants receive varies, including based on their unique circumstances and statutory limits, among other considerations.
+
+Maximum Awards with the Combined and Split Caps for Housing and Other Needs Assistance
+
+Pre-DRRA IHP Financial Assistance Cap
+
+Prior to DRRA's enactment, an individual or household could receive up to $33,300 (FY2017; adjusted annually) in IHP financial assistance, which included FEMA assistance provided for both Housing Assistance and ONA. This combined—Housing Assistance and ONA—cap on the IHP maximum amount of financial assistance may have resulted in some applicants having insufficient funding to meet their disaster-caused needs.
+
+Section 1212 of the Disaster Recovery Reform Act of 2018 (DRRA, Division D of P.L. 115-254) amended Stafford Act Section 408(h), including to create separate caps of equal amounts for the maximum amount of financial assistance that eligible individuals and households may receive for housing assistance and for ONA for a single emergency or major disaster.79 In addition, DRRA Section 1212 excluded financial assistance to rent alternate housing accommodations from the cap, and excluded financial assistance for accessibility-related real and personal property items from the cap.80 In response to the IHP changes post-DRRA, FEMA processed retroactive payments to applicants who either reached or exceeded the financial cap for disasters declared on or after August 1, 2017, and evaluated applications to assess whether some survivors were eligible for additional rental assistance.81
+
+The post-DRRA changes to Stafford Act Section 408(h) have the potential to increase awards to eligible IHP recipients. They also have the potential to increase federal spending on renting alternate accommodations (i.e., Lodging Expense Reimbursement, Rental Assistance, and Continued Temporary Housing Assistance), and accessibility-related repair or replacement costs associated with real and personal property (i.e., through Home Repair and Personal Property Assistance for eligible items).
+
+For CRS's analysis of the effect DRRA's enactment had on IHP award amounts, see the **Table 3** (Housing Assistance and ONA award averages), **Figure 8** (Housing Assistance award averages), **Figure 9** (ONA award averages), and **Figure 10** (IHP, Housing Assistance, and ONA award averages by homeowner and renter status), above. CRS found that, in general, geographically (i.e., at the state level), the IHP averages increased in the post-DRRA period; however, the overall U.S. average IHP award amount declined post-DRRA.
+
+Average IHP Awards for Homeowners and Renters
+
+Personal circumstances, including whether the IHP applicant owns or rents the disaster-damaged property, may affect IHP award amounts, including because some forms of IHP financial Housing Assistance are only available to homeowners (i.e., Home Repair and Home Replacement Assistance).82 Thus, homeowners may be eligible for more forms of IHP Housing Assistance than renters. Still, other considerations also affect award amounts, as described above.
+
+Insurance in Effect and IHP Financial Assistance Awards
+
+Personal circumstances, including whether and to what extent the applicant's real and personal property losses were insured, may affect IHP award amounts. Generally, insured IHP applicants must provide FEMA with documentation identifying their insurance settlements or benefits before FEMA will consider their eligibility for assistance that may be covered by private insurance (this is to prevent a duplication of benefits from occurring).83 IHP applicants who are uninsured or underinsured may be eligible for assistance from FEMA.84
+
+The amount of financial assistance an applicant may be eligible to receive for disaster-damaged real and personal property is based on their FEMA-Verified Loss (FVL) amount,85 as determined by their FEMA inspection, minus their net insurance settlement (i.e., their gross settlement minus their deductible), up to the IHP maximum amount of financial assistance.86 Put another way, IHP applicants may receive the difference between their FVL amount and their net settlement, up to the cap. Additionally, in circumstances when the insured disaster-caused damage amount is less than the disaster survivor's deductible, FEMA may provide assistance.87
+
+CRS analyzed the difference between the amount FEMA awarded for Home Repair Assistance and the FEMA-Verified Loss amount for real property (referred to as the real property FEMA-Verified Loss amount or RPFVL), as well as the difference between the amount FEMA awarded for Personal Property Assistance and the FEMA-Verified Loss amount for personal property (referred to as the personal property FEMA-Verified Loss amount or PPFVL), in order to determine the count of the number of recipients whose Home Repair Assistance awards were less than the RPFVL amount, and recipients whose Personal Property Assistance Awards were less than the PPFVL amount.88
+
+**Table B-1** depicts the total count of eligible recipients for Home Repair Assistance and the total count of eligible recipients for Home Repair Assistance who received less than RPFVL, as well as the percentage of eligible recipients of Home Repair Assistance who received less than RPFVL. It also depicts the total count of eligible recipients for Personal Property Assistance and the total count of eligible recipients of Personal Property Assistance who received less than PPFVL, as well as the percentage of eligible recipients for Personal Property Assistance who received less than PPFVL.
+
+Table B-1. Counts of Recipients Receiving Less than the FEMA-Verified Loss (FVL) Amount for Real and Personal Property
+
+October 15, 2002-March 21, 2024
+
+Type of Assistance Total Count of Eligible Recipients Total Count of Eligible Recipients Receiving Less than FVL Percentage of Eligible Recipients Receiving Less than FVL
+Home Repair Assistance 2,636,720 374,755 14.2%
+Personal Property Assistance 2,267,554 723,880 31.9%
+
+**Source:**CRS's analysis of FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s).
+
+**Notes:**CRS did not compare the real property FEMA-Verified Loss amount (RPFVL) with the total Housing Assistance (HA) award because such assistance may also include funding provided other than for repairs (e.g., Rental Assistance). CRS did not compare the personal property FEMA-Verified Loss amount (PPFVL) with the total Other Needs Assistance (ONA) award because such assistance may also include funding provide to address other needs in addition to personal property (e.g., Funeral Assistance).
+
+Additionally, some eligible recipients received Home Repair Assistance (173,552 [6.58%] of eligible recipients of Home Repair Assistance) in excess of RPFVL, and some eligible recipients received Personal Property Assistance (191,785 [8.46%] of eligible recipients of Personal Property Assistance) in excess of PPFVL. The dataset does not provide sufficient granularity to identify the reason for this. The FEMA-Verified Loss amount is defined by FEMA as
+
+The total dollar amount of IHP eligible disaster-caused damage to real and personal property as verified by FEMA.
+
+The FVL represents the total potentially eligible damage, but due to insurance coverage, the financial Housing Assistance maximum, and other eligibility factors an applicant may not ultimately receive assistance for their full FVL.89
+
+As such, it appears that an IHP applicant should not be able to receive an IHP award for Home Repair Assistance or Personal Property Assistance that exceeds the RPFVL or PPFVL, respectively. FEMA may be able to provide insight into the data. Potential reasons why recipients of Home Repair Assistance or Personal Property Assistance that exceeded the RPFVL or PPFVL could potentially include a situation where the applicant appealed FEMA's assistance determination (the dataset does not specifically indicate whether the applicant appealed FEMA's determination). Also, FEMA may pay up to the actual repair or replacement cost for some forms of Home Repair Assistance, which are uninsurable (not typically covered by homeowners insurance), such as private wells, furnaces, and private septic systems.90
+
+In the period following the enactment of DMA2K and the effective date of FEMA's corresponding regulations (October 15, 2002), until FEMA's updated regulations went into effect on March 22, 2024, pursuant to the "Individual Assistance Program Equity" interim final rule, FEMA's treatment of insurance proceeds may have affected some applicants' eligibility for IHP assistance, and may have affected some applicants' award amounts.91 Previously, FEMA's regulations used the IHP maximum amount of financial assistance as an insurance-based assistance cap.92 Per FEMA's previous version of its regulation at 44 C.F.R. §206.113(a)(4), insured applicants may be eligible
+
+when the insured individual or household's insurance proceeds are less than the maximum amount of assistance FEMA can authorize and the proceeds are insufficient to cover the necessary expenses or serious needs.93
+
+Thus, in practice, prior to March 21, 2024, if an IHP applicant's insurance proceeds were equal to or exceeded the statutory IHP maximum amount of financial assistance that FEMA may provide for a single emergency or major disaster, FEMA would not provide additional assistance. An applicant whose net insurance settlement was less than the cap, however, may have been eligible for IHP assistance to address their unmet needs up to the cap (i.e., that difference between their net insurance settlement and the FVL, up to the cap). According to the "Individual Assistance Program Equity" interim final rule (IFR), during a five-year period, 0.4% of applicants were found ineligible for IHP assistance because their net settlements exceeded the IHP cap; however, FEMA also noted it may have been the case that potential IHP applicants whose insurance settlements equaled or exceeded the cap did not apply for IHP assistance.94 FEMA has stated that the change to FEMA's treatment of insurance proceeds pursuant to the IFR "will increase the number of recipients that receive assistance."95 Future CRS products may evaluate data following the elimination of this insurance-related assistance cap and IHP applicant award amounts.
+
+Insurance should be viewed as one source of recovery assistance, and disaster survivors may receive assistance from multiple sources, to include insurance, the IHP, and other sources (e.g., voluntary organizations, Small Business Administration [SBA] disaster loans). Further, the maximum amount of available assistance from sources other than the IHP—including through private insurance, the National Flood Insurance Program (NFIP), and the SBA disaster loan program—may be higher than the maximum amount of assistance available through the IHP.96
+
+Household Income, Household Composition, and IHP Financial Assistance Awards
+
+An IHP applicant's income does not affect their general IHP eligibility; however, FEMA uses income as a consideration to inform the provision of specific forms of IHP assistance, including Continued Temporary Housing Assistance (i.e., a continuation of rental assistance that may be provided based on need after the period of initial Rental Assistance), and ONA Child Care Assistance (when the IHP applicant has a disaster-caused increase in financial burden for child care).97
+
+HHS Federal Poverty Guidelines
+
+As additional background, the U.S. Federal Poverty Guidelines published by the U.S. Department of Health and Human Services (HHS) for 2024 set poverty guidelines based on family/household size and annual income.
+
+For an individual, this is approximately $15,000; for a married couple, it is approximately $20,000; and for a family of three it is approximately $26,000. The table provided by the guidelines goes up to a family size of eight, which has an annual income of approximately $53,000, and for each additional person, approximately $5,000 is added.
+
+(U.S. Department of Health and Human Services, Office of the Assistant Secretary for Planning and Evaluation, "Poverty Guidelines," in effect as of January 17, 2024, https://aspe.hhs.gov/topics/poverty-economic-mobility/poverty-guidelines.)
+
+Appendix C. Treatment of the Citizens of the Freely Associated States
+
+FEMA's ability to provide assistance to citizens of the Freely Associated States (FAS)—Republic of the Marshall Islands (RMI or Marshall Islands), Federated States of Micronesia (FSM or Micronesia), and Republic of Palau (Palau)—has changed over time. The following sections consider the ability of the FAS to request emergency and disaster assistance pursuant to a declaration, as well as the ability for individuals who are citizens of the RMI, FSM, and Palau (referred to hereinafter as COFA migrants—referencing the Compacts of Free Association) to receive IHP assistance.98
+
+A Brief History of Disaster Assistance to the FAS
+
+The Marshall Islands and Micronesia may request and receive emergency and disaster assistance pursuant to a declaration. Palau may also receive disaster assistance. Such assistance is provided by the U.S. Agency for International Development (USAID).
+
+The Marshall Islands, Micronesia, and Palau chose the status of "free association" with the United States (rather than becoming territories) in 1978.99 Pursuant to the respective Compacts of Free Association between the FAS and the United States, the United States has provided economic assistance since FY1987 to RMI and the FSM,100 and since FY1995 to Palau.101 Most recently, economic assistance was extended for 20 years, through FY2043, through the Compact of Free Association Amendments Act of 2024 (Div. G, Title II of P.L. 118-42).102
+
+Although Section 302 of the Disaster Mitigation Act of 2000 (DMA2K, P.L. 106-390) amended the Stafford Act definition of "state," removing from the definition "the Trust Territory of the Pacific Islands," and this change was subsequently reflected in FEMA's revised regulations,103 the Compacts of Free Association still allow the Marshall Islands and Micronesia to request a declaration and receive federal disaster assistance.104 The 2003 amendments to the Compacts of Free Association named USAID as the U.S. entity responsible for providing emergency and disaster relief assistance, rather than FEMA, and required FEMA to transfer funding from the Disaster Relief Fund to USAID to carry out reconstruction activities in the Marshall Islands and Micronesia.105 In 2008, USAID assumed such responsibility from FEMA.106 However, the Compact of Free Association between the Government of the United States of America and the Government of Palau does not include similar language related to FEMA assistance.107 USAID's Office of U.S. Foreign Disaster Assistance (USAID/OFDA) responds to disasters in the Palau through its "normal disaster response mechanisms."108
+
+For the period considered in this report, there is one incident for which FEMA provided IHP assistance to Micronesia. The President declared a major disaster for the FSM (FEMA–1511-DR) on April 10, 2004, following Typhoon Sudal.109
+
+Ability of COFA Migrants to Receive IHP Assistance
+
+COFA migrants may receive IHP assistance as a result of a statutory change occurring in March 2024.
+
+On April 26, 2024, FEMA issued a memorandum to implement the statutory amendments to the IHP and make changes to its program guidance, the _Individual Assistance Program and Policy Guide (IAPPG)_, in effect for incidents declared on or after May 26, 2021.110 The _IAPPG_ explains that IHP applicants must meet general eligibility requirements, including that they must be a U.S. citizen, noncitizen national, or "qualified alien" (or the parent or guardian of such a minor).111 The guidance also notes that some categories of "aliens who are lawfully present in the U.S." are ineligible for IHP assistance. Prior to the statutory change, citizens of FSM and RMI were listed as ineligible; FEMA cited, as justification for this, the Personal Responsibility and Work Opportunity Reconciliation Act of 1996 (PRWORA; P.L. 104-193), which provides that only "qualified aliens" are eligible for federal public benefits.112 Previously, PRWORA limited COFA migrant eligibility for federal public benefits, and FEMA noted that such individuals were ineligible for IHP assistance.113 However, Section 209 of the Compact of Free Association Amendments Act of 2024 (Div. G, Title II of P.L. 118-42) amended Sections 402 and 431(b)(8) of PRWORA, creating an exception for citizens of Freely Associated States and removing the limitation that permitted COFA migrants to only be considered qualified aliens for purposes of receiving Medicaid.114 As such, now, "an individual who lawfully resides in the United States in accordance with a Compact of Free Association" is listed in the definition of qualified alien for purposes of PRWORA. FEMA's website has been updated to reflect that, "Legal residents in accordance with the Compacts of Free Association with the Federated States of Micronesia, Republic of the Marshall Islands, and the Republic of Palau" are qualified non-citizens.115 Thus, FEMA may now provide IHP assistance to eligible COFA migrants who are affected by declared disasters.
+
+For the majority of the period considered in this report (October 15, 2002-March 21, 2024), COFA migrants were ineligible for IHP assistance. FEMA's OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1" does not distinguish between IHP applicants who are U.S. citizens, noncitizen nationals, or "qualified aliens."
+
+Footnotes
+---------
+
+1.42 U.S.C. §5174; 44 C.F.R. §206.110(a); Federal Emergency Management Agency (FEMA), _Individual Assistance Program and Policy Guide (IAPPG)_, Version 1.1, FP 104-009-03, May 2021, p. 41, https://www.fema.gov/sites/default/files/documents/fema_iappg-1.1.pdf (hereinafter FEMA, _IAPPG_). For additional information on the Individuals and Households Program (IHP), see CRS Report R47015, _FEMA's Individuals and Households Program (IHP)—Implementation and Considerations for Congress_, by Elizabeth M. Webster. For additional information on other federal assistance programs that may help support a disaster survivor's recovery, see CRS Report R41981, _Congressional Primer on Responding to and Recovering from Major Disasters and Emergencies_, by Elizabeth M. Webster and Bruce R. Lindsay and CRS Report R45238, _FEMA and SBA Disaster Assistance for Individuals and Households: Application Processes, Determinations, and Appeals_, by Bruce R. Lindsay and Elizabeth M. Webster.
+2.FEMA provides some options to view its publicly available data as data visualizations. For example, FEMA provides data visualizations by state and territory related to housing assistance, which includes data on incidents affecting such states and territories (FEMA, "Disaster Housing Assistance," last updated March 21, 2024, https://www.fema.gov/data-visualization/disaster-housing-assistance). The U.S. Government Accountability Office (GAO) has also analyzed data related to FEMA's Individuals and Households Program (IHP)—see for example, GAO, _Supplemental Material for GAO-20-503: Select Disaster Profiles for FEMA's Individuals and Households Program 2016-2018_, GAO-20-674SP, September 30, 2020, https://www.gao.gov/products/gao-20-674sp (hereinafter GAO, _Supplemental Material for GAO-20-503_). GAO's supplemental material considered FEMA IHP applicant data for selected disaster occurring from 2016-2018. Additionally, GAO's IHP report considered IHP data from 2016-2018, See GAO, _Disaster Assistance: Additional Actions Needed to Strengthen FEMA's Individuals and Households Program_, GAO-20-503, September 2020, https://www.gao.gov/assets/gao-20-503.pdf (hereinafter GAO, _Additional Actions Needed to Strengthen FEMA's IHP_). The data analysis presented in this CRS report includes tables and figures that cover different information than what is available in FEMA's data visualization, and considers a different time frame than that considered in GAO's 2020 IHP report and supplemental material.
+3.Prior to the enactment of the Disaster Recovery Reform Act of 2018 (DRRA, Division D of P.L. 115-254), the Stafford Act imposed a total limit on the maximum amount of all IHP financial assistance an individual or household could receive for a single disaster (i.e., financial Housing Assistance and Other Needs Assistance [ONA] combined to count towards the cap). DRRA Section 1212 amended Stafford Act Section 408(h), 42 U.S.C. §5174(h), establishing separate caps of equal amounts for the maximum amount of financial assistance eligible individuals and households may receive for financial Housing Assistance and ONA; removing financial assistance to rent alternative housing accommodations (i.e., Lodging Expense Reimbursement, Rental Assistance, and Continued Temporary Housing Assistance) from the cap; and creating exclusions to the cap for accessibility-related repair or replacement costs associated with real and personal property (e.g., eligible household items). For additional detailed information on how DRRA amended the IHP, see CRS Report R45819, _The Disaster Recovery Reform Act of 2018 (DRRA): A Summary of Selected Statutory Provisions_, coordinated by Elizabeth M. Webster and Bruce R. Lindsay and CRS Report R46776, _The Disaster Recovery Reform Act of 2018 (DRRA): Implementation Updates for Select Provisions_, coordinated by Elizabeth M. Webster and Bruce R. Lindsay.
+4.Robert T. Stafford Disaster Relief and Emergency Assistance Act (Stafford Act; P.L. 93-288, as amended; codified at 42 U.S.C. §§5121 et seq.); 44 C.F.R. §§206.38-40. For additional information on the declaration process, see CRS Report WMR10001, _CRS Guide to Federal Emergency Management_, by Lauren R. Stienstra et al., and CRS Report R41981, _Congressional Primer on Responding to and Recovering from Major Disasters and Emergencies_, by Elizabeth M. Webster and Bruce R. Lindsay.
+5.44 C.F.R. §206.40.
+6.For information on the different forms of Individual Assistance, see CRS Report R46014, _FEMA Individual Assistance Programs: An Overview_, by Elizabeth M. Webster.
+7.The Individuals and Households Program (IHP) is authorized under Stafford Act Section 408 (42 U.S.C. §5174) and the Federal Emergency Management Agency (FEMA) may provide IHP assistance pursuant to either an emergency or major disaster declaration when Individual Assistance is authorized. For additional information on the IHP, including the different types of Housing Assistance and Other Needs Assistance, see CRS Report R47015, _FEMA's Individuals and Households Program (IHP)—Implementation and Considerations for Congress_, by Elizabeth M. Webster.
+8.FEMA, "Survivors' Road to Recovery: Apply for FEMA Disaster Assistance," web page, last updated May 18, 2023, https://www.fema.gov/assistance/individual/program/road-to-recovery. FEMA will ask IHP applicants for their insurance information.
+9.After an IHP applicant submits an application for some forms of assistance, which are intended to address disaster-caused real or personal property damage, a FEMA inspector may contact the IHP applicant to schedule an inspection to verify their disaster-caused losses. See FEMA, _IAPPG_, pp. 72-74; FEMA, "I Applied for Assistance. What's Next?" last updated April 11, 2024, https://www.fema.gov/assistance/individual/after-applying; FEMA, "Home Inspections," last updated April 11, 2024, https://www.fema.gov/assistance/individual/after-applying/home-inspections.
+10.FEMA, _IAPPG_, pp. 75-76 (see the subsection on "Letters" that discusses FEMA's eligibility notifications to IHP applicants).
+11.IHP applicants who disagree with FEMA's determination may submit an appeal. For a brief overview of the application process and eligibility determinations in the context of FEMA assistance to disaster survivors, see CRS Report R47297, _Disaster Survivor FAQ: FEMA Individuals and Households Program_, by Elizabeth M. Webster.
+12.FEMA cites Title IV of the Personal Responsibility and Work Opportunity Reconciliation Act of 1996 (PRWORA; P.L. 104-193; codified at 8 U.S.C. §§1601 et seq.), as the basis for limiting the provision of IHP assistance to "qualified aliens." Under 8 U.S.C. §1611, so-called "non-qualified aliens" are generally rendered ineligible for federal public benefits. For further discussion, see CRS Report R46510, _PRWORA's Restrictions on Noncitizen Eligibility for Federal Public Benefits: Legal Issues_, by Ben Harrington (explaining that "8 U.S.C. §1611(b) provides that the baseline eligibility rule restricting federal public benefits to 'qualified aliens' does not apply to '[s]hort-term, non-cash, in-kind emergency disaster relief.' Thus implying that the restriction does apply to other forms of disaster relief (including cash assistance). FEMA has interpreted PRWORA this way—to bar nonqualified aliens from eligibility for disaster relief paid in cash.").
+13.For a detailed description of each type of IHP assistance, see CRS Report R47015, _FEMA's Individuals and Households Program (IHP)—Implementation and Considerations for Congress_, by Elizabeth M. Webster.
+14.For additional discussion of the factors FEMA determines when considering the type and amount of assistance to provide to eligible IHP applicants, see GAO, _Additional Actions Needed to Strengthen FEMA's IHP_, pp. 18-20 (see the section on "FEMA Considers Various Factors to Determine Type and Amount of Assistance").
+15.Excluded from the maximum award amounts are financial assistance to rent alternative housing accommodations, and funding for accessibility-related home and personal property repair or replacement costs (42 U.S.C. §5174(h)(1) and (h)(4); FEMA, _IAPPG_, pp. 86 and 146. Additional changes expanding assistance for accessibility-related items became effective when FEMA's March 22, 2024, rule went into effect, but this is outside the period of consideration for this report—see Department of Homeland Security (DHS)/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 3997, January 22, 2024).
+16.42 U.S.C. §5174(h); DHS/FEMA, "Notice of Maximum Amount of Assistance Under the Individuals and Households Program," 88 _Federal Register_ 72520, October 20, 2023, https://www.govinfo.gov/content/pkg/FR-2023-10-20/pdf/2023-23168.pdf. The maximum amount of assistance is adjusted annually, per the statue, to reflect changes in the Consumer Price Index (42 U.S.C. §5174(h)(3)).
+17.FEMA's publicly available data do not include direct housing assistance.
+18.Prior to the enactment of the Disaster Recovery Reform Act of 2018 (DRRA, Division D of P.L. 115-254), the Stafford Act imposed a total limit on the maximum amount of all IHP financial assistance an individual or household could receive for a single disaster (i.e., financial Housing Assistance and Other Needs Assistance [ONA] combined to count towards the cap). DRRA Section 1212 amended Stafford Act Section 408(h), 42 U.S.C. §5174(h), establishing separate caps of equal amounts for the maximum amount of financial assistance eligible individuals and households may receive for financial Housing Assistance and ONA; removing financial assistance to rent alternative housing accommodations (i.e., Lodging Expense Reimbursement, Rental Assistance, and Continued Temporary Housing Assistance) from the cap; and creating exclusions to the cap for accessibility-related repair or replacement costs associated with real and personal property (e.g., eligible household items).
+19.For example, it is unclear if the cause is human error, or the result of IHP applications being submitted by eligible individuals who reside in other states, but were seeking assistance for types of ONA for which they did not need to live in the presidentially declared disaster area to be considered for the assistance (e.g., Transportation Assistance, Funeral Assistance).
+20.Additional Stafford Act declarations may have been approved for the states depicted in Figure 1; however, incidents for which IHP assistance was not authorized are not depicted (i.e., incidents for which only Public Assistance was authorized are not included). FEMA has a data visualization page for "Disaster Housing Assistance," which provides data on housing assistance funds provided through the FEMA IHP and Small Business Administration's Disaster Home Loan Program, by state, county, and disaster. It also provides data on the amount of funding provided by year. The dataset description notes, "Some of the data used for this visualization is based on the OpenFEMA 'Disaster Declarations Summaries—v2' dataset and the 'Registration Intake and Individuals Household Program (RI-IHP)—v2' dataset. Other data comes from the Small Business Administration." FEMA, "Disaster Housing Assistance," last updated March 21, 2024, https://www.fema.gov/data-visualization/disaster-housing-assistance.
+21.FEMA, "Regions, States and Territories," https://www.fema.gov/about/organization/regions.
+22.The increase may relate to factors, such as DRRA's amendment to the IHP funding cap, which may have had the effect of more than doubling the available IHP award amount. However, FEMA's regulations in effect during the period considered in this report still limited the funding FEMA could provide, such as to IHP applicants whose insurance proceeds equaled or exceeded the cap, thus resulting in their ineligibility for IHP assistance (DHS/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 3993, January 22, 2024). Other factors that may have affected the overall average award increase could include the increased costs of rebuilding, as this data analysis is not inflation adjusted. For example, consistent with CRS's findings in this data analysis, which found that the number of IHP recipients in the post-DRRA period covering 7 years nearly equaled the pre-DRRA period covering 15 years (see **Table 2**), FEMA discusses the impacts of climate change on disaster assistance, including describing how recent disasters have resulted in FEMA's receipt of more applications for IHP assistance (see DHS/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 4016, January 22, 2024). For further discussion of considerations potentially affecting FEMA's provision of IHP assistance, see **Appendix B**.
+23.GAO's 2020 IHP report includes data on annual IHP expenditures and number of disasters for which IHP assistance was authorized for the period of 2010-2019 (Figure 3), as well as data on the number of applicants who received IHP financial assistance and the average IHP award amounts by year from 2010 to 2019 (Figure 5) (GAO, _Additional Actions Needed to Strengthen FEMA's IHP_, pp. 13, 15). While GAO considered IHP data from 2010 to 2019, and CRS considered IHP data from 2002 to 2024, the results of CRS's data analysis were comparable to GAO's results.
+24.Louisiana (DR-4345) and Texas (DR-4332) both received major disaster declarations for Hurricane Harvey; Florida (DR-4337), Georgia (DR-4338), Puerto Rico (DR-4336), South Carolina (DR-4346), the Seminole Tribe of Florida (DR-4341), and the U.S. Virgin Islands (DR-4335) received major disaster declarations for Hurricane Irma; and Puerto Rico (DR-4339) and the U.S. Virgin Islands (DR-4340) received major disaster declarations for Hurricane Maria.
+25.Disaster survivors from Florida, Louisiana, and Puerto Rico comprised 59.9% of the overall IHP recipients for the entire period considered (5.48 million disaster survivors). In the pre-DRRA period, disaster survivors from Florida, Louisiana, and Puerto Rico comprised 47.3% of eligible IHP applicants who received an award (2.3 million disaster survivors).
+26.While GAO considered IHP data from 2010 to 2019, and CRS considered IHP data from 2002 to 2024, the results of CRS's data analysis were comparable to GAO's results. See GAO, _Additional Actions Needed to Strengthen FEMA's IHP_, pp. 14-15.
+27.Despite FEMA's regulatory limitations, which affected the amount of IHP assistance a disaster survivor may receive (e.g., related to the IHP cap serving as an eligibility limitation for insured IHP applicants with insurance proceeds equal to or in excess of the maximum amount of IHP financial assistance), IHP applicants with less insurance coverage could receive the difference between their net insurance settlement and the FEMA verified loss amount, up to the cap, so long as their net insurance settlement was less than the IHP cap (see DHS/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 4016, January 22, 2024).
+28.The Disaster Recovery Reform Act of 2018 (DRRA, Division D of P.L. 115-254) amended the maximum amount of financial assistance such that pre-DRRA, Rental Assistance counted towards the cap, but it does not post-DRRA. However, Home Repairs counted towards the cap in both the pre- and post-DRRA periods. Homeowners may be eligible to receive financial assistance both for Rental Assistance and Home Repair Assistance. Renters, however, may receive Rental Assistance, but not Home Repair Assistance. Further, there could be differences between the insurance coverage maintained by homeowners and renters, including based on lending requirements for mortgage holders. FEMA has acknowledged the need for, and has made changes to its programs that may assist renters with Rental Assistance, and Personal Property Assistance; however, some such changes went into effect after the period of consideration included in this report (see DHS/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 4008-4009, January 22, 2024).
+29.FEMA, _IAPPG_, pp. 64-66.
+30.FEMA, _IAPPG_, pp. 64-66. FEMA defines "Flood Zones," which note that "Flood hazard areas identified on the Flood Insurance Rate Map are identified as a Special Flood Hazard Area (SFHA). SFHA are defined as the area that will be inundated by the flood event having a 1-percent chance of being equaled or exceeded in any given year. The 1-percent annual chance flood is also referred to as the base flood or 100-year flood." See FEMA's glossary of terms, including "Flood Zones," for further information, available at https://www.fema.gov/about/glossary/flood-zones (last updated July 8, 2020).
+31.GAO's 2020 report on the IHP provides detailed examples of circumstances affecting an IHP applicant's eligibility for assistance, and how such circumstances, the disaster-caused damages, and insurance may affect awards. For example, damage to a garage would not be covered, nor would damage to artwork. (GAO, _Additional Actions Needed to Strengthen FEMA's IHP_, pp. 18-20; see the section on "FEMA Considers Various Factors to Determine Type and Amount of Assistance").
+32.As described in FEMA's guidance, IHP assistance can help with things like repairing components to make the home safe, sanitary, and functional. FEMA's regulations at 44 C.F.R. §206.111 define "safe," "sanitary," and "functioning." See also FEMA, _IAPPG_, pp. 85-86.
+33.As noted in the text, IHP assistance for the repair and replacement of eligible real and personal property items is more limited than what can be provided by insurance. Further, flood insurance coverage through the National Flood Insurance Program can cover up to $250,000 for the residential property building, and $100,000 for the building contents, but the IHP award caps for FY2024 were set at $42,500 for housing assistance and $42,500 for ONA. See, for example, FEMA National Flood Insurance Program, "Understanding Your Policy Terms," https://www.floodsmart.gov/policy-terms; DHS/FEMA, "Notice of Maximum Amount of Assistance Under the Individuals and Households Program," 88 _Federal Register_ 72520, October 20, 2023, https://www.govinfo.gov/content/pkg/FR-2023-10-20/pdf/2023-23168.pdf.
+34.FEMA, _IAPPG_, p. 49.
+35.Stafford Act Section 312 (42 U.S.C. §5121) requires federal agencies to ensure that individuals do not receive disaster assistance for losses for which they have already been compensated or may expect to be compensated. FEMA's regulations establish a delivery sequence of disaster assistance, and an agency or organization that is later in the delivery sequence should not provide assistance that duplicates assistance provided by an agency or organization earlier in the sequence (see 44 C.F.R. §206.191(d)(2) for the delivery sequence).
+36.Notably, flooding is not a hazard that is typically covered under a standard homeowners insurance policy, and instead, a separate insurance policy may be needed, such as one provided through the National Flood Insurance Program. For additional information on the National Flood Insurance Program, see CRS Report R44593, _Introduction to the National Flood Insurance Program (NFIP)_, by Diane P. Horn and Baird Webel.
+37.Of note, FEMA explains that "despite … clear Congressional intent to increase the amount of assistance FEMA provides to individuals and households, FEMA never re-visited its prior interpretation that any insurance proceeds should be automatically deducted from the total amount it provides to individuals.… When an applicant's net insurance settlement amount from insurance is equal to or exceeds the IHP cap, FEMA determines that the applicant's need has been met by insurance and will not provide any additional assistance." FEMA amended its regulations, including by removing the IHP cap as a condition of eligibility for insured applicants, effective March 22, 2024 (DHS/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 4015-4018, January 22, 2024 (see the section on "Treatment of Insurance Proceeds").
+38.See, for examples, Rebecca Hersher and Ryan Kellman, "Why FEMA Aid Is Unavailable to Many Who Need It the Most," _NPR_, June 29, 2021, https://www.npr.org/2021/06/29/1004347023/why-fema-aid-is-unavailable-to-many-who-need-it-the-most; National Advisory Council, _Report to the FEMA Administrator_, November 2020, p. 6, https://www.fema.gov/sites/default/files/documents/fema_nac-report_11-2020.pdf (stating that recovery programs "provide an additional boost to wealthy homeowners and others with less need, while lower-income individuals and others sink further into poverty after disasters"); Rebecca Hersher and Robert Benincasa, "How Federal Disaster Money Favors the Rich," _NPR_, March 5, 2019, https://www.npr.org/2019/03/05/688786177/how-federal-disaster-money-favors-the-rich.
+
+FEMA analyzed its program data for the provision of IHP assistance across applicant income levels for disasters declared between January 1, 2014, and December 31, 2018, and FEMA found, "Assertions that FEMA assists higher income households at _higher rates_ than lower income households is not supported by IHP analysis of FEMA data…. Assertions that FEMA provides greater _amounts_ of IHP financial assistance to higher income households is supported by IHP analysis of FEMA data" [emphasis appears in FEMA's published materials]. FEMA found that low-income applicants were 16% more likely to be referred to the IHP, and 11% more likely to receive an IHP award than higher-income applicants, but the median IHP award for low-income applicants was 5% lower than for higher-income applicants. Of note, referral rates, award amounts, and median award amounts vary by type of IHP assistance. For additional information and specific information related to FEMA's findings regarding referral rates, award amounts, and median award amounts, as well as how FEMA defined low income, see FEMA, "Income Project_Phase 1_2019.07.31," posted January 22, 2024, last accessed October 24, 2024, slides 7 and 10, https://www.regulations.gov/document/FEMA-2023-0003-0002. CRS was unable to validate FEMA's results based on the publicly available data.
+39.There were three (3) eligible IHP applicants with no listed income.
+40.DHS/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 3993, January 22, 2024. FEMA also considered the reasons for the variance in results between lower and higher income IHP applicants. The findings are more varied at the assistance-type level (see DHS/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 3994, January 22, 2024).
+41.This number may include people who self-reported $0 income, as well as individuals who did not report their income, or in some cases reported they were self-employed. This number excludes applicants with unknown homeowner/renter status, and applicants with no income listed.
+42.This number excludes applicants with unknown homeowner/renter status, and applicants with no income listed.
+43.As noted above, renters are eligible for fewer forms of IHP assistance (e.g., renters are ineligible for Home Repair Assistance), and smaller households would have less personal property eligible for repair or replacement. For further information. For example, GAO explains, "According to FEMA officials, considerations that frequently affect award determination are availability of insurance, number of people in the household, and whether the IHP allows assistance for the survivor's specific disaster damages and losses.… FEMA considers household composition and provides assistance for personal property damages in one bedroom when there is only one adult living in the home, even if there were multiple bedrooms with damages." (GAO, _Additional Actions Needed to Strengthen FEMA's IHP_, p. 19).
+44.FEMA, "OpenFEMA Data Sets," last updated May 1, 2024, https://www.fema.gov/about/openfema/data-sets. FEMA provides publicly available data, including data on disaster declarations, mission assignments, grant programs, and the National Flood Insurance Program.
+45.FEMA, _2022–2026 FEMA Strategic Plan: Building the FEMA Our Nation Needs and Deserves_, p. 32, https://www.fema.gov/sites/default/files/documents/fema_2022-2026-strategic-plan.pdf (hereinafter FEMA, _2022-2026 Strategic Plan_).
+46.FEMA, _2022-2026 Strategic Plan_, p. 33. FEMA identified relevant research questions related to the provision of IHP assistance, but the Strategic Plan does not currently list any associated data projects that seek to address such questions. IHP-related questions included in the Strategic Plan include (1) "Is there a relationship between the number of challenges faced by individuals eligible for FEMA assistance and race, ethnicity, sex, or disability status of those applicants?"; (2) "Are there disparities in outcomes for communities across FEMA programs, and what is the best way to measure this?"; and (3) "Is FEMA's Individual Assistance for Housing Assistance funding distributed differentially by race, ethnicity, sex, socioeconomic status, and disability status for major disaster declarations? Are there differences in who is deemed eligible? Are there differences in the amount received? Are there differences in who applies for assistance? Are some groups not applying for assistance even when they are eligible? Are there differences for renters versus owners? Are there differences in results for Tribes?"
+47.Department of Homeland Security/Federal Emergency Management Agency, "Equity Demographics Questions," form, OMB Control Number: 1660-0154, Expires: July 31, 2025 (see the "Privacy Act Statement").
+48.See, for example, DHS/FEMA, "Equity Demographics Questions," FEMA form, OMB Control Number 1660-0154, Expires July 31, 2025. For additional information on FEMA's NEMIS and how information is populated, see U.S. Department of Homeland Security, _Privacy Impact Assessment for the Individual Assistance (IA) Program_, DHS/FEMA/PIA-049, January 11, 2018, pp. 4, 49-53, https://www.dhs.gov/sites/default/files/publications/privacy-pia-fema-049-ia-january2018.pdf (see the "IT Systems" and "National Emergency Management Information System Individual Assistance [NEMIS-IA]" sections).
+49.FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1," https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1. A few data fields in other Individual Assistance datasets are not included in the "Individuals and Households Program—Valid Registrations—v1" dataset, including related to the Rental Assistance End Date and Rental Resource City, State, and Zip Code ("OpenFEMA Dataset: Individual Assistance Housing Registrants—Large Disasters—v1"); dollar ranges of FEMA-inspected damage ("OpenFEMA Dataset: Housing Assistance Program Data—Owners—v2"). Many of the individual data fields are rolled up in the "Individuals and Households Program—Valid Registrations—v1" dataset. These data fields were last reviewed May 17, 2024.
+50.FEMA's OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1," includes data fields that indicate whether or not the IHP applicant has homeowners' insurance and flood insurance, as well as the amount of the IHP applicant's flood insurance premium that was paid for by FEMA, but the dataset does not offer any additional insurance-related information.
+51.Currently, the "Individuals and Households Program—Valid Registrations—v1" dataset reports the IHP award amount, as well as the amount of damage to the IHP applicant's real and personal property, as determined by FEMA, and having the insurance data could help support an evaluation of the sources and amounts of recovery assistance.
+52.Individuals and households who receive federal financial assistance for flood-related damage—including IHP assistance for Home Repair, Home Replacement, Permanent Housing Construction, or Personal Property Assistance—are required to buy and maintain flood insurance for future flood damage to insurable real and personal property as a condition of IHP eligibility if the property is in or will be in a designated Special Flood Hazard Area and it can be insured under the National Flood Insurance Program. Details regarding the flood insurance requirements can be found in FEMA's regulations and program guidance (44 C.F.R. §206.110(k)(3); FEMA, _IAPPG_, p. 63). FEMA's definition of a Special Flood Hazard Area (SFHA) can be found in FEMA's glossary of terms for "Flood Zones," https://www.fema.gov/about/glossary/flood-zones (last updated July 8, 2020).
+53.The categories of Other Needs Assistance include Serious Needs Assistance, Displacement Assistance, Personal Property Assistance, Transportation Assistance, Group Flood Insurance Policy, Funeral Assistance, Medical and Dental Assistance, Childcare Assistance, Assistance for Miscellaneous Items, Moving and Storage Assistance, and Clean and Sanitize Assistance.
+54.GAO's 2020 IHP report provides data visualizations based on GAO's analysis of FEMA's National Emergency Management Information System award data, and GAO's data visualizations provide some additional granularity—indicating the percentage of expenditures by type of IHP financial assistance, including for Home Repair Assistance, Home Replacement Assistance, Rental Assistance, Personal Property Assistance, Critical Needs Assistance, Transportation, and Other Assistance—including for Lodging, and the other forms of ONA (GAO, _Additional Actions Needed to Strengthen FEMA's IHP_, p. 14). FEMA's Personal Property Assistance may include financial assistance to repair and replace standard household appliances, essential clothing, standard room furnishings, and essential tools required for work or education. FEMA's guidance provides further details (see FEMA, _IAPPG_, pp. 166-169; see also Memorandum from William C. Hagmaier, FEMA Assistant Administrator, Recovery Directorate to FEMA Regional Administrators, Regional Recovery Division Directors, "RE: Amendment to FP 104-009-03, Individual Assistance Program and Policy Guide, Version 1.1," March 22, 2024, pp. 17-18, https://www.fema.gov/sites/default/files/documents/fema_ifr-implementation_IAPPG-Amendment_Memo_03-22-2024.pdf).
+55.Based on CRS's analysis of FEMA's public data, 1,990,952 applicants (out of 21,143,615) have households with five or more members (9.42% of the applicant pool) (OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed around 9:30 AM EDT).
+56.FEMA, "OpenFEMA Frequently Asked Questions," last updated April 10, 2023, https://www.fema.gov/about/openfema/faq (see the FAQ, "Do you report on direct housing (e.g., # of FEMA trailers or MHUs allocated to each county) from housing assistance data or the IHP data?," and the answer, "This data is not available in OpenFEMA data and would have to be requested through the Freedom of Information Act or Privacy Act (FOIA).").
+57.GAO, _Disaster Housing: Improved Cost Data and Guidance Would Aid FEMA Activation Decisions_, GAO-21-116, December 2020, p. 13, https://www.gao.gov/products/gao-21-116 (hereinafter GAO, _Disaster Housing: Improved Cost Data and Guidance_).
+58.GAO, _Disaster Housing: Improved Cost Data and Guidance_, p. 20.
+59.GAO, _Disaster Housing: Improved Cost Data and Guidance_ (see the table with "Recommendations for Executive Action" and status information for Recommendation 1).
+60.FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1." Retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1 on August 14, 2024, download completed around 9:30 AM EDT. This product uses the FEMA OpenFEMA API (Application Programming Interface), but is not endorsed by FEMA. The federal government or FEMA cannot vouch for the data or analyses derived from these data after the data have been retrieved from the Agency's website(s). The API may be accessed at https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1. FEMA also provides information on its API on its "OpenFEMA API Documentation" web page, at https://www.fema.gov/about/openfema/api.
+61.Section 206(a) of the Disaster Mitigation Act of 2000 (DMA2K, P.L. 106-390). Section 206(a) of DMA2K amended Stafford Act Section 408, which previously was "Temporary Housing Assistance," and established "Federal Assistance to Individuals and Households" (i.e., the Individuals and Households Program). Per DMA2K Section 206(d), these amendments to Stafford Act Section 408 took effect 18 months after the date of enactment, which was October 30, 2000—thus the IHP amendments took effect April 30, 2002. Subsequently, on September 30, 2002, FEMA's interim final rule, "Disaster Assistance; Federal Assistance to Individuals and Households," went into effect, and it applied to emergencies and major disasters declared on or after October 15, 2002. FEMA, "Disaster Assistance; Federal Assistance to Individuals and Households," 67 _Federal Register_ 61446-61460, September 30, 2002.
+62.DHS/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 3990-4125, January 22, 2024. On March 22, 2024, FEMA's interim final rule, "Individual Assistance Program Equity" went into effect, and it applied to emergencies and major disasters declared on or after that date. According to FEMA, the amended regulations seek to "increase equity by simplifying processes, removing barriers to entry, and increasing eligibility for certain types of assistance under the program." For additional information on the rulemaking process, see CRS Report RL32240, _The Federal Rulemaking Process: An Overview_, coordinated by Maeve P. Carey (see the section on "Exceptions to the APA Notice Requirement," and discussion of "interim final" rulemaking).
+63.Prior to the enactment of the Disaster Recovery Reform Act of 2018 (DRRA, Division D of P.L. 115-254), the Stafford Act imposed a total limit on the maximum amount of all IHP financial assistance an individual or household could receive for a single disaster (i.e., financial Housing Assistance and Other Needs Assistance [ONA] combined to count towards the cap). DRRA Section 1212 amended Stafford Act Section 408(h), 42 U.S.C. §5174(h), establishing separate caps of equal amounts for the maximum amount of financial assistance eligible individuals and households may receive for financial Housing Assistance and ONA; removing financial assistance to rent alternative housing accommodations (i.e., Lodging Expense Reimbursement, Rental Assistance, and Continued Temporary Housing Assistance) from the cap; and creating exclusions to the cap for accessibility-related repair or replacement costs associated with real and personal property (e.g., eligible household items).
+64.DRRA §1212.
+65.R Core Team (2023), _R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing_, Vienna, Austria, https://www.R-project.org/.
+
+Posit team (2023), _RStudio: Integrated Development Environment for R. Posit Software_, PBC, Boston, MA, http://www.posit.co/.
+
+Hadley Wickham et al. (2023). _dplyr: A Grammar of Data Manipulation_. R package version 1.1.4, https://CRAN.R-project.org/package=dplyr.
+
+R is an analytical programming language. It is used here in conjunction with RStudio, an integrated development environment. Instructions on how to download R may be found here: https://www.R-project.org/, and RStudio may be downloaded here: http://www.posit.co/. The version of R used is 4.3.1 and the version of RStudio used is "2023.06.1.524." The packages used for these calculations are "base," "dplyr," "stats," and "utils."
+66.For example, disaster survivors may enter data into their applications incorrectly. For additional information describing FEMA's National Emergency Management Information System (NEMIS) and how information is populated, as well as how disaster survivors may correct inaccurate data, see U.S. Department of Homeland Security, _Privacy Impact Assessment for the Individual Assistance (IA) Program_, DHS/FEMA/PIA-049, January 11, 2018, pp. 4, 49-53, https://www.dhs.gov/sites/default/files/publications/privacy-pia-fema-049-ia-january2018.pdf (see the "IT Systems" and "National Emergency Management Information System Individual Assistance [NEMIS-IA]" sections). In its supplemental materials accompanying the report entitled _Disaster Assistance: Additional Actions Needed to Strengthen FEMA_ _'s_ _Individuals and Households Program_ (GAO-20-503), GAO stated that they "assessed the reliability of FEMA's IHP applicant data by reviewing existing information about the National Emergency Management Information System, including internal controls; interviewing data users and managers responsible for these data from FEMA's Recovery Analytics Division; and testing the data for missing data, outliers, and obvious errors. Based on these steps, we determined these data to be sufficiently reliable for the purposes of reporting IHP outcomes for select disasters from 2016 through 2018" (GAO, _Supplemental Material for GAO-20-503_, p. 6).
+67.FEMA, OpenFEMA Dataset: "Individuals and Households Program—Valid Registrations—v1," retrieved from https://www.fema.gov/openfema-data-page/individuals-and-households-program-valid-registrations-v1.
+68.FEMA, "OpenFEMA Terms and Conditions," last updated August 30, 2021, https://www.fema.gov/about/openfema/terms-conditions (see "Citing Data").
+69.42 U.S.C. §§5170, 5191; 44 C.F.R. §§206.35-206.38, 206.40(a).
+70.It is also possible for the President to unilaterally declare an emergency under Stafford Act Section 501(b) when the federal government has the primary responsibility for response because "the emergency involves a subject area for which, under the Constitution or laws of the United States, the United States exercises exclusive or preeminent responsibility and authority" (42 U.S.C. §5191(b)).
+71.For a list or to search the Stafford Act declared incidents, see FEMA's "Disasters and Other Declarations" web page, available at https://www.fema.gov/disaster/declarations.
+72.FEMA, _IAPPG_, p. 88.
+73.FEMA briefing on June 22, 2021. According to FEMA, the agency uses a tool/service called RSMeans to determine and award reasonable localized costs. FEMA also explains, in its "Individual Assistance Program Equity" interim final rule that RSMeans is a commercial source for "industry-accepted guides of construction cost information to support estimating the repair or replacement cost of a building. Under FEMA's contract with RSMeans, the company identifies some of the costs to repair or replace damaged real and personal property based on geographic area. FEMA may not share RSMeans amounts, however, because the contract does not permit us to publicly post the company's proprietary data" (DHS/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 4011, January 22, 2024). See also, Gordian, "FEMA Estimates Hurricane Relief Projects with RSMeans data," last accessed October 24, 2024, https://www.gordian.com/resources/fema-estimates-hurricane-relief-projects-with-rsmeans-data/ (Gordian is the entity that created RSMeans Data).
+74.DMA2K, P.L. 106-390 ("An Act to amend the Robert T. Stafford Disaster Relief and Emergency Assistance Act to authorize a program for predisaster mitigation, to streamline the administration of disaster relief, to control the Federal costs of disaster assistance, and for other purposes"); U.S. Congress, House Committee on Transportation and Infrastructure, _Disaster Mitigation and Cost Reduction Act of 1999_, 106 th Cong., 1 st sess., March 3, 1999, H.Rept. 106-40 (Washington: GPO, 1999), pp. 1, 10 (the "Purpose and Summary" section states that one purpose of DMA2K was to "control the Federal costs of disaster assistance").
+75.DMA2K §206(a).
+76.Section 686 Post-Katrina Emergency Management Reform Act of 2006 (PKEMRA, Title VI of P.L. 109-295), as it amended Stafford Act §408(c)(2) and (3), 42 U.S.C. §5174(c)(2) and (3).
+77.DRRA §1212 as it amended Stafford Act §408(h), 42 U.S.C. §5174(h).
+78.FEMA, "Disaster Assistance; Federal Assistance to Individuals and Households," 67 _Federal Register_ 61454-61455, September 30, 2002; see also the description of this regulation's effect in DHS/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 4015-4016, January 22, 2024 (see the section on "Treatment of Insurance Proceeds," which stated in part, "However, despite this clear Congressional intent to increase the amount of assistance FEMA provides to individuals and households, FEMA never re-visited its prior interpretation that any insurance proceeds should be automatically deducted from the total amount it provides to individuals.… When an applicant's net insurance settlement amount from insurance is equal to or exceeds the IHP cap, FEMA determines that the applicant's need has been met by insurance and will not provide any additional assistance."). FEMA amended its regulations, including by removing the IHP cap as a condition of eligibility for insured applicants, effective March 22, 2024 (DHS/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 4015-4018, January 22, 2024. For additional information on the changes made by FEMA's interim final rule (IFR) amending its regulations governing the Individual Assistance (IA) program—specifically the Individuals and Households Program (IHP), which went into effect March 22, 2024—see CRS Insight IN12333, _Updates to FEMA's Individuals and Households Program Made by the "Individual Assistance Program Equity" Rulemaking_, by Elizabeth M. Webster.
+79.DRRA §1212. For additional information on the amendments DRRA made to the Stafford Act, see CRS Report R45819, _The Disaster Recovery Reform Act of 2018 (DRRA): A Summary of Selected Statutory Provisions_, coordinated by Elizabeth M. Webster and Bruce R. Lindsay, and CRS Report R46776, _The Disaster Recovery Reform Act of 2018 (DRRA): Implementation Updates for Select Provisions_, coordinated by Elizabeth M. Webster and Bruce R. Lindsay. For tables tracking FEMA's implementation of DRRA's 46 sections and the associated 56 discrete requirements that FEMA identified itself as being responsible for implementing, see CRS Report R46774, _The Disaster Recovery Reform Act of 2018 (DRRA): Implementation Update Tables for Select Provisions_, coordinated by Elizabeth M. Webster.
+80.DRRA §1212 as it amended Stafford Act §408(h)(1) and inserted Stafford Act §408(h)(4).
+81.FEMA, "FEMA Bulletin Week of March 18, 2019: FEMA Announces Retroactive Payments to Disaster Survivors," press release, March 19, 2019, https://content.govdelivery.com/accounts/USDHSFEMA/bulletins/237ddd7. FEMA's website that tracks its implementation of DRRA included an implementation update for Section 1212, which stated that "[r]etroactive payments began in March 2019" and that it "[a]utomatically applied to new disasters as of April 2019" (FEMA, "Disaster Recovery Reform Act of 2018," last updated July 6, 2021, https://www.fema.gov/disaster-recovery-reform-act-2018 (see "DRRA Provisions 1210(A)-1219")).
+82.42 U.S.C. §5174(c)(2) and (3). FEMA may provide financial assistance to repair or replace an owner-occupied private residence that is damaged or destroyed by an emergency or major disaster.
+83.FEMA, _IAPPG_, pp. 49-51. Stafford Act Section 312 requires federal agencies to ensure that individuals do not receive disaster assistance for losses for which they have already been compensated or may expect to be compensated. FEMA's regulations establish a delivery sequence of disaster assistance, and an agency or organization that is later in the delivery sequence should not provide assistance that duplicates assistance provided by an agency or organization earlier in the sequence. FEMA assistance for housing and other needs come later in the sequence than insurance (44 C.F.R. §206.191(d)(2)).
+84.For example, an IHP applicant who does not have Loss of Use coverage (i.e., insurance to reimburse policy holders for temporary living costs if their home is uninhabitable due to a covered loss), or has insufficient insurance coverage may be eligible for Lodging Expense Reimbursement to meet their temporary lodging needs; an IHP applicant who incurred eligible funeral expenses not covered by other sources, such as burial insurance, may be eligible for Funeral Assistance (FEMA, _IAPPG_, pp. 78, 151). For additional information on Loss of Use insurance coverage, see Emily Vasquez, "What Is Loss of Use Coverage?," _U.S. News & World Report_, September 13, 2024, https://www.usnews.com/insurance/what-is-loss-of-use-coverage.
+85.FEMA defines the FEMA-Verified Loss (FVL) amount as "The total dollar amount of IHP eligible disaster-caused damage to real and personal property as verified by FEMA," and FEMA's guidance explains that "The FVL represents the total potentially eligible damage, but due to insurance coverage, the financial Housing Assistance maximum, and other eligibility factors an applicant may not ultimately receive assistance for their full FVL" (FEMA, _IAPPG_, p. 50).
+86.FEMA, _IAPPG_, pp. 49-51. Insurance deductibles are not an eligible IHP cost (DisasterAssistance.gov, "Frequently Asked Questions (FAQs)," last updated October 27, 2023, https://www.disasterassistance.gov/help/faqs (see the question, "My insurance settlement didn't meet enough needs to help me recover from the disaster. Can I apply for assistance from FEMA?")). However, when determining how much funding an applicant is eligible for, FEMA considers their deductible (e.g., by using their net settlement to determine the amount that is eligible for Financial Housing Assistance, and by providing assistance when the deductible exceeds insured disaster-caused damage).
+87.FEMA, _IAPPG_, p. 50.
+88.As explained in the data fields provided in the OpenFEMA dataset, "Individuals and Households Program—Valid Registrations—v1," the "RPFVL" (the real property FEMA-Verified Loss amount) is defined as the "FEMA-determined value of disaster-caused damage to real property components, including floors, walls, access roads and bridges, electrical, plumbing, HVAC, etc." Such assistance may be eligible for Home Repair Assistance. The data fields define the "PPFVL" (the personal property FEMA-Verified Loss amount) as the "FEMA-determined value of disaster-caused damage to personal property components, including appliances, furniture, etc." Such assistance may be eligible for Personal Property Assistance.
+89.FEMA, _IAPPG_, p. 50. Of note, CRS's analysis of this data just looked at eligible disaster survivors who received Home Repair Assistance awards, and eligible disaster survivors who received Personal Property Assistance awards.
+90.FEMA, _IAPPG_, p. 86. It is unclear whether actual costs for wells, furnaces, and septic systems are included in the RPFVL amount.
+91.Disaster Mitigation Act of 2000 (DMA2K, P.L. 106-390). Section 206 of the DMA2K amended Stafford Act Section 408, which previously was "Temporary Housing Assistance," and established "Federal Assistance to Individuals and Households" (i.e., the Individuals and Households Program). On September 30, 2022, FEMA's interim final rule, "Disaster Assistance; Federal Assistance to Individuals and Households," went into effect, implementing Section 206(a) of DMA2K "by consolidating 'Temporary Housing Assistance' and 'Individual and Family Grant Programs' into a single program called 'Federal Assistance to Individuals and Households.'" It applied to emergencies and major disasters declared on or after October 15, 2002. Further, it included the eligibility factors at 44 C.F.R. §206.113(a)(4) and (6) (FEMA, "Disaster Assistance; Federal Assistance to Individuals and Households," 67 _Federal Register_ 61446-61460, September 30, 2002).
+92.DHS/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 4015-4016, January 22, 2024 (see the section on "Treatment of Insurance Proceeds").
+93.44 C.F.R. §206.113(a)(4) (see the 2002-2023 editions); see also 44 C.F.R. §206.113(a)(6) (see the 2002-2023 editions), which covered insurance and assistance from other sources.
+94.DHS/FEMA, "Individual Assistance Program Equity," 89 _Federal Register_ 4017, January 22, 2024. The interim final rule (IFR) did not note which five-year period was considered.
+95.FEMA, _Individual Assistance Program Equity Interim Final Rule Regulatory Impact Analysis_, FEMA-2023-0003, RIN: 1660-AB07, January 2024, p. 46, https://www.regulations.gov/document/FEMA-2023-0003-0004.
+96.For additional information on the National Flood Insurance Program and assistance to help disaster survivors after a flood, see CRS Report R44808, _Federal Disaster Assistance: The National Flood Insurance Program and Other Federal Disaster Assistance Programs Available to Individuals and Households After a Flood_, by Diane P. Horn.
+97.For additional information, see CRS Report R47297, _Disaster Survivor FAQ: FEMA Individuals and Households Program_, by Elizabeth M. Webster (see the section on "Does income affect an IHP applicant's eligibility for assistance?").
+98.The Compacts of Free Association govern the relationships between the United States and each of the FAS. For information on the Compacts of Free Association, see CRS In Focus IF12194, _The Compacts of Free Association_, by Thomas Lum.
+99.The Marshall Islands, Micronesia, and Palau were districts of the former U.S.-administered United Nations Trust Territory of the Pacific Islands.
+100.P.L. 99-239; P.L. 108-188.
+101.P.L. 99-658 and P.L. 101-219; P.L. 115-91 and P.L. 115-141.
+102.For information on the Compacts of Free Association, see CRS In Focus IF12194, _The Compacts of Free Association_, by Thomas Lum.
+103.DHS/FEMA, "Disaster Assistance Definitions; Statutory Change," 69 _Federal Register_ 24082-24084, May 3, 2004.
+104.FEMA, "How a Disaster Gets Declared," last updated April 25, 2023, https://www.fema.gov/disaster/how-declared.
+105.Section 105 of P.L. 108-188; see also Section 221(a)(6) of "The Compact of Free Association, as amended, between the Government of the United States of America and the Government of the Federated States of Micronesia," and Section 221(a)(6) of "Compact of Free Association, as Amended, Between the Government of the United States of America and the Government of the Republic of the Marshall Islands," both of which state that the United States shall make FEMA assistance available (48 U.S.C. §1921, "Editorial Notes"); see also Article X of the respective Federal Programs and Service Agreements between the United States and the Republic of the Marshall Islands and Federated States of Micronesia, which address the provision of disaster preparedness and response and recovery assistance programs and services, and were signed in June 2004.
+106.U.S. Agency for International Development (USAID), Office of U.S. Foreign Disaster Assistance (OFDA), "Program Summary: Federated States of Micronesia, Republic of the Marshall Islands, and Palau," last accessed October 24, 2024, https://www.usaid.gov/sites/default/files/2022-05/04.05.13%20-%20FSM-RMI%20and%20Palau%20Program%20Summary.pdf (hereinafter USAID/OFDA, "Program Summary: FAS").
+107.48 U.S.C. §1931, "Editorial Notes."
+108.USAID/OFDA, "Program Summary: FAS."
+109.See DHS/FEMA, "Federated States of Micronesia; Amendment No. 2 to Notice of a Major Disaster Declaration," 69 _Federal Register_ 24658, May 4, 2004). Based on FEMA's OpenFEMA Dataset: "OpenFEMA Dataset: Disaster Declarations Summaries—v2," available at https://www.fema.gov/openfema-data-page/disaster-declarations-summaries-v2, between 1963 and 2007, the Republic of the Marshall Islands, the Federated States of Micronesia, and the Republic of Palau all received Stafford Act declarations; for the period considered in this report, there were eight declarations—all for the Federated States of Micronesia, and only one met the report's criteria, as described above.
+110.Memorandum from Frank Matranga, FEMA Individual Assistance Division Director to FEMA Regional Administrators, "RE: Compact of Free Association Citizen Eligibility for the Individuals and Households Program and Amendment to FP 104-009-03, Individual Assistance Program and Policy Guide, Version 1.1," April 26, 2024, https://www.fema.gov/sites/default/files/documents/fema_iappg-amendment_cofa_April-26-2024.pdf.
+111.FEMA, _IAPPG_, pp. 46-47.
+112.FEMA, _IAPPG_, p. 47.
+113.FEMA, _IAPPG_, p. 47.
+114.8 U.S.C. §1612(a)(2)(N) and (b)(2)(G); 8 U.S.C. §1641(b)(8). Section 209 of the Compact of Free Association Amendments Act of 2024 (Div. G, Title II of P.L. 118-42) added (N) establishing an exception for citizens of Freely Associated States, and struck out ", but only with respect to the designated Federal program defined in section 1612(b)(3)(C) of this title (relating to the Medicaid program)."
+115.FEMA, "Qualifying for FEMA Disaster Assistance: Citizenship and Immigration Status Requirements," last updated May 21, 2024, https://www.fema.gov/assistance/individual/program/citizenship-immigration-status.

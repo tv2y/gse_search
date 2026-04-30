@@ -1,0 +1,1214 @@
+Title: How to get all groups that a user is a member of?
+
+URL Source: https://stackoverflow.com/questions/5072996/how-to-get-all-groups-that-a-user-is-a-member-of
+
+Markdown Content:
+Asked 14 years, 8 months ago
+
+Viewed 1.7m times
+
+This question shows research effort; it is useful and clear
+
+217
+
+Save this question.
+
+Show activity on this post.
+
+PowerShell's `Get-ADGroupMember` cmdlet returns members of a specific group. Is there a cmdlet or property to get all the groups that a particular user is a member of?
+
+aschipfl
+
+35.3k 12 gold badges 62 silver badges 106 bronze badges
+
+asked Feb 22, 2011 at 0:57
+
+0
+
+This answer is useful
+
+389
+
+Save this answer.
+
+Show activity on this post.
+
+`Get-ADPrincipalGroupMembership` from the Active Directory module will do this. You'll need that module, or RSAT on Windows 10+, installed to run the command below.
+
+```
+Get-ADPrincipalGroupMembership username | select name
+
+name
+----
+Domain Users
+Domain Computers
+Workstation Admins
+Company Users
+Company Developers
+AutomatedProcessingTeam
+```
+
+TylerH
+
+21.2k 83 gold badges 84 silver badges 121 bronze badges
+
+answered Mar 22, 2013 at 12:14
+
+kstrauss kstrauss
+
+3,922 1 gold badge 15 silver badges 2 bronze badges
+
+9 Comments
+----------
+
+I have tried this but found that it only returns the 'Domain Users' group for any user.
+
+2014-12-08T17:33:21.847Z+00:00
+
+The above was giving me errors ("The server was unable to process the request due to an internal error" - presumably functionality not available on the server). `get-aduser $username -Properties memberof | select -expand memberof` worked fine though.
+
+2015-02-16T17:14:26.363Z+00:00
+
+Note that the Get-ADPrincipalGroupMembership requires a "global catalog server" - without that it returns the error "Directory Object Not Found" even though the object is confirmed to exist via Get-ADUser cmdlet and it has membership. Response from @schmeckendeugler worked very well for me to get group membership.
+
+2017-11-03T23:03:55.98Z+00:00
+
+I will agree to (rather strongly) disagree. In many AD environments, for example, the "/" character is _required_ in AD object names. I stand by my "fundamentally unreliable" assessment as the built-in cmdlets should handle characters that are perfectly valid (albeit need escaping) in AD.
+
+2023-03-10T17:29:26.813Z+00:00
+
+|
+
+This answer is useful
+
+155
+
+Save this answer.
+
+Show activity on this post.
+
+Single line, no modules necessary, uses current logged user:
+
+```
+(New-Object System.DirectoryServices.DirectorySearcher("(&(objectCategory=User)(samAccountName=$($env:username)))")).FindOne().GetDirectoryEntry().memberOf
+```
+
+Kudos to this vbs/powershell article: http://technet.microsoft.com/en-us/library/ff730963.aspx
+
+Jamie Ide
+
+49.4k 18 gold badges 85 silver badges 118 bronze badges
+
+answered May 13, 2014 at 9:38
+
+Canoas Canoas
+
+2,149 1 gold badge 14 silver badges 14 bronze badges
+
+4 Comments
+----------
+
+Thank you, I appreciate this no-modules version. I simply changed the variable from `$env:username` to `$username` and set with `$username = "testuser"` to easily do variable substitution for other user lookups.
+
+2016-01-25T21:23:54.637Z+00:00
+
+To get (sorted) plain list of groups only, you can run `(New-Object System.DirectoryServices.DirectorySearcher("(&(objectCategory=User)(samAccountName=$($env:username)))")).FindOne().GetDirectoryEntry().memberOf -replace "CN=(.*?),.*" ,"``$1" | Sort`.
+
+2021-10-22T16:02:51.577Z+00:00
+
+This is great. I provided a function based on this solution with a recursive option in this community wiki. feel free to edit.
+
+2024-05-30T16:20:59.557Z+00:00
+
+This answer is useful
+
+65
+
+Save this answer.
+
+Show activity on this post.
+
+A more concise alternative to the one posted by Canoas, to get group membership for the currently-logged-on user.
+
+I came across this method in this blog post: http://www.travisrunyard.com/2013/03/26/auto-create-outlook-mapi-user-profiles/
+
+```
+([ADSISEARCHER]"samaccountname=$($env:USERNAME)").Findone().Properties.memberof
+```
+
+An even better version which uses a regex to strip the LDAP guff and leaves the group names only:
+
+```
+([ADSISEARCHER]"samaccountname=$($env:USERNAME)").Findone().Properties.memberof -replace '^CN=([^,]+).+$','$1'
+```
+
+More details about using the [ADSISEARCHER] type accelerator can be found on the scripting guy blog: http://blogs.technet.com/b/heyscriptingguy/archive/2010/08/24/use-the-powershell-adsisearcher-type-accelerator-to-search-active-directory.aspx
+
+answered May 28, 2014 at 3:19
+
+Daniel.S Daniel.S
+
+929 8 silver badges 8 bronze badges
+
+5 Comments
+----------
+
+Both of these give me the error : Exception calling "FindOne" with "0" argument(s): "The samaccountname= search filter is invalid."
+
+2015-09-15T22:23:32.463Z+00:00
+
+Strange.... I just tested it again, but on Windows 7 in a completely different environment, and it works fine here too.
+
+2017-02-16T02:54:08.557Z+00:00
+
+I tried again just now, still on Win 7, and it does work fine. Perhaps I had typo when first trying this out. Thanks for adding the replace to strip out the forest "guff".
+
+2017-03-13T21:09:11.817Z+00:00
+
+Works great, append `| Sort-Object` to make it even more readable.
+
+2018-04-09T00:41:18.723Z+00:00
+
+This answer is useful
+
+51
+
+Save this answer.
+
+Show activity on this post.
+
+Old school way from CMD:
+
+```
+net user mst999 /domain
+```
+
+Linus Kleen
+
+34.8k 10 gold badges 97 silver badges 100 bronze badges
+
+answered Jan 30, 2015 at 13:40
+
+user4511672 user4511672
+
+529 4 silver badges 2 bronze badges
+
+2 Comments
+----------
+
+it also works on client machines without extra AD tools
+
+2019-01-25T10:39:50.137Z+00:00
+
+Unfortunately - if your groups names are long (ie > 21 characters) then it will truncate them...
+
+2019-02-28T21:52:25.28Z+00:00
+
+This answer is useful
+
+32
+
+Save this answer.
+
+Show activity on this post.
+
+```
+(GET-ADUSER –Identity USERNAME –Properties MemberOf | Select-Object MemberOf).MemberOf
+```
+
+answered Mar 26, 2012 at 20:24
+
+5 Comments
+----------
+
+| get-adgroup will output the group objects. Brilliant!
+
+2014-01-29T16:15:50.993Z+00:00
+
+or, use $env:USERNAME instead to grab the username of the currently logged in user
+
+2016-01-06T00:21:24.893Z+00:00
+
+THIS is the right one folks. All these other answers either don't work at all, require other tools, truncate the output or are too complex.
+
+2023-09-19T15:38:02.747Z+00:00
+
+Essentially results in the same: Get-AdUser _username_ -Properties MemberOf | select -Expand MemberOf
+
+2024-01-29T20:59:19.877Z+00:00
+
+This answer is useful
+
+32
+
+Save this answer.
+
+Show activity on this post.
+
+This should provide you the details for current user. Powershell not needed.
+
+`whoami /groups`
+
+answered May 19, 2020 at 16:34
+
+Nayan Nayan
+
+3,254 28 silver badges 35 bronze badges
+
+2 Comments
+----------
+
+This is helpful only for the logged in user AD group membership. However if you need another user or are running from an elevated shell this is not helpful.
+
+2022-04-12T20:24:46.647Z+00:00
+
+This is not what was asked though:, "How to get all groups that a user is a member of?"
+
+2023-09-19T15:38:45.807Z+00:00
+
+This answer is useful
+
+13
+
+Save this answer.
+
+Show activity on this post.
+
+If you cannot get Get-ADPrincipalGroupMembership to work for you could try logging in as that user then use.
+
+```
+$id = [Security.Principal.WindowsIdentity]::GetCurrent()
+$groups = $id.Groups | foreach-object {$_.Translate([Security.Principal.NTAccount])}
+$groups | select *
+```
+
+answered Oct 4, 2018 at 11:09
+
+andrew pate andrew pate
+
+4,367 1 gold badge 43 silver badges 32 bronze badges
+
+4 Comments
+----------
+
+You don't need to login as the user either if you use something like `$id = [Security.Principal.WindowsIdentity]("username")`
+
+2019-06-17T16:19:55.153Z+00:00
+
+This shortens nicely to the one-liner `[System.Security.Principal.WindowsIdentity]::GetCurrent().Groups | % {$_.Translate([Security.Principal.NTAccount])}`.
+
+2020-01-07T20:51:44.653Z+00:00
+
+THAT is a TERRIBLE answer, as that violates every company's security to NOT do that.
+
+2023-09-19T15:39:36.743Z+00:00
+
+@PatrickBurwell I get your point. I was thinking more of cases where you cannot access something but one of your collegues can, or your helping somone via teamviewer or something... rather than someone doing it to lots of users without a users knowledge
+
+2023-09-22T16:37:52.39Z+00:00
+
+This answer is useful
+
+10
+
+Save this answer.
+
+Show activity on this post.
+
+While there are many excellent answers here, there is one which I was personally looking for that was missing. Once I figured it out - I thought I should post it in case I want to find it later, or it actually manages to help someone else at some point:
+
+```
+Get-ADPrincipalGroupMembership username | Format-Table -auto
+```
+
+A second approach for presenting this is to specify the individual columns you are interested in eg:
+
+```
+Get-ADPrincipalGroupMembership username | select name, GroupScope, GroupCategory
+```
+
+This gives all the AD groups the username belongs to - but also presents all of the default properties of each group formatted nicely as a table.
+
+The key benefit this gives you is you can see at a glance which are distribution lists, & which are Security groups. You can further see at a glance which are Universal, which are DomainLocal & which are Global.
+
+ Why would you care about this last bit?
+
+*   Universal group is a security or distribution group that contains users, groups, and computers from any domain in its forest as members. You can give universal security groups rights and permissions on resources in any domain in the forest. 
+*   Global group is a group that can be used in its own domain, in member servers and in workstations of the domain, and in trusting domains. In all those locations, you can give a global group rights and permissions and the global group can become a member of local groups. However, a global group can contain user accounts that are only from its own domain.
+*   Domain local group is a security or distribution group that can contain universal groups, global groups, other domain local groups from its own domain, and accounts from any domain in the forest. You can give domain local security groups rights and permissions on resources that reside only in the same domain where the domain local group is located.
+
+answered Dec 12, 2018 at 22:20
+
+kiltannen kiltannen
+
+1,157 2 gold badges 14 silver badges 30 bronze badges
+
+2 Comments
+----------
+
+I agree. This is the better solution if you want to DO something with the output in PowerShell (which a sysadmin probably will). Also a lot easier to remember than the -I admit- very elegant oneliner-solution that was proposed and upvoted for 100+ times.
+
+2022-01-17T15:26:40.367Z+00:00
+
+Excellent, nice table output, "This gives all the AD groups the username belongs to - but also presents all of the default properties of each group formatted nicely as a table."
+
+2023-09-19T15:40:22.707Z+00:00
+
+This answer is useful
+
+5
+
+Save this answer.
+
+Show activity on this post.
+
+I wrote a PowerShell function called Get-ADPrincipalGroupMembershipRecursive. It accepts the DSN of a user, computer, group, or service account. It retrieves an initial list of groups from the account's memberOf attribute, then recursively checks those group's memberships. Abbreviated code is below. Full source code with comments can be found here.
+
+```
+function Get-ADPrincipalGroupMembershipRecursive( ) {
+
+    Param(
+        [string] $dsn,
+        [array]$groups = @()
+    )
+
+    $obj = Get-ADObject $dsn -Properties memberOf
+
+    foreach( $groupDsn in $obj.memberOf ) {
+
+        $tmpGrp = Get-ADObject $groupDsn -Properties memberOf
+
+        if( ($groups | where { $_.DistinguishedName -eq $groupDsn }).Count -eq 0 ) {
+            $groups +=  $tmpGrp           
+            $groups = Get-ADPrincipalGroupMembershipRecursive $groupDsn $groups
+        }
+    }
+
+    return $groups
+}
+
+# Simple Example of how to use the function
+$username = Read-Host -Prompt "Enter a username"
+$groups   = Get-ADPrincipalGroupMembershipRecursive (Get-ADUser $username).DistinguishedName
+$groups | Sort-Object -Property name | Format-Table
+```
+
+answered Dec 5, 2013 at 21:04
+
+Brian Reich Brian Reich
+
+153 1 gold badge 3 silver badges 4 bronze badges
+
+2 Comments
+----------
+
+Does this function get all nested grouping as well?
+
+2023-09-19T15:46:31.393Z+00:00
+
+This answer is useful
+
+5
+
+Save this answer.
+
+Show activity on this post.
+
+Get-Member is not for getting user's group membership. If you want to get a list of groups a user belongs to on the local system, you can do so by:
+
+```
+$query = "ASSOCIATORS OF {Win32_Account.Name='DemoUser1',Domain='DomainName'} WHERE ResultRole=GroupComponent ResultClass=Win32_Account"
+
+Get-WMIObject -Query $query | Select Name
+```
+
+In the above query, replace DemoUser1 with the username you want and the DomainName with either your local computer name or domain name.
+
+answered Feb 22, 2011 at 5:40
+
+ravikanth ravikanth
+
+26k 4 gold badges 62 silver badges 61 bronze badges
+
+3 Comments
+----------
+
+This query is very time consuming and responds very slow when there are multiple users and groups in the environment
+
+2015-03-09T06:47:09.743Z+00:00
+
+Whoever is editing the answer make sure you edit it the right way. I was suggesting the OP to replace DemoUser1 with whatever username he wants. And, you completely changed that meaning.
+
+2015-03-28T10:48:21.457Z+00:00
+
+This may be slow, but it gets the right response:
+
+2023-09-19T15:41:53.397Z+00:00
+
+This answer is useful
+
+5
+
+Save this answer.
+
+Show activity on this post.
+
+Get group membership for a user:
+
+```
+$strUserName = "Primoz"
+$strUser = get-qaduser -SamAccountName $strUserName
+$strUser.memberof
+```
+
+See _Get Group Membership for a User_
+
+But also see Quest's Free PowerShell Commands for Active Directory.
+
+[**Edit**: **Get-ADPrincipalGroupMembership** command is included in Powershell since v2 with Windows 2008 R2. See kstrauss' answer below.]
+
+ElRojo
+
+574 8 silver badges 32 bronze badges
+
+answered Feb 22, 2011 at 1:16
+
+tiago2014 tiago2014
+
+3,461 1 gold badge 23 silver badges 29 bronze badges
+
+4 Comments
+----------
+
+Actually there's an easier way with Quest cmdlets: Get-QADGroup -Contains Primoz
+
+2011-02-23T00:21:35.97Z+00:00
+
+This is no longer the best answer as Get-ADPrincipalGroupMembership is now built into PowerShell
+
+2014-09-23T13:47:45.31Z+00:00
+
+Voted down because It would be much better to use Get-ADPrincipalGroupMembership. I would like to undo this downvote, but I cannot. I will edit the answer to point out that the built in option now exists.
+
+2016-08-29T17:24:09.323Z+00:00
+
+Now you make it easy to use: #Get-PromptedUser-AllGroupMemberships.ps1 $user = Read-host -prompt "Waht us do you need all group memberships for?" Get-ADPrincipalGroupMembership $user | Format-Table -auto
+
+2023-09-19T15:44:07.517Z+00:00
+
+This answer is useful
+
+4
+
+Save this answer.
+
+Show activity on this post.
+
+`Get-Member` is a cmdlet for listing the members of a .NET `object`. This has nothing to do with user/group membership. You can get the current user's group membership like so:
+
+```
+PS> [System.Security.Principal.WindowsIdentity]::GetCurrent().Groups | 
+         Format-Table -auto
+
+BinaryLength AccountDomainSid    Value
+------------ ----------------    -----
+          28 S-1-5-21-...        S-1-5-21-2229937839-1383249143-3977914998-513
+          12                     S-1-1-0
+          28 S-1-5-21-...        S-1-5-21-2229937839-1383249143-3977914998-1010
+          28 S-1-5-21-...        S-1-5-21-2229937839-1383249143-3977914998-1003
+          16                     S-1-5-32-545
+...
+```
+
+If you need access to arbitrary users' group info then @tiagoinu suggestion of using the Quest AD cmdlets is a better way to go.
+
+answered Feb 22, 2011 at 2:03
+
+Keith Hill Keith Hill
+
+203k 44 gold badges 369 silver badges 377 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+4
+
+Save this answer.
+
+Show activity on this post.
+
+No need for long scripts when it is a simple one liner..
+
+**QUEST Command**
+
+```
+(Get-QADUser -Identity john -IncludedProperties MemberOf | Select-Object MemberOf).MemberOf
+```
+
+**MS AD Command**
+
+```
+(GET-ADUSER –Identity john –Properties MemberOf | Select-Object MemberOf).MemberOf
+```
+
+I find the MS AD cmd is faster but some people like the Quest ones better..
+
+Steve
+
+answered Nov 6, 2014 at 11:03
+
+Comments
+--------
+
+This answer is useful
+
+4
+
+Save this answer.
+
+Show activity on this post.
+
+Use:
+
+```
+Get-ADPrincipalGroupMembership username | select name | export-CSV username.csv
+```
+
+This pipes output of the command into a CSV file.
+
+answered Jun 5, 2015 at 10:36
+
+Comments
+--------
+
+This answer is useful
+
+4
+
+Save this answer.
+
+Show activity on this post.
+
+For LOCAL users and groups (ie not in Active Directory), and if you don't want to, or aren't allowed to, or can't install RSAT and/or `Install-WindowsFeature RSAT-AD-PowerShell` and/or `import-module activedirectory` then here's a pure, pre-installed powershell (5.1+) way to do it.
+
+(Note: `Get-LocalGroup*` used below are only available Powershell v5.1 and above. "...v5.1 was released along with the Windows 10 Anniversary Update on August 2, 2016, and in Windows Server 2016. ...[F]or Windows 7, Windows Server 2008, Windows Server 2008 R2, Windows Server 2012, and Windows Server 2012 R2 [it] was released on January 19, 2017." (wikipedia))
+
+```
+$username = "user002"
+Get-LocalGroup | ForEach-Object {
+    # the usernames are returned in the string form "computername\username"
+    if (Get-LocalGroupMember -Group $_ | Where-Object name -like "*\$username") {
+        $_.name
+    } 
+}
+```
+
+Example output:
+
+```
+Administrators
+Users
+```
+
+answered Mar 9, 2021 at 23:59
+
+3 Comments
+----------
+
+This method is unrelated to Active Directory.
+
+2021-03-22T18:18:50.773Z+00:00
+
+@Slogmeister Extraordinaire My reasoning is that some Internet users searching for this question will be interested in local groups not in active directory
+
+2021-03-22T21:05:42.59Z+00:00
+
+@johnvkrumpf Understood, but your answer does not indicate that it is not an Active Directory solution. It suggests that if you can't load the AD module/tools that this will work, but it will not in this context. The question specifically requests an AD solution. I'm not against your reasoning, however as I have done the same plenty of times. However, consider that the reader may not understand that your answer doesn't work with AD and be very frustrated trying. Modify your answer to clearly indicate this is a non-AD solution and I'll upvote it.
+
+2021-03-23T12:46:08.067Z+00:00
+
+This answer is useful
+
+4
+
+Save this answer.
+
+Show activity on this post.
+
+First, import the ActiveDirectory module:
+
+```
+Import-Module ActiveDirectory
+```
+
+Then issue this command:
+
+```
+Get-ADGroupMember -Identity $group | foreach-object {
+    Write-Host $_.SamAccountName
+}
+```
+
+This will display the members of the specified group.
+
+answered Dec 14, 2012 at 18:25
+
+Jonathan Rioux Jonathan Rioux
+
+1,126 4 gold badges 15 silver badges 31 bronze badges
+
+1 Comment
+---------
+
+The OP asks for the opposite. Get all groups a specified user is member of.
+
+2014-01-29T16:10:41.397Z+00:00
+
+This answer is useful
+
+3
+
+Save this answer.
+
+Show activity on this post.
+
+It is just one line:
+
+```
+(get-aduser joe.bloggs -properties *).memberof
+```
+
+end of :)
+
+answered May 23, 2015 at 7:08
+
+1 Comment
+---------
+
+Piping that to a `select -expandproperty memberof` will make the output a little more readable/useful.
+
+2016-07-07T20:46:06.15Z+00:00
+
+This answer is useful
+
+3
+
+Save this answer.
+
+Show activity on this post.
+
+```
+(Get-ADUser $env:username -Properties MemberOf).MemberOf | % {$_.split(",")[0].replace("CN=","")}
+
+Domain Users
+Domain Computers
+Workstation Admins
+Company Users
+Company Developers
+AutomatedProcessingTeam
+```
+
+answered Apr 18, 2021 at 13:50
+
+Nick Ali Nick Ali
+
+157 1 silver badge 4 bronze badges
+
+1 Comment
+---------
+
+Hi, this question already has an answer, if you have a different solution, that is better in some way, try to explain how it or when it is better than the approved one
+
+2021-04-21T13:28:30.787Z+00:00
+
+This answer is useful
+
+2
+
+Save this answer.
+
+Show activity on this post.
+
+The below works well:
+
+```
+get-aduser $username -Properties memberof | select -expand memberof
+```
+
+If you have a list of users:
+
+```
+$list = 'administrator','testuser1','testuser2'
+$list | `
+    %{  
+        $user = $_; 
+        get-aduser $user -Properties memberof | `
+        select -expand memberof | `
+        %{new-object PSObject -property @{User=$user;Group=$_;}} `
+    }
+```
+
+answered Feb 16, 2015 at 17:25
+
+JohnLBevan JohnLBevan
+
+24.7k 16 gold badges 107 silver badges 201 bronze badges
+
+1 Comment
+---------
+
+#Get-PromptedUser-AllGroupMemberships.ps1 $user = Read-host -prompt "What us do you need all group memberships for?" Get-ADPrincipalGroupMembership $user | Format-Table -auto
+
+2023-09-19T15:45:01.52Z+00:00
+
+This answer is useful
+
+2
+
+Save this answer.
+
+Show activity on this post.
+
+Studying all comments presented gave me a starting point (thanks for such) but left me with several unresolved issues. As result here is my answer. The code snippet provided does a little more than what is asked for but it provides helpful debugging info.
+
+```
+[array] $script:groupsdns = @()
+function Get-ADPrincipalGroupMembershipRecursive() 
+{
+  Param( [string] $dn, [int] $level = 0, [array] $groups = @() )
+
+  #if(($groupsdns | where { $_.DistinguishedName -eq $dn }).Count -ne 0 ) { return $groups } # dependency on next statement
+  #$groupsdns += (Get-ADObject $dn -Properties MemberOf) # Get-ADObject cannot find an object with identity
+  if ($script:groupsdns.Contains($dn)) { return $groups }
+  $script:groupsdns += $dn
+  $mo = $Null
+  $mo = Get-ADObject $dn -Properties MemberOf # Get-ADObject cannot find an object with identity
+  $group = ($dn + " (" + $level.ToString())
+  if ($mo -eq $Null) { $group += "!" }
+  $group += ")"
+  $groups += $group
+  foreach( $groupdn in $mo.MemberOf )
+  {
+    $groups = Get-ADPrincipalGroupMembershipRecursive -dn $groupdn -level ($level+1) -groups $groups
+  }
+  if ($level -le 0) 
+  { 
+    $primarygroupdn = (Get-ADUser -Identity $dn -Properties PrimaryGroup).PrimaryGroup 
+    $groups = Get-ADPrincipalGroupMembershipRecursive -dn $primarygroupdn -level ($level+1) -groups $groups
+  }
+  return $groups
+}
+$adusergroups = Get-ADPrincipalGroupMembershipRecursive -dn $aduser.DistinguishedName
+$adusergroups | ft -AutoSize | `
+              Out-File -Width 512 Get-ADPrincipalGroupMembershipRecursive.txt #-Append #-Wrap # | Sort-Object -Property Name
+```
+
+answered Nov 28, 2018 at 20:16
+
+1 Comment
+---------
+
+Sorry I forgot to clarify. Do this first: $aduserDistinguishedName = "CN=name,OU=..." $aduser = Get-ADUser -Identity $aduserDistinguishedName -Properties *
+
+2018-11-28T20:25:03.2Z+00:00
+
+This answer is useful
+
+2
+
+Save this answer.
+
+Show activity on this post.
+
+There is no need for PowerShell, you could use the command line tool `gpresult` as follows:
+
+```
+gpresult /USER domain\username /R
+```
+
+You may omit the `/USER` portion to display the information for the currently logged on user:
+
+```
+gpresult /R
+```
+
+Example output:
+
+> ```
+> Microsoft (R) Windows (R) Operating System Group Policy Result tool v2.0
+> © Microsoft Corporation. All rights reserved.
+> 
+> Created on ‎10/‎01/‎2024 at 10:14:48
+> 
+> 
+> RSOP data for DOMAIN\username on SYSTEM : Logging Mode
+> -------------------------------------------------------
+> 
+> OS Configuration:            Member Workstation
+> OS Version:                  10.0.19045
+> Site Name:                   N/A
+> Roaming Profile:             N/A
+> Local Profile:               C:\Users\username
+> Connected over a slow link?: No
+> 
+> 
+> USER SETTINGS
+> --------------
+>     CN=full name,OU=organisation unit,DC=some
+>     Last time Group Policy was applied: 10/01/2024 at 09:00:00
+>     Group Policy was applied from:      server
+>     Group Policy slow link threshold:   500 kbps
+>     Domain Name:                        MEDEL
+>     Domain Type:                        Windows 2008 or later
+> 
+>     Applied Group Policy Objects
+>     -----------------------------
+>         usrPolWindowsAccounts
+>         (list of applied group policies)
+> 
+>     The following GPOs were not applied because they were filtered out
+>     -------------------------------------------------------------------
+>         usrPolGermanGermany
+>             Filtering:  Denied (Security)
+>         (list of denied group policies)
+> 
+>     The user is a part of the following security groups
+>     ---------------------------------------------------
+>         Domain Users
+>         Everyone
+>         Remote Desktop Users
+>         BUILTIN\Users
+>         NT AUTHORITY\INTERACTIVE
+>         CONSOLE LOGON
+>         NT AUTHORITY\Authenticated Users
+>         This Organization
+>         LOCAL
+>         secUsersEnglish
+>         (list of security groups)
+> ```
+
+In contrast to the `net user` command (as suggested in user4511672's answer), the group names are not truncated.
+
+answered Jan 10, 2024 at 9:33
+
+aschipfl aschipfl
+
+35.3k 12 gold badges 62 silver badges 106 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+1
+
+Save this answer.
+
+Show activity on this post.
+
+Get-QADUser -SamAccountName LoginID | % {$_.MemberOf } | Get-QADGroup | select name
+
+answered Mar 20, 2014 at 21:22
+
+Comments
+--------
+
+This answer is useful
+
+1
+
+Save this answer.
+
+Show activity on this post.
+
+```
+Get-ADUser -Filter { memberOf -RecursiveMatch "CN=Administrators,CN=Builtin,DC=Fabrikam,DC=com" } -SearchBase "CN=Administrator,CN=Users,DC=Fabrikam,DC=com"  -SearchScope Base
+                  ## NOTE: The above command will return the user object (Administrator in this case) if it finds a match recursively in memberOf attribute.
+```
+
+answered Jul 7, 2014 at 12:22
+
+Sunil Aher Sunil Aher
+
+769 3 gold badges 18 silver badges 35 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+1
+
+Save this answer.
+
+Show activity on this post.
+
+I couldn't get the following to work for a particular user:
+
+```
+Get-ADPrincipalGroupMembership username
+```
+
+It threw an error that I was not willing to troubleshoot.
+
+I did however come up with a different solution using Get-ADUser. I like it a bit better because if you don't know the account name then you can get it based off of a wildcard on the user's actual name. Just fill in **PartOfUsersName** and away it goes.
+
+```
+#Get the groups that list of users are the member of using a wildcard search
+
+[string]$UserNameLike = "*PartOfUsersName*" #Use * for wildcards here
+[array]$AccountNames = $(Get-ADUser -Filter {Name -like $UserNameLike}).SamAccountName
+
+ForEach ($AccountName In $AccountNames) {
+Write-Host "`nGETTING GROUPS FOR" $AccountName.ToUpper() ":"
+(Get-ADUser -Identity $AccountName -Properties MemberOf|select MemberOf).MemberOf|
+    Get-ADGroup|select Name|sort name
+    }
+```
+
+Huge props to schmeckendeugler and 8DH for getting me to this solution. +1 to both of you.
+
+answered Apr 24, 2015 at 0:03
+
+Adam Adam
+
+601 1 gold badge 7 silver badges 8 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+1
+
+Save this answer.
+
+Show activity on this post.
+
+To get it recursive, you can use:
+
+```
+<# 
+    .SYNOPSIS   
+        Get all the groups that a user is MemberOf.
+
+    .DESCRIPTION
+        This script retrieves all the groups that a user is MemberOf in a recursive way.
+
+    .PARAMETER SamAccountName
+        The name of the user you want to check #>
+
+Param (
+    [String]$SamAccountName = 'test',
+    $DomainUsersGroup = 'CN=Domain Users,CN=Users,DC=domain,DC=net'
+)
+
+Function Get-ADMemberOf {
+    Param (
+        [Parameter(ValueFromPipeline)]
+        [PSObject[]]$Group,
+        [String]$DomainUsersGroup = 'CN=Domain Users,CN=Users,DC=grouphc,DC=net'
+    )
+    Process {
+        foreach ($G in $Group) {
+            $G | Get-ADGroup | Select -ExpandProperty Name
+            Get-ADGroup $G -Properties MemberOf| Select-Object Memberof | ForEach-Object {
+                Get-ADMemberOf $_.Memberof
+            }
+        }
+    }
+}
+
+$Groups = Get-ADUser $SamAccountName -Properties MemberOf | Select-Object -ExpandProperty MemberOf
+$Groups += $DomainUsersGroup
+$Groups | Get-ADMemberOf | Select -Unique | Sort-Object
+```
+
+answered Feb 15, 2017 at 14:59
+
+DarkLite1 DarkLite1
+
+14.8k 46 gold badges 138 silver badges 239 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+1
+
+Save this answer.
+
+Show activity on this post.
+
+Putting this here for future reference. I'm in the midst of an email migration. I need to know each user account and its respective group membership, and also I need to know each group and its respective members.
+
+I'm using the code block below to output a CSV for each user's group membership.
+
+```
+Get-ADUser -Filter * |`
+  ForEach-Object { `
+    $FileName = $_.SamAccountName + ".csv" ; `
+    $FileName ; `
+    Get-ADPrincipalGroupMembership $_ | `
+      Select-Object -Property SamAccountName, name, GroupScope, GroupCategory | `
+        Sort-Object -Property SamAccountName | `
+          Export-Csv -Path $FileName -Encoding ASCII ; `
+  }
+```
+
+The export process for the groups and their respective members was a little convoluted, but the below works. The output filenames include the type of group. Therefore, the email distribution groups I need are/should be the Universal and Global Distribution groups. I should be able to just delete or move the resulting TXT files I don't need.
+
+```
+Get-ADGroup -Filter * | `
+ Select-Object -Property Name, DistinguishedName, GroupScope, GroupCategory | `
+  Sort-Object -Property GroupScope, GroupCategory, Name | `
+   Export-Csv -Path ADGroupsNew.csv -Encoding ASCII
+
+$MyCSV = Import-Csv -Path .\ADGroupsNew.csv -Encoding ASCII
+
+$MyCSV | `
+ ForEach-Object { `
+  $FN = $_.GroupScope + ", " + $_.GroupCategory + ", " + $_.Name + ".txt" ; `
+  $FN ; `
+  Get-ADGroupMember -Identity $_.DistinguishedName | `
+   Out-File -FilePath $FN -Encoding ASCII ; $FN=""; `
+  }
+```
+
+answered May 19, 2018 at 4:37
+
+user208145 user208145
+
+401 5 silver badges 14 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+1
+
+Save this answer.
+
+Show activity on this post.
+
+When you do not have privileges to consult other member groups but you do have the privilege to consult group members, you can do the following to build a map of which user has access to which groups.
+
+```
+$groups = get-adgroup -Filter * | sort name | select Name
+$users = @{}
+foreach($group in $groups) {
+    $groupUsers = @()
+    $groupUsers = Get-ADGroupMember -Identity $group.Name | Select-Object SamAccountName
+    $groupUsers | % {
+        if(!$users.ContainsKey($_.SamAccountName)){
+            $users[$_.SamAccountName] = @()
+        }
+        ($users[$_.SamAccountName]) += ($group.Name)
+    }
+}
+```
+
+kiltannen
+
+1,157 2 gold badges 14 silver badges 30 bronze badges
+
+answered Apr 25, 2018 at 10:34
+
+Nadzzz Nadzzz
+
+530 3 silver badges 12 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+0
+
+Save this answer.
+
+Show activity on this post.
+
+```
+Import-Module ActiveDirectory
+Get-ADUser -SearchBase "OU=Users,DC=domain,DC=local" -Filter * | foreach-object {
+write-host "User:" $_.Name -foreground green
+    Get-ADPrincipalGroupMembership $_.SamAccountName | foreach-object {
+        write-host "Member Of:" $_.name
+    }
+}
+```
+
+Change the value of -SearchBase to reflect the OU you need to list the users from :)
+
+This will list all of the users in that OU and show you which groups they are a member of.
+
+answered Jul 18, 2013 at 16:53
+
+Comments
+--------
+
+This answer is useful
+
+0
+
+Save this answer.
+
+Show activity on this post.
+
+Get-ADPrincipalGroupMembership USERLOGON | select name
+
+answered Apr 30, 2014 at 12:05
+
+Comments
+--------
+
+This answer is useful
+
+0
+
+Save this answer.
+
+Show activity on this post.
+
+This is the simplest way to just get the names:
+
+`Get-ADPrincipalGroupMembership "YourUserName"`
+
+```
+# Returns
+distinguishedName : CN=users,OU=test,DC=SomeWhere
+GroupCategory     : Security
+GroupScope        : Global
+name              : testGroup
+objectClass       : group
+objectGUID        : 2130ed49-24c4-4a17-88e6-dd4477d15a4c
+SamAccountName    : testGroup
+SID               : S-1-5-21-2114067515-1964795913-1973001494-71628
+```
+
+Add a select statement to trim the response or to get every user in an OU every group they are a user of:
+
+```
+foreach ($user in (get-aduser -SearchScope Subtree -SearchBase $oupath -filter * -Properties samaccountName, MemberOf | select samaccountName)){
+Get-ADPrincipalGroupMembership $user.samaccountName | select name}
+```
+
+answered Jul 15, 2014 at 16:22
+
+Comments
+--------
+
+Start asking to get answers
+
+Find the answer to your question by asking.
+
+Ask question
+
+Explore related questions
+
+See similar questions with these tags.

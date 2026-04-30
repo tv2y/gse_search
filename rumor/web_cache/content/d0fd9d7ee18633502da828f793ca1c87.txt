@@ -1,0 +1,73 @@
+Title: Decrypting the Future: Insights from RSAC2025 Cryptographers’ Panel
+
+URL Source: https://www.isc2.org/Insights/2025/05/Insights-from-RSAC2025-Cryptographers-Panel
+
+Markdown Content:
+_Cryptography is a bedrock of cybersecurity, weaving through the fabric of technologies and applications. It’s no surprise that the Cryptographers’ Panel is a crowd favorite every year at the RSA Conference in San Francisco. Daksha Bhasker, CISSP, attended the panel and shares what she learned._
+
+**Disclaimer:**The views and opinions expressed in this article belong solely to the author and do not necessarily reflect those of ISC2.
+
+This year’s panel was moderated by Tal Rabin, a senior principal applied scientist and manager of the Cryptographic Foundation group at Amazon Web Services, and a Professor of Computer and Information Science at the University of Pennsylvania.
+
+Joining her on the panel were:
+
+*   Whitfield Diffie – Honorary Fellow, Gonville and Caius College, Cambridge
+*   Ed Felten – Co-Founder and Chief Scientist at Offchain Labs
+*   Raluca Ada Popa – Associate Professor and Senior Staff Research Scientist at the University of California, Berkeley and Google DeepMind
+*   Adi Shamir Borman Professor of Computer Science at The Weizmann Institute, Israel
+*   Vinod Vaikuntanathan Professor, Massachusetts Institute of Technology
+
+This year, the panel focused on:
+
+*   Cryptocurrency and Blockchain
+*   Quantum Cryptography
+*   Artificial Intelligence (AI) Security
+
+Cryptocurrency and Blockchain
+-----------------------------
+
+A lively discussion by the panel emphasized the clear distinction between cryptocurrencies and blockchain technologies. A cryptocurrency is a digital currency in which transactions are verified and records maintained by a decentralized system using cryptography rather than by a centralized authority. However, while cryptocurrencies may use blockchain technologies, not all do. For example: IOTA uses Tangle (based on Direct Acyclic Graph), Nano uses Block-Lattice, and Hedera uses Hashgraph.
+
+The panelists lamented that cryptocurrencies have not gone mainstream as described in Satoshi Nakamoto’s paper, but instead have become the _de facto_ currency for nefarious monetary extortions related to malware attacks.
+
+Ransomware payments, crypto-mining malware and transactions on the dark web are facilitated reliably by cryptocurrencies. One panelist went as far as pointing out that certain, sanctioned countries have been able to circumvent standard currency systems to accumulate over a billion dollars in crypto funds.
+
+While large financial institutions are adopting blockchain in their financial instruments and transactions, the potential of this technology is still pending maturity in applications and mainstream applications.
+
+Schrödinger’s’ Quantum Computer: Here, or Not?
+----------------------------------------------
+
+The position of the panelists on the threat of quantum computing breaking classical cryptosystems such as RSA, Diffie-Helman or ECC in the next decade remains consistent with what I wrote after attending the Cryptographers’ Panel in 2023 – “It is the imagination of physicists”.
+
+However, in terms of managing the risks of “harvest now, exploit later” attacks the panel was divided.
+
+The Mosca Theorem, by Dr. Michelle Mosca – explains that:
+
+Historically, migrating crypto schemes has remained a complex, multi-year endeavor across sprawling technology ecosystems with a myriad of use cases, making it advisable to commence post quantum cryptography (PQC) adoption sooner than later.
+
+Since NIST has standardized PQC algorithms – Crystals-Dilithium, Falcon and Sphincs+ for Digital Signatures; Crystals-kyber Key-Encapsulation mechanism (KEM) and HQC for encryption and key exchange – the recommendation is to be pragmatic: begin migrating to hybrid encryption schemes.
+
+Hybrid encryption means using two layers of encryption, using a classical crypto scheme (such as ECC, RSA) as well as a PQC approved scheme (such as Kyber, Dilithium), requiring two layers of encryption to be broken to access the encrypted material.
+
+As with Schrödinger’s famous paradigm of the cat’s state in the box, it remains unclear whether the topological qubit has arrived or not. At the American Physical Society (APS), Microsoft’s claim of achieving a topological qubit was met with much skepticism, leaving it undetermined if the breakthrough was achieved or not in progressing the arrival of quantum computers.
+
+The Elite Intelligent on Artificial intelligence
+------------------------------------------------
+
+While AI has been around for over fifty years, it went viral with OpenAI opening access to ChatGPT for the general public, free, in 2022.
+
+AI expanded the reach of bad actors exponentially and virtually overnight, while reducing the need for sophistication in their tactics. With a large, technically unsophisticated user base to aim at, anyone who uses the internet is now at risk from AI or machine learning (ML)-enabled attacks. This has led to a flurry of regulation, legislation and governance efforts worldwide. The panel argued that we cannot legislate our way out of AI risks, although it recognized that governance could help to manage some of the impacts better.
+
+There are numerous attacks where AI models can be subverted and cryptographic guarantees for both security and privacy are being incorporated in defenses and evolving in research as we speak. The OWASP Machine Learning Security Top Ten and OWASP Top ten Risks LLM and GenAI Apps are excellent resources in this area. The panel discussed various types of attacks on AI/ML and how they can be addressed through cryptographic defenses.
+
+Overall, the panel’s view was that – as an industry – we need to develop and make available quick ‘litmus tests’, which the public can use to evaluate if an AI app or tool is safe or unsafe to use.
+
+Onwards, then, to decrypting our future with cryptographic advancements.
+
+_Daksha Bhasker_ _, CISSP, has over 20 years of experience in the telecommunications service provider, software and finance sectors. Daksha has held security architecture roles for complex solutions, security systems development across carrier grade systems for voice, video, data and security._
+
+**Related Insights**
+
+*   Quantum-Leaping Quantum Computers? Not So Fast!
+*   #ISC2Congress: Quantum Computing and its Security Implications
+*   ISC2 Quantum Transition Task Force

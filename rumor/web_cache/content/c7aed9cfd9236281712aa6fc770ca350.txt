@@ -1,0 +1,413 @@
+Title: WebAIM: The WebAIM Million - The 2025 report on the accessibility of the top 1,000,000 home pages
+
+URL Source: https://webaim.org/projects/million/
+
+Markdown Content:
+Introduction
+------------
+
+For the seventh consecutive year, WebAIM conducted an accessibility evaluation of the home pages for the top 1,000,000 web sites. The evaluation was conducted using the WAVE stand-alone API (with additional tools to collect site technology and category data). The results provide an overview of and insight into the current state of web accessibility for individuals with disabilities as well as trends over time.
+
+Note!
+
+Results below are from February 2025—with comparisons to, and trends from, earlier analyses in 2019, 2020, 2021, 2022, 2023, and 2024.
+
+Supported by BrowserStack
+
+Support for this research is funded in part by a donation from
+
+The Sample
+----------
+
+### Site Lookup
+
+How did your home page rank in our study? Enter a web site domain below to view details.
+
+The million home page list was derived from the Tranco ranking which combines several sources of "top" web sites.
+
+Sites without home pages, pages that returned errors (404, etc.), pages with fewer than 10 HTML elements, and pages with more than 5,000 links to the same domain (for SEO purposes) were not included.
+
+### Methodology
+
+The WAVE accessibility engine was used to analyze the rendered DOM of all pages after scripting and styles were applied. WAVE detects end-user accessibility barriers and Web Content Accessibility Guidelines (WCAG) conformance failures. All automated tools, including WAVE, have limitations—not all conformance failures can be automatically detected. _Absence of detected errors does not indicate that a page is accessible or conformant._ Although this report describes only a subset of accessibility issues on only 1,000,000 home pages, this report provides a quantified and reliable representation of the current state of the accessibility of the most influential pages on the web.
+
+Detected Errors
+---------------
+
+**Across the one million home pages, 50,960,288 distinct accessibility errors were detected—an average of 51 errors per page**. The number of detected errors decreased 10.3% since the 2024 analysis which found 56.8 errors/page. "Errors" are WAVE-detected accessibility barriers having notable end user impact, and which have a very high likelihood of being WCAG 2.2 Level A/AA conformance failures.
+
+This chart shows the average number of detectable errors per home page over time:
+
+Home Page Complexity
+--------------------
+
+**The home pages tested had over 1.2 billion page elements. Home page complexity continues to steadily increase**, from an average of 1173 elements in February 2024 to an average of 1257 elements per home page in February 2025—a 7.1% increase.
+
+The following chart shows the number of home page elements detected over the last seven WebAIM Million studies:
+
+The number of home page elements has increased 61% in the last 6 years. 4.1% of all home page elements had a detected accessibility error. **Users with disabilities would expect to encounter errors on 1 in every 24 home page elements.**
+
+Note!
+
+Error density (number of errors divided by number of page elements) is provided in the site lookup, but is alone an unreliable metric of site accessibility. A significant number of page elements (`<div>` and `<span>` elements, for example) may result in a lower error density (suggesting better accessibility), when in fact many new accessibility errors may have also been introduced. This report focuses primarily on average _number_ of detected errors—likely end user barriers—present as opposed to error _densities_ (how diluted those errors are within page elements).
+
+There was a correlation between page popularity and home page complexity. The top 100,000 pages averaged 1,465 elements—45% more page elements than the last 100,000 sites in the sample (1014 elements).
+
+WCAG Conformance
+----------------
+
+**94.8% of home pages had detected WCAG 2 failures.** This improved slightly from 95.9% in 2024. Over the last 6 years, the pages with detectable WCAG failures have decreased by only 3.1% from 97.8%. These are only automatically detected errors that align with WCAG conformance failures with a high level of reliability which suggests that the rate of full WCAG 2 A/AA conformance was certainly lower.
+
+This chart shows the percentage of home pages with detected WCAG conformance failures over time:
+
+While the rate of pages with no detectable errors was very low, 23.4% of pages had 5 or fewer detected errors and 33.6% had 10 or fewer. **Over the last several years the proportion of pages with fewer errors has increased while the number of pages with many errors has also increased—pages with fewer errors have gotten better while pages with many errors have gotten worse.**
+
+Home pages with most common WCAG 2 failures| WCAG Failure Type | % of home pages |
+| --- | --- |
+| Low contrast text | 79.1% |
+| Missing alternative text for images | 55.5% |
+| Missing form input labels | 48.2% |
+| Empty links | 45.4% |
+| Empty buttons | 29.6% |
+| Missing document language | 15.8% |
+
+96% of all errors detected fall into these six categories. These most common errors have been the same for the last 5 years. **Addressing just these few types of issues would significantly improve accessibility across the web.**
+
+Over time the number of pages with low contrast text, empty links, and missing document language has decreased. The number of pages with missing alternative text decreased from 2019 to 2022, but has since remained about the same. The number of pages with missing form input labels and empty buttons has increased slightly over the last few years.
+
+Low Contrast Text
+-----------------
+
+Low contrast text, below the WCAG 2 AA thresholds, was found on 79.1% of home pages. This was the most commonly-detected accessibility issue. **On average, each home page had 29.6 distinct instances of low-contrast text, down 14.4% from 34.5 in 2024.**
+
+Images and Alternative Text
+---------------------------
+
+Home pages are becoming increasingly graphical. There were over 58.6 million images in the sample, or 58.6 images per home page on average, a 5.4% increase over 2024. **18.5% of all home page images (11 per page on average) had missing alternative text** (not counting `alt=""`). 44% of the images missing alternative text were linked images—resulting in links that were not descriptive. One out of every five linked images was missing alternative text.
+
+13.4% of images with alternative text had questionable or repetitive alternative text—such as alt="image", "graphic", "blank", a file name, etc., or alternative text identical to adjacent text or the alternative text of an adjacent image.
+
+**These data show that one may expect nearly one third of the images on popular home pages to have missing, questionable, or repetitive alternative text.**
+
+Form Labeling
+-------------
+
+Home pages had 6.3 form inputs on average. **34.2% of those form inputs were not properly labeled** (either via `<label>`, `aria-label`, `aria-labelledby`, or `title`).
+
+Headings
+--------
+
+Nearly 25 million headings were detected (nearly 25 on average per home page). The number (and prevalence) of heading levels were:
+
+*   1.5 million `<h1>` headings (6.0%)
+*   7.6 million `<h2>` headings (30.5%)
+*   9.2 million `<h3>` headings (36.8%)
+*   3.8 million `<h4>` headings (15.5%)
+*   1.8 million `<h5>` headings (7.3%)
+*   1 million `<h6>` headings (3.8%)
+
+The number of headings present on analyzed home pages increased 4.6% from 23.7 million in 2024.
+
+Because headings are the primary mechanism used by screen reader users to navigate content, their proper implementation is important. 16.3% of home pages had more than one `<h1>`—a decrease from 16.8% in 2024. There were 1,088,074 instances of skipped heading levels (e.g., jumping from `<h2>` to `<h4>`)—one in every 23 headings. **Skipped heading levels were present on 39% of all pages, up from 37.9% in 2024. 9.8% of pages had no headings present at all, down from 11.3% in 2024.**
+
+Regions
+-------
+
+80.5% of home pages had at least one region (or ARIA landmark) defined—an increase from 76.7% in 2024. A `<main>` element or main landmark was present on 42.6% of home pages, up from 39.1% in 2024. 16.6% of home pages had a "search" landmark, up from 15.5% in 2024.
+
+ARIA
+----
+
+**105,509,338 ARIA attributes were detected—nearly 106 per page on average! ARIA code usage increased 18.5% in just one year and is nearly 5 times higher than it was in 2019.**
+
+This chart shows the number of ARIA attributes per home page over time:
+
+The prevalence of ARIA labels and descriptions increased 28% in just the last year. Home pages averaged 25 `aria-label`, `aria-labelledby`, or `aria-describedby` attributes.
+
+79.4% of the one million home pages used ARIA (excluding ARIA landmark roles), up notably from 74.6% in 2024. **Home pages with ARIA present had over twice as many errors (57 on average) than pages without ARIA (27 on average)**. While ARIA is intended to improve accessibility, one would expect to encounter an additional 30 potential barriers on home pages with ARIA present.
+
+**Increased ARIA usage on pages was associated with higher detected errors. The more ARIA attributes that were present, the more detected accessibility errors could be expected.** This does not necessarily mean that ARIA introduced these errors (these pages are more complex), but pages typically had significantly more errors when ARIA was present.
+
+4.5% of home pages had an ARIA menu (`role="menu"`), but 35% of ARIA menus introduced accessibility barriers due to the lack of necessary ARIA menu markup and interactions.
+
+Home pages also averaged 18 `aria-hidden="true"` attributes (up 16% from 15.5 in 2024 and over 250% since 2020) and 3.6 `role="button"` attributes (up from 3.1 in 2024). Home pages averaged 26 instances of `tabindex=0` or `tabindex=-1` (up 13% from 23.1 in 2024 and more than doubled since 2020).
+
+Links
+-----
+
+13.7% of pages had ambiguous link text, such as "click here", "more", "continue", etc. (an increase from 13.2% of pages in 2024). These pages had 6.8 instances of ambiguous links on average (up from 6.3 in 2024).
+
+Skip Links
+----------
+
+13.7% of home pages had a "skip" link present, up slightly from 13.3% in 2024. One out of every ten "skip" links were broken—either they were hidden in a way that made them inaccessible or the link target was not present in the page.
+
+Doctypes
+--------
+
+92.4% of home pages had a valid HTML5 doctype—an increase from 91.6% in 2024, 89.8% in 2023, 86.1% in 2022 and 79.1% in 2021. **Pages with a valid HTML5 doctype had significantly more page elements (average of 1302 vs. 705). They also had more detectable errors (average of 51.2 vs. 48.6) than pages with other doctypes.** 512 unique doctypes were encountered in the million-page sample.
+
+Site Categories
+---------------
+
+Note!
+
+Site category data was collected using Amazon Web Services Bedrock AI.
+
+The table below shows the average number of errors in each category and the percent difference in errors for that category from the average of 51 errors for the entire million-page sample. In other words, the percentage difference is how much better or worse home pages in that category are than the average home page.
+
+| Category | Avg. # of errors | % difference |
+| --- | --- | --- |
+| Government | 37.2 | −27.0% |
+| Personal Finance | 37.7 | −26.0% |
+| Non-Profit/Charity | 40.0 | −21.6% |
+| Law, Government, & Politics | 40.5 | −20.6% |
+| Social Media | 41.7 | −18.1% |
+| Technology & Computing | 41.8 | −18.0% |
+| Science | 44.0 | −13.6% |
+| Careers | 44.4 | −12.8% |
+| Business | 44.8 | −12.1% |
+| Society | 46.2 | −9.3% |
+| Education | 47.0 | −7.8% |
+| Health and Fitness | 47.7 | −6.4% |
+| Religion and Spirituality | 49.0 | −3.8% |
+| Food and Drink | 50.4 | −1.1% |
+| Family and Parenting | 52.3 | +2.6% |
+| Gaming | 52.8 | +3.6% |
+| Real Estate | 53.7 | +5.4% |
+| Adult Content | 53.1 | +4.1% |
+| Arts and Entertainment | 54.1 | +6.1% |
+| Gambling/Casinos | 54.5 | +6.9% |
+| Pets | 55.5 | +9.0% |
+| Automotive | 57.8 | +13.5% |
+| Travel | 59.7 | +17.2% |
+| Hobbies and Interests | 59.7 | +17.2% |
+| News/Weather/Information | 59.8 | +17.4% |
+| Home and Garden | 61.9 | +21.5% |
+| Style & Fashion | 64.7 | +26.9% |
+| Sports | 66.3 | +30.1% |
+| Shopping | 71.2 | +39.8% |
+
+There were notable differences in accessibility errors for sites in different categories.
+
+TLDs
+----
+
+1057 unique top-level domains (e.g., com, .tv, .fashion, etc.) were represented in the million pages analyzed. The table below shows select TLDs with home page counts, average number of errors per home page, and percentage difference from the average of 51 errors for the entire million-page sample.
+
+| TLD | # of home pages | Avg. # of errors | % difference |
+| --- | --- | --- | --- |
+| gov | 1,967 | 19.6 | −61.6% |
+| edu | 3,325 | 23.6 | −53.7% |
+| io | 9,684 | 31.8 | −37.6% |
+| us | 2,606 | 32.8 | −35.7% |
+| top | 14,770 | 34.8 | −31.8% |
+| ca | 5,689 | 35.2 | −30.9% |
+| xyz | 10,281 | 36.4 | −28.5% |
+| org | 48,191 | 37.3 | −26.9% |
+| online | 5,131 | 39.0 | −23.5% |
+| uk | 17,083 | 40.4 | −20.7% |
+| net | 41,492 | 42.7 | −16.3% |
+| co | 7,674 | 46.2 | −9.4% |
+| au | 7,967 | 47.0 | −7.8% |
+| nl | 11,868 | 47.2 | −7.4% |
+| de | 24,594 | 47.8 | −6.3% |
+| jp | 19,721 | 48.2 | −5.4% |
+| info | 6,110 | 48.5 | −4.9% |
+| eu | 4,711 | 48.6 | −4.7% |
+| com | 435,998 | 49.8 | −2.2% |
+| fr | 10,217 | 53.3 | +4.6% |
+| id | 4,623 | 54.2 | +6.4% |
+| in | 11,286 | 57.1 | +12.1% |
+| es | 5,355 | 58.7 | +15.2% |
+| br | 19,369 | 60.3 | +18.4% |
+| it | 10,200 | 62.2 | +22.0% |
+| pl | 9,457 | 66.1 | +29.8% |
+| ru | 44,981 | 72.4 | +42.1% |
+| cn | 4,506 | 73.8 | +44.7% |
+| cz | 5,311 | 74.7 | +46.6% |
+| ua | 5,668 | 89.1 | +74.8% |
+
+This shows notable differences between TLDs.
+
+Languages
+---------
+
+85.1% of pages specified a document language. This table shows the specified page language for the most common languages (n>5000), number of pages in the sample, average number of errors, and percentage difference in errors from the overall average of 51.
+
+| Language | # of home pages | Avg. # of errors | % difference |
+| --- | --- | --- | --- |
+| English | 504,595 | 39.8 | −22.0% |
+| Dutch | 12,685 | 46.9 | −8.1% |
+| German | 31,363 | 50.4 | −1.1% |
+| No language specified | 149,365 | 51.9 | +1.8% |
+| Indonesian | 19,425 | 54.9 | +7.8% |
+| Japanese | 25,613 | 57.5 | +12.8% |
+| Portuguese | 26,090 | 58.0 | +13.8% |
+| French | 21,945 | 58.5 | +14.8% |
+| Spanish | 30,506 | 64.0 | +25.6% |
+| Turkish | 10,943 | 65.9 | +29.4% |
+| Italian | 11,154 | 67.4 | +32.3% |
+| Chinese | 12,288 | 69.2 | +35.9% |
+| Polish | 8,951 | 70.0 | +37.4% |
+| Vietnamese | 6,051 | 72.6 | +42.5% |
+| Farsi | 7,267 | 83.7 | +64.3% |
+| Russian | 60,715 | 84.6 | +66.1% |
+| Korean | 6,407 | 86.4 | +69.6% |
+
+As with TLDs, there are significant differences in accessibility of pages in various languages. Western languages generally fared better than other languages.
+
+Technologies
+------------
+
+Over 1,200 different types of web technologies were detected on the one million home pages. Common technologies detected on more than 5,000 home pages are listed below, ordered from "best" to "worst". Note that correspondence of additional errors with a technology cannot always be attributed to that technology.
+
+### Content management systems and site builders
+
+| CMS | # of home pages | Avg. # of errors | % difference |
+| --- | --- | --- | --- |
+| Divi | 8,672 | 27.6 | −45.9% |
+| Webflow | 10,277 | 28.4 | −44.3% |
+| Adobe Experience Manager | 5,425 | 30.7 | −39.8% |
+| TYPO3 CMS | 5,730 | 41.5 | −18.5% |
+| Drupal | 19,257 | 41.9 | −17.7% |
+| Joomla | 6,426 | 47.1 | −7.5% |
+| WordPress | 241,401 | 50.0 | −1.9% |
+| Elementor | 51,205 | 51.1 | +0.2% |
+| wpBakery | 17,576 | 63.5 | +24.6% |
+| 1C-Bitrix | 11,706 | 97.0 | +90.3% |
+
+There was a wide diversity in the impact that the CMS choice appeared to have on accessibility with home pages. Most pages that use a common CMS have fewer errors than average.
+
+### JavaScript frameworks
+
+| Framework | # of home pages | Avg. # of errors | % difference |
+| --- | --- | --- | --- |
+| AngularJS | 16,848 | 37.7 | −26.0% |
+| Next.js | 30,676 | 38.6 | −24.2% |
+| React | 79,252 | 42.4 | −16.8% |
+| Alpine.js | 10,998 | 44.1 | −13.4% |
+| Nuxt.js | 13,057 | 45.2 | −11.2% |
+| Emotion | 14,582 | 48.6 | −4.6% |
+| Stimulus | 7,507 | 51.9 | +1.8% |
+| AMP | 25,179 | 52.1 | +2.3% |
+| styled-components | 12,741 | 52.6 | +3.3% |
+| GSAP | 45,354 | 55.4 | +8.7% |
+| Backbone.js | 11,092 | 56.9 | +11.7% |
+| Vue.js | 53,453 | 58.7 | +15.3% |
+| RequireJS | 14,841 | 62.7 | +23.1% |
+| Zone.js | 8,393 | 65.0 | +27.6% |
+| Handlebars | 8,554 | 68.8 | +35.1% |
+| Angular | 8,791 | 70.7 | +38.8% |
+| Firebase | 17,013 | 74.6 | +46.5% |
+| Redux | 5,935 | 78.2 | +53.4% |
+| toastr | 6,494 | 80.9 | +58.8% |
+| Mustache | 7,952 | 89.1 | +74.9% |
+
+### JavaScript libraries
+
+| Library | # of home pages | Avg. # of errors | % difference |
+| --- | --- | --- | --- |
+| YUI | 6,474 | 41.1 | −19.3% |
+| Boomerang | 5,050 | 41.5 | −18.7% |
+| web-vitals | 11,342 | 49.2 | −3.5% |
+| AOS | 22,220 | 51.0 | +0.2% |
+| MobX | 6,181 | 55.5 | +9.0% |
+| jQuery Migrate | 202,394 | 56.6 | +11.0% |
+| DataTables | 9,510 | 57.1 | +12.0% |
+| lit-html | 32,571 | 57.8 | +13.4% |
+| Lodash | 34,304 | 58.5 | +14.8% |
+| Isotope | 34,978 | 59.2 | +16.2% |
+| core-js | 341,910 | 60.1 | +17.9% |
+| lit-element | 29,684 | 60.1 | +18.0% |
+| Slider Revolution | 19,583 | 60.2 | +18.2% |
+| Underscore.js | 12,376 | 60.6 | +18.9% |
+| jQuery | 594,255 | 61.1 | +19.8% |
+| LazySizes | 66,971 | 63.2 | +24.0% |
+| Flickity | 18,998 | 63.9 | +25.4% |
+| Lightbox | 38,760 | 64.1 | +25.7% |
+| Hammer.js | 15,838 | 64.5 | +26.7% |
+| Preact | 16,015 | 65.3 | +28.1% |
+| Tippy.js | 6,923 | 65.4 | +28.3% |
+| jQuery UI | 152,446 | 66.5 | +30.6% |
+| Modernizr | 64,154 | 67.9 | +33.2% |
+| Photoswipe | 11,557 | 68.8 | +34.9% |
+| Splide | 7,864 | 70.1 | +37.5% |
+| Moment.js | 36,937 | 70.2 | +37.8% |
+| Axios | 11,530 | 71.5 | +40.3% |
+| Swiper | 132,995 | 73.6 | +44.3% |
+| prettyPhoto | 10,923 | 74.7 | +46.7% |
+| Select2 | 31,384 | 75.3 | +47.8% |
+| Slick | 68,723 | 78.0 | +53.0% |
+| OWL Carousel | 59,076 | 81.3 | +59.6% |
+| FancyBox | 52,320 | 82.9 | +62.7% |
+| crypto-js | 6,544 | 86.2 | +69.1% |
+| SweetAlert2 | 12,455 | 87.4 | +71.6% |
+| Clipboard.js | 9,653 | 101.8 | +99.9% |
+
+**The presence of nearly all of these popular JavaScript libraries aligned with an increase in detected accessibility errors.**
+
+### Web frameworks
+
+| Web Framework | # of home pages | Avg. # of errors | % difference |
+| --- | --- | --- | --- |
+| Next.js | 30,676 | 38.6 | −24.2% |
+| Microsoft ASP | 44,238 | 48.0 | −5.8% |
+| ZURB foundation | 15,074 | 52.7 | +3.3% |
+| Express | 7,245 | 55.6 | +9.1% |
+| UIkit | 5,803 | 57.2 | +12.3% |
+| Laravel | 10,042 | 62.8 | +23.2% |
+| Bootstrap | 236,393 | 63.2 | +23.9% |
+| Animate.css | 28,058 | 65.5 | +28.5% |
+
+Home pages in the sample that utilize the popular Bootstrap framework had 12.2 more accessibility errors on average than those that did not. We can't know from these data if Bootstrap introduced these errors, but there was a correspondence of increased errors when Bootstrap was present.
+
+### Ecommerce platforms
+
+| Platform | # of home pages | Avg. # of errors | % difference |
+| --- | --- | --- | --- |
+| Shopify | 28,181 | 69.6 | +36.6% |
+| Woocommerce | 26,349 | 75.6 | +48.4% |
+| Magento | 8,623 | 85.4 | +67.5% |
+
+### Advertisement networks
+
+| Ad Network | # of home pages | Avg. # of errors | % difference |
+| --- | --- | --- | --- |
+| theTradeDesk | 6,895 | 39.1 | −23.3% |
+| Linkedin Ads | 14,031 | 42.8 | −16.0% |
+| Amazon Advertising | 15,719 | 51.2 | +0.4% |
+| AdRoll | 4,640 | 51.5 | +1.0% |
+| Pubmatic | 8,090 | 57.7 | +13.1% |
+| Prebid | 18,550 | 57.7 | +13.3% |
+| AppNexus | 9,774 | 59.3 | +16.3% |
+| Rubicon Project | 8,489 | 60.4 | +18.5% |
+| Microsoft Advertising | 46,004 | 60.4 | +18.6% |
+| Taboola | 8,768 | 62.1 | +21.9% |
+| OpenX | 6,157 | 62.4 | +22.5% |
+| 33Across | 14,165 | 63.3 | +24.2% |
+| AdSense | 61,673 | 65.5 | +28.6% |
+| ID5 | 6,320 | 66.9 | +31.3% |
+| Twitter Ads | 30,196 | 67.6 | +32.6% |
+| Doubleclick | 8,362 | 67.6 | +32.7% |
+| Pinterest Ads | 9,540 | 69.2 | +35.8% |
+| Criteo | 17,091 | 80.7 | +58.4% |
+| Yandex | 51,472 | 89.5 | +75.6% |
+
+Pages that utilized almost any of these popular ad systems had more errors on average than those that did not. The data suggest that ads were among the strongest harbingers of accessibility errors.
+
+### Other technologies
+
+Other common technologies also correlated to more errors:
+
+*   14% of pages had ReCAPTCHA, and these pages had 12.1 more errors than average.
+*   13.9% of pages were detected as having Progressive Web Apps (PWAs) and these pages had 7.6 more errors than average.
+
+Web sites that used common cookie compliance technologies, such as OneTrust (36.8 errors on average) averaged notably fewer errors than average, whereas sites that used browser fingerprinting and user tracking technologies, such as FingerprintJS (80.7 errors on average) and ClientJS (119.3 errors on average), had significantly more errors than average. This may suggest a relationship between user privacy and accessibility practices.
+
+972,746 tables were observed on 142,976 pages (down from 1,126,054 tables on 162,377 pages in 2024). Only 161,553 (16.6%) of the tables had valid data table markup.
+
+Conclusion
+----------
+
+The 2025 WebAIM Million analysis saw a decrease in the number of detected accessibility errors and a small decrease in number of pages with WCAG conformance failures. A primary concern is the significant rate of increase in the the number of home page elements and ARIA code - both of which correlate to increased accessibility issues. Similarly, the trend of popular JavaScript frameworks and libraries corresponding with higher numbers of errors continues. Home pages are getting larger and more technologically complex at an alarming rate. It seems that if the complexity of home pages could be reined in that the rate of accessibility would increase. We at WebAIM hope that this report will help influence improved accessibility.

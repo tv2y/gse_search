@@ -1,0 +1,1679 @@
+Title: How do I fetch lines before/after the grep result in bash?
+
+URL Source: https://stackoverflow.com/questions/12444808/how-do-i-fetch-lines-before-after-the-grep-result-in-bash
+
+Markdown Content:
+How do I fetch lines before/after the grep result in bash? - Stack Overflow
+
+===============
+
+By clicking “Sign up”, you agree to our terms of service and acknowledge you have read our privacy policy.
+
+ Sign up with Google
+
+ Sign up with GitHub
+
+OR
+==
+
+Email 
+
+Password 
+
+Sign up
+
+Already have an account? Log in
+
+Skip to main content
+
+Stack Overflow
+1.   About
+2.   Products
+3.   For Teams
+
+1.   Stack Overflow for Teams Where developers & technologists share private knowledge with coworkers
+2.   Advertising Reach devs & technologists worldwide about your product, service or employer brand
+3.   Knowledge Solutions Data licensing offering for businesses to build and improve AI tools and models
+4.   Labs The future of collective knowledge sharing
+5.   About the company Visit the blog
+
+Loading…
+
+1.   
+### current community
+
+   
+
+    *   Stack Overflow help chat 
+    *    Meta Stack Overflow
+
+### your communities
+
+Sign up or log in to customize your list. 
+
+### more stack exchange communities
+
+company blog
+
+3.   Log in
+4.   Sign up
+
+Let's set up your homepage Select a few topics you're interested in:
+====================================================================
+
+python javascript c#reactjs java android html flutter c++node.js typescript css r php angular next.js spring-boot machine-learning sql excel ios azure docker
+
+Or search from our full list:
+
+*   javascript
+*   python
+*   java
+*   c#
+*   php
+*   android
+*   html
+*   jquery
+*   c++
+*   css
+*   ios
+*   sql
+*   mysql
+*   r
+*   reactjs
+*   node.js
+*   arrays
+*   c
+*   asp.net
+*   json
+*   python-3.x
+*   .net
+*   ruby-on-rails
+*   sql-server
+*   swift
+*   django
+*   angular
+*   objective-c
+*   excel
+*   pandas
+*   angularjs
+*   regex
+*   typescript
+*   ruby
+*   linux
+*   ajax
+*   iphone
+*   vba
+*   xml
+*   laravel
+*   spring
+*   asp.net-mvc
+*   database
+*   wordpress
+*   string
+*   flutter
+*   postgresql
+*   mongodb
+*   wpf
+*   windows
+*   xcode
+*   amazon-web-services
+*   bash
+*   git
+*   oracle-database
+*   spring-boot
+*   dataframe
+*   azure
+*   firebase
+*   list
+*   multithreading
+*   docker
+*   vb.net
+*   react-native
+*   eclipse
+*   algorithm
+*   powershell
+*   macos
+*   visual-studio
+*   numpy
+*   image
+*   forms
+*   scala
+*   function
+*   vue.js
+*   performance
+*   twitter-bootstrap
+*   selenium
+*   winforms
+*   kotlin
+*   loops
+*   express
+*   dart
+*   hibernate
+*   sqlite
+*   matlab
+*   python-2.7
+*   shell
+*   rest
+*   apache
+*   entity-framework
+*   android-studio
+*   csv
+*   maven
+*   linq
+*   qt
+*   dictionary
+*   unit-testing
+*   asp.net-core
+*   facebook
+*   apache-spark
+*   tensorflow
+*   file
+*   swing
+*   class
+*   unity-game-engine
+*   sorting
+*   date
+*   authentication
+*   go
+*   symfony
+*   t-sql
+*   opencv
+*   matplotlib
+*   .htaccess
+*   google-chrome
+*   for-loop
+*   datetime
+*   codeigniter
+*   perl
+*   http
+*   validation
+*   sockets
+*   google-maps
+*   object
+*   uitableview
+*   xaml
+*   oop
+*   visual-studio-code
+*   if-statement
+*   cordova
+*   ubuntu
+*   web-services
+*   email
+*   android-layout
+*   github
+*   spring-mvc
+*   elasticsearch
+*   kubernetes
+*   selenium-webdriver
+*   ms-access
+*   ggplot2
+*   user-interface
+*   parsing
+*   pointers
+*   google-sheets
+*   c++11
+*   security
+*   machine-learning
+*   google-apps-script
+*   ruby-on-rails-3
+*   templates
+*   flask
+*   nginx
+*   variables
+*   exception
+*   sql-server-2008
+*   gradle
+*   debugging
+*   tkinter
+*   delphi
+*   listview
+*   jpa
+*   asynchronous
+*   web-scraping
+*   haskell
+*   pdf
+*   jsp
+*   ssl
+*   amazon-s3
+*   google-cloud-platform
+*   jenkins
+*   testing
+*   xamarin
+*   wcf
+*   batch-file
+*   generics
+*   npm
+*   ionic-framework
+*   network-programming
+*   unix
+*   recursion
+*   google-app-engine
+*   mongoose
+*   visual-studio-2010
+*   .net-core
+*   android-fragments
+*   assembly
+*   animation
+*   math
+*   svg
+*   session
+*   rust
+*   intellij-idea
+*   hadoop
+*   curl
+*   join
+*   winapi
+*   next.js
+*   django-models
+*   laravel-5
+*   url
+*   heroku
+*   http-redirect
+*   tomcat
+*   google-cloud-firestore
+*   inheritance
+*   webpack
+*   image-processing
+*   gcc
+*   keras
+*   swiftui
+*   asp.net-mvc-4
+*   logging
+*   dom
+*   matrix
+*   pyspark
+*   actionscript-3
+*   button
+*   post
+*   optimization
+*   firebase-realtime-database
+*   web
+*   jquery-ui
+*   cocoa
+*   xpath
+*   iis
+*   d3.js
+*   javafx
+*   firefox
+*   xslt
+*   internet-explorer
+*   caching
+*   select
+*   asp.net-mvc-3
+*   opengl
+*   events
+*   asp.net-web-api
+*   plot
+*   dplyr
+*   encryption
+*   magento
+*   stored-procedures
+*   search
+*   amazon-ec2
+*   ruby-on-rails-4
+*   memory
+*   canvas
+*   audio
+*   multidimensional-array
+*   random
+*   jsf
+*   vector
+*   redux
+*   cookies
+*   input
+*   facebook-graph-api
+*   flash
+*   indexing
+*   xamarin.forms
+*   arraylist
+*   ipad
+*   cocoa-touch
+*   data-structures
+*   video
+*   azure-devops
+*   model-view-controller
+*   serialization
+*   apache-kafka
+*   jdbc
+*   woocommerce
+*   razor
+*   routes
+*   awk
+*   mod-rewrite
+*   servlets
+*   excel-formula
+*   beautifulsoup
+*   filter
+*   docker-compose
+*   iframe
+*   aws-lambda
+*   design-patterns
+*   text
+*   visual-c++
+*   django-rest-framework
+*   cakephp
+*   mobile
+*   android-intent
+*   struct
+*   react-hooks
+*   methods
+*   groovy
+*   mvvm
+*   lambda
+*   ssh
+*   checkbox
+*   time
+*   ecmascript-6
+*   grails
+*   google-chrome-extension
+*   installation
+*   cmake
+*   sharepoint
+*   shiny
+*   spring-security
+*   jakarta-ee
+*   plsql
+*   android-recyclerview
+*   core-data
+*   types
+*   sed
+*   meteor
+*   android-activity
+*   activerecord
+*   bootstrap-4
+*   websocket
+*   graph
+*   replace
+*   group-by
+*   scikit-learn
+*   vim
+*   file-upload
+*   junit
+*   boost
+*   memory-management
+*   sass
+*   async-await
+*   import
+*   deep-learning
+*   error-handling
+*   eloquent
+*   dynamic
+*   soap
+*   dependency-injection
+*   silverlight
+*   layout
+*   apache-spark-sql
+*   charts
+*   deployment
+*   browser
+*   gridview
+*   svn
+*   while-loop
+*   google-bigquery
+*   vuejs2
+*   highcharts
+*   dll
+*   ffmpeg
+*   view
+*   foreach
+*   makefile
+*   plugins
+*   redis
+*   c#-4.0
+*   reporting-services
+*   jupyter-notebook
+*   unicode
+*   merge
+*   reflection
+*   https
+*   server
+*   google-maps-api-3
+*   twitter
+*   oauth-2.0
+*   extjs
+*   terminal
+*   axios
+*   pip
+*   split
+*   cmd
+*   pytorch
+*   encoding
+*   django-views
+*   collections
+*   database-design
+*   hash
+*   netbeans
+*   automation
+*   data-binding
+*   ember.js
+*   build
+*   tcp
+*   pdo
+*   sqlalchemy
+*   apache-flex
+*   entity-framework-core
+*   concurrency
+*   mysqli
+*   command-line
+*   spring-data-jpa
+*   printing
+*   react-redux
+*   java-8
+*   lua
+*   html-table
+*   ansible
+*   neo4j
+*   service
+*   jestjs
+*   parameters
+*   enums
+*   material-ui
+*   flexbox
+*   module
+*   promise
+*   visual-studio-2012
+*   outlook
+*   web-applications
+*   firebase-authentication
+*   webview
+*   uwp
+*   jquery-mobile
+*   utf-8
+*   datatable
+*   python-requests
+*   parallel-processing
+*   colors
+*   drop-down-menu
+*   scipy
+*   scroll
+*   tfs
+*   hive
+*   count
+*   syntax
+*   ms-word
+*   twitter-bootstrap-3
+*   ssis
+*   fonts
+*   rxjs
+*   constructor
+*   google-analytics
+*   file-io
+*   three.js
+*   paypal
+*   powerbi
+*   graphql
+*   cassandra
+*   discord
+*   graphics
+*   compiler-errors
+*   gwt
+*   socket.io
+*   react-router
+*   backbone.js
+*   solr
+*   memory-leaks
+*   url-rewriting
+*   datatables
+*   nlp
+*   oauth
+*   terraform
+*   datagridview
+*   drupal
+*   zend-framework
+*   oracle11g
+*   knockout.js
+*   triggers
+*   neural-network
+*   interface
+*   django-forms
+*   angular-material
+*   casting
+*   jmeter
+*   google-api
+*   linked-list
+*   path
+*   timer
+*   arduino
+*   django-templates
+*   proxy
+*   orm
+*   directory
+*   windows-phone-7
+*   parse-platform
+*   visual-studio-2015
+*   cron
+*   conditional-statements
+*   push-notification
+*   functional-programming
+*   primefaces
+*   pagination
+*   model
+*   jar
+*   xamarin.android
+*   hyperlink
+*   uiview
+*   vbscript
+*   visual-studio-2013
+*   google-cloud-functions
+*   gitlab
+*   azure-active-directory
+*   jwt
+*   download
+*   swift3
+*   sql-server-2005
+*   process
+*   configuration
+*   rspec
+*   pygame
+*   properties
+*   combobox
+*   callback
+*   windows-phone-8
+*   linux-kernel
+*   safari
+*   scrapy
+*   permissions
+*   emacs
+*   x86
+*   clojure
+*   scripting
+*   raspberry-pi
+*   scope
+*   io
+*   azure-functions
+*   expo
+*   compilation
+*   responsive-design
+*   mongodb-query
+*   nhibernate
+*   angularjs-directive
+*   request
+*   bluetooth
+*   binding
+*   reference
+*   dns
+*   architecture
+*   3d
+*   playframework
+*   pyqt
+*   version-control
+*   discord.js
+*   doctrine-orm
+*   package
+*   f#
+*   rubygems
+*   get
+*   sql-server-2012
+*   autocomplete
+*   tree
+*   openssl
+*   datepicker
+*   kendo-ui
+*   jackson
+*   yii
+*   controller
+*   grep
+*   nested
+*   xamarin.ios
+*   static
+*   null
+*   statistics
+*   transactions
+*   active-directory
+*   datagrid
+*   dockerfile
+*   uiviewcontroller
+*   webforms
+*   discord.py
+*   sas
+*   computer-vision
+*   phpmyadmin
+*   notifications
+*   duplicates
+*   mocking
+*   pycharm
+*   youtube
+*   yaml
+*   nullpointerexception
+*   menu
+*   blazor
+*   sum
+*   plotly
+*   bitmap
+*   asp.net-mvc-5
+*   visual-studio-2008
+*   yii2
+*   floating-point
+*   css-selectors
+*   stl
+*   electron
+*   android-listview
+*   jsf-2
+*   time-series
+*   cryptography
+*   ant
+*   hashmap
+*   character-encoding
+*   stream
+*   msbuild
+*   asp.net-core-mvc
+*   sdk
+*   google-drive-api
+*   jboss
+*   selenium-chromedriver
+*   joomla
+*   devise
+*   cors
+*   navigation
+*   cuda
+*   anaconda
+*   background
+*   frontend
+*   multiprocessing
+*   binary
+*   pyqt5
+*   camera
+*   iterator
+*   linq-to-sql
+*   mariadb
+*   onclick
+*   android-jetpack-compose
+*   ios7
+*   microsoft-graph-api
+*   rabbitmq
+*   android-asynctask
+*   tabs
+*   amazon-dynamodb
+*   laravel-4
+*   environment-variables
+*   uicollectionview
+*   insert
+*   linker
+*   xsd
+*   coldfusion
+*   console
+*   continuous-integration
+*   upload
+*   textview
+*   ftp
+*   opengl-es
+*   macros
+*   operating-system
+*   mockito
+*   localization
+*   formatting
+*   xml-parsing
+*   vuejs3
+*   json.net
+*   type-conversion
+*   data.table
+*   kivy
+*   timestamp
+*   integer
+*   calendar
+*   segmentation-fault
+*   android-ndk
+*   prolog
+*   drag-and-drop
+*   char
+*   crash
+*   jasmine
+*   automated-tests
+*   geometry
+*   dependencies
+*   azure-pipelines
+*   android-gradle-plugin
+*   fortran
+*   itext
+*   sprite-kit
+*   mfc
+*   header
+*   attributes
+*   firebase-cloud-messaging
+*   nosql
+*   format
+*   nuxt.js
+*   odoo
+*   db2
+*   jquery-plugins
+*   event-handling
+*   jenkins-pipeline
+*   julia
+*   leaflet
+*   nestjs
+*   annotations
+*   flutter-layout
+*   keyboard
+*   postman
+*   textbox
+*   arm
+*   visual-studio-2017
+*   stripe-payments
+*   gulp
+*   libgdx
+*   synchronization
+*   timezone
+*   uikit
+*   azure-web-app-service
+*   dom-events
+*   xampp
+*   wso2
+*   crystal-reports
+*   namespaces
+*   aggregation-framework
+*   android-emulator
+*   swagger
+*   uiscrollview
+*   google-sheets-formula
+*   jvm
+*   sequelize.js
+*   chart.js
+*   com
+*   snowflake-cloud-data-platform
+*   subprocess
+*   geolocation
+*   webdriver
+*   html5-canvas
+*   garbage-collection
+*   centos
+*   dialog
+*   sql-update
+*   numbers
+*   concatenation
+*   widget
+*   qml
+*   tuples
+*   set
+*   java-stream
+*   mapreduce
+*   ionic2
+*   smtp
+*   windows-10
+*   android-edittext
+*   rotation
+*   modal-dialog
+*   spring-data
+*   nuget
+*   radio-button
+*   doctrine
+*   http-headers
+*   grid
+*   sonarqube
+*   lucene
+*   xmlhttprequest
+*   listbox
+*   switch-statement
+*   initialization
+*   internationalization
+*   components
+*   boolean
+*   apache-camel
+*   google-play
+*   serial-port
+*   gdb
+*   ios5
+*   ldap
+*   return
+*   youtube-api
+*   pivot
+*   eclipse-plugin
+*   latex
+*   frameworks
+*   tags
+*   containers
+*   github-actions
+*   c++17
+*   subquery
+*   dataset
+*   asp-classic
+*   foreign-keys
+*   label
+*   embedded
+*   uinavigationcontroller
+*   copy
+*   delegates
+*   struts2
+*   google-cloud-storage
+*   migration
+*   protractor
+*   base64
+*   queue
+*   find
+*   uibutton
+*   sql-server-2008-r2
+*   arguments
+*   composer-php
+*   append
+*   jaxb
+*   stack
+*   zip
+*   tailwind-css
+*   cucumber
+*   autolayout
+*   ide
+*   entity-framework-6
+*   iteration
+*   popup
+*   r-markdown
+*   windows-7
+*   airflow
+*   vb6
+*   g++
+*   ssl-certificate
+*   hover
+*   clang
+*   jqgrid
+*   range
+*   gmail
+
+Next You’ll be prompted to create an account to view your personalized homepage.
+
+1.       1.   Home
+    2.   Questions
+    3.   AI Assist Labs
+    4.   Tags
+
+    6.   Challenges
+    7.   Chat
+    8.   Articles
+    9.   Users
+
+    11.   Jobs
+    12.   Companies
+    13.   Collectives 
+    14.   Communities for your favorite technologies. Explore all Collectives
+
+2.   Teams Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+
+Try Teams for free Explore Teams 
+3.   Teams
+4.   Ask questions, find answers and collaborate at work with Stack Overflow for Teams. Explore Teams
+
+##### Collectives™ on Stack Overflow
+
+Find centralized, trusted content and collaborate around the technologies you use most.
+
+Learn more about Collectives
+
+**Teams**
+
+Q&A for work
+
+Connect and share knowledge within a single location that is structured and easy to search.
+
+Learn more about Teams
+
+Hang on, you can't upvote just yet.
+===================================
+
+You'll need to complete a few actions and gain 15 reputation points before being able to upvote. **Upvoting** indicates when questions and answers are useful. What's reputation and how do I get it?
+
+Instead, you can save this post to reference later.
+
+ Save this post for later Not now
+
+Thanks for your vote! 
+
+ You now have 5 free votes weekly.
+==========================================================
+
+Free votes
+*   count toward the total vote score
+*   does not give reputation to the author
+
+Continue to help good content that is interesting, well-researched, and useful, rise to the top! To gain full voting privileges, earn reputation.
+
+Got it!Go to help center to learn more
+
+How do I fetch lines before/after the grep result in bash?
+==========================================================
+
+Ask Question
+
+Asked 13 years, 1 month ago
+
+Modified 2 years, 6 months ago
+
+Viewed 330k times 
+
+This question shows research effort; it is useful and clear
+
+ 234 
+
+Save this question.
+
+Show activity on this post.
+
+I want a way to search in a given text. For that, I use `grep`:
+
+```
+grep -i "my_regex"
+```
+
+That works. But given the data like this:
+
+```
+This is the test data
+This is the error data as follows
+. . . 
+. . . .
+. . . . . . 
+. . . . . . . . .
+Error data ends
+```
+
+Once I found the word `error` (using `grep -i error data`), I wish to find the 10 lines that follow the word `error`. So my output should be:
+
+```
+. . . 
+. . . .
+. . . . . . 
+. . . . . . . . .
+Error data ends
+```
+
+Are there any way to do it?
+
+*   grep
+
+Share
+
+Share a link to this question 
+
+Copy link CC BY-SA 4.0
+
+Improve this question
+
+ Follow 
+
+Follow this question to receive notifications
+
+edited Mar 13, 2023 at 17:21
+
+miken32
+
+42.6k 16 16 gold badges 127 127 silver badges 176 176 bronze badges
+
+ asked Sep 16, 2012 at 6:15
+
+sriram sriram
+
+9,202 19 19 gold badges 66 66 silver badges 82 82 bronze badges
+
+2
+
+*     From your description it seems you want the 10 lines proceeding the word `error`.ThomasW  –ThomasW 2015-03-19 05:33:14 +00:00 Commented Mar 19, 2015 at 5:33  
+*   3  Does this answer your question? grep a file, but show several surrounding lines?Organic Advocate  –Organic Advocate 2020-01-30 23:09:21 +00:00 Commented Jan 30, 2020 at 23:09  
+
+Add a comment|
+
+5 Answers 5
+-----------
+
+ Sorted by:  Reset to default
+
+This answer is useful
+
+ 398 
+
+Save this answer.
+
+Show activity on this post.
+
+You can use the `-B` and `-A` to print lines before and after the match.
+
+```
+grep -i -B 10 'error' data
+```
+
+Will print the 10 lines before the match, including the matching line itself.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Sep 16, 2012 at 6:16
+
+Jon Lin Jon Lin
+
+144k 29 29 gold badges 226 226 silver badges 224 224 bronze badges
+
+ Sign up to request clarification or add additional context in comments. 
+
+5 Comments
+----------
+
+Add a comment
+
+sriram
+
+sriram Over a year ago
+
+Thanks this is working. But when I tried to store this execution in the variable like this `test=$(grep -i -B 10 'error' data)`, and print it using `echo $test`, I get the straight long lines as output.
+
+2012-09-16T09:35:57.643Z+00:00
+
+1
+
+Reply
+
+*   Copy link
+
+sriram
+
+sriram Over a year ago
+
+Thanks I figured out I need to do like this `echo "$test"` rather than `echo $test`
+
+2012-09-16T09:37:55.647Z+00:00
+
+1
+
+Reply
+
+*   Copy link
+
+Joshua Pinter
+
+Joshua Pinter Over a year ago
+
+`-C 10` will print out 10 lines before AND after in one fell swoop!
+
+2018-01-22T15:19:23.823Z+00:00
+
+59
+
+Reply
+
+*   Copy link
+
+Erudaki
+
+Erudaki Over a year ago
+
+is there a way to do this using a specific before point? say the length i have to grab prior is variable?
+
+2018-07-17T19:05:48.667Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+Kasthuri Shravankumar
+
+Kasthuri Shravankumar Over a year ago
+
+grep -i -m 1 -A 100 -B 150 'wordd' file.txt
+
+2022-09-30T14:21:54.317Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+Add a comment
+
+This answer is useful
+
+ 74 
+
+Save this answer.
+
+Show activity on this post.
+
+This prints 10 lines of trailing context after matching lines
+
+```
+grep -i "my_regex" -A 10
+```
+
+If you need to print 10 lines of leading context before matching lines,
+
+```
+grep -i "my_regex" -B 10
+```
+
+And if you need to print 10 lines of leading and trailing output context.
+
+```
+grep -i "my_regex" -C 10
+```
+
+**Example**
+
+```
+user@box:~$ cat out 
+line 1
+line 2
+line 3
+line 4
+line 5 my_regex
+line 6
+line 7
+line 8
+line 9
+user@box:~$
+```
+
+**Normal grep**
+
+```
+user@box:~$ grep my_regex out 
+line 5 my_regex
+user@box:~$
+```
+
+**Grep exact matching lines and 2 lines after**
+
+```
+user@box:~$ grep -A 2 my_regex out   
+line 5 my_regex
+line 6
+line 7
+user@box:~$
+```
+
+**Grep exact matching lines and 2 lines before**
+
+```
+user@box:~$ grep -B 2 my_regex out  
+line 3
+line 4
+line 5 my_regex
+user@box:~$
+```
+
+**Grep exact matching lines and 2 lines before and after**
+
+```
+user@box:~$ grep -C 2 my_regex out  
+line 3
+line 4
+line 5 my_regex
+line 6
+line 7
+user@box:~$
+```
+
+**Reference: manpage grep**
+
+```
+-A num
+--after-context=num
+
+    Print num lines of trailing context after matching lines.
+-B num
+--before-context=num
+
+    Print num lines of leading context before matching lines.
+-C num
+-num
+--context=num
+
+    Print num lines of leading and trailing output context.
+```
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Jul 12, 2017 at 8:19
+
+ answered Jul 12, 2017 at 8:12
+
+Charlotte Russell Charlotte Russell
+
+1,485 1 1 gold badge 14 14 silver badges 17 17 bronze badges
+
+3 Comments
+----------
+
+Add a comment
+
+Opentuned
+
+Opentuned Over a year ago
+
+Nice, ive had to look this up a few times now, maybe I can remember it as -A(FTER) -B(EFORE) -C(ONTEXT)
+
+2018-08-30T13:47:42.597Z+00:00
+
+9
+
+Reply
+
+*   Copy link
+
+Mayank Kumar Thakur
+
+Mayank Kumar Thakur Over a year ago
+
+I am trying the same logic but getting below error - $ grep -A 20 'Exception in thread \"main\"' overnight.231122.log
+
+2022-11-24T10:08:15.533Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+Mayank Kumar Thakur
+
+Mayank Kumar Thakur Over a year ago
+
+But I am getting this error - grep: illegal option -- A usage: grep [-E|-F] [-c|-l|-q] [-bhinsvwx] -e pattern_list... [-f pattern_file...] [file...] usage: grep [-E|-F] [-c|-l|-q] [-bhinsvwx] [-e pattern_list...] -f pattern_file... [file...] usage: grep [-E|-F] [-c|-l|-q] [-bhinsvwx] pattern [file...] [deuxvi1i:/pkg/vdc05/dirsrv05/overnight_log][dirsrv05]$
+
+2022-11-24T10:10:47.157Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+Add a comment
+
+This answer is useful
+
+ 11 
+
+Save this answer.
+
+Show activity on this post.
+
+The way to do this is near the top of the man page
+
+```
+grep -i -A 10 'error data'
+```
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Sep 16, 2012 at 6:17
+
+Ray Toal Ray Toal
+
+88.7k 20 20 gold badges 186 186 silver badges 245 245 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+This answer is useful
+
+ 8 
+
+Save this answer.
+
+Show activity on this post.
+
+Try this:
+
+```
+grep -i -A 10 "my_regex"
+```
+
+-A 10 means, print ten lines after match to "my_regex"
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Sep 16, 2012 at 6:17
+
+Desislav Kamenov Desislav Kamenov
+
+1,203 7 7 silver badges 13 13 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+This answer is useful
+
+ 1 
+
+Save this answer.
+
+Show activity on this post.
+
+This may help you with finding an exact string before and after matching strings in a command.
+
+You'll have to use two grep commands, using the pipe "|" operator. The command in the first pipe uses grep to print out all the text that appears a specified number of lines before the matching string, and an additional pipe operator makes grep to output the exact text _after the matching string_, ignoring the exact text that appears before or after the targeted string, further narrowing down the output.
+
+Here's the template combination command that outputs only a specific string that's located specified number of lines before the specified string in the first "grep -B" pipe (replace the text between the {} symbols with your own):
+
+> {command-with-desired-output} | grep -B {number-of-lines-between-text-after-and-wanted-text} '{matching-string-after-wanted-value}' | grep -oP '(?<={exact-string-before-wanted-value}).*')
+
+The "grep -B {number}" parameter prints all the contents for a desired number of lines that appear before the matching string, including the line matched, while cutting off everything that appears after the desired number of lines is reached - use "grep -A" if the desired value appears _after_ the matching string.
+
+The second grep command. "grep -oP", finds the matching string and prints everything after it until it reaches the end of the current line, while excluding the matching string.
+
+Example command I used to find the Sink Input of a gmediarender sink:
+
+> pactl list sink-inputs | grep -B 20 'application.name = "gmediarender"' | grep -oP '(?<=Sink Input #).*')
+
+An easy way to find how many lines before the matched string there are is to paste the output of just the grep -B command into gedit (you can use CTRL+SHIFT+C to copy highlighted text from the terminal, or right-click and copy), and read the amount of lines there - it will appear in the lower right corner of gedit's window as "Ln".
+
+> sudo apt-get install -y gedit
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Apr 21, 2023 at 14:05
+
+ answered Apr 14, 2023 at 16:52
+
+vjb vjb
+
+11 2 2 bronze badges
+
+2 Comments
+----------
+
+Add a comment
+
+Sergei Voronezhskii
+
+Sergei Voronezhskii Over a year ago
+
+This advice is too big and contains a lot of useless information, please rewrite it in a convenient form.
+
+2023-04-20T13:59:10.113Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+vjb
+
+vjb Over a year ago
+
+@ Sergei Voronezhskii I've trimmed down my advice significantly hope it's satisfactory now.
+
+2023-04-21T14:37:42.577Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+Your Answer
+-----------
+
+Thanks for contributing an answer to Stack Overflow!
+
+*   Please be sure to _answer the question_. Provide details and share your research!
+
+But _avoid_ …
+
+*   Asking for help, clarification, or responding to other answers.
+*   Making statements based on opinion; back them up with references or personal experience.
+
+To learn more, see our tips on writing great answers.
+
+Draft saved
+
+Draft discarded
+
+### Sign up or log in
+
+ Sign up using Google 
+
+ Sign up using Email and Password 
+
+Submit
+
+### Post as a guest
+
+Name 
+
+Email 
+Required, but never shown
+
+ Post Your Answer  Discard 
+By clicking “Post Your Answer”, you agree to our terms of service and acknowledge you have read our privacy policy.
+
+Start asking to get answers
+
+Find the answer to your question by asking.
+
+Ask question
+
+Explore related questions
+
+*   grep
+
+See similar questions with these tags.
+
+*    The Overflow Blog 
+*    Your runbooks are obsolete in the age of agents 
+*    Featured on Meta 
+*     A First Look: Stack Overflow Redesign 
+*     Community Asks Sprint Announcement - October/November 2025 
+*     Upcoming opinion-based questions alpha experiment on Stack Overflow 
+
+Report this ad
+
+Community activity
+
+Last 1 hr
+
+*   Users online activity  6169 users online 
+*    8 questions 
+*    14 answers 
+*    37 comments 
+*    140 upvotes 
+
+Popular tags
+
+java c#c++python javascript reactjs
+
+Popular unanswered question
+
+pybind11: C++ callback from background thread to Python not executed in real time
+
+python c++asynchronous callback pybind11
+
+Lukas
+*   53
+
+3 days ago
+
+#### Linked
+
+-2 Why does my tail command -n+NUM not work?
+
+4130 grep: show lines surrounding each match
+
+#### Related
+
+14 get a part of a line after grep
+
+7 Get everything in a file after a grep'd string
+
+5 How to get output of grep in single line in shell script?
+
+2 grep after match
+
+3 Iterate through the lines returned by grep in Shell
+
+1 How to get the text after grep regex match?
+
+1 How can I get the return value and matched line by grep in bash at once?
+
+0 Retrieve the rest of a line from a search
+
+1 How to grep first match before match?
+
+0 How to extract specific data from grep command in bash?
+
+#### Hot Network Questions
+
+*    What is the best way to assess audio quality in an embedded or Android system?
+*    Tips to Identify a burnt resistor on PCB
+*    How do you get PCI-1 NVMe expansion cards to allow SSD to act as boot device?
+*    Series of Afrikaans Children's stories
+*    A body has acceleration when the net force acting on it is equal to 0 according to Newton's 2nd law
+*    Will cream of tartar make my homemade sports drink taste weird?
+*    How to disable the shortcut of pressing and releasing Ctrl+Alt+Shift+Winkey that launches M365 Copilot?
+*    What's the purpose of this panel on the exterior of my home?
+*    Critical zeros and Levinson's method
+*    How do I remove items from the Windows 11 right-click menu?
+*    Sort output using "--key" and "--field-separator"
+*    Carrying homeopathic medication for relative to Asia
+*    CSV handling class
+*    Why is N2 higher than N3 during engine start on an A330neo?
+*    Dual US/Canada citizen: Which passport to use at airport security?
+*    Is this reasonable to be expected of an undergrad?
+*    Python program that iterates over audio files with a progress bar interface
+*    Astrodynamics for gas giant moons - SOI flawed
+*    Two triangles in a light bulb
+*    What are these small white things I saw ants carrying?
+*    The usefulness of the material implication
+*    Is reverse polarity in a lamp a fire risk?
+*    Are 737 pilots able to let passengers hear ATC communications?
+*    How to convert a TEX file to a DVI file
+
+Question feed
+
+Subscribe to RSS
+================
+
+ Question feed 
+To subscribe to this RSS feed, copy and paste this URL into your RSS reader.
+
+ 
+
+Why are you flagging this comment?
+==================================
+
+Probable spam. 
+This comment promotes a product, service or website while failing to disclose the author's affiliation.
+
+ 
+
+Unfriendly or contains harassment/bigotry/abuse. 
+This comment is unkind, insulting or attacks another person or group. Learn more in our Abusive behavior policy.
+
+ 
+
+Not needed. 
+This comment is not relevant to the post.
+
+ 
+
+Enter at least 6 characters
+
+Something else. 
+A problem not listed above. Try to be as specific as possible.
+
+ 
+
+Enter at least 6 characters
+
+Flag comment Cancel
+
+You have 0 flags left today
+
+##### Stack Overflow
+
+*   Questions
+*   Help
+*   Chat
+
+##### Products
+
+*   Teams
+*   Advertising
+*   Talent
+
+##### Company
+
+*   About
+*   Press
+*   Work Here
+*   Legal
+*   Privacy Policy
+*   Terms of Service
+*   Contact Us
+*    Your Privacy Choices 
+*   Cookie Policy
+
+##### Stack Exchange Network
+
+*   Technology
+*   Culture & recreation
+*   Life & arts
+*   Science
+*   Professional
+*   Business
+*   API
+*   Data
+
+*   Blog
+*   Facebook
+*   Twitter
+*   LinkedIn
+*   Instagram
+
+Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under CC BY-SA. rev 2025.10.21.35661
+
+By continuing to use this website, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our Cookie Policy. By exiting this window, default cookies will be accepted. To reject cookies, select an option from below.
+
+Necessary cookies only
+
+Customize settings

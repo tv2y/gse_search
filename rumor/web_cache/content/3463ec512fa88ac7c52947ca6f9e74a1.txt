@@ -1,0 +1,185 @@
+Title: How To Solve 403 Forbidden Errors When Web Scraping
+
+URL Source: https://scrapeops.io/web-scraping-playbook/403-forbidden-error-web-scraping/
+
+Published Time: 2022-08-03T15:39:05Z
+
+Markdown Content:
+Getting a **HTTP 403 Forbidden Error** when web scraping or crawling is one of the most common HTTP errors you will get.
+
+Often there are **only two possible causes**:
+
+*   The URL you are trying to scrape is forbidden, and you need to be authorised to access it.
+*   The website detects that you are scraper and returns a `403 Forbidden` HTTP Status Code as a ban page.
+
+Most of the time it is the second cause, i.e. the website is blocking your requests because it thinks you are a scraper.
+
+**403 Forbidden Errors** are common when you are trying to scrape websites protected by Cloudflare, as Cloudflare returns a `403` status code.
+
+In this guide we will walk you through how to debug **403 Forbidden Error** and provide solutions that you can implement.
+
+*   Easy Way To Solve 403 Forbidden Errors When Web Scraping
+*   Use Fake User Agents
+*   Optimize Request Headers
+*   Use Rotating Proxies
+
+Let's begin...
+
+### Need help scraping the web?
+
+Then check out ScrapeOps, the complete toolkit for web scraping.
+
+* * *
+
+Easy Way To Solve 403 Forbidden Errors When Web Scraping​
+---------------------------------------------------------
+
+If the URL you are trying to scrape is normally accessible, but you are getting **403 Forbidden Errors** then it is likely that the website is flagging your spider as a scraper and blocking your requests.
+
+To avoid getting detected we need to optimise our spiders to bypass anti-bot countermeasures by:
+
+*   Using Fake User Agents
+*   Optimizing Request Headers
+*   Using Proxies
+
+We will discuss these below, however, the **easiest way to fix this problem** is to use a smart proxy solution like the ScrapeOps Proxy Aggregator.
+
+With the ScrapeOps Proxy Aggregator you simply need to send your requests to the ScrapeOps proxy endpoint and our Proxy Aggregator will optimise your request with the best user-agent, header and proxy configuration to ensure you don't get `403` errors from your target website.
+
+Simply get your **free API key** by signing up for a free account here and edit your scraper as follows:
+
+`import requestsfrom urllib.parse import urlencodeAPI_KEY = 'YOUR_API_KEY'def get_scrapeops_url(url):    payload = {'api_key': API_KEY, 'url': url}    proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)    return proxy_urlr = requests.get(get_scrapeops_url('http://quotes.toscrape.com/page/1/'))print(r.text)`
+
+If you are getting blocked by **Cloudflare**, then you can simply activate ScrapeOps' Cloudflare Bypass by adding `bypass=cloudflare_level_1` to the request:
+
+`import requestsAPI_KEY = 'YOUR_API_KEY'def get_scrapeops_url(url):    payload = {'api_key': API_KEY, 'url': url, 'bypass': 'cloudflare_level_1'}    proxy_url = 'https://proxy.scrapeops.io/v1/?' + urlencode(payload)    return proxy_urlr = requests.get(get_scrapeops_url('http://example.com/'))print(r.text)`
+
+tip
+
+Cloudflare is the most common anti-bot system being used by websites today, and bypassing it depends on which security settings the website has enabled.
+
+To combat this, we offer 3 different Cloudflare bypasses designed to solve the Cloudflare challenges at each security level.
+
+| Security Level | Bypass | API Credits | Description |
+| --- | --- | --- | --- |
+| **Low** | `cloudflare_level_1` | **10** | Use to bypass Cloudflare protected sites with low security settings enabled. |
+| **Medium** | `cloudflare_level_2` | **35** | Use to bypass Cloudflare protected sites with medium security settings enabled. On large plans the credit multiple will be increased to maintain a flat rate of $3.50 per thousand requests. |
+| **High** | `cloudflare_level_3` | **50** | Use to bypass Cloudflare protected sites with high security settings enabled. On large plans the credit multiple will be increased to maintain a flat rate of $4 per thousand requests. |
+
+You can check out the full documentation here.
+
+Or if you would prefer to try to optimize your user-agent, headers and proxy configuration yourself then read on and we will explain how to do it.
+
+* * *
+
+Use Fake User Agents​
+---------------------
+
+The most common reason for a website to block a web scraper and return a `403` error is because you is telling the website you are a scraper in the **user-agents** you send to the website when making your requests.
+
+By default, most HTTP libraries (Python Requests, Scrapy, NodeJs Axios, etc.) either don't attach real browser headers to your requests or include headers that identify the library that is being used. Both of which immediately tell the website you are trying to scrape that you are scraper, not a real user.
+
+For example, let's send a request to `http://httpbin.org/headers` with the Python Requests library using the default setting:
+
+`import requestsr = requests.get('http://httpbin.org/headers')print(r.text)`
+
+You will get a response like this that shows what headers we sent to the website:
+
+`{  "headers": {    "Accept": "*/*",     "Accept-Encoding": "gzip, deflate",     "Host": "httpbin.org",     "User-Agent": "python-requests/2.26.0",   }}`
+
+Here we can see that our request using the Python Requests libary appends very few headers to the request, and even identifies itself as the python requests library in the `User-Agent` header.
+
+`"User-Agent": "python-requests/2.26.0",`
+
+This tells the website that your requests are coming from a scraper, so it is very easy for them to block your requests and return a `403` status code.
+
+### Solution​
+
+The solution to this problem is to configure your scraper to **send a fake user-agent with every request**. This way it is harder for the website to tell if your requests are coming from a scraper or a real user.
+
+Here is how you would send a fake user agent when making a request with Python Requests.
+
+`import requestsHEADERS = {'User-Agent': 'Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148'}r = requests.get('http://quotes.toscrape.com/page/1/', headers=HEADERS)print(r.text)`
+
+Here we are making our request look like it is coming from a iPad, which will increase the chances of the request getting through.
+
+This will only work on relatively small scrapes, as if you use the same user-agent on every single request then a website with a more sophisticated anti-bot solution could easily still detect your scraper.
+
+To solve when scraping at scale, we need to maintain a large list of user-agents and pick a different one for each request.
+
+`import requestsimport randomuser_agents_list = [    'Mozilla/5.0 (iPad; CPU OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148',    'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36',    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36']r = requests.get('http://quotes.toscrape.com/page/1/', headers={'User-Agent': random.choice(user_agents_list)})print(r.text)`
+
+Now, when we make the request. We will pick a random user-agent for each request.
+
+* * *
+
+In a lot of cases, just adding fake user-agents to your requests will solve the **403 Forbidden Error**, however, if the website is has a more sophisticated anti-bot detection system in place you will also need to optimize the request headers.
+
+By default, most HTTP clients will only send basic request headers along with your requests such as `Accept`, `Accept-Language`, and `User-Agent`.
+
+`Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'Accept-Language: 'en'User-Agent: 'python-requests/2.26.0'`
+
+In contrast, here are the request headers a **Chrome browser running on a MacOS machine** would send:
+
+`Connection: 'keep-alive'Cache-Control: 'max-age=0'sec-ch-ua: '" Not A;Brand";v="99", "Chromium";v="99", "Google Chrome";v="99"'sec-ch-ua-mobile: '?0'sec-ch-ua-platform: "macOS"Upgrade-Insecure-Requests: 1User-Agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.83 Safari/537.36'Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'Sec-Fetch-Site: 'none'Sec-Fetch-Mode: 'navigate'Sec-Fetch-User: '?1'Sec-Fetch-Dest: 'document'Accept-Encoding: 'gzip, deflate, br'Accept-Language: 'en-GB,en-US;q=0.9,en;q=0.8'`
+
+If the website is really trying to prevent web scrapers from accessing their content, then they will be analysing the request headers to make sure that the other headers match the user-agent you set, and that the request includes other common headers a **real browser** would send.
+
+### Solution​
+
+To solve this, we need to make sure we optimize the request headers, including making sure **the fake user-agent is consistent with the other headers**.
+
+This is a big topic, so if you would like to learn more about header optimization then check out our guide to header optimization.
+
+However, to summarize, we don't just want to send a fake user-agent when making a request but the full set of headers web browsers normally send when visiting websites.
+
+Here is a quick example of adding optimized headers to our requests:
+
+`import requestsHEADERS = {        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:98.0) Gecko/20100101 Firefox/98.0",        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",        "Accept-Language": "en-US,en;q=0.5",        "Accept-Encoding": "gzip, deflate",        "Connection": "keep-alive",        "Upgrade-Insecure-Requests": "1",        "Sec-Fetch-Dest": "document",        "Sec-Fetch-Mode": "navigate",        "Sec-Fetch-Site": "none",        "Sec-Fetch-User": "?1",        "Cache-Control": "max-age=0",    }r = requests.get('http://quotes.toscrape.com/page/1/', headers=HEADERS)print(r.text)`
+
+Here we are adding the same optimized header with a fake user-agent to every request. However, when scraping at scale you will need a list of these optimized headers and rotate through them.
+
+* * *
+
+Use Rotating Proxies​
+---------------------
+
+If the above solutions don't work then it is highly likely that the server has flagged your IP address as being used by a scraper and is either throttling your requests or completely blocking them.
+
+This is especially likely if you are scraping at larger volumes, as it is easy for websites to detect scrapers if they are getting an unnaturally large amount of requests from the same IP address.
+
+### Solution​
+
+You will need to send your requests through a rotating proxy pool.
+
+Here is how you could do it Python Requests:
+
+`import requestsfrom itertools import cyclelist_proxy = [                'http://Username:Password@IP1:20000',                'http://Username:Password@IP2:20000',                'http://Username:Password@IP3:20000',                'http://Username:Password@IP4:20000',              ]proxy_cycle = cycle(list_proxy)proxy = next(proxy_cycle)for i in range(1, 10):    proxy = next(proxy_cycle)    print(proxy)    proxies = {      "http": proxy,      "https":proxy    }    r = requests.get(url='http://quotes.toscrape.com/page/1/', proxies=proxies)    print(r.text)`
+
+Now, your request will be routed through a different proxy with each request.
+
+You will also need to incorporate the rotating user-agents we showed previous as otherwise, even when we use a proxy we will still be telling the website that our requests are from a scraper, not a real user.
+
+If you need help finding the best & cheapest proxies for your particular use case then check out our proxy comparison tool here.
+
+Alternatively, you could just use the ScrapeOps Proxy Aggregator as we discussed previously.
+
+* * *
+
+More Web Scraping Tutorials​
+----------------------------
+
+So that's how you can solve **403 Forbidden Errors** when you get them.
+
+If you would like to know more about bypassing the most common anti-bots then check out our bypass guides here:
+
+*   How To Bypass Cloudflare
+*   How To Bypass PerimeterX
+
+Or if you would like to learn more about Web Scraping, then be sure to check out The Web Scraping Playbook.
+
+Or check out one of our more in-depth guides:
+
+*   How to Scrape The Web Without Getting Blocked Guide
+*   The State of Web Scraping 2022
+*   The Ethics of Web Scraping

@@ -1,0 +1,2385 @@
+Title: How can I generate a Git patch for a specific commit?
+
+URL Source: https://stackoverflow.com/questions/6658313/how-can-i-generate-a-git-patch-for-a-specific-commit
+
+Markdown Content:
+How can I generate a Git patch for a specific commit? - Stack Overflow
+
+===============
+
+By clicking “Sign up”, you agree to our terms of service and acknowledge you have read our privacy policy.
+
+ Sign up with Google
+
+ Sign up with GitHub
+
+OR
+==
+
+Email 
+
+Password 
+
+Sign up
+
+Already have an account? Log in
+
+Skip to main content
+
+Stack Overflow
+1.   About
+2.   Products
+3.   For Teams
+
+1.   Stack Overflow for Teams Where developers & technologists share private knowledge with coworkers
+2.   Advertising Reach devs & technologists worldwide about your product, service or employer brand
+3.   Knowledge Solutions Data licensing offering for businesses to build and improve AI tools and models
+4.   Labs The future of collective knowledge sharing
+5.   About the company Visit the blog
+
+Loading…
+
+1.   
+### current community
+
+   
+
+    *   Stack Overflow help chat 
+    *    Meta Stack Overflow
+
+### your communities
+
+Sign up or log in to customize your list. 
+
+### more stack exchange communities
+
+company blog
+
+3.   Log in
+4.   Sign up
+
+Let's set up your homepage Select a few topics you're interested in:
+====================================================================
+
+python javascript c#reactjs java android html flutter c++node.js typescript css r php angular next.js spring-boot machine-learning sql excel ios azure docker
+
+Or search from our full list:
+
+*   javascript
+*   python
+*   java
+*   c#
+*   php
+*   android
+*   html
+*   jquery
+*   c++
+*   css
+*   ios
+*   sql
+*   mysql
+*   r
+*   reactjs
+*   node.js
+*   arrays
+*   c
+*   asp.net
+*   json
+*   python-3.x
+*   .net
+*   ruby-on-rails
+*   sql-server
+*   swift
+*   django
+*   angular
+*   objective-c
+*   excel
+*   pandas
+*   angularjs
+*   regex
+*   typescript
+*   ruby
+*   linux
+*   ajax
+*   iphone
+*   vba
+*   xml
+*   laravel
+*   spring
+*   asp.net-mvc
+*   database
+*   wordpress
+*   string
+*   flutter
+*   postgresql
+*   mongodb
+*   wpf
+*   windows
+*   xcode
+*   amazon-web-services
+*   bash
+*   git
+*   oracle-database
+*   spring-boot
+*   dataframe
+*   azure
+*   firebase
+*   list
+*   multithreading
+*   docker
+*   vb.net
+*   react-native
+*   eclipse
+*   algorithm
+*   powershell
+*   macos
+*   visual-studio
+*   numpy
+*   image
+*   forms
+*   scala
+*   function
+*   vue.js
+*   performance
+*   twitter-bootstrap
+*   selenium
+*   winforms
+*   kotlin
+*   loops
+*   express
+*   dart
+*   hibernate
+*   sqlite
+*   matlab
+*   python-2.7
+*   shell
+*   rest
+*   apache
+*   entity-framework
+*   android-studio
+*   csv
+*   maven
+*   linq
+*   qt
+*   dictionary
+*   unit-testing
+*   asp.net-core
+*   facebook
+*   apache-spark
+*   tensorflow
+*   file
+*   swing
+*   class
+*   unity-game-engine
+*   sorting
+*   date
+*   authentication
+*   go
+*   symfony
+*   t-sql
+*   opencv
+*   matplotlib
+*   .htaccess
+*   google-chrome
+*   for-loop
+*   datetime
+*   codeigniter
+*   perl
+*   http
+*   validation
+*   sockets
+*   google-maps
+*   object
+*   uitableview
+*   xaml
+*   oop
+*   visual-studio-code
+*   if-statement
+*   cordova
+*   ubuntu
+*   web-services
+*   email
+*   android-layout
+*   github
+*   spring-mvc
+*   elasticsearch
+*   kubernetes
+*   selenium-webdriver
+*   ms-access
+*   ggplot2
+*   user-interface
+*   parsing
+*   pointers
+*   google-sheets
+*   c++11
+*   security
+*   machine-learning
+*   google-apps-script
+*   ruby-on-rails-3
+*   templates
+*   flask
+*   nginx
+*   variables
+*   exception
+*   sql-server-2008
+*   gradle
+*   debugging
+*   tkinter
+*   delphi
+*   listview
+*   jpa
+*   asynchronous
+*   web-scraping
+*   haskell
+*   pdf
+*   jsp
+*   ssl
+*   amazon-s3
+*   google-cloud-platform
+*   jenkins
+*   testing
+*   xamarin
+*   wcf
+*   batch-file
+*   generics
+*   npm
+*   ionic-framework
+*   network-programming
+*   unix
+*   recursion
+*   google-app-engine
+*   mongoose
+*   visual-studio-2010
+*   .net-core
+*   android-fragments
+*   assembly
+*   animation
+*   math
+*   svg
+*   session
+*   rust
+*   intellij-idea
+*   hadoop
+*   curl
+*   join
+*   winapi
+*   next.js
+*   django-models
+*   laravel-5
+*   url
+*   heroku
+*   http-redirect
+*   tomcat
+*   google-cloud-firestore
+*   inheritance
+*   webpack
+*   image-processing
+*   gcc
+*   keras
+*   swiftui
+*   asp.net-mvc-4
+*   logging
+*   dom
+*   matrix
+*   pyspark
+*   actionscript-3
+*   button
+*   post
+*   optimization
+*   firebase-realtime-database
+*   web
+*   jquery-ui
+*   cocoa
+*   xpath
+*   iis
+*   d3.js
+*   javafx
+*   firefox
+*   xslt
+*   internet-explorer
+*   caching
+*   select
+*   asp.net-mvc-3
+*   opengl
+*   events
+*   asp.net-web-api
+*   plot
+*   dplyr
+*   encryption
+*   magento
+*   stored-procedures
+*   search
+*   amazon-ec2
+*   ruby-on-rails-4
+*   memory
+*   canvas
+*   audio
+*   multidimensional-array
+*   random
+*   jsf
+*   vector
+*   redux
+*   cookies
+*   input
+*   facebook-graph-api
+*   flash
+*   indexing
+*   xamarin.forms
+*   arraylist
+*   ipad
+*   cocoa-touch
+*   data-structures
+*   video
+*   azure-devops
+*   model-view-controller
+*   serialization
+*   apache-kafka
+*   jdbc
+*   woocommerce
+*   razor
+*   routes
+*   awk
+*   mod-rewrite
+*   servlets
+*   excel-formula
+*   beautifulsoup
+*   filter
+*   docker-compose
+*   iframe
+*   aws-lambda
+*   design-patterns
+*   text
+*   visual-c++
+*   django-rest-framework
+*   cakephp
+*   mobile
+*   android-intent
+*   struct
+*   react-hooks
+*   methods
+*   groovy
+*   mvvm
+*   lambda
+*   ssh
+*   checkbox
+*   time
+*   ecmascript-6
+*   grails
+*   google-chrome-extension
+*   installation
+*   cmake
+*   sharepoint
+*   shiny
+*   spring-security
+*   jakarta-ee
+*   plsql
+*   android-recyclerview
+*   core-data
+*   types
+*   sed
+*   meteor
+*   android-activity
+*   activerecord
+*   bootstrap-4
+*   websocket
+*   graph
+*   replace
+*   group-by
+*   scikit-learn
+*   vim
+*   file-upload
+*   junit
+*   boost
+*   memory-management
+*   sass
+*   async-await
+*   import
+*   deep-learning
+*   error-handling
+*   eloquent
+*   dynamic
+*   soap
+*   dependency-injection
+*   silverlight
+*   layout
+*   apache-spark-sql
+*   charts
+*   deployment
+*   browser
+*   gridview
+*   svn
+*   while-loop
+*   google-bigquery
+*   vuejs2
+*   highcharts
+*   dll
+*   ffmpeg
+*   view
+*   foreach
+*   makefile
+*   plugins
+*   redis
+*   c#-4.0
+*   reporting-services
+*   jupyter-notebook
+*   unicode
+*   merge
+*   reflection
+*   https
+*   server
+*   google-maps-api-3
+*   twitter
+*   oauth-2.0
+*   extjs
+*   terminal
+*   axios
+*   pip
+*   split
+*   cmd
+*   pytorch
+*   encoding
+*   django-views
+*   collections
+*   database-design
+*   hash
+*   netbeans
+*   automation
+*   data-binding
+*   ember.js
+*   build
+*   tcp
+*   pdo
+*   sqlalchemy
+*   apache-flex
+*   entity-framework-core
+*   concurrency
+*   mysqli
+*   command-line
+*   spring-data-jpa
+*   printing
+*   react-redux
+*   java-8
+*   lua
+*   html-table
+*   ansible
+*   neo4j
+*   service
+*   jestjs
+*   parameters
+*   enums
+*   material-ui
+*   flexbox
+*   module
+*   promise
+*   visual-studio-2012
+*   outlook
+*   web-applications
+*   firebase-authentication
+*   webview
+*   uwp
+*   jquery-mobile
+*   utf-8
+*   datatable
+*   python-requests
+*   parallel-processing
+*   colors
+*   drop-down-menu
+*   scipy
+*   scroll
+*   tfs
+*   hive
+*   count
+*   syntax
+*   ms-word
+*   twitter-bootstrap-3
+*   ssis
+*   fonts
+*   rxjs
+*   constructor
+*   google-analytics
+*   file-io
+*   three.js
+*   paypal
+*   powerbi
+*   graphql
+*   cassandra
+*   discord
+*   graphics
+*   compiler-errors
+*   gwt
+*   socket.io
+*   react-router
+*   backbone.js
+*   solr
+*   memory-leaks
+*   url-rewriting
+*   datatables
+*   nlp
+*   oauth
+*   terraform
+*   datagridview
+*   drupal
+*   zend-framework
+*   oracle11g
+*   knockout.js
+*   triggers
+*   neural-network
+*   interface
+*   django-forms
+*   angular-material
+*   casting
+*   jmeter
+*   google-api
+*   linked-list
+*   path
+*   timer
+*   arduino
+*   django-templates
+*   proxy
+*   orm
+*   directory
+*   windows-phone-7
+*   parse-platform
+*   visual-studio-2015
+*   cron
+*   conditional-statements
+*   push-notification
+*   functional-programming
+*   primefaces
+*   pagination
+*   model
+*   jar
+*   xamarin.android
+*   hyperlink
+*   uiview
+*   vbscript
+*   visual-studio-2013
+*   google-cloud-functions
+*   gitlab
+*   azure-active-directory
+*   jwt
+*   download
+*   swift3
+*   sql-server-2005
+*   process
+*   configuration
+*   rspec
+*   pygame
+*   properties
+*   combobox
+*   callback
+*   windows-phone-8
+*   linux-kernel
+*   safari
+*   scrapy
+*   permissions
+*   emacs
+*   x86
+*   clojure
+*   scripting
+*   raspberry-pi
+*   scope
+*   io
+*   azure-functions
+*   expo
+*   compilation
+*   responsive-design
+*   mongodb-query
+*   nhibernate
+*   angularjs-directive
+*   request
+*   bluetooth
+*   binding
+*   reference
+*   dns
+*   architecture
+*   3d
+*   playframework
+*   pyqt
+*   version-control
+*   discord.js
+*   doctrine-orm
+*   package
+*   f#
+*   rubygems
+*   get
+*   sql-server-2012
+*   autocomplete
+*   tree
+*   openssl
+*   datepicker
+*   kendo-ui
+*   jackson
+*   yii
+*   controller
+*   grep
+*   nested
+*   xamarin.ios
+*   static
+*   null
+*   statistics
+*   transactions
+*   active-directory
+*   datagrid
+*   dockerfile
+*   uiviewcontroller
+*   webforms
+*   discord.py
+*   sas
+*   computer-vision
+*   phpmyadmin
+*   notifications
+*   duplicates
+*   mocking
+*   pycharm
+*   youtube
+*   yaml
+*   nullpointerexception
+*   menu
+*   blazor
+*   sum
+*   plotly
+*   bitmap
+*   asp.net-mvc-5
+*   visual-studio-2008
+*   yii2
+*   floating-point
+*   css-selectors
+*   stl
+*   electron
+*   android-listview
+*   jsf-2
+*   time-series
+*   cryptography
+*   ant
+*   hashmap
+*   character-encoding
+*   stream
+*   msbuild
+*   asp.net-core-mvc
+*   sdk
+*   google-drive-api
+*   jboss
+*   selenium-chromedriver
+*   joomla
+*   devise
+*   cors
+*   navigation
+*   cuda
+*   anaconda
+*   background
+*   frontend
+*   multiprocessing
+*   binary
+*   pyqt5
+*   camera
+*   iterator
+*   linq-to-sql
+*   mariadb
+*   onclick
+*   android-jetpack-compose
+*   ios7
+*   microsoft-graph-api
+*   rabbitmq
+*   android-asynctask
+*   tabs
+*   amazon-dynamodb
+*   laravel-4
+*   environment-variables
+*   uicollectionview
+*   insert
+*   linker
+*   xsd
+*   coldfusion
+*   console
+*   continuous-integration
+*   upload
+*   textview
+*   ftp
+*   opengl-es
+*   macros
+*   operating-system
+*   mockito
+*   localization
+*   formatting
+*   xml-parsing
+*   vuejs3
+*   json.net
+*   type-conversion
+*   data.table
+*   kivy
+*   timestamp
+*   integer
+*   calendar
+*   segmentation-fault
+*   android-ndk
+*   prolog
+*   drag-and-drop
+*   char
+*   crash
+*   jasmine
+*   automated-tests
+*   geometry
+*   dependencies
+*   azure-pipelines
+*   android-gradle-plugin
+*   fortran
+*   itext
+*   sprite-kit
+*   mfc
+*   header
+*   attributes
+*   firebase-cloud-messaging
+*   nosql
+*   format
+*   nuxt.js
+*   odoo
+*   db2
+*   jquery-plugins
+*   event-handling
+*   jenkins-pipeline
+*   julia
+*   leaflet
+*   nestjs
+*   annotations
+*   flutter-layout
+*   keyboard
+*   postman
+*   textbox
+*   arm
+*   visual-studio-2017
+*   stripe-payments
+*   gulp
+*   libgdx
+*   synchronization
+*   timezone
+*   uikit
+*   azure-web-app-service
+*   dom-events
+*   xampp
+*   wso2
+*   crystal-reports
+*   namespaces
+*   aggregation-framework
+*   android-emulator
+*   swagger
+*   uiscrollview
+*   google-sheets-formula
+*   jvm
+*   sequelize.js
+*   chart.js
+*   com
+*   snowflake-cloud-data-platform
+*   subprocess
+*   geolocation
+*   webdriver
+*   html5-canvas
+*   garbage-collection
+*   centos
+*   dialog
+*   sql-update
+*   numbers
+*   concatenation
+*   widget
+*   qml
+*   tuples
+*   set
+*   java-stream
+*   mapreduce
+*   ionic2
+*   smtp
+*   windows-10
+*   android-edittext
+*   rotation
+*   modal-dialog
+*   spring-data
+*   nuget
+*   radio-button
+*   doctrine
+*   http-headers
+*   grid
+*   sonarqube
+*   lucene
+*   xmlhttprequest
+*   listbox
+*   switch-statement
+*   initialization
+*   internationalization
+*   components
+*   boolean
+*   apache-camel
+*   google-play
+*   serial-port
+*   gdb
+*   ios5
+*   ldap
+*   return
+*   youtube-api
+*   pivot
+*   eclipse-plugin
+*   latex
+*   frameworks
+*   tags
+*   containers
+*   github-actions
+*   c++17
+*   subquery
+*   dataset
+*   asp-classic
+*   foreign-keys
+*   label
+*   embedded
+*   uinavigationcontroller
+*   copy
+*   delegates
+*   struts2
+*   google-cloud-storage
+*   migration
+*   protractor
+*   base64
+*   queue
+*   find
+*   uibutton
+*   sql-server-2008-r2
+*   arguments
+*   composer-php
+*   append
+*   jaxb
+*   stack
+*   zip
+*   tailwind-css
+*   cucumber
+*   autolayout
+*   ide
+*   entity-framework-6
+*   iteration
+*   popup
+*   r-markdown
+*   windows-7
+*   airflow
+*   vb6
+*   g++
+*   ssl-certificate
+*   hover
+*   clang
+*   jqgrid
+*   range
+*   gmail
+
+Next You’ll be prompted to create an account to view your personalized homepage.
+
+1.       1.   Home
+    2.   Questions
+    3.   AI Assist Labs
+    4.   Tags
+
+    6.   Challenges
+    7.   Chat
+    8.   Articles
+    9.   Users
+
+    11.   Jobs
+    12.   Companies
+    13.   Collectives 
+    14.   Communities for your favorite technologies. Explore all Collectives
+
+2.   Teams Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+
+Try Teams for free Explore Teams 
+3.   Teams
+4.   Ask questions, find answers and collaborate at work with Stack Overflow for Teams. Explore Teams
+
+##### Collectives™ on Stack Overflow
+
+Find centralized, trusted content and collaborate around the technologies you use most.
+
+Learn more about Collectives
+
+**Teams**
+
+Q&A for work
+
+Connect and share knowledge within a single location that is structured and easy to search.
+
+Learn more about Teams
+
+Hang on, you can't upvote just yet.
+===================================
+
+You'll need to complete a few actions and gain 15 reputation points before being able to upvote. **Upvoting** indicates when questions and answers are useful. What's reputation and how do I get it?
+
+Instead, you can save this post to reference later.
+
+ Save this post for later Not now
+
+Thanks for your vote! 
+
+ You now have 5 free votes weekly.
+==========================================================
+
+Free votes
+*   count toward the total vote score
+*   does not give reputation to the author
+
+Continue to help good content that is interesting, well-researched, and useful, rise to the top! To gain full voting privileges, earn reputation.
+
+Got it!Go to help center to learn more
+
+How can I generate a Git patch for a specific commit?
+=====================================================
+
+Ask Question
+
+Asked 14 years, 3 months ago
+
+Modified 10 months ago
+
+Viewed 1.2m times 
+
+This question shows research effort; it is useful and clear
+
+ 1763 
+
+Save this question.
+
+Show activity on this post.
+
+I want to create a patch for a specific commit hash, `<rev>`.
+
+I tried using `git format-patch <rev>`, but that generated a patch for each commit since the `<rev>` commit. Is there a way to generate a patch only for `<rev>`?
+
+*   git
+*   patch
+*   format-patch
+
+Share
+
+Share a link to this question 
+
+Copy link CC BY-SA 4.0
+
+Improve this question
+
+ Follow 
+
+Follow this question to receive notifications
+
+edited Sep 9, 2023 at 20:29
+
+Mateen Ulhaq
+
+27.8k 21 21 gold badges 121 121 silver badges 155 155 bronze badges
+
+ asked Jul 12, 2011 at 0:35
+
+elle elle
+
+17.7k 3 3 gold badges 17 17 silver badges 4 4 bronze badges
+
+0
+
+Add a comment|
+
+13 Answers 13
+-------------
+
+ Sorted by:  Reset to default
+
+This answer is useful
+
+ 2704 
+
+Save this answer.
+
+Show activity on this post.
+
+Try:
+
+`git format-patch -<n> <rev>`
+For example:
+
+```
+git format-patch -1 HEAD
+```
+
+The `-1` flag indicates how many commits should be included in the patch:
+
+> -<n>
+> 
+> 
+> Prepare patches from the topmost <n> commits.
+
+* * *
+
+Apply the patch with the command:
+
+```
+git am < file.patch
+```
+
+Alternatively you can also apply (should work on all OSes including Windows) with:
+
+```
+git apply --verbose file.patch
+```
+
+The `-v` or `--verbose` will show what failed, if any. Giving you a clue on how to fix.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Sep 4, 2023 at 6:06
+
+Mateen Ulhaq
+
+27.8k 21 21 gold badges 121 121 silver badges 155 155 bronze badges
+
+ answered Jul 12, 2011 at 0:43
+
+manojlds manojlds
+
+303k 66 66 gold badges 482 482 silver badges 426 426 bronze badges
+
+ Sign up to request clarification or add additional context in comments. 
+
+12 Comments
+-----------
+
+Add a comment
+
+Adrian
+
+Adrian Over a year ago
+
+Applying the patch: `git apply --stat file.patch` # show stats. `git apply --check file.patch` # check for error before applying. `git am < file.patch` # apply the patch finally.
+
+2014-03-25T14:15:18.977Z+00:00
+
+311
+
+Reply
+
+*   Copy link
+
+Lex Li
+
+Lex Li Over a year ago
+
+It does not seem to work if the last commit is a merge from another branch.
+
+2014-04-04T03:52:57.86Z+00:00
+
+7
+
+Reply
+
+*   Copy link
+
+Matt
+
+Matt Over a year ago
+
+Use `git am -3 < file.patch` to apply using a three-way merge which will let you resolve conflicts using `git mergetool` afterward (or editing manually) found here.
+
+2015-08-05T21:11:11.71Z+00:00
+
+65
+
+Reply
+
+*   Copy link
+
+Kristóf Dombi
+
+Kristóf Dombi Over a year ago
+
+This command also works for just a specific file(s) from the commit: `git format-patch -1 <sha> path/to/file.js` This will create a patch only containing the diffs for the file.js
+
+2016-11-22T13:08:42.323Z+00:00
+
+10
+
+Reply
+
+*   Copy link
+
+Peter Chaula
+
+Peter Chaula Over a year ago
+
+It would be very helpful if you explained the purpose of the `-1`
+
+2018-11-05T12:19:32.31Z+00:00
+
+4
+
+Reply
+
+*   Copy link
+
+Add a comment|Show 7 more comments
+
+This answer is useful
+
+ 383 
+
+Save this answer.
+
+Show activity on this post.
+
+For generating the patches from the topmost <n> commits from a specific SHA-1 hash:
+
+```
+git format-patch -<n> <SHA-1> --stdout > <name_of_patch_file>.patch
+```
+
+The last 10 patches from head in a single patch files:
+
+```
+git format-patch -10 HEAD --stdout > 0001-last-10-commits.patch
+```
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Jun 30, 2022 at 5:54
+
+Farid
+
+2,613 1 1 gold badge 23 23 silver badges 46 46 bronze badges
+
+ answered Apr 23, 2013 at 14:34
+
+Sriram Murali Sriram Murali
+
+6,304 2 2 gold badges 31 31 silver badges 32 32 bronze badges
+
+2 Comments
+----------
+
+Add a comment
+
+Sriram Murali
+
+Sriram Murali Over a year ago
+
+`git format-patch -1 HEAD` will generate patch for the most recent commit
+
+2016-12-14T18:36:42.843Z+00:00
+
+3
+
+Reply
+
+*   Copy link
+
+Kasun Siyambalapitiya
+
+Kasun Siyambalapitiya Over a year ago
+
+pardon me for asking this, so when it is `-2` it generate patches for most recent 2 commits is it, and one more thing to for clarification is the command `got format-patch -2 HEAD` is same as the line `git format-patch HEAD~2`
+
+2016-12-15T03:19:12.057Z+00:00
+
+2
+
+Reply
+
+*   Copy link
+
+This answer is useful
+
+ 127 
+
+Save this answer.
+
+Show activity on this post.
+
+Say you have commit id 2 after commit 1 you would be able to run:
+
+```
+git diff 2 1 > mypatch.diff
+```
+
+where 2 and 1 are SHA-1 hashes.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Apr 13, 2021 at 6:23
+
+Peter Mortensen
+
+31.5k 22 22 gold badges 110 110 silver badges 134 134 bronze badges
+
+ answered Jul 12, 2011 at 0:42
+
+brandon brandon
+
+1,656 1 1 gold badge 11 11 silver badges 13 13 bronze badges
+
+6 Comments
+----------
+
+Add a comment
+
+elle
+
+elle Over a year ago
+
+Thank you dookehster for the reply. That means I need the script to find the commits that preceded those I am interested in. I was hoping that I could avoid that.
+
+2011-07-12T00:45:25.1Z+00:00
+
+1
+
+Reply
+
+*   Copy link
+
+J-16 SDiZ
+
+J-16 SDiZ Over a year ago
+
+@elle, no, you don't -- `git diff hash^ hash` . the "hash^" give the preceded commit. (but, of course, manojlds's answer is better)
+
+2011-07-12T00:52:29.217Z+00:00
+
+15
+
+Reply
+
+*   Copy link
+
+andho
+
+andho Over a year ago
+
+`git show HEAD > mypatch.diff` while you're on the commit should do the same.
+
+2015-04-21T12:49:20.013Z+00:00
+
+4
+
+Reply
+
+*   Copy link
+
+Kasun Siyambalapitiya
+
+Kasun Siyambalapitiya Over a year ago
+
+@dookehester is it correct or is it the other way, `git diff 1 2`
+
+2016-12-14T06:25:53.443Z+00:00
+
+4
+
+Reply
+
+*   Copy link
+
+stuckj
+
+stuckj Over a year ago
+
+This will fail to include any binary files in the diff.
+
+2018-06-14T18:26:17.777Z+00:00
+
+2
+
+Reply
+
+*   Copy link
+
+Add a comment|Show 1 more comment
+
+This answer is useful
+
+ 75 
+
+Save this answer.
+
+Show activity on this post.
+
+This command (as suggested already by @_Naftuli Tzvi Kay_),
+
+```
+git format-patch -1 HEAD
+```
+
+Replace `HEAD` with a specific hash or range.
+
+will generate the patch file for the latest commit formatted to resemble the Unix mailbox format.
+
+> `-<n>` - Prepare patches from the topmost <n> commits.
+
+Then you can reapply the patch file in a mailbox format by:
+
+```
+git am -3k 001*.patch
+```
+
+See: `man git-format-patch`.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Apr 13, 2021 at 6:42
+
+ community wiki 
+
+3 revs, 3 users 78%kenorb
+
+4 Comments
+----------
+
+Add a comment
+
+Mike S
+
+Mike S Over a year ago
+
+Thanks! I think it's worth noting that applying the patch will create a commit with a commit message prefixed by [PATCH]. That's easy to fix though
+
+2017-06-09T15:57:55.537Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+underscore_d
+
+underscore_d Over a year ago
+
+Phenomenal. OP, you haven't accepted this, because...? @MikeS No, it doesn't, anymore than any other `git`-formatted patch does, at least if the user applies it in the correct way.
+
+2017-10-04T22:30:51.343Z+00:00
+
+2
+
+Reply
+
+*   Copy link
+
+jannis
+
+jannis Over a year ago
+
+@MikeS I didn't really investigate why, but leaving out the `-k` flag (`git am -3`) fixed this form me (no `PATCH[0/10]` commit messages). Git version 2.20.1.windows.1
+
+2019-01-13T15:18:04.94Z+00:00
+
+2
+
+Reply
+
+*   Copy link
+
+éclairevoyant
+
+éclairevoyant Over a year ago
+
+@jannis see `man git-am` and `man git-mailbox` for explanation, this is expected behavior of the `-k` option
+
+2022-10-13T15:15:44.2Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+Add a comment
+
+This answer is useful
+
+ 50 
+
+Save this answer.
+
+Show activity on this post.
+
+```bash
+git format-patch commit_Id~1..commit_Id  
+git apply patch-file-name
+```
+
+Fast and simple solution.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Sep 12, 2017 at 16:06
+
+iamantony
+
+1,395 17 17 silver badges 33 33 bronze badges
+
+ answered Jul 6, 2017 at 13:52
+
+zdrsoft zdrsoft
+
+2,697 22 22 silver badges 10 10 bronze badges
+
+2 Comments
+----------
+
+Add a comment
+
+iamantony
+
+iamantony Over a year ago
+
+Also do not forget to call `git apply --check patch-file-name` before applying a patch. This will help to avoid problems.
+
+2017-09-13T10:04:50.507Z+00:00
+
+9
+
+Reply
+
+*   Copy link
+
+éclairevoyant
+
+éclairevoyant Over a year ago
+
+also be aware that `git apply` will lose all of the commit information and you have to commit manually. `git am` calls `git apply` behind the scenes but preserves that info which in turn means it makes the commits automatically. see stackoverflow.com/a/12240235/950837
+
+2022-10-13T15:33:41.36Z+00:00
+
+3
+
+Reply
+
+*   Copy link
+
+This answer is useful
+
+ 28 
+
+Save this answer.
+
+Show activity on this post.
+
+Create a git patch using commit-id
+
+```
+$ git format-patch -1 commit-id
+```
+
+This command create patch with following file name
+
+```
+0001-commit-message.patch
+```
+
+To apply the patch:
+
+```
+$ git am 0001-commit-message.patch
+```
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Feb 28, 2022 at 18:43
+
+Maik Lowrey
+
+17.8k 7 7 gold badges 54 54 silver badges 101 101 bronze badges
+
+ answered Sep 23, 2021 at 16:18
+
+Techie Techie
+
+9,664 1 1 gold badge 16 16 silver badges 7 7 bronze badges
+
+3 Comments
+----------
+
+Add a comment
+
+brainbag
+
+brainbag Over a year ago
+
+Could you clarify the `-1` argument? I was unable to find a reference to it in the docs or online.
+
+2022-01-29T20:59:55.81Z+00:00
+
+3
+
+Reply
+
+*   Copy link
+
+Cezary Drożak
+
+Cezary Drożak Over a year ago
+
+@brainbag I found it in the manpage: `-<n> Prepare patches from the topmost <n> commits`
+
+2022-03-09T09:45:28.273Z+00:00
+
+1
+
+Reply
+
+*   Copy link
+
+Farid
+
+Farid Over a year ago
+
+If you change -1 to any `>1` number you will still get patch per commit. How does this even answer the question?
+
+2022-06-30T05:50:01.403Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+Add a comment
+
+This answer is useful
+
+ 26 
+
+Save this answer.
+
+Show activity on this post.
+
+If you want to be sure the (single commit) patch will be applied on top of a specific commit, you can use the new git 2.9 (June 2016) option `git format-patch --base`
+
+```
+git format-patch --base=COMMIT_VALUE~ -M -C COMMIT_VALUE~..COMMIT_VALUE
+
+# or
+git format-patch --base=auto -M -C COMMIT_VALUE~..COMMIT_VALUE
+
+# or
+git config format.useAutoBase true
+git format-patch -M -C COMMIT_VALUE~..COMMIT_VALUE
+```
+
+See commit bb52995, commit 3de6651, commit fa2ab86, commit ded2c09 (26 Apr 2016) by Xiaolong Ye (``).
+
+(Merged by Junio C Hamano -- `gitster` -- in commit 72ce3ff, 23 May 2016)
+
+> `format-patch`: add '`--base`' option to record base tree info
+> --------------------------------------------------------------
+
+> Maintainers or third party testers may want to know the exact base tree the patch series applies to. Teach git format-patch a '`--base`' option to record the base tree info and append it at the end of the first message (either the cover letter or the first patch in the series).
+> 
+> 
+> The base tree info consists of the "base commit", which is a well-known commit that is part of the stable part of the project history everybody else works off of, and zero or more "prerequisite patches", which are well-known patches in flight that is not yet part of the "base commit" that need to be applied on top of "base commit" in topological order before the patches can be applied.
+> 
+> 
+> The "base commit" is shown as "`base-commit:` " followed by the 40-hex of the commit object name.
+> 
+>  A "prerequisite patch" is shown as "`prerequisite-patch-id:` " followed by the 40-hex "patch id", which can be obtained by passing the patch through the "`git patch-id --stable`" command.
+
+* * *
+
+Git 2.23 (Q3 2019) will improve that, because the "`--base`" option of "`format-patch`" computed the `patch-ids` for prerequisite patches in an unstable way, which has been updated to compute in a way that is compatible with "`git patch-id --stable`".
+
+See commit a8f6855, commit 6f93d26 (26 Apr 2019) by Stephen Boyd (`akshayka`).
+
+(Merged by Junio C Hamano -- `gitster` -- in commit 8202d12, 13 Jun 2019)
+
+> `format-patch`: make `--base patch-id` output stable
+> ----------------------------------------------------
+
+> We weren't flushing the context each time we processed a hunk in the `patch-id` generation code in `diff.c`, but we were doing that when we generated "stable" patch-ids with the '`patch-id`' tool.
+> 
+> 
+> Let's port that similar logic over from `patch-id.c` into `diff.c` so we can get the same hash when we're generating patch-ids for '`format-patch --base=`' types of command invocations.
+
+* * *
+
+Before Git 2.24 (Q4 2019), "`git format-patch -o <outdir>`" did an equivalent of "`mkdir <outdir>`" not "`mkdir -p <outdir>`", which is being corrected.
+
+See commit edefc31 (11 Oct 2019) by Bert Wesarg (`bertwesarg`).
+
+(Merged by Junio C Hamano -- `gitster` -- in commit f1afbb0, 18 Oct 2019)
+
+> `format-patch`: create leading components of output directory
+> -------------------------------------------------------------
+> 
+> 
+> Signed-off-by: Bert Wesarg
+
+> 'git format-patch -o ' did an equivalent of '`mkdir <outdir>`' not '`mkdir -p <outdir>`', which is being corrected.
+
+> Avoid the usage of '`adjust_shared_perm`' on the leading directories which may have security implications. Achieved by temporarily disabling of '`config.sharedRepository`' like '`git init`' does.
+
+* * *
+
+With Git 2.25 (Q1 2020), "`git rebase`" did not work well when `format.useAutoBase` configuration variable is set, which has been corrected.
+
+See commit cae0bc0, commit 945dc55, commit 700e006, commit a749d01, commit 0c47e06 (04 Dec 2019) by Denton Liu (`Denton-L`).
+
+(Merged by Junio C Hamano -- `gitster` -- in commit 71a7de7, 16 Dec 2019)
+
+> `rebase`: fix `format.useAutoBase` breakage
+> -------------------------------------------
+> 
+> 
+> Reported-by: Christian Biesinger
+> 
+> Signed-off-by: Denton Liu
+> 
+> 
+> With `format.useAutoBase = true`, running rebase resulted in an error:
+> 
+> 
+> ```
+> fatal: failed to get upstream, if you want to record base commit automatically,
+> please use git branch --set-upstream-to to track a remote branch.
+> Or you could specify base commit by --base=<base-commit-id> manually
+> error:
+> git encountered an error while preparing the patches to replay
+> these revisions:
+> 
+> ede2467cdedc63784887b587a61c36b7850ebfac..d8f581194799ae29bf5fa72a98cbae98a1198b12
+> 
+> As a result, git cannot rebase them.
+> ```
+> 
+> Fix this by always passing `--no-base` to format-patch from rebase so that the effect of `format.useAutoBase` is negated.
+
+* * *
+
+With Git 2.29 (Q4 2020), "`git format-patch`"(man) learns to take "`whenAble`" as a possible value for the `format.useAutoBase` configuration variable to become no-op when the automatically computed base does not make sense.
+
+See commit 7efba5f (01 Oct 2020) by Jacob Keller (`jacob-keller`).
+
+(Merged by Junio C Hamano -- `gitster` -- in commit 5f8c70a, 05 Oct 2020)
+
+> `format-patch`: teach `format.useAutoBase` "`whenAble`" option
+> --------------------------------------------------------------
+> 
+> 
+> Signed-off-by: Jacob Keller
+
+> The `format.useAutoBase` configuration option exists to allow users to enable '`--base=auto`' for format-patch by default.
+> 
+> 
+> This can sometimes lead to poor workflow, due to unexpected failures when attempting to format an ancient patch:
+> 
+> 
+> ```
+> $ git format-patch -1 <an old commit>
+> fatal: base commit shouldn't be in revision list
+> ```
+> 
+> This can be very confusing, as it is not necessarily immediately obvious that the user requested a `--base` (since this was in the configuration, not on the command line).
+> 
+> 
+> We do want `--base=auto` to fail when it cannot provide a suitable base, as it would be equally confusing if a formatted patch did not include the base information when it was requested.
+> 
+> 
+> Teach `format.useAutoBase` a new mode, "`whenAble`".
+> 
+> 
+> This mode will cause format-patch to attempt to include a base commit when it can. However, if no valid base commit can be found, then format-patch will continue formatting the patch without a base commit.
+> 
+> 
+> In order to avoid making yet another branch name unusable with `--base`, do not teach `--base=whenAble` or `--base=whenable`.
+> 
+> 
+> Instead, refactor the `base_commit` option to use a callback, and rely on the global configuration variable `auto_base`.
+> 
+> 
+> This does mean that a user cannot request this optional base commit generation from the command line. However, this is likely not too valuable. If the user requests base information manually, they will be immediately informed of the failure to acquire a suitable base commit. This allows the user to make an informed choice about whether to continue the format.
+> 
+> 
+> Add tests to cover the new mode of operation for `--base`.
+
+`git config` now includes in its man page:
+
+> `format-patch` by default.
+> 
+>  Can also be set to "`whenAble`" to allow enabling `--base=auto` if a suitable base is available, but to skip adding base info otherwise without the format dying.
+
+* * *
+
+With Git 2.30 (Q1 2021), "`git format-patch --output=there`"(man) did not work as expected and instead crashed.
+
+> The option is now supported.
+
+See commit dc1672d, commit 1e1693b, commit 4c6f781 (04 Nov 2020) by Jeff King (`peff`).
+
+(Merged by Junio C Hamano -- `gitster` -- in commit 5edc8bd, 18 Nov 2020)
+
+> `format-patch`: support --output option
+> ---------------------------------------
+> 
+> 
+> Reported-by: Johannes Postler
+> 
+> Signed-off-by: Jeff King
+
+> We've never intended to support diff's `--output` option in format-patch. And until baa4adc66a (parse-options: disable option abbreviation with `PARSE_OPT_KEEP_UNKNOWN,` 2019-01-27, Git v2.22.0-rc0), it was impossible to trigger. We first parse the format-patch options before handing the remainder off to `setup_revisions()`.
+> 
+>  Before that commit, we'd accept "`--output=foo`" as an abbreviation for "--output-directory=foo". But afterwards, we don't check abbreviations, and --output gets passed to the diff code.
+> 
+> 
+> This results in nonsense behavior and bugs. The diff code will have opened a filehandle at rev.diffopt.file, but we'll overwrite that with our own handles that we open for each individual patch file. So the --output file will always just be empty. But worse, the diff code also sets rev.diffopt.close_file, so `log_tree_commit()` will close the filehandle itself. And then the main loop in `cmd_format_patch()` will try to close it again, resulting in a double-free.
+> 
+> 
+> The simplest solution would be to just disallow --output with format-patch, as nobody ever intended it to work. However, we have accidentally documented it (because format-patch includes diff-options). And it does work with "`git log`"(man) , which writes the whole output to the specified file. It's easy enough to make that work for format-patch, too: it's really the same as --stdout, but pointed at a specific file.
+> 
+> 
+> We can detect the use of the --output option by the `"close_file"` flag (note that we can't use rev.diffopt.file, since the diff setup will otherwise set it to stdout). So we just need to unset that flag, but don't have to do anything else. Our situation is otherwise exactly like --stdout (note that we don't fclose() the file, but nor does the stdout case; exiting the program takes care of that for us).
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Nov 22, 2020 at 0:24
+
+ answered May 24, 2016 at 7:26
+
+VonC VonC
+
+1.4m 568 568 gold badges 4.8k 4.8k silver badges 5.7k 5.7k bronze badges
+
+Comments
+--------
+
+Add a comment
+
+This answer is useful
+
+ 12 
+
+Save this answer.
+
+Show activity on this post.
+
+To generate a patch from a specific commit (not the last commit):
+
+```
+git format-patch -M -C COMMIT_VALUE~1..COMMIT_VALUE
+```
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Apr 13, 2021 at 6:30
+
+Peter Mortensen
+
+31.5k 22 22 gold badges 110 110 silver badges 134 134 bronze badges
+
+ answered May 4, 2016 at 16:52
+
+Makah Makah
+
+4,523 3 3 gold badges 51 51 silver badges 68 68 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+This answer is useful
+
+ 7 
+
+Save this answer.
+
+Show activity on this post.
+
+With my Mercurial background I was going to use:
+
+```
+git log --patch -1 $ID > $file
+```
+
+But I am considering using `git format-patch -1 $ID` now.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Apr 13, 2021 at 6:48
+
+Peter Mortensen
+
+31.5k 22 22 gold badges 110 110 silver badges 134 134 bronze badges
+
+ answered Jan 31, 2020 at 18:49
+
+alls0rts alls0rts
+
+258 3 3 silver badges 11 11 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+This answer is useful
+
+ 5 
+
+Save this answer.
+
+Show activity on this post.
+
+If you just want diff the specified file, you can use:
+
+> git diff master 766eceb -- connections/ > 000-mysql-connector.patch
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Apr 13, 2021 at 6:47
+
+Peter Mortensen
+
+31.5k 22 22 gold badges 110 110 silver badges 134 134 bronze badges
+
+ answered Jun 1, 2018 at 6:29
+
+jiahut jiahut
+
+1,531 15 15 silver badges 15 15 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+This answer is useful
+
+ 2 
+
+Save this answer.
+
+Show activity on this post.
+
+I was also struggling with the same question.
+
+Here is what I found out
+
+```
+git format-patch -1 -s <commit-id>
+```
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Sep 20, 2024 at 12:41
+
+Gino Mempin
+
+30.4k 31 31 gold badges 125 125 silver badges 174 174 bronze badges
+
+ answered Sep 20, 2024 at 8:37
+
+Anshu Gaur Anshu Gaur
+
+31 2 2 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+This answer is useful
+
+ 0 
+
+Save this answer.
+
+Show activity on this post.
+
+What is the way to generate a patch only for the specific SHA-1 value?
+
+It's quite simple:
+
+Option 1. `git show commitID > myFile.patch`
+
+Option 2. `git commitID~1..commitID > myFile.patch`
+
+Note: Replace `commitID` with the actual commit id (SHA-1 commit code).
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Apr 13, 2021 at 6:44
+
+Peter Mortensen
+
+31.5k 22 22 gold badges 110 110 silver badges 134 134 bronze badges
+
+ answered Jan 17, 2017 at 9:40
+
+Ankush Ankush
+
+81 1 1 bronze badge
+
+2 Comments
+----------
+
+Add a comment
+
+Anshuman Manral
+
+Anshuman Manral Over a year ago
+
+Option 2 is also an invalid command. You will get error like: git a5f4bcaeb7fa7de27ae79d9522332e872889bbf0~1..a5f4bcaeb7fa7de27ae79d9522332e872889bbf0 git: 'a5f4bcaeb7fa7de27ae79d9522332e872889bbf0~1..a5f4bcaeb7fa7de27ae79d9522332e872889bbf0' is not a git command. See 'git --help'. Pleas check before posting answers
+
+2018-03-28T08:44:05.34Z+00:00
+
+3
+
+Reply
+
+*   Copy link
+
+Brent
+
+Brent Over a year ago
+
+Option 1 is actually what I was looking for when I went searching how to do this. +1 from me!
+
+2021-04-06T19:08:47.273Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+This answer is useful
+
+ 0 
+
+Save this answer.
+
+Show activity on this post.
+
+Here is a bash function to apply a Github commit url, append `.patch` to it, and apply to your local repo without the need for additional git commands.
+
+```bash
+# Add to your ~/.bashrc and `source ~/.bashrc`
+
+dapply() {
+  # Author: Zhanwen Chen (https://github.com/zhanwenchen), Cameron Tod (https://gist.github.com/cam8001)
+  # Based on https://gist.github.com/cam8001/9307192
+  # Usage: `dapply https://github.com/google/XNNPACK/commit/5f23827e66cca435fa400b6e221892ac95af0079`
+  # NOTE: Need to be a GitHub url for the `.patch` conversion to work.
+  # Downloads and applies a patch from a URL.
+
+  if [ -z "$1" ]; then
+    echo ".bashrc: dapply: You need to supply a URL to a patch file."
+    return 1
+  fi
+
+  URL="$1"
+
+  # If the URL doesn't end with ".patch", append it
+  if [[ "${URL}" != *.patch ]]; then
+    echo ".bashrc: dapply: Appending .patch to URL=${URL}"
+    URL="${URL}.patch"
+    echo ".bashrc: dapply: Appended URL=${URL}"
+  fi
+
+  # Download a patch and apply it.
+  curl -L "${URL}" | git apply -v --index # -L follows redict fixes .../pull/.../commit/... empty curl response.
+
+  # Commit patch and add a log message.
+  git commit -m ".bashrc: dapply: Applied ${URL} to current repo $(realpath .)."
+}
+```
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Dec 6, 2024 at 21:50
+
+ answered Dec 6, 2024 at 21:04
+
+Zhanwen Chen Zhanwen Chen
+
+1,484 20 20 silver badges 22 22 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+Your Answer
+-----------
+
+Thanks for contributing an answer to Stack Overflow!
+
+*   Please be sure to _answer the question_. Provide details and share your research!
+
+But _avoid_ …
+
+*   Asking for help, clarification, or responding to other answers.
+*   Making statements based on opinion; back them up with references or personal experience.
+
+To learn more, see our tips on writing great answers.
+
+Draft saved
+
+Draft discarded
+
+### Sign up or log in
+
+ Sign up using Google 
+
+ Sign up using Email and Password 
+
+Submit
+
+### Post as a guest
+
+Name 
+
+Email 
+Required, but never shown
+
+ Post Your Answer  Discard 
+By clicking “Post Your Answer”, you agree to our terms of service and acknowledge you have read our privacy policy.
+
+Start asking to get answers
+
+Find the answer to your question by asking.
+
+Ask question
+
+Explore related questions
+
+*   git
+*   patch
+*   format-patch
+
+See similar questions with these tags.
+
+*    The Overflow Blog 
+*    Your runbooks are obsolete in the age of agents 
+*    Featured on Meta 
+*     A First Look: Stack Overflow Redesign 
+*     Community Asks Sprint Announcement - October/November 2025 
+*     Upcoming opinion-based questions alpha experiment on Stack Overflow 
+
+Report this ad
+
+Report this ad
+
+Community activity
+
+Last 1 hr
+
+*   Users online activity  4803 users online 
+*    9 questions 
+*    9 answers 
+*    45 comments 
+*    135 upvotes 
+
+Popular tags
+
+java c++sql c#php javascript
+
+Popular unanswered question
+
+GTK4 App in Rust: How to add application icon (gresource)?
+
+svg rust icons png gtk4
+
+user31753457
+*   1
+
+yesterday
+
+#### Linked
+
+2 how to easily select a single commit when a range must be specified?
+
+901 How do I "un-revert" a reverted Git commit?
+
+244 How do I simply create a patch from my latest git commit?
+
+193 When applying a patch is there any way to resolve conflicts?
+
+233 What is the difference between git am and git apply?
+
+131 GitHub - Pull changes from a template repository
+
+112 How to apply a git patch from one repository to another?
+
+90 git: generate a single patch across multiple commits
+
+70 Pull Request, ignore some file changes
+
+27 What to do if git-am fails with “does not exist in index”?
+
+See more linked questions
+
+#### Related
+
+76 In git, how do I create a single patch for the last 2+ revisions?
+
+453 How to apply a patch generated with git format-patch?
+
+244 How do I simply create a patch from my latest git commit?
+
+55 How to create a patch without commit in Git?
+
+6 How to generate a git patch with a local commit
+
+12 How to quickly get a patch from a specific commit in GitHub?
+
+2 git format-patch to generate a patch for a specific file part of a commit
+
+0 how to create one patch from different commits?
+
+110 How to generate patch for all commits in a branch?
+
+9 git format-patch for all the commits to a file
+
+#### Hot Network Questions
+
+*    How do I remove items from the Windows 11 right-click menu?
+*    How often should the chain on a bike being used for indoor training be lubricated?
+*    Criterion for capture or escape orbit
+*    Origins of the Airy function
+*    Question about Dragon Ferocity and Feral Combat Training
+*    Are 737 pilots able to let passengers hear ATC communications?
+*    How to disable the shortcut of pressing and releasing Ctrl+Alt+Shift+Winkey that launches M365 Copilot?
+*    Syntax Error on ssed for Regex Subroutine definitions
+*    How is saturation defined for a bipolar transistor?
+*    Is this reasonable to be expected of an undergrad?
+*    Identify Redundant Regex
+*    How do you get PCI-1 NVMe expansion cards to allow SSD to act as boot device?
+*    Why is N2 higher than N3 during engine start on an A330neo?
+*    Remote Passkey Login
+*    Enolizability of different enolizable sites
+*    Table with integrated header
+*    Any ideas on faculty hiring for AI for math in this cycle?
+*    Can I ask the original authors not to publish a corrigendum on their own so I can publish a comment?
+*    How filesystem blocks relate to NVMe blocks
+*    Dual US/Canada citizen: Which passport to use at airport security?
+*    The usefulness of the material implication
+*    Why do JavaScript Websocket objects not get destroyed when they go out of scope?
+*    What is that extra exhaust on the RS-68
+*    Clever way of getting blocks from block diagonal or block anti-diagonal matrices?
+
+Question feed
+
+Subscribe to RSS
+================
+
+ Question feed 
+To subscribe to this RSS feed, copy and paste this URL into your RSS reader.
+
+ 
+
+Why are you flagging this comment?
+==================================
+
+Probable spam. 
+This comment promotes a product, service or website while failing to disclose the author's affiliation.
+
+ 
+
+Unfriendly or contains harassment/bigotry/abuse. 
+This comment is unkind, insulting or attacks another person or group. Learn more in our Abusive behavior policy.
+
+ 
+
+Not needed. 
+This comment is not relevant to the post.
+
+ 
+
+Enter at least 6 characters
+
+Something else. 
+A problem not listed above. Try to be as specific as possible.
+
+ 
+
+Enter at least 6 characters
+
+Flag comment Cancel
+
+You have 0 flags left today
+
+##### Stack Overflow
+
+*   Questions
+*   Help
+*   Chat
+
+##### Products
+
+*   Teams
+*   Advertising
+*   Talent
+
+##### Company
+
+*   About
+*   Press
+*   Work Here
+*   Legal
+*   Privacy Policy
+*   Terms of Service
+*   Contact Us
+*    Your Privacy Choices 
+*   Cookie Policy
+
+##### Stack Exchange Network
+
+*   Technology
+*   Culture & recreation
+*   Life & arts
+*   Science
+*   Professional
+*   Business
+*   API
+*   Data
+
+*   Blog
+*   Facebook
+*   Twitter
+*   LinkedIn
+*   Instagram
+
+Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under CC BY-SA. rev 2025.10.21.35661
+
+By continuing to use this website, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our Cookie Policy. By exiting this window, default cookies will be accepted. To reject cookies, select an option from below.
+
+Necessary cookies only
+
+Customize settings

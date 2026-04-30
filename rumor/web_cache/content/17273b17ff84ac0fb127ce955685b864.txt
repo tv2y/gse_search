@@ -1,0 +1,526 @@
+Title: Enhancing accuracy of air quality sensors with machine learning to augment large-scale monitoring networks
+
+URL Source: https://www.nature.com/articles/s41612-024-00833-9
+
+Markdown Content:
+*   Article
+*   Open access
+*   Published: 27 December 2024
+
+*   Khaiwal Ravindra ORCID: orcid.org/0000-0002-1000-4844 1, 
+*   Sahil Kumar 2, 
+*   Abhishek Kumar 2&
+*   …
+*   Suman Mor 2
+
+_npj Climate and Atmospheric Science_**volume 7**, Article number:326 (2024) Cite this article
+
+*   4559 Accesses
+
+*   9 Citations
+
+*   1 Altmetric
+
+*   Metrics details
+
+Abstract
+--------
+
+Low-cost sensors have revolutionized air quality monitoring, however, precision is questioned compared to reference instruments. Hence, the performance of two widely used PM 2.5 Sensors, Purple Air (PA) and ATMOS, were evaluated over a 10-month period in the North Western-Indo Gangetic Plains (NW-IGP). In-field collocation with Beta Attenuation Monitor found low _R_ 2 values; 0.40 for ATMOS and 0.43 for PA. To calibrate and improve the accuracy of sensors, five Machine Learning (ML) models and an empirical relative humidity correction methodology were used separately for both sensors. Out of these, the Decision Tree outperformed others, and _R_ 2 values improved to 0.996 for ATMOS and 0.999 for PA. Root mean square error reduced from 34.6 µg/m 3 to 0.731 µg/m 3 for ATMOS and from 77.7 µg/m 3 to 0.61 µg/m 3 for PA, while using DT as a calibrating model. The study reveals the best-performing ML model for correcting PM 2.5 sensor data, enhancing the accuracy of air quality monitoring systems.
+
+### Similar content being viewed by others
+
+Introduction
+------------
+
+The increasing air pollution in developing nations has been linked to increased adverse health effects on humans 1. The rising air pollution levels don’t remain limited to the source region but are also observed to follow long-range transportation due to meteorology 2,3. To address this issue, it is essential to conduct high-resolution spatial and temporal monitoring of key air pollutants. For this purpose, ground-based monitoring using high-quality reference-grade instruments (Federal Reference Method (FRM)/Federal Equivalent Method (FEM)) is the most reliable approach. These instruments provide high-quality pollutant data and are recognized as standard instruments by major international air pollution regulatory bodies 4,5,6,7.
+
+A major constraint to the widespread use of FRM/FEM instruments is their high initial setup and maintenance costs. As a result, there is a sparse network of such stations in developing countries compared to developed nations. In the past decades, low-cost sensors (LCS) for air quality monitoring have emerged and are now used globally 8,9. These sensors play a crucial role in air quality monitoring by providing real-time, high-resolution temporal and spatial data due to their easy and affordable deployment and low maintenance costs. LCS is capable of monitoring gases, Particulate Matter (PM), VOCs, and airborne microorganisms 10,11. Gas sensors typically utilize electrochemical and metal oxide technologies, while PM sensors generally operate on light scattering principles. The size-specific signals produced by these sensors are converted into mass concentrations using algorithms 12,13,14,15,16.
+
+Despite their various advantages, the use of LCS has limitations. A significant drawback is the quality of data generated compared to FRM/FEM instruments. These discrepancies in PM measurements between LCS and FRM/FEM arise from differences in their operating principles 17,18,19. Additionally, LCS is sensitive to meteorological factors, with many studies highlighting the significant impact of Relative Humidity (RH)20,21. Therefore, to enhance the accuracy of air quality data from these sensors, calibration with FRM/FEM instruments is necessary, typically achieved through collocation methods, which include both laboratory and field setups. The laboratory method is often considered to be more reliable, as it allows sensors to be tested under ambient conditions similar to those they will encounter in real-world monitoring 22. For calibration, researchers have used various models, ranging from simple linear regression to more complex Machine Learning (ML) models, with ML models generally yielding the best performance in most studies 23,24.
+
+The performance of different calibration models varies by location, and to date, few studies have explored these models to correct LCS data in India 25,26. This study is the first to conduct long-term, in-field calibration of two widely used LCS: PA, which has the largest global network, and ATMOS, which has the largest network in India, specifically in NW-IGP. In this study, we assessed the performance of these sensors in measuring PM 2.5 against FEM Beta Attenuation Monitor (BAM) and examined the influence of ambient meteorology on LCS performance.
+
+Five ML models; Multiple Linear Regression (MLR), Decision Tree (DT), Random Forest (RF) Regression Model, Support Vector Machine (SVM), XGBoost (XGB), and an empirical RH correction methodology were employed to calibrate raw measurements from these sensors. These LCS were collocated with the BAM for 10 months, covering all seasons. The study identifies the best-performing ML model, capable of correcting raw sensor measurements in spatial networks across similar urban areas throughout the Indo-Gangetic Plains (IGP) and beyond. The outstanding performance of the model enhances spatial and temporal air quality monitoring, aiding in the identification of local air pollution hotspots, accurate exposure assessment, health risk evaluation, and informed source-oriented policy making. A graphical abstract of the study is presented in Fig. 1.
+
+**Fig. 1**
+
+Graphical representation of the study.
+
+Full size image
+
+Results and discussion
+----------------------
+
+### Raw ATMOS and PA measurements
+
+The raw PM 2.5 measurements from the ATMOS sensor ranged from 0.02 to 328.35 µg/m 3, with a mean value of 51.38 µg/m 3. In comparison, the raw PM 2.5 values from the PA sensor ranged from 1.27 to 537.68 µg/m3, with a mean value of 91.59 µg/m 3. The BAM PM 2.5 measurements ranged from 0.91 to 213.63 µg/m 3, with a mean value of 45.29 µg/m 3. A time series comparison of PM 2.5 measurements from all these instruments is presented in Fig. 2. Both PA and ATMOS measurements tended to overestimate PM 2.5 levels compared to BAM, particularly at higher concentrations, with PA showing a greater degree of overestimation. The root mean square error (RMSE) for raw ATMOS and PA measurements were found to be 77.67 µg/m 3 and 34.6 µg/m 3, respectively. The mean absolute error (MAE) was 24.19 µg/m 3 for ATMOS and 54.52 µg/m 3 for PA.
+
+**Fig. 2: Comparison of Raw LCS PM 2.5 measurements with BAM.**
+
+**a** Comparison as time series. Red, blue, and green lines indicate the raw PM 2.5 measurements by ATMOS, Purple Air, and BAM monitors, respectively. **b** The regression plots of both ATMOS and Purple air, with BAM, along with _R_-square and RMSE values.
+
+Full size image
+
+The coefficient of determination (COD) between ATMOS and BAM was 0.40, while it was 0.43 between PA and BAM. Scatter plots and linear fit for these parameters are shown in Fig. 2. In global studies involving long-term field collocations with BAM, higher COD values (ranging from 0.8 to 0.9) have been recorded for PA sensors. However, these results were obtained in locations with very low PM 2.5 concentrations 27,28. All statistics of raw measurements, including minimum and maximum value and standard deviation, are summarized in Table 1.
+
+**Table 1 Statistics of raw PM 2.5 measurements by PA, ATMOS, and BAM in Chandigarh, India**
+
+Full size table
+
+Correlation plots of ATMOS PM 2.5, PA PM 2.5, and their respective RH and Temperature (T) with BAM PM 2.5 are presented in Fig. 3. Long-term collocation studies in the IGP region of India using these LCS are limited. A study found lower COD ranging from 0.55 to 0.74 for PA sensors during long-term collocation with BAM in IGP cities, where PM 2.5 levels were higher 29. Another study reported a COD of 0.32 during a two-month collocation with BAM in Chandigarh 30. Research indicates that the composition, and size of PM, along with ambient meteorological conditions, significantly impact LCS performance 31. This variability may explain why these sensor’s performance differs from city to city, within the same region. The lower performance of these sensors in this study could also be attributed to discrepancies between the ambient conditions where the sensors were calibrated post-manufacturing and those present in the study area.
+
+**Fig. 3: Pearson correlation plot of ATMOS, PA, and their respective RH and T with BAM PM 2.5 (labeled as PM 2.5 _CQM).**
+
+The values inside the boxes indicate the p-value, which is significant.
+
+Full size image
+
+Meteorological factors, particularly RH, have been identified as a major contributor to the measurement uncertainty in LCS 32. This bias in raw measurements for both LCS is evident in Fig. 2 and is further compared in Table 2. The data in Table 2 shows that the detection of particulates increases with rising RH, for both the ATMOS and PA sensors. However, this effect is negligible in BAM measurements as it has a heater at the inlet, which regulates the RH by maintaining a setpoint 33,34.
+
+**Table 2 Comparison of mean and median PM 2.5 recorded by LCS and BAM in different RH bins**
+
+Full size table
+
+### Performance of calibration models
+
+The performance of each ML model was assessed using RMSE, MAE, and Mean Absolute Percentage Error (MAPE) of the corrected PM 2.5 values from the LCS (testing split data). The DT model demonstrates the best performance for both sensors among all the models. Using DT for ATMOS, RMSE decreased from 34.6 µg/m 3 to 0.731 µg/m 3, the MAE dropped from 24.19 µg/m 3 to 0.177 µg/m 3, and the MAPE improved from 57.9% to 0.41%. Using DT for PA, RMSE reduced from 77.7 µg/m 3 to 0.61 µg/m 3, the MAE fell from 54.52 µg/m 3 to 0.135 µg/m 3 and the MAPE from 125.74% to 0.37%. The DT’s ability to capture non-linear relationships and adapt to complex patterns in the data likely contributed to its superior performance, particularly in predicting PM 2.5 concentration.
+
+Additionally, decision trees are valued for their interpretability, making it easier to understand and validate the model’s decision-making process 35. While previous studies have indicated that RF models often outperform DT with larger datasets, the DT model performs better for less data 36. In this study, the DT model may be performing better by partitioning the feature space 37, and efficiently capturing complicated patterns 38, while other models may struggle to capture non-linear relationships, resulting in low performance in our dataset for our study region. This finding highlights the advantages of the DT algorithm within R and provides valuable insights for calibrating LCS.
+
+While the performance of the DT model is exceptionally good on the testing/validation dataset, its performance was further evaluated on an unseen dataset, which was not part of the initial training and testing/validation dataset, to assess potential overfitting 39. A total of 1,849 raw PM 2.5 measurements for ATMOS and 1391 PM 2.5 measurements for PA, were used for the analysis. The DT model achieved an _R_ ² of 0.986 for PA and an R² of 0.987 for ATMOS on the unseen dataset, indicating strong generalization and minimal overfitting that supports the robustness of the DT model. The evaluation metrics are presented in Table 3, while the linear regression plots and models of corrected LCS measurements (testing with unseen dataset) alongside the corresponding BAM measurements are illustrated in Figs. S1 to S4.
+
+**Table 3 Performance metrics of both LCS for corrected (testing) data in Chandigarh, India**
+
+Full size table
+
+The COD values of corrected PM 2.5 measurements from the other models ranged from 0.42 to 0.72 for ATMOS and from 0.52 to 0.79 for PA. While the performance metrics among these models did not significantly differ, the DT model notably outperformed all others. The RH correction methodology performed better than all ML models except for DT. This methodology involved calculating k and m factors in two ways, i.e. for ‘14-day sliding windows’ and ‘constant m and k’ for whole data. The correction equation utilizing the m and k factors derived from 14-day windows improved the _R_ 2 to 0.72 for ATMOS and 0.79 for PA (Table 3 and Fig. 4). In contrast, the same equation applied with optimized but constant m and k factors, did not yield satisfactory results (Supplementary Figs. S5 and S6). In a separate study, various ML calibration models were tested on nine LCS over a nine-month collocation period in Chennai, where the SVM model outperformed others 26.
+
+**Fig. 4: Regression plots and statistics of corrected LCS measurements (testing data) and corresponding BAM measurements.**
+
+**a** Regression plots and statistics of ATMOS. **b** Regression plots and statistics of Purple Air. The best-fit line in each plot is shown in red, and the values of intercept, slope, and _R_-squared are given separately in each plot.
+
+Full size image
+
+This variation in model performance across various regions may be attributed to differences in aerosol morphology, the composition of contributing sources, and meteorological conditions 12,40. Detailed performance metrics for all models are provided in Table 3. Scatter plots and statistics of linear regression for corrected LCS measurements (testing data in case of ML models) alongside corresponding BAM measurements are depicted in Fig. 4. Model residuals and comparison of data corrected by models with BAM are given in Supplementary Figs. S7 to S26 for ATMOS and Supplementary Figs. S27 to S46 for PA in the supplementary file.
+
+### Effect of RH on LCS measurements
+
+To evaluate the effect of RH on the performance of LCS, raw PM 2.5 measurements of both LCS were categorized into four groups based on the corresponding ambient RH levels. These were RH ≤ 25%, 25% < RH ≤ 50%, 50% < RH ≤ 75% and RH > 75%. Further, the COD was then calculated between LCS PM 2.5 measurements and corresponding BAM PM 2.5 values for each group. The highest COD values for both LCS were found in the highest RH group, i.e., RH > 75 (with COD = 0.59 for ATMOS and 0.63 for PA). Conversely, the lowest COD was recorded for the ≤25 RH group. Scatter plots for these four groups are shown in Fig. 5, while linear regression statistics are presented in Table 4.
+
+**Fig. 5: Comparison of LCS measurements with the reference instrument.**
+
+**a** Regression of raw LCS’s PM 2.5 measurements and BAM PM 2.5 measurements, in different RH groups, i.e., ‘≤25%’, ‘25% < RH _≤_ 50%’, ‘50% < RH _≤_ 75%’ and ‘>75%’. The scatter, best-fit lines in red color are of Purple Air and BAM. The scatter, best-fit lines in black color are of ATMOS and BAM. **b** Box plots of relative humidity and temperature, measured by low-cost sensors and reference instruments.
+
+Full size image
+
+**Table 4 Linear regression statistics of LCS with BAM measurements in Chandigarh, India**
+
+Full size table
+
+The RH and T readings from these sensors differed from those measured at the reference Continuous Ambient Air Quality Monitoring Station (CAAQM) station. Both LCS recorded higher T and lower RH compared to the reference station (see Figs. 5 and 6). This discrepancy arises because the temperature sensors are placed inside the sensor cabinets, which become heated, leading to inflated temperature readings than the ambient true measurements. Consequently, the RH sensors inside these cabinets also indicate lower RH than the ambient levels measured by the reference instrument. The comparison of these instruments is shown in Figs. 4 and 6. Many studies have reported a low correlation between LCS PM 2.5 measurements and reference instruments at low RH levels. This can be attributed to RH effects on the size distribution of PM 2.5 particles 41,42. Higher RH facilitates hygroscopic growth of aerosols, improving detection by light-scattering devices due to increased particle size, which enhances light scattering and alters the refractive index 43.
+
+**Fig. 6: Time series comparison of low-cost sensors-measured relative humidity and temperature with reference instrument.**
+
+**a** Comparison of temperature. **b** Comparison of relative humidity. The red, blue, and green lines show the measurements by ATMOS, purple air, and reference instruments, respectively.
+
+Full size image
+
+To curb this bias, some studies have integrated calibration algorithms with hygroscopic factor (k factor derived from Köhler theory) and size distribution correction factor (m factor), resulting in improved calibration outcomes 32,44. In the current study, these k and m factors were also derived empirically, following the same methodology, to assess the calibration performance. The correction method utilizing these factors outperformed all the ML models except for the DT model (as shown in Table 3 and Fig. 4). The ML models in this study were trained with RH and temperature variables incorporated into their algorithms, leading to excellent calibration results, particularly with the DT model.
+
+Materials and methods
+---------------------
+
+### Study area
+
+The study area for this research is Chandigarh, a city located in northern India (30°45′N 76°47′E) and is one of the union territories of India. It has a total area of 114 km 2 with a population exceeding 1 million 45. Its climate is characterized as humid subtropical with varying temperatures from season to season (−1 to 45 °C). The majority of the land use pattern of the city is urban, with a few rural pockets on its outskirts. Notably, Chandigarh has the highest vehicle density in the country, contributing significantly to local air pollution. Additionally, its proximity to the states of Punjab and Haryana leads to a seasonal influx of air pollution, particularly from stubble burning in those regions 46,47.
+
+### Instrumentation and in-field collocation
+
+For the in-field collocation experiment, two LCS, PA and ATMOS, were positioned alongside the BAM (FEM instrument) at the same height (around 12 feet above the ground). Both LCS operate on the nephelometric principle, measuring the light scattered by particles and a laser as the light source. The measurements were conducted from 13th October 2020 to 28th July 2021, covering Post-Monsoon, Winter, Summer, and Monsoon seasons. Hourly averaged PM 2.5 data was downloaded from the APIs of the respective sensors, while hourly FEM PM 2.5 measurements for the same period were retrieved from the Central Pollution Control Board (CPCB) repository. Data was collected from the BAM (PM101M), which is part of the CAAQMS established by the CPCB. Additionally, both LCSs recorded their own meteorological parameters, including RH and T, which were incorporated into their calibration models. Ambient RH and T data were sourced from the same CAAQMS as mentioned above.
+
+### Data processing
+
+A total number of 5222 hourly values from the ATMOS sensor were utilized after excluding data points with erroneous/unrealistic meteorological values for training and testing of model calibration against corresponding BAM measurements. For the PA sensor, 5839 data points were used for training and testing purposes and calibrated with corresponding BAM values. Data points with excessively high values (e.g., temperature readings of 3 data points exceeding 1000 °C), identified as unrealistic (outliers) during plots visualization, were removed from the dataset 48. This pre-processing step was crucial to ensure the ML models were trained accurately, thereby enhancing the reliability of the results. This approach follows standard data processing practices as established in previous studies 49,50.
+
+### Calibration models
+
+Previous studies have demonstrated that models such as Multivariate Linear Regression, Decision Tree, Support Vector Machine, Random Forest, and XGboost have effectively calibrated LCS in various regions worldwide 51,52. In this study, the raw data was randomly divided into 70% for calibration and 30% for testing. 70% of the dataset was allocated for model training, while the remaining 30% was used to evaluate the models against different statistical parameters. Recognizing the established relationship between PM 2.5, RH, and T, we included these as independent variables and BAM PM 2.5 values serving as dependent parameters 12,21. A description of all the ML models and their internal characteristics is provided in the following sub-sections.
+
+#### Multiple linear regression
+
+The MLR model expands upon simple linear regression by accommodating datasets with multiple predictor variables while maintaining a single outcome 53. MLR represents a broader form of simple linear regression, encompassing situations with multiple predictor variables 54. The MLR model assumes that changes in the independent parameter are associated with consistent changes in the dependent variable, with a linear relationship between them 55.
+
+#### Decision tree
+
+The DT is a non-linear model that recursively splits the dataset into subsets based on the most significant features. Its hierarchical composition enables the efficient handling of complex relationships 56. In R, DT is a straightforward and interpretable predictive model that provides easy implementation of complex associations within datasets. We have used the inbuilt library of R to develop a DT ML model 57,58,59. In the R library for DT regression, the internal structure involves recursively partitioning the dataset based on selected features to create a hierarchical tree, where nodes represent splitting criteria and terminal leaves contain regression predictions. This design enables the models to efficiently capture non-linear relationships in the data 56. The key assumptions made in this model are that the data points are independent and identically distributed, the most important feature is used for splitting the data at each node, and there is a non-linear relationship between dependent and independent variables.
+
+#### Random forest regression model
+
+RF is highly useful for its high predictive accuracy and in handling complex datasets. It operates by using multiple decision trees through a process called bagging, which incorporates both feature randomness and bootstrap sampling. The internal structure of RF consists of an ensemble of decision trees, each trained on a subset of the data, using a random selection of features. Predictions from these trees are aggregated through a voting or averaging mechanism 56,60,61,62. This ensemble approach improves robustness, mitigates bias, and provides a powerful tool for classification and regression tasks. RF regression is practically applied to datasets with complex relationships, non-linear patterns, and a large number of features (datasets with a substantial number of independent variables). We have utilized the inbuilt library of R studio and developed the RF model to calibrate LCS 56,63,64. In R’s RF regression (e.g., ‘randomForest’ package. The final prediction is an average or weighted combination of individual tree predictions, leading to improved accuracy and robustness. The key assumptions of this model include that the data points are independent and identically distributed, there is a non-linear relationship between dependent and independent variables, and there is sufficient data availability to construct multiple trees 65.
+
+#### Support vector machine
+
+SVM is an ML model used for regression tasks that identify an optimal hyperplane to minimize the error between predicted and actual values 46. This hyperplane can then be used to estimate the label for unseen data 29,66, and SVM may effectively capture non-linear relationships 30. In the R studio, the internal structure of SVM (e1071 library) focuses on optimizing hyperplane parameters and support vectors to minimize regression errors 31,67,68. The assumptions underlying SVM include that the data can be separated by a hyperplane with a maximum margin, that features are scaled when using the kernels function, that the data points are independent, and there is a non-linear relationship between dependent and independent variables 67.
+
+#### XGBoost
+
+XGB is a highly powerful ML algorithm that adds the strengths of gradient boosting and tree-based models, which leads to prediction accuracy 69. It operates by iteratively training an ensemble of decision trees, minimizing errors from previous iterations, and adding new trees that correct residual errors 70. This algorithm performs gradient boosting with regularization techniques. In the R library for XGB (‘xgboost’ package), the internal structure involves an ensemble of decision trees, and each is sequentially added to minimize the gradient of the loss function 71,72,73. The model’s strength lies in its optimization for both predictive accuracy and regularization, achieved by combining weak learners into a robust predictive model. The assumptions made in the model include that the final prediction is an additive combination of all individual trees, that the input features are relevant to the models, and that there is a non-linear relationship between dependent and independent variables 74.
+
+#### Empirical RH correction methodology
+
+This methodology was adopted from a study where, to minimize bias in LCS measurements, occurring due to hygroscopic growth of particles and varying size distribution, _k_ and _m_ factors were introduced 63. The following Eq. (1) was used for LCS calibration:
+
+$${{\rm{PM}}}_{{\rm{2.5}}}={{\rm{PM}}}_{{\rm{2.5}}\,{\rm{LCS}}}\times \frac{{\rm{m}}}{{{1}}+\frac{{\rm{k}}}{\frac{{{100}}}{{{\rm{RH}}}_{{\rm{LCS}}}\,}-{{1}}}}$$
+
+(1)
+
+Here k is the hygroscopic growth parameter derived from _k_-Köhler theory and m is the particle size distribution correction factor. More details are provided in a study by Patel et al.32. The above equation does not apply when RH LCS = 100.
+
+### Performance evaluation metrics
+
+To evaluate the calibration performance of these sensors, several metrics were chosen based on the literature review and recommendations from the EPA 75. These metrics included the coefficient of determination, root mean square error, mean absolute error, and mean absolute percentage error. RMSE is commonly used to assess the error between two data sets; in this study, it was applied to calculate the error between raw/corrected sensor measurements and corresponding measurements from reference instruments. MAE measures the distance of the raw/corrected values from the reference instrument’s values, while MAPE calculates the predictive accuracy of the model. The analysis was done in R Studio (V-4.2.2). These metrics were applied separately to the raw PM 2.5 values of LCS and the corrected PM 2.5 values obtained from each model.
+
+Data availability
+-----------------
+
+Data will be made available on request.
+
+Code availability
+-----------------
+
+Code will be available on a knowledge-sharing basis, as it includes intellectual content.
+
+References
+----------
+
+1.   Pandey, A. et al. Health and economic impact of air pollution in the states of India: the Global Burden of Disease Study 2019. _Lancet Planetary Health_**5**, e25–e38 (2020).
+
+2.   Kallos, G., Kotroni, V., Lagouvardos, K. & Papadopoulos, A. On the long-range transport of air pollutants from Europe to Africa. _Geophys. Res. Lett._**25**, 619–622 (1998).
+
+Article CAS Google Scholar
+
+3.   Ravindra, K., Kumar, S. & Mor, S. Long-term assessment of firework emissions and air quality during Diwali festival and impact of 2020 fireworks ban on air quality over the states of Indo Gangetic Plains airshed in India. _Atmos. Environ._**285**, 119223 (2022).
+
+Article CAS Google Scholar
+
+4.   Noble, C. A. et al. Federal reference and equivalent methods for measuring fine particulate matter. _Aerosol Sci. Technol._**34**, 457–464 (2001).
+
+Article CAS Google Scholar
+
+5.   Snyder, E. G. et al. The changing paradigm of air pollution monitoring. _Environ. Sci. Technol._**47**, 11369–11377 (2013).
+
+Article CAS Google Scholar
+
+6.   Taheri Shahraiyni, H., Sodoudi, S., Kerschbaumer, A. & Cubasch, U. The development of a dense urban air pollution monitoring network. _Atmos. Pollut. Res._**6**, 904–915 (2015).
+
+Article Google Scholar
+
+7.   US EPA, O. _EPA Scientists Develop and Evaluate Federal Reference & Equivalent Methods for Measuring Key Air Pollutants_. https://www.epa.gov/air-research/epa-scientists-develop-and-evaluate-federal-reference-equivalent-methods-measuring-key (US EPA, O, 2016).
+
+8.   Borghi, F. et al. Miniaturized monitors for assessment of exposure to air pollutants: a review. _Int. J. Environ. Res. Public Health_**14**, 909 (2017).
+
+Article Google Scholar
+
+9.   Kumar, P. et al. The rise of low-cost sensing for managing air pollution in cities. _Environ. Int._**75**, 199–205 (2015).
+
+Article Google Scholar
+
+10.   Varughese, S. P., Raj, S. M. G., Joel, T. J. & Gautam, S. Detecting airborne pathogens: a computational approach utilizing surface acoustic wave sensors for microorganism detection. _Technologies_**11**, 135 (2023).
+
+Article Google Scholar
+
+11.   Blessy, A., John Paul, J., Gautam, S., Jasmin Shany, V. & Sreenath, M. IoT-based air quality monitoring in hair salons: screening of hazardous air pollutants based on personal exposure and health risk assessment. _Water Air Soil Pollut._**234**, 336 (2023).
+
+Article CAS Google Scholar
+
+12.   Karagulian, F. et al. Review of the performance of low-cost sensors for air quality monitoring. _Atmosphere_**10**, 506 (2019).
+
+Article CAS Google Scholar
+
+13.   Kim, J., Shusterman, A. A., Lieschke, K. J., Newman, C. & Cohen, R. C. The Berkeley atmospheric CO 2 observation network: field calibration and evaluation of low-cost air quality sensors. _Atmos. Meas. Tech._**11**, 1937–1946 (2018).
+
+Article CAS Google Scholar
+
+14.   Lewis, A. C. et al. Evaluating the performance of low-cost chemical sensors for air pollution research. _Faraday Discuss._**189**, 85–103 (2016).
+
+Article CAS Google Scholar
+
+15.   Narayana, M. V., Jalihal, D. & Nagendra, S. M. S. Establishing a sustainable low-cost air quality monitoring setup: a survey of the state-of-the-art. _Sensors_**22**, 394 (2022).
+
+Article CAS Google Scholar
+
+16.   Singh, T. et al. Very high particulate pollution over northwest India captured by a high-density in situ sensor network. _Sci. Rep._**13**, 13201 (2023).
+
+Article CAS Google Scholar
+
+17.   Kushwaha, M. et al. Bias in PM2.5 measurements using collocated reference-grade and optical instruments. _Environ. Monit. Assess._**194**, 610 (2022).
+
+Article CAS Google Scholar
+
+18.   Shukla, K. & Aggarwal, S. G. A technical overview on beta-attenuation method for the monitoring of particulate matter in ambient air. _Aerosol Air Qual. Res._**22**, 220195 (2022).
+
+Article CAS Google Scholar
+
+19.   Triantafyllou, E. et al. Assessment of factors influencing PM mass concentration measured by gravimetric & beta attenuation techniques at a suburban site. _Atmos. Environ._**131**, 409–417 (2016).
+
+Article CAS Google Scholar
+
+20.   Hua, J. et al. Improved PM 2.5 concentration estimates from low-cost sensors using calibration models categorized by relative humidity. _Aerosol Sci. Technol._**55**, 600–613 (2021).
+
+Article CAS Google Scholar
+
+21.   Nakayama, T., Matsumi, Y., Kawahito, K. & Watabe, Y. Development and evaluation of a palm-sized optical PM2.5 sensor. _Aerosol Sci. Technol._**52**, 2–12 (2018).
+
+Article CAS Google Scholar
+
+22.   Rai, A. C. et al. End-user perspective of low-cost sensors for outdoor air pollution monitoring. _Sci. Total Environ._**607–608**, 691–705 (2017).
+
+Article Google Scholar
+
+23.   Cordero, J. M., Borge, R. & Narros, A. Using statistical methods to carry out in-field calibrations of low-cost air quality sensors. _Sens. Actuators B Chem._**267**, 245–254 (2018).
+
+Article CAS Google Scholar
+
+24.   De Vito, S. et al. Calibrating chemical multisensory devices for real-world applications: an in-depth comparison of quantitative machine learning approaches. _Sens. Actuators B Chem._**255**, 1191–1210 (2018).
+
+Article Google Scholar
+
+25.   Sreekanth, V. et al. Inter-versus intracity variations in the performance and calibration of low-cost PM2.5 sensors: a multicity assessment in India. _ACS Earth Space Chem._**6**, 3007–3016 (2022).
+
+Article Google Scholar
+
+26.   Srishti S et al. Multiple PM low-cost sensors, multiple seasons’ data, and multiple calibration models. _Aerosol Air Qual. Res._**23**, 220428 (2023).
+
+Article Google Scholar
+
+27.   Barkjohn, K. K., Gantt, B. & Clements, A. L. Development and application of a United States-wide correction for PM 2.5 data collected with the PurpleAir sensor. _Atmos. Meas. Tech._**14**, 4617–4637 (2021).
+
+Article Google Scholar
+
+28.   Stavroulas, I. et al. Field evaluation of low-cost PM sensors (Purple Air PA-II) under variable urban air quality conditions, in Greece. _Atmosphere_**11**, 926 (2020).
+
+Article CAS Google Scholar
+
+29.   Pisner, D. & Schnyer, D. Support vector machine. in Machine Learning: Methods and Applications to Brain Disorders 101–121 https://doi.org/10.1016/B978-0-12-815739-8.00006-7 (2020).
+
+30.   Christmann, A. & Steinwart, I. Support Vector Machines | SpringerLink. https://link.springer.com/book/10.1007/978-0-387-77242-4 (2008).
+
+31.   Fouodo, C. J. K., König, I. R., Weihs, C., Ziegler, A. & Wright, M. N. Support vector machines for survival analysis with R. _R. J._**10**, 412–423 (2018).
+
+Article Google Scholar
+
+32.   Patel, M. Y., Vannucci, P. F., Kim, J., Berelson, W. M. & Cohen, R. C. Towards a hygroscopic growth calibration for low-cost PM 2.5 sensors. _Atmos. Meas. Tech._**17**, 1051–1060 (2024).
+
+Article CAS Google Scholar
+
+33.   Schweizer, D., Cisneros, R. & Shaw, G. A comparative analysis of temporary and permanent beta attenuation monitors: the importance of understanding data and equipment limitations when creating PM2.5 air quality health advisories. _Atmos. Pollut. Res._**7**, 865–875 (2016).
+
+Article Google Scholar
+
+34.   Huang, C.-H. & Tai, C.-Y. Relative humidity effect on PM2.5 readings recorded by collocated beta attenuation monitors. _Environ. Eng. Sci._**25**, 1079–1090 (2008).
+
+Article CAS Google Scholar
+
+35.   Gao, Y., Wang, Z., Li, C., Zheng, T. & Peng, Z.-R. Assessing neighborhood variations in ozone and PM 2.5 concentrations using the decision tree method. _Build. Environ._**188**, 107479 (2021).
+
+Article Google Scholar
+
+36.   Ali, J. et al. Random Forests and Decision Trees | Semantic Scholar. https://www.semanticscholar.org/paper/Random-Forests-and-Decision-Trees-Ali-Khan/959a8e906ee26b940374b719253c8e188ed78fd3 (2012).
+
+37.   Yin, Q. et al. Interpretable POLSAR image classification based on adaptive-dimension feature space decision tree | IEEE Journals & Magazine | IEEE Xplore. https://ieeexplore.ieee.org/document/9194017 (2020).
+
+38.   Manzella, F. et al. The voice of COVID-19: Breath and cough recording classification with temporal decision trees and random forests—PMC. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9904537/ (2023).
+
+39.   Bush, T. et al. Machine learning techniques to improve the field performance of low-cost air quality sensors. _Atmos. Meas. Tech._**15**, 3261–3278 (2022).
+
+Article CAS Google Scholar
+
+40.   Kang, Y., Aye, L., Ngo, T. D. & Zhou, J. Performance evaluation of low-cost air quality sensors: A review. _Sci. Total Environ._**818**, 151769 (2022).
+
+Article CAS Google Scholar
+
+41.   Jayaratne, R., Liu, X., Thai, P., Dunbabin, M. & Morawska, L. The influence of humidity on the performance of a low-cost air particle mass sensor and the effect of atmospheric fog. _Atmos. Meas. Tech._**11**, 4883–4890 (2018).
+
+Article CAS Google Scholar
+
+42.   Wang, P., Xu, F., Gui, H., Wang, H. & Chen, D.-R. Effect of relative humidity on the performance of five cost-effective PM sensors. _Aerosol Sci. Technol._**55**, 957–974 (2021).
+
+Article CAS Google Scholar
+
+43.   Zang, L., Wang, Z., Zhu, B. & Zhang, Y. Roles of relative humidity in aerosol pollution aggravation over central China during wintertime. _Int. J. Environ. Res. Public Health_**16**, 4422 (2019).
+
+Article CAS Google Scholar
+
+44.   Malings, C. et al. Fine particle mass monitoring with low-cost sensors: corrections and long-term performance evaluation. _Aerosol Sci. Technol._**54**, 160–174 (2020).
+
+Article CAS Google Scholar
+
+45.   CensusIndia. Census of India Website: Office of the Registrar General & Census Commissioner, India. https://censusindia.gov.in/2011-common/censusdata2011.html (CensusIndia, 2011).
+
+46.   Mor, S. et al. Impact of COVID-19 lockdown on air quality in Chandigarh, India: Understanding the emission sources during controlled anthropogenic activities. _Chemosphere_**263**, 127978 (2021).
+
+Article CAS Google Scholar
+
+47.   Ravindra, K., Singh, T., Pandey, V. & Mor, S. Air pollution trend in Chandigarh city situated in Indo-Gangetic plains: understanding seasonality and impact of mitigation strategies. _Sci. Total Environ._**729**, 138717 (2020).
+
+Article CAS Google Scholar
+
+48.   Pengfei, Y., Juanjuan, H., Xiaoming, L. & Kai, Z. Industrial Air Pollution Prediction Using Deep Neural Network. In: Qiao, J. et al. (eds) _Bio-inspired Computing: Theories and Applications. BIC-TA 2018_. Communications in Computer and Information Science. vol 951. https://doi.org/10.1007/978-981-13-2826-8_16 (Springer, Singapore, 2018).
+
+49.   Shakya, K. M., Peltier, R. E., Shrestha, H. & Byanju, R. M. Measurements of TSP, PM10, PM 2.5, BC, and PM chemical composition from an urban residential location in Nepal. _Atmos. Pollut. Res._**8**, 1123–1131 (2017).
+
+Article Google Scholar
+
+50.   Zhao, B. et al. Urban air pollution mapping using fleet vehicles as mobile monitors and machine learning. _Environ. Sci. Technol._**55**, 5579–5588 (2021).
+
+Article CAS Google Scholar
+
+51.   Hong, G.-H. et al. Long-term evaluation and calibration of three types of low-cost PM2.5 sensors at different air quality monitoring stations. _J. Aerosol Sci._**157**, 105829 (2021).
+
+Article CAS Google Scholar
+
+52.   Kumar, V. & Sahu, M. Evaluation of nine machine learning regression algorithms for calibration of low-cost PM 2.5 sensor. _J. Aerosol Sci._**157**, 105809 (2021).
+
+Article CAS Google Scholar
+
+53.   Eberly, L. E. Multiple linear regression. _Methods Mol. Biol._**404**, 165–187 (2007).
+
+Article Google Scholar
+
+54.   Marill, K. A. Advanced statistics: linear regression, part II: multiple linear regression. _Acad. Emerg. Med._**11**, 94–102 (2004).
+
+Article Google Scholar
+
+55.   Nimon, K. F., & Oswald, F. L. Understanding the results of multiple linear regression: beyond standardized regression coefficients. https://journals.sagepub.com/doi/10.1177/1094428113493929 (2013).
+
+56.   Fratello, M. & Tagliaferri, R. in _Encyclopedia of Bioinformatics and Computational Biology_ (eds. Ranganathan, S., Gribskov, M., Nakai, K. & Schönbach, C.) 374–383 (Academic Press, Oxford, 2019).
+
+57.   Prajwala, T. R. A comparative study on decision tree and random forest using R tool. _IJARCCE_ 196–199 https://doi.org/10.17148/IJARCCE.2015.4142 (2015).
+
+58.   Yadav, K. & Thareja, R. Comparing the performance of naive Bayes and decision tree classification using R. _Int. J. Intell. Syst. Appl._**11**, 11–19 (2019).
+
+Google Scholar
+
+59.   Zhang, Z. Decision tree modeling using R. _Ann. Transl. Med._**4**, 275 (2016).
+
+Article Google Scholar
+
+60.   Biau, G. & Scornet, E. A random forest-guided tour. _TEST_**25**, 197–227 (2016).
+
+Article Google Scholar
+
+61.   Guo, B. et al. Estimating PM 2.5 concentrations via random forest method using satellite, auxiliary, and ground-level station datasets at multiple temporal scales across China in 2017. _Sci. Total Environ._**778**, 146288 (2021).
+
+Article CAS Google Scholar
+
+62.   Xu, R. _Improvements to Random Forest Methodology_. Doctoral dissertation, Iowa State University (Iowa State University, 2013).
+
+63.   Garge, N. R., Bobashev, G. & Eggleston, B. Random forest methodology for model-based recursive partitioning: the mobForest package for R. _BMC Bioinforma._**14**, 125 (2013).
+
+Article Google Scholar
+
+64.   Speiser, J. L., Miller, M. E., Tooze, J. & Ip, E. A comparison of random forest variable selection methods for classification prediction modeling. _Expert Syst. Appl._**134**, 93–101 (2019).
+
+Article Google Scholar
+
+65.   Patwari, N. & Wilson, J. RF sensor networks for device-free localization: measurements, models, and algorithms. _Proc. IEEE_**98**, 1961–1973 (2010).
+
+Article Google Scholar
+
+66.   M. Somvanshi, P. Chavan, S. Tambade and S. V. Shinde, “A review of machine learning techniques using decision tree and support vector machine,” 2016 International Conference on Computing Communication Control and automation (ICCUBEA), Pune, India. pp. 1–7, https://doi.org/10.1109/ICCUBEA.2016.7860040 (2016).
+
+67.   Karatzoglou, A., Meyer, D. & Hornik, K. Support vector machines in R. _J. Stat. Softw._**15**, 1–28 (2006).
+
+Article Google Scholar
+
+68.   Lee, H. et al. Remote Sensing | Free Full-text | Using Linear Regression, Random Forests, and Support Vector Machine with Unmanned Aerial Vehicle Multispectral Images to Predict Canopy Nitrogen Weight in Corn. https://www.mdpi.com/2072-4292/12/13/2071 (2020).
+
+69.   Chen, T. & Guestrin, C. XGBoost | Proceedings of the 22nd ACM SIGKDD International Conference on Knowledge Discovery and Data Mining. https://dl.acm.org/doi/10.1145/2939672.2939785 (2016).
+
+70.   Ma, J. & Yu, Z. Application of the XGBoost machine learning method in PM 2.5 prediction: a case study of shanghai-aerosol and air quality research. https://aaqr.org/articles/aaqr-19-08-oa-0408 (2019).
+
+71.   Ferreira, L., Pilastri, A., Martins, C. M., Pires, P. M. & Cortez, P. A comparison of AutoML tools for machine learning, deep learning and XGBoost. in _2021 International Joint Conference on Neural Networks (IJCNN)_ 1–8 (2021).
+
+72.   Noorunnahar, M., Chowdhury, A. H. & Mila, F. A. A tree-based eXtreme Gradient Boosting (XGBoost) machine learning model to forecast the annual rice production in Bangladesh. _PLoS ONE_**18**, e0283452 (2023).
+
+Article CAS Google Scholar
+
+73.   Ramdani, F. & Furqon, M. T. The simplicity of XGBoost algorithm versus the complexity of Random Forest, Support Vector Machine, and Neural Networks algorithms in urban forest classification. https://f1000research.com/articles/11-1069 (2022).
+
+74.   Sagi, O. & Rokach, L. Approximating XGBoost with an interpretable decision tree. _Inf. Sci._**572**, 522–542 (2021).
+
+Article Google Scholar
+
+75.   Duvall, R. et al. Performance Testing Protocols, Metrics, and Target Values for Fine Particulate Matter Air Sensors: Use in Ambient, Outdoor, Fixed Site, Non-Regulatory Supplemental and Informational Monitoring Applications. U.S. EPA Office of Research and Development (Washington, DC, 2021).
+
+Download references
+
+Acknowledgements
+----------------
+
+The authors acknowledge the support of CPCB for providing CAAQMS data. S.M. and K.R. acknowledge the HCWH for the Climate, Health, and Air Monitoring Project (CHAMP) project. S.M. and K.R. also acknowledge the Ministry of Environment, Forest & Climate Change, for identifying their institute as an Institute of Repute (IoR) under the National Clean Air Program (NCAP). K.R. would like to thank the National Program on Climate Change and Human Health (NPCCHH) under the Ministry of Health and Family Welfare (MoHFW) for designating his institute as a Center of Excellence (CoE) on Climate Change and Air Pollution Related Illness.
+
+Author information
+------------------
+
+### Authors and Affiliations
+
+1.   Department of Community Medicine and School of Public Health, Post Graduate Institute of Medical Education and Research (PGIMER), Chandigarh, 160012, India
+
+Khaiwal Ravindra
+
+2.   Department of Environment Studies, Panjab University, Chandigarh, 160014, India
+
+Sahil Kumar,Abhishek Kumar&Suman Mor
+
+Authors
+
+1.   Khaiwal Ravindra
+2.   Sahil Kumar
+3.   Abhishek Kumar
+4.   Suman Mor
+
+### Contributions
+
+Khaiwal Ravindra: conceptualization, data curation, formal analysis, methodology, resources, validation, visualization, writing—original draft, writing—review & editing. Sahil Kumar: data curation, formal analysis, methodology, software, validation, visualization, writing—review & editing. Abhishek Kumar: data curation, formal analysis, methodology, software, validation, visualization, writing—review & editing. Suman Mor: supervision, data curation, formal analysis, methodology, resources, software, validation, visualization, writing—original draft, writing—review & editing.
+
+### Corresponding authors
+
+Correspondence to Khaiwal Ravindra or Suman Mor.
+
+Ethics declarations
+-------------------
+
+### Competing interests
+
+The authors declare no competing interests.
+
+Additional information
+----------------------
+
+**Publisher’s note** Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+Rights and permissions
+----------------------
+
+**Open Access** This article is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License, which permits any non-commercial use, sharing, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if you modified the licensed material. You do not have permission under this licence to share adapted material derived from this article or parts of it. The images or other third party material in this article are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by-nc-nd/4.0/.
+
+Reprints and permissions
+
+About this article
+------------------
+
+### Cite this article
+
+Ravindra, K., Kumar, S., Kumar, A. _et al._ Enhancing accuracy of air quality sensors with machine learning to augment large-scale monitoring networks. _npj Clim Atmos Sci_**7**, 326 (2024). https://doi.org/10.1038/s41612-024-00833-9
+
+Download citation
+
+*   Received: 28 May 2024
+
+*   Accepted: 06 November 2024
+
+*   Published: 27 December 2024
+
+*   DOI: https://doi.org/10.1038/s41612-024-00833-9

@@ -1,0 +1,2330 @@
+Title: Integrated approach for flood shelter site selection and emergency response accessibility analysis at the provincial scale: a case study in Henan, China | Journal of Water and Climate Change
+
+URL Source: https://iwaponline.com/jwcc/article/15/10/5291/104871/Integrated-approach-for-flood-shelter-site
+
+Markdown Content:
+Skip Nav Destination
+
+Article navigation
+
+Research Article|September 23 2024
+
+ABSTRACT
+--------
+
+Emergency response efficiency is affected seriously by shelter location during traffic disruption caused by floods. In this paper, a new framework including the suitability assessment of shelter location and the accessibility analysis of emergency response is proposed. Firstly, an evaluation criteria system from a risk perspective is established to screen candidate shelters. Secondly, candidate shelters’ effective area, capacity, and service radius are combined to determine the suitable shelter locations. Finally, the emergency accessibility of traffic under different rainstorm scenarios is calculated, respectively. The results show that resident emergency congregate shelters are suitable to be built in economically developed and highly densely populated areas around the central part of Henan, and it is mainly to guard against extreme floods caused by heavy rainfall. It should be dominated by emergency evacuation and embarkation shelters to prevent daily floods in the west and southwest. In addition, the reduced accessibility is apparent in the western and southeastern regions owing to road inundation, and occurs in the disaster scenarios of the 20-year return period and more. This study suggests how to select suitable shelters by considering the spatial heterogeneity of the province.
+
+HIGHLIGHTS
+----------
+
+*   A holistic, province-wide framework for flood shelter planning is proposed.
+
+*   Shelter suitability and accessibility results complement and support each other.
+
+*   Severe flooding coexists with the low suitability of shelters in south Henan.
+
+*   The risk to the road network increases prominently in 20-year return-period scenarios.
+
+INTRODUCTION
+------------
+
+China is one of the countries severely affected by flood disasters. According to the _China Water and Drought Disaster Bulletin 2018_, it suffers an average of approximately 20 billion USD in direct economic losses annually. In recent years, extreme rainstorms have increased significantly in frequency and intensity (Shi _et al._ 2020). From July 17 to 23, 2021, heavy rainfall over a large area in Henan Province triggered massive flooding, resulting in more than 300 casualties and 160 million economic losses (Yin _et al._ 2022; Zheng _et al._ 2022). This flood impact far surpassed drainage capacities, resulting in widespread inundation of urban and rural areas. Streets in towns were severely submerged, the water level of rivers and reservoirs rose sharply, and large amounts of water accumulated in hilly areas, causing a highly severe natural disaster (Guo _et al._ 2023; Li _et al._ (2023)). As crucial urban spatial resources and public service facilities, shelters serve as safe havens for people during disasters. When urban areas suffer from floods, timely evacuation of affected residents to shelters becomes imperative (Yáñez-Sandivari _et al._ 2021). Additionally, there is a growing requirement for emergency management professionals to establish precise and grid-based development goals. They need more high-solution spatial data and evaluation standards for the complex decision-making of flood management (An _et al._ 2023; Peng & Ke 2023). Therefore, it is critical to assess whether the locations of shelters are reasonable and can meet the evacuation requirements of residents when a flood occurs.
+
+Currently, the location of shelters has been mainly considered for earthquakes (Aghaie & Karimi 2022). However, with the intensification of flood disasters (Agonafir _et al._ 2023), more and more attention has been paid to shelters for flood prevention. China's Ministry of Housing and Urban–Rural Development released a new version of the _Specification for the Disaster Mitigation Emergency Congregate Shelter_ in 2021, which has shifted the focus from responding to earthquakes to other hazards, especially on flood disasters. With the extremely massive flood disasters (e.g., the German rainstorm of July 13, 2021, and the Beijing rainstorm of July 31, 2023) increasing (Şenik & Uzun 2021), the necessity of selecting shelters within a large-scale research area becomes prominent.
+
+The selection of disaster shelters for decision-making requires considering various factors (Uddin & Matin 2021; Azizi _et al._ 2023; Lyu & Yin 2023), mainly focusing on socio-economic and physical geographic aspects, with limited attention to historical disasters for data availability or other reasons. The occurrence of heavy rainfall and flooding tends to appear with a certain regularity in space and time in comparison with other natural disasters (Barabadi & Ayele 2018; Ge _et al._ 2023), thus the historical rainfall data can provide valuable insights into past natural disasters and give a guide to regional flood disaster management, and it needs to be included in flood shelter selection.
+
+The multi-criteria decision-making methods combined with the analytic hierarchy process (AHP), Technique for Order Preference by Similarity to an Ideal Solution (TOPSIS), grey fuzzy evaluation, entropy weighting, and so forth are usually applied to the weight calculation of the indicators for the shelter location selection (Gong _et al._ 2023; Yadav _et al._ 2024). The common difficulty for all of these methods is the subjective uncertainty of the weight determination for the impact indicators. The AHP-Geodetector method gets around the process of human judgment according to the objective data (Liao _et al._ 2016), which just improves the AHP method and aims to address all kinds of weight issues.
+
+Furthermore, the emergency response aims to protect and save lives through safe and rapid response within a specific time-frame (Li _et al._ 2021). Flood inundation maps provide intuitive decision support for emergency response, which is essential for selecting emergency rescue routes. (Liu _et al_. 2019; Bucar & Hayeri 2020; Huang & Luo 2020; Anuthaman _et al._ 2023). Waterlogging and floods can affect various transportation activities greatly, leading to reduced accessibility of the road network (Tzavella _et al._ 2018). Further research shows that the flood disaster for urban road networks has spatio-temporal heterogeneity (Chen _et al._ 2019; Zhang _et al._ 2023; Zhou _et al_. (2023), The types of impacts of urban flooding on road traffic vary depending on the timing of the rainfall, and flood risks vary between road sections in the same area of pluvial flood damage (Choo _et al._ 2020). Vehicles are maintained at specific speeds to ensure safe travel, and the vehicle speed-limits affect the accessibility of emergency response (Pregnolato _et al_. (2017). Chakraborty _et al._ 2022). Therefore, the impact of the location of shelters on emergency response when roads are flooded needs to be further explored.
+
+Henan Province has been affected by large-scale flooding events repeatedly. Following the severe rainstorm event on July 20, 2021 (referred to as the ‘7·20’ rainstorm incident), six regional emergency material reserve centers (EMRCs) have been established rapidly, and a plan to build disaster shelters at various levels throughout the province has been initiated. Nevertheless, a pressing issue that needs to be solved is the strategic planning of emergency shelters to accommodate the vast population and cover the extensive geographical scope of the whole province. Additionally, it is crucial to ensure rapid and effective emergency response across different cities during a disaster. Based on the background, this study aims to answer three specific questions:
+
+*   (1) Which existing facilities in Henan Province are suitable for reconfiguration or expansion into emergency shelters, considering factors such as shelter capacity, service radius, and adaptability to flood conditions?
+
+*   (2) How do the accessibility and effectiveness of emergency response systems vary among cities in Henan Province under different heavy rainfall return periods?
+
+*   (3) Considering spatio-temporal heterogeneity in emergency response accessibility in Henan, what specific factors are primarily responsible for these disparities?
+
+To answer these questions, this paper proposes a new framework for emergency planning of flood shelter locations, analyzing the spatial disparities in accessibility under six different rainstorm scenarios, and providing a theoretical reference for the future location selection of shelters and provincial-scale emergency response planning. The study is structured as follows: Section 2 introduces the study area and the criteria for site selection indicators. Section 3 presents the details of the methodologies. Section 4 presents and discusses the results, such as suitability maps for shelter locations and the analysis of emergency response accessibility. The last section presents the main conclusions of this research.
+
+RESEARCH PRELIMINARIES
+----------------------
+
+### Research area
+
+Henan Province located in central-eastern China is characterized by distinct seasons with simultaneous high temperatures and heavy rainfall, which makes the region susceptible to frequent meteorological disasters. From 1960 to 2010, there were 214 torrential rains and floods occurred. Particularly noteworthy are the torrential rains that happened in August 1975, which led to the collapse and breach of two large reservoirs (Zhang & Zhang 2023) and 60 mid-sized reservoirs in the Zhumadian area. There were 5.7 billion cubic metres of floodwater released during this event, which covered ten counties in the city of Zhumadian. The event affected a population of 11 million, resulting in approximately 26,000 fatalities, and the economic loss was close to 10 billion CNY (Zhang _et al._ 2023). Additionally, in the ‘7·20’ rainstorm incident mentioned above, due to the lack of complete evacuation facilities, the temporary renovation of evacuation sites in schools, gymnasiums, and libraries by local government departments, volunteers, and residents played an important role in rescuing the victims, and many of the victims were saved, thus minimizing the number of casualties. Therefore, strategically selecting suitable locations for shelters is meaningful work. Figure 1 shows the distribution of the current locations of EMRCs in Henan Province and the severity of the ‘7·20’ rainstorm incident. The contradiction between the scarce shelters and the widespread distribution of disaster points reflects the urgency of selecting emergency shelters in the region.
+
+Figure 1
+
+Henan Province with the distribution of EMRCs and '7·20' rainstorm disaster points.
+
+### Construction of the evaluation criteria system
+
+A novel indicator system from a risk perspective is built for the emergency shelter setting. This comprehensive system comprises three primary indicators: historical extreme rainfall indicators, socio-economic indicators, and physical geography indicators, each of which is further subdivided into several sub-indicators. The flood shelter suitability indicator represents the historical frequency of rainstorm and flood for the reason that the situation of extreme rainfall disaster during a period can determine whether somewhere is suitable for building a flood shelter directly. All of the considered indicators and the required data (normalized difference vegetation index (NDVI), land use, and soil) for the hydrological models are listed in Table 1.
+
+Table 1
+
+Related indicators and data sources
+
+| Indicators and data | Detailed data | Format | Resolution | Year | Data source |
+| --- | --- | --- | --- | --- | --- |
+| Historical extreme rainfall dataset | Average rainstorm volume, peak, and duration | Raster | 0.1° × 0.1° | 2001–2019 | Science Data Bank of China, 2021 (http://www.doi.org/10.11922/sciencedb.j00001.00290) |
+| Socio-economic | Per capita income level, population density, urbanization level, road network density, and medical resources | Text | County | 2021 | Henan Provincial Bureau of Statistics (https://henan.gov.cn) |
+| Physical geography | Elevation, slope, and river network density | Raster | 30 m | 2021 | Geospatial Data Cloud site (http://www.gscloud.cn) |
+| NDVI | - | TIFF | 1 km | 2021 | NASA Earth Observations (https://ladsweb.modaps.eosdis.nasa.gov/) |
+| Land use | Cropland, forest, shrub, grassland, water, barren, impervious, wetland | TIFF | 1 km | 2021 | Scientific Data (https://www.nature.com/sdata/) |
+| Soil | Hydrologic soil groups A, B, C, and D | Shapefile | 250 m | 2018 | ORNL Distributed Active Archive Center (https://doi.org/10.3334/ORNLDAAC/1566) |
+| Henan historical disaster dataset | Frequency of rainstorm and flood | Text | County | 1960–2010 | National Earth System Science Data Sharing Platform – Lower Yellow River Science Data Center (https://doi.org/10.12041/geodata.36834127608500.ver1.db) |
+
+#### Historical extreme rainfall indicators
+
+Historical extreme rainfall indicates the occurrence of past flood events, and the corresponding database can reflect the spatio-temporal distribution and variation characteristics of extreme rainfall with the features of long time-series, high precision, and high resolution (Tong _et al._ 2021). Although there were more rainstorms and floods than other disasters that happened according to the disaster database from 1960 to 2010 in Henan (Qin 2014), the historical flood situation was seldom considered during the shelter-siting for data availability or other reasons. Thus, incorporating historical extreme rainfall indicators for shelter-siting is necessary and in line with the actuality. Therefore, the indicators of average rainstorm volume, peak, and duration from the historical extreme rainfall dataset (2001–2019) are selected by considering the stability of the historical disaster records and the long-term planning of flood shelters.
+
+#### Socio-economic indicators
+
+The socio-economic indicators are divided into five sub-indicators: per capita income level, population density, urbanization level, road network density, and medical resources. These indicators reflect socio-economic development status and have an impact on the siting of shelters. Higher per capita income levels are often associated with individuals' increased capacity to withstand disasters. In addition, a higher standard of living among residents indicates better material and financial conditions for constructing the resident emergency congregate shelters (RECSs). Population density reflects the number of people exposed to potential disaster risks. Areas with high population density indicate a high vulnerability risk, and the siting of RECSs must meet the residents' requirements by considering the quantity and distribution of the local population. Urbanization level reflects the infrastructure development degree and the resilience of the city to a disaster. In particular, the higher density of the road network contributes to improved accessibility and more rapid provision of emergency services, and adequate medical resources ensure the rapid provision of first aid and medical care to those affected by the disaster.
+
+#### Physical geography indicators
+
+To ensure the RECSs situated in secure geographic locations, it is required to consider elevation, slope, and river network density. These indicators denote the physical geographic conditions within the region and affect the selection of RECSs sites greatly. Generally, the region with higher elevation has a lower likelihood of experiencing flood disasters. However, constructing RECSs in high-elevation areas requires the consideration of resource conditions such as transportation. Regions with steeper slopes are characterized by rugged terrain and complex topography, resulting in a higher probability of landslides and floods. The river network density is directly related to the flood risk of the area, with a low river network density likely to indicate relatively fewer water bodies meeting and reducing the likelihood of flooding. Consequently, these physical geography factors must be incorporated into the criteria system.
+
+METHODOLOGY
+-----------
+
+The AHP-Geodetector is developed to select suitable locations for the RECSs by ArcGIS tools. First, the Geodetector method is employed to calculate the influence of various factors (_X_) on the flood shelter suitability (_Y_). Subsequently, the weight of each indicator to determine candidate shelter locations is computed by the Saaty 1–9 scale method based on the AHP. Then, the potential shelter locations are identified via the maximum coverage model (MCM). Finally, the accessibility of emergency response services under different inundation scenarios is calculated by integrating the soil conservation service curve number (SCS-CN) model and the ArcGIS tools (Figure 2).
+
+Figure 2
+
+Research framework of the research.
+
+### The AHP-Geodetector
+
+The AHP-Geodetector method is a spatial data mining approach that integrates AHP and Geodetector techniques to analyze influencing factors and spatial distribution patterns. The AHP can manage the relationships and calculate the mutual influences among multiple factors. The Geodetector specializes in scrutinizing influence factors objectively. Through the synergy of the two methods, a more comprehensive analysis of influencing factors and spatial data patterns can be conducted, and the accuracy and reliability of results can be improved (Chen _et al._ 2022; Xu & Genovese 2022). Meanwhile, the AHP-Geodetector method excels in handling intricate relationships among multiple factors, encompassing both linear/non-linear relationships and positive/negative correlations, and this capability enables a thorough analysis of mechanisms of influencing factors for shelter selection.
+
+This paper intends to employ the Geodetector to determine to what extent factor _X_ explains the spatial variability of attribute _Y_, measured by the _q_-value. _X_ is the impactor of historical extreme rainfall, socio-economics, and physical geography. _Y_ represents the suitability indicator reflected by the average occurrence frequency of rainstorm and flood disasters from 1960 to 2010 in Henan. This method is based on the following assumption: if an independent variable _X_ influences the dependent variable _Y_ considerably, _Y_ and _X_ will exhibit strong spatial similarity. _X_ can be numerical or qualitative data that provide the foundation for the identification of the three indicators contributing to flood disasters comprehensively. The correlation between _X_ and _Y_ can be quantified using the _q_-statistic:
+
+(1)
+
+(2)
+
+In Equations (1) and (2), _N_ represents the number of partitions for variable _Y_ within the study area, and  denotes the variance of _Y_. The number of layers based on the independent variable _X_ is denoted by ⁠, and the _q_-value reflects the ability of independent variable _X_ to explain attribute _Y_.  denotes the count of variable _Y_ in layer _h_, while  signifies the variance of _Y_ variables in layer _h_. The _q-_ value is ⁠, indicating the degree of influence of _X_ on _Y_.
+
+The AHP method (Saaty 1987) is used to make difficult problems into a hierarchy and find the best answer for the goal (Senan _et al._ 2023). The creation of the matrix for pairwise comparisons, the computation of the eigenvector, the eigenvalue, and the consistency ratio are the major procedures.
+
+**Step 1:** Construction of comparison matrix.
+
+A comparison matrix is constructed by Saaty's 1–9 scale based on the factor detection results: if the _q-_ value for the variable  is greater (between 0 and 0.1) than that for the variable ⁠, then the value of  is 3, and the value of  is 1/3. Similarly, if the difference in _q_-values between two variables is 0.1–0.2, 0.2–0.3, or 0.3–0.4, the values in the comparison matrix will be 5, 7, or 9, and 1/5, 1/7, or 1/9. According to these steps, the weight for each indicator will be calculated.
+
+**Step 2:** Calculation of  and ⁠.
+
+(3)
+
+(4)
+
+where _A_ is the comparison matrix and  is the importance weight of criterion _i_.
+
+**Step 3:** Consistency test.
+
+(5)
+
+(6)
+
+where RI is the random index. CR less than 0.1 is acceptable (Saaty 1987).
+
+To illustrate the appropriateness of shelter locations effectively, the evaluation outcomes are categorized into four classes by the natural breaks (Jenks) method (Chaudhary _et al._ 2018): highly suitable (level 1), suitable (level 2), qualified (level 3), and unsuitable areas (level 4). Subsequently, three primary indicators are combined by a weighted overlay tool of the spatial analysis function in ArcMap (Figure 2). This integration process yields a suitability raster map for flood disasters, and then we identify candidate viable locations based on points of interest (POI) data.
+
+### Maximum coverage model
+
+The potential RECSs are screened based on the existing eligible infrastructure in Henan Province combined with the MCM after obtaining areas of suitability for flood shelters. The MCM is used to identify potential shelters based on the effective area, capacity, and service radius for the candidate shelters with the official definition.
+
+According to the practical requirements outlined in the _Construction Standards for Emergency Shelter Facilities_, the shelters are categorized into two types by Henan Provincial Government: emergency evacuation and embarkation shelters (EEESs) and RECSs. The EEESs are designed for short-term stay (<3 d), lasting no more than one day typically, and possess an effective area not exceeding 200 m 2. These small shelters are usually located in open spaces within each community and have access to basic medical resources for daily disaster protection. RECSs are for medium- and long-term disaster sheltering needs (>15 d), further categorized into three categories: Class I, Class II, and Class III. The minimum effective area for Classes I, II, and III is greater than 50,000 , 10,000 , and 2,000 m 2, respectively. The maximum service radius of each type is less than 2.5, 1.5, and 1 km, respectively.
+
+Then, the mathematical algorithm of MCM is built as follows (Equations (7)–(12)):
+
+(7)
+
+(8)
+
+(9)
+
+(10)
+
+(11)
+
+(12)
+
+where _I_ is the set of flood-prone areas  and _J_ is the set of candidate shelters (such as schools, sports venues, parks, etc.) ⁠.
+
+Decision variables:
+
+Additionally, we have the following parameters:
+
+demand at flood-prone area _i_,
+
+service radius of shelter,
+
+service capacity of shelter _j_,
+
+travel distance from flood-prone area _i_ to shelter _j_,
+
+number of shelters to be determined.
+
+The objective function (7) aims to maximize coverage by serving as many flood-prone areas as possible. The objective function (8) seeks to minimize the travel distance from flood-prone areas to shelters. Constraint (9) represents the number of selected shelter facility points. Constraint (10) imposes a capacity restriction, ensuring the number of people served by each facility does not exceed its capacity. Constraint (11) ensures that locations without selected shelter sites will not have corresponding flood-prone areas. Constraint (12) sets a service radius limitation.
+
+### SCS-CN model
+
+Hydrologic models are indispensable for the simulation of inundation. The SCS-CN hydrological model has gained wide recognition by examining the effects of factors like soil type, soil moisture, and land use on runoff. CN represents the potential of the runoff depth. Current related studies already consider the effect of different land use, soil types, and slopes on CN values, and various applications and modifications of the CN method have been made. However, in complex natural environments, the CN value requires more dedicated adjustment (Lian _et al._ 2020). The CN value in TR-55 (Curve Number Tables) cannot be applied to all surface types, especially in a large provincial area with intricate land-cover types and topography (Fan _et al._ 2013; Reddy & Bhavani 2023), and needs to be revised to ensure applicability and reliability.
+
+To obtain suitable CN values that can reflect the actual hydrological conditions of Henan, four factors are adopted to calculate CN values under Antecedent Moisture Condition (AMC) II (moderate, normal, or average soil moisture) via fractional vegetation cover (FVC), soil, land use, and slope conditions.
+
+The FVC is calculated by Equation (13):
+
+(13)
+
+and  are the NDVI values for the areas that are completely bare and fully covered, respectively. The calculation process of FVC is described in Figure 3.
+
+Figure 3
+
+Calculation of FVC.
+
+The land slope is an influential factor in determining the flow of water through the terrain (Forootan 2023). Since the parameter setting of the SCS-CN model is based on the rainfall yield data of gently sloping terrain in the United States, the CN value in Henan Province is revised by applying the slope correction formula (14) according to the topography of each prefectural city (Huang _et al._ 2006):
+
+(14)
+
+where  is the revised value and  denotes the average slope.
+
+Next, rainfall intensity formulas for each prefecture in Henan Province and the SCS-CN model are applied to calculate the runoff depths. For the calculation process of flood inundation depth, see Wang _et al._ (2022). Flood depths are calculated for different return periods: normal level (Scenario 1), 5-year (Scenario 2), 10-year (Scenario 3), 20-year (Scenario 4), 50-year (Scenario 5), and 100-year (Scenario 6).
+
+After the computation of inundation depths for various rainfall return periods, the obtained depths are assigned to the individual links that form the road network, enabling their integration into network analysis. Subsequently, as the depths are allocated to the segments of flooded roads, maximum speeds and travel times are adjusted to reflect the conditions of the inundated road network. The determination of the updated maximum speed takes into account the depth-disruption function, which is expressed as follows (Equations (15) and (16)):
+
+(15)
+
+(16)
+
+where _v_(_w_) represents the maximum allowable speed _v_(_w_) that ensures safe vehicle-control given the depth _w_.
+
+RESULTS AND DISCUSSION
+----------------------
+
+According to the proposed framework, we evaluate the suitability of the shelter location and sites for potential RECSs and calculate the accessibility for emergence response under six inundation scenarios of the return period in Henan Province. Some results are obtained as follows.
+
+### Weights of the selected indicators
+
+Based on the AHP-Geodetector method, the weight of each indicator is calculated (Table 2). We can see that of the three primary criteria, the socio-economic indicators have the largest weighting of 0.6143. Of all the socio-economic indicators, the population density and medical resources are most important, with the weightings of 0.2254 and 0.1727, respectively. This reflects the fact that high population-density areas are more vulnerable to disasters such as flooding and have a higher demand for health services and resources. This is followed by the physical geography indicators, of which elevation has the highest weight of 0.1364. These weighting results indicate that socio-economic indicators have the greatest impact on the suitability of shelters for floods. The historical extreme rainfall indicators show relatively lower values, especially the average rainstorm volume and duration, which have small weights of 0.0303 and 0.0123, but this does not mean they can be ignored, because the total weight is more than 10% (0.1173).
+
+Table 2
+
+The model hierarchy and the computed weights
+
+|  | Main criteria | Global weights | Sub-criteria | Weights | Positive/negative |
+| --- | --- | --- | --- | --- | --- |
+| Suitability assessment | Historical extreme rainfall indicators (A) (Hazard) | 0.1173 | Average rainstorm volume (A1) | 0.0303 | − |
+| Average rainstorm duration (A2) | 0.0123 | − |
+| Average rainstorm peak (A3) | 0.0747 | − |
+| Socio-economic indicators (B) (Vulnerability) | 0.6143 | Urbanization level (B6) | 0.0432 | + |
+| Population density (B7) | 0.2254 | + |
+| Per capita income level (B8) | 0.1055 | + |
+| Road network density (B9) | 0.0675 | + |
+| Medical resources (B10) | 0.1727 | + |
+| Physical geography indicators (C) (Exposure) | 0.2684 | Altitude (C11) | 0.1364 | − |
+| Slope (C12) | 0.0406 | − |
+| River network density (C13) | 0.0712 | − |
+
+### The revised CN value
+
+Compared with the initial CN values, the corrected CN values for Henan Province are larger, especially for Woodland and Bush, which suggests that rainfall infiltration is poorer and runoff is more likely to form. The specific values of CN for different land types can be found in Appendix A (Supplementary Information).
+
+### Analysis of the suitability of the shelters
+
+In Henan Province, the historical extreme rainfall indicator shows more severe disasters in central-eastern and southern regions in comparison with the western and northern regions; shelter suitability overall decreases from north west to southeast (Figure 4(a)). The western regions (e.g., Luoyang and Sanmenxia) and the northern regions (especially Hebi and Anyang) have a large number of ‘qualified’ areas, while the southeastern regions (especially Xinyang and Zhumadian) have many ‘unqualified’ areas. Therefore, based on this indicator alone, the western and northern regions are more suitable for building shelters compared with the rest of the province.
+
+Figure 4
+
+Suitability maps based on the following three criteria: (a) historical extreme rainfall indicators, (b) socio-economic indicators, (c) physical geography indicators.
+
+Regarding socio-economic indicators, the large population in urban agglomerations necessitates the protection and shelter provided by secure refuge locations during disasters. Densely populated areas are generally more susceptible to impacts and potential threats during emergencies. Furthermore, core urban areas with high population densities tend to have more emergency resources, such as hospitals and traffic, that are more resilient to disasters. Often, the peripheral areas of central cities have a large concentration of people while lacking adequate emergency resources, resulting in them being less able to cope with disasters in these areas. Therefore, in the suitability assessment of this indicator, the highly suitable areas are mainly concentrated in the central areas (e.g., Zhengzhou and Xuchang) and the unsuitable areas are mainly concentrated in the economically undeveloped eastern and western areas (e.g., Zhoukou and Luoyang). In western regions and southeastern regions, these indicators exert a more adverse influence on site suitability (Figure 4(b)).
+
+Based on the physical geographic indicators (Figure 4(c)), we can see that numerous mountains in the western region imply limited available land for development. Coupled with current POI data and large-scale unsuitable areas, existing sites may not support the construction of shelters for floods. Additionally, mountainous areas often have the feature of elevated terrain and complex topography, frequently posing geological hazards such as landslides and debris flows. These factors increase the challenges of constructing shelters in the western regions of Henan Province, as reflected in the suitability map of the physical geographic factors.
+
+The suitability map was obtained by the overlay of the three primary indicators according to the weights and the direction parameter (positive or negative) (Table 2) in ArcMap, which exhibit significant disparities, especially in the western and southern regions (Figure 5(a)). Most of the western region is in a highly unsuitable zone due to the prevalence of mountainous areas, lower population density, and limited transportation and medical resources, which should be dominated by the EEESs to prevent daily floods. Zhengzhou, Xuchang, and Zhumadian are densely populated, and the occurrence of floods may cause more casualties and economic losses. The possible reason is the region's history of few floods and better economic resources; the majority of the cities are of low vulnerability to flood and have sufficient areas with high suitability. However, according to the statistics of the whole province, the feasible regions (highly suitable, suitable, and qualified areas) occupy 82.4% of Henan.
+
+Figure 5
+
+(a) Suitability map and (b) candidate Class I, II, and III RECSs.
+
+The candidate shelters were screened by overlaying the suitability map and the POI layer with the feature of effective area and capacity (Figure 5(b)). But these are not the final suitable shelters for it did not consider the flood-prone area. Hence, we selected the ultimate potential shelters by adding the waterlogging points of Henan (data source: https://www.mohurd.gov.cn/gongkai/zhengce/zhengcefilelib/201704/20170419_231550.html) in Figure 5(b) and calculating the service radius of the candidate shelters (Figure 6). It shows the final total number of Class I, Class II, and Class III shelters is 19, 284, and 1,019, respectively. There is significant spatial heterogeneity in the location distribution of potential shelters for Class I compared with Classes II and III. Shelters of Classes I and II are mainly distributed in the central region, especially in the vicinity of Zhengzhou and Xuchang. A large number of Class II and III shelters are present in the south-east and northeast areas (e.g., Zhoukou, Zhumadian, and Xinxiang). Meanwhile, they are also widely distributed in the central region, which reflects the impact of inter-regional differences in economic development on the distribution of potential shelters. In addition, the distribution of potential shelter locations is closely related to the topography, which demonstrates the insufficient number of potential shelters in the western mountainous areas.
+
+Figure 6
+
+Site selection for the final potential RECSs.
+
+To verify the selection result, we changed the waterlogging points data to the case of the ‘7·20’ rainstorm incident by considering the 72 county-affected areas (disaster points as Figure 1 displays) with the same treatment of the MCM. The statistical result shows the coverage rate of potential shelters reaches 87.5%, which demonstrates that the selected shelters can cover the majority of the potentially affected population and provide effective emergency services. The result also confirms the feasibility of the MCM for the flood shelter selection.
+
+### Analysis of emergency response accessibility
+
+Emergency response accessibility analysis reflects the ease of traffic flow between road network nodes when assessing inundation conditions during flood disasters. We calculated the submerged depth and the maximum safe vehicle-speed under six different scenarios by the SCS-CN model and depth-disruption function, respectively. The statistical relation is shown in Figure 7. Then the six EMRCs (displayed in Figure 1) are set as the original location and the selected final potential shelters (as Figure 6 shows) are uploaded as the destinations in the ArcMap, and the origin–destination time-cost matrices for road network nodes are solved by the inverse distance weighting method based on the network analysis tools. Finally, the travel times of the road network between the EMRCs and the selected shelters that reflect the accessibility of the emergency response under different scenarios are obtained and presented in Figure 8. Furthermore, the number, coverage area, and proportion are counted based on the shelter classes (I, II, and III) as Table 3 shows.
+
+Table 3
+
+The statistics of the accessibility for the three types of shelters under the six scenarios
+
+| Accessibility analysis | Scenario 1 * * * | Scenario 2 * * * | Scenario 3 * * * |
+| --- | --- | --- | --- |
+| Number of shelters (I, II, III) | Area/km 2 | Proportion/% | Number of shelters (I, II, III) | Area/km 2 | Proportion/% | Number of shelters (I, II, III) | Area/km 2 | Proportion/% |
+| 0–1 h | 16, 180, 661 | 85,848 | 51.95 | 11, 147, 528 | 57,740 | 34.94 | 10, 128, 458 | 46,538 | 28.16 |
+| 1–2 h | 3, 100, 351 | 69,147 | 41.84 | 8, 123, 400 | 80,222 | 48.55 | 9, 129, 436 | 79,892 | 48.35 |
+| 2–3 h | 0, 4, 7 | 10,070 | 6.09 | 0, 14, 91 | 23,475 | 14.21 | 0, 26, 105 | 29,687 | 17.96 |
+| 3–4 h | 0, 0, 0 | 103 | 0.06 | 0, 0, 0 | 3,728 | 2.26 | 0, 1, 20 | 8,623 | 5.22 |
+| >4 h | 0, 0, 0 | 0 | 0.00 | 0, 0, 0 | 0 | 0.00 | 0, 0, 0 | 426 | 0.26 |
+|  | Scenario 4 * * * | Scenario 5 * * * | Scenario 6 * * * |
+| Accessibility analysis | Number of shelters (I, II, III) | Area/km 2 | Proportion/% | Number of shelters (I, II, III) | Area/km 2 | Proportion/% | Number of shelters (I, II, III) | Area/km 2 | Proportion/% |
+| 0–1 h | 7, 92, 360 | 32,430 | 19.63 | 5, 73, 250 | 18,724 | 11.33 | 4, 59, 193 | 12,860 | 7.78 |
+| 1–2 h | 10, 117, 411 | 75,273 | 45.55 | 8, 100, 407 | 62,267 | 37.68 | 6, 99, 379 | 53,524 | 32.39 |
+| 2–3 h | 2, 64, 167 | 36,228 | 21.92 | 6, 81, 233 | 44,823 | 27.12 | 9, 71, 251 | 48,259 | 29.20 |
+| 3–4 h | 0, 8, 37 | 16,255 | 9.84 | 0, 18, 45 | 19,051 | 11.53 | 0, 40, 97 | 22,544 | 13.64 |
+| >4 h | 0, 3, 44 | 4,981 | 3.01 | 0, 12, 84 | 20,303 | 12.29 | 0, 15, 99 | 27,979 | 16.93 |
+
+Figure 7
+
+Relation between the average inundation depth and the average maximum safe speed.
+
+Figure 8
+
+Accessibility map of emergency response under different flooding scenarios.
+
+The relation between the average inundation depth and the average maximum safe speed displays a significant negative correlation (Figure 7). With the return period increasing, the descending slope of the average maximum safe speed is −6.47 (_R_ 2 = 0.99) and the growth rate of the average inundation depth reaches 23.76 (_R_ 2 = 0.96) based on the linear fitting. According to the further analysis of the maximum safe speed of the inundated road, we find that there is a notable drop of the minimum maximum safe speed from 12.2 km/h (Scenario 3) to 3.5 km/h (Scenario 4), and then there is almost no change in the value with the return period increasing (both are 2 km/h for scenarios 5 and 6).
+
+The accessibility maps in Figure 8 show a trend of gradual decrease from the north-central part of the province outwards. This phenomenon is particularly obvious in the north-central region, where a rapid emergency response can be maintained within 2 h even under the most severe scenario 6. However, there is a noticeable reduction of the accessibility in the western and southeastern regions with the rainstorm intensity increasing, and the response time extends from under 3 h (Scenario 1) to 5 h (Scenario 6).
+
+As shown in Table 3, the proportion of accessibility within 1 h is 51.95%, and the number reaches 93.79% within 2 h under Scenario 1 which means almost all shelters receive a rapid emergency response within 2 h. With the inundation depth increasing, the areas with high timeliness gradually shift from the entire province to the vicinity of EMRCs, and the accessibility of emergency response services decreases strongly, with the timeliness within 1 and 2 h dropping from 51.95% to 7.78% and 93.79% to 40.01%, respectively. It is noteworthy that the accessibility ratio of emergency response in shelters experienced a sharp decline within one hour under scenario 2 and within 2 h under scenario 5, with the decrease reaching 17.01% and 16.17%, respectively. In other words, the reduction in the accessibility of emergency response in shelters within 1 h is more sensitive to rainstorms with a short-term return period, while that within 2 h is more sensitive to rainstorms in long-term scenarios.
+
+Furthermore, for different classes of shelters, all Class I shelters are capable of receiving emergency response services within 3 h. In scenarios 1, 2, and 3, Class I shelters will be able to receive an emergency response within 2 h. However, it is changed in Scenario 4 dramatically. Class II shelters are similar with Scenario 4 as the dividing line. They have strong timeliness of emergency response before this point (Scenario 4), but experience a notable lack of timeliness afterward due to flooding. In contrast to Class I and Class II shelters, the turning point for the timeliness of Class III shelters occurs in Scenario 3. At this point, Class III shelters begin to appear in areas that require more than 3 h (Figure 8 and Table 3). In summary, in scenarios 1–3, most shelters can achieve emergency response within 3 h.
+
+We conducted a comparative analysis of accessibility levels among cities within Henan Province under both normal and flood scenarios by box-and-line plots for visualization (Appendix B, Supplementary Information). The results revealed a distinct disparity of the accessibility levels between a typical flood scenario and normal conditions. Notably, a strong positive correlation between the increasing intensity of the rainstorm and the reduced accessibility was identified based on all assessed scenarios, and the spatial distribution pattern of the accessibility remains the same to a certain extent. It is also essential to highlight the obvious correlation between city areas and accessibility levels. That is, the larger city tends to possess more dispersed emergency shelters, which can impact the efficiency of emergency response services. As the heavy rains intensify, emergency services need to expand the coverage to reach every shelter across the province, and the accessibility of a shelter that far from EMRCs is low. Therefore, it is imperative that the planning of emergency shelters transcends administrative boundaries and is tailored to actual needs to optimize rescue efficiency.
+
+CONCLUSION
+----------
+
+In this study, our focus is on selecting RECSs in Henan Province and the accessibility analysis of emergency response under different inundation scenarios. RECSs serve as important life-support and centralized response shelters for evacuees after disasters, they should be deployed in feasible locations to provide adequate accommodation and medical support facilities for as many people as possible affected by the disaster.
+
+The historical extreme rainfall indicators are added into shelter location criteria innovatively, and the calculated results show the total weight of historical extreme rainfall is 0.1173, which is a relatively low value compared with the other two aspects of the indicators. But it still demonstrates that it is a non-negligible type of factor for the shelter siting as it is over 10%. In addition, the results suggest that there is not a linear relationship between the suitability of shelter selection and the increasing rainstorms, for the reason that the influence of other factors such as socio-economics, physical conditions, etc. are also complicated and huge, which need to be considered more comprehensively. Furthermore, the socio-economic and the geographical factors always are the priority during shelter selection in present practice (Liu 2022), which is consistent with the weight results in this study.
+
+Based on the derived RECSs locations, the SCS-CN model is used to calculate the road inundation depths under different rainfall scenarios. This method is combined with the depth-disruption function to investigate the accessibility of emergency response. We find that inundated roads and excessive distances between RECSs and EMRCs can seriously affect the timing of emergency response, which is reflected in the fact that the western and southeastern parts of Henan often take more than 3 h to receive emergency response in heavy rainfall scenarios 3 and more. In addition, it is noticed that the 20-year return period is a turning point, after which the timeliness of emergency response is obviously reduced, which is consistent with the minimum of the maximum safe vehicle speed under Scenario 4, and it suggests the mutation may be the threshold of the ground surface that can endure the flood. Furthermore, although the closer the shelter is to the EMRCs, the higher the accessibility, such that there is good accessibility even in a 100-year rainstorm disaster in Luohe, Zhumadian, Zhoukou, Puyang, and Xinxiang (these cities are close to the EMRCs), it is still necessary to consider other conditions (e.g., economics, geography, disasters, and other factors) comprehensively for the shelter selection.
+
+At present, the number of potential RECSs in Zhengzhou and the surrounding areas is notably higher than in other areas within the province. In contrast, the western regions, including Sanmenxia and Luoyang, have a shortage of potential RECSs. This spatial discrepancy is primarily due to geographical indicators and resource limitations, as these areas are more mountainous, have lower population density and the urban centers are mostly concentrated in river valley plains. Cross-provincial rescue and resource sharing with the neighboring provinces seem to be good ways to improve the timeliness of emergency response. Additionally, one suggestion that could be considered for future research is to optimize the current distribution of EMRCs locations within the province to meet the timeliness needs of emergency response.
+
+ACKNOWLEDGEMENTS
+----------------
+
+This work was subsidized by the National Natural Science Foundation of China (Grant No. 41501555 & 72274099) and the open project of the Institute of Risk Governance and Emergency Decision-Making.
+
+DATA AVAILABILITY STATEMENT
+---------------------------
+
+All relevant data are included in the paper or its Supplementary Information.
+
+CONFLICT OF INTEREST
+--------------------
+
+The authors declare there is no conflict.
+
+REFERENCES
+----------
+
+Adnan
+
+M. S. G.
+
+, 
+Siam
+
+Z. S.
+
+, 
+Kabir
+
+I.
+
+, 
+Kabir
+
+Z.
+
+, 
+Ahmed
+
+M. R.
+
+, 
+Hassan
+
+Q. K.
+
+, 
+Rahman
+
+R. M.
+
+&
+Dewan
+
+A.
+
+ (
+
+2023
+
+)
+
+,
+
+Journal of Environmental Management
+
+,
+
+326
+
+,
+
+116813
+
+.
+
+.
+
+Aghaie
+
+S.
+
+&
+Karimi
+
+B.
+
+ (
+
+2022
+
+)
+
+,
+
+Socio-Economic Planning Sciences
+
+,
+
+84
+
+,
+
+101420
+
+.
+
+.
+
+Agonafir
+
+C.
+
+, 
+Lakhankar
+
+T.
+
+, 
+Khanbilvardi
+
+R.
+
+, 
+Krakauer
+
+N.
+
+, 
+Radell
+
+D.
+
+&
+Devineni
+
+N.
+
+ (
+
+2023
+
+)
+
+,
+
+Water Security
+
+,
+
+19
+
+,
+
+100141
+
+.
+
+.
+
+An
+
+M.
+
+, 
+Liu
+
+M.
+
+, 
+An
+
+H.
+
+&
+Ramsey
+
+T. S.
+
+ (
+
+2023
+
+)
+
+,
+
+International Journal of Disaster Risk Reduction
+
+,
+
+85
+
+,
+
+103493
+
+.
+
+.
+
+Anuthaman
+
+S. N.
+
+, 
+Ramasamy
+
+S.
+
+, 
+Ramasubbu
+
+B.
+
+&
+Lakshminarayanan
+
+B.
+
+ (
+
+2023
+
+)
+
+,
+
+Journal of Water and Climate Change
+
+,
+
+14
+
+(
+
+12
+
+),
+
+4314
+
+–
+
+4335
+
+.
+
+.
+
+Azizi
+
+E.
+
+, 
+Nikoo
+
+M. R.
+
+, 
+Mostafazadeh
+
+R.
+
+&
+Hazbavi
+
+Z.
+
+ (
+
+2023
+
+)
+
+,
+
+International Journal of Disaster Risk Reduction
+
+,
+
+91
+
+,
+
+103680
+
+.
+
+.
+
+Barabadi
+
+A.
+
+&
+Ayele
+
+Y. Z.
+
+ (
+
+2018
+
+)
+
+,
+
+Reliability Engineering & System Safety
+
+,
+
+169
+
+,
+
+209
+
+–
+
+223
+
+.
+
+Bucar
+
+R. C. B.
+
+&
+Hayeri
+
+Y. M.
+
+ (
+
+2020
+
+)
+
+,
+
+Reliability Engineering & System Safety
+
+,
+
+203
+
+,
+
+107105
+
+.
+
+.
+
+Chakraborty
+
+L.
+
+, 
+Rus
+
+H.
+
+, 
+Henstra
+
+D.
+
+, 
+Thistlethwaite
+
+J.
+
+, 
+Minano
+
+A.
+
+&
+Scott
+
+D.
+
+ (
+
+2022
+
+)
+
+,
+
+Environmental Research
+
+,
+
+210
+
+,
+
+112982
+
+.
+
+.
+
+Chaudhary
+
+A.
+
+, 
+Gustafson
+
+D.
+
+&
+Mathys
+
+A.
+
+ (
+
+2018
+
+)
+
+,
+
+Nature Communications
+
+,
+
+9
+
+(
+
+1
+
+),
+
+848
+
+.
+
+.
+
+Chen
+
+N.
+
+, 
+Yao
+
+S.
+
+, 
+Wang
+
+C.
+
+&
+Du
+
+W.
+
+ (
+
+2019
+
+)
+
+,
+
+Sustainability
+
+,
+
+11
+
+(
+
+10
+
+),
+
+2734
+
+.
+
+.
+
+Chen
+
+P.
+
+, 
+Li
+
+C.
+
+, 
+Chen
+
+S.
+
+, 
+Li
+
+Z.
+
+, 
+Zhang
+
+H.
+
+&
+Zhao
+
+C.
+
+ (
+
+2022
+
+)
+
+,
+
+Remote Sensing
+
+,
+
+14
+
+(
+
+10
+
+),
+
+2412
+
+.
+
+.
+
+Choo
+
+K.-S.
+
+, 
+Kang
+
+D.-H.
+
+&
+Kim
+
+B.-S.
+
+ (
+
+2020
+
+)
+
+,
+
+Water
+
+,
+
+12
+
+(
+
+4
+
+),
+
+926
+
+.
+
+.
+
+Fan
+
+F.
+
+, 
+Deng
+
+Y.
+
+, 
+Hu
+
+X.
+
+&
+Weng
+
+Q.
+
+ (
+
+2013
+
+)
+
+,
+
+Remote Sensing
+
+,
+
+5
+
+(
+
+3
+
+),
+
+1425
+
+–
+
+1438
+
+.
+
+.
+
+Forootan
+
+E.
+
+ (
+
+2023
+
+)
+
+,
+
+Environmental Monitoring and Assessment
+
+,
+
+195
+
+(
+
+4
+
+),
+
+489
+
+.
+
+.
+
+Ge
+
+J.
+
+, 
+Tang
+
+H.
+
+, 
+Yang
+
+N.
+
+&
+Hu
+
+Y.
+
+ (
+
+2023
+
+)
+
+,
+
+ISPRS Journal of Photogrammetry and Remote Sensing
+
+,
+
+195
+
+,
+
+105
+
+–
+
+128
+
+.
+
+.
+
+Gong
+
+C.
+
+, 
+Lyu
+
+F.
+
+&
+Wang
+
+Y.
+
+ (
+
+2023
+
+)
+
+,
+
+Ecological Indicators
+
+,
+
+155
+
+,
+
+111060
+
+.
+
+.
+
+Guo
+
+X.
+
+, 
+Cheng
+
+J.
+
+, 
+Yin
+
+C.
+
+, 
+Li
+
+Q.
+
+, 
+Chen
+
+R.
+
+&
+Fang
+
+J.
+
+ (
+
+2023
+
+)
+
+,
+
+Cities
+
+,
+
+134
+
+,
+
+104168
+
+.
+
+.
+
+Huang
+
+K.-T.
+
+&
+Luo
+
+Q.
+
+ (
+
+2020
+
+)
+
+. In:
+
+IGARSS 2020 – 2020 IEEE International Geoscience and Remote Sensing Symposium
+
+. Piscataway, NJ, USA: IEEE, pp.
+
+3735
+
+–
+
+3738
+
+.
+
+.
+
+Huang
+
+M.
+
+, 
+Gallichand
+
+J.
+
+, 
+Wang
+
+Z.
+
+&
+Goulet
+
+M.
+
+ (
+
+2006
+
+)
+
+,
+
+Hydrological Processes
+
+,
+
+20
+
+(
+
+3
+
+),
+
+579
+
+–
+
+589
+
+.
+
+.
+
+Li, G., 
+Liu
+
+J.
+
+&
+Shao
+
+W.
+
+ (
+
+2023
+
+)
+
+,
+
+Regional Sustainability
+
+,
+
+4
+
+(
+
+3
+
+),
+
+332
+
+–
+
+348
+
+.
+
+.
+
+Li
+
+Y.
+
+, 
+Xin
+
+D.
+
+&
+Zhang
+
+Z.
+
+ (
+
+2021
+
+)
+
+,
+
+International Journal of Disaster Risk Reduction
+
+,
+
+66
+
+,
+
+102618
+
+.
+
+.
+
+Lian
+
+H.
+
+, 
+Yen
+
+H.
+
+, 
+Huang
+
+J.-C.
+
+, 
+Feng
+
+Q.
+
+, 
+Qin
+
+L.
+
+, 
+Bashir
+
+M. A.
+
+, 
+Wu
+
+S.
+
+, 
+Zhu
+
+A. X.
+
+, 
+Luo
+
+J.
+
+, 
+Di
+
+H.
+
+, 
+Lei
+
+Q.
+
+&
+Liu
+
+H.
+
+ (
+
+2020
+
+)
+
+,
+
+Water Research
+
+,
+
+177
+
+,
+
+115767
+
+.
+
+.
+
+Liao
+
+Y.
+
+, 
+Wang
+
+X.
+
+&
+Zhou
+
+J.
+
+ (
+
+2016
+
+)
+
+Suitability assessment and validation of giant panda habitat based on geographical detector
+
+,
+
+Journal of Geoinformation Science
+
+,
+
+18
+
+,
+
+767
+
+–
+
+778
+
+.
+
+Liu
+
+J.
+
+, 
+Shao
+
+W.
+
+, 
+Xiang
+
+C.
+
+, 
+Mei
+
+C.
+
+&
+Li
+
+Z.
+
+ (
+
+2019
+
+)
+
+,
+
+Environmental Research
+
+,
+
+182
+
+,
+
+108929
+
+.
+
+Liu
+
+K.
+
+ (
+
+2022
+
+)
+
+,
+
+International Journal of Disaster Risk Reduction
+
+,
+
+73
+
+,
+
+102873
+
+.
+
+.
+
+Lyu
+
+H.-M.
+
+&
+Yin
+
+Z.-Y.
+
+ (
+
+2023
+
+)
+
+,
+
+Sustainable Cities and Society
+
+,
+
+91
+
+,
+
+104427
+
+.
+
+.
+
+Peng
+
+T.
+
+&
+Ke
+
+W.
+
+ (
+
+2023
+
+)
+
+,
+
+Optik
+
+,
+
+273
+
+,
+
+170433
+
+.
+
+.
+
+Pregnolato
+
+M.
+
+, 
+Ford
+
+A.
+
+, 
+Wilkinson
+
+S. M.
+
+&
+Dawson
+
+R. J.
+
+ (
+
+2017
+
+)
+
+,
+
+Transportation Research Part D: Transport and Environment
+
+,
+
+55
+
+,
+
+67
+
+–
+
+81
+
+.
+
+Qin
+
+F.
+
+ (
+
+2014
+
+)
+
+.
+
+Reddy
+
+P. S.
+
+&
+Bhavani
+
+R.
+
+ (
+
+2023
+
+)
+
+,
+
+Journal of Water and Climate Change
+
+,
+
+14
+
+(
+
+12
+
+),
+
+4579
+
+–
+
+4597
+
+.
+
+.
+
+Saaty
+
+R. W.
+
+ (
+
+1987
+
+)
+
+,
+
+Mathematical Modelling
+
+,
+
+9
+
+(
+
+3–5
+
+),
+
+161
+
+–
+
+176
+
+.
+
+.
+
+Senan
+
+C. P. C.
+
+, 
+Ajin
+
+R. S.
+
+, 
+Danumah
+
+J. H.
+
+, 
+Costache
+
+R.
+
+, 
+Arabameri
+
+A.
+
+, 
+Rajaneesh
+
+A.
+
+, 
+Sajinkumar
+
+K. S.
+
+&
+Kuriakose
+
+S. L.
+
+ (
+
+2023
+
+)
+
+,
+
+Stochastic Environmental Research and Risk Assessment
+
+,
+
+37
+
+(
+
+2
+
+),
+
+527
+
+–
+
+556
+
+.
+
+.
+
+Şenik
+
+B.
+
+&
+Uzun
+
+O.
+
+ (
+
+2021
+
+)
+
+,
+
+Natural Hazards
+
+,
+
+105
+
+(
+
+2
+
+),
+
+1587
+
+–
+
+1602
+
+.
+
+.
+
+Shi
+
+J.
+
+, 
+Cui
+
+L.
+
+&
+Tian
+
+Z.
+
+ (
+
+2020
+
+)
+
+,
+
+Environmental Research
+
+,
+
+185
+
+,
+
+109406
+
+.
+
+.
+
+Tong
+
+S.
+
+, 
+Wu-Qun
+
+C.
+
+, 
+Qiu-Yu
+
+B.
+
+, 
+Xiao
+
+M.
+
+&
+Dong
+
+L.
+
+ (
+
+2021
+
+)
+
+,
+
+Environmental Research
+
+,
+
+196
+
+,
+
+110895
+
+.
+
+.
+
+Tzavella
+
+K.
+
+, 
+Fekete
+
+A.
+
+&
+Fiedrich
+
+F.
+
+ (
+
+2018
+
+)
+
+,
+
+Natural Hazards
+
+,
+
+91
+
+(
+
+1 supp
+
+),
+
+29
+
+–
+
+57
+
+.
+
+.
+
+Uddin
+
+K.
+
+&
+Matin
+
+M. A.
+
+ (
+
+2021
+
+)
+
+,
+
+Progress in Disaster Science
+
+,
+
+11
+
+,
+
+100185
+
+.
+
+.
+
+Wang
+
+K.
+
+, 
+Wu
+
+Y.
+
+&
+Fan
+
+Q.
+
+ (
+
+2022
+
+)
+
+,
+
+Alexandria Engineering Journal
+
+,
+
+61
+
+(
+
+11
+
+),
+
+8911
+
+–
+
+8918
+
+.
+
+.
+
+Xu
+
+X.
+
+&
+Genovese
+
+P. V.
+
+ (
+
+2022
+
+)
+
+,
+
+Land
+
+,
+
+11
+
+(
+
+9
+
+),
+
+1486
+
+.
+
+.
+
+Yadav
+
+N.
+
+, 
+Wu
+
+J.
+
+, 
+Banerjee
+
+A.
+
+, 
+Pathak
+
+S.
+
+, 
+Garg
+
+R. D.
+
+&
+Yao
+
+S.
+
+ (
+
+2024
+
+)
+
+,
+
+Environmental Research
+
+,
+
+244
+
+,
+
+117962
+
+.
+
+.
+
+Yáñez-Sandivari
+
+L.
+
+, 
+Cortés
+
+C. E.
+
+&
+Rey
+
+P. A.
+
+ (
+
+2021
+
+)
+
+,
+
+International Journal of Disaster Risk Reduction
+
+,
+
+52
+
+,
+
+101952
+
+.
+
+.
+
+Yin
+
+J.
+
+, 
+Gu
+
+H.
+
+, 
+Liang
+
+X.
+
+, 
+Yu
+
+M.
+
+, 
+Sun
+
+J.
+
+, 
+Xie
+
+Y.
+
+, 
+Li
+
+F.
+
+&
+Wu
+
+C.
+
+ (
+
+2022
+
+)
+
+,
+
+Journal of Meteorological Research
+
+,
+
+36
+
+(
+
+1
+
+),
+
+6
+
+–
+
+25
+
+.
+
+.
+
+Zhang
+
+Z.
+
+&
+Zhang
+
+P.
+
+ (
+
+2023
+
+)
+
+,.
+
+International Journal of Disaster Risk Reduction
+
+,
+
+91
+
+,
+
+103671
+
+.
+
+Zhang
+
+J.
+
+, 
+Wang
+
+H.
+
+, 
+Huang
+
+J.
+
+, 
+Wang
+
+Y.
+
+&
+Liu
+
+G.
+
+ (
+
+2023
+
+)
+
+,
+
+Journal of Environmental Management
+
+,
+
+344
+
+,
+
+118770
+
+.
+
+.
+
+Zheng
+
+Q.
+
+, 
+Shen
+
+S.-L.
+
+, 
+Zhou
+
+A.
+
+&
+Lyu
+
+H.-M.
+
+ (
+
+2022
+
+)
+
+,
+
+Sustainable Cities and Society
+
+,
+
+86
+
+,
+
+104138
+
+.
+
+.
+
+Zhou
+
+Y.
+
+, 
+Liu
+
+K.
+
+&
+Wang
+
+M.
+
+ (
+
+2023
+
+)
+
+,.
+
+Transportation Research Part D: Transport and Environment
+
+,
+
+121
+
+,
+
+103818
+
+.
+
+© 2024 The Authors
+
+This is an Open Access article distributed under the terms of the Creative Commons Attribution Licence (CC BY 4.0), which permits copying, adaptation and redistribution, provided the original work is properly cited (http://creativecommons.org/licenses/by/4.0/).
+
+We recommend
+
+*   Assessment of urban underground spaces inundation during extreme rainfall events
+Jiazhi Zhong, Water Science and Technology, 2024
+
+*   Advocating integration of human responses in the flood resilience framework for inland cities of northern China
+Mingyang Liu, Water Policy, 2024
+
+*   Dynamic vulnerability assessment framework for urban flood disasters considering real-time population changes
+Simin Liu, Dengming Yan, Hong Lv, et al., Journal of Water and Climate Change, 2024
+
+*   Characteristics of the temporal and spatial evolution of rainfall under the influence of urbanization: a case study of the Beijing–Tianjin–Hebei region
+Chengcheng Xu, Water Science and Technology: Water Supply, 2023
+
+*   Rapid Assessment of Traffic Inefficiency Under Flood Scenarios over Wide Regions
+LI Zhenhong, Geomatics and Information Science of Wuhan University, 2022
+
+*   Evaluating the Accessibility of Medical Services in the 15 min Life Circle Using Internet Pan-Map Resources: A Case Study in Shanghai
+LIU Jiping, Geomatics and Information Science of Wuhan University, 2022
+
+*   On the Influences of Urbanization on the Extreme Rainfall over Zhengzhou on 20 July 2021: A Convection-Permitting Ensemble Modeling Study
+Yali Luo, Advances in Atmospheric Sciences, 2023
+
+*   Study on Rainfall Thresholds for Geological Disasters in Rainfall Data-Scarce Mountainous——A Case Study of Mao County
+Geomatics and Information Science of Wuhan University, 2024

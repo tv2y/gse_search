@@ -1,0 +1,678 @@
+Title: Spatiotemporal changes of landslide susceptibility in response to rainfall and its future prediction — A case study of Sichuan Province, China - ScienceDirect
+
+URL Source: https://www.sciencedirect.com/science/article/pii/S1574954124004047
+
+Markdown Content:
+Spatiotemporal changes of landslide susceptibility in response to rainfall and its future prediction — A case study of Sichuan Province, China - ScienceDirect
+
+===============
+
+Typesetting math: 100%
+
+Skip to main content Skip to article
+
+*   Journals & Books
+
+*      
+*    
+
+*   View**PDF**
+*   Download full issue
+
+Search ScienceDirect 
+
+Outline
+-------
+
+1.   Highlights
+2.   Abstract
+3.   Keywords
+4.   1. Introduction
+5.   2. Study area and data used
+6.   3. Methods
+7.   4. Results
+8.   5. Discussion
+9.   6. Conclusions
+10.   CRediT authorship contribution statement
+11.   Declaration of competing interest
+12.   Acknowledgments
+13.   Data availability
+14.   References
+
+Show full outline
+
+Cited by (10)
+-------------
+
+Figures (18)
+------------
+
+Show 12 more figures
+
+Tables (2)
+----------
+
+1.   Table 1
+2.   Table 2
+
+Ecological Informatics
+----------------------
+
+Volume 84, December 2024, 102862
+
+Spatiotemporal changes of landslide susceptibility in response to rainfall and its future prediction — A case study of Sichuan Province, China
+==============================================================================================================================================
+
+Author links open overlay panel Hao Zheng, Mingtao Ding
+
+Show more
+
+Outline
+
+Add to Mendeley
+
+Share
+
+Cite
+
+https://doi.org/10.1016/j.ecoinf.2024.102862 Get rights and content
+
+Under a Creative Commons license
+
+Open access
+
+Highlights
+----------
+
+*   •Spatial and temporal changes in rainfall patterns and landslide susceptibility are significant in Sichuan Province. 
+*   •Introducing elasticity model to assess the responses of landslide susceptibility to rainfall changes. 
+*   •The landslide susceptibility map for the year 2030 was projected considering future rainfall. 
+*   •Changing 1% of rainfall led to landslide susceptibility changes of 1.35% during 2000–2020. 
+
+Abstract
+--------
+
+In recent decades, global warming has significantly altered both the spatial and temporal distribution of rainfall patterns. This change has heightened the risk of rainfall-induced landslides, which are the most prevalent natural disasters in the mountainous regions of southwestern China. These events pose unpredictable and severe threats to the region, making it essential to forecast future rainfall trends and assess how landslide susceptibility will respond to these changes. Understanding these dynamics is crucial for developing effective strategies to mitigate and adapt to the changing rainfall patterns that influence landslides. This study focuses on Sichuan Province, China, and uses annual cumulative rainfall (ACR) as a key dynamic variable to create landslide susceptibility maps (LSMs). The goal is to explore the evolving relationship between rainfall and landslide susceptibility and use future rainfall projections to predict these risks. To achieve this, a historical landslide geospatial database was compiled across five temporal categories: 2000, 2001–2005, 2006–2010, 2011–2015, and 2016–2020. The extreme learning machine (ELM) was applied to generate LSMs for the years 2000 to2020, while an elasticity framework was used to assess how sensitive landslide susceptibility is to rainfall variations. To project future scenarios, a long short-term memory (LSTM) model was employed to project the ACR for 2030, using monthly rainfall data from 2000 to 2020. This projected ACR was then used to estimate future landslide susceptibility. Results showed a marked increase in high landslide susceptibility areas: 5.6% by 2005, 0.3% by 2010, 0.2% by 2015, and 12.9% by 2020, all relative to the year 2000. The elasticity analysis revealed that from 2000 to 2020, a 1% change in rainfall would cause an average 1.35% change in landslide susceptibility. Looking forward to 2030, the projected rise in ACR is expected to lead to a 2.44% increase in areas of high landslide susceptibility. Multiple validation techniques were applied to ensure reliability and robustness of these findings.
+
+*   Previous article in issue
+*   Next article in issue
+
+Keywords
+--------
+
+Landslide susceptibility
+
+Spatiotemporal change
+
+Dynamic response
+
+Rainfall prediction
+
+Deep learning
+
+1. Introduction
+---------------
+
+Rainfall-induced landslides are among the most destructive natural hazards, particularly in regions with complex topographies and variable climates. Sichuan Province, China, is one such region, where, the combination of rugged terrain, heavy rainfall, and anthropogenic factors leads to frequent landslides. The variability in both rainfall patterns and geological conditions makes this region particularly susceptible to landslides, posing serious threats to lives, infrastructure, and the environment. Landslides result from complex interactions of both static and dynamic factors (Agboola et al., 2024; Tyagi et al., 2023). Static factors, such as the geomorphology, geological structures, and topography, play a crucial role in triggering landslides (Fang et al., 2024). Dynamic factors, especially rainfall, are external influences, with precipitation being the leading cause of landslides worldwide (Mondini et al., 2023). As climate and environmental conditions continue to shift, the risk of rainfall-induced landslides is expected to rise, heightening concerns for communities in vulnerable regions. (Mondini et al., 2023). This growing risk has fueled interest in predicting landslide susceptibility and understanding how rainfall contributes to landslide events. (Guzzetti et al., 2020; Piciullo et al., 2018). While much research has been done in this area, there is still a lack of comprehensive understanding of how these susceptibilities evolve over time in response to changing rainfall patterns. Existing predictive models generally fail to adequately capture the dynamic characteristic of landslide susceptibility, particularly the spatiotemporal variations driven by fluctuating rainfall (Oguz et al., 2024). Traditional approaches to landslide prediction tend to focus on static susceptibility maps that overlook temporal variability and fail to consider future climate scenarios (Tyagi et al., 2023). This limitation can lead to an underestimation of landslide risk, resulting in inadequate preparedness and mitigation efforts.
+
+Existing studies on rainfall-induced landslide susceptibility have typically employed statistical or deterministic models based on historical data to predict future events. Many have used statistical or machine learning techniques to assess the factors that contribute to landslides triggered by rainfall. However, these studies generally overlooked the direct impact of rainfall and focused on geoenvironmental parameters including slope, land cover, and rock type (Reichenbach et al., 2018; Steger et al., 2023). Moreover, only a limited number of studies have quantitatively analyzed how landslide susceptibility responds to variations in rainfall within the context of climate variation (Bernardie et al., 2021; Hürlimann et al., 2022; Pham et al., 2021). Unlike static topographic conditions, rainfall is a dynamic factor that fluctuates over time, making landslide susceptibility a variable that also evolves (Kincey et al., 2024). This has been acknowledged in some studies, with Caine (1980) being one of the first to demonstrate the relationship between rainfall duration and intensity for landslide prediction. More recently, researchers have started to assess how multiple dynamic factors, including rainfall, influence landslide susceptibility (Hua et al., 2020; Huang et al., 2023; Li et al., 2020b). For instance, Hua et al. (2020) analyzed the impact of rainfall, reservoir levels, and land use changes on susceptibility across different years. Similarly, Huang et al. (2023) explored annual variation in susceptibility by considering factors like the normalized difference vegetation index (NDVI) and annual cumulative rainfall (ACR). Although these studies recognize rainfall as a key dynamic factor in landslide susceptibility mapping (LSM) (Chowdhuri et al., 2022; Dikshit et al., 2021), there remains a lack of quantitative research on the direct relationship between specific rainfall variations and landslide susceptibility. Most existing also fail to account for projected rainfall changes in future scenarios. As a result, the literature lacks comprehensive approaches that integrate both current and future rainfall variations into landslide susceptibility predictions. To address these gaps, this study introduces an innovative approach that combines an elasticity model, typically used in economics, with deep learning algorithms. This methodology allows for the quantitative analysis of the dynamic response of landslide susceptibility to ACR, while also predicting future susceptibility scenarios in Sichuan Province, China. By integrating historical rainfall data, terrain features, and climate projections, this study aims to overcome the limitations of previous approaches and offer more accurate predictions of landslide susceptibility.
+
+Numerous researchers globally have studied landslide susceptibility or risk, with many utilizing machine learning as an analytical neural network (Hussain et al., 2023; Saha et al., 2022). While effective, traditional neural network models often require extensive parameter tuning and iterative optimization, which can lead to inefficiencies in learning, problems with local optimality, and overfitting (Lye et al., 2021). The extreme learning machine (ELM) offers a more efficient alternative. It requires only the number of hidden layer nodes to be determined, without the need to adjust input weights or hidden layer biases during training (Huang et al., 2006). This streamlined approach differentiates it from conventional neural networks. The ELM has been successfully applied in various fields, including landslide displacement prediction (Liao et al., 2019; Zhang et al., 2021) and susceptibility assessment (Huang et al., 2017). Given the necessity to analyze extensive long-term datasets, the ELM's advantages in training speed and generalization make it a potential tool for investigating spatiotemporal variations in landslide susceptibility.
+
+Rainfall prediction has become a global research focus to address the impact of future climate change on landslides. Long-term rainfall forecast provide crucial insights for early disaster warning systems and guide regional water resource management (Hao et al., 2018; Xu et al., 2020). Previous studies have used both statistical and dynamic techniques to predict monthly rainfall outcomes (de Andrade et al., 2019; Hao et al., 2018), with general circulation models (GCMs) playing a central role in improving forecast accuracy (de Andrade et al., 2019). In climate prediction, shared socioeconomic pathways (SSP) have been widely used to explore climate impacts and strategies for mitigation and adaptation (O'Neill et al., 2017). However, a persistent challenge is the ability of climate models to produce accurate precipitation forecasts (Alizadeh, 2022; Liang et al., 2019). These models often operate at coarse resolutions, which limits their ability to simulate rainfall patterns effectively at regional or local scales (Kumar, 2023). To address this limitation, this study uses statistical methods based on historical data to establish empirical relationships between hydrometeorological variables and precipitation. Research have consistently shown that statistical models tend to outperform dynamic models in forecasting precipitation under different scenarios (Anochi et al., 2021; Qian et al., 2021; Xu et al., 2020). Moreover, deep learning methods have made significant progress in climate prediction due to their ability to analyze spatially and temporally interconnected geophysical data (Kim et al., 2021; Rahmani et al., 2021; Tang and Duan, 2021; Zhou and Zhang, 2022). Deep learning methods, particularly the long short-term memory (LSTM) model, excel at capturing and understanding long-term sequential patterns, including seasonal variations and the effects of prolonged climatic phenomena (Chen et al., 2017; Shevchenko and Shkliarenko, 2024). LSTM's capacity for memory retention makes it an ideal tool for analyzing climate data with time-series characteristics (Xu et al., 2018; Xu et al., 2020). In this study, an LSTM-based deep learning approach is applied to analyze climate data and improve the accuracy of rainfall predictions.
+
+The key innovation of this study lies in combining an elasticity model with deep learning methods to quantitatively analyze the relationship between rainfall patterns and landslide susceptibility over time and space. The study specifically examines how changing rainfall patterns affect the landslide susceptibility in Sichuan Province, China. In addition to detailing this relationship, the study also considers how predicted rainfall could influence future landslide susceptibility. These insights are crucial for understanding how rainfall patterns impact landslides and for improving the management of landslide risks in the region. Herein, we set the following aims: (1) to evaluate the spatiotemporal variations in landslide susceptibility and ACR in Sichuan Province from 2000 to 2020, (2) to assess how landslide susceptibility responds to ACR using the elasticity model, (3) to forecast future rainfall scenarios using the LSTM model, and (4) to predict landslide susceptibility for 2030 based on projected ACR. These findings will enhance our understanding of the potential impacts of climate change on natural hazards and provide a scientific foundation for climate adaptation and disaster risk management. This study also contributes to the field of ecological informatics by offering a methodological framework that can be applied to other regions facing similar challenges. The integration of climate projections and machine learning in landslide susceptibility modeling represents a significant advancement, with broader implications for disaster risk reduction in a changing climate.
+
+2. Study area and data used
+---------------------------
+
+### 2.1. General descriptions of the study area
+
+Sichuan Province, located in southwestern China, spans latitudes 26°03′ N to 34°19′ N and longitudes 97°21′ E to 108°33′ E. It covers an area of approximately 48,600 km 2 (Fig. 1). The region's diverse topography leads to significant vertical climatic variations, resulting in uneven rainfall distribution and frequent meteorological disasters. The eastern region of Sichuan Province features a low-elevation basin characterized by a humid mid-subtropical climate. It receives an annual average precipitation ranging from 1000 to 1200 mm. Moving westward, the region transitions to the southern flank of the Qinghai–Tibet Plateau. It is distinguished by a colder climate owing to its high terrain. In this area, the average annual temperature ranges from 4 to 12°C, with annual precipitation levels between 500 and 900 mm. The mountains of southwestern Sichuan are characterized by a subtropical semi-humid climate, which is indicated by a potential dry season lasting seven months. The annual precipitation in this region ranges from 900 to 1200 mm, with 90% of the rainfall occurring between May and October. Sichuan Province is located in the upper reaches of the Yangtze River Basin and includes part of the Yellow River in its northwestern region. The combination of frequent earthquakes and heavy rainfall has made the region particularly prone to landslides. Notably, the “5.12” earthquake significantly lowered the rainfall threshold for landslides induced by intense rainfall in the province. This diverse climatic and geological context underscores the complexity of predicting landslide susceptibility in Sichuan, where both rainfall and seismic events contribute to the occurrence of these natural disasters.
+
+1.   Download: Download high-res image (2MB)
+2.   Download: Download full-size image
+
+Fig. 1. Geographic description of the study area and landslide inventory. (a) Geographical location of Sichuan Province, (b) landslide inventory for the year 2000, (c) landslide inventory for the year 2001–2005, (d) landslide inventory for the year 2006–2010, (e) landslide inventory for the year 2011–2015, (f) landslide inventory for the year 2016–2020, (g) general landslide inventory.
+
+### 2.2. Data used
+
+#### 2.2.1. Data sources
+
+This study utilized historical data on landslide events and causal factors to perform a spatiotemporal analysis of landslide susceptibility. Typically, various environmental factors and historical geological disaster records are used in analyses (Du et al., 2020). The data sources and details of the study are as follows:
+
+##### 2.2.1.1. Road and water distance index factors
+
+Extracted from the open-source road and river networks on OpenStreetMap (OSM). These datasets provide detailed information on the proximity of landslide events to transportation routes and water bodies. These are critical factors that influence landslide susceptibility. The data are available in a vector format and include attributes such as road type, river width, and flow direction.
+
+##### 2.2.1.2. Geological data
+
+Sourced from the National Geological Database to depict the stratigraphic lithology and fault index factor of geological structures. These data include information on the types of rocks and soils, fault lines, and other geological features that can affect slope stability. Geological data are available in both vector and raster formats with high spatial resolution.
+
+##### 2.2.1.3. Topographic information
+
+Obtained as a free digital elevation model (DEM) product (ground resolution=12.5 m) from Japan's Advanced Land Observing Satellite (ALOS). These data include slope, aspect, and other topographic factors essential for assessing landslide susceptibility. The DEM data are available in raster format and are processed to derive the slope steepness, slope aspect, and other terrain attributes.
+
+##### 2.2.1.4. Historical monthly rainfall data
+
+Sourced from the National Earth System Science Data Center. This dataset includes monthly precipitation records spanning several decades. It provides a comprehensive view of rainfall patterns that may contribute to landslide events. The data are available in both tabular and raster formats with spatial and temporal resolutions suitable for detailed analysis.
+
+##### 2.2.1.5. Earthquake records
+
+National Earthquake Data Center. These records include information on the location, magnitude, depth, and timing of earthquakes. This is critical for understanding the seismic triggers of landslides. The earthquake data are available in a tabular format and are integrated with spatial coordinates for mapping and analysis purposes.
+
+Further details on the data sources for each factor is available in Table 1. It summarizes the datasets, including their sources and formats.
+
+Table 1. Data sources used in this study.
+
+| Data type | Source | Format | Data | Source | Format |
+| --- | --- | --- | --- | --- | --- |
+| 12.5 m ALOS DEM | https://search.asf.alaska.edu/ | Raster | Slope | ALOS DEM ALOS DEM ALOS DEM ALOS DEM ALOS DEM ALOS DEM ALOS DEM | Raster |
+| Lithology | https://geocloud.cgs. gov.cn | Vector | Aspect | Raster |
+| Roads | https://extract.bbbike.org/ | Vector | Plan curvature | Raster |
+| Faults | https://geocloud.cgs. gov.cn | Vector | Profile curvature | Raster |
+| Rivers | https://extract.bbbike.org/ | Vector | Surface roughness | Raster |
+| ACR | http://www.geodata.cn | Raster | Altitude difference | Raster |
+| Earthquake | https://data.earthquake.cn/ | Tabular | Elevation | Raster |
+
+#### 2.2.2. The landslide inventory
+
+Landslide inventories form the basis of landslide susceptibility studies by providing essential data on the locations, sizes, and occurrence patterns. For this study, a comprehensive inventory of landslides in Sichuan Province from 2000 to 2020 was created, which included 17,395 landslide points. These points were categorized into five distinct periods: 2000, 2001–2005, 2006–2010, 2011–2015, and 2016–2020 (Fig. 1). The underlying hypothesis was that landslides occurring in the past under specific conditions would likely reoccur under similar conditions in the future. Due to limitations in technology and data availability, landslide events recorded before 2000 with temporal information were also included in the modeling. The inventory maps were generated using data on 731, 819, 3286, 6862, and 5697 landslide events corresponding to each time period. A five-year interval was used to define these categories, following the approach outlined by Tyagi et al. (2023). Historical landslide records were compiled through field surveys and the interpretation of satellite images. The temporal and spatial attributes of these events were incorporated into the official database of the Sichuan Geoenvironmental Information System (http://202.61.89.33:16003/DMGeoMIS/). This official database was created by government departments at the county level in Sichuan Province and managed uniformly by the Department of Natural Resources of Sichuan Province. The reliability of the landslide distribution data was confirmed by Chen et al. (2023). Landslides in Sichuan Province were classified into four size categories: small (91.07%), medium (8.44%), large (0.28%), and giant (0.21%).
+
+Figure 1 presents a landslide inventory map of Sichuan Province, illustrating the region's diverse topography. This geographical diversity results in different landslide dynamics across regions. While highly mountainous areas are vulnerable to landslides owing to the steep slopes and geological activity, lower elevation areas including the Sichuan Basin also experience significant landslide activity, particularly rainfall-induced landslides. This is owing to the significant rainfall in the region, soft soil layers, and human activities such as agriculture and infrastructure development (Chen et al., 2023). The observation that landslides are more prevalent in low-mountain plain areas than in high-mountain canyon areas may be counterintuitive. However, it is essential to consider that low mountain areas with softer rock formations and higher population densities are more susceptible to landslides, particularly under intense rainfall and anthropogenic alterations. In contrast, although highly mountainous areas are vulnerable to landslides, the sparse population and rugged terrain may result in fewer recorded incidents. These characteristics are consistent with the observations of a spatial distribution study of landslides in Sichuan Province by Chen et al. (2023).
+
+#### 2.2.3. Appraisal factors of landslide susceptibility
+
+The selection of landslide condition factors was guided by data availability, the characteristics of the study area, the analysis scale, and a review of the existing literature (Tyagi et al., 2023). The stability of mountain slopes is continuously influenced by Earth's ecosystem processes (Grêt-Regamey and Weibel, 2020). Based on the geological context and previous research in the region (Li et al., 2017), 14 factors were identified for LSM. Thirteen of these are static features, including altitude, slope, aspect, curvature, plan curvature, profile curvature, relief amplitude, surface roughness, lithology, distance to roads, distance to rivers, distance to faults, and seismic density. The remaining factor, ACR, is dynamic. Monthly rainfall data for Sichuan Province were used to calculate ACR, with variations analyzed over five-year intervals. For spatial susceptibility mapping, the dynamic factor was substituted with the five-year mean total rainfall for each time interval (Huang et al., 2023). Lithology comprised categorical information, whereas the remaining 13 elements comprised numerical data. The lithology was categorized as hard rock, even harder rock, integrated hard-soft rock, soft rock, very fragile rock, and Quaternary sediments. This study also compiled earthquakes with Richter magnitudes higher than four to create an earthquake density map. Thematic maps for the static factors are shown in Fig. 2, while Fig. 3 displays the ACR distribution map for the study area from 2000 to 2020. All landslide conditioning factors were converted into a raster format with a grid size of 300×300 m for analysis and modeling.
+
+1.   Download: Download high-res image (2MB)
+2.   Download: Download full-size image
+
+1.   Download: Download high-res image (2MB)
+2.   Download: Download full-size image
+
+1.   Download: Download high-res image (307KB)
+2.   Download: Download full-size image
+
+Fig. 2. The maps of static factors generated for the analysis of landslide susceptibility: (a) Altitude; (b) Aspect; (c) Slope; (d) Curvature; (e) Profile curvature; (f) Plan curvature; (g) Relief amplitude; (h) Surface roughness; (i) Distance to river; (j) Distance to road; (k) Distance to fault; (l) Lithology; (m) Seismic density.
+
+1.   Download: Download high-res image (1MB)
+2.   Download: Download full-size image
+
+Fig. 3. Annual cumulative rainfall, 2000–2020.
+
+3. Methods
+----------
+
+Figure 4 outlines the methodology used in this study. The process began with the preprocessing of both static and dynamic factors. ACR data for each year were divided into four equal intervals to analyze the rainfall trends. Subsequently, the ELM model was applied to generate LSMs for Sichuan Province from 2000 to 2020, considering the dynamic annual rainfall variations to estimate the spatial probabilities. This section also provides a brief overview of the ELM and its relevance to the current research. In the third stage, future monthly cumulative rainfall (MCR) scenarios for 2030 were projected using sequential data from 2000 to 2020, processed through the LSTM model. To manage the extensive data and ensure data consistency, historical rainfall data for specific landslide-prone locations in each county were extracted, and these values were interpolated to estimate rainfall across Sichuan Province by 2030. The projected ACR, combined with static factors, was then used to train the ELM model to predict the landslide susceptibility for 2030. To evaluate the performance of the prediction methods, metrics such as area under the receiver operating characteristic (ROC) curve and accuracy parameter were used to validate the predicted maps and sequential data. Finally, an elastic model was applied to analyze the dynamic variations in landslide susceptibility and its dynamic response relationship with rainfall in Sichuan Province. The entire analysis was conducted using ArcGIS 10.8 software platform, while the algorithm was executed in MATLAB R2022b.
+
+1.   Download: Download high-res image (564KB)
+2.   Download: Download full-size image
+
+Fig. 4. The overall research framework.
+
+### 3.1. Construction of a spatial database
+
+Before constructing the LSM model, it is essential to create landslides and non-landslides datasets. The landslide dataset comprised 17,395 recorded landslides, with a balanced ratio of 1:1 between landslide and non-landslide data. This balance is crucial for ensuring that the model treats both classes equally during training, thereby enhancing prediction accuracy and preventing skewed results. Areas with terrain slopes less than 5° were classified as “non-landslide zones” (Sun et al., 2021), from which an equal number of non-landslide points were randomly selected. This random sampling helped represent the true variability of the terrain and environmental conditions within the study area. Following the procedures described by Wang et al. (2021), a circular buffer zone of 150 m was established around the landslide and non-landslide points. The sample range was determined using the smallest external rectangle of the buffer zone. To improve model precision and convergence speed, data for each layer of conditioning factors were standardized to a 0–1 scale, with landslide points labeled as one and non-landslide points as zero. Many studies commonly divide landslide and non-landslide data into training and testing subsets in a 70 / 30 ratio (Arora et al., 2021; Dou et al., 2019; Guo et al., 2021). The 70% training data ensures that the model has sufficient examples to learn from, while the 30% test data allows for a robust evaluation of the model's predictive capabilities. In line with this method, 70% of the pixels were utilized as training datasets, and the remaining 30% were allocated for testing. ROC curves were used to validate the reliability of this method.
+
+### 3.2. Deep learning methods
+
+#### 3.2.1. Elm
+
+ELM is a type of single-layer feedforward neural network (SLFN) developed by Huang et al. in 2006. The ELM structure was developed to feature a random initialization of the hidden layer neurons and weights. This ensures its autonomy from the training dataset. ELM calculates the output weights using a pseudo-inverse technique. With this framework, superior generalization performance and learning speed can be achieved. Using this approach, the necessity of adjusting various parameters in conventional algorithms is eliminated, and concerns regarding gradient descent techniques converging to local minima are mitigated. This is achieved through successive iterations to enhance the overall effectiveness. For _N_ distinct samples X i T i, X i=x i 1 x i 2⋯x in T, and T i=t i 1 t i 2⋯t im T, the standard SLFN with _L_ hidden neurons and the activation function g x is mathematically modeled as(1)Hβ=T and **_H_** is defined as(2)H=g ω 1⋅x 1+b 1⋯g ω L⋅x 1+b L⋮⋱⋮g ω 1⋅x K+b 1⋯g ω L⋅x K+b L where **_H_** is the matrix of the hidden layer output, ω represents the weight vector of the connections from the input neurons to the hidden neuron, β represents the weight vector of the connections between the hidden neuron and output neurons, T is the output vector of the SLFN, and _b_ _i_ is the threshold for the _i_ th hidden neuron. Here, ω L⋅x K denotes the inner product of ω L and x K. To minimize the cost function min β Hβ−T，the output weights were determined by obtaining the least-squares solution for the linear system Hβ=T:(3)β̂=H+T where **_H_****_+_** is the Moore–Penrose generalized inverse of the matrix **_H_**. A significant challenge in the development of an effective ELM is determining the preferable number of hidden nodes. A recommended method to address this challenge is a trial-and-error approach (Huang et al., 2017). The optimal selection of hidden neurons was determined by achieving the minimum root mean square error (RMSE) in the ELM.
+
+In this study, the ELM was used to generate LSMs in three steps.
+
+Step 1: The ELM model was trained to determine the optimal number of hidden neurons using normalized landslide condition factors and landslide and non-landslide datasets.
+
+Step 2: The hidden layer output matrix was computed in conjunction with the user-selected activation function.
+
+Step 3: The output weights were calculated using Eq. (3) to determine the output layer, i.e., the landslide susceptibility index (LSI).
+
+#### 3.2.2. LSTM
+
+The LSTM is a specialized form of recurrent neural network (RNN) specifically designed to identify and learn long-term dependencies within sequential data. Comprising input gates, forget gates, output gates, and memory cells, an LSTM model collaborates to control the data flow and enhance the capture of temporal patterns in the dataset (Shevchenko and Shkliarenko, 2024). Assuming that σ x denotes the sigmoid activation function and tanh x is the hyperbolic tangent activation function, their formulas are as follows:(4)σ x=1 1+e−x(5)tanh x=e x−e−x e x+e−x
+
+A thorough breakdown of the computation process for the LSTM is presented below. It includes relevant equations and formulas (McKee et al., 1993).
+
+(1) Input preparation: The input vector x t is received by the LSTM model at time step _t_.
+
+(2) Calculation of the input gate: The degree to which a new input is integrated into the memory cell is determined by the input gate. The calculations were performed using a specific equation:(6)i t=σ W i∘s t−1 x t+b i
+
+(3) The forget gate, denoted by f t, plays a crucial role in determining which information from the previous memory cell state c t−1 should be retained or discarded. The calculation is based on a specific equation.(7)f t=σ W f∘s t−1 x t+b f
+
+(4) Memory cell update: The state of the memory cell c t is modified by the input gate i t, forget gate f t, and prior state of the memory cell c t−1. The memory cell state is adjusted according to the following formula:(8)c˜t=tanh W c∘s t−1 x t+b c(9)c t=f t∘c t−1+i t∘c˜t
+
+(5) Calculation of the output gate: The output gate o t regulates the amount of memory cell state c t that influences the present hidden state s t. The output gate is computed using the following formula:(10)o t=σ W o∘s t−1 x t+b o
+
+(6) Update of hidden state: s t, the hidden state, is modified according to the output gate o t and state of the memory cell c t. The hidden state is adjusted using the following formula:(11)s t=o t∘tanh c t
+
+In (6), (7), (8), (9), the symbol “∘” represents the dot product of two vectors; W f,W i,W o,W c constitute the weight vector; and b f,b i,b o,b c constitute bias vector.
+
+The ADAM optimizer is a learning rate optimization algorithm that adjusts adaptively. It was introduced by Kingma and Ba, 2015. Known for its effectiveness in handling noisy or sparse gradients, it is considered a favorable option for our model (Kingma and Ba, 2015). Hence, in the present study, the parameters were optimized using the ADAM algorithm (Wang et al., 2023). In this study, the LSTM model was structured around a dynamic factor, namely, rainfall. Initially, input data were extracted from the preprocessed rainfall map. Then, for the training phase of the LSTM model, the input data were categorized into training and testing sets. The number of neurons in the model structure was set to 100. Finally, the rainfall under the future scenario was output in the MATLAB R2022b environment.
+
+### 3.3. Accuracy assessment methods
+
+Validating a study is essential for establishing its scientific credibility and determining the proximity of the calculated results to true values. This study evaluated the accuracy of the ELM model in the LSM by analyzing the area under the ROC curve. The ROC curve visually depicts the performance of the binary classifier technique, with the area under the curve (AUC) indicating the precision of the LSM model. Moreover, the performance of the LSTM model was assessed using key metrics such as the RMSE, mean absolute error (MAE), and coefficient of determination (R 2). These metrics quantify the prediction accuracy and alignment of the predicted and actual values. Lower RMSE and MAE values signify an improved prediction accuracy, whereas a higher R 2 value indicates a stronger correlation between the predicted and observed outcomes (Wang et al., 2023). These parameters are defined as follows.
+
+1. RMSE: It is a measure of how close the predicted values are to the actual values. It calculates the square of the difference between each predicted and actual value, averages these squares, and then computes the square root of the average. This is shown in Eq. (12):(12)RMSE=∑t=1 T y t−ŷt 2/T
+
+2. The MAE is another means to measure the accuracy of a model's predictions. Rather than squaring the differences similar to RMSE, MAE obtains the absolute value of the difference between each predicted value and the actual value and then, averages these absolute differences (Eq. (13)).(13)MAE=1 T∑t=1 T y t−ŷt
+
+3. R 2 is a statistical measure that indicates how effectively a regression model explains the variability of a dependent variable (Eq. (14)). The proportion of total variability in the dependent variable is explained by the independent variables in the model.(14)R 2=1−∑t=1 T y t−ŷt 2/∑t=1 T y t−y¯2
+
+### 3.4. ACR analysis using dynamic degree indicator
+
+The dynamic extent in this study is an indicator that reflects the speed and intensity of transitions between different precipitation categories in any given period. It is an important framework for assessing variations in regional precipitation patterns. We assessed the variations in rainfall over different periods using dynamic degree indicators that included both individual rainfall dynamics degree (IRDD) and overall rainfall dynamics degree (ORDD). The IRDD and ORDD were then calculated. The calculation of the dynamic degree indices for rainfall variations proceeded as outlined below:(15)IRDD i=ACR i t 2−ACR i t 1 ACR i t 1×1 T×100%(16)ORDD=Δ ACR ACR×1 T×100%where _IRDD_(_i_) is the individual rainfall dynamic degree of ACR type _i_, _ACR_ (_i_, _t_ _1_) and _ACR_ (_i_, _t_ _2_) represent the rainfall of ACR type _i_ in the first year _t_ 1 and final year _t_ 2, Δ _ACR_ is the transformation of ACR, and _T_ denotes the year within the research period.
+
+### 3.5. Sensitivity of landslide susceptibility response to ACR by using elasticity model
+
+In economics, elasticity is a measure of the responsiveness of an economic variable to variations in another. Because our aim was to examine the responses of the landslide susceptibility index to ACR variations, we developed an elasticity indicator. Elasticity can be employed to reflect how the LSI responds to a 1% variation in ACR. A higher elasticity indicates that landslide susceptibility is more responsive to the ACR. This concept is represented by the following mathematical equations (Song and Deng, 2017):(17)ELSR=LSI end−LSI start/LSI start ORDD×100%where _ELSR_ is the elasticity of landslide susceptibility in response to rainfall, _LSI_ end is the LSI at the end of the study period, _LSI_ start is the LSI at the start of the study period.
+
+4. Results
+----------
+
+### 4.1. Spatiotemporal variation in ACR and LSMs
+
+#### 4.1.1. Spatiotemporal variation in ACR
+
+In the past two decades, the type II ACR (500–1000 m] coverage rate was 60.60–74.81%, and the type III ACR (1000–1500 mm] coverage rate was 24.16–36.90%. Their combination has accounted for over 95% of the total ACR coverage. Furthermore, an overall increase was observed in the coverage areas of type III and IV ACR (1500–2000 mm], whereas others have shown a general reduction in coverage. For 2000–2020, the areas of type I (0–500 mm] and type II ACR decreased by 664.07 km 2 and 70,862.69 km 2, respectively. Conversely, type III and type IV ACR experienced growth in coverage, with type III increasing by 61,450.49 km 2 and type IV by 10,075.73 km 2 during this period (Fig. 5). The ORDD was 0.35% from 2000 to 2020, and the IRDD of four rainfall types were−1.86%, −1.05%, 2.65%, and 47.19%, respectively.
+
+1.   Download: Download high-res image (121KB)
+2.   Download: Download full-size image
+
+Fig. 5. The area changes of different ACR types.
+
+Between 2000 and 2010, the landscape shifted significantly, with an observable decrease in the type II ACR. The type II ACR area reduced by 25,394.59 km 2, and the IRDD was −1.03%. Meanwhile, the type III and type IV ACR areas increased by 17,428.99 km 2 and 8228.23 km 2, respectively, and the IRDD were 1.29% and 77.26%, respectively. The ORDD for the period was 0.05%.
+
+Between 2010 and 2020, the rainfall patterns varied significantly, with an overall dynamic variation of 0.65%. The total areas of type I and type II ACR decreased by 404.49 km 2 and 45,468.11 km 2, respectively. This resulted in an IRDD of −2.59% and−1.20%, respectively. In contrast, the areas covered by type III and type IV ACR experienced varied growth rates. Notably, type III ACR showed the most significant increase (almost 44,018.50 km 2), with an IRDD of 3.56%. Meanwhile, type IV ACR expanded by 1845.50 km 2, yielding an IRDD of 81.96%.
+
+#### 4.1.2. Generation and spatiotemporal variation of LSMs
+
+LSMs for 2000, 2005, 2010, 2015, and 2020 were generated using the ELM model. Using the Jenks natural break classification method, the maps were reclassified into five zones of susceptibility to landslides: very low, low, moderate, high, and very high. Applying this technique, the variability within each zone was minimized to ensure that the values within each zone were aligned closely. Using the natural break approach, LSIs higher than 0.545, 0.567, 0.574, 0.611, and 0.576 in 2000, 2005, 2010, 2015, and 2020, respectively, were identified as high- and very-high-susceptibility zones. Fig. 6 shows the percentage of landslides corresponding to different susceptibilities from 2000 to 2020. It can be observed that over 80% of the landslide predictions were accurate each year, with over 90% in 2000 and 2005. These observations demonstrate the reliability of the proposed approach.
+
+1.   Download: Download high-res image (100KB)
+2.   Download: Download full-size image
+
+Fig. 6. Statistical results of the proportion of landslides in each susceptibility classification.
+
+The LSMs for various years demonstrated a correlation with the rainfall patterns, as illustrated in Fig. 7. In 2000, 26.3% of the area was classified as having a very high landslide susceptibility, with an additional 15.5% falling into the high susceptibility zone. By 2010, these had increased to 31.1% and 15.8%, respectively. Furthermore, in 2020, the percentage of the areas categorized as very high and high susceptibility attained 23.4% and 28.4%. This indicated a significant upward trend. These data imply that the landslide susceptibility in Sichuan Province has increased progressively over time. An analysis of the susceptibility maps for different years revealed a pattern linked to variations in rainfall. Specifically, there has been a consistent increase in the very high susceptibility class for landslides in Sichuan Province.
+
+1.   Download: Download high-res image (3MB)
+2.   Download: Download full-size image
+
+Fig. 7. Generated landslide susceptibility maps for the years 2000, 2005, 2010, 2015 and 2020.
+
+The average LSIs for 2000, 2010, and 2020 were 0.454, 0.507, and 0.567, respectively. This study revealed that the overall landslide susceptibility in Sichuan Province decreases gradually from mountainous areas to plains and basins (Fig. 7). Regions with lower LSI were particularly concentrated in the eastern Sichuan Basin, as well as in the northwestern and northern regions of the province, such as the cities of Chengdu, Ziyang, Suining, Zigong, Neijiang, Ganzi, and Aba. However, the area of Sichuan Province with increasing LSI is 37.46%. Here, the cities of Guang'an, Bazhong, and Ya'an exhibited higher LSI from 2000 to 2020.
+
+The conversion of landslide susceptibility levels in the Sichuan Province showed a distinct pattern, particularly with the transformation between adjacent levels (Figs. 8 a-c). Over the three periods studied, 13.95% (68,062 km 2), 0.51% (2495 km 2), and 2.88% (14,060 km 2) of areas experienced a transition from low susceptibility to high susceptibility, respectively. For example, during 2000–2020, a conversion from “Moderate” to “High” and “Very high” occurred over an area of 56,248 km 2. Regions that transitioned from a high susceptibility level to a low level accounted for 10.18%, 0.32%, and 0.21% over the three periods, respectively. This indicates that the escalation of landslide disasters in the Sichuan Province was more significant than any observed improvement.
+
+1.   Download: Download high-res image (601KB)
+2.   Download: Download full-size image
+
+Fig. 8. Conversion of different landslide susceptibility classes during (a) 2000–2010, (b) 2010–2020, and (c) 2000–2020. Numbers around circle indicate area (10 4 km 2).
+
+The accuracy of the LSM can be assessed using the landslide frequency ratio (FR). It compares the number of landslides of a specific grade with the proportion of that grade in the total area (Yu et al., 2019). The analysis conducted for each susceptibility class revealed that higher susceptibility grades corresponded to a higher landslide FR (Fig. 9). Moreover, areas classified as having very high susceptibility had a substantially higher FR than those with very low susceptibility. This indicates that the predicted results of the ELM model exhibit higher discrimination.
+
+1.   Download: Download high-res image (122KB)
+2.   Download: Download full-size image
+
+Fig. 9. Landslide FR for each susceptibility class.
+
+### 4.2. Sensitivity analysis of landslide susceptibility response to ACR
+
+The elasticity of landslide susceptibility variations with respect to the ACR during the periods 2000–2005, 2005–2010, 2010–2015, 2015–2020, and 2000–2020 were 1.98, 1.45, 0.88, 1.18, and 1.35, respectively. This indicates that a 1% variation in ACR would result in average alterations of 1.98%, 1.45%, 0.88%, 1.18%, and 1.35% in LSI. The elasticity decreased significantly during 2000–2015. This indicates that the increase in rainfall during this period was weaker than that in landslide susceptibility. Notwithstanding the continued increase in rainfall, the elasticity increased by 0.3% during 2015–2020. The reason for this difference is the presence of a rainfall threshold for landslide occurrence. The response of landslide susceptibility to the ACR variations in Sichuan Province from 2000 to 2020 was also significant. The ACR transition in Sichuan was mainly affected by extreme climate and human activities, particularly as it shifted between type II and type III rainfall patterns. The substantial variation in the SRDD between type III and type IV rainfall categories, in conjunction with their widespread presence in the study area, caused the LSI to be particularly responsive to ACR variations. Utilizing the ACR and LSI spanning 2000–2020, we computed the elasticities pertaining to the primary administrative district (Fig. 10).
+
+1.   Download: Download high-res image (1MB)
+2.   Download: Download full-size image
+
+Fig. 10. Elasticity of LSI changes in response to ACR in Sichuan province during the periods 2000–2005 (a), 2005–2010 (b), 2010–2015 (c), 2015–2020 (d), and 2000–2020 (e).
+
+In the Sichuan province, the elasticity of the LSI to ACR during 2000–2005, 2005–2010, 2010–2015, 2015–2020, and 2000–2020 were 0.01–9.80, 0.26–8.63, 0.02–8.27, 0.11–5.42, and 0.03–4.33, respectively. The average elasticities for the five periods were 1.56, 1.13, 1.09, 1.15, and 1.28. Compared with 2000–2020, the elasticity increased by 22% in 2000–2005 and decreased by 14%, 18%, and 12% in 2005–2010, 2010–2015, and 2015–2020, respectively.
+
+Spatially, the areas with the highest elasticity during 2000–2020 were Dazhu and Mian counties in Dazhou City. Superimposed on the spatial distribution of LSI, the areas most sensitive to variations in LSI to ACR were primarily those with higher LSI. For 2000–2005, the elasticity of the LSI response to rainfall variations was significantly higher than that of the other periods. During the periods 2000–2005, 2005–2010, 2010–2015, and 2015–2020, nearly or over 50% of the areas within Sichuan Province had an elasticity >1. Although the response of landslide susceptibility to rainfall variations was significant during the different periods, the differences in sensitivity were small.
+
+### 4.3. Future projection of rainfall
+
+Projection maps of the ACR were derived for 2030 (Fig. 11). The projected ACR map shows an increase in type III and IV rainfall. However, the incidence of type II ACR has decreased in recent years. Future projections indicate that there would be a 4.18% increase in type III rainfall and 5.22% increase in type IV rainfall by 2030 (Fig. 12). Therefore, type II ACR is likely to decrease by 9.5%.
+
+1.   Download: Download high-res image (289KB)
+2.   Download: Download full-size image
+
+Fig. 11. ACR map for the year 2030.
+
+1.   Download: Download high-res image (110KB)
+2.   Download: Download full-size image
+
+Fig. 12. Percentage change in rainfall area, year 2000 to 2030.
+
+### 4.4. Predicted landslide susceptibility map
+
+The ELM model was utilized to map the landslide susceptibility for 2030 by considering the ACR projection. Fig. 13 displays the susceptibility map forecast for the Sichuan area in a future scenario. The maps were divided into five zones based on landslide susceptibility. The pie chart illustrates the percentage distribution of map classes for varying levels of susceptibility.
+
+1.   Download: Download high-res image (1MB)
+2.   Download: Download full-size image
+
+Fig. 13. Predicted landslide susceptibility map for the year 2030.
+
+The map under this scenario depicts the percentages of high and very high susceptibility levels as 23.89% and 30.88%, respectively, and the proportions of low and very low susceptibility classes as 9.35% and 9.70%, respectively. Approximately 26.17% of the area falls within the moderate landslide susceptibility zone. A reduction in regions classified as having low to very low susceptibility is likely in the future compared with 2020. The most significant decrease in very low susceptibility is 3.91%. The very high susceptibility and high susceptibility zones increase by 0.52% and 2.53%, respectively. The moderate susceptibility zone also increases significantly (3.63%). Overall, landslide susceptibility shows a growing trend in 2030. This indicates that landslide events are likely to increase continuously in Sichuan.
+
+5. Discussion
+-------------
+
+Significant fluctuations in climatic conditions are likely to increase runoff during the rainy season (Akmatov et al., 2024). Rainfall causes erosion of the surface of the slope. This results in the deterioration of the rock and soil mass and thereby, reduced shear strength and increased landslide risk (Li et al., 2020a). Hence, it is crucial to evaluate the dynamic response relationship between landslide susceptibility to rainfall and predictions. This study has provided insights into the driving mechanisms of landslide hazards and established rainfall thresholds for prediction purposes. It analyzed the variations in the LSM under dynamic ACR from 2000 to 2020 using the ELM model. In addition, LSM predictions for 2030 were generated using both ELM and LSTM models, with projected ACR maps serving as input data. However, certain aspects require further investigation.
+
+The increase in the percentage of areas classified as having high and very high susceptibility from 2000 to 2020 aligns with studies that reported a correlation between intensified rainfall and increased landslide activity (Gnyawali et al., 2023). The increase in landslide susceptibility, particularly in areas with a higher ACR, emphasizes the sensitivity of the regional landscape to varying rainfall patterns. The observed increase in the average LSI over the study period corroborates the observations of other studies emphasizing the growing landslide risk in response to varying climatic conditions (Tang et al., 2024).
+
+A sensitivity analysis of landslide susceptibility to variations in the ACR revealed that the elasticity varied significantly over different periods. The highest elasticity was observed during 2000–2005. This indicates that the response of the landscape to rainfall variations was most significant during this period. This could be attributed to the occurrence of extreme rainfall events or significant shifts in land use. The decrease in elasticity during 2005–2015 indicates that although rainfall continued to increase, the rate of increase in landslide susceptibility reduced. This was potentially because of the saturation of vulnerable areas or the implementation of mitigation measures. However, the subsequent increase in elasticity during 2015–2020 indicates the presence of a threshold beyond which additional rainfall causes a disproportionate increase in landslide risk. This observation is consistent with the concept of the threshold behavior in ecological systems. Therein, small variations in environmental conditions can cause abrupt shifts in system dynamics (Qin et al., 2024; Wang et al., 2024).
+
+Future projections for the ACR and LSMs indicate a continuation of the trends observed over the past two decades, with a likely increase in type III and IV rainfall and corresponding increase in landslide susceptibility. The predicted increase in high-and very high-susceptibility zones by 2030 emphasizes the need for proactive land-use planning and disaster risk reduction strategies in Sichuan Province. The reduction in low-to very-low-susceptibility areas further emphasizes the growing risk and shrinking buffer zones that could otherwise absorb the impacts of rainfall without inducing landslides. This aligns with the observations of other studies that projected an increase in landslide activity in response to future climate scenarios (Tang et al., 2024).
+
+### 5.1. Performance evaluation of different methods
+
+#### 5.1.1. ROC curve
+
+A detailed analysis of the LSM accuracy using the ELM model was conducted by plotting the ROC curve. It provides a visual representation of the false-positive and true-positive rates. The accuracies of the generated LSMs for 2000, 2005, 2010, 2015, and 2020 were examined. The results indicated a high prediction accuracy for these maps, with values of 0.99, 0.98, 0.97, 0.94, and 0.91, respectively, as depicted in Fig. 14.
+
+1.   Download: Download high-res image (362KB)
+2.   Download: Download full-size image
+
+Fig. 14. ROC curves of the generated landslide susceptibility maps for the years 2000 (a), 2005 (b), 2010 (c), 2015 (d), and 2020 (e).
+
+#### 5.1.2. Evaluation of rainfall forecasting accuracy
+
+To evaluate the extensiveness of the LSTM algorithm for rainfall prediction, rainfall data from 185 landslide locations in the Sichuan Province were used to create 185 individual prediction models. The results are displayed in Fig. 15. The RMSE, MAE, and R 2 values of these LSTM models were averaged and are presented in Table 2. To observe the generalizability of the model across various geographical areas, the R 2 values for each landslide location were spatially interpolated across Sichuan Province, as shown in Fig. 16. The spatial variation in accuracy is evident, with the eastern region of Sichuan Province showing R 2 values of 0.4 or lower, while most of the remaining areas achieved R 2 values of 0.6 or higher. Overall, the LSTM model performed effectively for rainfall prediction across the province.
+
+1.   Download: Download high-res image (838KB)
+2.   Download: Download full-size image
+
+Fig. 15. The rainfall prediction accuracy of LSTM model at 185 landslides, (a) RMSE (b) MAE (c) R 2.
+
+Table 2. The average values of RMSE, MAE, and R 2.
+
+| Metric | Average value |
+| --- | --- |
+| RMSE | 458.87 |
+| MAE | 288.44 |
+| R 2 | 0.71 |
+
+1.   Download: Download high-res image (337KB)
+2.   Download: Download full-size image
+
+Fig. 16. Distribution of LSTM model's R 2 after spatial interpolation.
+
+Figure 16 shows that the LSTM model exhibits regional variations in forecast accuracy. With regard to predicting the rainfall in Sichuan Province, the model displayed strong forecasting capabilities. This is consistent with previous research conducted across China as a whole (Lang et al., 2014; Ma et al., 2016; Xu et al., 2020). The predictability of regional rainfall patterns can be attributed to fluctuations in climate-related disturbances (Wu et al., 2022). As observed by Ma et al. (2016), distinct regional variances in climatic disturbances affect the monthly rainfall in China. The significant impact of internal atmospheric processes on seasonal mean rainfall has hindered accurate predictions. This has resulted in a lower predictability in these regions (Ma et al., 2016). This study utilized average monthly rainfall data from 2000 to 2020 as the time sequence data for predicting the ACR. The observations indicate that by 2030, approximately 50% of the study area is likely to experience an ACR exceeding 1000 mm.
+
+Recent advancements in rainfall prediction using LSTM models provide a strong basis for such forecasts to explain the feasibility of estimating the ACR for 2030 based on the monthly rainfall during 2000–2020. LSTM models have been applied successfully in various studies for accurate rainfall prediction over different timescales and regions. This demonstrates their robustness in handling the complexities and variabilities of rainfall data. For example, recent studies have shown that LSTM networks achieve high accuracy in predicting monthly and seasonal rainfall patterns (Hou et al., 2024; Jafari et al., 2023; Jamei et al., 2023). Given these advancements, the projected ACR for 2030 using historical data and LSTM models can provide valuable insights notwithstanding the inherent variability in rainfall patterns. It is crucial to emphasize that although ACR varies temporally and spatially, the utilization of sophisticated machine learning models such as LSTM (which are designed to capture such variability) enhances the reliability of these projections.
+
+### 5.2. The relationship between ACR and landslide
+
+The ACR aggregates the total rainfall over a year. It captures both frequency and magnitude of precipitation events. This metric is particularly effective for understanding long-term trends and patterns that contribute to landslide susceptibility. Unlike single rainfall events, the ACR provides a broader perspective on how continuous and accumulated rainfall impacts soil moisture levels and slope stability over time. Huang et al. (2023) demonstrated that the ACR is a significant predictor of landslide occurrence in regions with varying climatic conditions. The analysis revealed a significant shift in the ACR types, with types II (500–1000 mm) and III (1000–1500 mm) covering most of the region. However, over the past two decades, there has been a reduction in type II ACR and an increase in types III and IV (1500–2000 mm) ACR. This shift indicates a trend toward more intense rainfall, a pattern that has been observed in other regions globally and is generally linked to climate change (Alahacoon Zhang et al., 2021). The increase in areas experiencing higher rainfall is consistent with the observations of Ni et al. (2023). That study documented similar trends in other parts of China. This intensification of rainfall can exacerbate the risk of landslides, particularly in regions with steep topography and loose soil (such as Sichuan Province).
+
+Fig. 17 illustrates the relationship between the number of landslide events and average ACR for 2000–2020. Most landslide events occurred in 2013 (2530), followed by 2018, 2008, and 2017. It is noteworthy that in July 2013 and May 2008, Sichuan Province experienced continuous and intense rain and a severe earthquake with a magnitude of 8.0, respectively. Both the extreme events resulted in a large number of landslides. Excluding the two catastrophic years, we observe that both number of landslides and ACR have been increasing. This indicates a linear relationship between these. Empirical studies and case analyses provide insights into the relationship between the ACR and landslides. For example, recent research in the Sichuan Province has shown a strong correlation between high ACR values and increased landslide incidence. By analyzing historical landslide data and the corresponding ACR values, it is evident that the years with unusually high cumulative rainfall coincide with a higher frequency of landslides (Huang et al., 2023).
+
+1.   Download: Download high-res image (139KB)
+2.   Download: Download full-size image
+
+Fig. 17. The relationship between the number of landslide events and average ACR from 2000 to 2020.
+
+### 5.3. The variation landslide susceptibility with those in ACR
+
+The observed increase in landslide susceptibility in the Sichuan Province, particularly in areas with higher ACR, aligns with findings from studies conducted in other regions with complex topography and diverse climates. For instance, He and Liu, (2020) found that increased rainfall intensity and duration significantly raised landslide occurrences in the mountainous regions of Southwest China. This reflects the patterns observed in the present study. Moreover, our results on the sensitivity of landslide susceptibility to rainfall variations are consistent with the observations of Lin et al. (2022). They demonstrated that landslide susceptibility is highly responsive to variations in rainfall thresholds. However, our study has provided a more detailed quantification of this relationship through elasticity analysis. This enables a nuanced understanding of how different ACR levels influence landslide susceptibility over time. This study adds to the existing body of knowledge, particularly in the context of the unique geomorphological and climatic characteristics of Sichuan Province.
+
+Figure 18(a) illustrates the relationship between the LSI and the dynamic factor ACR from 2000 to 2020. The calculation method outlined in Fig. 18(b) was used to generate variation diagrams showing the variation in the LSI with ACR. These diagrams allowed for the identification of areas where the variation in LSI is positively correlated with rainfall (denoted by P and N). The statistical analysis of the variation results, as depicted in Fig. 18(c), revealed that 82.21% of the regions exhibited a positive correlation between LSI variation and rainfall. This high proportion indicates that the variations in LSI align closely with the actual rainfall patterns in most regions. The consistency observed in this relationship reinforces the significance of considering dynamic factors such as ACR while analyzing LSI variations.
+
+1.   Download: Download high-res image (385KB)
+2.   Download: Download full-size image
+
+Fig. 18. Analysis of changes in LSI from 2000 to 2020: (a) changes in LSI with the dynamic factor ACR; (b) calculation of the graph of changes in LSI with ACR; (c) statistical analysis of the graph of common changes in LSI with ACR. P: positive correlation; N: negative correlation; O: others.
+
+In Sichuan Province, the percentage of areas with high landslide susceptibility and rainfall showed an increasing trend from 2000 to 2030. Only a limited number of studies have incorporated the dynamic ACR and its future projections into LSM. This hinders a direct comparison of our results with existing observations. Hürlimann et al. (2022) concluded that rainfall variation would adversely influence the overall stability of their research region in the coming years. Similarly, Bernardie et al. (2021) determined that the frequency of landslides is likely to surge in the French Pyrenees Basin because of the increased impact of climate change in their situation. Several other investigations have also considered various dynamic variables and emphasized their significant role in initiating landslides (König et al., 2019; Meneses et al., 2019).
+
+The broad implications of this study are multifaceted. First, the consistent increase in landslide susceptibility, particularly in areas transitioning from moderate-to high-susceptibility zones, indicates a growing risk to the communities and infrastructure in Sichuan Province. The significant expansion of high-and very high-susceptibility areas over the study period emphasizes the urgency for proactive landslide risk management and mitigation strategies. This is particularly critical in the context of climate change, which is likely to exacerbate extreme weather events including heavy rainfall and thereby, further increase the frequency and intensity of landslides. Furthermore, the projected increase in type III and IV rainfall, coupled with the corresponding increase in landslide susceptibility by 2030, emphasizes the need for forward-looking policies and infrastructure planning. The predictions of this study indicate that without adequate intervention, the province could encounter more severe and widespread landslide events. These could have severe consequences for both human lives and economic activities.
+
+### 5.4. Policy implications recommendations, limitations, and prospects
+
+The occurrence of landslides is influenced by various factors, with rainfall typically being the primary consideration in LSM owing to data availability. In future research endeavors, we aim to enhance our methodologies by including the analysis of other influential factors such as human engineering activities, to better understand their dynamic relationships with landslide occurrence. This would enable a more comprehensive assessment of landslide susceptibility and improve our capability to predict and mitigate potential landslide hazards. In this study, a time series of 20 years of rainfall data was utilized to forecast rainfall patterns for 2030. The use of this extensive dataset helps mitigate potential biases in the predictive model. However, estimating the ACR for 2030 based on historical data presents significant challenges owing to temporal and spatial variability in rainfall. This discrepancy is a significant limitation of the research observations. The identification and visualization of forecasts play crucial roles in global surveillance initiatives, natural resource preservation, and strategic planning. We incorporated climate change scenarios from global climate models (GCMs) to enhance the robustness of our projections. These scenarios provide insights into how climatic conditions are likely to evolve under different greenhouse gas emission trajectories. By integrating these scenarios, our model can account for potential variations in rainfall patterns caused by climate change.
+
+Although this study has provided valuable insights into the spatiotemporal dynamics of landslide susceptibility, it is essential to acknowledge the uncertainties inherent in this analysis (Huettmann and Arhonditsis, 2023). The ELM employed in generating landslide susceptibility maps has demonstrated high accuracy, with over 80% of landslide predictions being accurate each year. However, the reliance of the model on historical rainfall data and its extrapolation to future scenarios introduce potential sources of error. For example, the assumption that past rainfall patterns would continue into the future may not fully account for the potential variability and extremes caused by climate change. Additionally, although the Jenks natural break classification method used for reclassifying susceptibility zones minimizes intrazone variability, it does not entirely eliminate the risk of misclassification. This is particularly so for regions with complex terrain and microclimatic variations. The study also assumed a linear relationship between the ACR and landslide susceptibility. Although supported by elasticity analysis, this may not capture the nonlinear and threshold effects of rainfall on landslide occurrence. Another critical area of uncertainty is the spatial resolution of input data. Although this study utilized high-resolution data for both rainfall and landslide occurrence, the potential for small-scale local variations in landslide susceptibility owing to factors such as land-use variations, deforestation, and human activities may not be captured fully. Future studies should consider integrating finer-scale data and evaluating nonlinear modeling approaches to address these limitations.
+
+The observations of this study contribute to the broader field of ecological informatics by providing a detailed case study on the dynamic relationship between climatic factors and geomorphological hazards. The study's methodological approach, which combines ELM with elasticity analysis and natural break classification, provides a robust framework for similar analyses in other regions. This also emphasizes the importance of considering both temporal and spatial dimensions while assessing the impacts of climate variability on landslide susceptibility. Future research should focus on integrating additional environmental variables such as soil moisture, vegetation cover, and land-use variations, to enhance the predictive accuracy of landslide susceptibility models. Moreover, adaptive strategies that incorporate real-time monitoring and early warning systems should be developed to mitigate the risks associated with landslides in highly susceptible areas. Collaboration between government agencies, local communities, and researchers is crucial for implementing effective landslide risk management practices in Sichuan Province and beyond. To conclude, this has study demonstrated the significant influence of rainfall on the spatiotemporal dynamics of landslide susceptibility in Sichuan Province. The results emphasize the increasing risk of landslides in the region and recommend urgent action to mitigate their potential impacts. By situating these observations within the broader context of the existing research and acknowledging the uncertainties involved, this study has provided a strong foundation for future work aimed at enhancing our understanding of landslide hazards and improving resilience to such natural disasters.
+
+6. Conclusions
+--------------
+
+Initially, this study used the ELM model to conduct a long-term LSM in Sichuan Province, China, from 2000 to 2020. Second, the LSTM model was applied to predict the monthly rainfall. The future landslide susceptibility was then projected using the future ACR projection as the driving parameter. Finally, we evaluated the spatial and temporal variations in landslide susceptibility in response to rainfall using an elasticity model. The key observations of this study are as follows.
+*   1.The spatial pattern of rainfall in Sichuan Province varied over 2000–2020. During the past two decades, the type IV rainfall areas have increased significantly (IRDD=47.19%). A larger increase occurred in type IV ACR (IRDD=77.26%) during 2000–1010 and in the area of type III ACR (IRDD=3.56%) during 2010–2020. Overall, the rainfall has shown an increasing trend from 2000 to 2020 (ORDD=0.35%). 
+*   2.The overall LSI showed an evident decreasing trend from mountainous areas to basins, with “moderate” and “high” landslide susceptibility dominating the entire study area. During 2000–2020, the LSI increased in 37.46% of the research region, mostly in the cities of Guang'an, Bazhong, and Ya'an. An increase in extreme rainfall was the major cause of the increase in LSI. 
+*   3.The ACR projections for 2030 show an increase of over 4% in the type III rainfall areas and of approximately 5% in the type IV rainfall areas. Meanwhile, the area of type II rainfall is projected to decrease by approximately 10%. This indicates that climate change exacerbates rainfall variations. Hence, emergency regulations for extreme rainfall events in the Sichuan region are required. 
+*   4.Future landslide susceptibility map projections can contribute to the management and sustainable allocation of ecological services. The projected maps for 2030 show that as rainfall levels increase, the categories labeled as “high” and “very high” susceptibility to landslides also increase. Compared with 2020, the levels of high and very high landslide susceptibility have increased by 0.52% and 2.53%, respectively. This indicates a potential increase in landslide occurrence in the region. 
+*   5.We also developed an elasticity indicator to assess the responses of the LSI to ACR variations. The results showed an overall increase in elasticity from 2000 to 2020, ranging from 0.88 to 1.98. The elasticity of landslide susceptibility variation to the ACR variation from 2000 to 2020 was 1.35. This indicates that a 1% variation in rainfall would result in an average variation in landslide susceptibility of 1.35%. With regard to the elasticities for the major administrative regions, approximately 50% of the cities in Sichuan Province had elasticities >1. Overall, the response of landslide susceptibility to rainfall variations was significant for different years. However, the differences in sensitivity were small. 
+
+The observations of this study would assist decision makers in gaining a clearer understanding of the relationships between human activities and natural processes in Sichuan Province, China. Using this information, stakeholders can develop effective policies to mitigate and prevent landslides. In addition, efforts should be directed toward reducing the effects of UHIs, enhancing living conditions, advancing public health initiatives, and cultivating community welfare.
+
+CRediT authorship contribution statement
+----------------------------------------
+
+**Hao Zheng:** Writing – original draft, Software, Methodology, Investigation. **Mingtao Ding:** Writing – review & editing, Supervision, Funding acquisition, Data curation, Conceptualization.
+
+Declaration of competing interest
+---------------------------------
+
+None.
+
+Acknowledgments
+---------------
+
+This research was financially supported by two National Natural Science Foundations of China (Grant Nos. U21A2032 and 42371203) and the Financial Fund of Sichuan Institute of Geological Survey (Grant No. SCIGS-CZDXM-2024008).
+
+Recommended articles
+
+Data availability
+-----------------
+
+The datasets and the codes are available for download from the link (https://pan.baidu.com/s/1AJ3ygJH4Tpuc-RX7zd-Lqw?pwd=ox24).
+
+References
+----------
+
+1.   Agboola et al., 2024 G. Agboola, L.H. Beni, T. Elbayoumi, G. Thompson Optimizing landslide susceptibility mapping using machine learning and geospatial techniques  Eco. Inform., 81 (2024), Article 102583, 10.1016/j.ecoinf.2024.102583 View PDF View article View in Scopus Google Scholar 
+2.   Akmatov et al., 2024 R. Akmatov, O. Karymshakov, Z. Karamoldoev, T. Choduraev Changes in Runoff During the Growing Season in the Upper Reaches of the Naryn River in the Context of Global Climate Change   (2024), pp. 443-451 Crossref View in Scopus Google Scholar 
+3.   Alizadeh, 2022 O. Alizadeh Advances and challenges in climate modeling  Clim. Chang., 170 (1) (2022), pp. 1-26 Google Scholar 
+4.   de Andrade et al., 2019 F.M. de Andrade, C.A. Coelho, I.F. Cavalcanti Global precipitation hindcast quality assessment of the subseasonal to seasonal (S2S) prediction project models  Clim. Dyn., 52 (9) (2019), pp. 5451-5475 Crossref View in Scopus Google Scholar 
+5.   Anochi et al., 2021 J.A. Anochi, V.A. de Almeida, H.F. de Campos Velho Machine learning for climate precipitation prediction modeling over South America  Remote Sens., 13 (13) (2021), p. 2468 Crossref View in Scopus Google Scholar 
+6.   Arora et al., 2021 A. Arora, A. Arabameri, M. Pandey, M.A. Siddiqui, U.K. Shukla, D.T. Bui, A. Bhardwaj Optimization of state-of-the-art fuzzy-metaheuristic ANFISbased machine learning models for flood susceptibility prediction mapping in the middle ganga plain, India  Sci. Total Environ., 750 (2021), Article 141565, 10.1016/j.scitotenv.2020.141565 View PDF View article View in Scopus Google Scholar 
+7.   Bernardie et al., 2021 S. Bernardie, R. Vandromme, Y. Thiery, T. Houet, M. Grémont, F. Masson, …, I. Bouroullec Modelling landslide hazards under global changes: the case of a Pyrenean valley  Nat. Hazards Earth Syst. Sci., 21 (1) (2021), pp. 147-169 Crossref View in Scopus Google Scholar 
+8.   Caine, 1980 N. Caine The rainfall intensity: duration control of shallow landslides and debris flows  Geogr. Ann. Ser. A Phys. Geogr., 62 (1980), pp. 23-27, 10.2307/520449 View in Scopus Google Scholar 
+9.   Chen et al., 2017 W. Chen, X. Xie, J. Peng, J. Wang, Z. Duan, H. Hong GIS-based landslide susceptibility modelling: a comparative assessment of kernel logistic regression, Naïve-Bayes tree, and alternating decision tree models  Geomat. Nat. Haz. Risk, 8 (2) (2017), pp. 950-973 doi: 10.1080/19475705.2017.1289250 Crossref View in Scopus Google Scholar 
+10.   Chen et al., 2023 Z. Chen, D. Song, Y. Du, L. Dong Investigation on the spatial distribution of landslides in Sichuan Province, Southwest China  Geomat. Nat. Haz. Risk, 14 (1) (2023), 10.1080/19475705.2023.2232085 Google Scholar 
+11.   Chowdhuri et al., 2022 I. Chowdhuri, S.C. Pal, A. Saha, P. Roy, R. Chakrabortty, M. Shit Application of novel framework approach for assessing rainfall induced future landslide hazard to world heritage sites in indo-Nepal-Bhutan Himalayan region  Geocarto Int., 37 (27) (2022), pp. 17742-17776, 10.1080/10106049.2022.2134464 View in Scopus Google Scholar 
+12.   Dikshit et al., 2021 A. Dikshit, B. Pradhan, A.M. Alamri Pathways and challenges of the application of artificial intelligence to geohazards modelling  Gondwana Res., 100 (2021), pp. 290-301, 10.1016/j.gr.2020.08.007 View PDF View article View in Scopus Google Scholar 
+13.   Dou et al., 2019 J. Dou, A.P. Yunus, D.T. Bui, A. Merghadi, M. Sahana, Z. Zhu, B.T. Pham Assessment of advanced random forest and decision tree algorithms for modeling rainfall-induced landslide susceptibility in the IzuOshima Volcanic Island, Japan  Sci. Total Environ., 662 (2019), pp. 332-346, 10.1016/j.scitotenv.2019.01.221 View PDF View article View in Scopus Google Scholar 
+14.   Du et al., 2020 J. Du, T. Glade, T. Woldai, B. Chai, B. Zeng Landslide susceptibility assessment based on an incomplete landslide inventory in the Jilong Valley, Tibet, Chinese Himalayas  Eng. Geol., 270 (2020), Article 105572 View PDF View article View in Scopus Google Scholar 
+15.   Fang et al., 2024 Z. Fang, Y. Wang, C.J. Westen, L. Lombardo Space-time modeling of landslide size by combining static, dynamic, and unobserved spatiotemporal factors  CATENA, 240 (2024), Article 107989 View PDF View article View in Scopus Google Scholar 
+16.   Gnyawali et al., 2023 K. Gnyawali, K. Dahal, R. Talchabhadel, S. Nirandjan Framework for rainfall-triggered landslide-prone critical infrastructure zonation  Sci. Total Environ., 872 (2023), Article 162242 View PDF View article View in Scopus Google Scholar 
+17.   Grêt-Regamey and Weibel, 2020 A. Grêt-Regamey, B. Weibel Global assessment of mountain ecosystem services using earth observation data  Ecosyst. Serv., 46 (2020), Article 101213 View PDF View article View in Scopus Google Scholar 
+18.   Guo et al., 2021 Z. Guo, Y. Shi, F. Huang, X. Fan, J. Huang Landslide susceptibility zonation method based on C5. 0 decision tree and K-means cluster algorithms to improve the efficiency of risk management  Geosci. Front., 12 (6) (2021), Article 101249, 10.1016/j.gsf.2021.101249 View PDF View article View in Scopus Google Scholar 
+19.   Guzzetti et al., 2020 F. Guzzetti, _et al._ Geographical landslide early warning systems  Earth Sci. Rev., 200 (2020), Article 102973 View PDF View article View in Scopus Google Scholar 
+20.   Hao et al., 2018 Z. Hao, V.P. Singh, Y. Xia Seasonal drought prediction: advances, challenges, and future prospects  Rev. Geophys., 56 (1) (2018), pp. 108-141 Crossref View in Scopus Google Scholar 
+21.   He and Liu, 2020 W. He, J. Liu Rainfall Event–Duration Thresholds for Landslide Occurrences in China  Water, 12 (2020), p. 494 Crossref View in Scopus Google Scholar 
+22.   Hou et al., 2024 S. Hou, Q. Geng, Y. Huang, _et al._ Rainfall prediction model based on CEEMDAN-VMD-BiLSTM network  Water Air Soil Pollut., 235 (2024), p. 482, 10.1007/s11270-024-07299-8 View in Scopus Google Scholar 
+23.   Hua et al., 2020 Y. Hua, X. Wang, Y. Li, P. Xu, W. Xia Dynamic development of landslide susceptibility based on slope unit and deep neural networks  Landslides, 18 (1) (2020), pp. 281-302, 10.1007/s10346-020-01444-0 View in Scopus Google Scholar 
+24.   Huang et al., 2017 F. Huang, K. Yin, J. Huang, L. Gui, P. Wang Landslide susceptibility mapping based on self-organizing-map network and extreme learning machine  Eng. Geol., 223 (2017), pp. 11-22 View PDF View article View in Scopus Google Scholar 
+25.   Huang et al., 2006 G.-B. Huang, Q.-Y. Zhu, C.-K. Siew Extreme learning machine: theory and applications  Neurocomputing, 70 (2006), pp. 489-501 View PDF View article View in Scopus Google Scholar 
+26.   Huang et al., 2023 W. Huang, M. Ding, Z. Li, J. Yu, D. Ge, Q. Liu, J. Yang Landslide susceptibility mapping and dynamic response along the Sichuan-Tibet transportation corridor using deep learning algorithms  Catena, 222 (2023) Google Scholar 
+27.   Huettmann and Arhonditsis, 2023 F. Huettmann, G. Arhonditsis Towards an ecological informatics scholarship that is reflective, repeatable, transparent, and sharable!  Eco. Inform., 76 (2023), Article 102132, 10.1016/j.ecoinf.2023.102132 View PDF View article View in Scopus Google Scholar 
+28.   Hürlimann et al., 2022 M. Hürlimann, Z. Guo, C. Puig-Polo, V. Medina Impacts of future climate and land cover changes on landslide susceptibility: regional scale modelling in the Val d’Aran region (Pyrenees, Spain)  Landslides, 19 (1) (2022), pp. 99-118, 10.1007/s10346-021-01775-6 View in Scopus Google Scholar 
+29.   Hussain et al., 2023 M.A. Hussain, Z. Chen, Y. Zheng, Y. Zhou, H. Daud Deep learning and machine learning models for landslide susceptibility mapping with remote sensing data  Remote Sens., 15 (2023), p. 4703 Crossref View in Scopus Google Scholar 
+30.   Jafari et al., 2023 F. Jafari, S.J. Mousavi, K. Ponnambalam Predictive MPC-based operation of urban drainage systems using input data-clustered artificial neural networks rainfall forecasting models  Hydrology, 10 (7) (2023), p. 139 Crossref View in Scopus Google Scholar 
+31.   Jamei et al., 2023 M. Jamei, M. Ali, A. Malik, _et al._ Development of a TVF-EMD-based multi-decomposition technique integrated with encoder-decoder-bidirectional-LSTM for monthly rainfall forecasting  J. Hydrol., 617 (2023), Article 129105 View PDF View article View in Scopus Google Scholar 
+32.   Kim et al., 2021 H. Kim, Y. Ham, Y. Joo, S. Son Deep learning for bias correction of MJO prediction  Nat. Commun., 12 (1) (2021), pp. 1-7 Google Scholar 
+33.   Kincey et al., 2024 M. Kincey, N. Rosser, Z. Swirad, T. Robinson, R. Shrestha, D. Pujara, G. Basyal, A. Densmore, K. Arrell, K. Oven, _et al._ National-scale rainfall-triggered landslide susceptibility and exposure in Nepal  Earth’s Future, 12 (2024) Google Scholar 
+34.   Kingma and Ba, 2015 D.P. Kingma, J. Ba Adam: a method for stochastic optimization, in: 3rd Int. Conf. Learn. Represent. ICLR2015-Conf  Track Proc, pp. 1–15 (2015) Google Scholar 
+35.   König et al., 2019 T. König, H.J. Kux, R.M. Mendes Shalstab mathematical model and WorldView-2 satellite images to identification of landslide-susceptible areas  Nat. Hazards, 97 (3) (2019), pp. 1127-1149, 10.1007/s11069-019-03691-4 View in Scopus Google Scholar 
+36.   Kumar, 2023 S. Kumar A novel hybrid machine learning model for prediction of CO2 using socio-economic and energy attributes for climate change monitoring and mitigation policies  Eco. Inform., 77 (2023), Article 102253, 10.1016/j.ecoinf.2023.102253 View PDF View article View in Scopus Google Scholar 
+37.   Lang et al., 2014 Y. Lang, A. Ye, W. Gong, C. Miao, Z. Di, J. Xu, Y. Liu, L. Luo, Q. Duan Evaluating skill of seasonal precipitation and temperature predictions of NCEP CFSv2 forecasts over 17 hydroclimatic regions in China  J. Hydrometeorol., 15 (4) (2014), pp. 1546-1559 Google Scholar 
+38.   Li et al., 2017 L. Li, H. Lan, C. Guo, Y. Zhang, Q. Li, Y. Wu Geohazard susceptibility assessment along the Sichuan-Tibet railway and its adjacent area using an improved frequency ratio method  Geoscience, 31 (2017), pp. 911-929, 10.3969/j.issn.1000-8527.2017.05.004 View in Scopus Google Scholar 
+39.   Li et al., 2020a L. Li, M. Nearing, V. Polyakov, M. Nichols, F. Pierson, M. Cavanaugh Evolution of rock cover, surface roughness, and its effect on soil erosion under simulated rainfall  Geoderma, 379 (2020), Article 114622 View PDF View article View in Scopus Google Scholar 
+40.   Li et al., 2020b Y. Li, X. Wang, H. Mao Influence of human activity on landslide susceptibility development in the three gorges area  Nat. Hazards, 104 (2020), pp. 2115-2151, 10.1007/s11069-020-04264-6 View in Scopus Google Scholar 
+41.   Liang et al., 2019 P. Liang, Z.-Z. Hu, Y. Liu, X. Yuan, X. Li, X. Jiang Challenges in predicting and simulating summer rainfall in the eastern China  Clim. Dyn., 52 (3) (2019), pp. 2217-2233 Crossref View in Scopus Google Scholar 
+42.   Liao et al., 2019 K. Liao, Y. Wu, F. Miao, L. Li, Y. Xue Using a kernel extreme learning machine with grey wolf optimization to predict the displacement of step-like landslide  Bull. Eng. Geol. Environ., 79 (2019), pp. 673-685 Crossref View in Scopus Google Scholar 
+43.   Lin et al., 2022 Q. Lin, S. Steger, M. Pittore, J. Zhang, L. Wang, J. Tong, Y. Wang Evaluation of potential changes in landslide susceptibility and landslide occurrence frequency in China under climate change  Sci. Total Environ., 850 (2022), Article 158049 View PDF View article View in Scopus Google Scholar 
+44.   Lye et al., 2021 K. Lye, S. Mishra, D. Ray, P. Chandrashekar Iterative surrogate model optimization (ISMO): an active learning algorithm for PDE constrained optimization with deep neural networks  Comput. Methods Appl. Mech. Eng., 374 (2021), Article 113575 View PDF View article View in Scopus Google Scholar 
+45.   Ma et al., 2016 F. Ma, A. Ye, X. Deng, Z. Zhou, X. Liu, Q. Duan, J. Xu, C. Miao, Z. Di, W. Gong Evaluating the skill of NMME seasonal precipitation ensemble predictions for 17 hydroclimatic regions in continental China  Int. J. Climatol., 36 (1) (2016), pp. 132-144 Crossref View in Scopus Google Scholar 
+46.   McKee et al., 1993 T.B. McKee, N.J. Doesken, J. Kleist The relationship of drought frequency and duration to time scales  Proceedings of the 8th Conference on Applied Climatology, Vol. 17, American Meteorological Society, Boston, MA (1993), pp. 179-184 View in Scopus Google Scholar 
+47.   Meneses et al., 2019 B.M. Meneses, S. Pereira, E. Reis Effects of different land use and land cover data on the landslide susceptibility zonation of road networks  Nat. Hazards, 19 (3) (2019), pp. 471-487, 10.5194/nhess-19-471-2019 View in Scopus Google Scholar 
+48.   Mondini et al., 2023 A.C. Mondini, F. Guzzetti, M. Melillo Deep learning forecast of rainfall-induced shallow landslides  Nat. Commun., 14 (2023), p. 2466 View in Scopus Google Scholar 
+49.   Ni et al., 2023 L. Ni, D. Wang, V. Singh, J. Wu, X. Chen, Y. Tao, X. Zhu, J. Jiang, X. Zeng Monthly precipitation prediction at regional scale using deep convolutional neural networks  Hydrol. Process., 37 (2023) Google Scholar 
+50.   Oguz et al., 2024 E.A. Oguz, R. Benestad, K. Parding, I. Depina, V. Thakur Quantification of climate change impact on rainfall-induced shallow landslide susceptibility: a case study in Central Norway  Georisk Assess. Manage. Risk Eng. Syst. Geohazards. 18 (2), 467-490 (2024) Google Scholar 
+51.   O'Neill et al., 2017 B.C. O’Neill, E. Kriegler, K.L. Ebi, E. Kemp-Benedict, K. Riahi, D.S. Rothman, B.J. van Ruijven, D.P. van Vuuren, J. Birkmann, K. Kok, M. Levy The roads ahead: narratives for shared socioeconomic pathways describing world futures in the 21st century  Glob. Environ. Chang., 42 (2017), pp. 169-180, 10.1016/j.gloenvcha.2015.01.004 View PDF View article View in Scopus Google Scholar 
+52.   Pham et al., 2021 Q.B. Pham, S. Chandra Pal, R. Chakrabortty, A. Saha, S. Janizadeh, K. Ahmadi, K.M. Khedher, D.T. Anh, J.P. Tiefenbacher, A. Bannari Predicting landslide susceptibility based on decision tree machine learning models under climate and land use changes  Geocarto Int. (2021), pp. 1-27, 10.1080/10106049.2021.1986579 Google Scholar 
+53.   Piciullo et al., 2018 L. Piciullo, M. Calvello, J.M. Cepeda Territorial early warning systems for rainfall-induced landslides  Earth Sci. Rev., 179 (2018), pp. 228-247 View PDF View article View in Scopus Google Scholar 
+54.   Qian et al., 2021 Q. Qian, X. Jia, H. Lin, R. Zhang Seasonal forecast of nonmonsoonal winter precipitation over the Eurasian continent using machine-learning models  J. Clim., 34 (17) (2021), pp. 7113-7129 View in Scopus Google Scholar 
+55.   Qin et al., 2024 G. Qin, N. Wang, Y. Wu, Z. Zhang, Z. Meng, Y. Zhang Spatiotemporal variations in eco-environmental quality and responses to drought and human activities in the middle reaches of the Yellow River basin, China from 1990 to 2022  Eco. Inform., 81 (2024), Article 102641 View PDF View article View in Scopus Google Scholar 
+56.   Rahmani et al., 2021 F. Rahmani, C. Shen, S. Oliver, K. Lawson, A. Appling Deep learning approaches for improving prediction of daily stream temperature in data-scarce, unmonitored, and dammed basins  Hydrol. Process., 35 (11) (2021), Article e14400 View in Scopus Google Scholar 
+57.   Reichenbach et al., 2018 P. Reichenbach, M. Rossi, B.D. Malamud, M. Mihir, F. Guzzetti A review of statistically-based landslide susceptibility models  Earth Sci. Rev., 180 (2018), pp. 60-91 View PDF View article View in Scopus Google Scholar 
+58.   Saha et al., 2022 A. Saha, S.C. Pal, I. Chowdhuri, A.R.M.T. Islam, P. Roy, R. Chakrabortty Land degradation risk dynamics assessment in red and lateritic zones of eastern plateau, India: a combine approach of K-fold CV, data mining and field validation  Eco. Inform., 69 (2022), Article 101653, 10.1016/j.ecoinf.2022.101653 View PDF View article View in Scopus Google Scholar 
+59.   Shevchenko and Shkliarenko, 2024 O. Shevchenko, V. Shkliarenko Features of underground flow formation to the Golovesnya river (Desna basin) during the dry period 2007-2021  Man Environ. Iss. Neoecol. (2024), pp. 6-18 Crossref Google Scholar 
+60.   Song and Deng, 2017 W. Song, X. Deng Land-use/land-cover change and ecosystem service provision in China  Sci. Total Environ., 576 (2017), pp. 705-719, 10.1016/j.scitotenv.2016.07.078 View PDF View article View in Scopus Google Scholar 
+61.   Steger et al., 2023 S. Steger, M. Moreno, A. Crespi, P.J. Zellner, S.L. Gariano, M.T. Brunetti, M. Melillo, S. Peruccacci, F. Marra, R. Kohrs, J. Goetz, V. Mair, M. Pittore Deciphering seasonal effects of triggering and preparatory precipitation for improved shallow landslide prediction using generalized additive mixed models  Nat. Hazards Earth Syst. Sci., 23 (2023), pp. 1483-1506 Crossref View in Scopus Google Scholar 
+62.   Sun et al., 2021 D. Sun, S. Shi, H. Wen, J. Xu, X. Zhou, J. Wu A hybrid optimization method of factor screening predicated on GeoDetector and random Forest for landslide susceptibility mapping  Geomorphology, 379 (2021), Article 107623, 10.1016/j.geomorph.2021.107623 View PDF View article View in Scopus Google Scholar 
+63.   Tang et al., 2024 X. Tang, L. Wang, H. Wang, Y. Yuan, D. Huang, J. Zhang Predicted climate change will increase landslide risk in Hanjiang River basin, China  J. Earth Sci., 35 (2024), pp. 1334-1354 Crossref View in Scopus Google Scholar 
+64.   Tang and Duan, 2021 Y.H. Tang, A.M. Duan Using deep learning to predict the east Asian summer monsoon  Environ. Res. Lett., 16 (12) (2021), Article 124006 Crossref View in Scopus Google Scholar 
+65.   Tyagi et al., 2023 A. Tyagi, R.K. Tiwari, N. James Prediction of the future landslide susceptibility scenario based on LULC and climate projections  Landslides, 20 (2023), pp. 1837-1852 Crossref View in Scopus Google Scholar 
+66.   Wang et al., 2021 H. Wang, L. Zhang, H. Luo, J. He, R.W.M. Cheung AI-powered landslide susceptibility assessment in Hong Kong  Eng. Geol., 288 (2021), Article 106103, 10.1016/j.enggeo.2021.106103 View PDF View article View in Scopus Google Scholar 
+67.   Wang et al., 2024 J. Wang, Y. Wang, D. Xu Desertification in northern China from 2000 to 2020: the spatial–temporal processes and driving mechanisms  Eco. Inform., 82 (2024), Article 102769 View PDF View article View in Scopus Google Scholar 
+68.   Wang et al., 2023 T. Wang, X. Tu, V.P. Singh, X. Chen, K. Lin, Z. Zhou Drought prediction: insights from the fusion of LSTM and multi-source factors  Sci. Total Environ., 902 (2023), Article 166361 View PDF View article View in Scopus Google Scholar 
+69.   Wu et al., 2022 J. Wu, H.-L. Ren, P. Zhang, Y. Wang, Y. Liu, C. Zhao, Q. Li The dynamical-statistical subseasonal prediction of precipitation over China based on the BCC new-generation coupled model  Clim. Dyn., 59 (2022), pp. 1213-1232 Crossref View in Scopus Google Scholar 
+70.   Xu et al., 2018 L. Xu, N. Chen, X. Zhang, Z. Chen An evaluation of statistical, NMME and hybrid models for drought prediction in China  J. Hydrol., 566 (2018), pp. 235-249 View PDF View article View in Scopus Google Scholar 
+71.   Xu et al., 2020 L. Xu, N. Chen, X. Zhang, Z. Chen A data-driven multi-model ensemble for deterministic and probabilistic precipitation forecasting at seasonal scale  Clim. Dyn., 54 (7–8) (2020), pp. 3355-3374 Crossref View in Scopus Google Scholar 
+72.   Yu et al., 2019 L. Yu, Y. Cao, C. Zhou, Y. Wang, Z. Huo Landslide susceptibility mapping combining information gain ratio and support vector machines: a case study from Wushan segment in the three gorges reservoir area, China  Appl. Sci., 9 (2019), pp. 4756-4775, 10.3390/app9224756 View in Scopus Google Scholar 
+73.   Zhang et al., 2021 Y.-G. Zhang, _et al._ Research on displacement prediction of step-type landslide under the influence of various environmental factors based on intelligent WCA-ELM in the three gorges reservoir area  Nat. Hazards, 107 (2021), pp. 1709-1729 Crossref View in Scopus Google Scholar 
+74.   Zhou and Zhang, 2022 R. Zhou, Y. Zhang On the role of the architecture for spring discharge prediction with deep learning approaches  Hydrol. Process., 36 (10) (2022), Article e14737 View in Scopus Google Scholar 
+
+Cited by (10)
+-------------
+
+*   ### Modeling the complex spatio-temporal dynamics of ocean wave parameters: A hybrid PINN-LSTM approach for accurate wave forecasting
+
+2025, Measurement Journal of the International Measurement Confederation  Show abstract This study introduces a hybrid model, PINN-LSTM (Physics-Informed Neural Network-Long Short-Term Memory), developed to enhance wave speed forecasting at depths of 1.5 to 11.5 m over forecast horizons of 6, 12, 24, and 48 h. The hybrid PINN-LSTM model was chosen for its unique capability to integrate the physics-based accuracy of PINNs with the temporal sequence learning strength of LSTM networks, enabling the model to capture both spatial and temporal dynamics effectively. The PINN component leverages a linear wave equation to model shallow water dynamics, while the LSTM component addresses long-term dependencies in time-series data. Comparative analyses against standalone LSTM, GRU, and PINN models, as well as methods reported in recent literature, reveal that the PINN-LSTM model achieves superior accuracy, demonstrating more than a 20% reduction in error metrics (MAE, MSE, RMSE) compared to standalone and numerical models. While attention mechanisms have been proposed for sequence modeling, our findings indicate that the original PINN-LSTM architecture performs more effectively in this context. By addressing gaps in existing approaches, this research underscores the potential of integrating physics-informed models with deep learning techniques, providing a robust solution for ocean wave spatio-temporal dynamics forecasting challenges highlighted in previous studies.    
+*   ### Exploration of slope-type geological hazard susceptibility evaluation based on dynamic correction of SBAS-InSAR technology: A case study of Kang County in Gansu Province
+
+2025, Ecological Informatics  Show abstract The assessment of geological disaster susceptibility is crucial for early warning, prevention, and mitigation of disasters. Current methods for evaluating geological disasters rely primarily on static factors that cause disasters and historical data at disaster sites or dynamic factors that are introduced into the evaluation model; however, relatively few studies have focused on the use of dynamic data corrections on the basis of susceptibility evaluation. Interferometric synthetic aperture radar (InSAR) technology can effectively capture surface deformation features. Therefore, this study introduces a correction framework based on small baseline subset interferometric synthetic aperture radar (SBAS-InSAR) data to improve the accuracy of geohazard susceptibility assessment results. This correction framework corrects the susceptibility results of the Random Forest (RF) model, which is based on 12 static factors and historical hazard data, using surface deformation data measured by the SBAS-InSAR technique. Compared with the assessments based on static factors via the RF model, the revised results indicated a reduction in the low susceptibility area by 282.30 km2 and increases in the medium, high, and extremely high susceptibility areas by 90.00 km2, 138.98 km2, and 53.34 km2, respectively. The revised evaluation also revealed a lower density of disaster sites in the low- to high-susceptibility zones than before the revision but a higher density in the extremely high-susceptibility zones. This suggests a greater concentration of disaster sites in areas of higher susceptibility, aligning the zoning results more closely with the actual distribution of the sites. Thus, the proposed method has important reference value for improving the accuracy of regional geological disaster susceptibility evaluation.    
+*   ### Exploring the impact of introducing the TRIGRS physical model into machine learning model on the rainfall-induced shallow landslide-susceptibility assessment
+
+2025, Bulletin of Engineering Geology and the Environment     
+*   ### Landslide susceptibility assessment using information quantity and machine learning integrated models: a case study of Sichuan province, southwestern China
+
+2025, Earth Science Informatics     
+*   ### Global Dynamic Landslide Susceptibility Modeling Based on ResNet18: Revealing Large-Scale Landslide Hazard Evolution Trends in China
+
+2025, Applied Sciences Switzerland     
+*   ### Collapse and landslide risk assessment based on machine learning improved IVM-RF coupling method：A case study of Zhidan County,Yan'an City
+
+2024, Bulletin of Geological Science and Technology     
+
+View all citing articles on Scopus
+
+© 2024 The Authors. Published by Elsevier B.V.
+
+Recommended articles
+--------------------
+
+*   ### Spatiotemporally weighted regression (STWR) for assessing Lyme disease and landscape fragmentation dynamics in Connecticut towns
+
+Ecological Informatics, Volume 84, 2024, Article 102870  Zhe Wang, …, Yan Lin  View PDF 
+*   ### The retrospective double-entry of a long-term ecological dataset
+
+Ecological Informatics, Volume 84, 2024, Article 102873  Simon Bull, …, Michael G.Gardner  View PDF 
+*   ### Machine learning approach for water quality predictions based on multispectral satellite imageries
+
+Ecological Informatics, Volume 84, 2024, Article 102868  Vicky Anand, …, Silke Wieprecht  View PDF 
+*   ### Operationalising weather surveillance radar data for use in ecological research
+
+Ecological Informatics, Volume 84, 2024, Article 102901  Maryna Lukach, …, Christopher Hassall  View PDF 
+*   ### A complete framework for hyperbolic acoustic localization with application to northern bobwhite covey calls
+
+Ecological Informatics, Volume 84, 2024, Article 102871  Long Duong, …, Hamed Sari-Sarraf  View PDF 
+*   ### A multi-source approach to mapping habitat diversity: Combination of multi-date multispectral satellite imagery and comparison with single-date hyperspectral results in a Mediterranean Natural Reserve
+
+Ecological Informatics, Volume 84, 2024, Article 102867  Chiara Zabeo, …, Anna Barbati  View PDF 
+
+Show 3 more articles
+
+*   About ScienceDirect
+*   Remote access
+*   Contact and support
+*   Terms and conditions
+*   Privacy policy
+
+Cookies are used by this site.Cookie settings
+
+All content on this site: Copyright © 2025 Elsevier B.V., its licensors, and contributors. All rights are reserved, including those for text and data mining, AI training, and similar technologies. For all open access content, the relevant licensing terms apply.
+
+×
+
+**Dig deeper, read smarter**
+
+Complement your existing full-text access with Reading Assistant and extract key findings to evaluate relevance faster.
+
+Unlock your access
+
+We use cookies that are necessary to make our site work. We may also use additional cookies to analyze, improve, and personalize our content and your digital experience. You can manage your cookie preferences using the “Cookie Settings” link. For more information, see our Cookie Policy
+
+Cookie Settings Accept all cookies
+
+Cookie Preference Center
+------------------------
+
+We use cookies which are necessary to make our site work. We may also use additional cookies to analyse, improve and personalise our content and your digital experience. For more information, see our Cookie Policy and the list of Google Ad-Tech Vendors. 
+
+ You may choose not to allow some types of cookies. However, blocking some types may impact your experience of our site and the services we are able to offer. See the different category headings below to find out more or change your settings. 
+
+ You may also be able to exercise your privacy choices  as described in our Privacy Policy
+
+Allow all
+### Manage Consent Preferences
+
+#### Strictly Necessary Cookies
+
+Always active
+
+These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work.
+
+Cookie Details List‎
+
+#### Performance Cookies
+
+- [x] Performance Cookies 
+
+These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site.
+
+Cookie Details List‎
+
+#### Contextual Advertising Cookies
+
+- [x] Contextual Advertising Cookies 
+
+These cookies are used for properly showing banner advertisements on our site and associated functions such as limiting the number of times ads are shown to each user.
+
+Cookie Details List‎
+
+### Cookie List
+
+Clear
+
+- [x] checkbox label label
+
+Apply Cancel
+
+Consent Leg.Interest
+
+- [x] checkbox label label
+
+- [x] checkbox label label
+
+- [x] checkbox label label
+
+Confirm my choices

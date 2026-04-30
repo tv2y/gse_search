@@ -1,0 +1,287 @@
+Title: Technical Notes for the CES-National Benchmark
+
+URL Source: https://www.bls.gov/web/empsit/cestn.htm
+
+Markdown Content:
+Introduction
+------------
+
+The Bureau of Labor Statistics (BLS) collects data each month on employment, hours, and earnings from a sample of nonfarm establishments through the Current Employment Statistics (CES) program. The CES survey includes about 121,000 businesses and government agencies, which cover approximately 631,000 individual worksites drawn from a sampling frame of Unemployment Insurance (UI) tax accounts covering roughly 11.8 million establishments. The active CES sample includes approximately 26 percent of all nonfarm payroll employees in the 50 states and the District of Columbia. From these data, a large number of employment, hours, and earnings series in considerable industry and geographic detail are prepared and published each month. Historical statistics for the nation are available on the CES-National data webpage. Information and data for states and metropolitan areas are available on the CES-State and Metro Area data webpage.
+
+Each year, CES-National estimates are benchmarked to the most recent Quarterly Census of Employment and Wage (QCEW) data, based on Unemployment Insurance records, along with a small amount of employment data that is not covered by QCEW. Benchmarking is a standard part of any sample-based survey and is meant to more closely align the CES estimates to population totals. These technical notes will provide background and analysis about the benchmarking process, the data used in that process, and the effects that updates to population data have on CES estimates.
+
+The methodology used in the Current Employment Statistics (CES) program's concepts, data sources, design, calculations, and presentation of data is described in the CES Handbook of Methods. This webpage supplements the Handbook by providing additional detail and information specific to the most recent CES benchmark.
+
+Table of Contents
+-----------------
+
+Use the links below to skip to specific topics about the CES sample, data collection, estimation, and revisions. A link is included to skip to a list of tables in these notes.
+
+*   The Sample
+
+    *   Coverage
+    *   CES Sample by Employment Size Class
+
+*   Reliability
+
+    *   Measurements of Error
+    *   Revisions Between Preliminary and Final Data
+    *   Benchmark Revision as a Measure of Survey Error
+
+*   CES Estimation
+
+    *   Industry Structure Changes
+    *   Birth-Death Model
+    *   Seasonal Adjustment
+
+*   Revisions
+
+    *   Benchmarks
+    *   Historical Reconstructions
+
+*   Table of Figures
+
+The Sample
+----------
+
+The Current Employment Statistics (CES) sample is a stratified, simple random sample of worksites, clustered by Unemployment Insurance (UI) account number. The UI account number is a major identifier on the Bureau of Labor Statistics (BLS) Longitudinal Database (LDB) of employer records, which serves as both the sampling frame and the benchmark source for the CES employment estimates.
+
+More information about the CES sample design, including frame and sample selection, selection weighting, frame maintenance and sample updates, and the inclusion of a model component to account for units that cannot be sampled, is available in the CES Handbook of Methods under Design.
+
+### Coverage
+
+Table 1 shows the 2024 benchmark employment levels and the approximate proportion of total universe employment coverage at the total nonfarm and major industry sector levels. The sample distribution by industry reflects the goal of minimizing the sampling error in the total nonfarm employment estimate, while also providing reliable employment estimates by industry. Sample coverage rates vary by industry as a result of building a design to meet these goals.
+
+The CES government sample is not part of the program's probability-based design, which is used to estimate employment for all private industries. A very high level of universe employment coverage is achieved by obtaining full payroll employment counts for many government agencies. The private and government estimates are summed to derive total nonfarm employment estimates.
+
+More information about sample coverage in the CES survey is available in the Coverage section of the CES Handbook of Methods.
+
+Table 1. Employment benchmarks and approximate coverage of BLS employment and payrolls sample, March 2024| CES Industry Code | CES Industry Title | Employment Benchmarks (in thousands) | Sample Coverage |
+| --- | --- | --- | --- |
+| Unemployment Insurance Counts (UI)(1) | Number of Establishments | Employees |
+| Number (in thousands)(2) | Percent of Benchmark Employment Level |
+| 00-000000 | Total nonfarm | 156,612 | 114,864 | 613,815 | 41,219 | 26 |
+| 10-000000 | Mining and logging | 630 | 752 | 2,052 | 122 | 19 |
+| 20-000000 | Construction | 7,939 | 7,603 | 11,304 | 694 | 9 |
+| 30-000000 | Manufacturing | 12,790 | 6,105 | 15,028 | 2,226 | 17 |
+| 40-000000 | Trade, transportation, and utilities | 28,614 | 17,084 (3) | 165,739 | 8,356 | 29 |
+| 41-420000 (4) | Wholesale trade | 6,105 | 5,101 | 14,621 | 607 | 10 |
+| 42-000000 (4) | Retail trade | 15,367 | 8,536 | 135,556 | 5,896 | 38 |
+| 43-000000 (4) | Transportation and warehousing | 6,554 | 3,634 (3) | 12,442 | 1,671 | 25 |
+| 44-220000 (4) | Utilities | 588 | 325 | 3,120 | 182 | 31 |
+| 50-000000 | Information | 2,940 | 2,584 | 15,581 | 698 | 24 |
+| 55-000000 | Financial activities | 9,094 | 5,990 | 72,631 | 1,720 | 19 |
+| 60-000000 | Professional and business services | 22,396 | 18,363 | 58,275 | 3,141 | 14 |
+| 65-000000 | Private education and health services | 26,325 | 12,571 | 59,712 | 5,676 | 22 |
+| 70-000000 | Leisure and hospitality | 16,362 | 12,383 | 62,275 | 2,423 | 15 |
+| 80-000000 | Other services | 5,905 | 4,539 | 13,488 | 345 | 6 |
+| 90-000000 | Government | 23,617 | 29,567 | 137,731 | 15,817 | 67 |
+| Footnotes: (1) Counts reflect active sample reports. Because not all establishments report payroll and hours information, hours and earnings estimates are based on a smaller sample than are the employment estimates. (2) Employment of reported values for March 2024. (3) The Surface Transportation Board provides a complete count of employment for Class I railroads plus Amtrak. A small sample is used to estimate hours and earnings data. (4) Indented industries are a part of trade, transportation, and utilities. |
+
+To Table of Figures
+
+### CES Sample by Employment Size Class
+
+The employment universe that the CES sample is estimating is highly skewed towards employers with fewer than 10 employees, as shown by table 2. CES samples larger firms at a higher rate than smaller firms, a standard technique used in business establishment surveys.
+
+Table 2. Total private universe employment by size of UI, March 2024| Size Class | Percent of All UIs | Percent of Employment |
+| --- | --- | --- |
+| 1 (0-9 employees) | 72.9 | 10.4 |
+| 2 (10-19 employees) | 12.5 | 7.6 |
+| 3 (20-49 employees) | 8.7 | 12.1 |
+| 4 (50-99 employees) | 3.0 | 9.7 |
+| 5 (100-249 employees) | 1.8 | 13.1 |
+| 6 (250-499 employees) | 0.6 | 9.4 |
+| 7 (500-999 employees | 0.3 | 8.8 |
+| 8 (1000+ employees) | 0.2 | 28.9 |
+| Total | 100.0 | 100.0 |
+
+To Table of Figures
+
+Table 3 shows the distribution of the active CES sample units. A much greater proportion of large UIs are selected; however, that does not create a bias in either the sample or the estimates made from the sample. The use of sample weights in the estimation process prevents a large (or small) firm bias in the estimates.
+
+Table 3. Total private CES sample employment by size of UI, March 2024| Size Class | Percent of All UIs | Percent of Employment |
+| --- | --- | --- |
+| 1 (0-9 employees) | 33.8 | 0.3 |
+| 2 (10-19 employees) | 11.7 | 0.5 |
+| 3 (20-49 employees) | 15.2 | 1.5 |
+| 4 (50-99 employees) | 9.9 | 2.2 |
+| 5 (100-249 employees) | 11.2 | 5.6 |
+| 6 (250-499 employees) | 6.6 | 7.7 |
+| 7 (500-999 employees | 5.4 | 13.1 |
+| 8 (1000+ employees) | 6.2 | 69.1 |
+| Total | 100.0 | 100.0 |
+
+To Table of Figures
+
+Reliability
+-----------
+
+The reliability of the CES estimates can be assessed in several ways including sample variance, monthly revisions, and benchmarks.
+
+### Measurements of Error
+
+The CES survey, like other sample surveys, is subject to two types of error, sampling and non-sampling error. The magnitude of sampling error, or variance, is directly related to the size of the sample and the percentage of universe coverage achieved by the sample. The CES survey sample covers over 26 percent of total universe employment; this yields a very small variance on the total nonfarm estimates. Measurements of error associated with sample estimates are provided in table 4 and the all employee (AE), production employee (PE), and women employee (WE) standard error tables.
+
+Table 4. Standard and relative standard errors of CES sample-based estimates for a 1-month change | CES Industry Code | CES Industry Title | Standard Error(1) | Relative Standard Error |
+| --- | --- | --- | --- |
+| 00-000000 | Total nonfarm | 82,554 | 0.1 |
+| 05-000000 | Total private | 76,902 | 0.1 |
+| 06-000000 | Goods-producing | 24,291 | 0.3 |
+| 07-000000 | Service-providing | 77,962 | 0.2 |
+| 08-000000 | Private service-providing | 71,950 | 0.2 |
+| 10-000000 | Mining and logging | 3,599 | 2.1 |
+| 20-000000 | Construction | 16,779 | 0.7 |
+| 30-000000 | Manufacturing | 15,341 | 0.3 |
+| 31-000000 | Durable goods | 12,798 | 0.4 |
+| 32-000000 | Nondurable goods | 8,791 | 0.5 |
+| 40-000000 | Trade, transportation, and utilities | 22,802 | 0.3 |
+| 41-420000 (2) | Wholesale trade | 12,107 | 0.5 |
+| 42-000000 (2) | Retail trade | 13,292 | 0.3 |
+| 43-000000 (2) | Transportation and warehousing | 12,569 | 0.7 |
+| 44-220000 (2) | Utilities | 1,566 | 1.6 |
+| 50-000000 | Information | 11,009 | 1.4 |
+| 55-000000 | Financial activities | 11,657 | 0.4 |
+| 60-000000 | Professional and business services | 35,244 | 0.4 |
+| 65-000000 | Private education and health services | 30,783 | 0.3 |
+| 70-000000 | Leisure and hospitality | 38,423 | 0.6 |
+| 80-000000 | Other services | 14,818 | 0.5 |
+| 90-000000 | Government | 30,022 | 0.4 |
+| 90-910000 | Federal | (3) | (3) |
+| 90-911000 | Federal, except U.S. Postal Service | (3) | (3) |
+| 90-919120 | U.S. Postal Service | (3) | (3) |
+| 90-920000 | State government | 14,361 | 0.8 |
+| 90-921611 | State government education | 9,365 | 1.1 |
+| 90-922000 | State government, excluding education | 9,464 | 1.1 |
+| 90-930000 | Local government | 26,364 | 0.5 |
+| 90-931611 | Local government education | 18,472 | 0.7 |
+| 90-932000 | Local government, excluding education | 16,040 | 0.7 |
+| Footnotes (1) Variance for total private is calculated using Fay's Balanced Half Samples (BHS) replication technique. Replicate estimates are derived by perturbing the original sampling weights and using the same estimation structure and weighted-link-relative formula used in the original estimator. The variance is computed by measuring the variability of the replicate estimates. Variances for state and local government are based on a regression formula that uses relationships between sampling variability and employment level. For more information, see the Variance estimation section under Reliability in the CES Handbook of Methods. (2) Indented industries are part of trade, transportation, and utilities. (3) Federal government is estimated from a nearly complete population count of employment, so these industries have zero variance. |
+
+To Table of Figures
+
+### Revisions Between Preliminary and Final Data
+
+First preliminary estimates of employment, hours, and earnings, based on less than the total sample, are published immediately following the reference month and are revised with each of the 2 following months to incorporate additional sample received. Table 4 presents the standard error and the relative standard error of CES sample-based estimates for a 1-month change for total nonfarm, total private, and aggregate industries. Standard and relative standard errors for detailed CES industries are also available as variance tables for AE, PE, and WE. An explanation of variance estimation and the uses of standard and relative standard errors for CES estimates is available in the Variance estimation section under Reliability in the CES Handbook of Methods.
+
+### Benchmark Revision as a Measure of Survey Error
+
+The sum of sampling and non-sampling error can be considered total survey error. Unlike most sample surveys that publish sampling error as their only measure of error, the CES derives an annual approximation of total error on a lagged basis because of the availability of the independently derived universe data. While the benchmark error is often used as a proxy measure of total error for the CES survey estimate, it actually represents the difference between two employment estimates derived from separate statistical processes (the CES sample process and the UI administrative process) and therefore reflects the sum of the errors present in each program. Historically, the benchmark revision has been small for total nonfarm employment. Over the prior 10 years, absolute percentage benchmark error has averaged 0.1 percent, with an absolute range from less than 0.05 percent to 0.3 percent. Further discussion about CES annual benchmarks can be found under Benchmark in the CES Handbook of Methods.
+
+CES Estimation
+--------------
+
+Certain aspects of CES estimation are updated each year during benchmark processing. With the benchmark release, updates to the list of published industries are incorporated. The previous year's business net birth-death forecasts are replaced with new forecasted values for the post-benchmark period. Seasonal adjustment models are reselected. Also, any changes deemed necessary for published estimates including reconstructions, corrections, and NAICS updates are all implemented with the benchmark. The latest of these changes are described below.
+
+Estimation methods are described in the Handbook of Methods in the Calculation section.
+
+### Industry Structure Changes
+
+All CES series are evaluated annually for sample size, coverage, and response rate adequacy and to ensure respondent identifying information cannot be ascertained from estimates. All changes resulting from a re-evaluation of the sample and universe coverage for CES industries, which are based on the 2022 North American Industry Classification System (NAICS) industries, are published on the Notice of Publication Changes webpage.
+
+Some small industries no longer have sufficient sample to be estimated and published separately and are combined with other similar industries for estimation and publication purposes. A list of currently published CES series is available on the CES Published Series webpage.
+
+CES estimates series at the basic cell level and then aggregates these estimates to higher industry levels. Aggregation procedures are specific to the data type and published level of precision. For detailed descriptions of CES aggregation procedures for all data types, see Aggregation procedures under the Calculations section of the CES Handbook of Methods.
+
+### Birth-Death Model
+
+The CES sample alone is not sufficient for estimating the total employment level because each month new firms generate employment that cannot be captured through the sample. There is an unavoidable lag between a firm opening for business and its appearance on the CES sample frame.
+
+A parallel though somewhat different issue exists in capturing employment loss from business deaths through monthly sample collection. Businesses that have closed are unlikely to respond to the survey, and data collectors may not be able to ascertain until after the monthly collection period that firms have in fact gone out of business.
+
+CES adjusts for these limitations explicitly, using a statistical modeling technique in conjunction with the sample. Without the net birth-death model-based adjustment, the CES nonfarm payroll employment estimates would be considerably less accurate.
+
+For more information about CES birth-death modeling and implementation in the CES estimates, see Business births and deaths in the Calculations section of the CES Handbook of Methods.
+
+Table 9 in the Benchmark Article shows the net birth-death model forecasts for the post-benchmark period from April to October of the benchmark year. For more recent months of birth-death information, see the CES net birth-death webpage.
+
+### Seasonal Adjustment
+
+The CES program employs a concurrent seasonal adjustment methodology to seasonally adjust its national estimates of employment, hours, and earnings each month. Each year, new seasonal adjustment models are re-specified and implemented with the benchmark update. All seasonally adjusted series are updated for the latest 5 years based on the newly selected models. For more about seasonal adjustment methodology in the CES program, see Seasonal adjustment in the CES Handbook of Methods. For files and information used to calculate seasonal adjusted CES estimates, see the CES seasonal adjustment webpage.
+
+Revisions
+---------
+
+Annual revisions to CES data are the result of benchmarking, but historical reconstructions can sometimes lead to additional revisions. Reconstructed data did affect the 2024 benchmarks of several CES industries. For further details, see the Reconstructions section of the 2024 Benchmark Aricle.
+
+### Benchmarks
+
+For national CES estimates, annual benchmarks are constructed in order to realign the sample-based employment totals for March of each year with the Unemployment Insurance (UI) based population counts for March. These population counts are much less timely than sample-based estimates and are used to provide an annual point-in-time census for employment. Only the March sample-based estimates are replaced with UI counts. Other months are revised based on that March universe level back to the previous April and forward to the current month.
+
+A benchmark revision is the difference between the universe count of employment for March and its corresponding sample-based estimate after removing the effect of any changes in employment scope. The March 2024 benchmark revisions (published in February 2025) resulted in revised series from April 2023 through December 2024 on a not seasonally-adjusted-basis and revised series from January 2020 through December 2024 on a seasonally-adjusted-basis for all series.
+
+Annual CES benchmark revisions are published along with January first preliminary estimates in February of each year. For example, the annual CES benchmark revisions for March 2024 were published along with the January 2025 first preliminary estimates on February 7, 2025.
+
+Final benchmark revisions from 1979 forward and preliminary benchmark revisions from 2000 forward are included in table 5. See the CES National Benchmark Article for more details about the current benchmarking process. For more information about benchmarking methods, see the Benchmark section of the Calculations chapter in the CES Handbook of Methods.
+
+Table 5. CES total nonfarm preliminary and final benchmark revisions(1)| Year | Final benchmark | Preliminary benchmark | Difference |
+| --- | --- | --- | --- |
+| Percent revision | Revision in thousands | Percent revision | Revision in thousands | Percent revision | Revision in thousands |
+| 1979 | 0.5 | 447 | Preliminary benchmark revisions are not available prior to the implementation of probability sample (rolled into production from 2000 to 2003) |
+| 1980 | -0.1 | -63 |
+| 1981 | -0.4 | -349 |
+| 1982 | -0.1 | -113 |
+| 1983 | (2) | 36 |
+| 1984 | 0.4 | 353 |
+| 1985 | (2) | -3 |
+| 1986 | -0.5 | -467 |
+| 1987 | (2) | -35 |
+| 1988 | -0.3 | -326 |
+| 1989 | (2) | 47 |
+| 1990 | -0.2 | -229 |
+| 1991 | -0.6 | -640 |
+| 1992 | -0.1 | -59 |
+| 1993 | 0.2 | 263 |
+| 1994 | 0.7 | 747 |
+| 1995 | 0.5 | 542 |
+| 1996 | (2) | 57 |
+| 1997 | 0.4 | 431 |
+| 1998 | (2) | 44 |
+| 1999 | 0.2 | 258 |
+| 2000 | 0.4 | 468 | 0.3 | 392 | 0.1 | 76 |
+| 2001 | -0.1 | -123 | -0.1 | -76 | 0 | -47 |
+| 2002(3) | -0.2 | -203 | -0.2 | -284 | 0 | 81 |
+| 2003 | -0.1 | -122 | -0.1 | -145 | 0 | 23 |
+| 2004 | 0.2 | 203 | 0.2 | 236 | 0 | -33 |
+| 2005 | -0.1 | -158 | -0.1 | -191 | 0 | 33 |
+| 2006 | 0.6 | 752 | 0.6 | 810 | 0 | -58 |
+| 2007 | -0.2 | -293 | -0.2 | -297 | 0 | 4 |
+| 2008 | -0.1 | -89 | (2) | -21 | -0.1 | -68 |
+| 2009 | -0.7 | -902 | -0.6 | -824 | -0.1 | -78 |
+| 2010(4) | -0.3 | -378 | -0.3 | -366 | 0 | -12 |
+| 2011(5) | 0.1 | 162 | 0.1 | 192 | 0 | -30 |
+| 2012 | 0.3 | 424 | 0.3 | 386 | 0 | 38 |
+| 2013(6) | -0.1 | -119 | -0.1 | -124 | 0 | 5 |
+| 2014 | (2) | 67 | (2) | 7 | (2) | 60 |
+| 2015(7) | -0.1 | -172 | -0.1 | -208 | 0 | 36 |
+| 2016 | -0.1 | -81 | -0.1 | -150 | 0 | 69 |
+| 2017(8) | 0.1 | 135 | 0.1 | 95 | 0 | 40 |
+| 2018 | (2) | -16 | (2) | 43 | (2) | -59 |
+| 2019(9) | -0.3 | -489 | -0.3 | -501 | 0 | 12 |
+| 2020 | -0.1 | -121 | -0.1 | -173 | 0 | 52 |
+| 2021 | (2) | -7 | -0.1 | -166 | 0.1 | 159 |
+| 2022(10) | 0.3 | 506 | 0.3 | 462 | 0 | 44 |
+| 2023 | -0.1 | -187 | -0.2 | -306 | 0.1 | 119 |
+| 2024(11) | -0.4 | -598 | -0.5 | -818 | 0.1 | 220 |
+| Footnotes: (1) The table reflects the benchmark revisions after removing the effect of any changes in employment scope. (2) Absolute revision is less than 0.05 percent. (3) With the conversion from SIC to NAICS, support activities for animal production (NAICS 1152) was removed from CES scope. Also, the federal government employment level derivations were changed from end-of-month counts provided by the Office of Personnel Management that excluded some workers, mostly employees of U.S. Department of Defense-owned establishments such as military base commissaries, to QCEW-derived benchmark employment levels. For more information, see the 2002 CES Benchmark Article. (4) With the 2010 benchmark, BLS reconstructed historical national levels of all employees for other federal government (91-999900) to reflect corrections to initial counts for temporary and intermittent workers for the 2010 Census. The reconstructions resulted in about 4,000 in employment being added to other federal government. For more information, see the Reconstructions section in the 2010 CES Benchmark Article. (5) A review of industries for the possible presence of noncovered employment yielded 13 additional industries. As a result of including these industries, employment in the amount of 95,000 was added to the benchmark nonfarm level. For more information, see the Changes to noncovered employment section in the 2011 CES Benchmark Article. (6) With the 2013 benchmark, BLS reconstructed several national employment series. Each first quarter, the Quarterly Census of Employment and Wages (QCEW) program, whose data account for approximately 97 percent of the CES universe scope (see the Frame and sample selection section of Design in the CES Handbook of Methods), incorporates updated industry assignments. In 2013, these updates included two substantial groups of nonrandom, noneconomic code changes, one to funds, trusts, and other financial vehicles (NAICS 525), and the other, a reclassification of approximately 466,000 in employment from private households (NAICS 814), which is out of scope for CES, to services for the elderly and persons with disabilities (NAICS 62412), which is in scope. These changes also had an impact, beyond what would be considered typical for a given benchmark year, on corresponding CES series. For more information about the changes to these industries, see the QCEW First Quarter 2013 News Release or the Special notice regarding reconstructed data section in the 2013 CES Benchmark Article. (7) With the 2015 benchmark, BLS reconstructed the national employment series services for the elderly and persons with disabilities (65-624120) back to January 2000. BLS previously reconstructed this series with the 2013 benchmark; however, between the 2013 and 2015 benchmark, a better source of information for the employment within NAICS 62412 for the state of California was found. The inclusion of the reconstructed series resulted in total nonfarm and total private employment that was 27,000 less than the originally published March 2015 estimate level. The difference between the benchmarked and originally published March 2015 estimate level is −199,000 or −0.1 percent. This table displays March 2015 data after accounting for the decrease of 27,000 from the reconstructed series. Similarly, for the education and health services supersector, this table displays March 2015 data after incorporating the reconstructed series. For more information, see the Reconstructions section in the 2015 CES Benchmark Article. (8) With the 2017 benchmark, BLS reconstructed the national employment series security guards and patrols and armored car services (60-561613) back to October 2016 to correct a microdata error. The inclusion of the reconstructed series resulted in total nonfarm and total private employment that was 3,000 more than the originally published March 2017 estimate level. The difference between the benchmarked and originally published March 2017 estimate level is 138,000 or 0.1 percent. This table displays March 2017 data after accounting for the increase of 3,000 from the reconstructed series. Similarly, for the professional and business services supersector, this table displays March 2017 data after incorporating the reconstructed series. For more information, see the Reconstructions section in the 2017 CES Benchmark Article. (9) With the 2019 benchmark, BLS reconstructed some national employment series in transportation to correct a processing error in rail transportation (43-482000), which had resulted in 16,000 employment being double counted. The reconstruction removed the doubled-counted employment and affected aggregates of rail transportation, up to and including total nonfarm, back to January 1990. While the difference between the benchmarked and originally published March 2019 estimate level is −505,000, or −0.3 percent, this table displays March 2019 data after accounting for the removal of 16,000 from the published series. For more information, see the Reconstructions section in the 2019 CES Benchmark Article. (10) With the 2022 benchmark, BLS reconstructed several national employment series. A recoding effort in the QCEW resulted in about 68,000 in employment in electronic shopping and mail-order houses (42-454100) being moved into corporate, subsidiary, and regional managing offices (60-551114). Affected series were reconstructed for their entire history going back to January 1990. Additionally, the CES program found that some QCEW employment microdata submitted for services for the elderly and persons with disabilities (NAICS 624120) was erroneously reported for the first quarter of 2022. CES imputed the March 2022 level for this industry, and the new level was approximately 83,000 greater than the originally reported QCEW level. For more information, see the Reconstructions and Benchmark level adjustment to services for the elderly and persons with disabilities sections in the 2022 CES Benchmark Article. (11) With the 2024 benchmark, CES reconstructed several national employment series. A recoding of establishments in the QCEW resulted in about 50,000 in employment in computer and peripheral equipment manufacturing (31-334100) being moved into corporate, subsidiary, and regional managing offices (60-551114). Affected series were reconstructed for their history going back to January 2005. For more information, see the Reconstructions section in the 2024 CES Benchmark Article. |
+
+To Table of Figures
+
+### Historical Reconstructions
+
+In addition to the monthly revisions and the benchmark revisions, CES employment, hours, and earnings estimates have been reconstructed several times in order to avoid series breaks and to provide users with continuous, comparable employment time series suitable for economic analysis when incorporating methodological changes. The major reconstruction efforts are briefly described in the History section of the CES Handbook of Methods.
+
+One reconstruction affected the current benchmark months. BLS moved a significant amount of employment out of computer and peripheral equipment manufacturing (31-334100) into corporate, subsidiary, and regional managing offices (60-551114) for March 2024. More about this reconstruction can be found in the Reconstructions section of the 2024 CES Benchmark Article.
+
+Table of Figures
+----------------
+
+Use the links below to skip to specific tables describing the CES sample, errors, and revisions.
+
+*   Table 1. Employment benchmarks and approximate coverage of CES employment and payrolls sample
+*   Table 2. Total private universe employment by size of UI
+*   Table 3. Total private CES sample employment by size of UI
+*   Table 4. Standard and relative standard errors of CES sample-based estimates for a 1-month change
+*   Table 5. CES total nonfarm preliminary and final benchmark revisions
+
+**Last Modified Date:** August 13, 2025

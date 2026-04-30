@@ -1,0 +1,94 @@
+Title: NeoLimb
+
+URL Source: https://hackaday.io/project/2854-neolimb
+
+Markdown Content:
+I'm designing the models for, printing out, and casting in aluminum the bones of the human arm with modifications to make it into a functional skeletal structure for a robotic/bionic/prosthetic arm. It will be controlled with Arduino controllers.
+
+Science fiction often amazingly predicts technological innovation.
+
+I have been inspired to make this since I was in 7th grade (in 1990) when I built my first robotic arm for the science fair (and made it to state if I may brag. ;) ).
+
+The following year I saw Terminator 2, and have wanted something cool like that ever since. But a few years ago I noticed that there were a number of emerging technologies that, if used together, could make something much more game changing happen.
+
+Arduino became well developed. 3D printing became available to the consumer. Nerve interfacing through inexpensive hardware was released. Osseointegration (the ability to attach prosthetics directly to bone and heal safely) was developed, for a cat of all creatures, and neural control of machines via data became available to the hobbyist. Oh, and don't forget the innovations in direct-nerve interfaces allowing people to "feel" electronic input as if it were their own nerve impulses.
+
+Then I played a game called Deus Ex: Human Revolution, and I knew what I wanted to do. Not only that, but from all of the tech innovations swarming the market, I knew it was possible.
+
+But nobody had combined all these innovations in one place.
+
+I had an extensive background in electronics from my self-taught electronic engineer father, (then and still counting) 13 years in the military as a Signal Support Systems Specialist, aka communications/electronics nerd, and a passion for creating and inventing, and I knew I had to try.
+
+So I taught myself 3D modeling, built a 3D printer, started learning C++ programming for Arduino, and set out to design a replacement arm for myself that would surpass my own arm's capabilities.
+
+Of course I can't do everything. I am not a surgeon. I am not a neuroscientist. But I can build the foundation for the arm, and I'm well on the way to doing so.
+
+My biggest hurdle is time, and money. As usual.
+
+I have developed many friends worldwide through the internet working on innovations like this including Easton LaChappelle who designed the arm that showed me what I'm dreaming to do is possible. OpenBionics who are producing innovative bionic hands using 3D printing, and others.
+
+If you think you can help me in any way please contact me. In the least I'd appreciate your vote for the Hackaday.io contest. Share this project and get the word out! Human biological improvement is within reach!
+
+See more pics from the project here: http://imgur.com/a/XxGeP#0
+
+*   ### Intel America's Greatest Makers competition
+
+Amadon Faul • 10/08/2015 at 02:05 • 0 comments We have entered the Intel "America's Greatest Makers" competition! Wish us luck! 
+
+View project log
+
+Discussions
+-----------
+
+Log In/Sign up to comment
+
+Become a Hackaday.io Member
+---------------------------
+
+Create an account to leave a comment.Already have an account?Log In.
+
+Peter wrote 09/25/2015 at 19:06
+
+Hello,
+
+I really like the concept of this project, using air muscles to articulate the arm means a greater 1:1 translation of human motion. Do you have any STL or STP files that are associated with this. I would like to plug them into a SolidWorks FEA simulation to get a better sense of how to optimize the part design. Great work! Keep it up!
+
+Are you sure?yes | no
+
+Amadon Faul wrote 10/01/2015 at 09:57
+
+i have it all saved as a sketchup file at the moment. I can easily export them to stl though. Not all the joints are done but I could send you a sample of the bones that are! They would be individual stl's and would have no spatial positioning data with them though. Can you put them back together in software?
+
+Are you sure?yes | no
+
+Amadon Faul wrote 07/01/2015 at 06:05
+
+Actually that's pretty cool! my main reasoning towards maybe not using air muscles was the large amount of tubes running down the arm. There are something like 40 muscles in the arm, depending on where you start counting. I'd like to be able to even do the intrinsic muscles of the hand if I could. Those are tiny. That's where I have been stuck for the last half a year or so. Deciding where to go from here. I'd like to make carbon nanotube muscles like shown here: But that's easier said than done. It would eliminate the tanks and pump, but may require more electrical power. But I could feed the energy to the muscles through wires instead of air tubes. It's still possible I may just go with air muscles, but I have been stuck for a while on this. I already have a couple 1L tanks and a nice 12V air pump for the system and the fittings. Just need to put it all together.
+
+Are you sure?yes | no
+
+Rue Mohr wrote 07/01/2015 at 17:24
+
+well, there are the twisted fishing line actuators too!
+
+I got around the 40 pipe problem by making my project 12' high
+
+Are you sure?yes | no
+
+PointyOintment wrote 08/24/2014 at 10:21
+
+Don't use a bunch of Arduinos just to get many analog inputs. Getting a bunch of microcontrollers to talk to each other and coordinate tasks is hard enough when that's the project's main goal; it can't possibly be easier when the rest of a larger project relies on it working. Instead, use one Arduino (Mega if you need the processing power) and as many I2C ADC chips as you need to get 100 inputs. All of those chips will share the same four pins on the Arduino, and they'll likely be quite a bit faster than a mux-based approach.
+
+Are you sure?yes | no
+
+Amadon Faul wrote 08/26/2014 at 03:29
+
+Actually for the first iteration of the arm the Arduino boards won't need to tlak to each other at all. In fact having just two inputs on each over 50 boards would be fine. All i will be having them do is comparing two analog inputs. One stretch sensor in each muscle for length, and another stretch sensor in a glove/sleeve I wear that measures the same part of the arm. It will try to keep the two readings the same, with a buffer zone that's considered acceptable, by adding air or venting air from each muscle until it's length measurement equals the one in the glove. The scales will of course need to be calibrated. Say I get between 1.7v and 4.2v from the muscle stretch sensor and 2.3v to 4.8v from the glove sensor. I will have to measure the voltage ranges of each and assign the binary value range top and bottom to correlate with each sensor. I know this will be tedious, and can drift as the materials age and wear but that is what I have in mind for the initial test system. It could be done easily with something like a bunch of comparators probably but I like the idea of software control. I'm using this as a self teaching project as well. 
+
+As for the control with the EEG headset I was thinking of assigning an end goal of the sensor values to a given task, then mapping the EEG image to that particular end state. For the EMG sensors on my arm I don't have a totally clear idea yet, other than just assigning a high on a sensor pin corresponding with a muscle or group of muscles that tells them to flex. When the EMG sensor goes low it tells the Arduinos to vent air. I figured I would work on that more once I get it put together. 
+
+For the past 4 months it's been editing the STL files into something that can actually function IRL and print well on my printer, as well as starting from scratch learning how to build and run a 3D printer. I also didn't know anything about 3D modeling 6 months ago so I'm learning as I go. 
+
+I started with a lot of background with analog electronics, and an idea. That's about it. :)
+
+Are you sure?yes | no

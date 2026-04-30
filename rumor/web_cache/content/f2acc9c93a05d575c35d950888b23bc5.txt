@@ -1,0 +1,59 @@
+Title: HTTP 403
+
+URL Source: https://en.wikipedia.org/wiki/HTTP_403
+
+Published Time: 2007-02-15T12:09:43Z
+
+Markdown Content:
+From Wikipedia, the free encyclopedia
+
+**HTTP 403** is an HTTP status code meaning access to the requested resource is forbidden. The server understood the request, but will not fulfill it, if it was correct.
+
+HTTP 403 provides a distinct error case from HTTP 401; while HTTP 401 is returned when the client has not authenticated, and implies that a successful response may be returned following valid authentication, HTTP 403 is returned when the client is not permitted access to the resource despite providing authentication such as insufficient permissions of the authenticated account.[a]
+
+Error 403: "The server understood the request, but is refusing to authorize it."[1]: §15.5.4
+
+Error 401: "The 401 (Unauthorized) status code indicates that the request has not been applied because it lacks valid authentication credentials for the target resource."[1]: §15.5.2
+
+The Apache web server returns 403 Forbidden in response to requests for URL[2] paths that corresponded to file system directories when directory listings have been disabled in the server and there is no Directory Index directive to specify an existing file to be returned to the browser. Some administrators configure the Mod proxy extension to Apache to block such requests and this will also return 403 Forbidden. Microsoft IIS responds in the same way when directory listings are denied in that server. In WebDAV, the 403 Forbidden response will be returned by the server if the client issued a PROPFIND request but did not also issue the required Depth header or issued a Depth header of infinity.[2]
+
+A 403 status code can occur for the following reasons:
+
+*   Insufficient permissions: The most common reason for a 403 status code is that the user lacks the necessary permissions to access the requested resource. This can mean that the user is not logged in, has not provided valid credentials, or does not belong to the appropriate user group to access the resource.
+
+*   Authentication required: In some cases, the server requires authentication to access certain resources. If the user does not provide valid credentials or if the authentication fails, a 403 status code is returned.
+*   IP restrictions: The server may also restrict access to specific IP addresses or IP ranges. If the user's IP address is not included in the list of permitted addresses, a 403 status code is returned.
+*   Server configuration: The server's configuration can be set to prohibit access to certain files, directories, or areas of the website. This can be due to a misconfiguration or intentional restrictions imposed by the server administrator.
+*   Blocked by firewall or security software: A 403 status code can occur if a firewall or security software blocks access to the resource. This may happen due to security policies, malware detection, or other security measures.
+
+MediaWiki error message
+
+Client request:
+
+GET /hello.html HTTP/1.1
+Host: www.example.org
+
+Server response:
+
+HTTP/1.1 403 Forbidden
+Content-Type: text/html
+
+<html>
+   <head><title>403 Forbidden</title></head>
+   <body>
+      <h1>Forbidden</h1>
+      <p>You don't have permission to access /hello.html on this server.</p>
+   </body>
+</html>
+
+*   List of HTTP status codes
+*   URL redirection
+
+1.   **^**See #Substatus error codes for IIS for possible reasons of why a webserver may refuse to fulfill a request.
+
+1.   ^ Jump up to: _**a**_ _**b**_ R. Fielding; M. Nottingham; J. Reschke, eds. (June 2022). _HTTP Semantics_. Internet Engineering Task Force. doi:10.17487/RFC9110. ISSN 2070-1721. STD 97. RFC 9110._Internet Standard 97._ Obsoletes RFC 2818, 7230, 7231, 7232, 7233, 7235, 7538, 7615 and 7694. Updates RFC 3864. 
+2.   ^ Jump up to: _**a**_ _**b**_"HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)". IETF. June 2007. Archived from the original on March 3, 2016. Retrieved January 12, 2016.
+
+*   Apache Module mod_proxy – Forward
+*   Working with SELinux Contexts Labeling files
+*   Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content

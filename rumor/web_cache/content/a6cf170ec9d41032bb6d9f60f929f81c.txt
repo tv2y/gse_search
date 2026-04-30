@@ -1,0 +1,1115 @@
+Title: embedding_vectorizer/data/stsbenchmark/sts-train.csv at master · ChristophAlt/embedding_vectorizer
+
+URL Source: https://github.com/ChristophAlt/embedding_vectorizer/blob/master/data/stsbenchmark/sts-train.csv
+
+Markdown Content:
+embedding_vectorizer/data/stsbenchmark/sts-train.csv at master · ChristophAlt/embedding_vectorizer · GitHub
+
+===============
+
+Skip to content
+Navigation Menu
+---------------
+
+Toggle navigation
+
+Sign in
+
+Appearance settings
+
+*    Platform 
+
+    *   GitHub Copilot Write better code with AI
+    *   GitHub Spark New Build and deploy intelligent apps
+    *   GitHub Models New Manage and compare prompts
+    *   GitHub Advanced Security Find and fix vulnerabilities
+    *   Actions Automate any workflow
+
+    *   Codespaces Instant dev environments
+    *   Issues Plan and track work
+    *   Code Review Manage code changes
+    *   Discussions Collaborate outside of code
+    *   Code Search Find more, search less
+
+Explore
+    *   Why GitHub
+    *   Documentation
+    *   GitHub Skills
+    *   Blog
+
+Integrations
+    *   GitHub Marketplace
+    *   MCP Registry
+
+View all features
+
+*    Solutions 
+
+By company size
+    *   Enterprises
+    *   Small and medium teams
+    *   Startups
+    *   Nonprofits
+
+By use case
+    *   App Modernization
+    *   DevSecOps
+    *   DevOps
+    *   CI/CD
+    *   View all use cases
+
+By industry
+    *   Healthcare
+    *   Financial services
+    *   Manufacturing
+    *   Government
+    *   View all industries
+
+View all solutions
+
+*    Resources 
+
+Topics
+    *   AI
+    *   DevOps
+    *   Security
+    *   Software Development
+    *   View all
+
+Explore
+    *   Learning Pathways
+    *   Events & Webinars
+    *   Ebooks & Whitepapers
+    *   Customer Stories
+    *   Partners
+    *   Executive Insights
+
+*    Open Source 
+
+    *   GitHub Sponsors Fund open source developers
+
+    *   The ReadME Project GitHub community articles
+
+Repositories
+    *   Topics
+    *   Trending
+    *   Collections
+
+*    Enterprise 
+
+    *   Enterprise platform AI-powered developer platform
+
+Available add-ons
+    *   GitHub Advanced Security Enterprise-grade security features
+    *   Copilot for business Enterprise-grade AI features
+    *   Premium Support Enterprise-grade 24/7 support
+
+*   Pricing
+
+Search or jump to...
+
+Search code, repositories, users, issues, pull requests...
+==========================================================
+
+ Search  
+
+Clear
+
+Search syntax tips
+
+Provide feedback
+================
+
+We read every piece of feedback, and take your input very seriously.
+
+- [x] Include my email address so I can be contacted 
+
+ Cancel  Submit feedback 
+
+Saved searches
+==============
+
+Use saved searches to filter your results more quickly
+------------------------------------------------------
+
+Name 
+
+Query 
+
+To see all available qualifiers, see our documentation.
+
+ Cancel  Create saved search 
+
+Sign in
+
+Sign up
+
+Appearance settings
+
+Resetting focus
+
+You signed in with another tab or window. Reload to refresh your session.You signed out in another tab or window. Reload to refresh your session.You switched accounts on another tab or window. Reload to refresh your session.Dismiss alert
+
+{{ message }}
+
+ChristophAlt/**embedding_vectorizer**Public
+
+*   Notifications You must be signed in to change notification settings
+*   Fork 4
+*   Star 12 
+
+*   Code
+*   Issues 0
+*   Pull requests 0
+*   Actions
+*   Projects 0
+*   Security### Uh oh!
+There was an error while loading.Please reload this page.    
+*   Insights
+
+Additional navigation options
+
+*   Code
+*   Issues
+*   Pull requests
+*   Actions
+*   Projects
+*   Security
+*   Insights
+
+Collapse file tree
+------------------
+
+Files
+-----
+
+master
+
+Search this repository
+
+*         data  
+    *          stsbenchmark  
+        *         LICENSE.txt  
+        *         correlation.pl  
+        *         readme.txt  
+        *         sts-dev.csv  
+        *         sts-test.csv  
+        *         sts-train.csv  
+
+    *        enwiki_vocab_min200.txt  
+
+*       .gitignore  
+*       README.md  
+*       embedding_vectorizer.py  
+*       requirements.txt  
+*       sts_benchmark.ipynb  
+
+Breadcrumbs
+-----------
+
+1.   embedding_vectorizer
+2.   /data
+3.   /stsbenchmark
+
+/
+sts-train.csv
+=============
+
+Copy path
+
+Blame More file actions
+
+Blame More file actions
+
+We can't make this file beautiful and searchable because it's too large.
+
+Latest commit
+-------------
+
+Christoph Alt
+
+initial commit
+
+Nov 14, 2017
+
+cc9275a·Nov 14, 2017
+
+History
+-------
+
+History
+
+Open commit details
+
+5749 lines (5749 loc) · 880 KB
+
+Breadcrumbs
+-----------
+
+1.   embedding_vectorizer
+2.   /data
+3.   /stsbenchmark
+
+/
+sts-train.csv
+=============
+
+Top
+
+File metadata and controls
+--------------------------
+
+*   Preview 
+*   Code 
+*   Blame 
+
+5749 lines (5749 loc) · 880 KB
+
+Raw
+
+Copy raw file
+
+Download raw file
+
+You must be signed in to make or propose changes
+
+More edit options
+
+Open symbols panel
+
+Edit and raw actions
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+32
+
+33
+
+34
+
+35
+
+36
+
+37
+
+38
+
+39
+
+40
+
+41
+
+42
+
+43
+
+44
+
+45
+
+46
+
+47
+
+48
+
+49
+
+50
+
+51
+
+52
+
+53
+
+54
+
+55
+
+56
+
+57
+
+58
+
+59
+
+60
+
+61
+
+62
+
+63
+
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+
+70
+
+71
+
+72
+
+73
+
+74
+
+75
+
+76
+
+77
+
+78
+
+79
+
+80
+
+81
+
+82
+
+83
+
+84
+
+85
+
+86
+
+87
+
+88
+
+89
+
+90
+
+91
+
+92
+
+93
+
+94
+
+95
+
+96
+
+97
+
+98
+
+99
+
+100
+
+101
+
+102
+
+103
+
+104
+
+105
+
+106
+
+107
+
+108
+
+109
+
+110
+
+111
+
+112
+
+113
+
+114
+
+115
+
+116
+
+117
+
+118
+
+119
+
+120
+
+121
+
+122
+
+123
+
+124
+
+125
+
+126
+
+127
+
+128
+
+129
+
+130
+
+5676
+
+5677
+
+5678
+
+5679
+
+5680
+
+5681
+
+5682
+
+5683
+
+5684
+
+5685
+
+5686
+
+5687
+
+5688
+
+5689
+
+5690
+
+5691
+
+5692
+
+5693
+
+5694
+
+5695
+
+5696
+
+5697
+
+5698
+
+5699
+
+5700
+
+5701
+
+5702
+
+5703
+
+5704
+
+5705
+
+5706
+
+5707
+
+5708
+
+5709
+
+5710
+
+5711
+
+5712
+
+5713
+
+5714
+
+5715
+
+5716
+
+5717
+
+5718
+
+5719
+
+5720
+
+5721
+
+5722
+
+5723
+
+5724
+
+5725
+
+5726
+
+5727
+
+5728
+
+5729
+
+5730
+
+5731
+
+5732
+
+5733
+
+5734
+
+5735
+
+5736
+
+5737
+
+5738
+
+5739
+
+5740
+
+5741
+
+5742
+
+5743
+
+5744
+
+5745
+
+5746
+
+5747
+
+5748
+
+5749
+
+main-captions MSRvid 2012test 0001 5.000 A plane is taking off. An air plane is taking off.
+
+main-captions MSRvid 2012test 0004 3.800 A man is playing a large flute. A man is playing a flute.
+
+main-captions MSRvid 2012test 0005 3.800 A man is spreading shreded cheese on a pizza. A man is spreading shredded cheese on an uncooked pizza.
+
+main-captions MSRvid 2012test 0006 2.600 Three men are playing chess. Two men are playing chess.
+
+main-captions MSRvid 2012test 0009 4.250 A man is playing the cello. A man seated is playing the cello.
+
+main-captions MSRvid 2012test 0011 4.250 Some men are fighting. Two men are fighting.
+
+main-captions MSRvid 2012test 0012 0.500 A man is smoking. A man is skating.
+
+main-captions MSRvid 2012test 0013 1.600 The man is playing the piano. The man is playing the guitar.
+
+main-captions MSRvid 2012test 0014 2.200 A man is playing on a guitar and singing. A woman is playing an acoustic guitar and singing.
+
+main-captions MSRvid 2012test 0016 5.000 A person is throwing a cat on to the ceiling. A person throws a cat on the ceiling.
+
+main-captions MSRvid 2012test 0017 4.200 The man hit the other man with a stick. The man spanked the other man with a stick.
+
+main-captions MSRvid 2012test 0018 4.600 A woman picks up and holds a baby kangaroo. A woman picks up and holds a baby kangaroo in her arms.
+
+main-captions MSRvid 2012test 0019 3.867 A man is playing a flute. A man is playing a bamboo flute.
+
+main-captions MSRvid 2012test 0020 4.667 A person is folding a piece of paper. Someone is folding a piece of paper.
+
+main-captions MSRvid 2012test 0021 1.667 A man is running on the road. A panda dog is running on the road.
+
+main-captions MSRvid 2012test 0022 3.750 A dog is trying to get bacon off his back. A dog is trying to eat the bacon on its back.
+
+main-captions MSRvid 2012test 0025 5.000 The polar bear is sliding on the snow. A polar bear is sliding across the snow.
+
+main-captions MSRvid 2012test 0026 0.500 A woman is writing. A woman is swimming.
+
+main-captions MSRvid 2012test 0028 3.800 A cat is rubbing against baby's face. A cat is rubbing against a baby.
+
+main-captions MSRvid 2012test 0029 5.000 The man is riding a horse. A man is riding on a horse.
+
+main-captions MSRvid 2012test 0030 3.200 A man pours oil into a pot. A man pours wine in a pot.
+
+main-captions MSRvid 2012test 0031 2.800 A man is playing a guitar. A girl is playing a guitar.
+
+main-captions MSRvid 2012test 0032 4.600 A panda is sliding down a slide. A panda slides down a slide.
+
+main-captions MSRvid 2012test 0034 3.000 A woman is eating something. A woman is eating meat.
+
+main-captions MSRvid 2012test 0035 5.000 A woman peels a potato. A woman is peeling a potato.
+
+main-captions MSRvid 2012test 0038 4.800 The boy fell off his bike. A boy falls off his bike.
+
+main-captions MSRvid 2012test 0040 5.000 The woman is playing the flute. A woman is playing a flute.
+
+main-captions MSRvid 2012test 0042 4.200 A rabbit is running from an eagle. A hare is running from a eagle.
+
+main-captions MSRvid 2012test 0044 4.200 The woman is frying a breaded pork chop. A woman is cooking a breaded pork chop.
+
+main-captions MSRvid 2012test 0046 4.000 A girl is flying a kite. A girl running is flying a kite.
+
+main-captions MSRvid 2012test 0047 4.000 A man is riding a mechanical bull. A man rode a mechanical bull.
+
+main-captions MSRvid 2012test 0048 4.909 The man is playing the guitar. A man is playing a guitar.
+
+main-captions MSRvid 2012test 0050 3.000 A woman is dancing and singing with other women. A woman is dancing and singing in the rain.
+
+main-captions MSRvid 2012test 0052 2.400 A man is slicing a bun. A man is slicing an onion.
+
+main-captions MSRvid 2012test 0053 4.200 A man is pouring oil into a pan. A man is pouring oil into a skillet.
+
+main-captions MSRvid 2012test 0054 3.400 A lion is playing with people. A lion is playing with two men.
+
+main-captions MSRvid 2012test 0055 5.000 A dog rides a skateboard. A dog is riding a skateboard.
+
+main-captions MSRvid 2012test 0056 3.750 Someone is carving a statue. A man is carving a statue.
+
+main-captions MSRvid 2012test 0057 2.750 A woman is slicing an onion. A man is cutting an onion.
+
+main-captions MSRvid 2012test 0058 5.000 A woman peels shrimp. A woman is peeling shrimp.
+
+main-captions MSRvid 2012test 0059 4.000 A woman is frying fish. A woman is cooking fish.
+
+main-captions MSRvid 2012test 0061 3.600 A woman is playing an electric guitar. A woman is playing a guitar.
+
+main-captions MSRvid 2012test 0062 1.600 A baby tiger is playing with a ball. A baby is playing with a doll.
+
+main-captions MSRvid 2012test 0064 1.750 A person is slicing a tomato. A person is slicing some meat.
+
+main-captions MSRvid 2012test 0065 5.000 A person cuts an onion. A person is cutting an onion.
+
+main-captions MSRvid 2012test 0068 1.000 A man is playing the piano. A woman is playing the violin.
+
+main-captions MSRvid 2012test 0069 1.000 A woman is playing the flute. A man is playing the guitar.
+
+main-captions MSRvid 2012test 0070 2.375 A man is cutting up a potato. A man is cutting up carrots.
+
+main-captions MSRvid 2012test 0071 3.800 A kid is playing guitar. A boy is playing a guitar.
+
+main-captions MSRvid 2012test 0072 3.200 A boy is playing guitar. A man is playing a guitar.
+
+main-captions MSRvid 2012test 0073 3.200 A man is playing guitar. A boy is playing a guitar.
+
+main-captions MSRvid 2012test 0075 4.400 A little boy is playing a keyboard. A boy is playing key board.
+
+main-captions MSRvid 2012test 0077 3.750 A man is playing a guitar. A man is playing an electric guitar.
+
+main-captions MSRvid 2012test 0078 4.750 A dog licks a baby. A dog is licking a baby.
+
+main-captions MSRvid 2012test 0080 3.200 A woman is slicing an onion. A man is cutting and onion.
+
+main-captions MSRvid 2012test 0081 1.556 A man is playing the guitar. A man is playing the drums.
+
+main-captions MSRvid 2012test 0083 3.938 A woman is slicing a pepper. A woman is cutting a red pepper.
+
+main-captions MSRvid 2012test 0084 5.000 A man is playing the drums. A man plays the drum.
+
+main-captions MSRvid 2012test 0085 5.000 A woman rides a horse. A woman is riding a horse.
+
+main-captions MSRvid 2012test 0086 4.000 A man is eating a banana by a tree. A man is eating a banana.
+
+main-captions MSRvid 2012test 0087 1.600 A cat is playing a key board. A man is playing two keyboards.
+
+main-captions MSRvid 2012test 0089 4.750 A man chops down a tree with an axe. A man cut a tree with an axe.
+
+main-captions MSRvid 2012test 0090 3.500 A kid plays with a toy phone. A little boy plays with a toy phone.
+
+main-captions MSRvid 2012test 0093 1.400 A man is riding a motorcycle. A man is riding a horse.
+
+main-captions MSRvid 2012test 0094 1.400 A man is riding a motorcycle. A man is riding a horse.
+
+main-captions MSRvid 2012test 0099 4.000 A squirrel is spinning around in circles. A squirrel runs around in circles.
+
+main-captions MSRvid 2012test 0101 5.000 A man and a woman are kissing. A man and woman kiss.
+
+main-captions MSRvid 2012test 0102 3.833 A man is getting into a car. A man is getting into a car in a garage.
+
+main-captions MSRvid 2012test 0104 0.600 A man is dancing. A man is talking.
+
+main-captions MSRvid 2012test 0105 2.917 A man is playing the guitar and singing. A man is playing the guitar.
+
+main-captions MSRvid 2012test 0106 4.200 A person is cutting mushrooms. A person is cutting mushrooms with a knife.
+
+main-captions MSRvid 2012test 0108 2.000 A tiger cub is making a sound. A tiger is walking around.
+
+main-captions MSRvid 2012test 0109 2.600 A person is slicing onions. A person is peeling an onion.
+
+main-captions MSRvid 2012test 0110 1.600 A man is playing the piano. A man is playing the trumpet.
+
+main-captions MSRvid 2012test 0111 2.000 A woman is peeling a potato. A woman is peeling an apple.
+
+main-captions MSRvid 2012test 0112 4.200 A pankda is eating bamboo. A panda bear is eating some bamboo.
+
+main-captions MSRvid 2012test 0113 2.000 A person is peeling an onion. A person is peeling an eggplant.
+
+main-captions MSRvid 2012test 0114 4.800 A monkey pushes another monkey. The monkey pushed the other monkey.
+
+main-captions MSRvid 2012test 0115 4.400 A squirrel runs around in circles. A squirrel is moving in circles.
+
+main-captions MSRvid 2012test 0116 5.000 A man is tying his shoe. A man ties his shoe.
+
+main-captions MSRvid 2012test 0117 3.000 A boy is singing and playing the piano. A boy is playing the piano.
+
+main-captions MSRvid 2012test 0118 4.250 A dog is eating water melon. A dog is eating a piece of watermelon.
+
+main-captions MSRvid 2012test 0119 4.250 A woman is chopping broccoli. A woman is chopping broccoli with a knife.
+
+main-captions MSRvid 2012test 0120 3.800 A man is peeling a potato. A man peeled a potatoe.
+
+main-captions MSRvid 2012test 0121 2.400 A woman is playing a guitar. A man plays a guitar.
+
+main-captions MSRvid 2012test 0123 1.600 A woman is slicing tomato. A man is slicing onion.
+
+main-captions MSRvid 2012test 0125 2.000 A man swims underwater. A woman is swimming underwater.
+
+main-captions MSRvid 2012test 0126 1.600 A man and woman are talking. A man and woman is eating.
+
+main-captions MSRvid 2012test 0129 4.000 A small dog is chasing a yoga ball. A dog is chasing a ball.
+
+main-captions MSRvid 2012test 0130 2.200 The men are playing cricket. The men are playing basketball.
+
+main-captions MSRvid 2012test 0131 4.400 A man rides off on a motorcycle. A man is riding on a motorcycle.
+
+main-captions MSRvid 2012test 0132 3.600 A man is playing a guitar. A man is singing and playing a guitar.
+
+main-captions MSRvid 2012test 0133 3.600 The man talked on the telephone. The man is talking on the phone.
+
+main-captions MSRvid 2012test 0135 0.500 A man is fishing. A man is exercising.
+
+main-captions MSRvid 2012test 0136 0.800 A man is levitating. A man is talking.
+
+main-captions MSRvid 2012test 0138 0.600 Two boys are driving. Two bays are dancing.
+
+main-captions MSRvid 2012test 0141 2.600 A man is riding on a horse. A girl is riding a horse.
+
+main-captions MSRvid 2012test 0142 2.000 A man is riding a bicycle. A monkey is riding a bike.
+
+main-captions MSRvid 2012test 0143 2.200 A man is slicing potatoes. A woman is peeling potato.
+
+main-captions MSRvid 2012test 0144 2.400 A woman is peeling a potato. A man is slicing potato.
+
+main-captions MSRvid 2012test 0145 3.600 A man is playing a guitar. Someoen is playing guitar.
+
+main-captions MSRvid 2012test 0148 2.200 A woman is slicing a leek. A woman is slicing ginger.
+
+main-captions MSRvid 2012test 0149 4.800 The man cut a paper plate. A man is cutting a paper plate.
+
+main-captions MSRvid 2012test 0151 1.643 The man is playing the guitar. A man is playing the flute.
+
+main-captions MSRvid 2012test 0152 1.750 A man is playing the piano. The man is playing the violin.
+
+main-captions MSRvid 2012test 0154 2.250 A woman is slicing up some meat. A woman is breading some meat.
+
+main-captions MSRvid 2012test 0155 4.000 A man is playing on his keyboard. A man is playing a keyboard piano.
+
+main-captions MSRvid 2012test 0157 4.800 The lady chopped up the green onions. The lady cut up a green onion.
+
+main-captions MSRvid 2012test 0158 3.200 Someone is sitring noodles in water. A woman is boiling noodles in water.
+
+main-captions MSRvid 2012test 0160 4.000 Lionel Richie is dancing on the ceiling. Lionel Ritchie dances while standing on the ceiling.
+
+main-captions MSRvid 2012test 0161 4.400 A man is playing a piano. A person is playing the piano.
+
+main-captions MSRvid 2012test 0163 4.600 A woman is playing flute. A woman plays on a flute.
+
+main-captions MSRvid 2012test 0164 3.800 A boy is checking a calender. A boy is looking at a calendar.
+
+main-captions MSRvid 2012test 0165 4.800 A woman is cutting an onion. A woman is chopping onions.
+
+main-captions MSRvid 2012test 0166 4.857 A man is playing guitar. A man plays a guitar.
+
+main-captions MSRvid 2012test 0167 5.000 A woman is using a sewing machine. A woman is sewing on a machine.
+
+main-captions MSRvid 2012test 0168 2.533 A woman is flipping pancakes. A cartoon chef is flipping pancakes.
+
+main-captions MSRvid 2012test 0172 1.000 A man is running on the road. A car is driving down the road.
+
+main-captions MSRvid 2012test 0175 1.000 A man is riding on a horse. A man is talking on a phone.
+
+main-captions MSRvid 2012test 0176 2.000 A man is riding a bike. A man is riding on a horse.
+
+main-captions MSRvid 2012test 0178 0.143 A woman is dancing. A man is eating.
+
+main-captions MSRvid 2012test 0179 2.000 A man is playing a piano. A man is playing a flute.
+
+main-captions MSRvid 2012test 0180 1.600 A man is playing a flute. A man is playing a piano.
+
+main-captions MSRvid 2012test 0182 1.600 A man is spinning. A man is dancing.
+
+main-captions MSRvid 2012test 0184 3.400 A monkey is swinging from limb to limb. A monkey is swinging from tree to tree.
+
+main-captions MSRvid 2012test 0185 4.000 The people got off the train. The people got off the train at the station.
+
+main-captions MSRvid 2012test 0187 4.800 A dog is jumping on a trampoline. A dog bounces on a trampoline.
+
+main-captions MSRvid 2012test 0188 2.500 A boy is playing an instrument. A man is playing a trumpet.
+
+main-captions MSRvid 2012test 0190 1.750 A woman plays the guitar. A man sings and plays the guitar.
+
+main-captions MSRvid 2012test 0191 1.000 A woman is picking a can. A woman is slicing a tomato.
+
+main-news headlines 2016 1012 3 More than 3,400 migrants rescued at sea in Mediterranean Over 2,000 migrants rescued from wooden boats in Mediterranean Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1021 4 Lewis Hamilton Takes Pole for Russian GP Lewis Hamilton wins inaugural Russian GP Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1023 2 UN Security Council hears Yemen envoy's final ... UN Security Council urges Yemen's Houthis to end... Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1028 1 Israeli forces arrest 21 Palestinians overnight, clash with locals Israeli security forces arrest 8 Palestinians in overnight West Bank sweeps Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1030 0 4 dead, 3 injured in east China road accident 2 dead, 8 injured in central Israel traffic accident Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1033 2 Markets Live: Waiting for China data Markets Live: China drags Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1036 2 Palestinians, Israeli police clash at Jerusalem's al-Aqsa Palestinian Shot by Israeli Police in East Jerusalem Dies Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1042 4 Suspected Boko Haram suicide bombers in Nigeria kill 24 Suspected Boko Haram attacks kill dozens in Nigeria Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1047 2 The end of the Hong Kong protests? UK 'concern' over Hong Kong protests Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1062 2 Russian warplanes strike inside Syria Russian roulette in Syria Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1086 1 CCTV of gunmen in Tunisia museum attack 19 killed in Tunis museum attack Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1091 0 Live Blog: Ukraine In Crisis Live Blog: Iraq In Turmoil Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1097 2 Nigeria Votes in Tight Presidential Election Guineans Go to the Polls in Presidential Elections Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1100 2 Prince William dons samurai gear on Japan tour Prince William of Britain arrives in Beijing Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1115 2 Micronesia vice president to visit China Vice President of Bolivia to visit China Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1118 3 Islamic State issues video of beheading of US hostage Islamic State posts second propaganda video of UK hostage Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1133 2 Iran ends cooperation agreement with Pakistan Iran, Tajikistan sign cooperation agreement Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1134 1 Teenager tests negative for Ebola Texas hospital worker tests positive for Ebola Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1136 1 Texas sues over Syrian refugees Turkey 'exploits' Syrian refugees Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1137 2 New US Sanctions Target Overseas Cyber Attackers China disagrees with U.S. sanctions program on overseas cyber attackers Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1148 0 5 killed in Israeli air strikes in Gaza 38 IS militants killed in clashes, air strikes in Iraq Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1151 2 Deadly Blast Rocks Coal Mine in East Ukraine 12 Dead, Despite Cease-fire in East Ukraine Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1152 3 Greece bailout uncertainty weighs on global markets Greece concerns drag on Asia markets Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1168 1 Rooney helps Man United beat Everton 3-0 in Premier League West Ham beats Newcastle 2-0 in Premier League Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1169 1 Hard-line Jewish leader shot in Jerusalem Israeli leader urges calm in Jerusalem Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1171 2 Backstage Moves Intensify as Fight Against Islamic State Widens Mixed Progress Reported in Fight Against Islamic State Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1174 1 Egypt: IPI Urges Release of Al Jazeera Journalist Arrested in Berlin Egypt sentences Al Jazeera journalists to jail Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1178 1 occupied Palestinian territory: Israeli Forces Continue to Shed Palestinian Blood in oPt occupied Palestinian territory: Israel warns on security as Gaza truce talks resume Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1199 0 Libya: UN orders investigation into Libya rights abuses India's top court orders investigation into job scam, deaths Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1200 2 Taiwan coast guard launches new ships as South China Sea tensions rise Chinese military reaches out amid South China Sea tensions Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1202 1 Burundi police fire tear gas at protesters Montenegrin police fire teargas to disperse opposition Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1216 3 Nepal earthquake death toll surpasses 7,000 Death toll in Nepal earthquake tops 8,000 Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1232 1 Ashya's Parents Arrive For Extradition Hearing Ashya King's parents freed from jail in Spain Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1234 1 Nigeria admits slow response in Ebola case US ramps up response to Ebola crisis Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1239 1 Thousands cross Austria-Hungary border Thousands of Russians stranded abroad Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1246 0 Kranjcar leaves it late to rescue QPR against Moses-inspired Stoke Harry Kane leaves it late to rescue a point for Tottenham Hotspur Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1252 0 Oscar Pistorius sentenced to 5 years in prison 'Bookkeeper of Auschwitz' Sentenced to Four Years in Prison Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1256 2 Pro-Palestinian Activists March to UN Headquarters Pro-Palestinian activists prepare flotilla to break Gaza blockade Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1263 1 Benzema faces possible charges in sex-tape case Menendez faces possible corruption charges Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1267 2 All 224 dead in Russian airliner mystery crash Heat flash detected at time of Russian airliner crash Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1275 0 Govt. to hold talks with FTII students Cameron to hold talks with Sturgeon on UK future Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1277 0 Li Na to announce retirement US Senator Ted Cruz to announce presidential bid Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1278 1 Gunners fire but fail to advance in Champions League EPL clubs out to avoid Champions League woes Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1285 1 Iranian President praises nuclear deal Iran arrests several spies near nuclear plant Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1286 1 Boko Haram disrupts Nigerian elections Press awash with Nigeria\'s general elections Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1290 1 South Korea regrets North's refusal of talks South Korea reports 14th Mers death, 12 new cases Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1294 0 Plane Crash Site Search Called off for the Night Tour De France Pack Sets off for Stage 15 Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1303 0 Obama queries Turnbull over China port deal Spanish bulls gore seven to death Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1304 0 China's generous 1MDB bid seen reaping it big returns in Malaysia China keeps an eye on visiting tiger freed by Russian President Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1312 0 Hezbollah targets Qaeda gathering along border with Syria Belarus tightens security along the border with Ukraine Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1313 1 South Korea reports seven new MERS cases South Korean woman in contact with MERS patient dies Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1323 0 Obama calls for international front against IS Obama vows to save Iraqis stranded on mountain Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1327 1 U.S. military says it conducts airstrikes against IS in Syria, Iraq Observatory says Russian air strikes kill 45 in Syria Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1328 0 Who abandoned 3 Boeing planes at the airport? Police abandon posts in Lesotho, fear for lives Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1330 2 North Korea to put US citizen on trial N Korea hit with new US sanctions Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1340 2 Hong Kong officials resume work as protests thin Hong Kong student leaders mull protest retreat Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1346 0 Ebola UK: NHS staff 'panicked' after suspected Ebola cases UK says investigating 2 suspected MERS cases Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1352 1 UK Leader Signals Support for Airstrikes on IS in Syria Why Cyprus backs Cameron's push for UK air strikes in Syria Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1383 0 N. Korea agrees to talks with South Johor crowns its fifth Sultan Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1400 0 Iran, a large important partner for Russia: Novak Iran reiterates support for Iraq, Syria Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1403 0 Taiwan's president charters plane to pay respects to Lee Poland president loses to challenger Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1404 0 Two Palestinians die in attacks on Israelis ahead of Kerry visit Palestinian official slams Israel's stone-throwing bill Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1408 0 Thomas Cook accused of putting costs before customers University of Florida frat accused of spitting on wounded war veterans Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1412 0 Narendra Modi 'photoshopped' image of Chennai floods visit goes viral PM Narendra Modi speaks of non-discrimination and equality Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1417 1 UN chief welcomes peaceful presidential elections in Guinea UN chief condemns attack against peacekeepers in Mali Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1422 0 Pakistan executions draw international ire Pakistan protests ceasefire violations by India Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1441 0 Two Australians killed in Kenya after bus crashed into river Permalink to Two killed in Germany train accident Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1443 2 France shuts mosque, arrests man in crackdown after attacks Security tightened at New Delhi churches after attacks Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1447 2 Russian plane reportedly crashes in Egypt Pilot killed as US jet crashes in England Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1456 0 Severe Gales As Storm Clodagh Hits Britain Merkel pledges NATO solidarity with Latvia Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1465 0 Dozens of Egyptians hostages taken by Libyan terrorists as revenge for airstrikes Egyptian boat crash death toll rises as more bodies found in Nile Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1466 0 President heading to Bahrain President Xi: China to continue help to fight Ebola Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1470 0 China, India vow to further bilateral ties China Scrambles to Reassure Jittery Stock Traders Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+main-news headlines 2016 1492 0 Putin spokesman: Doping charges appear unfounded The Latest on Severe Weather: 1 Dead in Texas After Tornado Europe Media Monitor (http://emm.newsbrief.eu) Europe Media Monitor (http://emm.newsbrief.eu)
+
+Footer
+------
+
+ © 2025 GitHub,Inc. 
+
+### Footer navigation
+
+*   Terms
+*   Privacy
+*   Security
+*   Status
+*   Community
+*   Docs
+*   Contact
+*    Manage cookies 
+*    Do not share my personal information 
+
+ You can’t perform that action at this time.

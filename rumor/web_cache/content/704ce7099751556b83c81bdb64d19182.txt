@@ -1,0 +1,62 @@
+Title: SkyGrid’s CEO on air traffic control for autonomous air taxis
+
+URL Source: https://aerospaceamerica.aiaa.org/skygrids-ceo-on-air-traffic-control-for-autonomous-air-taxis/
+
+Published Time: 2025-07-10T21:36:24-04:00
+
+Markdown Content:
+While there’s a range of views about the specific technologies and procedures needed for widespread passenger air taxi services, FAA and developers seem to generally agree that some degree of automation will be required to help air traffic controllers monitor and deconflict these aircraft in the already crowded skies. Compounding the challenge is the industry’s goal to eventually move away from piloted air taxis to ones that are remotely piloted or even self-flying. For these designs, FAA intends to create a new class of automated flight rules, or AFR, to supplement the current visual and instrument flight rules (VFR and IFR) that govern today’s aircraft operations.
+
+Jia Xu has spent his career studying this challenge for organizations including Airbus, RAND Corp. and Honeywell Aerospace. He’s now CEO of SkyGrid, an Austin, Texas, company that began as a joint venture of Boeing and artificial intelligence startup SparkCognition (now Avathon) to design airspace technology for autonomous flight. In June, Boeing announced SkyGrid will be owned by another subsidiary, Wisk, whose Generation 6 air taxis are being designed to fly autonomously, with no pilot on board — though operators would monitor the aircraft from the ground and could intervene if necessary. Plans call for SkyGrid to provide airspace management for Wisk flights via its Strata software. But SkyGrid doesn’t envision Strata entirely replacing human air traffic controllers and remote operators, Xu says. Rather, the software is intended to be another tool for planning, monitoring and analyzing flights.
+
+I spoke to Xu by videoconference to learn more about SkyGrid’s software development and the company’s vision for AFR.
+
+* * *
+
+### Q: SkyGrid has been a Boeing company for a while. What has the relationship with Wisk been like, and what changes will the new ownership bring?
+
+We’ve been working with Wisk for quite a while. We will work with other companies also, supporting pilot-on-board flights or remotely piloted. Wisk is, obviously, dedicated to remotely piloted aircraft. So they have a ground control station, and SkyGrid will support Wisk’s whole infrastructure with another layer: airspace integration, digital operations and a strategic and tactical deconfliction layer.
+
+In the past, I’ve worked on systems that are housed entirely on board the plane, but with SkyGrid, everything we do right now happens on the ground — communications, navigation, surveillance — to provide information about aircraft locations and flight conditions to ground-based operators. SkyGrid has elements where we take in existing data feeds from weather or radar stations, for example, but in the future there will be infrastructure that works better at lower altitudes that has higher fidelity.
+
+What’s different between SkyGrid and many other companies is we’re trying to deliver a comprehensive, common operating picture, and even strategic and tactical deconfliction services for aircrafts. We can do that under existing flight rules, but there are a lot of opportunities to do more under this future airspace construct, AFR.
+
+### Q: SkyGrid says that it provides “digital representation” of the information that pilots or remote operators need to keep an aircraft safe. How does that work?
+
+This means we provide a very good digital twin of what’s happening in the low-altitude airspace, like: What’s the weather like right now? What’s the weather going to be in so many hours? What is the status of nearby vertiports or airports and local air traffic? And what’s the location of man-made obstacles like buildings or construction cranes? We can validate a flight plan on various schedules, so you’re always ensuring that your current and planned operations are feasible. Imagine all that contextual information put into one place that can be accessed through the operator user interface or by the software. We can build powerful decision support functions, a range of tools to enhance situational awareness, manage risk and improve decision-making.
+
+In even simpler terms, it’s a screen that shows a digital representation of the airspace and potential obstacles, low-altitude air traffic surveillance, automated preflight validation of flight plans, and ensuring safe separation distance between aircraft.
+
+### Q: Strata utilizes forms of AI and still needs to be certified by FAA, correct? Do you think the agency will ever allow certification of AI-based air traffic control software?
+
+There’s two questions: Whether FAA would allow AI of any kind, or would they allow a constantly learning system or self-improving system? FAA and the industry are already working with classical AI techniques or expert systems, known as symbolic AI.
+
+_He’s referring to AI that represents knowledge using symbols and rules, as opposed to AI that learns via neural networks. – PB_
+
+But the constantly learning systems, or connectionist neural network AI — well, the autonomous aircraft development companies will tell you they don’t use that. And that’s partly because any AI that’s deep neural net-powered is going to be challenging to certify, because it’s always capable of learning and evolving.
+
+Air traffic control software doesn’t need to be capable of learning all the time, as far as I’m concerned. The AI can learn from all the data that you’ve controlled offline, and then it’s frozen like that to be deployed. It’s also tricky to certify purely based on the number of statistical outcomes, because a lot of our engineering systems are going for such a high safety factor that it’s hard to prove if you just do a thousand or even a million tests. That’s why we have design assurance, where you say certification isn’t about testing exhaustively, per se; it’s really about ensuring that you followed the right process.
+
+### Q: Do you anticipate that SkyGrid’s software would ever replace the current air traffic control regime?
+
+First of all, I think it’s important to say that the scenario we’ve been discussing here, such as validating a flight plan, that can be done just between the operator and us, or whoever the PSU [Provider of Services] is, right? So in the sense, the operator is buying the service, and it could happen separately from air traffic control, because you’re just saying, “Here’s my flight plan, does it look good?” In that scenario, we’re not air traffic management. Their flight plan is validated, and then they fly and they interact with ATC. Now, in a future date, FAA has also said they would like cooperative traffic management in some corridors and in airspace designated for urban air mobility operations. In that scenario, FAA could actually delegate some responsibilities to PSUs like SkyGrid.
+
+Wisk displayed this Gen 6 prototype at last month’s Paris Air Show. Credit: Charlotte Ryan
+
+### Q: What are some other anticipated priorities for AAM air traffic control that aren’t necessarily required today?
+
+You need to make sure that there’s predictability of operations, right? If I’m paying for a ride in an air taxi, I would hope I arrive on time without too many interruptions or uncertainty. So like, there’s an element of making that efficient. There’s an element of making sure that the landing pad is safely available. I need to maintain my lateral separation requirements in a busy airport environment — how do I do that with an air taxi? So lots of, I think, fairly complex air traffic control issues that are, on the one hand, a microcosm of what happens in the big airplane space, but then also is more acute and even more complex for advanced air mobility.
+
+There’s also the underlying platform that we’re building. It’s a challenging and impactful endeavor because you’re going to be giving autonomous aircraft — maybe multiple autonomous aircraft that are remotely operated — critical safety-of-life information and directives. Maybe there’s a human in the loop also, but you’re giving them results of fairly complex analysis and calculations, and it’s going to inform their operations.
+
+### Q: Does SkyGrid see itself as an advocate for the adoption of automated flight rules?
+
+I’d like to think we are trying to support the industry and kind of convene the industry, but by no means is this just us. The industry, including air traffic controllers, have endorsed plans for more digital operations and similar constructs as well.
+
+_FAA last year published its “Roadmap for Artificial Intelligence Safety Assurance,” a strategy “to pursue both the safety of AI and the use of AI for safety” in air transportation. — PB_
+
+For SkyGrid, it’s very important for us to understand how we can start operations under the existing system, make it better, and then build up the pieces and capabilities to get us to that future state. We will have more on a proposed roadmap to AFR that will hopefully be released soon. Some AAM operators, electric air taxi companies, may be able to do VFR [visual flight rules] from day zero, but there are some real questions about how that can be grown or scaled up and how flexible the system can be, and questions about real situational traffic awareness at low altitude as you attempt to fly more and more of these airplanes: What is the volume that you can actually operate at, and how does that relate to your business case — what you’ve said to investors about how many flights your operation will include.
+
+Instrument flight rules came about earlier, in the last century with the proliferation of ground-based radar networks. And so it was really about getting traffic information and direction from ATC by voice. But automated flight rules, AFR, is the ability for the aircraft to get traffic services from automation and that is more machine to machine, more digital. And it could happen incrementally, or it could be introduced in a smaller sandbox like advanced air mobility. I’m excited about the possibility that we could remove the need for manual clearances and other problems, such as everyone trying to talk on the same radio frequency. We can make the execution of flight planning a lot more strategic and tactically efficient if the aircrafts are all sharing their intent within this AFR environment digitally.
+
+Flight rule sets that were written decades ago anticipated, maybe, lower traffic density and less automated aircraft and less access to advanced surveillance technologies like ADS-B and better radar coverage. So with all of these things, how can we make the operations safer and more efficient? That’s really the question.

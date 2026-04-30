@@ -1,0 +1,486 @@
+Title: What is Status Code 403 Forbidden and How to Fix it
+
+URL Source: https://scrapfly.io/blog/what-is-status-code-403-forbidden-how-to-fix-it
+
+Published Time: 2024-10-26T00:00:00
+
+Markdown Content:
+The infamous 403 Forbidden status code is a response that's often encountered by web and automation developers. It's a frustrating error that can be caused by a plethora of reasons which is exactly what we'll cover in this article.
+
+We'll take a look at what _is_ the 403 Error, how can we replicate it and what causes it. We'll also cover the most common errors and popular solution that can fix your HTTP requests and prevent the 403 Forbidden status code from ever bothering you again.
+
+Key Takeaways
+-------------
+
+Understand HTTP 403 Forbidden errors caused by authentication, authorization, IP blocking, and rate limiting, with solutions for bypassing common blocking scenarios in web scraping.
+
+*   Identify 403 errors through response headers and body messages to determine specific blocking causes
+*   Bypass IP-based blocking using residential proxies and proper geographic targeting
+*   Handle authentication issues by implementing proper session management and cookie handling
+*   Overcome rate limiting with request spacing, user agent rotation, and realistic browsing patterns
+*   Use proper HTTP headers and TLS fingerprinting to avoid bot detection systems
+*   Implement exponential backoff retry logic with 403 status code detection for temporary blocking
+
+What does 403 Forbidden Mean?
+-----------------------------
+
+This 403 status code is a catch-all error for all requests where the client is **authenticated but is not authorized** to access the requested resource. This can be due to a variety of reasons such as:
+
+*   If authenticated, the client lacks the necessary granular permissions to access the resource. Like resource belonging to a different user or a user group
+*   Client's IP address is blocked by the server
+*   Client's IP address geolocation is blocked by the server
+*   Client is being rate limited or rejected for too many connections or undesirability (i.e. being a robot)
+
+So what causes `403 forbidden` error can be unclear but depend on the use context we can figure out the exact reason with a few easy steps and even prevent it from happening.
+
+Checking for Error Details
+--------------------------
+
+One way to figure out exactly what caused the 403 Forbidden error is to check the response headers and body. The server might provide additional information in the response body that can help you debug the issue.
+
+For example, the response body might contain a message like "You are not authorized to access this resource" or "Your IP address has been blocked".
+
+Alternatively, the `X-` prefixed headers can have hints or special IDs that can be used with the service provider to get more information about the cause of the error.
+
+So to summarize:
+
+*   check response body for error messages
+*   check `X-` prefixed headers for clues
+
+Server Implementation
+---------------------
+
+To better understand http status code 403, let's take a look at how it can be implemented in a web server. Here's an example of how you can return a 403 Forbidden response in Python using the Flask web framework:
+
+```
+import time
+from flask import Flask, request, abort, jsonify
+
+app = Flask(__name__)
+
+# Blocked IPs for demonstration
+
+# Middleware to check IP-based blocking
+blocked_ips = ["192.168.1.10", "203.0.113.5"]
+@app.before_request
+def block_ip():
+    if request.remote_addr in blocked_ips:
+        abort(403, description="Your IP is blocked.")
+
+# Example Route protected by user roles
+users = {
+    "user1": {"role": "admin"},
+    "user2": {"role": "user"},
+}
+@app.route("/admin")
+def admin():
+    user = request.args.get("user")
+    if not user or users.get(user, {}).get("role") != "admin":
+        abort(403, description="Access denied. Admins only.")
+    return jsonify({"message": "Welcome, Admin!"})
+
+# Example Route Rate limiting example (limit 5 requests per minute)
+request_count = {}
+_last_clear = time.time()
+@app.route("/rate-limited")
+def rate_limited():
+    if time.time() - _last_clear > 60:
+        request_count.clear()
+        _last_clear = time.time()
+    user_ip = request.remote_addr
+    request_count[user_ip] = request_count.get(user_ip, 0) + 1
+
+    if request_count[user_ip] > 5:
+        abort(403, description="Rate limit exceeded. Try again later.")
+    
+    return jsonify({"message": "Request successful!"})
+
+# Run the app
+if __name__ == "__main__":
+    app.run(debug=True)
+```
+
+In this server application we implement 3 common reasons for 403 Forbidden errors:
+
+*   `/admin` route is protected by user role check and only allows users with `?role=admin` to access it.
+*   `/rate-limited` route is rate limited to 5 requests per minute and will return 403 error if the limit is exceeded.
+*   `block_ip` middleware blocks requests from IP addresses in the `blocked_ips` list to similate IP blacklisting.
+
+In real life, these policies tend to be a bit more complex and dynamic but this example should give you a good idea of how 403 Forbidden errors can be implemented and perspective on how to handle them on the client side.
+
+Next, let's take a look at the most common reasons for the 403 Forbidden error and how you can fix them.
+
+Error 403 Missing Permissions
+-----------------------------
+
+The most likely reasons for the 403 Forbidden error is missing permissions. This can happen when you're trying to access private resource that requires authentication of a specific user or user group.
+
+Note that if **credentials are incorrect** a `HTTP 401 Unauthorized` error is usually returned instead.
+
+To fix this issue, you need to ensure that you have the correct permissions to access the resource. This might involve:
+
+*   Grant the granual permissions to your user through management console if available.
+*   Ensure you're accessing the correct resource with the correct user credentials.
+
+That being said, for public resources like public web pages the meaning for HTTP 403 can be different and usually imply rate limiting or blocking. Let's take a look these next.
+
+Error 403 Rate Limiting
+-----------------------
+
+Generally rate limiting is indicated by a `429 Too Many Requests` error but in some cases a 403 Forbidden error can be returned as well especially in web scraping or web automation tasks where the reasoning can be obscured purposefully.
+
+This can be identified if 403 errors are returned only after a certain number of requests or after a certain time period.
+
+In rate limiting cases, the response might have an indication of what rate limit policy is in place through `X-` prefixed headers. For example:
+
+```
+import httpx
+
+response = httpx.get("https://api.example.com")
+print(response.headers)
+{
+    "X-RateLimit-Limit": "60",
+    "X-RateLimit-Remaining": "0",
+    "X-RateLimit-Reset": "1617228400",
+}
+```
+
+In this case, the example API provides exact details about the rate limit policy:
+
+*   The `X-RateLimit-Limit` header tells you how many requests you can make in a given time frame.
+*   The `X-RateLimit-Remaining` header tells you how many requests you have left.
+*   The `X-RateLimit-Reset` header tells you when the rate limit will reset.
+
+As `X-` headers are non-standard this can vary from service to service.
+
+Additionally, these limits can apply to _concurrent connections_ as well. For example, if you're making too many requests at the same time using multiple threads or async connections the server can reject you with a 403 error with message like "Too many concurrent connections" and usually provide similar `X-` prefixed headers to give you more information.
+
+To debug 403 rate limiting issues you can implement your own rate limiting logic to find the sweet spot for your request scale.
+
+### How to Bypass 403 Rate Limiting
+
+To bypass rate limiting issues there are several strategies you can use depending on what's being rate limited.
+
+Most rate limiting policies are **based on IP address** so you can try using a proxy service to change your IP address. For example, if rate limit is 10 requests per minute on a single IP address, using a pool of 10 proxies can give you 100 requests per minute.
+
+Here's how proxies can be used in popular HTTP clients
+
+Python (httpx)
+
+Javascript (fetch)
+
+Go
+
+Rust
+
+PHP (Guzzle)
+
+cURL
+
+```
+import httpx
+
+# Define the proxy URL
+proxy = "http://your-proxy-url:port"
+
+# Make a request using the proxy
+response = httpx.get('https://httpbin.dev/ip', proxies={"http://": proxy, "https://": proxy})
+
+print(response.text)
+```
+
+```
+// Define the proxy URL
+const proxyUrl = "http://your-proxy-url:port";
+
+// Using fetch with a proxy
+fetch('https://httpbin.dev/ip', {
+    method: 'GET',
+    agent: new HttpsProxyAgent(proxyUrl) // Requires 'https-proxy-agent' package
+})
+.then(response => response.text())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+```
+
+```
+package main
+
+import (
+    "fmt"
+    "io/ioutil"
+    "net/http"
+    "golang.org/x/net/proxy"
+)
+
+func main() {
+    // Define the proxy URL
+    proxyURL, _ := proxy.SOCKS5("tcp", "your-proxy-url:port", nil, proxy.Direct)
+
+    // Create a new HTTP client with the proxy
+    httpTransport := &http.Transport{Dial: proxyURL.Dial}
+    client := &http.Client{Transport: httpTransport}
+
+    response, err := client.Get("https://httpbin.dev/ip")
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    defer response.Body.Close()
+
+    body, _ := ioutil.ReadAll(response.Body)
+    fmt.Println(string(body))
+}
+```
+
+```
+use reqwest::Proxy;
+
+#[tokio::main]
+async fn main() {
+    // Define the proxy URL
+    let proxy = Proxy::http("http://your-proxy-url:port").unwrap();
+
+    // Create a client with the proxy
+    let client = reqwest::Client::builder()
+        .proxy(proxy)
+        .build()
+        .unwrap();
+
+    let response = client.get("https://httpbin.dev/ip").send().await.unwrap();
+    let body = response.text().await.unwrap();
+
+    println!("{}", body);
+}
+```
+
+```
+<?php
+// Define the proxy URL
+$proxy = 'your-proxy-url:port';
+$ch = curl_init('https://httpbin.dev/ip');
+
+// Set cURL options
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+echo $response;
+?>
+```
+
+```
+# Using cURL with a proxy
+curl -x http://your-proxy-url:port https://httpbin.dev/ip
+```
+
+Proxies can be a great way to bypass IP based rate limiting and for more on proxies see our proxy introduction guide
+
+* * *
+
+For rate limiting based on other factors like authentication tokens there isn't much we can do other than to follow them or increase the amount of tokens available to us.
+
+There are some other less common rate limiting vectors like session cookies or user agent headers. In these cases, just like with IP address based limiting we can distribute our connections through multiple sessions or user agents to bypass the rate limit.
+
+Here's how User-Agent headers and cookies can be set in popular HTTP clients:
+
+Python (httpx)
+
+Javascript (fetch)
+
+Go
+
+Rust
+
+PHP (Guzzle)
+
+cURL
+
+```
+import httpx
+
+# Define the proxy URL and headers
+proxy = "http://your-proxy-url:port"
+headers = {"User-Agent": "YourUserAgent"}
+cookies = {"cookie_name": "cookie_value"}
+
+# Make a request using the proxy with headers and cookies
+response = httpx.get(
+    'https://httpbin.dev/headers',
+    headers=headers,
+    cookies=cookies,
+    proxies={"http://": proxy, "https://": proxy}
+)
+
+print(response.text)
+```
+
+```
+// Define the proxy URL and headers
+const proxyUrl = "http://your-proxy-url:port";
+const headers = {
+    "User-Agent": "YourUserAgent",
+    "Cookie": "cookie_name=cookie_value"
+};
+
+// Using fetch with a proxy, headers, and cookies
+fetch('https://httpbin.dev/headers', {
+    method: 'GET',
+    headers: headers,
+    agent: new HttpsProxyAgent(proxyUrl) // Requires 'https-proxy-agent' package
+})
+.then(response => response.text())
+.then(data => console.log(data))
+.catch(error => console.error('Error:', error));
+```
+
+```
+package main
+
+import (
+    "fmt"
+    "io/ioutil"
+    "net/http"
+    "golang.org/x/net/proxy"
+)
+
+func main() {
+    // Define the proxy URL
+    proxyURL, _ := proxy.SOCKS5("tcp", "your-proxy-url:port", nil, proxy.Direct)
+
+    // Create a new HTTP client with the proxy
+    httpTransport := &http.Transport{Dial: proxyURL.Dial}
+    client := &http.Client{Transport: httpTransport}
+
+    // Create a new request with headers and cookies
+    req, _ := http.NewRequest("GET", "https://httpbin.dev/headers", nil)
+    req.Header.Set("User-Agent", "YourUserAgent")
+    req.Header.Set("Cookie", "cookie_name=cookie_value")
+
+    response, err := client.Do(req)
+    if err != nil {
+        fmt.Println(err)
+        return
+    }
+    defer response.Body.Close()
+
+    body, _ := ioutil.ReadAll(response.Body)
+    fmt.Println(string(body))
+}
+```
+
+```
+use reqwest::{Client, header};
+
+#[tokio::main]
+async fn main() {
+    // Define the proxy URL
+    let proxy = reqwest::Proxy::http("http://your-proxy-url:port").unwrap();
+
+    // Create a client with the proxy
+    let client = Client::builder()
+        .proxy(proxy)
+        .default_headers({
+            let mut headers = header::HeaderMap::new();
+            headers.insert(header::USER_AGENT, header::HeaderValue::from_static("YourUserAgent"));
+            headers.insert(header::COOKIE, header::HeaderValue::from_static("cookie_name=cookie_value"));
+            headers
+        })
+        .build()
+        .unwrap();
+
+    let response = client.get("https://httpbin.dev/headers").send().await.unwrap();
+    let body = response.text().await.unwrap();
+
+    println!("{}", body);
+}
+```
+
+```
+<?php
+// Define the proxy URL
+$proxy = 'your-proxy-url:port';
+$ch = curl_init('https://httpbin.dev/headers');
+
+// Set headers and cookies
+$headers = [
+    'User-Agent: YourUserAgent',
+    'Cookie: cookie_name=cookie_value'
+];
+
+// Set cURL options
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_PROXY, $proxy);
+curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+
+$response = curl_exec($ch);
+curl_close($ch);
+
+echo $response;
+?>
+```
+
+```
+# Using cURL with a proxy, User-Agent, and cookies
+curl -x http://your-proxy-url:port -A "YourUserAgent" --cookie "cookie_name=cookie_value" https://httpbin.dev/headers
+```
+
+For more on User Agent strings see our complete user-agent string instroduction.
+
+As for cookie based sessions, you can usually establish multiple session by connecting to the session entry point (like homepage of a website).
+
+Error 403 Blocking
+------------------
+
+By far the most common HTTP error 403 reason is simply - blocking. Especially when working with public resources like public web pages. This can be due to a variety of reasons such as:
+
+*   Your IP address is blacklisted
+*   The connection is being identified as a bot
+*   The server is blocking requests from certain countries
+*   The server is blocking requests from certain user agents
+
+For user agents and IP addresses we've already covered how IP addresses can be configured with proxies and user-agent strings can be generated to bypass these blocks.
+
+For HTTP client identification there are several factors that can be used to identify undesired connections which usually differ from web browsers in several key aspects:
+
+*   HTTP client headers are different from browser headers. This includes headers like `Accept-` and even header ordering.
+*   HTTP version used by the browser is usually HTTP2 or HTTP3 while most http clients use HTTP1.1.
+*   Various fingerprinting techniques like HTTP fingerprint or TLS fingerprint can be used to identify the client.
+
+### How to Bypass 403 Blocking
+
+For all techniques used to identify automated connections see our guide on how bot connections are being identified and how to prevent it. However, a good starting point would be to start with an HTTP client that fortifies your requests against the most common detection methods like:
+
+*   curl-impersonate is a special version of `libcurl` (and cURL command) that can mimic the behavior of popular web browsers like Chrome and Firefox.
+*   undetected-chromedriver is a special version of ChromeDriver used in Selenium browser automation library that can bypass browser bot detection mechanisms.
+
+Bypass 403 with Scrapfly
+------------------------
+
+If your 403 error code is caused by blocking or rate limiting then Scrapfly can resolve this issue for you!
+
+FAQ
+---
+
+Before we wrap up this article lets cover some frequently asked questions about the 403 error.
+
+#### What is the difference between 401 Unauthorized and 403 Forbidden?
+
+The main difference between a 401 Unauthorized and a 403 Forbidden error is that the `401` error means that the client is **not authenticated at all** to access the resource, while the `403` error indicates that the client is authenticated (or doesn't need to) but is not authorized to access this specific resource.
+
+#### What is the difference between 403 Forbidden and 429 Too Many Requests?
+
+The `403` Forbidden error means that the client is **forbidden** from accessing the resource, while the `429` Too Many Requests error means that the client has **exceeded the rate limit** set by the server. Though, `403` can also be used for rate limiting purposes where the client is obfuscated from the information about rate limiting.
+
+#### What is the difference between 403 Forbidden and 404 Not Found?
+
+The `403` Forbidden error means that the client is **forbidden** from accessing the resource, while the `404` Not Found error means that the resource simply doesn't exist. However, in practice `404` and `403` are sometimes used interchangeably to obfuscate the existence of the resource to bots.
+
+Summary
+-------
+
+HTTP 403 Forbidden errors are a common issue faced by web developers and automation engineers. The error can be caused by a variety of reasons such as missing permissions, rate limiting, or blocking. By understanding the root cause of the error and implementing the right solution, you can prevent the 403 Forbidden status code from affecting your HTTP requests.
+
+As for bypassing blocking and rate limiting issues various strategies like: using proxies, fortifying http client to mimic browser behavior, and using Scrapfly can help you bypass these issues and continue your web scraping or web automation tasks without interruptions.

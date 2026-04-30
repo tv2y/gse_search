@@ -1,0 +1,1067 @@
+Title: Lessig - Code - Excerpts
+
+URL Source: https://cyber.harvard.edu/ptc2010/sites/ptc2010/images/Lessig_Code_Excerpts.pdf
+
+Published Time: Mon, 07 Apr 2008 19:26:48 GMT
+
+Markdown Content:
+# C O D E
+
+# v e r s i o n 2 . 0
+
+# L A W R E N C E L E S S I G
+
+A Member of the Perseus Books Group
+
+New York
+
+0465039146-FM:FM 12/5/06 12:25 AM Page iii Copyright © 2006 by Lawrence Lessig CC Attribution-ShareAlike
+
+Published by Basic Books
+
+A Member of the Perseus Books Group
+
+Printed in the United States of America. For information, address Basic Books, 387
+
+Park Avenue South, New York, NY 10016–8810.
+
+Books published by Basic Books are available at special discounts for bulk purchases
+
+in the United States by corporations, institutions, and other organizations. For more
+
+information, please contact the Special Markets Department at the Perseus Books
+
+Group, 11 Cambridge Center, Cambridge MA 02142, or call (617) 252-5298, (800)
+
+255-1514 or e-mail special.markets@perseusbooks.com.
+
+CIP catalog record for this book is available from the Library of Congress.
+
+ISBN-10: 0–465–03914–6
+
+ISBN-13: 978–0 –465–03914–2 
+
+06 07 08 09 / 10 9 8 7 6 5 4 3 2 1     
+
+> 0465039146-FM:FM 12/5/06 12:25 AM Page iv
+
+# O N E
+
+c o d e i s l a w
+
+ALMOST TWO DECADES AGO, IN THE SPRING OF 1989, COMMUNISM IN EUROPE
+
+died—collapsed, like a tent, its main post removed. The end was not brought
+
+by war or revolution. The end was exhaustion. A new political regime was
+
+born in its place across Central and Eastern Europe, the beginnings of a new
+
+political society.
+
+For constitutionalists (like me), this was a heady time. I had graduated
+
+from law school in 1989, and in 1991 I began teaching at the University of
+
+Chicago. At that time, Chicago had a center devoted to the study of the emerg-
+
+ing democracies in Central and Eastern Europe. I was a part of that center.
+
+Over the next five years I spent more hours on airplanes, and more mornings
+
+drinking bad coffee, than I care to remember.
+
+Eastern and Central Europe were filled with Americans telling former
+
+Communists how they should govern. The advice was endless. And silly. Some
+
+of these visitors literally sold translated constitutions to the emerging consti-
+
+tutional republics; the rest had innumerable half-baked ideas about how the
+
+new nations should be governed. These Americans came from a nation where
+
+constitutionalism seemed to work, yet they had no clue why.
+
+The Center’s mission, however, was not to advise. We knew too little to
+
+guide. Our aim was to watch and gather data about the transitions and how
+
+they progressed. We wanted to understand the change, not direct it.
+
+What we saw was striking, if understandable. Those first moments after
+
+communism’s collapse were filled with antigovernmental passion—a surge of
+
+anger directed against the state and against state regulation. Leave us alone,
+
+the people seemed to say. Let the market and nongovernmental organiza-
+
+tions—a new society—take government’s place. After generations of com-
+
+munism, this reaction was completely understandable. Government was the     
+
+> 1
+> 0465039146-01 12/5/06 12:27 AM Page 1
+
+oppressor. What compromise could there be with the instrument of your
+
+repression?
+
+A certain kind of libertarianism seemed to many to support much in this
+
+reaction. If the market were to reign, and the government were kept out of the
+
+way, freedom and prosperity would inevitably grow. Things would take care
+
+of themselves. There was no need, and could be no place, for extensive regu-
+
+lation by the state.
+
+But things didn’t take care of themselves. Markets didn’t flourish. Govern-
+
+ments were crippled, and crippled governments are no elixir of freedom.
+
+Power didn’t disappear—it shifted from the state to mafiosi, themselves often
+
+created by the state. The need for traditional state functions—police, courts,
+
+schools, health care—didn’t go away, and private interests didn’t emerge to fill
+
+that need. Instead, the needs were simply unmet. Security evaporated. A mod-
+
+ern if plodding anarchy replaced the bland communism of the previous three
+
+generations: neon lights flashed advertisements for Nike; pensioners were
+
+swindled out of their life savings by fraudulent stock deals; bankers were mur-
+
+dered in broad daylight on Moscow streets. One system of control had been
+
+replaced by another. Neither was what Western libertarians would call “free-
+
+dom.”
+
+{TXB2}
+
+About a decade ago, in the mid-1990s, just about the time when this post-
+
+communist euphoria was beginning to wane, there emerged in the West
+
+another “new society,” to many just as exciting as the new societies promised
+
+in post-communist Europe. This was the Internet, or as I’ll define a bit later,
+
+“cyberspace.” First in universities and centers of research, and then through-
+
+out society in general, cyberspace became a new target for libertarian utopi-
+
+anism. Here freedom from the state would reign. If not in Moscow or Tblisi,
+
+then in cyberspace would we find the ideal libertarian society.
+
+The catalyst for this change was likewise unplanned. Born in a research
+
+project in the Defense Department,1 cyberspace too arose from the unplanned
+
+displacement of a certain architecture of control. The tolled, single-purpose
+
+network of telephones was displaced by the untolled and multipurpose net-
+
+work of packet-switched data. And thus the old one-to-many architectures of
+
+publishing (television, radio, newspapers, books) were complemented by a
+
+world in which anyone could become a publisher. People could communicate
+
+and associate in ways that they had never done before. The space seemed to
+
+promise a kind of society that real space would never allow—freedom without
+
+anarchy, control without government, consensus without power. In the words
+
+of a manifesto that defined this ideal: “We reject: kings, presidents and voting.
+
+We believe in: rough consensus and running code.”2      
+
+> CODE2.02
+> 0465039146-01 12/5/06 12:27 AM Page 2
+
+As in post-Communist Europe, these first thoughts about freedom in
+
+cyberspace tied freedom to the disappearance of the state. As John Parry Bar-
+
+low, former lyricist for the Grateful Dead and co-founder of the Electronic
+
+Frontier Foundation, declared in his “Declaration of Independence for Cyber-
+
+space,”                                              
+
+> GovernmentsoftheIndustrialWorld,youwearygiantsoffleshandsteel,Icome
+> fromCyberspace,thenewhomeofMind.Onbehalfofthefuture,Iaskyouof
+> thepasttoleaveusalone.Youarenotwelcomeamongus.Youhavenosover-
+> eigntywherewegather.
+
+But here the bond between freedom and the absence of the state was said
+
+to be even stronger than in post-Communist Europe. The claim for cyber-
+
+space was not just that government would not regulate cyberspace—it was
+
+that government could not regulate cyberspace. Cyberspace was, by nature,
+
+unavoidably free. Governments could threaten, but behavior could not be
+
+controlled; laws could be passed, but they would have no real effect. There was
+
+no choice about what kind of government to install—none could reign.
+
+Cyberspace would be a society of a very different sort. There would be defini-
+
+tion and direction, but built from the bottom-up. The society of this space
+
+would be a fully self-ordering entity, cleansed of governors and free from
+
+political hacks.
+
+I taught in Central Europe during the summers of the early 1990s; I wit-
+
+nessed through my students the transformation in attitudes about communism
+
+that I described above. And so I felt a bit of déjà vu when, in the spring of 1995,
+
+while teaching the law of cyberspace, I saw in my students these very same post-
+
+communist thoughts about freedom and government. Even at Yale—not known
+
+for libertarian passions—the students seemed drunk with what James Boyle
+
+would later call the “libertarian gotcha”:3 no government could survive without
+
+the Internet’s riches, yet no government could control the life that went on
+
+there. Real-space governments would become as pathetic as the last Communist
+
+regimes: It was the withering of the state that Marx had promised, jolted out of
+
+existence by trillions of gigabytes flashing across the ether of cyberspace.
+
+But what was never made clear in the midst of this celebration was why.
+
+Why was cyberspace incapable of regulation? What made it so? The word
+
+itself suggests not freedom but control. Its etymology reaches beyond a novel
+
+by William Gibson (Neuromancer, published in 1984) to the world of “cyber-
+
+netics,” the study of control at a distance through devices.4 So it was doubly
+
+puzzling to see this celebration of “perfect freedom” under a banner that
+
+aspires (to anyone who knows the origin, at least) to perfect control.        
+
+> codeislaw3
+> 0465039146-01 12/5/06 12:27 AM Page 3
+
+As I said, I am a constitutionalist. I teach and write about constitutional
+
+law. I believe that these first thoughts about government and cyberspace were
+
+just as misguided as the first thoughts about government after communism.
+
+Liberty in cyberspace will not come from the absence of the state. Liberty
+
+there, as anywhere, will come from a state of a certain kind. We build a world
+
+where freedom can flourish not by removing from society any self-conscious
+
+control, but by setting it in a place where a particular kind of self-conscious
+
+control survives. We build liberty as our founders did, by setting society upon
+
+a certain constitution.
+
+But by “constitution” I don’t mean a legal text. Unlike my countrymen in
+
+Eastern Europe in the early 1990s, I am not trying to sell a document that our
+
+framers wrote in 1787. Rather, as the British understand when they speak of
+
+their “constitution,” I mean an architecture—not just a legal text but a way of
+
+life—that structures and constrains social and legal power, to the end of pro-
+
+tecting fundamental values. (One student asked, “constitution” in the sense of
+
+“just one tool among many, one simple flashlight that keeps us from fumbling
+
+in the dark, or, alternatively . . . more like a lighthouse that we constantly call
+
+upon?” I mean constitution as in lighthouse—a guide that helps anchor fun-
+
+damental values.)
+
+Constitutions in this sense are built, they are not found. Foundations get
+
+laid, they don’t magically appear. Just as the founders of our nation learned
+
+from the anarchy that followed the revolution (remember: our first constitu-
+
+tion, the Articles of Confederation, was a miserable failure of do-nothing-
+
+ness), so too are we beginning to understand about cyberspace that this
+
+building, or laying, is not the work of an invisible hand. There is no reason to
+
+believe that the foundation for liberty in cyberspace will simply emerge.
+
+Indeed, the passion for that anarchy—as in America by the late 1780s, and as
+
+in the former Eastern bloc by the late 1990s—has faded. Thus, as our framers
+
+learned, and as the Russians saw, we have every reason to believe that cyber-
+
+space, left to itself, will not fulfill the promise of freedom. Left to itself, cyber-
+
+space will become a perfect tool of control.
+
+Control. Not necessarily control by government, and not necessarily
+
+control to some evil, fascist end. But the argument of this book is that the
+
+invisible hand of cyberspace is building an architecture that is quite the
+
+opposite of its architecture at its birth. This invisible hand, pushed by gov-
+
+ernment and by commerce, is constructing an architecture that will perfect
+
+control and make highly efficient regulation possible. The struggle in that
+
+world will not be government’s. It will be to assure that essential liberties are
+
+preserved in this environment of perfect control. As Siva Vaidhyanathan
+
+puts it,                                                 
+
+> CODE2.04
+> 0465039146-01 12/5/06 12:27 AM Page 4Whileonceitseemedobviousandeasytodeclaretheriseofa”networksociety”
+> inwhichindividualswouldrealignthemselves,empowerthemselves,andunder-
+> minetraditionalmethodsofsocialandculturalcontrol,itseemsclearthatnet-
+> workeddigitalcommunicationneednotservesuchliberatingends.5
+
+This book is about the change from a cyberspace of anarchy to a cyber-
+
+space of control. When we see the path that cyberspace is on now—an evolu-
+
+tion I describe below in Part I—we see that much of the “liberty” present at
+
+cyberspace’s founding will be removed in its future. Values originally consid-
+
+ered fundamental will not survive. On the path we have chosen, we will
+
+remake what cyberspace was. Some of that remaking will make many of us
+
+happy. But some of that remaking, I argue, we should all regret.
+
+Yet whether you celebrate or regret the changes that I will describe, it is
+
+critical to understand how they happen. What produced the “liberty” of
+
+cyberspace, and what will change to remake that liberty? That lesson will then
+
+suggest a second about the source of regulation in cyberspace.
+
+That understanding is the aim of Part II. Cyberspace demands a new
+
+understanding of how regulation works. It compels us to look beyond the
+
+traditional lawyer’s scope—beyond laws, or even norms. It requires a broader
+
+account of “regulation,” and most importantly, the recognition of a newly
+
+salient regulator.
+
+That regulator is the obscurity in this book’s title—Code. In real space, we
+
+recognize how laws regulate—through constitutions, statutes, and other legal
+
+codes. In cyberspace we must understand how a different “code” regulates—
+
+how the software and hardware (i.e., the “code” of cyberspace) that make
+
+cyberspace what it is also regulate cyberspace as it is. As William Mitchell
+
+puts it, this code is cyberspace’s “law.”6 “Lex Informatica,” as Joel Reidenberg
+
+first put it,7 or better, “code is law.”
+
+Lawyers and legal theorists get bothered, however, when I echo this slo-
+
+gan. There are differences, they insist, between the regulatory effects produced
+
+by code and the regulatory effects produced by law, not the least of which is
+
+the difference in the “internal perspective” that runs with each kind of regu-
+
+lation. We understand the internal perspective of legal regulation—for exam-
+
+ple, that the restrictions the law might impose on a company’s freedom to
+
+pollute are a product of self-conscious regulation, reflecting values of the
+
+society imposing that regulation. That perspective is harder to recognize with
+
+code. It could be there, but it need not. And no doubt this is just one of many
+
+important differences between “code” and “law.”
+
+I don’t deny these differences. I only assert that we learn something useful
+
+from ignoring them for a bit. Justice Holmes famously focused the regulator        
+
+> codeislaw5
+> 0465039146-01 12/5/06 12:27 AM Page 5
+
+on the “bad man.”8 He offered a theory of regulation that assumed that “bad
+
+man” at its core. His point was not that everyone was a “bad man”; the point
+
+instead was about how we could best construct systems of regulation.
+
+My point is the same. I suggest we learn something if we think about the
+
+“bot man” theory of regulation—one focused on the regulation of code. We
+
+will learn something important, in other words, if we imagine the target of
+
+regulation as a maximizing entity, and consider the range of tools the regula-
+
+tor has to control that machine.
+
+Code will be a central tool in this analysis. It will present the greatest threat
+
+to both liberal and libertarian ideals, as well as their greatest promise. We can
+
+build, or architect, or code cyberspace to protect values that we believe are fun-
+
+damental. Or we can build, or architect, or code cyberspace to allow those val-
+
+ues to disappear. There is no middle ground. There is no choice that does not
+
+include some kind of building. Code is never found; it is only ever made, and
+
+only ever made by us. As Mark Stefik puts it,“Different versions of [cyberspace]
+
+support different kinds of dreams. We choose, wisely or not.”9 Or again, code
+
+“determines which people can access which digital objects . . . How such pro-
+
+gramming regulates human interactions . . . depends on the choices made.”10
+
+Or, more precisely, a code of cyberspace, defining the freedoms and controls of
+
+cyberspace, will be built. About that there can be no debate. But by whom,
+
+and with what values? That is the only choice we have left to make.
+
+My argument is not for some top-down form of control. The claim is
+
+not that regulators must occupy Microsoft. A constitution envisions an envi-
+
+ronment; as Justice Holmes said, it “call[s] into life a being the development
+
+of which [cannot be] foreseen.”11 Thus, to speak of a constitution is not to
+
+describe a hundred-day plan. It is instead to identify the values that a space
+
+should guarantee. It is not to describe a “government”; it is not even to select
+
+(as if a single choice must be made) between bottom-up or top-down control.
+
+In speaking of a constitution in cyberspace we are simply asking: What values
+
+should be protected there? What values should be built into the space to
+
+encourage what forms of life?
+
+The “values” at stake here are of two sorts—substantive and structural. In
+
+the American constitutional tradition, we worried about the second first. The
+
+framers of the Constitution of 1787 (enacted without a Bill of Rights) were
+
+focused on structures of government. Their aim was to ensure that a partic-
+
+ular government (the federal government) did not become too powerful. And
+
+so they built into the Constitution’s design checks on the power of the federal
+
+government and limits on its reach over the states.
+
+Opponents of that Constitution insisted that more checks were needed,
+
+that the Constitution needed to impose substantive limits on government’s      
+
+> CODE2.06
+> 0465039146-01 12/5/06 12:27 AM Page 6
+
+power as well as structural limits. And thus was the Bill of Rights born. Rati-
+
+fied in 1791, the Bill of Rights promised that the federal government would
+
+not remove certain freedoms—of speech, privacy, and due process. And it
+
+guaranteed that the commitment to these substantive values would remain
+
+despite the passing fancies of normal, or ordinary, government. These val-
+
+ues—both substantive and structural—were thus entrenched through our
+
+constitutional design. They can be changed, but only through a cumbersome
+
+and costly process.
+
+We face the same questions in constituting cyberspace, but we have
+
+approached them from the opposite direction.12 Already we are struggling
+
+with substance: Will cyberspace promise privacy or access? Will it enable a free
+
+culture or a permission culture? Will it preserve a space for free speech? These
+
+are choices of substantive value, and they are the subject of much of this
+
+book.
+
+But structure matters as well, though we have not even begun to under-
+
+stand how to limit, or regulate, arbitrary regulatory power. What “checks and
+
+balances” are possible in this space? How do we separate powers? How do we
+
+ensure that one regulator, or one government, doesn’t become too powerful?
+
+How do we guarantee it is powerful enough?
+
+Theorists of cyberspace have been talking about these questions since its
+
+birth.13 But as a culture, we are just beginning to get it. As we slowly come to
+
+see how different structures within cyberspace affect us—how its architec-
+
+ture, in a sense I will define below, “regulates” us—we slowly come to ask
+
+how these structures should be defined. The first generation of these archi-
+
+tectures was built by a noncommercial sector—researchers and hackers,
+
+focused upon building a network. The second generation has been built by
+
+commerce. And the third, not yet off the drawing board, could well be the
+
+product of government. Which regulator do we prefer? Which regulators
+
+should be controlled? How does society exercise that control over entities
+
+that aim to control it?
+
+In Part III, I bring these questions back down to the ground. I consider
+
+three areas of controversy—intellectual property, privacy, and free speech—
+
+and identify the values within each that cyberspace will change. These values
+
+are the product of the interaction between law and technology. How that
+
+interaction plays out is often counter-intuitive. My aim in this part is to map
+
+that interaction, so as to map a way that we might, using the tools of Part II,
+
+preserve the values that are important to us within each context.
+
+Part IV internationalizes these questions. Cyberspace is everywhere,
+
+meaning those who populate cyberspace come from everywhere. How will the
+
+sovereigns of everywhere live with the claimed “sovereignty” of cyberspace? I        
+
+> codeislaw7
+> 0465039146-01 12/5/06 12:27 AM Page 7
+
+map a particular response that seems to me inevitable, and will reinforce the
+
+conclusion of Part I.
+
+The final part, Part V, is the darkest. The central lesson of this book is that
+
+cyberspace requires choices. Some of these are, and should be, private:
+
+Whether an author wants to enforce her copyright; how a citizen wants to
+
+protect his privacy. But some of these choices involve values that are collective.
+
+I end by asking whether we—meaning Americans—are up to the challenge
+
+that these choices present. Are we able to respond rationally—meaning both
+
+(1) are we able to respond without undue or irrational passion, and (2) do we
+
+have institutions capable of understanding and responding to these choices?
+
+My strong sense is that we are not, at least now, able to respond rationally
+
+to these challenges. We are at a stage in our history when we urgently need to
+
+make fundamental choices about values, but we should trust no institution of
+
+government to make such choices. Courts cannot do it, because as a legal
+
+culture we don’t want courts choosing among contested matters of values.
+
+Congress should not do it because, as a political culture, we are deeply skep-
+
+tical (and rightly so) about the product of this government. There is much to
+
+be proud of in our history and traditions. But the government we now have
+
+is a failure. Nothing important should be trusted to its control, even though
+
+everything important is.
+
+Change is possible. I don’t doubt that revolutions remain in our future.
+
+But I fear that it is too easy for the government, or specially powered interests,
+
+to dislodge these revolutions, and that too much will be at stake for it to allow
+
+real change to succeed. Our government has already criminalized the core
+
+ethic of this movement, transforming the meaning of hacker into something
+
+quite alien to its original sense. Through extremism in copyright regulation,
+
+it is criminalizing the core creativity that this network could produce. And this
+
+is only the beginning.
+
+Things could be different. They are different elsewhere. But I don’t see
+
+how they could be different for us just now. This no doubt is simply a confes-
+
+sion of the limits of my own imagination. I would be grateful to be proven
+
+wrong. I would be grateful to watch as we relearn—as the citizens of the for-
+
+mer Communist republics are learning—how to escape these disabling ideas
+
+about the possibilities for governance. But nothing in the past decade, and
+
+especially nothing in the past five years, has convinced me that my skepticism
+
+about governance was misplaced. Indeed, events have only reinforced that
+
+pessimism.      
+
+> CODE2.08
+> 0465039146-01 12/5/06 12:27 AM Page 8
+
+# S E V E N
+
+w h a t t h i n g s r e g u l a t e
+
+JOHN STUART MILL WAS AN ENGLISHMAN. HE WAS ALSO ONE OF THE MOST
+
+influential political philosophers in America. His writings ranged from
+
+important work on logic to a still striking text about sexual equality, The Sub-
+
+jection of Women. But perhaps his most important continuing influence
+
+comes from a relatively short book titled On Liberty. Published in 1859, this
+
+powerful argument for individual liberty and diversity of thought represents
+
+an important view of liberal and libertarian thinking in the second half of the
+
+nineteenth century.
+
+“Libertarian,” however, has a specific meaning for us. For most, it associ-
+
+ates with arguments against government.1 Government, in the modern liber-
+
+tarian’s view, is the threat to liberty; private action is not. Thus, the good
+
+libertarian is focused on reducing government’s power. Curb the excesses of
+
+government, the libertarian says, and you will ensure freedom for your society.
+
+Mill’s view was not so narrow. He was a defender of liberty and an oppo-
+
+nent of forces that suppressed it, but those forces were not confined to govern-
+
+ment. Liberty, in Mill’s view, was threatened as much by norms as by
+
+government, as much by stigma and intolerance as by the threat of state pun-
+
+ishment. His objective was to argue against these private forces of coercion.
+
+His work was a defense against liberty-suppressing norms, because, in Eng-
+
+land at that time, these were the real threat to liberty.
+
+Mill’s method is important, and it should be our own as well. It asks,
+
+What is the threat to liberty, and how can we resist it? It is not limited to ask-
+
+ing, What is the threat to liberty from government? It understands that more
+
+than government can threaten liberty, and that sometimes this something
+
+more can be private rather than state action. Mill was not concerned with the
+
+source of the threat to liberty. His concern was with liberty.     
+
+> 120
+> 0465039146-01 12/5/06 12:27 AM Page 120
+
+Threats to liberty change. In England, norms may have been the threat to free
+
+speech in the late nineteenth century; I take it they are not as much a threat today.
+
+In the United States in the first two decades of the twentieth century, the threat to
+
+free speech was state suppression through criminal penalties for unpopular
+
+speech; the strong protections of the First Amendment now make that particular
+
+threat less significant.2 The labor movement was founded on the idea that the
+
+market is sometimes a threat to liberty—not so much because of low wages, but
+
+because the market form of organization itself disables a certain kind of freedom.3
+
+In other societies, at other times, the market is a key to liberty, not the enemy.
+
+Thus, rather than think of “liberty’s enemy” in the abstract, we should focus
+
+upon a particular threat to liberty that might exist in a particular time and
+
+place. And this is especially true when we think about liberty in cyberspace. I
+
+believe that cyberspace creates a new threat to liberty, not new in the sense that
+
+no theorist had conceived of it before,4 but new in the sense of newly urgent. We
+
+are coming to understand a newly powerful regulator in cyberspace. That reg-
+
+ulator could be a significant threat to a wide range of liberties, and we don’t yet
+
+understand how best to control it.
+
+This regulator is what I call “code”—the instructions embedded in the soft-
+
+ware or hardware that makes cyberspace what it is. This code is the “built envi-
+
+ronment” of social life in cyberspace. It is its “architecture.”5 And if in the middle
+
+of the nineteenth century the threat to liberty was norms, and at the start of the
+
+twentieth it was state power, and during much of the middle twentieth it was the
+
+market, then my argument is that we must come to understand how in the
+
+twenty-first century it is a different regulator—code—that should be our cur-
+
+rent concern.
+
+But not to the exclusion of other significant “regulators.” My argument is
+
+not that there’s only one threat to liberty, or that we should forget other, more
+
+traditional threats. It is instead that we must add one more increasingly salient
+
+threat to the list. And to see this new, salient threat, I believe we need a more
+
+general understanding of how regulation works—one that focuses on more
+
+than the single influence of any one force such as government, norms, or the
+
+market, and instead integrates these factors into a single account.
+
+This chapter is a step toward that more general understanding.6 It is an
+
+invitation to think beyond the threat to liberty from government power. It is a
+
+map for this more general understanding.  
+
+> ADOT’SLIFE
+
+There are many ways to think about “regulation.” I want to think about it
+
+from the perspective of someone who is regulated, or, what is different, con-        
+
+> whatthingsregulate121
+> 0465039146-01 12/5/06 12:27 AM Page 121
+
+strained. That someone regulated is represented by this (pathetic) dot—a
+
+creature (you or me) subject to different regulations that might have the effect
+
+of constraining (or as we’ll see, enabling) the dot’s behavior. By describing the
+
+various constraints that might bear on this individual, I hope to show you
+
+something about how these constraints function together.
+
+Here then is the dot.
+
+How is this dot “regulated”?
+
+Let’s start with something easy: smoking. If you want to smoke, what
+
+constraints do you face? What factors regulate your decision to smoke or not?
+
+One constraint is legal. In some places at least, laws regulate smoking—if
+
+you are under eighteen, the law says that cigarettes cannot be sold to you. If
+
+you are under twenty-six, cigarettes cannot be sold to you unless the seller
+
+checks your ID. Laws also regulate where smoking is permitted—not in
+
+O’Hare Airport, on an airplane, or in an elevator, for instance. In these two
+
+ways at least, laws aim to direct smoking behavior. They operate as a kind of
+
+constraint on an individual who wants to smoke.
+
+But laws are not the most significant constraints on smoking. Smokers in
+
+the United States certainly feel their freedom regulated, even if only rarely by
+
+the law. There are no smoking police, and smoking courts are still quite rare.
+
+Rather, smokers in America are regulated by norms. Norms say that one
+
+doesn’t light a cigarette in a private car without first asking permission of the
+
+other passengers. They also say, however, that one needn’t ask permission to
+
+smoke at a picnic. Norms say that others can ask you to stop smoking at a
+
+restaurant, or that you never smoke during a meal. These norms effect a certain
+
+constraint, and this constraint regulates smoking behavior.
+
+Laws and norms are still not the only forces regulating smoking behavior.
+
+The market is also a constraint. The price of cigarettes is a constraint on your
+
+ability to smoke—change the price, and you change this constraint. Likewise
+
+with quality. If the market supplies a variety of cigarettes of widely varying
+
+quality and price, your ability to select the kind of cigarette you want
+
+increases; increasing choice here reduces constraint.      
+
+> CODE2.0122
+> 0465039146-01 12/5/06 12:27 AM Page 122
+
+Finally, there are the constraints created by the technology of cigarettes, or
+
+by the technologies affecting their supply.7 Nicotine-treated cigarettes are
+
+addictive and therefore create a greater constraint on smoking than untreated
+
+cigarettes. Smokeless cigarettes present less of a constraint because they can be
+
+smoked in more places. Cigarettes with a strong odor present more of a con-
+
+straint because they can be smoked in fewer places. How the cigarette is, how
+
+it is designed, how it is built—in a word, its architecture—affects the con-
+
+straints faced by a smoker.
+
+Thus, four constraints regulate this pathetic dot—the law, social norms,
+
+the market, and architecture—and the “regulation” of this dot is the sum of
+
+these four constraints. Changes in any one will affect the regulation of the
+
+whole. Some constraints will support others; some may undermine others.
+
+Thus, “changes in technology [may] usher in changes in . . . norms,”8 and the
+
+other way around. A complete view, therefore, must consider these four
+
+modalities together.
+
+So think of the four together like this:
+
+In this drawing, each oval represents one kind of constraint operating
+
+on our pathetic dot in the center. Each constraint imposes a different kind of
+
+cost on the dot for engaging in the relevant behavior—in this case, smoking.
+
+The cost from norms is different from the market cost, which is different
+
+from the cost from law and the cost from the (cancerous) architecture of cig-
+
+arettes.        
+
+> whatthingsregulate123
+> 0465039146-01 12/5/06 12:27 AM Page 123
+
+The constraints are distinct, yet they are plainly interdependent. Each
+
+can support or oppose the others. Technologies can undermine norms and
+
+laws; they can also support them. Some constraints make others possible;
+
+others make some impossible. Constraints work together, though they func-
+
+tion differently and the effect of each is distinct. Norms constrain through the
+
+stigma that a community imposes; markets constrain through the price that
+
+they exact; architectures constrain through the physical burdens they impose;
+
+and law constrains through the punishment it threatens.
+
+We can call each constraint a “regulator,” and we can think of each as a
+
+distinct modality of regulation. Each modality has a complex nature, and the
+
+interaction among these four is also hard to describe. I’ve worked through this
+
+complexity more completely in the appendix. But for now, it is enough to
+
+see that they are linked and that, in a sense, they combine to produce the reg-
+
+ulation to which our pathetic dot is subject in any given area.
+
+We can use the same model to describe the regulation of behavior in
+
+cyberspace.9
+
+Law regulates behavior in cyberspace. Copyright law, defamation law, and
+
+obscenity laws all continue to threaten ex post sanction for the violation of
+
+legal rights. How well law regulates, or how efficiently, is a different question:
+
+In some cases it does so more efficiently, in some cases less. But whether better
+
+or not, law continues to threaten a certain consequence if it is defied. Legisla-
+
+tures enact;10 prosecutors threaten;11 courts convict.12
+
+Norms also regulate behavior in cyberspace. Talk about Democratic pol-
+
+itics in the alt.knitting newsgroup, and you open yourself to flaming; “spoof ”
+
+someone’s identity in a MUD, and you may find yourself “toaded”;13 talk too
+
+much in a discussion list, and you are likely to be placed on a common bozo
+
+filter. In each case, a set of understandings constrain behavior, again through
+
+the threat of ex post sanctions imposed by a community.14
+
+Markets regulate behavior in cyberspace. Pricing structures constrain
+
+access, and if they do not, busy signals do. (AOL learned this quite dramati-
+
+cally when it shifted from an hourly to a flat-rate pricing plan.)15 Areas of the
+
+Web are beginning to charge for access, as online services have for some time.
+
+Advertisers reward popular sites; online services drop low-population forums.
+
+These behaviors are all a function of market constraints and market opportu-
+
+nity. They are all, in this sense, regulations of the market.
+
+Finally, an analog for architecture regulates behavior in cyberspace—
+
+code. The software and hardware that make cyberspace what it is constitute a
+
+set of constraints on how you can behave. The substance of these constraints
+
+may vary, but they are experienced as conditions on your access to cyberspace.
+
+In some places (online services such as AOL, for instance) you must enter a      
+
+> CODE2.0124
+> 0465039146-01 12/5/06 12:27 AM Page 124
+
+password before you gain access; in other places you can enter whether iden-
+
+tified or not.16 In some places the transactions you engage in produce traces
+
+that link the transactions (the “mouse droppings”) back to you; in other
+
+places this link is achieved only if you want it to be.17 In some places you can
+
+choose to speak a language that only the recipient can hear (through encryp-
+
+tion);18 in other places encryption is not an option.19 The code or software or
+
+architecture or protocols set these features, which are selected by code writers.
+
+They constrain some behavior by making other behavior possible or impos-
+
+sible. The code embeds certain values or makes certain values impossible. In
+
+this sense, it too is regulation, just as the architectures of real-space codes are
+
+regulations.
+
+As in real space, then, these four modalities regulate cyberspace. The same
+
+balance exists. As William Mitchell puts it (though he omits the constraint of
+
+the market):                                          
+
+> Architecture,laws,andcustomsmaintainandrepresentwhateverbalancehas
+> beenstruckinrealspace.Asweconstructandinhabitcyberspacecommunities,
+> wewillhavetomakeandmaintainsimilarbargains—thoughtheywillbe
+> embodiedinsoftwarestructuresandelectronicaccesscontrolsratherthanin
+> architecturalarrangements.20
+
+Laws, norms, the market, and architectures interact to build the environ-
+
+ment that “Netizens” know. The code writer, as Ethan Katsh puts it, is the
+
+“architect.”21
+
+But how can we “make and maintain” this balance between modalities?
+
+What tools do we have to achieve a different construction? How might the
+
+mix of real-space values be carried over to the world of cyberspace? How
+
+might the mix be changed if change is desired?     
+
+> ONGOVERNMENTSANDWAYSTOREGULATE
+
+I’ve described four constraints that I’ve said “regulate” an individual. But
+
+these separate constraints obviously don’t simply exist as givens in a social
+
+life. They are neither found in nature nor fixed by God. Each can be
+
+changed, though the mechanics of changing them is complex. Law can
+
+have a significant role in this mechanics, and my aim in this section is to
+
+describe that role.
+
+A simple example will suggest the more general point. Say the theft of
+
+car radios is a problem—not big in the scale of things, but a frequent and
+
+costly enough problem to make more regulation necessary. One response

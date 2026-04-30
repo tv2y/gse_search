@@ -1,0 +1,1470 @@
+Title: How to pass a variable into a YAML template parameter and use it in a condition
+
+URL Source: https://stackoverflow.com/questions/79440470/how-to-pass-a-variable-into-a-yaml-template-parameter-and-use-it-in-a-condition
+
+Markdown Content:
+azure pipelines - How to pass a variable into a YAML template parameter and use it in a condition - Stack Overflow
+
+===============
+
+By clicking “Sign up”, you agree to our terms of service and acknowledge you have read our privacy policy.
+
+ Sign up with Google
+
+ Sign up with GitHub
+
+OR
+==
+
+Email 
+
+Password 
+
+Sign up
+
+Already have an account? Log in
+
+Skip to main content
+
+Stack Overflow
+1.   About
+2.   Products
+3.   For Teams
+
+1.   Stack Overflow for Teams Where developers & technologists share private knowledge with coworkers
+2.   Advertising Reach devs & technologists worldwide about your product, service or employer brand
+3.   Knowledge Solutions Data licensing offering for businesses to build and improve AI tools and models
+4.   Labs The future of collective knowledge sharing
+5.   About the company Visit the blog
+
+Loading…
+
+1.   
+### current community
+
+   
+
+    *   Stack Overflow help chat 
+    *    Meta Stack Overflow
+
+### your communities
+
+Sign up or log in to customize your list. 
+
+### more stack exchange communities
+
+company blog
+
+3.   Log in
+4.   Sign up
+
+Let's set up your homepage Select a few topics you're interested in:
+====================================================================
+
+python javascript c#reactjs java android html flutter c++node.js typescript css r php angular next.js spring-boot machine-learning sql excel ios azure docker
+
+Or search from our full list:
+
+*   javascript
+*   python
+*   java
+*   c#
+*   php
+*   android
+*   html
+*   jquery
+*   c++
+*   css
+*   ios
+*   sql
+*   mysql
+*   r
+*   reactjs
+*   node.js
+*   arrays
+*   c
+*   asp.net
+*   json
+*   python-3.x
+*   .net
+*   ruby-on-rails
+*   sql-server
+*   swift
+*   django
+*   angular
+*   objective-c
+*   excel
+*   pandas
+*   angularjs
+*   regex
+*   typescript
+*   ruby
+*   linux
+*   ajax
+*   iphone
+*   vba
+*   xml
+*   laravel
+*   spring
+*   asp.net-mvc
+*   database
+*   wordpress
+*   string
+*   flutter
+*   postgresql
+*   mongodb
+*   wpf
+*   windows
+*   xcode
+*   amazon-web-services
+*   bash
+*   git
+*   oracle-database
+*   spring-boot
+*   dataframe
+*   azure
+*   firebase
+*   list
+*   multithreading
+*   docker
+*   vb.net
+*   react-native
+*   eclipse
+*   algorithm
+*   powershell
+*   macos
+*   visual-studio
+*   numpy
+*   image
+*   forms
+*   scala
+*   function
+*   vue.js
+*   performance
+*   twitter-bootstrap
+*   selenium
+*   winforms
+*   kotlin
+*   loops
+*   express
+*   dart
+*   hibernate
+*   sqlite
+*   matlab
+*   python-2.7
+*   shell
+*   rest
+*   apache
+*   entity-framework
+*   android-studio
+*   csv
+*   maven
+*   linq
+*   qt
+*   dictionary
+*   unit-testing
+*   asp.net-core
+*   facebook
+*   apache-spark
+*   tensorflow
+*   file
+*   swing
+*   class
+*   unity-game-engine
+*   sorting
+*   date
+*   authentication
+*   go
+*   symfony
+*   t-sql
+*   opencv
+*   matplotlib
+*   .htaccess
+*   google-chrome
+*   for-loop
+*   datetime
+*   codeigniter
+*   perl
+*   http
+*   validation
+*   sockets
+*   google-maps
+*   object
+*   uitableview
+*   xaml
+*   oop
+*   visual-studio-code
+*   if-statement
+*   cordova
+*   ubuntu
+*   web-services
+*   email
+*   android-layout
+*   github
+*   spring-mvc
+*   elasticsearch
+*   kubernetes
+*   selenium-webdriver
+*   ms-access
+*   ggplot2
+*   user-interface
+*   parsing
+*   pointers
+*   c++11
+*   google-sheets
+*   security
+*   machine-learning
+*   google-apps-script
+*   ruby-on-rails-3
+*   templates
+*   flask
+*   nginx
+*   variables
+*   exception
+*   sql-server-2008
+*   gradle
+*   debugging
+*   tkinter
+*   delphi
+*   listview
+*   jpa
+*   asynchronous
+*   web-scraping
+*   haskell
+*   pdf
+*   jsp
+*   ssl
+*   amazon-s3
+*   google-cloud-platform
+*   jenkins
+*   testing
+*   xamarin
+*   wcf
+*   batch-file
+*   generics
+*   npm
+*   ionic-framework
+*   network-programming
+*   unix
+*   recursion
+*   google-app-engine
+*   mongoose
+*   visual-studio-2010
+*   .net-core
+*   android-fragments
+*   assembly
+*   animation
+*   math
+*   svg
+*   session
+*   rust
+*   intellij-idea
+*   hadoop
+*   curl
+*   join
+*   next.js
+*   winapi
+*   django-models
+*   laravel-5
+*   url
+*   heroku
+*   http-redirect
+*   tomcat
+*   google-cloud-firestore
+*   inheritance
+*   webpack
+*   image-processing
+*   gcc
+*   keras
+*   swiftui
+*   asp.net-mvc-4
+*   logging
+*   dom
+*   matrix
+*   pyspark
+*   actionscript-3
+*   button
+*   post
+*   optimization
+*   firebase-realtime-database
+*   web
+*   jquery-ui
+*   cocoa
+*   xpath
+*   iis
+*   d3.js
+*   javafx
+*   firefox
+*   xslt
+*   internet-explorer
+*   caching
+*   select
+*   asp.net-mvc-3
+*   opengl
+*   events
+*   asp.net-web-api
+*   plot
+*   dplyr
+*   encryption
+*   magento
+*   stored-procedures
+*   search
+*   amazon-ec2
+*   ruby-on-rails-4
+*   memory
+*   canvas
+*   audio
+*   multidimensional-array
+*   random
+*   jsf
+*   vector
+*   redux
+*   cookies
+*   input
+*   facebook-graph-api
+*   flash
+*   indexing
+*   xamarin.forms
+*   arraylist
+*   ipad
+*   cocoa-touch
+*   data-structures
+*   video
+*   azure-devops
+*   model-view-controller
+*   serialization
+*   apache-kafka
+*   jdbc
+*   woocommerce
+*   razor
+*   routes
+*   awk
+*   servlets
+*   mod-rewrite
+*   excel-formula
+*   beautifulsoup
+*   filter
+*   docker-compose
+*   iframe
+*   aws-lambda
+*   design-patterns
+*   text
+*   visual-c++
+*   django-rest-framework
+*   cakephp
+*   mobile
+*   android-intent
+*   struct
+*   react-hooks
+*   methods
+*   groovy
+*   mvvm
+*   ssh
+*   lambda
+*   checkbox
+*   time
+*   ecmascript-6
+*   grails
+*   google-chrome-extension
+*   installation
+*   cmake
+*   sharepoint
+*   shiny
+*   spring-security
+*   jakarta-ee
+*   plsql
+*   android-recyclerview
+*   core-data
+*   types
+*   sed
+*   meteor
+*   android-activity
+*   activerecord
+*   bootstrap-4
+*   websocket
+*   graph
+*   replace
+*   group-by
+*   scikit-learn
+*   vim
+*   file-upload
+*   junit
+*   boost
+*   memory-management
+*   sass
+*   async-await
+*   import
+*   deep-learning
+*   error-handling
+*   eloquent
+*   dynamic
+*   soap
+*   dependency-injection
+*   silverlight
+*   layout
+*   apache-spark-sql
+*   charts
+*   deployment
+*   browser
+*   gridview
+*   svn
+*   while-loop
+*   google-bigquery
+*   vuejs2
+*   highcharts
+*   dll
+*   ffmpeg
+*   view
+*   foreach
+*   makefile
+*   plugins
+*   redis
+*   c#-4.0
+*   reporting-services
+*   jupyter-notebook
+*   unicode
+*   merge
+*   reflection
+*   https
+*   server
+*   google-maps-api-3
+*   twitter
+*   oauth-2.0
+*   extjs
+*   terminal
+*   axios
+*   pip
+*   split
+*   cmd
+*   pytorch
+*   encoding
+*   django-views
+*   collections
+*   database-design
+*   hash
+*   netbeans
+*   automation
+*   data-binding
+*   ember.js
+*   build
+*   tcp
+*   pdo
+*   sqlalchemy
+*   apache-flex
+*   mysqli
+*   entity-framework-core
+*   concurrency
+*   command-line
+*   spring-data-jpa
+*   printing
+*   react-redux
+*   java-8
+*   lua
+*   html-table
+*   ansible
+*   neo4j
+*   jestjs
+*   service
+*   parameters
+*   enums
+*   material-ui
+*   flexbox
+*   module
+*   promise
+*   visual-studio-2012
+*   outlook
+*   firebase-authentication
+*   web-applications
+*   webview
+*   uwp
+*   jquery-mobile
+*   utf-8
+*   datatable
+*   python-requests
+*   parallel-processing
+*   colors
+*   drop-down-menu
+*   scipy
+*   scroll
+*   tfs
+*   hive
+*   count
+*   syntax
+*   ms-word
+*   twitter-bootstrap-3
+*   ssis
+*   fonts
+*   rxjs
+*   constructor
+*   google-analytics
+*   file-io
+*   three.js
+*   paypal
+*   powerbi
+*   graphql
+*   cassandra
+*   discord
+*   graphics
+*   compiler-errors
+*   gwt
+*   socket.io
+*   react-router
+*   solr
+*   backbone.js
+*   url-rewriting
+*   memory-leaks
+*   datatables
+*   nlp
+*   oauth
+*   terraform
+*   datagridview
+*   drupal
+*   zend-framework
+*   oracle11g
+*   knockout.js
+*   triggers
+*   neural-network
+*   interface
+*   django-forms
+*   angular-material
+*   casting
+*   jmeter
+*   google-api
+*   linked-list
+*   path
+*   timer
+*   arduino
+*   django-templates
+*   proxy
+*   orm
+*   directory
+*   windows-phone-7
+*   parse-platform
+*   visual-studio-2015
+*   cron
+*   conditional-statements
+*   push-notification
+*   functional-programming
+*   primefaces
+*   pagination
+*   model
+*   jar
+*   xamarin.android
+*   hyperlink
+*   uiview
+*   vbscript
+*   visual-studio-2013
+*   google-cloud-functions
+*   gitlab
+*   azure-active-directory
+*   jwt
+*   download
+*   swift3
+*   sql-server-2005
+*   process
+*   configuration
+*   rspec
+*   pygame
+*   properties
+*   combobox
+*   callback
+*   windows-phone-8
+*   linux-kernel
+*   safari
+*   scrapy
+*   permissions
+*   emacs
+*   clojure
+*   scripting
+*   x86
+*   raspberry-pi
+*   scope
+*   io
+*   azure-functions
+*   expo
+*   compilation
+*   responsive-design
+*   mongodb-query
+*   nhibernate
+*   angularjs-directive
+*   request
+*   bluetooth
+*   reference
+*   binding
+*   dns
+*   architecture
+*   3d
+*   playframework
+*   pyqt
+*   version-control
+*   discord.js
+*   doctrine-orm
+*   package
+*   f#
+*   rubygems
+*   get
+*   sql-server-2012
+*   autocomplete
+*   tree
+*   openssl
+*   datepicker
+*   kendo-ui
+*   jackson
+*   controller
+*   yii
+*   grep
+*   nested
+*   xamarin.ios
+*   static
+*   null
+*   statistics
+*   transactions
+*   datagrid
+*   active-directory
+*   dockerfile
+*   uiviewcontroller
+*   webforms
+*   discord.py
+*   sas
+*   phpmyadmin
+*   computer-vision
+*   notifications
+*   duplicates
+*   mocking
+*   pycharm
+*   youtube
+*   yaml
+*   nullpointerexception
+*   menu
+*   blazor
+*   sum
+*   plotly
+*   bitmap
+*   asp.net-mvc-5
+*   visual-studio-2008
+*   yii2
+*   floating-point
+*   electron
+*   css-selectors
+*   stl
+*   jsf-2
+*   android-listview
+*   time-series
+*   cryptography
+*   ant
+*   hashmap
+*   character-encoding
+*   stream
+*   msbuild
+*   asp.net-core-mvc
+*   sdk
+*   google-drive-api
+*   jboss
+*   selenium-chromedriver
+*   joomla
+*   devise
+*   cors
+*   navigation
+*   anaconda
+*   cuda
+*   background
+*   frontend
+*   multiprocessing
+*   binary
+*   pyqt5
+*   camera
+*   iterator
+*   linq-to-sql
+*   mariadb
+*   onclick
+*   android-jetpack-compose
+*   ios7
+*   microsoft-graph-api
+*   rabbitmq
+*   android-asynctask
+*   tabs
+*   laravel-4
+*   amazon-dynamodb
+*   environment-variables
+*   insert
+*   uicollectionview
+*   linker
+*   xsd
+*   coldfusion
+*   console
+*   continuous-integration
+*   upload
+*   textview
+*   ftp
+*   opengl-es
+*   macros
+*   operating-system
+*   mockito
+*   localization
+*   formatting
+*   xml-parsing
+*   vuejs3
+*   json.net
+*   type-conversion
+*   data.table
+*   kivy
+*   timestamp
+*   integer
+*   calendar
+*   segmentation-fault
+*   android-ndk
+*   prolog
+*   drag-and-drop
+*   char
+*   crash
+*   jasmine
+*   automated-tests
+*   dependencies
+*   geometry
+*   azure-pipelines
+*   android-gradle-plugin
+*   fortran
+*   itext
+*   sprite-kit
+*   mfc
+*   header
+*   attributes
+*   firebase-cloud-messaging
+*   nosql
+*   format
+*   nuxt.js
+*   odoo
+*   db2
+*   jquery-plugins
+*   event-handling
+*   jenkins-pipeline
+*   julia
+*   leaflet
+*   nestjs
+*   annotations
+*   flutter-layout
+*   keyboard
+*   postman
+*   textbox
+*   arm
+*   visual-studio-2017
+*   gulp
+*   stripe-payments
+*   libgdx
+*   synchronization
+*   timezone
+*   uikit
+*   azure-web-app-service
+*   dom-events
+*   xampp
+*   wso2
+*   crystal-reports
+*   swagger
+*   namespaces
+*   android-emulator
+*   aggregation-framework
+*   uiscrollview
+*   google-sheets-formula
+*   jvm
+*   sequelize.js
+*   chart.js
+*   com
+*   snowflake-cloud-data-platform
+*   subprocess
+*   geolocation
+*   webdriver
+*   html5-canvas
+*   garbage-collection
+*   centos
+*   dialog
+*   sql-update
+*   widget
+*   numbers
+*   concatenation
+*   qml
+*   tuples
+*   set
+*   java-stream
+*   mapreduce
+*   ionic2
+*   smtp
+*   windows-10
+*   rotation
+*   android-edittext
+*   modal-dialog
+*   spring-data
+*   nuget
+*   radio-button
+*   http-headers
+*   doctrine
+*   grid
+*   sonarqube
+*   lucene
+*   xmlhttprequest
+*   listbox
+*   switch-statement
+*   initialization
+*   internationalization
+*   components
+*   boolean
+*   apache-camel
+*   google-play
+*   serial-port
+*   gdb
+*   ios5
+*   ldap
+*   return
+*   youtube-api
+*   pivot
+*   eclipse-plugin
+*   latex
+*   frameworks
+*   tags
+*   containers
+*   github-actions
+*   c++17
+*   subquery
+*   dataset
+*   asp-classic
+*   foreign-keys
+*   embedded
+*   label
+*   uinavigationcontroller
+*   copy
+*   delegates
+*   struts2
+*   google-cloud-storage
+*   migration
+*   protractor
+*   base64
+*   queue
+*   find
+*   uibutton
+*   sql-server-2008-r2
+*   arguments
+*   composer-php
+*   append
+*   jaxb
+*   stack
+*   tailwind-css
+*   zip
+*   cucumber
+*   autolayout
+*   ide
+*   entity-framework-6
+*   iteration
+*   popup
+*   r-markdown
+*   windows-7
+*   airflow
+*   vb6
+*   g++
+*   ssl-certificate
+*   hover
+*   clang
+*   jqgrid
+*   range
+*   gmail
+
+Next You’ll be prompted to create an account to view your personalized homepage.
+
+1.       1.   Home
+    2.   Questions
+    3.   AI Assist Labs
+    4.   Tags
+
+    6.   Challenges
+    7.   Chat
+    8.   Articles
+    9.   Users
+
+    11.   Jobs
+    12.   Companies
+    13.   Collectives 
+    14.   Communities for your favorite technologies. Explore all Collectives
+
+2.   Teams Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+
+Try Teams for free Explore Teams 
+3.   Teams
+4.   Ask questions, find answers and collaborate at work with Stack Overflow for Teams. Explore Teams
+
+##### Collectives™ on Stack Overflow
+
+Find centralized, trusted content and collaborate around the technologies you use most.
+
+Learn more about Collectives
+
+**Teams**
+
+Q&A for work
+
+Connect and share knowledge within a single location that is structured and easy to search.
+
+Learn more about Teams
+
+Hang on, you can't upvote just yet.
+===================================
+
+You'll need to complete a few actions and gain 15 reputation points before being able to upvote. **Upvoting** indicates when questions and answers are useful. What's reputation and how do I get it?
+
+Instead, you can save this post to reference later.
+
+ Save this post for later Not now
+
+Thanks for your vote! 
+
+ You now have 5 free votes weekly.
+==========================================================
+
+Free votes
+*   count toward the total vote score
+*   does not give reputation to the author
+
+Continue to help good content that is interesting, well-researched, and useful, rise to the top! To gain full voting privileges, earn reputation.
+
+Got it!Go to help center to learn more
+
+How to pass a variable into a YAML template parameter and use it in a condition
+===============================================================================
+
+Ask Question
+
+Asked 8 months ago
+
+Modified 8 months ago
+
+Viewed 1k times 
+
+ Part of CI/CD Collective 
+
+This question shows research effort; it is useful and clear
+
+ 1 
+
+Save this question.
+
+Show activity on this post.
+
+Let's say I have the following YAML template in Azure DevOps pipeline:
+
+```yaml
+parameters:
+- name: filePath
+  type: string
+
+steps:
+- script: |
+    @echo "${{ parameters.filePath }}"
+```
+
+And the calling side:
+
+```yaml
+variables:
+- name: filePath
+  value: 'my1.xml'
+  readonly: true
+
+steps:
+- template: template.yml
+  parameters:
+    filePath: '$(filePath)'
+```
+
+Now I want to add a condition to the script step based on `filePath` parameter:
+
+```yaml
+condition: and(succeeded(), ${{ eq(parameters.filePath, 'my.xml') }})
+```
+
+which does not work. What am I missing?
+
+CI/CD Collective
+
+*   azure-pipelines
+*   azure-pipelines-yaml
+
+Share
+
+Share a link to this question 
+
+Copy link CC BY-SA 4.0
+
+Improve this question
+
+ Follow 
+
+Follow this question to receive notifications
+
+edited Feb 16 at 23:57
+
+bryanbcook
+
+19.5k 3 3 gold badges 48 48 silver badges 80 80 bronze badges
+
+ asked Feb 14 at 20:02
+
+Alex I Alex I
+
+2,460 4 4 gold badges 22 22 silver badges 28 28 bronze badges
+
+Add a comment|
+
+2 Answers 2
+-----------
+
+ Sorted by:  Reset to default
+
+This answer is useful
+
+ 2 
+
+Save this answer.
+
+Show activity on this post.
+
+Revising my answer based on the updated question. You are passing a variable to a template, which is fine. Here’s how you can use it, but lots to unpack to understand why.
+
+A _condition_ is a runtime expression. The following statements are equivalent:
+
+```yaml
+condition: succeeded()
+# equivalent to:
+condition: $[ succeeded() ]
+```
+
+Variables are also only evaluated at runtime. When referencing variables, you can use “Macro syntax” `$(<variable_name>)`. As the name “macro” implies, it’s actually a shorthand syntax for a runtime expression. The following statements are equivalent:
+
+```yaml
+value: $(<variable-name>)
+# equivalent to:
+value: $[ variables[“variable_name”] ]
+# or 
+value: $[ variables.variable_name ]
+```
+
+As a macro is a shorthand for a runtime expression, they can’t be embedded inside another runtime expression.
+
+If you are passing a variable into a template parameter with the intention of using it as part of another runtime expression, the easiest method is to copy the parameter to a variable. This allows you to pass a literal, variable or another runtime expression into the template.
+
+Assuming a stage or job template:
+
+```yaml
+parameters:
+ - name: filePath 
+   type: string
+
+jobs:
+ - job: jobName
+   variables:
+     # dereference the parameter into a variable
+     filePathValue: ${{ parameters.filePath }}
+   steps:
+ - script: …
+   condition: |
+     and(
+       succeeded(),
+       eq(variables[“filePathValue”], “file.yml”)
+     )
+```
+
+Note: I’m explicitly suggesting this technique for `stage` or `job` templates because they support declaring variables as part of their scope. Step templates don’t have a scope that would allow you to define a variable and use it in your condition.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Feb 17 at 0:03
+
+ answered Feb 14 at 20:56
+
+bryanbcook bryanbcook
+
+19.5k 3 3 gold badges 48 48 silver badges 80 80 bronze badges
+
+ Sign up to request clarification or add additional context in comments. 
+
+10 Comments
+-----------
+
+Add a comment
+
+Alex I
+
+Alex I Feb 15 at 20:07
+
+Tried that, this is the result: `Evaluating condition for step: 'Test step' Evaluating: and(succeeded(), eq('$(filePath)', 'my.xml'))`
+
+2025-02-15T20:07:18.4Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+bryanbcook
+
+bryanbcook Feb 15 at 20:56
+
+If that’s how it’s evaluating, that’s not what you have written in the question. Can you edit your question to reflect the differences, please?
+
+2025-02-15T20:56:40.91Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+Alex I
+
+Alex I Feb 16 at 0:50
+
+This is how your suggestion `condition: and(succeeded(), eq( '${{ parameters.filePath }}', 'my.xml'))` got evaluated.
+
+2025-02-16T00:50:54.563Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+bryanbcook
+
+bryanbcook Feb 16 at 7:09
+
+Are you passing `$(filepath)` as the parameter? It feels like your question is omitting details that would help us direct you. Please update your question with a minimal reproducible example
+
+2025-02-16T07:09:58.107Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+bryanbcook
+
+bryanbcook Feb 17 at 6:03
+
+You can use `${{ variables.variable_name }}` at compile-time if the variable is declared inline at the root of the pipeline. Variables that are defined in this manner are known at compile-time. Variables that are in a variable template, variable group or defined dynamically at runtime cannot be used in compile-time expressions.
+
+2025-02-17T06:03:59.547Z+00:00
+
+1
+
+Reply
+
+*   Copy link
+
+Add a comment|Show 5 more comments
+
+This answer is useful
+
+ 0 
+
+Save this answer.
+
+Show activity on this post.
+
+In your Main yml, `$(filePath)` is marco syntax which is executed in _runtime_, while template is expanded at compile time before runtime, you should use template expression `${{ variables.filePath }}` so that the value can be passed to template.
+
+Fix as below in main yml:
+
+```yaml
+trigger: none
+
+pool:
+  vmImage: Windows-latest
+
+variables:
+- name: filePath
+  value: 'my1.xml'
+  readonly: true
+
+steps:
+- template: template.yml
+  parameters:
+    filePath: '${{ variables.filePath }}'      #<--- use template expressison
+```
+
+The template:
+
+```yaml
+parameters:
+- name: filePath
+  type: string
+
+steps:
+- script: |
+    @echo "${{ parameters.filePath }}"
+  condition: and(succeeded(), ${{ eq(parameters.filePath, 'my1.xml') }})   #<-- use my1.xml for checking
+```
+
+You can check the doc Understand variable syntax for more details.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Feb 17 at 3:03
+
+wade zhou - MSFT wade zhou - MSFT
+
+8,791 1 1 gold badge 5 5 silver badges 14 14 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+Your Answer
+-----------
+
+Thanks for contributing an answer to Stack Overflow!
+
+*   Please be sure to _answer the question_. Provide details and share your research!
+
+But _avoid_ …
+
+*   Asking for help, clarification, or responding to other answers.
+*   Making statements based on opinion; back them up with references or personal experience.
+
+To learn more, see our tips on writing great answers.
+
+Draft saved
+
+Draft discarded
+
+### Sign up or log in
+
+ Sign up using Google 
+
+ Sign up using Email and Password 
+
+Submit
+
+### Post as a guest
+
+Name 
+
+Email 
+Required, but never shown
+
+ Post Your Answer  Discard 
+By clicking “Post Your Answer”, you agree to our terms of service and acknowledge you have read our privacy policy.
+
+Start asking to get answers
+
+Find the answer to your question by asking.
+
+Ask question
+
+Explore related questions
+
+*   azure-pipelines
+*   azure-pipelines-yaml
+
+See similar questions with these tags.
+
+CI/CD Collective See more
+
+This question is in a collective: a subcommunity defined by tags with relevant content and experts. 
+
+*    The Overflow Blog 
+*    AI agents for your digital chores 
+*    Secure coding in JavaScript 
+*    Featured on Meta 
+*     A First Look: Stack Overflow Redesign 
+*     Community Asks Sprint Announcement - October/November 2025 
+*     Policy: Generative AI (e.g., ChatGPT) is banned 
+*     Exploring new types of questions on Stack Overflow 
+
+Report this ad
+
+Report this ad
+
+8 people chatting
+
+Community activity
+
+Last 1 hr
+
+*   Users online activity  8763 users online 
+*    11 questions 
+*    12 answers 
+*    63 comments 
+*    192 upvotes 
+
+Popular tags
+
+php javascript clion c++cmake python
+
+Popular unanswered question
+
+In NiFi how do I remove something put into the distributedmapcache?
+
+apache-nifi
+
+edjm
+*   5.7k
+
+918 days ago
+
+#### Related
+
+33 boolean variable as template parameter input
+
+11 How to use variables as conditionals in steps of Azure Pipelines?
+
+0 How to nest yaml variable expressions?
+
+0 How to conditionally define azure template parameter?
+
+0 Azure Devops: Is it possible to use a variable template with variable group inside a job template?
+
+12 How to use a variable group in a Azure Pipelines yml template?
+
+2 Setting YAML template variable at runtime is not usable in condition or expression
+
+5 Azure pipeline: how to use an output variable in a condition
+
+2 How to have conditional parameters which depends on another parameter in YAML?
+
+#### Hot Network Questions
+
+*    Covering a rectangular floor with prime tiles
+*    Do coast FIRE calculations apply only to the individual?
+*    How can a high-school student learn to critically read astrophysics research papers without formal university guidance?
+*    Is Tauriel in any of Tolkien's actual writings?
+*    What about the Triwizard Tournament grants eternal glory?
+*    Did PM Curtin actually say "...from one hour ago, Australia has been at war with the Japanese Empire"?
+*    Should I wait for the background check to clear before leaving current employer when I know my background is clean
+*    What was the first game to voluntarily provide an in-game content warning?
+*    Use of Thomas-Fermi approximation for 2D fermionic gas with series of potential barriers
+*    Why doesn’t a rolling wheel keep accelerating if friction torque is in the same direction as rotation?
+*    Why did my fudge turn out taffy-like?
+*    What does it mean that Jesus would come like a 'thief'?
+*    What was the first time a victim was shown with a laser dot on their body in a TV show or movie?
+*    TikZ ellipse with arrows
+*    Http 2 Protocol error connecting to localhost web sites
+*    I may have made an error in the stability of my extremely close orbit
+*    Can I generate a high pass filtered noise signal by means of combining white noise signals with time-varying gain?
+*    Must an inscribed parallelogram's center match the shape's symmetry center？
+*    df with a given filename return a filesystem name which is not in the list of all filesystems given by df without any parameter
+*    (Why) is AI generated code/work allowed to be released under free/open/libre licenses?
+*    What is the purpose of a large disk cache if the page cache is always larger?
+*    What is the radius of the big circle?
+*    CEO told staff to just leave if we have concerns and trust issues with leadership - what now?
+*    Lagrangian of a classical field, unique and not
+
+Question feed
+
+Subscribe to RSS
+================
+
+ Question feed 
+To subscribe to this RSS feed, copy and paste this URL into your RSS reader.
+
+ 
+
+lang-yaml
+
+Why are you flagging this comment?
+==================================
+
+Probable spam. 
+This comment promotes a product, service or website while failing to disclose the author's affiliation.
+
+ 
+
+Unfriendly or contains harassment/bigotry/abuse. 
+This comment is unkind, insulting or attacks another person or group. Learn more in our Abusive behavior policy.
+
+ 
+
+Not needed. 
+This comment is not relevant to the post.
+
+ 
+
+Enter at least 6 characters
+
+Something else. 
+A problem not listed above. Try to be as specific as possible.
+
+ 
+
+Enter at least 6 characters
+
+Flag comment Cancel
+
+You have 0 flags left today
+
+##### Stack Overflow
+
+*   Questions
+*   Help
+*   Chat
+
+##### Products
+
+*   Teams
+*   Advertising
+*   Talent
+
+##### Company
+
+*   About
+*   Press
+*   Work Here
+*   Legal
+*   Privacy Policy
+*   Terms of Service
+*   Contact Us
+*    Your Privacy Choices 
+*   Cookie Policy
+
+##### Stack Exchange Network
+
+*   Technology
+*   Culture & recreation
+*   Life & arts
+*   Science
+*   Professional
+*   Business
+*   API
+*   Data
+
+*   Blog
+*   Facebook
+*   Twitter
+*   LinkedIn
+*   Instagram
+
+Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under CC BY-SA. rev 2025.10.16.35436
+
+By continuing to use this website, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our Cookie Policy. By exiting this window, default cookies will be accepted. To reject cookies, select an option from below.
+
+Necessary cookies only
+
+Customize settings

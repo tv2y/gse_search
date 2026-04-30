@@ -1,0 +1,794 @@
+Title: Applications, challenges, and solutions of unmanned aerial vehicles in smart city using blockchain
+
+URL Source: https://pdfs.semanticscholar.org/da78/a97639c04b00fd86e340f7bc76538c417f2a.pdf
+
+Published Time: Tue, 05 Mar 2024 05:04:35 GMT
+
+Markdown Content:
+# Applications, challenges, and solutions of unmanned aerial vehicles in smart city using blockchain 
+
+Syed Faisal Abbas Shah 1,*, Tehseen Mazhar 1,*, Tamara Al Shloul 2,Tariq Shahzad 3, Yu-Chen Hu 4, Fatma Mallek 5 and Habib Hamam 5,6,7,8 1 Department of Computer Science & Information Technology, Virtual University of Pakistan, Lahore, Pakistan  
+
+> 2
+
+Department of General Education, Liwa College of Technology, Abu Dhabi, United Arab Emirates  
+
+> 3
+
+School of Electrical Engineering, Department of Electrical and Electronic Engineering Science, University of Johannesburg, Johannesburg, South Africa  
+
+> 4
+
+Department of Computer Science & Information Management, Providence University, Taichung City, Taiwan  
+
+> 5
+
+Faculty of Engineering, University of Moncton, Moncton, Canada  
+
+> 6
+
+College of Computer Science and Engineering, University of Ha ’il, Ha ’il, Saudi Arabia  
+
+> 7
+
+International Institute of Technology and Management, Libreville, Commune d ’Akanda, Gabon  
+
+> 8
+
+Spectrum of Knowledge Production & Skills Development, Sfax, Tunisia 
+
+* These authors contributed equally to this work. 
+
+# ABSTRACT 
+
+Real-time data gathering, analysis, and reaction are made possible by this information and communication technology system. Data storage is also made possible by it. This is a good move since it enhances the administration and operation services essential to any city ’s ef fi cient operation. The idea behind “smart cities ” is that information and communication technology (ICTs) need to be included in a city ’s routine activities in order to gather, analyze, and store enormous amounts of data in real-time. This is helpful since it makes managing and governing urban areas easier. The “drone ” or “uncrewed aerial vehicle ” (UAV), which can carry out activities that ordinarily call for a human driver, serves as an example of this. UAVs could be used to integrate geospatial data, manage traf fi c, keep an eye on objects, and help in an emergency as part of a smart urban fabric. This study looks at the bene fi ts and drawbacks of deploying UAVs in the conception, development, and management of smart cities. This article describes the importance and advantages of deploying UAVs in designing, developing, and maintaining in smart cities. This article overviews UAV uses types, applications, and challenges. Furthermore, we presented blockchain approaches for addressing the given problems for UAVs in smart research topics and recommendations for improving the security and privacy of UAVs in smart cities. Furthermore, we presented Blockchain approaches for addressing the given problems for UAVs in smart cities. Researcher and graduate students are audience of our article. 
+
+Subjects Robotics, Blockchain 
+
+Keywords UAVs, Applications, Types, Smart cities, Security challenges, Blockchain, ICT, Management, Robotics, AI   
+
+> How to cite this article Faisal Abbas Shah S, Mazhar T, Shloul TA, Shahzad T, Hu Y-C, Mallek F, Hamam H. 2023. Applications, challenges, and solutions of unmanned aerial vehicles in smart city using blockchain. PeerJ Comput. Sci. 10:e1776 DOI 10.7717/peerj-cs.1776
+
+Submitted 29 June 2023 
+
+Accepted 5 December 2023 
+
+Published 8 February 2024 
+
+Corresponding authors 
+
+Syed Faisal Abbas Shah, syedfaisalshah196@gmail.com Tehseen Mazhar, tehseenmazhar719@gmail.com 
+
+Academic editor 
+
+Natalia Kryvinska 
+
+Additional Information and Declarations can be found on page 27 DOI 10.7717/peerj-cs.1776 
+
+Copyright 
+
+2024 Faisal Abbas Shah et al. 
+
+Distributed under Creative Commons CC-BY 4.0 INTRODUCTION 
+
+Information technology (IT), robotics, and arti fi cial intelligence are just a few innovative services and technologies smart cities use to promote creativity. Uncrewed aerial vehicles (UAVs) are one of the main fi elds of research and development. UAVs are now more practical, dependable, secure, and able to operate for extended periods due to advancements made in this area for military and civilian purposes. Technology advancement is one of the most exciting and productive evolution. UAVs can be utilized inside and outside smart cities for various purposes, including agriculture, traf fi cmanagement, monitoring, mapping, emergency services, weather monitoring, resource discovery, and environmental analysis. UAVs have recently emerged as one of the most important and quickly growing topics of interest for commercial, military, and personal purposes ( Jain et al., 2021 ). These technologies will contribute to developing intelligent and automated services, increasing infrastructure functionality, and the comfort resident ’s experience. The delivery of cost-effective infrastructures and services is the primary objective of a smart city design, which aims to achieve this goal ( Hameed, 2019 ). The increase in UAV/drone usage is attributed to various factors, including increased demand for live streaming, real-time video fi lming, picture capture capabilities, mobility, and ease of use. UAVs are one of the many technologies that have the potential to make signi fi cant contributions in this area, and they are one of the technologies that could become an integral part of smart cities. UAVs are valuable for security, monitoring, and rescue operations ( Mohamed et al., 2020 ). UAVs are mobile platforms that are both fl exible and quick and that can be employed in the development of smart cities. Due to their easy deployment, easy operation, unique hovering capability, and excellent mobility, UAVs have also been used for small goods distribution and delivery ( Yaacoub et al., 2020 ). UAVs are more adaptable and can operate in various places and situations humans fi nd dif fi cult. They can also fl y closest to targets, allowing for more precise measurements and targeted operations ( Alfeo, Cimino & Vaglini, 2019 ). Figure 1 shows the architecture of the UAV system. These characteristics are bene fi cial when UAVs are employed for smart city applications. There are many challenges to UAVs in smart cities. The regulations for using UAVs in urban areas are still evolving, and there are many challenges in terms of policy, privacy, and safety ( Alfeo, Cimino & Vaglini, 2019 ). UAVs face many technical challenges, such as limited fl ight time, payload capacity, and communication limitations in urban environments. UAVs must be integrated with other systems, such as traf fi c management, security, and emergency response systems. There will be certain challenges in implementing UAVs in smart cities. Large volumes of private information are generated in UAVs. Protecting individuals ’ privacy while ensuring that this data can be received, stored, and processed securely is a major dif fi culty. This article examines the various challenges associated with UAV deployment in urban areas and the ways in which blockchain technology could assist to overcome them. Blockchain is a decentralized digital ledger that secures and records transactions across a network of computers using encryption technology. Data from UAVs and other Internet of Things (IoT) devices can be safely   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 2/35
+
+exchanged and checked over a blockchain-based network, strengthening the security fabric of smart cities ( Alvares, Silva & Magaia, 2021 ). When combined with drones, Blockchain technology has the potential to provide new solutions in a variety of industries, including supply chain management, delivery services, and safe data transmission. An overview of a smart city with drones is captured in Fig. 2. This research contributes to fi nding the challenges associated with current and future UAV applications in smart cities. In this article, we have conducted the research to ensure that it is appropriate to the objectives of our article. At the next level, the related work is described. In addition, the UAV types and their applications are discussed in a smart city. The next topic is about the challenges which are serious challenges of UAVs in the smart city environment. The articles that did not concentrate on UAVs, applications, and blockchain were excluded. UAVs are mobile platforms used in today ’s smart cities for various tasks. These technologies could be used to keep updated on issues like population density, traf fi c fl ow, the environment, and public safety, among other things. UAVs can be successfully used in cities by developing applications suited to the needs and capabilities of smart cities. Uncrewed aerial vehicles (UAVs) can be used in smart cities to check and manage infrastructure because they are built with monitoring sensors, cameras, and modern software. There are various advantages to UAVs in smart city applications. UAVs are more adaptable and less expensive to operate. Therefore, they can carry out tasks in more places and under more demanding conditions than people. They may also go    
+
+> Figure 1 Architecture of UAV system. Full-size  DOI: 10.7717/peerj-cs.1776/ fi g-1
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 3/35
+
+signi fi cantly closer to their targets, allowing for more accurate measurement and weapon deployment. The rest of the article is structured as follows. A brief literature review analysis to help readers better comprehend the historical context of UAVs and blockchain technology is discussed in “Related Work ”. In “Methodology ”, the methodology and research questions are written with detail. In “What are the Applications and Types of UAVs? ”, the different types and applications of UAVs are described. In “What are the Challenges in UAVs in Smart Cities? ”, vulnerabilities and challenges to UAVs in smart cities are discussed. The solution and to challenges with the integration of blockchain with UAV are described in 
+
+“What are the Solutions to Key Challenges with the of Integration Blockchain with UAVs? ”. “Conclusion and Future Direction ” deals with the conclusion and future directions. 
+
+# RELATED WORK 
+
+UAVs were initially developed for defense purposes. However, research has revealed tremendous potential in various domestic applications. Problems with insuf fi cient energy and computing resources are a common challenge for drones. Researchers have provided new insights that can help improve existing solutions to these problems ( Naqvi et al., 2018 ). In Fotouhi et al. (2019) , the authors presented fi ndings from a study on how UAVs helped improve the cyber-physical protection of cellular communications. In Yan et al. (2019) , the authors investigated, examined, and simulated air-to-ground channel measures for UAV communication. They studied the link quality for UAV communications and offered a design guideline for link budget control. Applications designed for smart cities can bene fi t from the varied computing, storage, and advanced service capabilities provided by cloud computing. According to Mohamed, Lazarova-Molnar & Al-Jaroodi (2017) , Data analysis, deep learning, simulations, optimization, and autonomous decisions are some examples of advanced services. In Gupta, Jain & Vaszkun (2015) discussed research on UAV communications in routing, smooth turnover, and power ef fi ciency. An overview of the literature concerning computer ethics and safety was presented by 
+
+Bagloee et al. (2016) , which covered topics such as the connectivity of vehicles and the infrastructure necessary for the future expansion of autonomous vehicles (AVs).    
+
+> Figure 2 Drones in smart cities. Full-size  DOI: 10.7717/peerj-cs.1776/ fi g-2
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 4/35
+
+According to the study, there is a substantial knowledge gap in UAV technology regarding the activities that occur across routes. To ensure the reliability of UAV communication systems, several researchers have included arti fi cial intelligence, navigational techniques, cryptography, and low-latency communication systems among nodes of the UAV network (Zhao et al., 2018 ). The author Rejeb et al. (2021) investigated the capabilities of drones to learn about their achievements and dif fi culties in the fi eld of logistics for humanitarian applications. They comprehensively assessed humanitarian drones ’ capabilities, problems, and results in logistical operations, administration, and governance. Raciti, Rizzo & Susinni (2018) presented a strategy devised for landing UAVs and charging their batteries on the top of a building. The authors of this study have also addressed misalignment losses and potential strategies to overcome them. In Noor, Abdullah & Hashim (2018) , the authors discuss the growth of UAV/drone remote sensing applications in urban environments and how these applications might resolve issues correspondingly. The author also discovered that developing UAV and drone-based remote sensing effectively resolves contemporary urban issues while ensuring urban areas ’ resilience and long-term viability. Figure 3 ( Tahir et al., 2019 ) shows the classi fi cation of swarms. The article ’s authors Galkin, Kibilda & DaSilva (2017) model the probability that a user will have a line-of-sight (LOS) channel to a UAV as a sigmoid function of the vertical position between the UAV and the consumer. They then used this model to explain the coverage radius of the UAV as a feature of path loss. They proved how the UAV height could be optimized by maximizing the insurance radius in interference-free surroundings. Moving object recognition and tracking from aerial photos has become one of the most prominent trends in UAV video analysis. Different algorithms have been developed, some of which need GIS data and geo-registration procedures, while others do not. The author used a unipolar restriction and a fl ow vector bound to identify moving objects. In the research of the study ( Aloqaily et al., 2021 ), it is stated that in order to accommodate shifting customer requirements, the article imagines a 5G network scenario in which UAVs powered by blockchain technology provide backup. The technology provides a safe    
+
+> Figure 3 Classi fi cation of swarms. Full-size  DOI: 10.7717/peerj-cs.1776/ fi g-3
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 5/35
+
+Table 1 Existing work and key contributions. Reference Methodology Key contribution Advantage Disadvantage Future work 
+
+Kitchenham (2004) 
+
+Survey and case study Investigated the potential of unmanned aerial vehicles in smart cities using blockchain. Improved urban planning and emergency response and readiness. Limited UAV battery life and coverage range Develop energy-ef fi cient UAVs 
+
+Keele (2007) Experimental study Used unmanned aerial vehicles (UAVs) to monitor traf fi c using a blockchain-based system. Data on traf fi c in real time that is accurate and secure. High initial setup cost for blockchain Explore lightweight blockchain protocols 
+
+Euchi (2021) Simulation and comparative analysis Blockchain consensus techniques for UAV networks were compared and contrasted. Greater capacity for business transactions within UAV networks. Scalability issues with large UAV deployments Investigate hybrid consensus for UAVs 
+
+Lagkas et al. (2018) 
+
+Analytical modeling Blockchain was used to develop a model that might improve UAV fl ight paths. Utilization of available resources in UAV operations in an effective manner. Limited network bandwidth for UAV communication Enhance communication protocols for UAVs 
+
+Pathak et al. (2020) 
+
+Field experiment and survey Experiments were carried out in the real-world using UAVs equipped with blockchain technology. Integrity improvements implemented in the data collected in urban surveys. Regulatory challenges in drone deployment Address legal and privacy concerns in UAVs 
+
+Sharma et al. (2020) 
+
+System prototype development Constructed a working model of a system that integrates UAVs and blockchain. Integrating UAVs smoothly into smart city initiatives. Integration challenges with existing systems Develop standardized APIs for UAV integration 
+
+Yigitcanlar et al. (2020) 
+
+Comparative study and user feedback Analyzed the degree to which users were satis fi ed with blockchain-enabled UAV services. Satisfaction and participation among the populace increase. Limited standardization in UAV and blockchain technology Establish industry standards for UAV services 
+
+Gupta et al. (2021) 
+
+Case study and stakeholder interviews Investigated how stakeholders think regarding unmanned aerial vehicles using blockchain technology. To learn more about how people feel about UAVs. Limited public acceptance of UAV technology Develop public awareness campaigns for UAVs 
+
+Mendoza, Rodriguez & Lhuillery (2018) 
+
+Data analysis and machine learning For the analysis of UAV data, researchers made use of machine learning methods. Smart city decision-making is enhanced by better data analysis. Data privacy concerns related to UAV surveillance Develop privacy-preserving data analytics for UAVs 
+
+Stankov et al. (2019) 
+
+Simulation and network optimization Communication networks for unmanned aerial vehicles that are optimized utilizing blockchain. Improved communication in terms of both speed and reliability. Potential security vulnerabilities in blockchain Implement advanced encryption techniques 
+
+Pamnani & Parvathi (2021) 
+
+Field testing and performance evaluation Researchers conducted tests to see how well UAVs equipped with blockchain technology performed in actual city settings. Monitoring in real time of metropolitan areas. Limited scalability due to blockchain complexity Explore scalable blockchain solutions for UAVs 
+
+Alam, Chamoli & Hasan (2022) 
+
+Comparative analysis and cost-bene fi tstudy Using blockchain, researchers analyzed the ef fi ciency of the costs associated with UAVs. Reduced costs associated with processes while also improving ef fi ciency. High transaction fees and network congestion Optimize blockchain parameters for cost ef fi ciency 
+
+Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 6/35 and trustworthy means of routing to and from end users and distributing services in a decentralized manner. UAVs use both public and private blockchains to offer access to a broad variety of complicated authorized services and data, with the use of fog and cloud computing devices and data centers. The author in the study ( Aggarwal, Kumar & Tanwar, 2020 ) introduce a blockchain-based security solution for UAV communications and 6G network connectivity. The author also provides a brief overview of potential future research avenues regarding the combination of blockchain and 6G technologies for UAV communications. Then, the author provided a case study of how blockchain could be used to secure industry 4.0 applications through UAVs communication over 6G networks. In order to increase the safety of charging transactions, the study of the article ( Qin, Li & Liu, 2021 ) investigates the use of blockchain technology to create an auction-based framework for organizing recharging services for UAVs. In this study, the author focusses on improving auction performance by creating a novel auction mechanism based on the upcoming deep reinforcement learning technique, with consideration given to the revenues of carriers and the bene fi ts of UAVs. The experimental outcomes show that the approach can improve the safety of charging transactions and raise the overall ef fi ciency of the system. Table 1 shows the previous work of different authors with methodologies and future work related to the use of UAVs in smart cities. 
+
+# METHODOLOGY Research questions 
+
+The primary objective of this study is to conduct an SLR that identi fi es, analyzes, and summarizes empirical evidence related to the integration of blockchain with UAVs in smart cities. The review focuses on using blockchain with UAVs in smart cities. It also focuses on the applications, components and types of UAVs. It also focusses on the challenges of UAVs in smart cities. Furthermore, it also focuses on UAVs applications. The article also focuses on the need for the integration of blockchain with UAVs in smart cities make secure transactions. The challenges with the integration of blockchain with UAVs are also discussed and the solutions are also provided in this article. The research questions and the motivation behind each question have been formulated to guide the review process to achieve this goal. Table 2 illustrates the research question, and Fig. 4 shows the proposed methodology. 
+
+Select data sources 
+
+Data sources are the libraries or repositories from where the research studies should be retrieved. Four digital libraries have been chosen to extract the primary analyses: IEEE Explore, Science Direct, ACM Digital Library, and Springer Link ( Kitchenham, 2004 ). The full text of the documents is searched to identify the prior studies. There are various options available to search each digital library for pertinent information. To fi nd the most relevant literature, the search strategy is modi fi ed to satisfy the needs of the respective data source. Selected data sources and the number of studies produced by search queries are illustrated in Table 3 and Fig. 5.   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 7/35
+
+Formulate search string 
+
+A search string is a carefully crafted combination of keywords and search operators used to identify relevant studies that address the research question or topic of the review. This step focuses on speci fi c keywords and their synonyms chosen from the identi fi ed research 
+
+Table 2 Illustrates the research questions. Research questions Motivations/Objectives 
+
+What are the applications and types of UAVs? To know about the applications and types of UAVs. What are the challenges of UAVs in smart cities? To know about the different types of challenges of UAV-based systems in smart cities. What are the solutions to key challenges with the of integration blockchain with UAVs? To know about the solution to these challenges related to blockchain integration with UAVs. 
+
+Table 3 Query results from data sources. Library Initial Title and keyword Abstract Full text 
+
+ACM 400 250 130 80 IEEE 250 200 90 45 Science Direct 180 110 75 30 Springer 150 120 70 35 Wiley 100 80 45 15 Results 1,080 760 410 205 
+
+Figure 4 Proposed SLR. Full-size  DOI: 10.7717/peerj-cs.1776/ fi g-4    
+
+> 0200 400 600 800 1000 1200 Inial Title and Keyword Abstract Full Text
+
+Query Result      
+
+> ACM IEEE Science Direct Springer Wiley Results
+
+Figure 5 Search queries representation. Full-size  DOI: 10.7717/peerj-cs.1776/ fi g-5 
+
+Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 8/35 questions, as indicated in Table 2, to create the search string. These keywords are put together using the ‘AND ’ ‘ OR ’ conditions in the order listed to complete the following search string: Fig. 6 and Table 4 illustrates the process of formulating a search string. 
+
+Define inclusion and exclusion criteria 
+
+ Inclusion criteria in an SLR refer to the prede fi ned rules used to determine which studies will be included in the review. In this review, the following inclusion criteria will be considered: Studies must have been published in the English language within the timeframe of 2016 to 2023. The subject of the study should be centered on UAVs utilization in the smart city ’s domain. Selected studies must involve empirical research, conducting practical experiments on speci fi c datasets. The investigations undertaken in the study should pertain to the applications, architecture, and components of UAVs and blockchain. Each chosen study must encompass a comprehensive evaluation of blockchain and                        
+
+> Figure 6 The process of formulating the search string. Full-size  DOI: 10.7717/peerj-cs.1776/ fi g-6
+> Table 4 Search string formulation. Keyword Synonym/Alternative word
+> Blockchain (“blockchains ”OR “blockchain ”)UAVs (“UAVs ”OR “Unmanned Aerial Vehicle Systems ”)Application (“uses ”OR “types ”)Methods (“Techniques ”OR “Framework ”)Integration (“Combination ”OR “merge ”)Smart cities (“Big city ”OR “Populated area ”)
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 9/35
+
+integration of blockchain with UAVs in smart cities. The scope of selected articles should be con fi ned to publications in reputable journals, conferences, or books. 
+
+ Exclusion criteria in an SLR refer to predesigned conditions to determine which studies will be excluded from the review. The following categories of studies have been designated for exclusion: Those published before 2016. Those whose primary focus is not on UAVs and its applications in smart cities. Studies that lack empirical analysis results. Studies that fail to evaluate the performance of UAVs and blockchain. 
+
+Define quality assessment criteria 
+
+Quality assessment criteria in an SLR refer to the prede fi ned standards or guidelines used to assess the included studies ’ quality, reliability, and validity. De fi ning quality assessment criteria ensures that the selected primary studies offer suf fi cient details to analyze the identi fi ed research question effectively. In this step, a standard is de fi ned against each research question. Each quality assessment criterion is denoted by C and its respective number, as shown in Table 5.                
+
+> Table 5 Quality assessment criteria. Sr. No QA questions
+> C1 Does the study provide enough information about the applications and types of UAVs? C2 Does the study provide enough information about challenges of UAVs in smart cities? C3 Does the study provide enough information about the solutions to Key challenges of integration blockchain with UAVs?
+> Table 6 Final article selection. Year Final selection
+> 2015 12016 22017 32018 12 2019 23 2020 26 2021 21 2022 09 2023 02
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 10/35
+
+Primary study selection 
+
+Primary studies refer to the individual articles or book sections that directly address the research questions or topic of the review. This review has selected prior studies using the tollgate approach, a structured methodology of fi ve phases ( Keele, 2007 ). This approach was instrumental in carefully curating 49 primary studies, considering the speci fi ed quality criteria for prior studies. The primary study selection is illustrated in Table 6 and Fig. 7, and the overall process (prism diagram is shown in Fig. 8).     
+
+> Figure 7 Final article selection. Full-size  DOI: 10.7717/peerj-cs.1776/ fi g-7
+> Figure 8 Prism diagram. Full-size  DOI: 10.7717/peerj-cs.1776/ fi g-8
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 11/35
+
+# WHAT ARE THE APPLICATIONS AND TYPES OF UAVS? Applications of UAVs in smart cities 
+
+Recent advancements in drone technology and related fi elds have opened up various commercial opportunities. Different drones can be used depending on the task or the issue that must be resolved. Due to emerging scienti fi c technologies, UAVs have become more creative in the public and private sectors ( Euchi, 2021 ). UAVs are thought to have a signi fi cant advantage in several domains, particularly in public safety, rescue, and product delivery ( Lagkas et al., 2018 ). UAVs may potentially be used to bring medical supplies to inaccessible places. UAVs can carry out multiple tasks using sensors, cams, and other payloads ( Pathak et al., 2020 ). There are many applications of UAVs in smart cities shown in Fig. 9. UAVs ’ communication network capacity has been placed to use in various situations. Drones can prove valuable in providing aid in scenarios when other communication channels fail by growing into self-sustaining infrastructure ( Sharma et al., 2020 ). This section examines the work done in the deploying of UAV applications in smart cities. UAV applications signi fi cantly deliver various smart city services by optimizing data collection and analysis, increasing infrastructure management, encouraging ef fi ciency, and enhancing emergency service ( Yigitcanlar et al., 2020 ). 
+
+Entertainment 
+
+The fi lm and entertainment industries have widely used UAVs ’ high-resolution aerial photos and videography abilities ( Gupta et al., 2021 ). The entertainment classi fi cation adapts to the average user who enjoys using the latest technological gadgets for taking pictures, aerobatic videos, mapping points of interest, or using a small drone for personal enjoyment. Demand for drone tourism, drone tourists, and the taking of fi lms and images in the air will inevitably increase as the price of drones continues to fall. Smaller drones are employed for agriculture, environmental monitoring, and entertainment ( Mendoza,    
+
+> Figure 9 UAVs applications in smart cities. Full-size  DOI: 10.7717/peerj-cs.1776/ fi g-9
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 12/35
+
+Rodriguez & Lhuillery, 2018 ). Drones have also found a home in entertainment and advertising, allowing them to pull banners and perform light displays. Drone video/photo capturing is more complicated than traditional videography and photography approaches (Stankov et al., 2019 ). UAVs can reach remote and hard-to-access locations. UAVs are used in advertising to capture aerial footage and photos for commercials, product launches, and events. They can also deliver promotional material such as fl yers, banners, and promotional products. UAVs can reach places that are dif fi cult to access (Pamnani & Parvathi, 2021 ). 
+
+Delivery 
+
+Smart cities ’ advanced technology and infrastructure are ideal environments for deploying drone delivery systems. In today ’s modern smart cities, using delivery drones is becoming increasingly common due to their ability to fl y above traf fi c and arrive at their destinations in a fraction of the time ( Alam, Chamoli & Hasan, 2022 ). Using drones makes it possible to make supplies faster and more ef fi cient. Drones can access regions hard for ground-based delivery vehicles to reach, such as high-rise buildings and areas restricted to pedestrian traf fi c only. Because of their superior technology and infrastructure, smart cities are ideally adapted to handle the use of drones, which in turn makes it possible to develop delivery networks that are both effective and ef fi cient ( Watkins et al., 2020 ). However, there are also safety and privacy issues surrounding using drones in cities; consequently, appropriate regulations and procedures are required to guarantee that their usage is conducted responsibly and safely. Drones have also become essential in rescue operations, offering a quick and ef fi cient means of accessing disaster-stricken areas and helping those in need (Novák et al., 2020 ). 
+
+Remote sensing 
+
+UAVs can deliver products quickly and ef fi ciently, reducing delivery times and improving customer satisfaction ( Kim, Moon & Jung, 2020 ). UAVs uniquely provide high-quality data from remote sensing at this scale and timeframe ( Maes & Steppe, 2019 ). The footage captured by UAVs enables hazards and features to be observed from various angles in virtually any landscape, which is impossible with any other single technology ( Nikhil et al., 2020 ). UAV taxi services are being developed and tested by several companies worldwide. Vole Copter has developed a two-seat electric air taxi with a range of 60 km, which can be charged and provide faster transportation, reducing travel times and improving accessibility ( Marzouk, 2022 ). During the tests performed in 2017, a Chinese drone taxi called Ehang-184 fl ew successfully in Dubai City ( Alnuaimi, 2021 ). UAVs play a vital role in surveying the affected area and assessing the damage caused by a disaster. UAVs can deliver emergency supplies such as food, medicine, and medical equipment to disaster-stricken regions ( Mohsan et al., 2022b ). UAVs play an essential role in power line monitoring in smart cities. UAVs can detect cracks, corrosion, or loose connections before they lead to power outages or other problems. Inspections can be performed without putting human inspectors at risk, especially in hazardous environments ( Ciampa, Vito & Pecce, 2019 ).   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 13/35
+
+Surveillance 
+
+With recent advancements, UAVs are seen as a possible alternative to ground robots for surveillance in various applications. UAV surveillance can move faster than ground vehicles or robotics, resulting in quicker turnaround times between the desired locations (Gu et al., 2018 ). The traf fi c monitoring system is one of the essential applications for UAVs. Due to their mobility and ability to cover a wide variety of areas, drones provide a unique viewpoint on traf fi c monitoring that has the potential to assist in the optimization of road traf fi c systems. This could be achieved by exceeding conventional surveillance methods ( Khan et al., 2020b ). These drones also check industrial sites and power transmission infrastructure ( Ramon-Soria et al., 2019 ). Yu et al. (2019) Suggested solutions for localizing UAVs while inspecting pipelines. UAVs have been used to examine power lines using similar concepts ( Ramon-Soria et al., 2019 ). UAV-based crowd-monitoring systems are feasible and cost-effective solutions, making them a vital component of technology for crowd-monitoring ( Xiao et al., 2021 ). UAVs can monitor large areas, such as borders, coastal regions, and industrial sites, for security purposes. They can quickly reach an incident scene to gather information and assess the situation, allowing faster response time ( Alsamhi et al., 2021 ). UAV-based infrastructure inspection is a cost-
+
+Table 7 An overview and summary of UAV applications for smart cities and their possible bene fi ts. UAV application UAV function Possible bene fi ts 
+
+Advertisement Used in advertising to capture aerial footage and photos for commercials product. UAVs can reach places that are dif fi cult to access. UAV-based tourism Involve more people in digital tourism. UAVs can reach remote and hard-to-access locations. Security and monitoring Assure public safety and security. UAVs can monitor large areas, such as borders, coastal regions, and industrial sites. UAV-based cinematography UAVs can fl y in tight spaces. Enhance the visual impact of a fi lm. UAV-based product delivery UAVs can deliver products quickly. Reduce delivery times and improve customer satisfaction. Traf fi c control Provide a unique viewpoint on traf fi c monitoring. Assist in the optimization of road traf fi c systems. Cargo services Deliver a wide range of cargo. It can help to improve supply chain operations by providing real-time tracking. Fire fi ghting Improve fi re fi ghting response and conduct rescue operations. Drones can visit areas that are tough to get to and carry out data collection tasks that are hard for people to do. UAV-based taxi Provide faster transportation. Improving accessibility. Fog computing Optimize energy usage in smart cities. Provides real-time monitoring of energy consumption. Disaster management Deliver emergency supplies. Play a vital role in surveying the affected areas and assessing the damage caused by a disaster. Infrastructure inspection Inspect and assess the condition of infrastructure. Equipped with high-resolution cameras and sensors can access hard-to-reach areas and provide real-time data and images. Search and rescue Conducting rescue operations. More ef fi cient than traditional manned-held operations. Power line monitoring Play an essential role in power line monitoring in smart cities. Inspections can be performed without putting human inspectors at risk, especially in hazardous environments. 
+
+Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 14/35 effective and ef fi cient method to inspect and evaluate the condition of infrastructure such as buildings, bridges, pipelines, and power lines. UAVs with high-resolution cameras and sensors can access hard-to-reach areas and provide real-time data and images ( Macaulay & Sha fi ee, 2022 ). Table 7 shows an overview and summary of UAV applications for smart cities and their possible bene fi ts. Ensuring the availability of fundamental life-saving and emergency healthcare services is crucial for every city. Cities must provide these services to their residents regardless of their location or the time of need. UAVs present a viable solution for delivering or assisting health emergency services. UAVs can swiftly transport essential medical supplies and services to patients, enabling the rapid availability of basic life support systems and healthcare provisions. For instance, a UAV can ef fi ciently transport a de fi brillator and other necessary medical equipment directly to a cardiovascular patient, facilitating immediate cardiopulmonary resuscitation. 
+
+Traffic management and monitoring 
+
+Traf fi c congestion is a signi fi cant issue that confronts numerous major cities. It arises from various factors, such as peak hours, major events, construction activities, or accidents, leading to sudden or periodic increases in the number of vehicles. These issues can arise at any time and in any city location. Consequently, transportation administrators must seek more ef fi cient and effective approaches to alleviate traf fi c congestion. To identify an appropriate solution, it is crucial to know congestion-prone areas, their causes, the volume of vehicles, and the condition of the roads in those areas. Although static cameras installed on city streets can offer some insights into these factors, they often fail to provide   
+
+> Figure 10 Highlighting diverse UAV applications for smart cities.
+> Full-size  DOI: 10.7717/peerj-cs.1776/ fi g-10
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 15/35
+
+comprehensive real-time information necessary for managing the problem ( Chen et al., 2016 ). Figure 10 highlights diverse UAV applications for smart cities ( Lucic et al., 2023 ). 
+
+Agriculture management and environmental monitoring 
+
+UAVs can support various agricultural processes, including distributing fertilizers, pesticides, seeds, and water. They also serve the purpose of conducting regular inspections of crops and assessing their overall condition. Additionally, UAVs can assist in monitoring the growth of crops to determine optimal harvesting times or the need for protective measures. For instance, certain crops are susceptible to signi fi cant damage due to sudden weather changes. UAVs are instrumental in monitoring and measuring environmental conditions, such as identifying high levels of harmful substances like CO 2 and air pollutants. This early detection capability enables timely action and accurately assesses the associated risks ( Mohamed et al., 2020 ). 
+
+Types of UAVs 
+
+UAVs drone, also known as a drone, is operated without a human pilot ( Chaurasia & Mohindru, 2021 ). They use autonomous or remote-control systems to fl y, making them suitable for a wide range of applications, including aerial photography, delivery of goods, an inspection of infrastructure, and military operations. A UAV drone typically consists of a fl ight control system, a propulsion system, navigation sensors (such as GPS), communication systems, and payload sensors or cameras ( Alghamdi, Munir & La, 2021 ). The fl ight control system receives input from the remote operator or autonomous onboard systems and then controls the drone ’s movement through its propulsion system. Navigation sensors help the drone determine its position and orientation, while communication systems allow it to receive commands and transmit data ( Sandino et al., 2020 ). The payload sensors or cameras collect data or capture images and video. UAVs use various technologies to operate effectively and ef fi ciently ( Albeaino, Gheisari & Franz, 2019 ). The fl ight mission of a UAV is typically prede fi ned, but a pilot can manage its velocity and direction via remote robotic system commands from a base station ( Radoglou-Grammatikis et al., 2020 ). UAVs are available in a variety of sizes, features, and models.    
+
+> Figure 11 Types of UAV. Full-size  DOI: 10.7717/peerj-cs.1776/ fi g-11
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 16/35
+
+UAVs of various combinations are employed for a variety of reasons. We distinguish and analyze multiple types of UAVs in this area according to their technical attributes and payload. Figure 11 shows the four major types of UAVs. Figure 12 ( Partheepan, Sanati & Hassan, 2023 ) shows different classi fi cations of UAVs. 
+
+Multi-rotor 
+
+Multi-rotor UAVs are predicted to become increasingly intelligent in the future. Multi-rotor drones, often rotary-wing drones, are the most common leisure and professional drones ( Green & Gómez, 2020 ). Multi-rotor drones, also known as quadcopters, are a type of UAV popular in smart city applications due to their agility, stability, and versatility. They provide signi fi cant adaptability by enabling the installation of several kinds of cameras to execute various tasks. Because of their outstanding mobility, strength, and hover performance, multi-rotor UAVs have seen widespread use in public and military marketplaces in recent years ( Quan, Dai & Wang, 2020 ). Multi-rotor drones equipped with cameras and sensors can be used for surveillance, helping to increase public safety and reduce crime ( Abichandani, Levin & Bucci, 2019 ). UAVs can capture stunning aerial footage, providing a unique perspective and enhancing the visual impact of a fi lm (Patel, 2019 ). Increasing the number of rotors makes the drone more challenging to control. The majority of multi-rotor drones have fl ying times of less than one hour. The great sensitivity of multi-rotor UAVs to wind disruptions is a signi fi cant challenge in their use. 
+
+Fixed-wing 
+
+Fixed-wing drones have a rigid structure, similar to an aero plan, with lift wings, enabling the drone to fl y in the air. Fixed-wing drones are typically used for various applications, including aerial photography, surveying and mapping, inspecting infrastructure and assets, delivering goods, and scienti fi c research ( Lee, Kim & Chu, 2021 ). They can fl y for extended periods and cover larger areas than rotary-wing drones, making them well-suited for tasks requiring high stability and ef fi ciency. Regarding capacity, fi xed-wing drones can carry a    
+
+> Figure 12 Shows different classi fi cations of UAVS. Full-size  DOI: 10.7717/peerj-cs.1776/ fi g-12
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 17/35
+
+variety of payloads, including cameras, sensors, and other equipment, depending on their design and speci fi cations ( Green et al., 2019 ). They can also be designed to fl y at different altitudes and speeds, allowing them to capture high-resolution images and data in various conditions ( Ziliani et al., 2018 ). 
+
+Single-rotor 
+
+Drones with a single rotor are driven by a single main rotor, responsible for providing lift, and a tail rotor, responsible for providing directional control. The drone can get off the ground and stay in the air ( Zhang et al., 2018 ). At the same time, the tail rotor is responsible for providing stability and directionality by counteracting the torque generated by the main rotor. Drones with a single rotor rely on the interaction between their primary and tail rotors to develop lift, keep their stability, and adjust the directionality of their 
+
+fl ying ( Khan et al., 2021b ). The fl ight controller is the “brain ” of the drone. It is responsible for controlling the movement of the rotors and maintaining the drone ’s stability while in the air by using information from the operator or the GPS ( Mogili & Deepak, 2018 ). 
+
+Fixed-wing hybrid VTOL drones 
+
+Fixed-wing hybrid VTOL drones can take off, land vertically like a helicopter, and fl yhorizontally like fi xed-wing Aerial Vehicle. These drones typically have fi xed wings and rotors to transition between vertical and horizontal fl ight ( Zhou et al., 2020 ). In vertical takeoff mode, the rotors lift the drone, allowing it to take off and hover. Once the drone has reached a certain altitude, it can transition to horizontal fl ight mode, in which the fi xed wings provide lift and the rotors are used for propulsion ( Li et al., 2020 ). During horizontal 
+
+fl ight, the drone is much more ef fi cient and can cover greater distances than it could with rotors. Their ef fi ciency during horizontal fl ight allows them to cover greater distances and 
+
+fl y longer than traditional rotary-wing drones ( Tká č & Mésáro š, 2019 ). 
+
+# WHAT ARE THE CHALLENGES IN UAVS IN SMART CITIES? 
+
+While UAVs hold the potential to provide numerous advantages for smart city services, their effective utilization entails addressing several challenges. These challenges can be broadly classi fi ed into two categories: technical issues, such as safety, security, reliability, and communication, and non-technical issues, such as licensing and legislation, cost, ethics, and privacy ( Mohamed et al., 2020 ). Several bene fi ts are associated with UAVs, many of which have increased signi fi cantly as technology advances. However, some have limited resources for operation, while others present various security challenges. A lack of standardization and regulation of UAVs leads to security and privacy concerns. Due to design constraints and a hostile operational area, security specialists have problems constructing a complete UAV security module (Mugheri, Siddiqui & Khoso, 2018 ). Although UAVs have the potential to provide numerous bene fi ts for the services offered in smart cities effectively, however, using UAVs also presents various challenges that need to be overcome. Herein the list of challenges in UAVs in smart cities is discussed.   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 18/35
+
+Speed and security 
+
+UAV drones have the potential to revolutionize delivery services by offering faster and more ef fi cient delivery times. However, drones ’ speed can also threaten public safety if operated at high speeds in densely populated areas ( Cherif et al., 2021 ). UAV drones also raise security concerns, particularly in surveillance and privacy. Drones equipped with cameras and other sensors can be used to collect sensitive data, and there is a risk of drones being hacked and used for malicious purposes ( Nassi et al., 2019 ). It is essential to address speed and security concerns through effective regulations and best practices to ensure their safe and ef fi cient integration into urban environments. 
+
+Secure communication channel 
+
+There is a need for a secure communication channel for UAVs in smart cities to protect against various security threats and ensure drones ’ safe and ef fi cient operation. A secure communication channel can help protect this data from unauthorized access and ensure it is transmitted and stored securely ( Nikooghadam et al., 2021 ). UAVs must be operated safely to avoid accidents and other incidents that could risk public safety. Secure communication can help ensure that UAVs are managed, controlled, and safe by providing real-time communication and control between the drone and its operator ( Khan et al., 2020a ). 
+
+Inventory management system 
+
+Strict regulations surround the use of drones, especially regarding their usage in commercial operations. Most drones have limited fl ight time, which can challenge extended inventory management tasks ( Reddy Maddikunta et al., 2021 ). Drones have limited storage capacity, making transporting and storing large items challenging for inventory management purposes. Operating and maintaining drones for inventory management requires technical expertise and training, which can be challenging for some organizations ( Wawrla, Maghazei & Netland, 2019 ). 
+
+Global channel for connectivity and communication 
+
+Global communication channels are necessary for UAVs in smart cities to ensure coordination, safety, and ef fi ciency in air traf fi c management. With the increasing use of drones for various purposes, it is essential to have a uni fi ed communication system that allows for real-time communication and exchange of information between different drone systems, ground control stations, and air traf fi c control ( Vinogradov et al., 2019 ). This helps prevent potential collisions, ensure regulations comply, and allow for optimized 
+
+fl ight paths. Global communication channels also facilitate communication with other air and ground-based vehicles and can provide critical information such as weather conditions, air traf fi c updates, and emergency alerts ( Al-Mousa et al., 2019 ). 
+
+Inter-service operation capabilities 
+
+Inter-service operation capabilities in drones refer to the ability of drones to interact and coordinate with other technologies, systems, and services in smart cities. Different services   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 19/35
+
+may use different communication systems, leading to poor interoperability ( Aloqaily et al., 2021 ). UAVs collect vast amounts of data, but sharing that data between various services can be challenging. Different services may have other operating procedures, leading to confusion and misunderstandings during UAV operations ( Zhai et al., 2020 ). These challenges can limit the effectiveness and ef fi ciency of UAV operations, making it essential for services to work together to overcome them. 
+
+Limited storage and processing power 
+
+The amount of storage and onboard processing power limits UAVs. These limitations can affect the performance and capabilities of the drone. Drones also have limited processing power, impacting their ability to process data in real time, especially for complex tasks such as object recognition, obstacle avoidance, and real-time decision-making ( Fraga-Lamas et al., 2019 ). Drones ’ limited storage and processing power can also impact their fl ight time, as these systems consume battery power, reducing the time the drone can remain in the air ( Boukoberine, Zhou & Benbouzid, 2019 ). 
+
+Autonomous network security system 
+
+There are several challenges in implementing an autonomous network security system for UAVs in smart cities. UAVs operate in the same frequency bands as other communication systems, which can lead to interference and disruption of normal operations ( Li et al., 2021 ). As UAV usage grows, the communication system must be able to handle increasing numbers of devices and provide adequate coverage to accommodate changing traf fi cpatterns. UAVs require signi fi cant bandwidth, which can be challenging to allocate and manage ef fi ciently ( Khan et al., 2021a ). 
+
+Securely sending data to end users 
+
+Data transmitted between UAVs and end users can be intercepted by unauthorized parties, compromising security. UAVs generate large amounts of data, leading to network congestion, particularly in densely populated urban environments ( Alam et al., 2021 ). Other wireless communication systems in the urban environment can interfere with UAV communication, leading to errors and data loss. The privacy of end-user data must be protected, and UAV communication systems must ensure that data is transmitted securely and encrypted to prevent unauthorized access ( Atoev et al., 2019 ). 
+
+Blocking of the line of sight 
+
+Blocking the line of sight is a common challenge in UAV communication in smart cities due to tall buildings, bridges, and other structures that can obstruct the communication between the UAV and the ground station or end-user ( Yu et al., 2022 ). The UAV may lose contact with the ground station or end user, impacting real-time data transmission (Mohsan et al., 2022a ). Obstructed line of sight (LoS) can increase latency and reduce the reliability of the UAV communication system. UAV communication systems may not provide adequate coverage in areas with obstructed LoS, leading to dead communication zones ( Albanese, Sciancalepore & Costa-Pérez, 2021 ).   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 20/35
+
+UAV surveillance network 
+
+UAVs must be able to cover a large area in real time, which requires a robust and scalable communication network. UAVs have limited energy resources, and the communication and data processing systems must be designed to minimize power consumption ( Zhang et al., 2020 ). UAV surveillance systems must protect individuals ’ privacy and comply with relevant privacy regulations. This surveillance system must be integrated with existing surveillance and security systems to ensure ef fi cient and effective operations ( Lykou, Moustakas & Gritzalis, 2020 ). 
+
+UAV networks for edge computing 
+
+UAV networks for edge computing can be used in various applications, including surveillance, environmental monitoring, agriculture, and emergency response ( Xu, Ota & Dong, 2020 ). UAV networks for edge computing involve using a network of UAVs to collect and process data locally rather than relying on a centralized computing system ( Liu et al., 2022 ). This enables real-time decision-making and reduces the amount of data that must be transmitted over long distances, thus reducing latency and increasing data processing speed. As the number of UAVs in a network grows, it becomes more challenging to manage and coordinate communication and data processing among the devices ( Alzahrani et al., 2020 ). 
+
+Limited battery issue 
+
+Depending on factors such as its size, cargo, and battery life, a UAV ’s fl ying time may be as little as 20 min or as long as several hours. A substantial quantity of energy is required to complete these duties. Additionally, not all drones have suf fi cient battery power to provide services for a lengthy duration of time ( Islam et al., 2021 ). UAVs have a signi fi cant dif fi culty in the context of smart cities due to their limited battery life ( Dai et al., 2021 ). As UAVs grow more commonplace in urban settings for purposes like surveillance, traf fi cmonitoring, environmental evaluations, and emergency response, the problem of limited battery capacity becomes all the more pressing.    
+
+> Figure 13 UAVs integration with blockchain. Full-size  DOI: 10.7717/peerj-cs.1776/ fi g-13
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 21/35
+
+# WHAT ARE THE SOLUTIONS TO KEY CHALLENGES WITH THE INTEGRATION OF BLOCKCHAIN AND UAVS? 
+
+Blockchain is a decentralized digital ledger that uses cryptography to secure and record transactions across a network of computers. Blockchain technology can offer new solutions in various aspects when combined with drones, as described in Fig. 13. In smart cities, blockchain technology can solve several issues related to UAVs. Blockchain can create a decentralized traf fi c management system for UAVs, allowing for real-time drone operation coordination and reducing collision risk ( Albanese, Sciancalepore & Costa-Pérez, 2021 ). Blockchain can facilitate rapid and secure communication between UAVs and emergency responders, allowing faster and more ef fi cient response times in case of accidents or disasters. It can also create a safe and tamper-proof record of UAV sensor data, allowing for more effective monitoring of traf fi c, pollution, and other environmental factors in smart cities ( Zhang et al., 2020 ). Blockchain ensures the privacy and security of data collected by UAVs, enabling the secure sharing of data among authorized stakeholders. Blockchain-based smart contracts can allow autonomous and safe package deliveries without human intervention and provide transparency on the delivery status and location ( Lykou, Moustakas & Gritzalis, 2020 ). This technology can support the development of new use cases for UAVs across various industries, such as logistics, transportation, and public safety. Table 8 presents the different proposed solutions, which are Blockchain-based solutions, to solve the problems in UAVs in smart cities. 
+
+Blockchain integration with UAVs for better speed and security 
+
+The combination of UAVs and blockchain technology has the potential to improve ef fi ciency and safety in many situations. Blockchain technology allows for decentralized and immutable data storage. Images, sensor readings, and fl ight logs from UAVs can all be recorded in a distributed ledger. The complete supply chain of UAV components could be tracked with blockchain technology. By eliminating the possibility of using fake or substandard components, this improves the UAVs ’ dependability and security. In the study of Ch et al. (2020) the research introduces a blockchain technology (BCT)-based approach to protecting the con fi dentiality of information collected by devices. To test the effectiveness of the proposed design, an IoT based application has been integrated into a simulated vehicle monitoring system. Penta tope-based elliptic curve encryption and Secure Hash Algorithm (SHA) are used to secure privacy in data storage, and this includes the technical details of instructions to the vehicle (devices), authentication, integrity, and vehicle reactions. In order to facilitate BCT transactions, the information is later recorded in a public blockchain based on Ethereum. The system relies on the secure and private Ganache platform for BCT to store and process user information. 
+
+Blockchain integration with UAVs for secure communication channel 
+
+Blockchain technology can be utilized for the preservation of encryption keys. The blockchain can be used to encrypt messages transferred between UAVs, making it so that only approved UAVs can read them. With the use of blockchain technology, UAVs could   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 22/35
+
+Table 8 Blockchain-based solutions to challenges of UAVs in smart cities. Sr. #Application domain Problem addressed Proposed blockchain solution Reference 
+
+1 Speed and security. The speed of drones can also pose a risk to public safety if they are operated at high speeds in densely populated areas a Blockchain Technology (BCT)-based approach to protecting the con fi dentiality of information collected by devices. To test the effectiveness of the proposed design, an IoT-based application has been integrated into a simulated vehicle monitoring system. 
+
+Zekiye & Özkasap (2023) 
+
+2 Secure communication channel. There is a need for a secure communication channel for UAVs in smart cities to protect against various security threats and ensure drones' safe and ef fi cient operation. With its public and private key processes, Blockchain can serve as a secure communication channel among UAVs. 
+
+Ghribi et al. (2020) 
+
+3 Inventory management system. Drones have limited storage capacity, made transporting and stored large items challenging for inventory management purposes. A Blockchain-based inventory management system that uses UAVs to scan items equipped with RFID tags and then uploads that data to a Blockchain, where it is validated, and transparency is maintained. Smart contracts are utilized when doing business with third parties to facilitate the transaction. 
+
+Cristiani et al. (2020) 
+
+4 Global channel for communication. Global communication channels are necessary for UAVs in smart cities to ensure coordination, safety, and ef fi ciency in air traf fi c management. Employing Blockchain as a worldwide communication platform, UAVs are equipped with the capacity to sign and send encoded data securely. It enables UAVs in the network to decide transparently by allowing them to consider the viewpoints of other UAV users. 
+
+Kumar et al. (2021) 
+
+5 Inter-service operation capabilities. UAVs collect vast amounts of data, but sharing that data between different services can be challenging. A trust agreement between vendors is built on Blockchain technology to facilitate inter-service activities, with each UAV operating as a node in the Blockchain. Because the record of services given by each vendor is stored on the Blockchain in an accessible and open way, this facilitates an environment of trust and con fi dence among all parties involved. 
+
+Sharma, You & Kul (2017) 
+
+6 Limited processing power and storage. The amount of storage and onboard processing power limits UAVs. These limitations can affect the performance and capabilities of the drone. A Blockchain-powered decentralized storage system in which UAVs that serve as air sensors pass their data to ground sensors and, in exchange, compensate the ground sensor with incentives dispersed via Blockchain for their storing and processing abilities. 
+
+Zhu, Zheng & Wong (2019) 
+
+7 Autonomous network security system. UAVs operate in the same frequency bands as other communication systems, which can lead to interference and disruption of normal operations. A Blockchain-based network for UAVs in which each UAV carries a copy of the onboard Blockchain. If command signals from the control center or other network UAVs are disrupted, UAVs can consult the data stored on Blockchains to determine their fl ight paths and action plans. 
+
+Alkadi et al. (2022) 
+
+8 Securely sending data to end users. Data transmitted between UAVs and end users can be intercepted by unauthorized parties, compromising its Security. Protecting the data gathering and transmission processes in an Internet of drone environment, the author used a public Blockchain based on Ethereum. It guarantees the data ’s honesty, accountability, authorization, and privacy. 
+
+Aggarwal et al. (2019) 
+
+9 Blocking of the LoS. Blocking LoS is a common challenge in UAV communication in smart cities due to tall buildings, bridges, and other structures that can obstruct communication between the UAV and the ground station or end user. A Blockchain-based UAV traf fi c data exchange network is currently in development to facilitate the safe transfer of traf fi cdata. Using Blockchain, it is possible to develop a double-block veri fi cation mechanism, rendering the system resistant to cyber-attacks and blockages in the Los. 
+
+Chao et al. (2018) 
+
+10 UAV surveillance network. UAV surveillance systems must protect individuals ’ privacy and comply with relevant privacy regulations. Block-chain-based security strategies can identify suspicious occurrences in the surveillance data and fraudulent UAVs through a distributed trust management strategy. 
+
+García-Magariño et al. (2019) 
+
+(Continued ) 
+
+Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 23/35 safely authenticate each other ’s identities before opening up communication lines. UAVs used for delivery services can bene fi t from blockchain ’s ability to track the entire supply chain, which in turn assists in preventing counterfeiting. As the network grows larger, the use of blockchain technology could assist in guaranteeing its security and transparency. In order to ensure the safety of communications in a UAV network, the authors of the study (Ghribi et al., 2020 ) suggest a new consensus-building methodology that combines blockchain technology, the Elliptic Curve Dif fi e-Hellman public key cryptography technique, and the one-time pad encryption technique. 
+
+Blockchain integration with UAVs for inventory management system 
+
+UAVs equipped with sensors and GPS can monitor shipments in real time. With the use of the blockchain, all parties involved may track the whereabouts and status of stock in real time. Using low-cost mini-drones and single-board computers, The research of Cristiani et al. (2020) tested a prototype implementation of the data acquisition and management framework. Our goal is to propose a generic architecture for UAV-based inventory management inside large-scale warehouses, including the elements of UAV path planning, package recognition ( via QR codes), data validation ( via the blockchain), and wireless charging. Second, authors examine the system ’s effectiveness, focusing on the compromise between inventory accuracy (the proportion of correctly identi fi ed packages) and total inventory processing time. Finally, using a small-scale testbed, the author validates the system ’s functionality and con fi guration parameters by determining the ideal UAV mobility characteristics with regard to of speed and number of visits for each shelf unit. 
+
+Blockchain integration with UAVs for global channel for connectivity and communication 
+
+Using cryptographic techniques like public-key encryption and hash functions, blockchain ensures the integrity of the distributed ledger. It can be used to improve the accessibility and safety of aerial communication networks while also protecting the integrity of stored data. The research of Kumar et al. (2021) gives the results of an online survey on the topic of using blockchain technology with BAC. They begin by investigating the existing state of security in aerial communication networks, the bene fi ts of blockchain technology, and the       
+
+> Table 8 (continued ) Sr. #Application domain Problem addressed Proposed blockchain solution Reference
+> 11 UAV networks for edge computing. As the number of UAVs in a network increases, managing and coordinating communication and data processing among the devices becomes more challenging. An approach to providing ultra-reliability based on the Blockchain and neural networks and uses UAVs as on-demand nodes for caching objectives.
+> Sharma et al. (2019)
+> 12. Limited battery issue. UAVs have a signi fi cant dif fi culty in the context of smart cities due to their limited battery life. A blockchain-based energy grid can store surplus energy generated from renewable sources, allowing for a decentralized energy management system
+> Zekiye & Özkasap (2023)
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 24/35
+
+potential for its use in a solution. The next section provides an in-depth discussion of the author ’s suggested options for implementing the blockchain in order to address the existing security vulnerability in aerial communication networks. Finally, the authors sort the solutions into categories and assess and contrast the bene fi ts and drawbacks of each. 
+
+Blockchain integration with UAVs for inter-service operation capabilities 
+
+End-to-end encryption of UAV-based service-to-service communication channels is made possible by blockchain technology. The public and private keys for each service can be maintained in the distributed ledger to protect user data and maintain con fi dentiality. Cooperation between government bodies, technologists, and legal experts is necessary to integrate blockchain technology with UAVs to enable inter-service operating capabilities. When demand is too high for a single service provider to handle, blockchain can be used to coordinate the actions of multiple providers ’ UAVs to meet that demand. UAVs ’
+
+operability in such a context is examined. In the study of Sharma, You & Kul (2017) a trust agreement between vendors is built on blockchain technology to facilitate inter-service activities, with each UAV operating as a node in the blockchain. Because the record of services given by each vendor is stored on the blockchain in an accessible and open way, this facilitates an environment of trust and con fi dence among all parties involved. 
+
+Blockchain integration with UAVs for limited storage and processing power 
+
+Blockchain technology can be successfully implemented in environments with limited resources such as storage and computing power. The architecture developed by Liang et al. (2017) ensures the authenticity of drone data by combining public blockchain technology with cloud storage. Performance evaluation results are acceptable after implementing a prototype of a drone system. The study of the author Zhu, Zheng & Wong (2019) proposed a blockchain-powered decentralized storage system in which UAVs acting as air sensors transmit data to ground sensors, which are then rewarded with incentives distributed via 
+
+Blockchain for their capacity to store and interpret the data. 
+
+Blockchain integration with UAVs for autonomous network security system 
+
+The safety and ef fi cacy of autonomous network systems can be greatly improved by incorporating blockchain technology with UAVs. In applications where UAVs operate independently and require secure communication with a centralized network, such as disaster response or surveillance, this integration can prove invaluable. A blockchain-based network in which each UAV has its own copy of the blockchain is proposed as a solution in the research ( Alkadi et al., 2022 ). Data recorded on blockchains can be used by UAVs to 
+
+fi gure out their fl ight paths and actions in the event that they lose contact with the control center or other network UAVs.   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 25/35
+
+Blockchain integration with UAVs for securely sending data to end users 
+
+Data sent from UAVs to their ultimate recipients can be encrypted using blockchain technology. In order to protect the privacy and security of the information recorded on the blockchain, it might be encrypted before it is added. Micropayments for the data collected by UAVs are possible with blockchain-based solutions. An incentive for UAV operators to collect and communicate valuable data to end users in a secure manner is provided by smart contracts, which can automatically execute payments when data is delivered and validated. The author Aggarwal et al. (2019) used a public Ethereum-based blockchain to examine how to secure data collection and transmission in an Internet of Drones setting. It ensures the truthfulness, traceability, authorization, and con fi dentiality of the data. 
+
+Blockchain integration with UAVs for blocking of the line of sight 
+
+Blockchain technology was developed largely for use in managing and transacting data in a way that is both safe and transparent. It does not interfere with physical processes, such as obstructing the view of UAVs. However, when used in tandem with other technologies and protocols, blockchain can improve the safety and management of UAVs fl ying under limited or obstructed Line of Sight conditions. In the study of Chao et al. (2018) a safe and reliable data sharing amongst UAVs is being developed through the use of a Blockchain-based network. A double-block veri fi cation process can be created using Blockchain, making the system immune to cyberattacks and bottlenecks in the Los. 
+
+Blockchain integration with UAVs for UAV surveillance network 
+
+Integrating blockchain technology with UAVs for a surveillance network can boost the security, transparency, and ef fi ciency of data handling. The security and trustworthiness of surveillance data can be guaranteed by using blockchain, which has various bene fi ts in this context. Access control in a surveillance network can be managed with the help of smart contracts. Based on the conditions recorded in smart contracts, authorized users, such as law enforcement agencies or security staff, can gain access to speci fi c surveillance data. A technique is represented in the research of García-Magariño et al. (2019) . Security and personal privacy are both improved by this system of automatic access management. Through a distributed trust management technique, block-chain based security solutions may detect anomalies in surveillance data as well as fraudulent UAVs. 
+
+Blockchain integration with UAVs for UAV networks for edge computing 
+
+In the context of UAV networks for edge computing, incorporating blockchain technology with UAVs can produce novel and secure applications. Instead of depending only on remote cloud servers, edge computing moves data processing closer to its point of origin. In this way, data can be processed and stored independently using blockchain technology. In the research of Sharma et al. (2019) it is shown that UAVs can do data processing locally, allowing them to make decisions in real time at the network ’s edge. UAVs are used   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 26/35
+
+as on-demand nodes in a distributed blockchain network powered by neural networks to achieve caching goals. 
+
+Blockchain integration with UAVs for limited battery issue 
+
+The low battery life of UAVs is not something that can be fi xed by blockchain technology on its own. However, the limitations of battery life can be indirectly addressed by integrating blockchain into UAV systems in smart cities to optimize their operations. Blockchain-based smart contracts can run algorithms that optimize UAV routing, ensuring that drones travel the most ef fi cient routes possible, and hence extending their runtime. A blockchain-based energy grid can store surplus energy generated from renewable sources, allowing for a decentralized energy management system ( Zekiye & Özkasap, 2023 ). 
+
+# CONCLUSION AND FUTURE DIRECTION 
+
+UAVs in smart cities open new possibilities and bring cost-effective intelligent solutions to various challenges. Several of these possibilities will result in incredibly useful applications such as intelligent traf fi c management, smart safety and security, smart entertainment, smart health care, and agriculture management. Most existing and future applications can considerably bene fi t from incorporating UAVs into smart cities. Smart city researchers are looking at blockchain technologies for managing, analyzing, and addressing the security and other challenges associated with UAV implementation. The application and types of UAVs in smart cities are summarized in this article, focusing on the problems of UAVs in smart cities and why blockchain approaches are vital for addressing these challenges. Using UAVs in smart cities offers various advantages but has serious limitations. We demonstrated the use of UAVs in smart cities and discussed the challenges associated with UAVs. Blockchain can address these challenges in smart cities. This article has examined the most popular blockchain technologies used in smart cities to handle various security issues. These blockchain approaches can be extremely useful with UAVs in a smart city. There are still several challenges in the use of UAVs in smart cities. However, recent technical advancements in blockchain technology have enabled the concept of UAVs to be used in smart cities. Suppose we can fi nd more solutions to the many challenges on time. In that case, it will greatly motivate advancements in smart city developments ’ academic and industry realms. 
+
+# ADDITIONAL INFORMATION AND DECLARATIONS Funding 
+
+The authors received no funding for this work. 
+
+Competing Interests 
+
+Habib Hamam is the director of Spectrum of Knowledge Production and Skills Development, Sfax, Tunisia.   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 27/35
+
+Author Contributions 
+
+ Syed Faisal Abbas Shah conceived and designed the experiments, performed the experiments, analyzed the data, performed the computation work, prepared fi gures and/ or tables, authored or reviewed drafts of the article, and approved the fi nal draft. 
+
+ Tehseen Mazhar conceived and designed the experiments, performed the experiments, analyzed the data, performed the computation work, prepared fi gures and/or tables, authored or reviewed drafts of the article, methodologist, and approved the fi nal draft. 
+
+ Tamara Al Shloul conceived and designed the experiments, performed the experiments, analyzed the data, performed the computation work, prepared fi gures and/or tables, authored or reviewed drafts of the article, software, and approved the fi nal draft. 
+
+ Tariq Shahzad conceived and designed the experiments, performed the experiments, analyzed the data, performed the computation work, prepared fi gures and/or tables, authored or reviewed drafts of the article, resources, and approved the fi nal draft. 
+
+ Yu-Chen Hu conceived and designed the experiments, performed the experiments, analyzed the data, performed the computation work, prepared fi gures and/or tables, authored or reviewed drafts of the article, and approved the fi nal draft. 
+
+ Fatma Mallek conceived and designed the experiments, performed the experiments, analyzed the data, performed the computation work, prepared fi gures and/or tables, authored or reviewed drafts of the article, visualization, Methodologist, and approved the 
+
+fi nal draft. 
+
+ Habib Hamam conceived and designed the experiments, performed the experiments, analyzed the data, performed the computation work, prepared fi gures and/or tables, authored or reviewed drafts of the article, project administration, funding acquisition, and approved the fi nal draft. 
+
+Data Availability 
+
+The following information was supplied regarding data availability: This is a literature review. 
+
+# REFERENCES            
+
+> Abichandani P, Levin K, Bucci D. 2019. Decentralized formation coordination of multiple quadcopters under communication constraints. In: 2019 International Conference on Robotics and Automation (ICRA) . Piscataway: IEEE.
+> Aggarwal S, Kumar N, Tanwar S. 2020. Blockchain-envisioned UAV communication using 6G networks: open issues, use cases, and future directions. IEEE Internet of Things Journal
+> 8(7) :5416 –5441 DOI 10.1109/JIOT.2020.3020819.
+> Aggarwal S, Shojafar M, Kumar N, Conti M. 2019. A new secure data dissemination model in internet of drones. In: ICC 2019-2019 IEEE International Conference on Communications (ICC) .Piscataway: IEEE DOI 10.1109/ICC.2019.8761372.
+> Al-Mousa A, Sababha BH, Al-Madi N, Barghouthi A, Younisse R. 2019. UTSim: a framework and simulator for UAV air traf fi c integration, control, and communication. International Journal of Advanced Robotic Systems 16(5) :1729881419870937 DOI 10.1177/1729881419870937.
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 28/35
+
+Alam M, Chamoli A, Hasan N. 2022. Smart cities and the internet of drones. In: The Internet of Drones . New Jersey: Apple Academic Press, 295 –322. 
+
+Alam MS, Kurt GK, Yanikomeroglu H, Zhu P, Dao ND. 2021. High altitude platform station based super macro base station constellations. IEEE Communications Magazine 59(1) :103 –109 DOI 10.1109/MCOM.001.2000542. 
+
+Albanese A, Sciancalepore V, Costa-Pérez X. 2021. First responders got wings: UAVs to the rescue of localization operations in beyond 5G systems. IEEE Communications Magazine 
+
+59(11) :28 –34 DOI 10.1109/MCOM.101.2100273. 
+
+Albeaino G, Gheisari M, Franz BW. 2019. A systematic review of unmanned aerial vehicle application areas and technologies in the AEC domain. Journal of Information Technology in Construction 24 :381 –405. 
+
+Alfeo AL, Cimino MG, Vaglini G. 2019. Enhancing biologically inspired swarm behavior: metaheuristics to foster the optimization of UAVs coordination in target search. Computers & Operations Research 110(2) :34 –47 DOI 10.1016/j.cor.2019.05.021. 
+
+Alghamdi Y, Munir A, La HM. 2021. Architecture, classi fi cation, and applications of contemporary unmanned aerial vehicles. IEEE Consumer Electronics Magazine 10(6) :9 –20 DOI 10.1109/MCE.2021.3063945. 
+
+Alkadi R, Alnuaimi N, Yeun CY, Shoufan A. 2022. Blockchain interoperability in unmanned aerial vehicles networks: state-of-the-art and open issues. IEEE Access 10 :14463 –14479 DOI 10.1109/ACCESS.2022.3145199. 
+
+Alnuaimi MAS. 2021. Aerial planning for fl ying Taxi of Dubai. Thesis. Rochester Institute of Technology. Available at https://scholarworks.rit.edu/theses/10980 .
+
+Aloqaily M, Bouachir O, Boukerche A, Ridhawi IA. 2021. Design guidelines for blockchain-assisted 5G-UAV networks. IEEE Network 35(1) :64 –71 DOI 10.1109/MNET.011.2000170. 
+
+Alsamhi SH, Afghah F, Sahal R, Hawbani A, Al-qaness MAA, Lee B, Guizani M. 2021. Green internet of things using UAVs in B5G networks: a review of applications and strategies. Ad Hoc Networks 117 :102505 DOI 10.1016/j.adhoc.2021.102505. 
+
+Alvares P, Silva L, Magaia N. 2021. Blockchain-based solutions for UAV-assisted connected vehicle networks in smart cities: a review, open issues, and future perspectives. Telecom 
+
+2(1) :108 –140 DOI 10.3390/telecom2010008. 
+
+Alzahrani B, Oubbati OS, Barnawi A, Atiquzzaman M, Alghazzawi D. 2020. UAV assistance paradigm: state-of-the-art in applications and challenges. Journal of Network and Computer Applications 166(1) :102706 DOI 10.1016/j.jnca.2020.102706. 
+
+Atoev S, Kwon O-J, Kim C-Y, Lee S-H, Choi Y-R, Kwon K-R. 2019. The secure UAV communication link based on OTP encryption technique. In: 2019 Eleventh International Conference on Ubiquitous and Future Networks (ICUFN) . Piscataway: IEEE. 
+
+Bagloee SA, Tavana M, Asadi M, Oliver T. 2016. Autonomous vehicles: challenges, opportunities, and future implications for transportation policies. Journal of Modern Transportation 
+
+24(4) :284 –303 DOI 10.1007/s40534-016-0117-3. 
+
+Boukoberine MN, Zhou Z, Benbouzid M. 2019. Power supply architectures for drones —a review. In: IECON 2019-45th Annual Conference of the IEEE Industrial Electronics Society . Piscataway: IEEE. 
+
+Ch R, Srivastava G, Reddy Gadekallu T, Maddikunta PKR, Bhattacharya S. 2020. Security and privacy of UAV data using blockchain technology. Journal of Information security and Applications 55(3) :102670 DOI 10.1016/j.jisa.2020.102670.   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 29/35
+
+Chao H, Maheshwari A, Sudarsanan V, Tamaskar S, DeLaurentis DA. 2018. UAV traf fi cinformation exchange network. In: 2018 Aviation Technology, Integration, and Operations Conference DOI 10.2514/6.2018-3347. 
+
+Chaurasia R, Mohindru V. 2021. Unmanned aerial vehicle (UAV): a comprehensive survey. 
+
+Unmanned Aerial Vehicles for Internet of Things (IoT) Concepts, Techniques, and Applications 
+
+1–27 DOI 10.1002/9781119769170.ch1. 
+
+Chen N, Chen Y, You Y, Ling H, Liang P, Zimmermann R. 2016. Dynamic urban surveillance video stream processing using fog computing. In: 2016 IEEE Second International Conference on Multimedia Big Data (BigMM) . Piscataway: IEEE. 
+
+Cherif N, Jaafar W, Yanikomeroglu H, Yongacoglu A. 2021. 3D aerial highway: the key enabler of the retail industry transformation. IEEE Communications Magazine 59(9) :65 –71 DOI 10.1109/MCOM.010.2100072. 
+
+Ciampa E, Vito LDe, Pecce MR. 2019. Practical issues on the use of drones for construction inspections. Journal of Physics: Conference Series 1249 :12016 DOI 10.1088/1742-6596/1249/1/012016. 
+
+Cristiani D, Bottonelli F, Trotta A, Felice MD. 2020. Inventory management through mini-drones: architecture and proof-of-concept implementation. In: 2020 IEEE 21st International Symposium on “A World of Wireless, Mobile and Multimedia Networks ” (WoWMoM) .Piscataway: IEEE DOI 10.1109/WoWMoM49955.2020.00060. 
+
+Dai M, Su Z, Xu Q, Zhang N. 2021. Vehicle assisted computing of fl oading for unmanned aerial vehicles in smart city. IEEE Transactions on Intelligent Transportation Systems 22(3) :1932 –1944 DOI 10.1109/TITS.2021.3052979. 
+
+Euchi J. 2021. Do drones have a realistic place in a pandemic fi ght for delivering medical supplies in healthcare systems problems? Amsterdam: Elsevier, 182 –190. 
+
+Fotouhi A, Qiang H, Ding M, Hassan M, Giordano LG, Garcia-Rodriguez A, Yuan J. 2019. 
+
+Survey on UAV cellular communications: practical aspects, standardization advancements, regulation, and security challenges. IEEE Communications Surveys & Tutorials 21(4) :3417 –3442 DOI 10.1109/COMST.2019.2906228. 
+
+Fraga-Lamas P, Ramos L, Mondéjar-Guerra V, Fernández-Caramés TM. 2019. A review on IoT deep learning UAV systems for autonomous obstacle detection and collision avoidance. Remote Sensing 11(18) :2144 DOI 10.3390/rs11182144. 
+
+Galkin B, Kibilda J, DaSilva LA. 2017. Coverage analysis for low-altitude UAV networks in urban environments. In: GLOBECOM 2017-2017 IEEE Global Communications Conference. 
+
+Piscataway: IEEE. 
+
+García-Magariño I, Lacuesta R, Rajarajan M, Lloret J. 2019. Security in networks of unmanned aerial vehicles for surveillance with an agent-based approach inspired by the principles of blockchain. Ad Hoc Networks 86(3) :72 –82 DOI 10.1016/j.adhoc.2018.11.010. 
+
+Ghribi E, Khoei TT, Gorji HT, Ranganathan P, Kaabouch N. 2020. A secure blockchain-based communication approach for UAV networks. In: 2020 IEEE International Conference on Electro Information Technology (EIT) . Piscataway: IEEE DOI 10.1109/EIT48999.2020.9208314. 
+
+Green DR, Gómez C. 2020. From radio-controlled model aircraft to drones. In: Unmanned Aerial Remote Sensing . Boca Raton: CRC Press, 13 –34. 
+
+Green DR, Hagon JJ, Gómez C, Gregory BJ. 2019. Using low-cost UAVs for environmental monitoring, mapping, and modelling: examples from the coastal zone. Coastal Management 
+
+2019 :465 –501 DOI 10.1016/B978-0-12-810473-6.00022-4.   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 30/35
+
+Gu J, Su T, Wang Q, Du X, Guizani M. 2018. Multiple moving targets surveillance based on a cooperative network for multi-UAV. IEEE Communications Magazine 56(4) :82 –89 DOI 10.1109/MCOM.2018.1700422. 
+
+Gupta A, Afrin T, Scully E, Yodo N. 2021. Advances of UAVs toward future transportation: the state-of-the-art, challenges, and opportunities. Future Transportation 1(2) :326 –350 DOI 10.3390/futuretransp1020019. 
+
+Gupta L, Jain R, Vaszkun G. 2015. Survey of important issues in UAV communication networks. 
+
+IEEE Communications Surveys & Tutorials 18(2) :1123 –1152 DOI 10.1109/COMST.2015.2495297. 
+
+Hameed AA. 2019. Smart city planning and sustainable development. IOP Conference Series: Materials Science and Engineering 518(2) :22042 DOI 10.1088/1757-899X/518/2/022042. 
+
+Islam A, Rahim T, Masuduzzaman MD, Shin SOOY. 2021. A blockchain-based arti fi cial intelligence-empowered contagious pandemic situation supervision scheme using internet of drone things. IEEE Wireless Communications 28(4) :166 –173 DOI 10.1109/MWC.001.2000429. 
+
+Jain R, Nagrath P, Thakur N, Saini D, Sharma N, Hemanth DJ. 2021. Towards a smarter surveillance solution: the convergence of smart city and energy ef fi cient unmanned aerial vehicle technologies. In: Development and Future of Internet of Drones (IoD): Insights, Trends and Road Ahead . Cham: Springer, 109 –140. 
+
+Keele S. 2007. Guidelines for performing systematic literature reviews in software engineering. Technical report, ver. 2.3 ebse technical report. ebse. 
+
+Khan NA, Jhanjhi NZ, Brohi SN, Nayyar A. 2020a. Emerging use of UAV ’s: secure communication protocol issues and challenges. Drones in Smart-Cities 2020 :37 –55 DOI 10.1016/B978-0-12-819972-5.00003-3. 
+
+Khan NA, Jhanjhi NZ, Brohi SN, Usmani RSA, Nayyar A. 2020b. Smart traf fi c monitoring system using unmanned aerial vehicles (UAVs). Computer Communications 157(4) :434 –443 DOI 10.1016/j.comcom.2020.04.049. 
+
+Khan SK, Naseem U, Siraj H, Razzak I, Imran M. 2021a. The role of unmanned aerial vehicles and mmWave in 5G: recent advances and challenges. Transactions on Emerging Telecommunications Technologies 32(7) :e4241 DOI 10.1002/ett.4241. 
+
+Khan MS, Shah SIA, Javed A, Qadri NM, Hussain N. 2021b. A critical analysis of small but heavy-lift multirotor and their fl ight controllers. In: 2021 International Bhurban Conference on Applied Sciences and Technologies (IBCAST) . Piscataway: IEEE. 
+
+Kim J, Moon H, Jung H. 2020. Drone-based parcel delivery using the rooftops of city buildings: model and solution. Applied Sciences 10(12) :4362 DOI 10.3390/app10124362. 
+
+Kitchenham B. 2004. Procedures for performing systematic reviews. Vol. 33. Keele, UK: Keele University, 1 –26. 
+
+Kumar RL, Pham Q-V, Khan F, Piran MJ, Dev K. 2021. Blockchain for securing aerial communications: potentials, solutions, and research directions. Physical Communication 
+
+47(9) :101390 DOI 10.1016/j.phycom.2021.101390. 
+
+Lagkas T, Argyriou V, Bibi S, Sarigiannidis P. 2018. UAV IoT framework views and challenges: towards protecting drones as “Things ”. Sensors 18(11) :4015 DOI 10.3390/s18114015. 
+
+Lee C, Kim S, Chu B. 2021. A survey: fl ight mechanism and mechanical structure of the UAV. 
+
+International Journal of Precision Engineering and Manufacturing 22(4) :719 –743 DOI 10.1007/s12541-021-00489-y. 
+
+Li Y, Ding Q, Li K, Valtchev S, Li S, Yin L. 2021. A survey of electromagnetic in fl uence on UAVs from an EHV power converter stations and possible countermeasures. Electronics 10(6) :701 DOI 10.3390/electronics10060701.   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 31/35
+
+Li B, Sun J, Zhou W, Wen C-Y, Low KH, Chen C-K. 2020. Transition optimization for a VTOL tail-sitter UAV. IEEE/ASME Transactions on Mechatronics 25(5) :2534 –2545 DOI 10.1109/TMECH.2020.2983255. 
+
+Liang X, Zhao J, Shetty S, Li D. 2017. Towards data assurance and resilience in IoT using blockchain. In: MILCOM 2017-2017 IEEE Military Communications Conference (MILCOM). 
+
+Piscataway: IEEE. 
+
+Liu L, Sha fi q M, Sonawane VR, Murthy MYB, Reddy PCS, Reddy KMNC. 2022. Spectrum trading and sharing in unmanned aerial vehicles based on distributed blockchain consortium system. Computers and Electrical Engineering 103(5) :108255 DOI 10.1016/j.compeleceng.2022.108255. 
+
+Lucic MC, Bouhamed O, Ghazzai H, Khanffor A, Massoud Y. 2023. Leveraging UAVs to enable dynamic and smart aerial infrastructure for ITS and smart cities: an overview. Drones 7(2) :79 DOI 10.3390/drones7020079. 
+
+Lykou G, Moustakas D, Gritzalis D. 2020. Defending airports from UAS: a survey on cyber-attacks and counter-drone sensing technologies. Sensors 20(12) :3537 DOI 10.3390/s20123537. 
+
+Macaulay MO, Sha fi ee M. 2022. Machine learning techniques for robotic and autonomous inspection of mechanical systems and civil infrastructure. Autonomous Intelligent Systems 2(1) :8 DOI 10.1007/s43684-022-00025-3. 
+
+Maes WH, Steppe K. 2019. Perspectives for remote sensing with unmanned aerial vehicles in precision agriculture. Trends in Plant Science 24(2) :152 –164 DOI 10.1016/j.tplants.2018.11.007. 
+
+Marzouk OA. 2022. Urban air mobility and fl ying cars: overview, examples, prospects, drawbacks, and solutions. Open Engineering 12(1) :662 –679 DOI 10.1515/eng-2022-0379. 
+
+Mendoza MA, Rodriguez M, Lhuillery S. 2018. Paper to be presented at DRUID18 Copenhagen Business School, Copenhagen, Denmark June 11 –13, 2018 DOI 10.1016/j.techfore.2020.120539. 
+
+Mogili UR, Deepak B. 2018. Review on application of drone systems in precision agriculture. 
+
+Procedia Computer Science 133(4) :502 –509 DOI 10.1016/j.procs.2018.07.063. 
+
+Mohamed N, Al-Jaroodi J, Jawhar I, Idries A, Mohammed F. 2020. Unmanned aerial vehicles applications in future smart cities. Technological Forecasting and Social Change 153(4) :119293 DOI 10.1016/j.techfore.2018.05.004. 
+
+Mohamed N, Lazarova-Molnar S, Al-Jaroodi J. 2017. Cloud of things: optimizing smart city services. In: 2017 7th International Conference on Modeling, Simulation, and Applied Optimization (ICMSAO) . Piscataway: IEEE. 
+
+Mohsan SAH, Khan MA, Alsharif MH, Uthansakul P, Solyman AAA. 2022a. Intelligent re fl ecting surfaces assisted UAV communications for massive networks: current trends, challenges, and research directions. Sensors 22(14) :5278 DOI 10.3390/s22145278. 
+
+Mohsan SAH, Zahra QA, Khan MA, Alsharif MH, Elhaty IA, Jahid A. 2022b. Role of drone technology helping in alleviating the COVID-19 pandemic. Micromachines 13(10) :1593 DOI 10.3390/mi13101593. 
+
+Mugheri AA, Siddiqui MA, Khoso M. 2018. Analysis on security methods of wireless sensor network (WSN). Sukkur IBA Journal of Computing and Mathematical Sciences 2(1) :52 –60 DOI 10.30537/sjcms. 
+
+Naqvi SAR, Hassan SA, Pervaiz H, Ni Q. 2018. Drone-aided communication as a key enabler for 5G and resilient public safety networks. IEEE Communications Magazine 56(1) :36 –42 DOI 10.1109/MCOM.2017.1700451. 
+
+Nassi B, Shabtai A, Masuoka R, Elovici Y. 2019. SoK-security and privacy in the age of drones: threats, challenges, solution mechanisms, and scienti fi c gaps. ArXiv DOI 10.48550/arXiv.1903.05155.   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 32/35
+
+Nikhil N, Shreyas SM, Vyshnavi G, Yadav S. 2020. Unmanned aerial vehicles (UAV) in disaster management applications. In: 2020 Third International Conference on Smart Systems and Inventive Technology (ICSSIT) . Piscataway: IEEE. 
+
+Nikooghadam M, Amintoosi H, Islam SKH, Moghadam MF. 2021. A provably secure and lightweight authentication scheme for internet of drones for smart city surveillance. Journal of Systems Architecture 115(2) :101955 DOI 10.1016/j.sysarc.2020.101955. 
+
+Noor NM, Abdullah A, Hashim M. 2018. Remote sensing UAV/drones and its applications for urban areas: a review. IOP Conference Series: Earth and Environmental Science 169 :12003 DOI 10.1088/1755-1315/169/1/012003. 
+
+Novák A, Sedlackova AN, Bugaj M, Kandera B, Lusiak T. 2020. Use of unmanned aerial vehicles in aircraft maintenance. Transportation Research Procedia 51 :160 –170 DOI 10.1016/j.trpro.2020.11.018. 
+
+Pamnani A, Parvathi V. 2021. Innovations in contemporary marketing through arti fi cial intelligence and robotic drones. Innovations 1(1) :34 –43 DOI 10.52814/PJMA.2021.1105. 
+
+Partheepan S, Sanati F, Hassan J. 2023. Autonomous unmanned aerial vehicles in bush fi re management: challenges and opportunities. Drones 7(1) :47 DOI 10.3390/drones7010047. 
+
+Patel S. 2019. Drone fi lming: creativity versus regulations in autonomous art systems. A case study. 
+
+Media-N 15(1) :17 –23 DOI 10.21900/j.median.v15i1.50. 
+
+Pathak H, Kumar G, Mohapatra SD, Gaikwad BB, Rane J. 2020. Use of drones in agriculture: potentials, problems and policy needs. ICAR-National Institute of Abiotic Stress Management 
+
+4–5. 
+
+Qin C, Li P, Liu J. 2021. Blockchain-enabled charging scheduling for unmanned vehicles in smart cities. Journal of Internet Technology 22(2) :327 –337 DOI 10.3966/160792642021032202008. 
+
+Quan Q, Dai X, Wang S. 2020. Multicopter design and control practice: a series experiments based on MATLAB and Pixhawk . Cham: Springer Nature. 
+
+Raciti A, Rizzo SA, Susinni G. 2018. Drone charging stations over the buildings based on a wireless power transfer system. In: 2018 IEEE/IAS 54th Industrial and Commercial Power Systems Technical Conference (I&CPS) . Piscataway: IEEE. 
+
+Radoglou-Grammatikis P, Sarigiannidis P, Lagkas T, Moscholios I. 2020. A compilation of UAV applications for precision agriculture. Computer Networks 172(3) :107148 DOI 10.1016/j.comnet.2020.107148. 
+
+Ramon-Soria P, Perez-Jimenez M, Arrue BC, Ollero A. 2019. Planning system for integrated autonomous infrastructure inspection using UAVs. In: 2019 International Conference on Unmanned Aircraft Systems (ICUAS) . Piscataway: IEEE. 
+
+Reddy Maddikunta PK, Hakak S, Alazab M, Bhattacharya S, Gadekallu TR, Khan WZ, Pham Q-V. 2021. Unmanned aerial vehicles in smart agriculture: applications, requirements, and challenges. IEEE Sensors Journal 21(16) :17608 –17619 DOI 10.1109/JSEN.2021.3049471. 
+
+Rejeb A, Rejeb K, Simske S, Treiblmaier H. 2021. Humanitarian drones: a review and research agenda. Internet of Things 16(1) :100434 DOI 10.1016/j.iot.2021.100434. 
+
+Sandino J, Vanegas F, Maire F, Caccetta P, Sanderson C, Gonzalez F. 2020. UAV framework for autonomous onboard navigation and people/object detection in cluttered indoor environments. 
+
+Remote Sensing 12(20) :3386 DOI 10.3390/rs12203386. 
+
+Sharma A, Vanjani P, Paliwal N, Basnayaka CMW, Jayakody DNK, Wang H-C, Muthuchidambaranathan P. 2020. Communication and networking technologies for UAVs: a survey. Journal of Network and Computer Applications 168(2) :102739 DOI 10.1016/j.jnca.2020.102739.   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 33/35
+
+Sharma V, You I, Jayakody DNK, Reina DG, Choo K-KR. 2019. Neural-blockchain-based ultrareliable caching for edge-enabled UAV networks. IEEE Transactions on Industrial Informatics 15(10) :5723 –5736 DOI 10.1109/TII.2019.2922039. 
+
+Sharma V, You I, Kul G. 2017. Socializing drones for inter-service operability in ultra-dense wireless networks using blockchain. In: Proceedings of the 2017 International Workshop on Managing Insider Security Threats DOI 10.1145/3139923.3139932. 
+
+Stankov U, Kennell J, Morrison AM, Vuji čić MD. 2019. The view from above: the relevance of shared aerial drone videos for destination marketing. Journal of Travel & Tourism Marketing 
+
+36(7) :808 –822 DOI 10.1080/10548408.2019.1575787. 
+
+Tahir A, Böling J, Haghbayan M-H, Toivonen HT, Plosila J. 2019. Swarms of unmanned aerial vehicles —a survey. Journal of Industrial Information Integration 16 :100106 DOI 10.1016/j.jii.2019.100106. 
+
+Tká č M, Mésáro š P. 2019. Utilizing drone technology in the civil engineering. Selected Scienti fi cPapers-Journal of Civil Engineering 14(1) :27 –37 DOI 10.1515/sspjce-2019-0003. 
+
+Vinogradov E, Sallouha H, De Bast S, Azari MM, Pollin S. 2019. Tutorial on UAV: a blue sky view on wireless communication. ArXiv DOI 10.48550/arXiv.1901.02306. 
+
+Watkins S, Burry J, Mohamed A, Marino M, Prudden S, Fisher A, Kloet N, Jakobi T, Clothier R. 2020. Ten questions concerning the use of drones in urban environments. Building and Environment 167(1) :106458 DOI 10.1016/j.buildenv.2019.106458. 
+
+Wawrla L, Maghazei O, Netland T. 2019. Applications of drones in warehouse operations. Whitepaper. ETH Zurich, D-MTEC212. Available at https://api.semanticscholar.org/CorpusID: 210959399} .
+
+Xiao W, Li M, Alzahrani B, Alotaibi R, Barnawi A, Ai Q. 2021. A blockchain-based secure crowd monitoring system using UAV swarm. IEEE Network 35(1) :108 –115 DOI 10.1109/MNET.011.2000210. 
+
+Xu J, Ota K, Dong M. 2020. Big data on the fl y: UAV-mounted mobile edge computing for disaster management. IEEE Transactions on Network Science and Engineering 7(4) :2620 –2630 DOI 10.1109/TNSE.2020.3016569. 
+
+Yaacoub J-P, Noura H, Salman O, Chehab A. 2020. Security analysis of drones systems: attacks, limitations, and recommendations. Internet of Things 11(2) :100218 DOI 10.1016/j.iot.2020.100218. 
+
+Yan C, Fu L, Zhang J, Wang J. 2019. A comprehensive survey on UAV communication channel modeling. IEEE Access 7:107769 –107792 DOI 10.1109/ACCESS.2019.2933173. 
+
+Yigitcanlar T, Desouza K, Butler L, Roozkhosh F. 2020. Contributions and risks of arti fi cial intelligence (AI) in building smarter cities: insights from a systematic review of the literature. 
+
+Energies 13(6) :1473 DOI 10.3390/en13061473. 
+
+Yu J, Liu X, Gao Y, Zhang C, Zhang W. 2022. Deep learning for channel tracking in IRS-assisted UAV communication systems. IEEE Transactions on Wireless Communications 21(9) :7711 –
+
+7722 DOI 10.1109/TWC.2022.3160517. 
+
+Yu L, Yang E, Ren P, Luo C, Dobie G, Gu D, Yan X. 2019. Inspection robots in oil and gas industry: a review of current solutions and future trends. In: 2019 25th International Conference on Automation and Computing (ICAC). Piscataway: IEEE. 
+
+Zekiye A, Özkasap Ö. 2023. Blockchain-based federated learning for decentralized energy management systems. ArXiv DOI 10.48550/arXiv.2306.17186. 
+
+Zhai Z, Martínez JF, Beltran V, Martínez NL. 2020. Decision support systems for agriculture 4.0: survey and challenges. Computers and Electronics in Agriculture 170(7) :105256 DOI 10.1016/j.compag.2020.105256.   
+
+> Faisal Abbas Shah et al. (2024), PeerJ Comput. Sci. , DOI 10.7717/peerj-cs.1776 34/35
+
+Zhang Y, Jiang C, Wang Y, Sun F, Wang H. 2018. Design and application of an electric tail rotor drive control (ETRDC) for helicopters with performance tests. Chinese Journal of Aeronautics 
+
+31(9) :1894 –1901 DOI 10.1016/j.cja.2018.07.007. 
+
+Zhang J, Lou M, Xiang L, Hu L. 2020. Power cognition: enabling intelligent energy harvesting and resource allocation for solar-powered UAVs. Future Generation Computer Systems 
+
+110(12) :658 –664 DOI 10.1016/j.future.2019.05.068. 
+
+Zhao N, Yang X, Ren A, Zhang Z, Zhao W, Hu F, Ur Rehman M, Abbas H, Abolhasan M. 2018. 
+
+Antenna and propagation considerations for amateur UAV monitoring. IEEE Access 6:28001 –
+
+28007 DOI 10.1109/ACCESS.2018.2838062. 
+
+Zhou M, Zhiyan Z, Liu L, Huang J, Lv Z. 2020. Review of vertical take-off and landing fi xed-wing UAV and its application prospect in precision agriculture. International Journal of Precision Agricultural Aviation 3(4) :8 –17 DOI 10.33440/j.ijpaa.20200304.130. 
+
+Zhu Y, Zheng G, Wong K-K. 2019. Blockchain-empowered decentralized storage in air-to-ground industrial networks. IEEE Transactions on Industrial Informatics 15(6) :3593 –3601 DOI 10.1109/TII.2019.2903559. 
+
+Ziliani M, Parkes S, Hoteit I, McCabe M. 2018. Intra-season crop height variability at commercial farm scales using a fi xed-wing UAV. Remote Sensing 10(12) :2007 DOI 10.3390/rs10122007.

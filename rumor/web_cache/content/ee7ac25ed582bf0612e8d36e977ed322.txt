@@ -1,0 +1,1728 @@
+Title: difference between new String[]{} and new String[] in java
+
+URL Source: https://stackoverflow.com/questions/20396182/difference-between-new-string-and-new-string-in-java
+
+Markdown Content:
+arrays - difference between new String[]{} and new String[] in java - Stack Overflow
+
+===============
+
+By clicking “Sign up”, you agree to our terms of service and acknowledge you have read our privacy policy.
+
+ Sign up with Google
+
+ Sign up with GitHub
+
+OR
+==
+
+Email 
+
+Password 
+
+Sign up
+
+Already have an account? Log in
+
+Skip to main content
+
+Stack Overflow
+1.   About
+2.   Products
+3.   For Teams
+
+1.   Stack Overflow for Teams Where developers & technologists share private knowledge with coworkers
+2.   Advertising Reach devs & technologists worldwide about your product, service or employer brand
+3.   Knowledge Solutions Data licensing offering for businesses to build and improve AI tools and models
+4.   Labs The future of collective knowledge sharing
+5.   About the company Visit the blog
+
+Loading…
+
+1.   
+### current community
+
+   
+
+    *   Stack Overflow help chat 
+    *    Meta Stack Overflow
+
+### your communities
+
+Sign up or log in to customize your list. 
+
+### more stack exchange communities
+
+company blog
+
+3.   Log in
+4.   Sign up
+
+Let's set up your homepage Select a few topics you're interested in:
+====================================================================
+
+python javascript c#reactjs java android html flutter c++node.js typescript css r php angular next.js spring-boot machine-learning sql excel ios azure docker
+
+Or search from our full list:
+
+*   javascript
+*   python
+*   java
+*   c#
+*   php
+*   android
+*   html
+*   jquery
+*   c++
+*   css
+*   ios
+*   sql
+*   mysql
+*   r
+*   reactjs
+*   node.js
+*   arrays
+*   c
+*   asp.net
+*   json
+*   python-3.x
+*   .net
+*   ruby-on-rails
+*   sql-server
+*   swift
+*   django
+*   angular
+*   objective-c
+*   excel
+*   pandas
+*   angularjs
+*   regex
+*   typescript
+*   ruby
+*   linux
+*   ajax
+*   iphone
+*   vba
+*   xml
+*   laravel
+*   spring
+*   asp.net-mvc
+*   database
+*   wordpress
+*   string
+*   flutter
+*   postgresql
+*   mongodb
+*   wpf
+*   windows
+*   xcode
+*   amazon-web-services
+*   bash
+*   git
+*   oracle-database
+*   spring-boot
+*   dataframe
+*   azure
+*   firebase
+*   list
+*   multithreading
+*   docker
+*   vb.net
+*   react-native
+*   eclipse
+*   algorithm
+*   powershell
+*   macos
+*   visual-studio
+*   numpy
+*   image
+*   forms
+*   scala
+*   function
+*   vue.js
+*   performance
+*   twitter-bootstrap
+*   selenium
+*   winforms
+*   kotlin
+*   loops
+*   express
+*   dart
+*   hibernate
+*   sqlite
+*   matlab
+*   python-2.7
+*   shell
+*   rest
+*   apache
+*   entity-framework
+*   android-studio
+*   csv
+*   maven
+*   linq
+*   qt
+*   dictionary
+*   unit-testing
+*   asp.net-core
+*   facebook
+*   apache-spark
+*   tensorflow
+*   file
+*   swing
+*   class
+*   unity-game-engine
+*   sorting
+*   date
+*   authentication
+*   go
+*   symfony
+*   t-sql
+*   opencv
+*   matplotlib
+*   .htaccess
+*   google-chrome
+*   for-loop
+*   datetime
+*   codeigniter
+*   perl
+*   http
+*   validation
+*   sockets
+*   google-maps
+*   object
+*   uitableview
+*   xaml
+*   oop
+*   visual-studio-code
+*   if-statement
+*   cordova
+*   ubuntu
+*   web-services
+*   email
+*   android-layout
+*   github
+*   spring-mvc
+*   elasticsearch
+*   kubernetes
+*   selenium-webdriver
+*   ms-access
+*   ggplot2
+*   user-interface
+*   parsing
+*   pointers
+*   google-sheets
+*   c++11
+*   security
+*   machine-learning
+*   google-apps-script
+*   ruby-on-rails-3
+*   templates
+*   flask
+*   nginx
+*   variables
+*   exception
+*   sql-server-2008
+*   gradle
+*   debugging
+*   tkinter
+*   delphi
+*   listview
+*   jpa
+*   asynchronous
+*   web-scraping
+*   haskell
+*   pdf
+*   jsp
+*   ssl
+*   amazon-s3
+*   google-cloud-platform
+*   jenkins
+*   testing
+*   xamarin
+*   wcf
+*   batch-file
+*   generics
+*   npm
+*   ionic-framework
+*   network-programming
+*   unix
+*   recursion
+*   google-app-engine
+*   mongoose
+*   visual-studio-2010
+*   .net-core
+*   android-fragments
+*   assembly
+*   animation
+*   math
+*   svg
+*   session
+*   rust
+*   intellij-idea
+*   hadoop
+*   curl
+*   join
+*   winapi
+*   next.js
+*   django-models
+*   laravel-5
+*   url
+*   heroku
+*   http-redirect
+*   tomcat
+*   google-cloud-firestore
+*   inheritance
+*   webpack
+*   image-processing
+*   gcc
+*   keras
+*   swiftui
+*   asp.net-mvc-4
+*   logging
+*   dom
+*   matrix
+*   pyspark
+*   actionscript-3
+*   button
+*   post
+*   optimization
+*   firebase-realtime-database
+*   web
+*   jquery-ui
+*   cocoa
+*   xpath
+*   iis
+*   d3.js
+*   javafx
+*   firefox
+*   xslt
+*   internet-explorer
+*   caching
+*   select
+*   asp.net-mvc-3
+*   opengl
+*   events
+*   asp.net-web-api
+*   plot
+*   dplyr
+*   encryption
+*   magento
+*   stored-procedures
+*   search
+*   amazon-ec2
+*   ruby-on-rails-4
+*   memory
+*   canvas
+*   audio
+*   multidimensional-array
+*   random
+*   jsf
+*   vector
+*   redux
+*   cookies
+*   input
+*   facebook-graph-api
+*   flash
+*   indexing
+*   xamarin.forms
+*   arraylist
+*   ipad
+*   cocoa-touch
+*   data-structures
+*   video
+*   azure-devops
+*   model-view-controller
+*   serialization
+*   apache-kafka
+*   jdbc
+*   woocommerce
+*   razor
+*   routes
+*   awk
+*   mod-rewrite
+*   servlets
+*   excel-formula
+*   beautifulsoup
+*   filter
+*   docker-compose
+*   iframe
+*   aws-lambda
+*   design-patterns
+*   text
+*   visual-c++
+*   django-rest-framework
+*   cakephp
+*   mobile
+*   android-intent
+*   struct
+*   react-hooks
+*   methods
+*   groovy
+*   mvvm
+*   lambda
+*   ssh
+*   checkbox
+*   time
+*   ecmascript-6
+*   grails
+*   google-chrome-extension
+*   installation
+*   cmake
+*   sharepoint
+*   shiny
+*   spring-security
+*   jakarta-ee
+*   plsql
+*   android-recyclerview
+*   core-data
+*   types
+*   sed
+*   meteor
+*   android-activity
+*   activerecord
+*   bootstrap-4
+*   websocket
+*   graph
+*   replace
+*   group-by
+*   scikit-learn
+*   vim
+*   file-upload
+*   junit
+*   boost
+*   memory-management
+*   sass
+*   async-await
+*   import
+*   deep-learning
+*   error-handling
+*   eloquent
+*   dynamic
+*   soap
+*   dependency-injection
+*   silverlight
+*   layout
+*   apache-spark-sql
+*   charts
+*   deployment
+*   browser
+*   gridview
+*   svn
+*   while-loop
+*   google-bigquery
+*   vuejs2
+*   highcharts
+*   dll
+*   ffmpeg
+*   view
+*   foreach
+*   makefile
+*   plugins
+*   redis
+*   c#-4.0
+*   reporting-services
+*   jupyter-notebook
+*   unicode
+*   merge
+*   reflection
+*   https
+*   server
+*   google-maps-api-3
+*   twitter
+*   oauth-2.0
+*   extjs
+*   terminal
+*   axios
+*   pip
+*   split
+*   cmd
+*   pytorch
+*   encoding
+*   django-views
+*   collections
+*   database-design
+*   hash
+*   netbeans
+*   automation
+*   data-binding
+*   ember.js
+*   build
+*   tcp
+*   pdo
+*   sqlalchemy
+*   apache-flex
+*   entity-framework-core
+*   concurrency
+*   mysqli
+*   command-line
+*   spring-data-jpa
+*   printing
+*   react-redux
+*   java-8
+*   lua
+*   html-table
+*   ansible
+*   neo4j
+*   service
+*   jestjs
+*   parameters
+*   enums
+*   material-ui
+*   flexbox
+*   module
+*   promise
+*   visual-studio-2012
+*   outlook
+*   web-applications
+*   firebase-authentication
+*   webview
+*   uwp
+*   jquery-mobile
+*   utf-8
+*   datatable
+*   python-requests
+*   parallel-processing
+*   colors
+*   drop-down-menu
+*   scipy
+*   scroll
+*   tfs
+*   hive
+*   count
+*   syntax
+*   ms-word
+*   twitter-bootstrap-3
+*   ssis
+*   fonts
+*   rxjs
+*   constructor
+*   google-analytics
+*   file-io
+*   three.js
+*   paypal
+*   powerbi
+*   graphql
+*   cassandra
+*   discord
+*   graphics
+*   compiler-errors
+*   gwt
+*   socket.io
+*   react-router
+*   backbone.js
+*   solr
+*   memory-leaks
+*   url-rewriting
+*   datatables
+*   nlp
+*   oauth
+*   terraform
+*   datagridview
+*   drupal
+*   zend-framework
+*   oracle11g
+*   knockout.js
+*   triggers
+*   neural-network
+*   interface
+*   django-forms
+*   angular-material
+*   casting
+*   jmeter
+*   google-api
+*   linked-list
+*   path
+*   timer
+*   arduino
+*   django-templates
+*   proxy
+*   orm
+*   directory
+*   windows-phone-7
+*   parse-platform
+*   visual-studio-2015
+*   cron
+*   conditional-statements
+*   push-notification
+*   functional-programming
+*   primefaces
+*   pagination
+*   model
+*   jar
+*   xamarin.android
+*   hyperlink
+*   uiview
+*   vbscript
+*   visual-studio-2013
+*   google-cloud-functions
+*   gitlab
+*   azure-active-directory
+*   jwt
+*   download
+*   swift3
+*   sql-server-2005
+*   process
+*   configuration
+*   rspec
+*   pygame
+*   properties
+*   combobox
+*   callback
+*   windows-phone-8
+*   linux-kernel
+*   safari
+*   scrapy
+*   permissions
+*   emacs
+*   x86
+*   clojure
+*   scripting
+*   raspberry-pi
+*   scope
+*   io
+*   azure-functions
+*   expo
+*   compilation
+*   responsive-design
+*   mongodb-query
+*   nhibernate
+*   angularjs-directive
+*   request
+*   bluetooth
+*   binding
+*   reference
+*   dns
+*   architecture
+*   3d
+*   playframework
+*   pyqt
+*   version-control
+*   discord.js
+*   doctrine-orm
+*   package
+*   f#
+*   rubygems
+*   get
+*   sql-server-2012
+*   autocomplete
+*   tree
+*   openssl
+*   datepicker
+*   kendo-ui
+*   jackson
+*   yii
+*   controller
+*   grep
+*   nested
+*   xamarin.ios
+*   static
+*   null
+*   statistics
+*   transactions
+*   active-directory
+*   datagrid
+*   dockerfile
+*   uiviewcontroller
+*   webforms
+*   discord.py
+*   sas
+*   computer-vision
+*   phpmyadmin
+*   notifications
+*   duplicates
+*   mocking
+*   pycharm
+*   youtube
+*   yaml
+*   nullpointerexception
+*   menu
+*   blazor
+*   sum
+*   plotly
+*   bitmap
+*   asp.net-mvc-5
+*   visual-studio-2008
+*   yii2
+*   floating-point
+*   css-selectors
+*   stl
+*   electron
+*   android-listview
+*   jsf-2
+*   time-series
+*   cryptography
+*   ant
+*   hashmap
+*   character-encoding
+*   stream
+*   msbuild
+*   asp.net-core-mvc
+*   sdk
+*   google-drive-api
+*   jboss
+*   selenium-chromedriver
+*   joomla
+*   devise
+*   cors
+*   navigation
+*   cuda
+*   anaconda
+*   background
+*   frontend
+*   multiprocessing
+*   binary
+*   pyqt5
+*   camera
+*   iterator
+*   linq-to-sql
+*   mariadb
+*   onclick
+*   android-jetpack-compose
+*   ios7
+*   microsoft-graph-api
+*   rabbitmq
+*   android-asynctask
+*   tabs
+*   amazon-dynamodb
+*   laravel-4
+*   environment-variables
+*   uicollectionview
+*   insert
+*   linker
+*   xsd
+*   coldfusion
+*   console
+*   continuous-integration
+*   upload
+*   textview
+*   ftp
+*   opengl-es
+*   macros
+*   operating-system
+*   mockito
+*   localization
+*   formatting
+*   xml-parsing
+*   vuejs3
+*   json.net
+*   type-conversion
+*   data.table
+*   kivy
+*   timestamp
+*   integer
+*   calendar
+*   segmentation-fault
+*   android-ndk
+*   prolog
+*   drag-and-drop
+*   char
+*   crash
+*   jasmine
+*   automated-tests
+*   geometry
+*   dependencies
+*   azure-pipelines
+*   android-gradle-plugin
+*   fortran
+*   itext
+*   sprite-kit
+*   mfc
+*   header
+*   attributes
+*   firebase-cloud-messaging
+*   nosql
+*   format
+*   nuxt.js
+*   odoo
+*   db2
+*   jquery-plugins
+*   event-handling
+*   jenkins-pipeline
+*   julia
+*   leaflet
+*   nestjs
+*   annotations
+*   flutter-layout
+*   keyboard
+*   postman
+*   textbox
+*   arm
+*   visual-studio-2017
+*   stripe-payments
+*   gulp
+*   libgdx
+*   synchronization
+*   timezone
+*   uikit
+*   azure-web-app-service
+*   dom-events
+*   xampp
+*   wso2
+*   crystal-reports
+*   namespaces
+*   aggregation-framework
+*   android-emulator
+*   swagger
+*   uiscrollview
+*   google-sheets-formula
+*   jvm
+*   sequelize.js
+*   chart.js
+*   com
+*   snowflake-cloud-data-platform
+*   subprocess
+*   geolocation
+*   webdriver
+*   html5-canvas
+*   garbage-collection
+*   centos
+*   dialog
+*   sql-update
+*   numbers
+*   concatenation
+*   widget
+*   qml
+*   tuples
+*   set
+*   java-stream
+*   mapreduce
+*   ionic2
+*   smtp
+*   windows-10
+*   android-edittext
+*   rotation
+*   modal-dialog
+*   spring-data
+*   nuget
+*   radio-button
+*   doctrine
+*   http-headers
+*   grid
+*   sonarqube
+*   lucene
+*   xmlhttprequest
+*   listbox
+*   switch-statement
+*   initialization
+*   internationalization
+*   components
+*   boolean
+*   apache-camel
+*   google-play
+*   serial-port
+*   gdb
+*   ios5
+*   ldap
+*   return
+*   youtube-api
+*   pivot
+*   eclipse-plugin
+*   latex
+*   frameworks
+*   tags
+*   containers
+*   github-actions
+*   c++17
+*   subquery
+*   dataset
+*   asp-classic
+*   foreign-keys
+*   label
+*   embedded
+*   uinavigationcontroller
+*   copy
+*   delegates
+*   struts2
+*   google-cloud-storage
+*   migration
+*   protractor
+*   base64
+*   queue
+*   find
+*   uibutton
+*   sql-server-2008-r2
+*   arguments
+*   composer-php
+*   append
+*   jaxb
+*   stack
+*   zip
+*   tailwind-css
+*   cucumber
+*   autolayout
+*   ide
+*   entity-framework-6
+*   iteration
+*   popup
+*   r-markdown
+*   windows-7
+*   airflow
+*   vb6
+*   g++
+*   ssl-certificate
+*   hover
+*   clang
+*   jqgrid
+*   range
+*   gmail
+
+Next You’ll be prompted to create an account to view your personalized homepage.
+
+1.       1.   Home
+    2.   Questions
+    3.   AI Assist Labs
+    4.   Tags
+
+    6.   Challenges
+    7.   Chat
+    8.   Articles
+    9.   Users
+
+    11.   Jobs
+    12.   Companies
+    13.   Collectives 
+    14.   Communities for your favorite technologies. Explore all Collectives
+
+2.   Teams Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+
+Try Teams for free Explore Teams 
+3.   Teams
+4.   Ask questions, find answers and collaborate at work with Stack Overflow for Teams. Explore Teams
+
+##### Collectives™ on Stack Overflow
+
+Find centralized, trusted content and collaborate around the technologies you use most.
+
+Learn more about Collectives
+
+**Teams**
+
+Q&A for work
+
+Connect and share knowledge within a single location that is structured and easy to search.
+
+Learn more about Teams
+
+Hang on, you can't upvote just yet.
+===================================
+
+You'll need to complete a few actions and gain 15 reputation points before being able to upvote. **Upvoting** indicates when questions and answers are useful. What's reputation and how do I get it?
+
+Instead, you can save this post to reference later.
+
+ Save this post for later Not now
+
+Thanks for your vote! 
+
+ You now have 5 free votes weekly.
+==========================================================
+
+Free votes
+*   count toward the total vote score
+*   does not give reputation to the author
+
+Continue to help good content that is interesting, well-researched, and useful, rise to the top! To gain full voting privileges, earn reputation.
+
+Got it!Go to help center to learn more
+
+difference between new String[]{} and new String[] in java
+==========================================================
+
+Ask Question
+
+Asked 11 years, 10 months ago
+
+Modified 3 years, 3 months ago
+
+Viewed 163k times 
+
+This question shows research effort; it is useful and clear
+
+ 3 
+
+Save this question.
+
+Show activity on this post.
+
+I am **fresher** in java ,i have a doubt in java that is
+
+```java
+String array= new String[]{};
+```
+
+1.   what is the use of **{ }** here ?
+2.   what is the difference between `String array=new String[];` and `String array=new String[]{};`
+3.   when I am writing `String array=new String[10]{};` got error why? Help me I am confused.
+
+*   java
+*   arrays
+*   string
+
+Share
+
+Share a link to this question 
+
+Copy link CC BY-SA 4.0
+
+Improve this question
+
+ Follow 
+
+Follow this question to receive notifications
+
+edited Jun 25, 2018 at 7:15
+
+Nitin Bisht
+
+5,389 5 5 gold badges 17 17 silver badges 26 26 bronze badges
+
+ asked Dec 5, 2013 at 9:30
+
+ user3011420 user3011420
+
+2
+
+*   3  `String[] array= new String[]{};`Subhrajyoti Majumder  –Subhrajyoti Majumder 2013-12-05 09:31:31 +00:00 Commented Dec 5, 2013 at 9:31  
+*     go through this tutorial. This may help you to understand the String array and how to initialize. alvinalexander.com/java/…Mdhar9e  –Mdhar9e 2013-12-05 09:34:55 +00:00 Commented Dec 5, 2013 at 9:34  
+
+Add a comment|
+
+8 Answers 8
+-----------
+
+ Sorted by:  Reset to default
+
+This answer is useful
+
+ 27 
+
+Save this answer.
+
+Show activity on this post.
+
+`{}` defines the contents of the array, in this case it is empty. These would both have an array of three `String`s
+
+```java
+String[] array = {"element1","element2","element3"};
+String[] array = new String[] {"element1","element2","element3"};
+```
+
+while `[]` on the expression side (right side of `=`) of a statement defines the size of an intended array, e.g. this would have an array of 10 locations to place `String`s
+
+```java
+String[] array = new String[10];
+```
+
+...But...
+
+```java
+String array = new String[10]{};  //The line you mentioned above
+```
+
+Was wrong because you are defining an array of length 10 (`[10]`), then defining an array of length 0 (`{}`), and trying to set them to the same array reference (`array`) in one statement. Both cannot be set.
+
+**Additionally**
+
+The array should be defined as an array of a given type at the start of the statement like `String[] array`. `String array = /* array value*/` is saying, set an array value to a `String`, not to an array of `String`s.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Jan 24, 2021 at 12:49
+
+ answered Dec 5, 2013 at 9:31
+
+Ross Drew Ross Drew
+
+8,256 3 3 gold badges 44 44 silver badges 53 53 bronze badges
+
+ Sign up to request clarification or add additional context in comments. 
+
+Comments
+--------
+
+Add a comment
+
+This answer is useful
+
+ 13 
+
+Save this answer.
+
+Show activity on this post.
+
+`String array=new String[];` and `String array=new String[]{};` both are invalid statement in java.
+
+It will gives you an error that you are trying to assign `String array` to `String` datatype. More specifically error is like this `Type mismatch: cannot convert from String[] to String`
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Dec 5, 2013 at 9:33
+
+Vimal Bera Vimal Bera
+
+10.5k 4 4 gold badges 27 27 silver badges 48 48 bronze badges
+
+5 Comments
+----------
+
+Add a comment
+
+Vimal Bera
+
+Vimal Bera Over a year ago
+
+Why this answer is downvoted? May I know the reason?
+
+2013-12-05T09:36:20.84Z+00:00
+
+1
+
+Reply
+
+*   Copy link
+
+SpringLearner
+
+SpringLearner Over a year ago
+
+Not only your answer but all the answers are downvoted.+1 from my side
+
+2013-12-05T09:38:40.953Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+Vimal Bera
+
+Vimal Bera Over a year ago
+
+Others answer are not right. But mine is. That's why I asked. Others are saying there is no difference in both intialization which is wrong.
+
+2013-12-05T09:40:05.463Z+00:00
+
+1
+
+Reply
+
+*   Copy link
+
+Joe Gruberman
+
+Joe Gruberman Over a year ago
+
+@VimalBera It looks like you may have gotten downvoted because the main question was in parts 1 and 2, i.e. the difference in using the curly braces and how curly braces are actually used. You did answer part 3, which is really a separate question. That might have been fixed with just an edit to the original question. (Just my opinion.)
+
+2018-02-04T18:43:38.14Z+00:00
+
+1
+
+Reply
+
+*   Copy link
+
+Vimal Bera
+
+Vimal Bera Over a year ago
+
+@JoeGruberman Yes, you are right. Answer was given long ago and in my defence, I would say; I was beginner on SO in 2013 hence might have skipped the whole different part of questions. But I'm not saying don't downvote my answers, but if you're downvoting it, please let me know the reason so that I can improve. Cheers :)
+
+2018-02-05T06:12:00.423Z+00:00
+
+1
+
+Reply
+
+*   Copy link
+
+Add a comment
+
+This answer is useful
+
+ 8 
+
+Save this answer.
+
+Show activity on this post.
+
+You have a choice, when you create an object array (as opposed to an array of primitives).
+
+One option is to specify a size for the array, in which case it will just contain lots of nulls.
+
+```java
+String[] array = new String[10]; // Array of size 10, filled with nulls.
+```
+
+The other option is to specify what will be in the array.
+
+```java
+String[] array = new String[] {"Larry", "Curly", "Moe"};  // Array of size 3, filled with stooges.
+```
+
+But you can't mix the two syntaxes. Pick one or the other.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Jan 13, 2015 at 21:22
+
+ answered Dec 5, 2013 at 9:37
+
+Dawood ibn Kareem Dawood ibn Kareem
+
+80.1k 15 15 gold badges 102 102 silver badges 112 112 bronze badges
+
+1 Comment
+---------
+
+Add a comment
+
+rooni
+
+rooni Over a year ago
+
+What should i do if i have some elements that i want to assign to the array but want to make the size of the array bigger than that (because i may insert more elements in the future).
+
+2018-11-13T05:21:49.457Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+This answer is useful
+
+ 3 
+
+Save this answer.
+
+Show activity on this post.
+
+### TL;DR
+
+*   An array variable has to be typed `T[]`
+
+ (note that T can be an arry type itself -> multidimensional arrays)
+*   The length of the array must be determined either by: 
+    *   giving it an explicit size
+
+ (can be `int` constant or `int` expression, see `n` below)
+    *   initializing all the values inside the array
+
+ (length is implicitly calculated from given elements)
+
+*   Any variable that is typed `T[]` has one read-only field: `length` and an index operator `[int]` for reading/writing data at certain indices.
+
+### Replies
+
+> 1. `String[] array= new String[]{};` what is the use of { } here ?
+
+It initializes the array with the values between `{ }`. In this case 0 elements, so `array.length == 0` and `array[0] throws IndexOutOfBoundsException: 0`.
+
+> 2. what is the diff between `String array=new String[];` and `String array=new String[]{};`
+
+The first won't compile for two reasons while the second won't compile for one reason. The common reason is that the type of the variable array has to be an array type: `String[]` not just `String`. Ignoring that (probably just a typo) the difference is:
+
+```java
+new String[]   // size not known, compile error
+new String[]{} // size is known, it has 0 elements, listed inside {}
+new String[0]  // size is known, it has 0 elements, explicitly sized
+```
+
+> 3. when am writing `String array=new String[10]{};` got error why ?
+
+(Again, ignoring the missing `[]` before `array`) In this case you're over-eager to tell Java what to do and you're giving conflicting data. First you tell Java that you want 10 elements for the array to hold and then you're saying you want the array to be empty via `{}`. Just make up your mind and use one of those - Java thinks.
+
+> help me i am confused
+
+### Examples
+
+```java
+String[] noStrings = new String[0];
+String[] noStrings = new String[] { };
+String[] oneString = new String[] { "atIndex0" };
+String[] oneString = new String[1];
+String[] oneString = new String[] { null }; // same as previous
+String[] threeStrings = new String[] { "atIndex0", "atIndex1", "atIndex2" };
+String[] threeStrings = new String[] { "atIndex0", null, "atIndex2" }; // you can skip an index
+String[] threeStrings = new String[3];
+String[] threeStrings = new String[] { null, null, null }; // same as previous
+int[] twoNumbers = new int[2];
+int[] twoNumbers = new int[] { 0, 0 }; // same as above
+int[] twoNumbers = new int[] { 1, 2 }; // twoNumbers.length == 2 && twoNumbers[0] == 1 && twoNumbers[1] == 2
+int n = 2;
+int[] nNumbers = new int[n]; // same as [2] and { 0, 0 }
+int[] nNumbers = new int[2*n]; // same as new int[4] if n == 2
+```
+
+(Here, "same as" means it will construct the same array.)
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Nov 15, 2015 at 17:25
+
+TWiStErRob TWiStErRob
+
+46.8k 29 29 gold badges 183 183 silver badges 278 278 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+This answer is useful
+
+ 2 
+
+Save this answer.
+
+Show activity on this post.
+
+Try this one.
+
+```java
+String[] array1= new String[]{};
+  System.out.println(array1.length);
+  String[] array2= new String[0];
+  System.out.println(array2.length);
+```
+
+Note: there is no byte code difference between new String[]{}; and new String[0];
+
+`new String[]{}` is array initialization with values.
+
+`new String[0];` is array declaration(only allocating memory)
+
+`new String[10]{};` is not allowed because `new String[10]{ may be here 100 values};`
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Dec 5, 2013 at 9:44
+
+ answered Dec 5, 2013 at 9:36
+
+Prabhakaran Ramaswamy Prabhakaran Ramaswamy
+
+26.1k 10 10 gold badges 61 61 silver badges 65 65 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+This answer is useful
+
+ 1 
+
+Save this answer.
+
+Show activity on this post.
+
+```java
+String array[]=new String[]; and String array[]=new String[]{};
+```
+
+No difference,these are just different ways of declaring array
+
+_String array=new String[10]{}; got error why ?_
+
+This is because you can not declare the size of the array in this format.
+
+right way is
+
+```java
+String array[]=new String[]{"a","b"};
+```
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Dec 5, 2013 at 9:39
+
+ answered Dec 5, 2013 at 9:33
+
+SpringLearner SpringLearner
+
+13.9k 20 20 gold badges 82 82 silver badges 117 117 bronze badges
+
+1 Comment
+---------
+
+Add a comment
+
+SpringLearner
+
+SpringLearner Over a year ago
+
+@boosshuru Arent you satisfied with mine answer?If you have queries feel free to ask
+
+2013-12-05T09:40:38.46Z+00:00
+
+0
+
+Reply
+
+*   Copy link
+
+This answer is useful
+
+ 1 
+
+Save this answer.
+
+Show activity on this post.
+
+**_1.THE USE OF {}:_**
+
+> It initialize the array with the values { }
+
+**_2.The difference between String array=new String[]; and String array=new String[]{};_**
+
+> String array=new String[]; and String array=new String[]{}; both are invalid statement in java.
+> 
+> 
+> It will gives you an error that you are trying to assign String array to String datatype. More specifically error is like this Type mismatch: cannot convert from String[] to String
+
+**_3.String array=new String[10]{}; got error why?_**
+
+> Wrong because you are defining an array of length 10 ([10]), then defining an array of length _String[10]_**{}** 0
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Oct 3, 2018 at 6:08
+
+Aamir Kalimi Aamir Kalimi
+
+1,951 3 3 gold badges 17 17 silver badges 20 20 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+This answer is useful
+
+ 0 
+
+Save this answer.
+
+Show activity on this post.
+
+Theory above is well explained.
+
+A PRACTICAL USE: Declare an array on the spot for a method parameter.
+
+```java
+MyResult result = myMethod(new String[]{"value1", "value2"});
+```
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 4.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Jul 26, 2022 at 15:56
+
+Bruno Genovese Bruno Genovese
+
+61 8 8 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+Your Answer
+-----------
+
+Thanks for contributing an answer to Stack Overflow!
+
+*   Please be sure to _answer the question_. Provide details and share your research!
+
+But _avoid_ …
+
+*   Asking for help, clarification, or responding to other answers.
+*   Making statements based on opinion; back them up with references or personal experience.
+
+To learn more, see our tips on writing great answers.
+
+Draft saved
+
+Draft discarded
+
+### Sign up or log in
+
+ Sign up using Google 
+
+ Sign up using Email and Password 
+
+Submit
+
+### Post as a guest
+
+Name 
+
+Email 
+Required, but never shown
+
+ Post Your Answer  Discard 
+By clicking “Post Your Answer”, you agree to our terms of service and acknowledge you have read our privacy policy.
+
+*    The Overflow Blog 
+*    Your runbooks are obsolete in the age of agents 
+*    Featured on Meta 
+*     A First Look: Stack Overflow Redesign 
+*     Community Asks Sprint Announcement - October/November 2025 
+*     Upcoming opinion-based questions alpha experiment on Stack Overflow 
+
+Report this ad
+
+Report this ad
+
+Community activity
+
+Last 1 hr
+
+*   Users online activity  8337 users online 
+*    17 questions 
+*    14 answers 
+*    45 comments 
+*    161 upvotes 
+
+Popular tags
+
+javascript android c c#python java
+
+Popular unanswered question
+
+Wrong result when adding up to result in my number conversion program
+
+c math
+
+Brentspine
+*   911
+
+2 days ago
+
+#### Linked
+
+-2 Loop amount of times given inside a For Loop
+
+#### Related
+
+0 String [][] clarification
+
+6 Difference between String[]a and String...a
+
+2 Difference between String[] and Array<String>
+
+4 Array vs array [] for java
+
+37 What is the difference between String[] and String... in Java?
+
+1 Strings [= new String vs = ""]
+
+4 Difference of creating array
+
+6 Difference between new String(char[]) and char[].toString
+
+3 What is the difference between String name[] = {}; and String [] name = {};
+
+1 Is there a difference between String[]::new and new String[] in java?
+
+#### Hot Network Questions
+
+*    how is the pronunciation 'ç' is different from 's'?
+*    What percentage of federal employees are living "paycheck to paycheck"?
+*    Do EU citizens need ETA to visit Gibraltar?
+*    Why are motors in racing electric vehicles so much louder than in consumer electric vehicles?
+*    Origins of the Airy function
+*    The world is a Graveyard so I must leave it
+*    Enolizability of different enolizable sites
+*    How do I remove items from the Windows 11 right-click menu?
+*    Where does the family name "Hii" originate?
+*    Will cream of tartar make my homemade sports drink taste weird?
+*    Is 1,111,111,111,111,111,111 prime?
+*    Split flap clock stepper code
+*    How often should the chain on a bike being used for indoor training be lubricated?
+*    All of my Win+[Key] keyboard shortcuts are broken
+*    The Paradox of Meaning in a Seemingly Meaningless Universe
+*    How can decompressing neutronium accelerate beta decay to form heavy elements?
+*    What railway "ticket strategy" should I use for this Japan itinerary?
+*    How filesystem blocks relate to NVMe blocks
+*    Was the bartender character in Hopkins FBI based on a real horror movie actor?
+*    How to highlight a single equation in an align block?
+*    In which areas can one make fair graded tests which allow students to use ChatGPT?
+*    Calling sp_getapplock and sp_releaseapplock in context of a linked server
+*    Two triangles in a light bulb
+*    Tips to Identify a burnt resistor on PCB
+
+Question feed
+
+Subscribe to RSS
+================
+
+ Question feed 
+To subscribe to this RSS feed, copy and paste this URL into your RSS reader.
+
+ 
+
+lang-java
+
+Why are you flagging this comment?
+==================================
+
+Probable spam. 
+This comment promotes a product, service or website while failing to disclose the author's affiliation.
+
+ 
+
+Unfriendly or contains harassment/bigotry/abuse. 
+This comment is unkind, insulting or attacks another person or group. Learn more in our Abusive behavior policy.
+
+ 
+
+Not needed. 
+This comment is not relevant to the post.
+
+ 
+
+Enter at least 6 characters
+
+Something else. 
+A problem not listed above. Try to be as specific as possible.
+
+ 
+
+Enter at least 6 characters
+
+Flag comment Cancel
+
+You have 0 flags left today
+
+##### Stack Overflow
+
+*   Questions
+*   Help
+*   Chat
+
+##### Products
+
+*   Teams
+*   Advertising
+*   Talent
+
+##### Company
+
+*   About
+*   Press
+*   Work Here
+*   Legal
+*   Privacy Policy
+*   Terms of Service
+*   Contact Us
+*    Your Privacy Choices 
+*   Cookie Policy
+
+##### Stack Exchange Network
+
+*   Technology
+*   Culture & recreation
+*   Life & arts
+*   Science
+*   Professional
+*   Business
+*   API
+*   Data
+
+*   Blog
+*   Facebook
+*   Twitter
+*   LinkedIn
+*   Instagram
+
+Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under CC BY-SA. rev 2025.10.21.35661
+
+By continuing to use this website, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our Cookie Policy. By exiting this window, default cookies will be accepted. To reject cookies, select an option from below.
+
+Necessary cookies only
+
+Customize settings

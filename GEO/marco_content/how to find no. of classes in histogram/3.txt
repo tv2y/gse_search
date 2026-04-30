@@ -1,0 +1,58 @@
+Title: All About Histogram Classes
+
+URL Source: https://www.thoughtco.com/different-classes-of-histogram-3126343
+
+Markdown Content:
+### Key Takeaways
+
+*   A histogram shows data with bars, and each bar represents a range of numbers called a class.
+*   The number of classes in a histogram is a rule of thumb and can vary with data size.
+*   Exceptionally, choosing different classes may be better, like using scores for a student test histogram.
+
+A histogram is one of many types of graphs that are frequently used in statistics and probability.Histograms provide a visual display of quantitative data by the use of vertical bars. The height of a bar indicates the number of data points that lie within a particular range of values. These ranges are called classes or bins.
+
+Number of Classes
+-----------------
+
+There is really no rule for how many classes there should be. There are a couple of things to consider about the number of classes. If there was only one class, then all of the data would fall into this class. Our histogram would simply be a single rectangle with height given by the number of elements in our set of data. This would not make a very helpful or useful histogram.
+
+At the other extreme, we could have a multitude of classes. This would result in a multitude of bars, none of which would probably be very tall. It would be very difficult to determine any distinguishing characteristics from the data by using this type of histogram.
+
+To guard against these two extremes we have a rule of thumb to use to determine the number of classes for a histogram. When we have a relatively small set of data, we typically only use around five classes. If the data set is relatively large, then we use around 20 classes.
+
+Again, let it be emphasized that this is a rule of thumb, not an absolute statistical principle. There can be good reasons to have a different number of classes for data. We will see an example of this below.
+
+Definition
+----------
+
+Before we consider a few examples, we will see how to determine what the classes actually are. We begin this process by finding the range of our data. In other words, we subtract the lowest data value from the highest data value.
+
+When the data set is relatively small, we divide the range by five. The quotient is the width of the classes for our histogram. We will probably need to do some rounding in this process, which means that the total number of classes may not end up being five.
+
+When the data set is relatively large, we divide the range by 20. Just as before, this division problem gives us the width of the classes for our histogram. Also, as what we saw previously, our rounding may result in slightly more or slightly less than 20 classes.
+
+In either of the large or small data set cases, we make the first class begin at a point slightly less than the smallest data value. We must do this in such a way that the first data value falls into the first class. Other subsequent classes are determined by the width that was set when we divided the range. We know that we are at the last class when our highest data value is contained by this class.
+
+Example
+-------
+
+For an example we will determine an appropriate class width and classes for the data set: 1.1, 1.9, 2.3, 3.0, 3.2, 4.1, 4.2, 4.4, 5.5, 5.5, 5.6, 5.7, 5.9, 6.2, 7.1, 7.9, 8.3, 9.0, 9.2, 11.1, 11.2, 14.4, 15.5, 15.5, 16.7, 18.9, 19.2.
+
+We see that there are 27 data points in our set. This is a relatively small set and so we will divide the range by five. The range is 19.2 - 1.1 = 18.1. We divide 18.1 / 5 = 3.62. This means that a class width of 4 would be appropriate. Our smallest data value is 1.1, so we start the first class at a point less than this. Since our data consists of positive numbers, it would make sense to make the first class go from 0 to 4.
+
+The classes that result are:
+
+*   0 to 4
+*   4 to 8
+*   8 to 12
+*   12 to 16
+*   16 to 20.
+
+Exceptions
+----------
+
+There may be some very good reasons to deviate from some of the advice above.
+
+For one example of this, suppose there is a multiple choice test with 35 questions on it, and 1000 students at a high school take the test. We wish to form a histogram showing the number of students who attained certain scores on the test. We see that 35/5 = 7 and that 35/20 = 1.75. Despite our rule of thumb giving us the choices of classes of width 2 or 7 to use for our histogram, it may be better to have classes of width 1. These classes would correspond to each question that a student answered correctly on the test. The first of these would be centered at 0 and the last would be centered at 35.
+
+This is yet another example that shows that we always need to think when dealing with statistics.

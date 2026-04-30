@@ -1,0 +1,900 @@
+Title: Robotic systems for upper-limb rehabilitation in multiple sclerosis: a SWOT analysis and the synergies with virtual and augmented environments
+
+URL Source: https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2024.1335147/full
+
+Published Time: 2024-02-27
+
+Markdown Content:
+1 Introduction
+--------------
+
+The extraordinary growth of robotic applications to rehabilitation has offered multiple solutions for the most demanding issues of people with disabilities (Carbone and Gonçalves, 2022; Pierella and Micera, 2022; Sadeghnejad et al., 2023). Among these challenges, we can find the impairments caused by Multiple Sclerosis (MS), a complex disorder of the central nervous system, showing a spectrum of sensory, motor, autonomic, and cognitive difficulties that severely affect a person’s capability to perform several Activities of Daily Living (ADLs) (Dobson and Giovannoni, 2019; Lublin et al., 2022). The signs and symptoms of MS are the consequence of underlying neuropathologic changes that occur in the central nervous system (CNS). The primary mechanism of injury is inflammatory demyelination and, to a variable degree, axonal damage (Lublin, 2005). The classification of MS into subtypes plays a crucial role in both prognosis and treatment decisions. The four subtypes of MS, namely, Relapsing-Remitting MS (RRMS), Primary Progressive MS (PPMS), Secondary Progressive MS (SPMS), and Progressive-Relapsing MS (PRMS), are characterized by distinct clinical manifestations (Lublin et al., 2014; Giovannoni et al., 2016). During RRMS, inflammatory attacks on myelin and nerve fibers cause visual impairments, tingling and numbness, fatigue, intestinal and urinary system disorders, spasticity, and learning and memory impairment. PPMS mainly affects the nerves of the spinal cord, leading to walking difficulties, weakness, stiffness, and balance problems. SPMS is considered the second phase of RRMS and affects around 65% of patients, causing increased weakness, fatigue, stiffness, mental disorders, and psychological impairment. PRMS is the rarest type of MS and affects approximately 5% of patients, presenting symptoms like eye pain, double vision, sexual, intestinal, and urinary system dysfunction, dizziness, and depression (Ghasemi et al., 2017).
+
+Roboticists explore the potential of smart mechatronic devices in the domain of MS by approaching the inter-individual variability and unpredictable progression of the disease to provide patients with dynamic and personalized approaches to rehabilitation (Lamers et al., 2018; Duan et al., 2023; Podda et al., 2023). By offering precise and versatile tools to clinicians, the field of biomedical robotics contributes to both studying and treating this multifaceted disease (Rajavenkatanarayanan et al., 2019), especially in terms of motor impairments due to symptoms like muscle weakness, spasticity, fatigue, tremors, coordination difficulties, and deficits in postural and motion control. We should also ponder how motor-cognitive impairments are a priority that is also targeted by the developers of robots for rehabilitation in MS. However, barriers to the introduction of these solutions in clinical settings exist, especially considering the specific symptoms of the disease (e.g., spasticity could exclude the use of devices mechanically acting on the individual’s limbs for assisting the recovery of other skills, like cognitive ones) and the cost of purchasing the devices. Nevertheless, opportunities in this domain definitely exist alongside the potential for responses to the aforementioned challenges. The recent reviews by Straudi et al. (2022) and Dixit and Tedla (2019) have highlighted the need for additional high-quality trials with sufficient sample sizes and methodological rigor to draw definitive conclusions about the effectiveness of the clinical application of robotic-assisted upper limb-therapy in MS. This manuscript explores upper-limb robotic rehabilitation in MS through a SWOT analysis (Strengths, Weaknesses, Opportunities, and Threats) (Rizzo and Kim, 2005; Nwosu et al., 2019). The objective of this review is to exploit this approach to elucidate the potential of robotics in MS rehabilitation by providing a comprehensive perspective and addressing future research in meeting the evolving needs of the field. While conventionally employed to assess factors influencing a company’s competitive position, SWOT analysis transcends the business realm and can be employed in diverse fields. Rizzo and Kim (2005) has served as a precedent of prior use of SWOT analysis in Virtual Rehabilitation and Therapy, highlighting the versatility of this framework beyond traditional business applications. Essentially, this framework assists in planning and organizing any human endeavors, helping find the internal strengths and weaknesses and the external trends (opportunities and threats) faced by the entity. This approach aimed to stimulate the proposal of innovative solutions able to exploit identified strengths, address acknowledged weaknesses, capitalize on available opportunities, and mitigate potential threats. Applied to our context, the SWOT analysis wanted to be a methodological contribution aimed at proposing a business-oriented perspective that can support a patient-centered approach, taking into consideration market access issues as well. Additionally, this discussion is integrated with a debate on how the synergy between robotic devices and interactive systems, particularly virtual and augmented settings, might be a solution to enhance the hidden potential of robotic rehabilitation alone for People with MS (PwMS). The potential of virtual/augmented systems in engaging PwMS, and also providing clinicians with adaptable options for improving treatments, is quite well-known in the literature (Calabrò et al., 2017; Russo et al., 2018). The choice of analyzing if these solutions can move upper-limb rehabilitation robotics in MS beyond its state-of-the-art is an example we present to the community of researchers, developers, clinicians, patients, and all stakeholders. We expect that other solutions can be explored, obviously, according to the framework we propose here. On the other hand, this choice will be fully elucidated after the first two sections. We will commence by exploring the features of robot-based upper-limb rehabilitation in MS, followed by a comprehensive SWOT analysis of these solutions. Subsequently, we will delve into the world of virtual/augmented systems for rehabilitation in PwMS and examine the synergies between these latter and robotic devices, discussing their transformative potential and impact.
+
+2 Robot-based upper-limb rehabilitation for PwMS
+------------------------------------------------
+
+Robotic devices have been increasingly used in neurological rehabilitation due to their ability to provide repetitive and highly reproducible motor movements, leading to positive results in motor learning and in the development or restoration of motor pathways (Krebs et al., 2007; Vergaro et al., 2010; Lo and Xie, 2012). Besides allowing for intensive training, these technologies offer the opportunity to measure real-time performance and assess the sensorimotor function of one’s limb (Iandolo et al., 2019). In the context of MS rehabilitation, several studies have investigated the use of different upper-limb robotic devices, including both research prototypes and commercial devices.
+
+The search for relevant studies was conducted in PUBMED, SCOPUS, IEEE, Cochrane Library, Physiotherapy Evidence Database (PEDro), on papers published up to May 2023. To ensure the inclusion of pertinent literature, we established specific criteria to guide our selection process: in the title, abstract and keywords, we looked for rehabilitat* AND multiple sclerosis AND robot*/exoskeleton/end-effector/haptic device AND upper/hand/arm/wrist/fingers. In this manuscript, we considered the terms “robot” and “haptic interface” as interchangeable to refer to a robotic device that is used to guide, perturb, or restrict the movements of a person in direct contact with the robot’s end effector (Harwin et al., 2006). We excluded any review and all those publications in which either robotic devices were used only for the assessment of upper-limb function in MS or no person with MS have been tested. This approach allowed us to identify 19 publications that met our criteria. Among these, two papers (Tramontano et al., 2020a; Tramontano et al., 2020b) were excluded. Indeed, although the authors defined the training protocol as “robot-based rehabilitation” (Tramontano et al., 2020b), the system involved there was Pablo, which is a sensor-based technology that lacks any controlled haptic feedback. Therefore, we deemed it inappropriate for inclusion in our manuscript. The resulting list of papers can be found in Table 1, organized according to the device employed in the study. The devices, which are listed and briefly described in Section 2.1, include two research prototypes (Braccio di Ferro and Wristbot) and four commercialized robots. All of them can employ haptic feedback to simulate a diverse and adaptable environment, incorporating visual, auditory, kinesthetic, and proprioceptive stimulations.
+
+**TABLE 1**. Publications organized according to the robotic devices used.
+
+Overall, PwMS have provided positive feedback about the use of robotic devices and reported high scores regarding the perception of motor and mental wellbeing after undergoing customized training (Manuli et al., 2020b). Indeed, motivation is a crucial predictor of treatment success (Grahn et al., 2000), and the use of robotic devices in rehabilitation has been shown to be an attractive tool that allows users to embrace a positive attitude without feeling stressed or pressured.
+
+After briefly describing the robotic systems used for upper limb rehabilitation in PwMS (Section 2.1), a SWOT analysis will be employed to investigate the use of robotic devices for upper-limb rehabilitation in PwMS. The following sections will describe and discuss the emergence of Strengths and Weaknesses of robotic technologies for rehabilitation as evidenced by research in the field. The second half of the SWOT analysis will provide readers with possible future Opportunities and Threats that are emerging from external factors and developments in related fields. Figure 1 summarizes the SWOT analysis presented in Sections 2.2–2.5.
+
+**FIGURE 1**. Summary of SWOT analysis for robotic rehabilitation in PwMS.
+
+### 2.1 Robotic systems used for upper limb rehabilitation in PwMS
+
+1. Braccio di Ferro (Casadio et al., 2006) is a haptic planar manipulandum with 2 Degrees of Freedom (DoFs). The robotic device has a rigid structure and two brushless motors that offer full back-drivability, and low intrinsic mechanical impedance. The rotations of the shoulder and elbow determine and are determined by the kinematics of the hand, which grasps the device through a handle.
+
+2. Wristbot (Iandolo et al., 2019) is a manipulandum that allows 3-DoF wrist rotations in a human-like range of motion. Grasping the handle of the device, the Wristbot assures low inertia and gravity compensation during the user’s active motion, but it is also able to provide the torques needed to manipulate the wrist joint during passive or assistive modalities.
+
+3. The Armeo Spring (Hocoma AG, Volketswil, CH) (Gijbels et al., 2011) is a 5-DoF (3 in the shoulder, 1 in the elbow, 1 in the forearm) orthosis without robotic actuators. The adjustable mechanical arm allows variable levels of gravity support by a spring mechanism, that enables users with residual upper limb function to achieve a larger active range of motion (ROM) within a 3-dimensional workspace.
+
+4. The Haptic Master (MOOG, Nieuw-Vennep, NL) (Feys et al., 2015) is a commercially available end-effector-based robot that allows 3-dimensional movements with 6-DoFs. Three actuated DoFs are for positioning and three non-actuated DoFs are for orientation in the gimbal. This configuration permits the person to freely orient, open and close their hand as needed to manipulate an object.
+
+5. The Phantom (SensAble Technologies Inc., MA, United States) (Feys et al., 2009) is an end-effector haptic device, controlled by 3 motors. It is handled through a pen-like stylus which provides force feedback in 3-DoFs. Unrestricted movements of the shoulder, elbow, and wrist joints are possibly involved during its use.
+
+6. Amadeo (Tyromotion GmbH) (Gandolfi et al., 2018) is a 5-DoF device for hand rehabilitation. Amadeo can provide position-based passive, active, and assistive training modes, centered on the flexion and extension of each finger. The moving finger slides are attached to the fingers using a small magnetic disc and adhesive tape for connection to the robot. The slides then transfer, bending or stretching, movements to the fingers.
+
+### 2.2 Strengths
+
+#### 2.2.1 Possibility to build dynamic environments
+
+A prerequisite for both robot- and therapist-assisted rehabilitation is that individuals must maintain their ability to adapt to new dynamic environments (Shadmehr and Mussa-Ivaldi, 1994). Indeed, implicit motor adaptation may be able to reshape the altered sensorimotor mappings and contribute to cortical reorganization, potentially limiting the consequences of irreversible tissue damage in normal-appearing brain tissue and MS lesions (Reinkensmeyer et al., 2004; Rocca et al., 2005). For this reason, adaptive training protocols that introduce unfamiliar dynamic environments for individuals to adapt to, rather than simply assisting them during movement practice, may be beneficial to PwMS (Patton and Mussa-Ivaldi, 2004). Although PwMS have demonstrated residual capabilities for sensorimotor adaptation in arm and posture control, cerebellar deficits have been linked to difficulties in adapting to novel dynamic environments (Maschke et al., 2004; Smith and Shadmehr, 2005). It has been shown that individuals with cerebellar degeneration lose the motor learning mechanism based on the feed-forward control component and involved in motor adaptation (Maschke et al., 2004; Smith and Shadmehr, 2005). Individuals with MS still display this mechanism, albeit impaired (Leocani et al., 2007; Casadio et al., 2008) in such a way that could contribute to the coordination deficit and tremor associated with MS. Since force field adaptation exercises can train this feed-forward control mechanism, they may be effective in reducing tremor, improving upper limb coordination, and reducing disability in PwMS. Adaptive training may, therefore, be a promising rehabilitation approach for PwMS who exhibit various types and degrees of deficits. In the literature, this approach based on targeting sensorimotor adaptation in dynamic environments can be found in some protocols tested on PwMS (Carpinella et al., 2009; Vergaro et al., 2010; Basteris et al., 2011; Solaro et al., 2020). All these cited studies employed the Braccio di Ferro (Casadio et al., 2006) to develop an 8-session-long rehabilitative protocol involving robot-based reaching movements. In some of these studies (Carpinella et al., 2009; Basteris et al., 2011; Solaro et al., 2020), the task consisted of a series of reaching movements with a position-dependent resistive force directed along the line that connected the end-effector to the target, designed to challenge muscle weakness. However, the instability of the environment was given by additional force fields: a velocity-dependent force perpendicular to the instantaneous movement direction in Carpinella et al. (2009), and a virtual point mass connected to the subjects’ hand through a linear spring, that acted as “virtual tool”, in the remaining studies (Basteris et al., 2011; Solaro et al., 2020). Differently, in the protocol of Vergaro et al. (2010), by means of an iterative procedure, the robot learned the forces necessary to generate a perturbation directed orthogonally with respect to the trajectory that, for each target direction, either enhanced or decreased the lateral deviation of the average trajectories of the subject, estimated during a baseline session. Indeed, the procedure used in some works (Vergaro et al., 2010; Basteris et al., 2011; Solaro et al., 2020) was to calculate forces and spring stiffness at the beginning of each session and to let the protocol adapt its difficulty to the subject’s specific impairment and the improvements - if any - that occurred from session to session. The results of these works showed that PwMS revealed a preserved ability to adapt to robot-generated forces, greater in subjects with non-cerebellar symptoms (Solaro et al., 2020). In particular, subjects showed smoother and more linear movements (Vergaro et al., 2010; Solaro et al., 2020) over and within sessions. In addition, several studies have reported a significant improvement in the Nine-Hole Peg Test (9HPT) following training (Carpinella et al., 2009; Vergaro et al., 2010; Basteris et al., 2011; Solaro et al., 2020), indicating a potential transfer of therapy benefits to activities of daily living. Although the 9HPT primarily assesses manual dexterity, it requires coordination of the entire limb. Therefore, even though when using Braccio di Ferro the hand is not actively involved in the reaching exercise, the improvement observed in the 9HPT may be linked to enhanced coordination in the elbow and shoulder.
+
+#### 2.2.2 Personalized assistance during motor training
+
+Robotic devices are capable of providing haptic feedback in a controlled manner, not only to perturb the environment but also to assist in movement execution. Given the wide variety of symptoms and their different severity in PwMS (Lublin et al., 2014), assistance should be tailored according to the motor skills of the individual (Casadio and Sanguineti, 2012; Gassert and Dietz, 2018). Assistance can take the form of gravity support, guidance through specific movement patterns, or help with movement completion. A concern when providing excessive assistance is the “Slacking” effect (Casadio and Sanguineti, 2012), which refers to a reduction in voluntary movement control caused by repetitive passive mobilization of the limbs. To avoid this, a potential solution is to implement the real-time tailoring of the assistance according to the individual’s needs and actual abilities. This “assistance-as-needed” approach seeks to reduce the risk of patients becoming overly reliant on robotic assistance, which could decrease their level of participation and hinder the potential for neuroplastic changes (Wolbrecht et al., 2008). Robot-based personalized assistance has been used with PwMS in several studies (Xydas and Louca, 2012; Groppo et al., 2017; Mannella et al., 2021) employing the Braccio di Ferro (Casadio et al., 2006), the Wristbot (Iandolo et al., 2019) and on an end-effector haptic device handled through a pen-like stylus comparable to the PHANTOM (Xydas and Louca, 2012). The study of Groppo et al. (2017) proposed a 23-session-long protocol to deal with the progressive worsening of motor functions in one PwMS. This multidisciplinary protocol involved traditional occupational therapy and a robot-based task, during which the subject performed center-out reaching movements. After 2 s from the movement onset, unless the subject was able to reach the target on their own, a minimally assistive force modulated according to the hand speed was generated by the robot. Groppo et al. (2017) found signs of improved motor control, given the significant increase in both the velocity and the smoothness of arm trajectories during robot-based reaching movements. Additionally, the fMRI revealed that multidisciplinary rehabilitation in MS seems to be clinically efficacious and to have a significant impact on brain functional reorganization in the short-term (Groppo et al., 2017). Mannella et al. (2021) trained the most affected limb of 7 PwMS in a 4-week robot-based program. The task was a continuous tracking of a figure targeting continuous movements in the flexion/extension and radial/ulnar deviation 2-dimensional space, in the presence of an assistive force. The force was implemented as a spring pulling the subject toward the target, and its rigidity was modulated within and between sessions, according to the performance of the subject in terms of accuracy in tracing the path. Actually, when the performance reached a specific level, assistance switched to resistance and pushed the subject far from the target, thus generating a dynamic environment to which to adapt. Similarly to what was found by Groppo et al. (2017), at the end of the treatment period, the authors detected a greater motor accuracy and control (Mannella et al., 2021), quantified by lower errors in tracking and tracing the target. In contrast, Xydas and Louca (Xydas and Louca, 2012) proposed an augmented version of the 9HPT, which incorporates assistive forces to transform it into a physiotherapy and rehabilitation system. The system included adaptive assistive forces based on healthy users’ reference target trajectories and was evaluated in a single session by three PwMS. The results showed a potential improvement in the upper limb performance in 3-dimensional reaching tasks, indicating that the system could be effectively used for rehabilitation in complex movements. Analogously to the personalization of the level of assistance, Octavia and Coninx (2014) adapted the difficulty level of the training tasks proposed. Based on the information about the training progress of the subject, the algorithm determined if and how the difficulty level should have been adapted. The study revealed that the participants followed different training patterns and progression, thus confirming the need for personalized levels of difficulty. This adaptive personalized training has shown to be beneficial and appreciated by users (Octavia and Coninx, 2014).
+
+#### 2.2.3 Task-specific treatment with haptic feedback
+
+Robotics allows for repetitive and consistent motor movements at high dosages, however, repetition alone, without usefulness or meaning in terms of function, is not enough to produce increased motor cortical representations (Bayona et al., 2005). Rather than on the specific impairment, rehabilitation should focus on task-specific training to improve the performance in functional tasks through goal-directed practice and repetition. Task-specific training means practicing context-specific motor tasks while receiving some form of feedback (Schmidt and Lee, 1988). Robot-aided haptic feedback is a promising approach for rehabilitation, as it can provide information to supplement or substitute visual and auditory cues (Demain et al., 2013). This kind of feedback can help internalize the movements and increase proprioceptive awareness, thereby enhancing motor learning (Winter et al., 2022). Motor learning and skill acquisition are able to elicit the functional reorganization of cortical areas and the development of new motor pathways to restore limb function (Plautz et al., 2000). The Haptic Master has been used by a few studies (Octavia and Coninx, 2014; Feys et al., 2015; Maris et al., 2018) to train PwMS in an 8-session-long robot-based protocol additional to the conventional therapy. All exercises required accurate and stabilized end-positions to successfully perform the task-oriented movements. The exercises varied in the number of movement directions (1-2-3D), the haptic environment, the precision level and type of required movements, and the cognitive load. At the end of the training, movement tasks in three dimensions, measured with the robot, were performed in less time and more efficiently (Feys et al., 2015). Significant improvements were found in Maris et al. (2018) for shoulder ROM, handgrip strength, perceived strength, and Wolf Motor Function Test (WFMT) activities. Tedesco Triccas et al. (2022) investigated the impact of the intervention of Maris et al. (2018) on patients’ lives: 1) Participants felt that there was a positive impact of the training on strength, endurance, and during activities of daily living; 2) Participants expressed feelings of motivation and self-improvement about the system usage. Similarly, Gijbels et al. (2011) employed the Armeo Spring system to develop a mechanical-assisted therapy involving repetitive and active exertion of goal-directed movements, during the practice of complex motor tasks. The 8-week-long protocol, additional to conventional therapy, included the repetition of 5 tasks, ranging from gross movement, over more precise movement, to subtle strength-dosed movement. Significant gains were found in functional capacity tests [Upper extremity performance test for the elderly (TEMPA), 9HPT, Action Research Arm Test (ARAT)], particularly in subjects whose upper limb function was mostly affected at baseline. Gandolfi et al. (2018) compared two approaches for a 5-week-long training: a robot-assisted hand training using Amadeo that was mainly focused on visual feedback and had a task-specific approach, and a robot-unassisted training that dealt with functional movement and context-specific training. Both training protocols shared common features such as unilateral training, mobility, stretching, and exercise progression. However, only the robotic training involved more intensive, repetitive, and task-specific exercises. The main finding of this study was that upper limb activity and function improved after both treatments but only the robot-assisted hand training reported significant improvements in the assessment of skills in the life habits domain (Motor Activity Log (Taub et al., 1993)). In addition, preliminary observation of muscular activity showed enhancement of the extensor carpi radialis activation only in the robot-assisted group, suggesting a task-specific effect of this training mode on muscle activity. Finally, Feys et al. (2015) tried to investigate which types of robotic outcome measures could be clinically relevant. The protocol lasted 4 weeks and involved tasks that required motor accuracy, ROM, and the ability to exert high-speed movements, with different levels of assistance and difficulty. Significant correlations were found between specific functional measures (specifically ARAT and Purdue pegboard test) and movement tasks.
+
+#### 2.2.4 Synchronization with different devices
+
+Robotic devices offer the opportunity to be synchronized with other electronic systems, in order to assess a broader set of body signals (Rizzoglio et al., 2020), deliver external additive feedback (Cuppone et al., 2016) and apply therapeutic stimulations (Sampson et al., 2016). The core instances of systems synchronized to robots are screen displays on which visual feedback of the virtual reality environment associated with the task is provided. Apart from these, it is hard to find examples of the use of devices in combination with robots for the rehabilitation of PwMS. The only study that apply was conducted by Sampson et al. (2016), combining the Armeo Spring (Sanchez et al., 2004) with Functional Electrical Stimulation (FES). The protocol was tested on 5 PwMS and involved 18 sessions. The robot provided kinematic data to a real-time processor that interfaced with custom FES hardware and the display. FES has been shown to be effective in augmenting strength in stroke (Glinsky et al., 2007) and spinal cord injury (Martin et al., 2012) and in reducing motor fatigue in MS (Chang et al., 2011). Through advanced model-based controllers, the passive robotic arm support combined with FES was meant to improve movement quality by promoting accuracy and voluntary effort and to increase the intensity of the intervention with minimal therapist input. Promisingly, the results showed improved accuracy of tracking performance both when assisted and unassisted by FES, a reduction in the amount of FES needed to assist tracking, and a decreased impairment in the arm trained.
+
+### 2.3 Weaknesses
+
+#### 2.3.1 Challenges posed by MS symptoms
+
+In Section 1, we have presented the classification of MS in the various subtypes and their associated symptoms. Among the five most common symptoms there are weakness/numbness in one or more limbs and visual impairments, such as painful monocular visual loss or double vision (Rolak, 2003). Both these symptoms result in a crucial weakness of robotic rehabilitation in PwMS. The robotic devices employed for PwMS rehabilitation are designed for unilateral use: when both limbs are affected and need to be trained, they have to undergo the training subsequently and not simultaneously. This procedure needs a longer duration of each rehabilitative session and requires moving the device and repositioning the user. A possible, but expensive and not always feasible, solution would be to synchronize two robotic devices to allow bimanual tasks and reduce downtime (Albanese et al., 2023). On the other side, visual impairments play a crucial role since all the studies about rehabilitation in PwMS (Carpinella et al., 2009; Feys et al., 2009; 2015; Vergaro et al., 2010; Basteris et al., 2011; Gijbels et al., 2011; Xydas and Louca, 2012; Octavia and Coninx, 2014; Sampson et al., 2016; Groppo et al., 2017; Maris et al., 2018; Solaro et al., 2020; Mannella et al., 2021; Tedesco Triccas et al., 2022) employed visual feedback as the main informative feedback to users. Indeed, these studies involved a virtual environment displayed on a screen and all of them required the absence of visual deficit as an eligibility criterion to participate in the study. The issue here is that visual impairments could affect subjects’ performance, impacting both their motor skills and their motivation. Despite being a weakness, robots allow adding other feedback, such as auditive or haptic, to replace or be integrated with the visual one to allow conducting the training. Finally, we need to take into account that 40%–70% of PwMS reveal cognitive symptoms, such as memory loss and dementia (DeLuca et al., 2015). As for visual impairments, most rehabilitative protocols are not meant to deal with cognitive deficits and require a minimum score in cognitive assessment tests as inclusion criteria. Among these tests, a Montreal Cognitive Assessment (MoCA) (Ng et al., 2015) score >15 was required by Manuli et al. (2020b) and a Mini-Mental (Pfeiffer, 1975) >24 by other studies (Carpinella et al., 2009; Gijbels et al., 2011; Gandolfi et al., 2018; Solaro et al., 2020).
+
+#### 2.3.2 Limitations due to varied disease severity responses
+
+Despite the potential benefits of robotic devices in the rehabilitation of neurological conditions (neurorehabilitation), their application is limited by difficulties in the integration between patient and machine, as well as by the variability of clinical conditions among patients, which may contribute to these difficulties. Guidelines offered by both Resquín et al. (2016) and Huang et al. (2017) emphasize the importance of careful patient selection criteria for robotic rehabilitation. For instance, among stroke patients, they suggest admitting only patients with moderate motor skills based on the Fugl-Meyer and Motor Assessment Scale scores. Previous studies indicate that robotic training is more beneficial for individuals with moderate to severe deficits, while those with better motor function do not experience greater benefits from innovative device training compared to conventional training (Duncan et al., 1983; Kim et al., 2010; Morone et al., 2011). Given this and the high variability in MS severity, the inclusion criteria employed by the studies of robotic rehabilitation for PwMS have requirements concerning minimal motor skills and minimal levels of disability. These criteria involved the Motricity Index (Collin and Wade, 1990) between 50 and 84 (Gijbels et al., 2011) or between 14 and 25 considering only the performance of the shoulder (Maris et al., 2018), the Expanded Disability Status Scale (EDSS) (Kurtzke, 1983) < 7.5 (Carpinella et al., 2009; Manuli et al., 2020b; Solaro et al., 2020) or between 1.5 and 8 (Gandolfi et al., 2018), the 9HPT (Kellor et al., 1971) score between 30 and 180 (Carpinella et al., 2009; Solaro et al., 2020) or 300 (Gandolfi et al., 2018) seconds.
+
+#### 2.3.3 Device constraints and accessibility
+
+There are several general considerations that need to be taken into account about the mechanical design of the devices used for robotic rehabilitation in PwMS. For instance, to simulate realistic daily actions, the devices must provide an adequate number of DoFs to allow for proper joint rotations. However, it is natural that some of the devices used in rehabilitation have limitations in this regard. For example, the Braccio di Ferro allows for elbow flexion/extension and shoulder internal/external rotations but only permits planar movement (Casadio et al., 2006). The Amadeo focuses on finger flexion/extension without allowing abduction and adduction (Gandolfi et al., 2018), while the Armeo Spring enables only forearm pronation and supination and is not intended to enable other wrist movements (Gijbels et al., 2011). Furthermore, although most of the devices presented in this context target the upper limb, they are designed to mobilize and measure only some of the upper limb joints. The Amadeo and Wristbot devices measure finger movements and wrist rotations, respectively, while other joints are not assessed and are held in place (Iandolo et al., 2019). The Braccio di Ferro and the Armeo Spring measure and control the shoulder and elbow joints, but the movement of the wrist (except for forearm pronation/supination in the Armeo Spring) is constrained. In contrast, the Haptic Master and the PHANTOM allow all the upper-limb joints to move freely, and the position of the end-effector determines their configuration and _vice versa_ Feys et al. (2009, 2015), in the same way as it happens during usual interactions with objects. In addition to these constraints, both the affordability and accessibility of robotic devices should be considered in this analysis. While robotic-based rehabilitation has been shown to be effective, the cost and limited availability of these devices remain an issue. Despite being commercially available, robotic devices are not mass-produced, and their cost remains high (Laut et al., 2016). Considering PwMS frequent difficulties in walking and moving independently, it would be an added value to make robot-based rehabilitation more accessible, by setting such systems in undersupervised environments outside of treatment centers.
+
+### 2.4 Opportunities
+
+#### 2.4.1 General technological advancements
+
+Robot-based MS rehabilitation will be definitely interested in the technological advancements that are currently involving the field of robotics. Rapid advances in digital electronics, hardware speed and accuracy, and fabrication techniques (Bezzo et al., 2015; Gopura et al., 2016) have played a crucial role in lowering the expenses associated with the production of both research prototypes and commercial products. The emergence of real-time control software, combined with the significant reduction in computing costs, has led to the development of a plethora of sophisticated and accurately controlled robotic devices for rehabilitation (Nizamis et al., 2021). Furthermore, advances in software, signal processing, and machine learning are expected to continue offering incremental contributions to technologies and algorithms for neurorehabilitation at an ever-increasing pace (Nizamis et al., 2021). The use of large amounts of data to implement machine-learning approaches could be facilitated by improving the overall networking between devices. Overall, the ongoing multidisciplinary approach is currently encouraging further synergies between traditional research in physics and engineering, chemical, biological, and medical science to develop new applications and acquire new capabilities.
+
+#### 2.4.2 Promotion of digital health technologies
+
+The goal of digital health is to improve healthcare outcomes, increase efficiency, and reduce healthcare costs by leveraging technology to optimize healthcare delivery and patient care. It encompasses a wide range of applications, including telemedicine, electronic health records, health data analytics, genomics, artificial intelligence, and mobile health apps. These technologies are being applied in various aspects of medicine, such as diagnosis, treatment, clinical decision support, care management, and care delivery (Mathews et al., 2019). Since the great promise held for improving healthcare outcomes, increasing efficiency, and reducing healthcare costs, the digital health sector has seen significant investment (Health, 2018). Digital health technologies provide a wealth of valuable data and connectivity, significantly amplifying the potential of robotics within healthcare. These technologies excel in the collection and storage of extensive patient data. By utilizing these vast datasets, it becomes feasible to identify critical trends and patterns, thereby strengthening research and the development of treatment strategies (Chang, 2023). Robotic systems can leverage this data to deliver personalized care, make real-time treatment adjustments, and facilitate monitoring, both in on-site and remote scenarios (Zhu et al., 2007; Barzilay and Wolf, 2013; Gross et al., 2013; Shirzad and Van der Loos, 2013). Advances in machine learning and deep learning have led to disruptive innovations in radiology, pathology, genomics, and other fields (Ramesh et al., 2004; MacEachern and Forkert, 2021). However, modern machine learning models require millions of parameters that need to be learned from sufficiently large, curated datasets to achieve clinical-grade accuracy while being safe, fair, equitable, and generalizing well to unseen data (Althnian et al., 2021; Varoquaux and Cheplygina, 2022). The issue here is how to address the problem of data governance and privacy by training algorithms collaboratively without exchanging the data itself. Rieke et al. (2020) proposed the approach of federated learning, which enables multiple parties to train collaboratively without the need to exchange or centralize data sets. Indeed, the machine learning processing occurs locally at each participating institution and only model characteristics are transferred. Concerning rehabilitation for PwMS, this approach has the potential to drastically increase sample size and enable a broader knowledge and an autonomous approach to the most correct practice to deal with the wide variety of symptoms of PwMS.
+
+#### 2.4.3 The rapid surge of interest in home rehabilitation due to COVID-19
+
+In the last decades, the demand for rehabilitation services has increased due to the aging phenomenon and the prevalence of chronic diseases, but it has faced a shortage of rehabilitation professionals and other barriers, such as low incomes, that deny access to rehabilitation services (Martinez-Martin and Cazorla, 2019). However, the continuity of exercises is crucial for the success of physical therapy and rehabilitation in PwMS, and the recommendation is to continue treatment practices in a home environment to support and maintain functional development in PwMS. Actually, at-home rehabilitation is suitable both for those requiring minor assistance and for those who cannot commute regularly to the treatment in physical therapy centers (Mayetin and Kucuk, 2022). Home-based rehabilitation has been found to be an effective alternative to traditional rehabilitation programs for stroke patients: it can be personalized and adjusted to the patient’s needs, can provide a more convenient and cost-effective therapy option (Catalan et al., 2018), achievable in a comfortable setting (Akbari et al., 2021). Additionally, unlike traditional exercises, where accountability relies on self-reporting, robotics enables objective monitoring, ensuring continuous exercise and program adherence. The COVID-19 pandemic caused an early discharge of existing patients, the suspension of new patients’ admissions, and the reduction of activities to decrease contacts (Manjunatha et al., 2021). Thus, the easiness of use and the low maintenance needed by haptic devices, together with the emerged necessity for further deploying the power of the internet for the purpose of communication and big data analysis, have attracted a lot of attention for home-based rehabilitation (Akbari et al., 2021). In particular, the need for effective home rehabilitation has received a boost from the need for early rehabilitative treatment to reduce long-term consequences in post-stroke patients (Akbari et al., 2021). Additionally, although many rehabilitation devices including robots are not available to be used at home due to their high costs, recent research has focused on low-cost devices able to assure both safety and effective results, in turn of a simpler design and functioning (Dowling et al., 2014; Rudd et al., 2019; Lambelet et al., 2020). The rehabilitation program for PwMS typically involves several sessions spread over a period of weeks or months. However, individuals with motor disabilities and limited mobility may face difficulties and expenses in traveling to health centers for treatment, which can pose a challenge in accessing rehabilitation services (Zasadzka et al., 2021). Even if this situation has been further complicated by COVID-19, the scenario might evolve into an opportunity for PwMS, as it happened for post-stroke patients. The future perspective is for an increase in the research interest in low-cost and easy-to-use robotic devices and in robot-based protocols for home-based rehabilitation in PwMS.
+
+### 2.5 Threats
+
+#### 2.5.1 Safety issues when dealing with spasticity
+
+Spasticity is a common symptom in PwMS, characterized by an increase in the resistance of the joint to movement. This increased resistance is dependent on the velocity and caused by an amplification of the stretch reflex during the passive stretching of the joints (Trompetto et al., 2014). Therapeutic exercise treatments for individuals with high levels of spasticity can be challenging for therapists due to the patients’ considerable stiffness (Bohannon and Smith, 1987). This can create a barrier to the provision of sufficient rehabilitation therapy (Lee et al., 2017). Although most studies on robot-based rehabilitation in PwMS exclude individuals with spasticity (Carpinella et al., 2009; Sampson et al., 2016; Manuli et al., 2020b; Solaro et al., 2020), robots should be capable of addressing spasticity in a safe and appropriate manner. The proposed methods involve setting an appropriate torque range to manage spasticity-induced resistance or pausing movement when the resistance surpasses the motor’s threshold (Nam et al., 2017). The spastic muscle remains active for a certain amount of time with exponential decay of the resistance torque at the end of the range of motion where the robot is actuated against spasticity. This phenomenon allows the robot to be applied to a spastic limb even with a low-torque output motor without causing excessive loading. However, more precise sensing and control systems are necessary to deal safely with this symptom during PwMS rehabilitation.
+
+#### 2.5.2 Risks related to unsupervised therapy
+
+Robot-based rehabilitation is not meant to replace traditional therapies, but rather to complement them (Li et al., 2021). Robotic systems are ideal for providing intensive, task-oriented motor training for patients’ limbs under the supervision of a therapist, and are part of a suite of rehabilitation tools that includes nonrobotic methods (Harwin et al., 2006). However, the need to use healthcare resources efficiently is increasing, and there are proposals to enhance the cost-effectiveness of rehabilitation programs, including hospitals, care homes, and home-based rehabilitation (Ward et al., 2008). While robot-assisted therapy has typically been supervised by trained personnel, the trend towards home-based and autonomous rehabilitation is driven by the need to reduce staff workload, despite concerns about the deskilling of therapists and doctors (Li et al., 2021). By allowing patients to use robotics unsupervised or semi-supervised, therapists can handle multiple patients simultaneously during robot-assisted therapy sessions or allow them to receive robot-assisted training at home to increase therapy dose and regularity (Rosati et al., 2007; Ranzani et al., 2021). However, safety is a critical issue for minimally-supervised systems as they should be operated without supervision, restricting the role of the rehabilitation team to planning and remote monitoring (Rosati, 2010). Safety requirements necessitate that the robot does not move patients beyond their range of motion, avoids pressure points on fragile skin, and is easy to clean and compliant with infection control policies (Li et al., 2021). Despite concerns about safety and efficacy in the absence of qualified staff, recent research by Ranzani et al. (2021) has shown that a powered robot-assisted therapy device can be safely and intuitively used with minimal supervision by chronic stroke patients, while still meeting usability and perceived workload requirements. Interestingly, the study found that usability was inversely related to age but not to the level of impairment, with the oldest subjects experiencing the worst usability results (Ranzani et al., 2021). Given the high-dose therapy needed by PwMS, this population would definitely benefit from the increased dose and the continuum of care coming from home-based and autonomous rehabilitation, which could progressively increase patients’ involvement and autonomy from the clinic to home. While the potential for unsupervised therapies to complement conventional therapies in real-world settings is significant, safety and efficacy issues still need to be addressed to employ robotic devices with minimal supervision.
+
+3 Virtual and extended reality in rehabilitation for PwMS
+---------------------------------------------------------
+
+Previous sections listed the fields of a SWOT analysis for robotic rehabilitation systems tailored for PwMS. However, strengths can be empowered, opportunities can be exploited, weaknesses can be overcome, and threats can be prevented. Pondering the potential synergies of robotic devices with different technologies (as in the larger framework of Digital Health), virtual and augmented environments offer fertile solutions (De Angelis et al., 2021; Scholz et al., 2021; Kanzler et al., 2022a; Kanzler et al., 2022b; Chan et al., 2023).
+
+### 3.1 Introduction to virtual and extended reality
+
+Virtual Reality (VR) technologies can generate varying levels of immersion, defined as the sensation of being fully surrounded by a digital environment (Gandhi and Patel, 2018). Head-Mounted Displays (HMD) are typically used for full immersion, while large screens and projectors achieve semi-immersion, and simple monitors provide non-immersive VR experiences, even in common video games. At a psychological level, immersion can contribute to presence, the sensation of sharing time and space with another agent, object, or event through a medium. These processes, also enhanced through systems for haptic feedback and control, generally contribute to making the experience of a VR system engaging, especially when it is enriched by game-based features (Moline, 1997; Schuemie et al., 2001; Vafadar, 2013; Stone et al., 2014; Menin et al., 2018; Rose et al., 2018; Elor et al., 2020; Lee et al., 2020). However, VR constitutes just one category within a spectrum of environments, ranging from fully digital to entirely real, with some experiences involving no technological mediation in individual interactions. Originally, Milgram et al. (1995) defined the region between reality and VR as Mixed Reality (MR) to encompass all types of combinations of real and digital items. Within the sub-continuum of MR, Augmented Reality (AR) embraced the cases where digital items were perceptually inserted in a real scene, and Augmented Virtuality (AV) considered the situations where real objects enriched a digital setting. Additionally, different sub-types of AR emerged: overlay AR shows digital objects just floating in the visual scene, dissociated from the real context; encrusted AR represents digital objects visually behaving as real ones (they can be placed on a surface or they fall according to the law of gravity). An interesting case is the one of Spatial Augmented Reality (SAR) (Khademi et al., 2013), where the real environment is not augmented through a visor worn by a user but directly on its surfaces by means of screens or projectors. However, a debate on the meaning of such labels currently proceeds, leading to the adoption of the term Extended Reality (XR) as the set of combinations of digital and physical items and interactions (Stone, 2020). In all cases, the role of the digital items is to increase the information and the control opportunities offered by a User Interface (UI) or, specifically, a Graphical User Interface (GUI) (Carmigniani and Furht, 2011; Ejaz et al., 2019; Condino et al., 2022; Fu et al., 2022).
+
+### 3.2 Virtual and extended environments for PwMS
+
+Considering both virtual and augmented contexts, technologies represent a promising avenue for rehabilitation interventions. Indeed, they offer immersive and interactive experiences that enhance patient motivation and treatment outcomes (Khademi et al., 2013; Regenbrecht et al., 2014; Mubin et al., 2019; Sánchez-Herrera-Baeza et al., 2020; Leong et al., 2022; Araujo et al., 2023), including cases of MS (Massetti et al., 2016; Jonsdottir et al., 2019; Kalron et al., 2022; 2020; Cuesta-Gómez et al., 2020; Chadali et al., 2023; Milewska-Jędrzejczak and Głąbiński, 2023). Indeed, VR and AR environments have proven to encourage neuroplasticity in neurological patients in terms of learning abilities and verbal short-term memories, as well as improve fatigue and quality of life (Huang et al., 2022; Araujo et al., 2023; Milewska-Jędrzejczak and Głąbiński, 2023). It must also be noted how, due to its impact on their vestibular systems, VR seems to have specific effects on PwMS, altering their sense of presence and even leading to discomfort and cybersickness in immersive environments. This observation highlights the need for designing multimodal feedback solutions to enhance the accessibility of interactive settings (Guo and Quarles, 2012; Samaraweera et al., 2015; Arafat et al., 2016; Mahmud et al., 2023; 2022; Hollywood et al., 2022). In a study conducted on 54 PwMS undergoing a 12-week VR-based rehabilitative intervention, Saladino et al. (2023) showed the effectiveness of such an approach in improving abilities in performing activities of daily living, quality of life, and satisfaction throughout the therapeutic sessions. Overall, it is worth highlighting that when comparing VR _versus_ XR technologies in rehabilitation, the latter sees way less employment with respect to the first one (Mubin et al., 2019). A rare example is the study of Pruszyńska et al. (2022) which assessed the effects of applying AR in telerehabilitation for PwMS over a 4-week experimental study. Although no particular difference has been found in neuroplasticity between AR and conventional therapy groups, a significant decrease in task execution time and an increase in grip strength with respect to the control group was noted in both arms.
+
+Furthermore, through the use of serious games (games devised for non-leisure applications too, from education to therapy) and the approach of gamification (adding game features to non-leisure systems), the patient is led to perform repetitive training activities with higher motivation and, consequently, clinical adherence (Godfrey and Barresi, 2022). VR-based exergames have garnered attention within MS rehabilitation, particularly for targeting upper limb movements (Webster et al., 2021; Pau et al., 2023b; Chadali et al., 2023). These games combine task-oriented exercises with elements of gamification to create engaging rehabilitation experiences (Jonsdottir et al., 2019). They offer diverse exercise scenarios, allowing customization based on individual patient requirements and variations in symptoms (Leocani et al., 2007). Additionally, they can offer options for patients who could refuse fully immersive settings or excessively playful ones. VR/XR exergames can provide real-time feedback and visual cues, enhancing patient immersion and performance (Hsu et al., 2023) and serving as tools for self-guidance and self-evaluation (Sousa et al., 2016; Bucchieri et al., 2022). Indeed, it has been shown that providing appropriate feedback to the user is crucial to enhance movement correctness, directly linked to therapy effectiveness (Cavalcante Neto et al., 2020). However, it is worth noting that many studies in the literature rely on commercially available exergames, which are often not customizable (Webster et al., 2021).
+
+Virtual settings can offer an immersive experience and a sensation of presence to empower the individual motivation in repetitive tasks that can be psychologically and physically tiresome even if the patient interacts with a robotic device (Tang et al., 2005; Clark et al., 2019). On the other hand, different from robotic rehabilitative systems present in clinics, VR/XR devices represent an optimal solution for home-based rehabilitation. Cost-effective and easy to set up, they can provide useful settings for occupational therapy (Corrêa et al., 2013; Pruszyńska et al., 2022; Tada et al., 2022). An example is the immersive virtual kitchen game proposed by Pau et al. (2023a) where the environment provides several activities of daily living tasks (e.g., tidying up, cooking, washing the dishes, _etc._). Questionnaires conducted on an 8-week study on PwMS showed overall great appreciation and satisfaction with the proposed rehabilitative environment.
+
+Another aspect of such systems is the presence of refined sensors to collect kinematic measurements (i.e., upper-limb and ocular movements) and quantify the quality of patients’ recovery (Leocani et al., 2007; Pillai et al., 2022; Tada et al., 2022; Herrera et al., 2023). Soares et al. (2021) evaluated the hand tracking accuracy of HTC Vive (immersive VR headset) and HoloLens2 (XR headset) with respect to a Motion Capture (MoCap) system, while Pascucci et al. (2022) and Pillai et al. (2022) compared the use of a Microsoft Kinect-based prototype and HoloLens2. These studies revealed the suitability of VR and XR headsets to detect jerky behavior in kinematic data and unexpected hand movements, and to precisely evaluate movement tracking. Nonetheless, with such devices, it might be possible to perform accurate rehabilitative assessments and evaluate motor dysfunctions in PwMS (Herrera et al., 2023). Although such a feature might appear redundant when using a robotic system, the data obtained through VR/XR devices can be integrated with the information collected by the robotic platforms. This integration creates a more comprehensive and enriched portfolio of the therapeutic journey, enhancing the overall experience and outcomes.
+
+4 Robotic and VR integration for MS rehabilitation
+--------------------------------------------------
+
+### 4.1 Mechatronic-digital synergies
+
+In this manuscript, we analyzed how robot-assisted rehabilitation for PwMS has the potential to represent a significant advancement. Additionally, especially when integrated with virtual or augmented environments, this approach can offer an even more patient-centric solution that goes beyond the limitations of standard care.
+
+Previous studies have emphasized the potential of combining robotic and digital technologies for rehabilitation, highlighting the benefits of synergistic strategies. Patton et al. (2006a) remarked how the flexibility of both approaches can offer promising solutions for cost-effective, time-efficient, and repetitive exercises for neurological (specifically, brain-injured) patients. These solutions exploit our knowledge of the nervous system with the versatility of virtual/augmented settings and the accuracy and precision of robots, opening up exciting possibilities. Achieving success in this field depends on the active involvement of therapists and clinicians in the co-design process, as well as the state-of-the-art in haptic and graphic systems. The latter point is particularly interesting, as demonstrated by recent studies by Atashzar et al. (2019), highlighting the need for matching the patients’ needs and biomechanics, the stability in physical patient-robot interaction with a high level of fidelity of force field, the chance of implementing home solutions for improving clinical outcomes while reducing adoption costs.
+
+Overall, the debate on VR-enhanced motor-cognitive rehabilitation robotics (Riener et al., 2006) always focused on the capability of multimodal displays to make therapy more exciting and increase patient engagement. Indeed, visuo-haptic approaches derived from the synergy of digital and mechatronic solutions were definitely impactful for engaging subjects through “reality distortion”, by using error augmentation strategies (Patton et al., 2006b). Mutually, the haptic properties in human-robot interaction can enrich visual digital items with tactile features that raise up user engagement (D’Antonio et al., 2021; Frisoli et al., 2009; Gueye et al., 2021; Li et al., 2014; Ruffaldi et al., 2014). These were just exemplary studies on the documented principles underlying the synergies of virtual and robotic systems in rehabilitation, and the literature reveals an even richer set of investigations in this area (Qiu et al., 2010; Guidali et al., 2011; Merians et al., 2011; Cortés et al., 2014; Russo et al., 2018; Mubin et al., 2019; Manuli et al., 2020a; Torrisi et al., 2021).
+
+Notably, Zanatta et al., 2023a, Zanatta et al., 2023b, Zanatta et al., 2022) explored the potential of combining robotic and virtual systems in rehabilitation, by analyzing their practical implications. The authors proposed a biopsychological approach to examine the points of view offered by multiple health-related perspectives, according to diverse technological solutions and heterogeneous conditions. Through such a vision, especially useful in Health Technology Assessment (HTA), they addressed public health challenges and healthcare sustainability for evaluating the introduction of the aforementioned integration of digital and mechatronic systems in rehabilitation. In particular, addressing the limitations reported by patients is essential. Patients generally reported high levels of acceptance, satisfaction, and perceived safety during treatments involving the combined use of these technologies. Nevertheless, the authors emphasized the need for in-depth advances in terms of assessment: the next subsection proposes an approach for handling this challenge, with a special focus on the context of PwMS upper-limb rehabilitation.
+
+### 4.2 Towards an integrative SWOT analysis
+
+To develop a comprehensive and fully functional rehabilitation platform beneficial for PwMS, the two technological domains of robotics and virtual/extended reality must address their respective weaknesses while leveraging their strengths in rehabilitation. Utilizing embedded sensors, robots and VR/XR technology can create dynamic environments that promote sensorimotor restoration. For example, headsets can immerse individuals in a digital world, enabling them to engage in tasks closely resembling real-life challenges. However, interacting solely with virtual objects may lead to a loss of the sense of reality. Robotic devices, on the other hand, can provide haptic feedback and generate a strong sense of involvement in the task. For instance, the use of devices like the Haptic Master in conjunction with task-specific and engaging non-immersive virtual environments, such as the I-TRAVLE system (Maris et al., 2018), has demonstrated promising results in PwMS rehabilitation.
+
+Selecting the appropriate rehabilitative strategy becomes particularly challenging when dealing with neurological disorders. PwMS often exhibit unique symptoms, leading to the need for optimal robotic control strategies and visual stimuli to provide personalized assistance. From a kinematic impairment perspective, PwMS may experience varying degrees of disability in both arms, with the more affected side not necessarily corresponding to the dominant one. However, given the main focus of the researchers on stroke-related impairments, the majority of upper-limb exoskeletons are designed for unilateral use. To address this limitation, immersive VR/XR technologies can promote bi-manual exercises and accurately measure the user’s hand movements in the non-treated arm, creating a comprehensive digital representation of the patient. This clinical portfolio can provide valuable quantitative data for monitoring the rehabilitation progress and training predictive AI models. Alternatively, when dealing with cognitive impairments, VR/XR environments can be simplified to make tasks more accessible and easier to understand or enriched with challenging mental exercises to enhance neuroplasticity.
+
+VR systems, characterized by their ease of access and cost-effectiveness, present also an attractive option for home-based rehabilitation, complementing clinic-based robotic interventions and assuring the continuum of care needed by PwMS. In cases of relapse or hospitalization, robot-assisted rehabilitation often takes precedence. During this phase, patients may require passive movement, extensive assistance, and gravity compensation, which can be facilitated through robotic devices. However, once this phase concludes, the challenge lies in the paucity of robotic devices suitable for home-based rehabilitation. To ensure continuous rehabilitation and patient monitoring, VR systems, enhanced by computer vision techniques, can be employed by patients in their own homes. This combination allows patients to continue their rehabilitation at home, preventing issues like de-conditioning, muscle weakness due to limited mobility, and muscle contractures associated with spasticity. This synergy offers a holistic approach that keeps patients trained, engaged, and tracked in their recovery journey. This synergistic approach fosters a comprehensive strategy that not only keeps patients actively engaged but also facilitates effective tracking throughout their recovery journey. Importantly, relying on VR for home-based rehabilitation carries fewer risks associated with unsupervised therapy. While VR-based rehabilitation encourages active movements, its limitation in haptic feedback diminishes potential adverse effects, thereby enhancing safety during unsupervised sessions. This innovative integration not only propels the efficacy of home-based rehabilitation but also underscores a commitment to patient wellbeing and progress.
+
+Figure 2 provides a holistic overview of a comprehensive SWOT analysis that includes both robotics and VR. This visual representation illustrates how the advantages of each of these two innovative technologies can be exploited to complement each other and overcome their respective limitations. To sum up, considering the SWOT analysis of robotic systems performed above, the synergy with virtual and augmented environments can:
+
+• Enhance the strengths observed about dynamic environments (generating engaging contents), haptic feedback (through its visual and multimodal counterparts), personalized assistance (stimulating the person with a novel game-like scenario for the same robot-based task when the user is tired, as in the Cypress approach);
+
+• Mitigate the weaknesses in accessibility by presenting an ecologically valid and intuitive setting for rehabilitation, and the weaknesses related to the challenges posed by MS by creating a more comprehensive digital representation of the patient;
+
+• Develop the opportunities offered by Digital Health and telerehabilitation, especially considering how low-cost technologies for VR and XR are proposed at a high pace on the market;
+
+• Prevent the safety issues related to the rise of unpredictable symptoms (e.g., spasticity) and the possible consequent threats during unsupervised therapy.
+
+**FIGURE 2**. This figure summarizes a unified SWOT analysis for robotics and VR, along with their interrelated elements. Dashed boxes contain strengths or opportunities of VR that can help overcome the weaknesses and threats of robotic devices, and _vice versa_ as discussed in Section 4. The direction of the arrows indicates which potential improvement (stemming from strengths or opportunities) of VR or robotic devices could address a target issue (weakness or threat) of the other technology.
+
+5 Conclusion
+------------
+
+Our review focused on the use of robotic systems in the context of Multiple Sclerosis rehabilitation, with a particular emphasis on conducting a SWOT analysis of these systems. Our comprehensive goal was to assess whether the synergy with other systems, in this case virtual and extended reality (VR/XR) technologies, could enhance the Strengths, mitigate the Weaknesses, explore new Opportunities, and address the Threats of rehabilitation robotics for MS. We found that both robotic systems and VR/XR technologies exhibit distinct advantages and disadvantages. Some of these limitations cannot be entirely overcome by combining the two technologies, yet there are clear areas where their synergy can be highly beneficial. Although providing haptic feedback through robotic devices remains critical especially when MS symptoms are severe, the incorporation of VR systems, offers clear advantages for home-based rehabilitation, aligning with the growing need for a continuum of care in the management of MS. Moreover, the integration of VR/XR technologies can enhance engagement and realism in rehabilitation tasks, making them more closely resemble activities of daily living (ADL). It is noteworthy that we chose to primarily focus on VR/XR technologies due to their widespread use, simplicity, and ease of integration into the existing healthcare landscape. While other technologies, such as Functional Electrical Stimulation (FES) or EEG-based brain–computer interfaces (Said et al., 2022), hold promise, we believe that starting with VR is a pragmatic approach given its established presence and adaptability within the current context. In summary, our analysis provides an in-depth perspective on the current framework within which robotic technologies are integrated into Multiple Sclerosis MS rehabilitation. Moreover, it underscores the transformative impact of merging robotic systems with VR technologies, shedding light on their individual strengths and areas for enhancement. This synthesis paves the way for a promising future, aiming to deliver more effective and accessible rehabilitation solutions for individuals facing the challenges of MS.
+
+Author contributions
+--------------------
+
+GA: Conceptualization, Investigation, Writing–original draft, Writing–review and editing. AB: Conceptualization, Investigation, Writing–original draft, Writing–review and editing. JP: Writing–review and editing. AT: Writing–review and editing. SB: Writing–review and editing. ED: Writing–review and editing. ML: Writing–review and editing. KM: Writing–review and editing. MH: Writing–review and editing. JZ: Conceptualization, Writing–review and editing. LD: Writing–review and editing. GBr: Writing–review and editing. GBa: Conceptualization, Investigation, Supervision, Writing–original draft, Writing–review and editing.
+
+Funding
+-------
+
+The authors declare that financial support was received for the research, authorship, and publication of this article, part of ENACT 1, a FISM (Fondazione Italiana Sclerosi Multipla) Special Project. ENACT is supported by FISM cod. 2021/Special/003 and financed with the “5 per mille” public funding. IIT (Istituto Italiano di Tecnologia) co-funded the study. This work was also carried out within the framework of the project “RAISE - Robotics and AI for Socioeconomic Empowerment”2. RAISE has been supported and funded by European Union - NextGenerationEU. However, the views and opinions expressed are those of the authors alone and do not necessarily reflect those of the European Union or the European Commission. Neither the European Union nor the European Commission can be held responsible for them.
+
+Conflict of interest
+--------------------
+
+GA and JZ were employed by ReWing s r l.
+
+The remaining authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.
+
+Publisher’s note
+----------------
+
+All claims expressed in this article are solely those of the authors and do not necessarily represent those of their affiliated organizations, or those of the publisher, the editors and the reviewers. Any product that may be evaluated in this article, or claim that may be made by its manufacturer, is not guaranteed or endorsed by the publisher.
+
+Author disclaimer
+-----------------
+
+Views and opinions expressed are those of the authors alone and do not necessarily reflect those of the EU or the European Commission, and they cannot be held responsible for them.
+
+Footnotes
+---------
+
+1 https://www.enactproject.eu
+
+2 https://www.raiseliguria.it/
+
+References
+----------
+
+Akbari, A., Haghverd, F., and Behbahani, S. (2021). Robotic home-based rehabilitation systems design: from a literature review to a conceptual framework for community-based remote therapy during covid-19 pandemic. _Front. Robotics AI_ 8, 612331. doi:10.3389/frobt.2021.612331
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Albanese, G. A., Zenzeri, J., and De Santis, D. (2023). _The effect of feedback modality when learning a novel wrist sensorimotor transformation through a body machine interface_. IEEE.
+
+Google Scholar
+
+Althnian, A., AlSaeed, D., Al-Baity, H., Samha, A., Dris, A. B., Alzakari, N., et al. (2021). Impact of dataset size on classification performance: an empirical evaluation in the medical domain. _Appl. Sci._ 11, 796. doi:10.3390/app11020796
+
+CrossRef Full Text | Google Scholar
+
+Arafat, I. M., Ferdous, S. M. S., and Quarles, J. (2016). “The effects of cybersickness on persons with multiple sclerosis,” in _Proceedings of the 22nd ACM conference on virtual reality software and technology_, 51–59.
+
+CrossRef Full Text | Google Scholar
+
+Araujo, H. A. G. d. O., Souza, R. J. d., da Silva, T. C. O., Nascimento, T. S., Terra, M. B., and Smaili, S. M. (2023). Immediate effect of augmented reality, virtual reality, and neurofunctional physiotherapy on postural control and executive function of individuals with Parkinson’s disease. _Games Health J._ 12, 211–219. doi:10.1089/g4h.2021.0222
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Atashzar, S. F., Shahbazi, M., and Patel, R. V. (2019). Haptics-enabled interactive neurorehabilitation mechatronics: classification, functionality, challenges and ongoing research. _Mechatronics_ 57, 1–19. doi:10.1016/j.mechatronics.2018.03.002
+
+CrossRef Full Text | Google Scholar
+
+Basteris, A., De Luca, A., Sanguineti, V., Solaro, C., Mueller, M., Carpinella, I., et al. (2011). A tailored exercise of manipulation of virtual tools to treat upper limb impairment in multiple sclerosis. _IEEE Int. Conf. Rehabilitation Robotics_ 2011, 5975509. doi:10.1109/ICORR.2011.5975509
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Bayona, N. A., Bitensky, J., Salter, K., and Teasell, R. (2005). The role of task-specific training in rehabilitation therapies. _Top. Stroke Rehabilitation_ 12, 58–65. PMID: 16110428. doi:10.1310/BQM5-6YGB-MVJ5-WVCR
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Bezzo, N., Mehta, A., Onal, C. D., and Tolley, M. T. (2015). Robot makers: the future of digital rapid design and fabrication of robots. _IEEE Robotics Automation Mag._ 22, 27–36. doi:10.1109/MRA.2015.2482838
+
+CrossRef Full Text | Google Scholar
+
+Bucchieri, A., Buccelli, S., Barresi, G., Tessari, F., De Momi, E., Laffranchi, M., et al. (2022). “Design of a mixed reality environment for the extrapolation of reference trajectories in upper-limb rehabilitation,” in _International society for virtual rehabilitation (ISVR)_.
+
+Google Scholar
+
+Calabrò, R. S., Russo, M., Naro, A., De Luca, R., Leo, A., Tomasello, P., et al. (2017). Robotic gait training in multiple sclerosis rehabilitation: can virtual reality make the difference? findings from a randomized controlled trial. _J. neurological Sci._ 377, 25–30. doi:10.1016/j.jns.2017.03.047
+
+CrossRef Full Text | Google Scholar
+
+Carbone, G., and Gonçalves, R. S. (2022). Editorial: robot-assisted rehabilitation for neurological disorders. _Front. Robotics AI_ 9, 1014681. doi:10.3389/frobt.2022.1014681
+
+CrossRef Full Text | Google Scholar
+
+Carpinella, I., Cattaneo, D., Abuarqub, S., and Ferrarin, M. (2009). Robot-based rehabilitation of the upper limbs in multiple sclerosis: feasibility and preliminary results. _J. Rehabilitation Med._ 41, 966–970. doi:10.2340/16501977-0401
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Carpinella, I., Cattaneo, D., Bertoni, R., and Ferrarin, M. (2012). Robot training of upper limb in multiple sclerosis: comparing protocols with or withoutmanipulative task components. _IEEE Trans. Neural Syst. Rehabilitation Eng._ 20, 351–360. doi:10.1109/tnsre.2012.2187462
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Casadio, M., and Sanguineti, V. (2012). Learning, retention, and slacking: a model of the dynamics of recovery in robot therapy. _IEEE Trans. Neural Syst. Rehabilitation Eng._ 20, 286–296. PMID: 22531822 publisher: IEEE Citation Key: Casadio2012. doi:10.1109/TNSRE.2012.2190827
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Casadio, M., Sanguineti, V., Morasso, P., and Solaro, C. (2008). Abnormal sensorimotor control, but intact force field adaptation, in multiple sclerosis subjects with no clinical disability. _Mult. Scler. Houndmills, Basingstoke, Engl._ 14, 330–342. doi:10.1177/1352458507085068
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Casadio, M., Sanguineti, V., Morasso, P. G., and Arrichiello, V. (2006). Braccio di ferro: a new haptic workstation for neuromotor rehabilitation. _Technol. health care official J. Eur. Soc. Eng. Med._ 14, 123–142. PMID: 16971753. doi:10.3233/thc-2006-14301
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Catalan, J., Garcia, J., Lopez, D., Diez, J., Blanco, A., Lledo, L., et al. (2018). _Patient evaluation of an upper-limb rehabilitation robotic device for home use_, 450–455. doi:10.1109/BIOROB.2018.8487201.ISSN:2155-1782
+
+CrossRef Full Text | Google Scholar
+
+Cavalcante Neto, J. L., Steenbergen, B., Wilson, P., Zamunér, A. R., and Tudella, E. (2020). Is wii-based motor training better than task-specific matched training for children with developmental coordination disorder? a randomized controlled trial. _Disabil. rehabilitation_ 42, 2611–2620. doi:10.1080/09638288.2019.1572794
+
+CrossRef Full Text | Google Scholar
+
+Chadali, A., Trevlaki, E., Zarra, E., and Trevlakis, E. (2023). Virtual reality in upper extremity rehabilitation of multiple sclerosis patients
+
+Google Scholar
+
+Chan, Y. K., Tang, Y. M., and Teng, L. (2023). A comparative analysis of digital health usage intentions towards the adoption of virtual reality in telerehabilitation. _Int. J. Med. Inf._ 174, 105042. doi:10.1016/j.ijmedinf.2023.105042
+
+CrossRef Full Text | Google Scholar
+
+Chang, A. (2023). The role of artificial intelligence in digital health. In _Digital health entrepreneurship_, ed. A. Meyers (Cham: Springer International Publishing, Health Informatics). 75–85. doi:10.1007/978-3-031-33902-8/TNQDotTNQ/6
+
+CrossRef Full Text | Google Scholar
+
+Chang, Y.-J., Hsu, M.-J., Chen, S.-M., Lin, C.-H., and Wong, A. M. K. (2011). Decreased central fatigue in multiple sclerosis patients after 8 weeks of surface functional electrical stimulation. _J. Rehabilitation Res. Dev._ 48, 555–564. doi:10.1682/jrrd.2010.03.0038
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Clark, W. E., Sivan, M., and O’Connor, R. J. (2019). Evaluating the use of robotic and virtual reality rehabilitation technologies to improve function in stroke survivors: a narrative review. _J. rehabilitation assistive Technol. Eng._ 6, 205566831986355. doi:10.1177/2055668319863557
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Condino, S., Gesi, M., Viglialoro, R. M., Carbone, M., and Turini, G. (2022). _Serious games and mixed reality applications for healthcare_.
+
+Google Scholar
+
+Corrêa, A. G. D., Ficheman, I. K., de Deus Lopes, R., Klein, A. N., and Nakazune, S. J. (2013). “Augmented reality in occupacional therapy,” in _2013 8th iberian conference on information systems and technologies (CISTI)_ (IEEE), 1–6.
+
+Google Scholar
+
+Cortés, C., Ardanza, A., Molina-Rueda, F., Cuesta-Gomez, A., Unzueta, L., Epelde, G., et al. (2014). Upper limb posture estimation in robotic and virtual reality-based rehabilitation. _BioMed Res. Int._ 2014, 1–18. doi:10.1155/2014/821908
+
+CrossRef Full Text | Google Scholar
+
+Cuesta-Gómez, A., Sánchez-Herrera-Baeza, P., Oña-Simbaña, E. D., Martínez-Medina, A., Ortiz-Comino, C., Balaguer-Bernaldo-de Quirós, C., et al. (2020). Effects of virtual reality associated with serious games for upper limb rehabilitation in patients with multiple sclerosis: randomized controlled trial. _J. neuroengineering rehabilitation_ 17, 90–10. doi:10.1186/s12984-020-00718-x
+
+CrossRef Full Text | Google Scholar
+
+Cuppone, A. V., Squeri, V., Semprini, M., Masia, L., and Konczak, J. (2016). Robot-assisted proprioceptive training with added vibro-tactile feedback enhances somatosensory and motor performance. _PLoS ONE_ 11, e0164511. doi:10.1371/journal.pone.0164511
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+D’Antonio, E., Galofaro, E., Patané, F., Casadio, M., and Masia, L. (2021). “A dual arm haptic exoskeleton for dynamical coupled manipulation,” in _2021 IEEE/ASME international conference on advanced intelligent mechatronics (AIM)_ (IEEE), 1237–1242.
+
+Google Scholar
+
+De Angelis, M., Lavorgna, L., Carotenuto, A., Petruzzo, M., Lanzillo, R., Brescia Morra, V., et al. (2021). Digital technology in clinical trials for multiple sclerosis: systematic review. _J. Clin. Med._ 10, 2328. doi:10.3390/jcm10112328
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+DeLuca, G. C., Yates, R. L., Beale, H., and Morrow, S. A. (2015). Cognitive impairment in multiple sclerosis: clinical, radiologic and pathologic insights. _Brain Pathol._ 25, 79–98. doi:10.1111/bpa.12220
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Demain, S., Metcalf, C. D., Merrett, G. V., Zheng, D., and Cunningham, S. (2013). A narrative review on haptic devices: relating the physiology and psychophysical properties of the hand to devices for rehabilitation in central nervous system disorders. _Disabil. Rehabilitation Assistive Technol._ 8, 181–189. doi:10.3109/17483107.2012.697532
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Dixit, S., and Tedla, J. S. (2019). Effectiveness of robotics in improving upper extremity functions among people with neurological dysfunction: a systematic review. _Int. J. Neurosci._ 129, 369–383. doi:10.1080/00207454.2018.1536051
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Dowling, A. V., Barzilay, O., Lombrozo, Y., and Wolf, A. (2014). _An adaptive home-use robotic rehabilitation system for the upper body 2_.
+
+Google Scholar
+
+Duan, H., Jing, Y., Li, Y., Lian, Y., Li, J., and Li, Z. (2023). Rehabilitation treatment of multiple sclerosis. _Front. Immunol._ 14, 1168821. doi:10.3389/fimmu.2023.1168821
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Duncan, P. W., Propst, M., and Nelson, S. G. (1983). Reliability of the fugl-meyer assessment of sensorimotor recovery following cerebrovascular accident. _Phys. Ther._ 63, 1606–1610. doi:10.1093/PTJ/63.10.1606
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Ejaz, A., Ali, S. A., Ejaz, M. Y., and Siddiqui, F. A. (2019). Graphic user interface design principles for designing augmented reality applications. _Int. J. Adv. Comput. Sci. Appl. (IJACSA)_ 10, 209–216. doi:10.14569/ijacsa.2019.0100228
+
+CrossRef Full Text | Google Scholar
+
+Elor, A., Powell, M., Mahmoodi, E., Hawthorne, N., Teodorescu, M., and Kurniawan, S. (2020). On shooting stars: comparing cave and hmd immersive virtual reality exergaming for adults with mixed ability. _ACM Trans. Comput. Healthc._ 1, 1–22. doi:10.1145/3396249
+
+CrossRef Full Text | Google Scholar
+
+Feys, P., Alders, G., Gijbels, D., De Boeck, J., De Weyer, T., Coninx, K., et al. (2009). “Arm training in multiple sclerosis using phantom: clinical relevance of robotic outcome measures,” in _2009 IEEE international conference on rehabilitation robotics, ICORR 2009_, 576–581. doi:10.1109/ICORR.2009.5209607
+
+CrossRef Full Text | Google Scholar
+
+Feys, P., Coninx, K., Kerkhofs, L., De Weyer, T., Truyens, V., Maris, A., et al. (2015). Robot-supported upper limb training in a virtual learning environment: a pilot randomized controlled trial in persons with ms. _J. NeuroEngineering Rehabilitation_ 12, 60–12. doi:10.1186/s12984-015-0043-3
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Franzo', M., Pascucci, S., Serrao, M., Marinozzi, F., and Bini, F. (2022). “Exergaming in mixed reality for the rehabilitation of ataxic patients,” in _2022 IEEE international symposium on medical measurements and applications (MeMeA)_ (IEEE), 1–5.
+
+Google Scholar
+
+Frisoli, A., Salsedo, F., Bergamasco, M., Rossi, B., and Carboncini, M. C. (2009). A force-feedback exoskeleton for upper-limb rehabilitation in virtual reality. _Appl. Bionics Biomechanics_ 6, 115–126. doi:10.1155/2009/378254
+
+CrossRef Full Text | Google Scholar
+
+Fu, Y., Hu, Y., and Sundstedt, V. (2022). A systematic literature review of virtual, augmented, and mixed reality game applications in healthcare. _ACM Trans. Comput. Healthc. Heal._ 3, 1–27. doi:10.1145/3472303
+
+CrossRef Full Text | Google Scholar
+
+Gandhi, R. D., and Patel, D. S. (2018). Virtual reality–opportunities and challenges. _Virtual Real._ 5, 2714–2724.
+
+Google Scholar
+
+Gandolfi, M., Valè, N., Dimitrova, E. K., Mazzoleni, S., Battini, E., Benedetti, M. D., et al. (2018). Effects of high-intensity robot-assisted hand training on upper limb recovery and muscle activity in individuals with multiple sclerosis: a randomized, controlled, single-blinded trial. _Front. Neurology_ 9, 905. doi:10.3389/fneur.2018.00905
+
+CrossRef Full Text | Google Scholar
+
+Gassert, R., and Dietz, V. (2018). Rehabilitation robots for the treatment of sensorimotor deficits: a neurophysiological perspective. _J. NeuroEngineering Rehabilitation_ 15, 46. doi:10.1186/s12984-018-0383-x
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Ghasemi, N., Razavi, S., and Nikzad, E. (2017). Multiple sclerosis: pathogenesis, symptoms, diagnoses and cell-based therapy. _Cell. J._ 19, 1–10. doi:10.22074/cellj.2016.4867
+
+CrossRef Full Text | Google Scholar
+
+Gijbels, D., Lamers, I., Kerkhofs, L., Alders, G., Knippenberg, E., and Feys, P. (2011). The armeo spring as training tool to improve upper limb functionality in multiple sclerosis: a pilot study. _J. neuroengineering rehabilitation_ 8, 5. doi:10.1186/1743-0003-8-5
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Giovannoni, G., Butzkueven, H., Dhib-Jalbut, S., Hobart, J., Kobelt, G., Pepper, G., et al. (2016). Brain health: time matters in multiple sclerosis. _Multiple Scler. Relat. Disord._ 9 (Suppl. 1), S5–S48. doi:10.1016/j.msard.2016.07.003
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Glinsky, J., Harvey, L., and Van Es, P. (2007). Efficacy of electrical stimulation to increase muscle strength in people with neurological conditions: a systematic review. _Physiother. Res. Int. J. Res. Clin. Phys. Ther._ 12, 175–194. doi:10.1002/pri.375
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Godfrey, S. B., and Barresi, G. (2022). “Video games for positive aging: playfully engaging older adults,” in _Internet of things for human-centered design: application to elderly healthcare_ (Springer), 375–404.
+
+CrossRef Full Text | Google Scholar
+
+Gopura, R. A. R. C., Bandara, D. S. V., Kiguchi, K., and Mann, G. K. I. (2016). Developments in hardware systems of active upper-limb exoskeleton robots: a review. _Robotics Aut. Syst._ 75, 203–220. doi:10.1016/j.robot.2015.10.001
+
+CrossRef Full Text | Google Scholar
+
+Grahn, B., Ekdahl, C., and Borgquist, L. (2000). Motivation as a predictor of changes in quality of life and working ability in multidisciplinary rehabilitation. _Disabil. Rehabilitation_ 22, 639–654. doi:10.1080/096382800445443
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Groppo, E., Baglio, F., Cattaneo, D., Tavazzi, E., Bergsland, N., Di Tella, S., et al. (2017). Multidisciplinary rehabilitation is efficacious and induces neural plasticity in multiple sclerosis even when complicated by progressive multifocal leukoencephalopathy. _Front. Neurology_ 8, 491. doi:10.3389/fneur.2017.00491
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Gross, D. P., Zhang, J., Steenstra, I., Barnsley, S., Haws, C., Amell, T., et al. (2013). Development of a computer-based clinical decision support tool for selecting appropriate rehabilitation interventions for injured workers. _J. Occup. Rehabilitation_ 23, 597–609. doi:10.1007/s10926-013-9430-4
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Gueye, T., Dedkova, M., Rogalewicz, V., Grunerova-Lippertova, M., and Angerova, Y. (2021). Early post-stroke rehabilitation for upper limb motor function using virtual reality and exoskeleton: equally efficient in older patients. _Neurol. i Neurochir. Pol._ 55, 91–96. doi:10.5603/pjnns.a2020.0096
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Guidali, M., Duschau-Wicke, A., Broggi, S., Klamroth-Marganska, V., Nef, T., and Riener, R. (2011). A robotic system to train activities of daily living in a virtual environment. _Med. Biol. Eng. Comput._ 49, 1213–1223. doi:10.1007/s11517-011-0809-0
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Guo, R., and Quarles, J. (2012). “Differences in presence between healthy users and users with multiple sclerosis,” in _2012 IEEE VR workshop on perceptual illusions in virtual environments_ (IEEE), 1–6.
+
+CrossRef Full Text | Google Scholar
+
+Harwin, W., Patton, J., and Edgerton, V. (2006). Challenges and opportunities for robot-mediated neurorehabilitation. _Proc. IEEE_ 94, 1717–1726. doi:10.1109/JPROC.2006.880671
+
+CrossRef Full Text | Google Scholar
+
+Health, R. (2018). _2017 year end funding report: the end of the beginning of digital health_.
+
+Google Scholar
+
+Herrera, V., Vallejo, D., Castro-Schez, J. J., Monekosso, D. N., de los Reyes, A., Glez-Morcillo, C., et al. (2023). Rehab-immersive: a framework to support the development of virtual reality applications in upper limb rehabilitation. _SoftwareX_ 23, 101412. doi:10.1016/j.softx.2023.101412
+
+CrossRef Full Text | Google Scholar
+
+Hollywood, R.-A., Poyade, M., Paul, L., and Webster, A. (2022). Proof of concept for the use of immersive virtual reality in upper limb rehabilitation of multiple sclerosis patients. _Biomed. Vis._ 11, 73–93. doi:10.1007/978-3-030-87779-8_4
+
+CrossRef Full Text | Google Scholar
+
+Hsu, W.-Y., Anguera, J. A., Rizzo, A., Campusano, R., Chiaravalloti, N. D., DeLuca, J., et al. (2023). A virtual reality program to assess cognitive function in multiple sclerosis: a pilot study. _Front. Hum. Neurosci._ 17, 1139316. doi:10.3389/fnhum.2023.1139316
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Huang, C.-Y., Chiang, W.-C., Yeh, Y.-C., Fan, S.-C., Yang, W.-H., Kuo, H.-C., et al. (2022). Effects of virtual reality-based motor control training on inflammation, oxidative stress, neuroplasticity and upper limb motor function in patients with chronic stroke: a randomized controlled trial. _BMC Neurol._ 22, 21. doi:10.1186/s12883-021-02547-4
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Huang, X., Naghdy, F., Naghdy, G., Du, H., and Todd, C. (2017). Robot-assisted post-stroke motion rehabilitation in upper extremities: a survey. _Int. J. Disabil. Hum. Dev._ 16, 233–247. doi:10.1515/ijdhd-2016-0035
+
+CrossRef Full Text | Google Scholar
+
+Iandolo, R., Marini, F., Semprini, M., Laffranchi, M., Mugnosso, M., Cherif, A., et al. (2019). Perspectives and challenges in robotic neurorehabilitation. _Appl. Sci. Switz._ 9, 3183. doi:10.3390/app9153183
+
+CrossRef Full Text | Google Scholar
+
+Jonsdottir, J., Perini, G., Ascolese, A., Bowman, T., Montesano, A., Lawo, M., et al. (2019). Unilateral arm rehabilitation for persons with multiple sclerosis using serious games in a virtual reality approach: bilateral treatment effect? _Multiple Scler. Relat. Disord._ 35, 76–82. doi:10.1016/j.msard.2019.07.010
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Kalron, A., Achiron, A., Pau, M., and Cocco, E. (2020). The effect of a telerehabilitation virtual reality intervention on functional upper limb activities in people with multiple sclerosis: a study protocol for the teams pilot randomized controlled trial. _Trials_ 21, 713–719. doi:10.1186/s13063-020-04650-2
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Kalron, A., Frid, L., Fonkatz, I., Menascu, S., Dolev, M., Magalashvili, D., et al. (2022). The design, development, and testing of a virtual reality device for upper limb training in people with multiple sclerosis: single-center feasibility study. _JMIR Serious Games_ 10, e36288. doi:10.2196/36288
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Kanzler, C. M., Bolliger, M., and Lambercy, O. (2022a). “Robotic technologies and digital health metrics for assessing sensorimotor disability,” in _Neurorehabilitation technology_ (Springer), 321–344.
+
+CrossRef Full Text | Google Scholar
+
+Kanzler, C. M., Lamers, I., Feys, P., Gassert, R., and Lambercy, O. (2022b). Personalized prediction of rehabilitation outcomes in multiple sclerosis: a proof-of-concept using clinical data, digital health metrics, and machine learning. _Med. Biol. Eng. Comput._ 60, 249–261. doi:10.1007/s11517-021-02467-y
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Kellor, M., Frost, J., Silberberg, N., Iversen, I., and Cummings, R. (1971). “Hand strength and dexterity,” in _The American journal of occupational therapy_ (Official Publication of the American Occupational Therapy Association), 25, 77–83.
+
+PubMed Abstract | Google Scholar
+
+Khademi, M., Hondori, H. M., Dodakian, L., Cramer, S., and Lopes, C. V. (2013). “Comparing “pick and place” task in spatial augmented reality versus non-immersive virtual reality for rehabilitation setting,” in _2013 35th annual international conference of the IEEE engineering in medicine and biology society (EMBC)_ (IEEE), 4613–4616.
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Kim, S. H., Banala, S. K., Brackbill, E. A., Agrawal, S. K., Krishnamoorthy, V., and Scholz, J. P. (2010). Robot-assisted modifications of gait in healthy individuals. _Exp. Brain Res._ 202, 809–824. doi:10.1007/s00221-010-2187-5
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Krebs, H. I., Volpe, B. T., Williams, D., Celestino, J., Charles, S. K., Lynch, D., et al. (2007). Robot-aided neurorehabilitation: a robot for wrist rehabilitation. _IEEE Trans. neural Syst. rehabilitation Eng. a Publ. IEEE Eng. Med. Biol. Soc._ 15, 327–335. doi:10.1109/TNSRE.2007.903899
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Lambelet, C., Temiraliuly, D., Siegenthaler, M., Wirth, M., Woolley, D. G., Lambercy, O., et al. (2020). Characterization and wearability evaluation of a fully portable wrist exoskeleton for unsupervised training after stroke. _J. NeuroEngineering Rehabilitation_ 17, 132. doi:10.1186/s12984-020-00749-4
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Lamers, I., Feys, P., and Swinnen, E. (2018). Robot-assisted rehabilitation in multiple sclerosis: overview of approaches, clinical outcomes, and perspectives. _Rehabil. Robot._, 253–266. doi:10.1016/b978-0-12-811995-2.00017-5
+
+CrossRef Full Text | Google Scholar
+
+Laut, J., Porfiri, M., and Raghavan, P. (2016). The present and future of robotic technology in rehabilitation. _Curr. Phys. Med. Rehabilitation Rep._ 4 (4), 312–319. doi:10.1007/S40141-016-0139-0
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Lee, D. J., Bae, S. J., Jang, S. H., and Chang, P. H. (2017). _Design of a clinically relevant upper-limb exoskeleton robot for stroke patients with spasticity_. London: IEEE, 622–627. doi:10.1109/ICORR.2017.8009317
+
+CrossRef Full Text | Google Scholar
+
+Lee, J., Kim, M., and Kim, J. (2020). Rolevr: multi-experience in immersive virtual reality between co-located hmd and non-hmd users. _Multimedia Tools Appl._ 79, 979–1005. doi:10.1007/s11042-019-08220-w
+
+CrossRef Full Text | Google Scholar
+
+Leocani, L., Comi, E., Annovazzi, P., Rovaris, M., Rossi, P., Cursi, M., et al. (2007). Impaired short-term motor learning in multiple sclerosis: evidence from virtual reality. _Neurorehabilitation neural repair_ 21, 273–278. doi:10.1177/1545968306294913
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Leong, S. C., Tang, Y. M., Toh, F. M., and Fong, K. N. (2022). Examining the effectiveness of virtual, augmented, and mixed reality (vamr) therapy for upper limb recovery and activities of daily living in stroke patients: a systematic review and meta-analysis. _J. neuroengineering rehabilitation_ 19, 93–20. doi:10.1186/s12984-022-01071-x
+
+CrossRef Full Text | Google Scholar
+
+Li, C., Rusák, Z., Horváth, I., and Ji, L. (2014). Influence of complementing a robotic upper limb rehabilitation system with video games on the engagement of the participants: a study focusing on muscle activities. _Int. J. Rehabilitation Res._ 37, 334–342. doi:10.1097/mrr.0000000000000076
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Li, L., Tyson, S., and Weightman, A. (2021). Professionals’ views and experiences of using rehabilitation robotics with stroke survivors: a mixed methods survey. _Front. Med. Technol._ 3, 780090. doi:10.3389/fmedt.2021.780090
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Lo, H. S., and Xie, S. Q. (2012). Exoskeleton robots for upper-limb rehabilitation: state of the art and future prospects. _Med. Eng. Phys._ 34, 261–268. doi:10.1016/J.MEDENGPHY.2011.10.004
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Lublin, F. D., Häring, D. A., Ganjgahi, H., Ocampo, A., Hatami, F., Čuklina, J., et al. (2022). How patients with multiple sclerosis acquire disability. _Brain_ 145, 3147–3161. doi:10.1093/brain/awac016
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Lublin, F. D., Reingold, S. C., Cohen, J. A., Cutter, G. R., Sørensen, P. S., Thompson, A. J., et al. (2014). Defining the clinical course of multiple sclerosis: the 2013 revisions. _Neurology_ 83, 278–286. doi:10.1212/WNL.0000000000000560
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Mahmud, M. R., Cordova, A., and Quarles, J. (2023). Visual cues for a steadier you: visual feedback methods improved standing balance in virtual reality for people with balance impairments. _IEEE Trans. Vis. Comput. Graph._ 29, 4666–4675. doi:10.1109/tvcg.2023.3320244
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Mahmud, M. R., Stewart, M., Cordova, A., and Quarles, J. (2022). “Auditory feedback to make walking in virtual reality more accessible,” in _2022 IEEE international symposium on mixed and augmented reality (ISMAR)_ (IEEE), 847–856.
+
+CrossRef Full Text | Google Scholar
+
+Manjunatha, H., Pareek, S., Jujjavarapu, S. S., Ghobadi, M., Kesavadas, T., and Esfahani, E. T. (2021). Upper limb home-based robotic rehabilitation during covid-19 outbreak. _Front. Robotics AI_ 8, 612834. [Online; accessed 2023-05-31]. doi:10.3389/frobt.2021.612834
+
+CrossRef Full Text | Google Scholar
+
+Mannella, K., Albanese, G. A., Ditor, D., Zenzeri, J., and Holmes, M. W. (2021). Preliminary evaluation of an adaptive robotic training program of the wrist for persons with multiple sclerosis. _Appl. Sci. Switz._ 11, 9239. doi:10.3390/app11199239
+
+CrossRef Full Text | Google Scholar
+
+Manuli, A., Maggio, M. G., Latella, D., Cannavò, A., Balletta, T., De Luca, R., et al. (2020a). Can robotic gait rehabilitation plus virtual reality affect cognitive and behavioural outcomes in patients with chronic stroke? a randomized controlled trial involving three different protocols. _J. Stroke Cerebrovasc. Dis._ 29, 104994. doi:10.1016/j.jstrokecerebrovasdis.2020.104994
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Manuli, A., Maggio, M. G., Tripoli, D., Gullì, M., Cannavò, A., La Rosa, G., et al. (2020b). Patients’ perspective and usability of innovation technology in a new rehabilitation pathway: an exploratory study in patients with multiple sclerosis. _Multiple Scler. Relat. Disord._ 44, 102312. doi:10.1016/J.MSARD.2020.102312
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Maris, A., Coninx, K., Seelen, H., Truyens, V., De Weyer, T., Geers, R., et al. (2018). The impact of robot-mediated adaptive i-travle training on impaired upper limb function in chronic stroke and multiple sclerosis. _Disabil. Rehabilitation Assistive Technol._ 13, 1–9. doi:10.1080/17483107.2016.1278467
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Martin, R., Sadowsky, C., Obst, K., Meyer, B., and McDonald, J. (2012). Functional electrical stimulation in spinal cord injury: from theory to practice. _Top. Spinal Cord Inj. Rehabilitation_ 18, 28–33. doi:10.1310/sci1801-28
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Maschke, M., Gomez, C. M., Ebner, T. J., and Konczak, J. (2004). Hereditary cerebellar ataxia progressively impairs force adaptation during goal-directed arm movements. _J. Neurophysiology_ 91, 230–238. doi:10.1152/jn.00557.2003
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Massetti, T., Trevizan, I. L., Arab, C., Favero, F. M., Ribeiro-Papa, D. C., and de Mello Monteiro, C. B. (2016). Virtual reality in multiple sclerosis–a systematic review. _Multiple Scler. Relat. Disord._ 8, 107–112. doi:10.1016/j.msard.2016.05.014
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Mathews, S. C., McShea, M. J., Hanley, C. L., Ravitz, A., Labrique, A. B., and Cohen, A. B. (2019). Digital health: a path to validation. _npj Digit. Med._ 2, 38–39. doi:10.1038/s41746-019-0111-3
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Mayetin, U., and Kucuk, S. (2022). Design and experimental evaluation of a low cost, portable, 3-dof wrist rehabilitation robot with high physical human–robot interaction. _J. Intelligent Robotic Syst._ 106, 65. doi:10.1007/s10846-022-01762-6
+
+CrossRef Full Text | Google Scholar
+
+Menin, A., Torchelsen, R., and Nedel, L. (2018). An analysis of vr technology used in immersive simulations with a serious game perspective. _IEEE Comput. Graph. Appl._ 38, 57–73. doi:10.1109/mcg.2018.021951633
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Merians, A. S., Fluet, G. G., Qiu, Q., Saleh, S., Lafond, I., Davidow, A., et al. (2011). Robotically facilitated virtual rehabilitation of arm transport integrated with finger movement in persons with hemiparesis. _J. neuroengineering rehabilitation_ 8, 27–10. doi:10.1186/1743-0003-8-27
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Milewska-Jędrzejczak, M., and Głąbiński, A. (2023). The influence of conventional and innovative rehabilitation methods on brain plasticity induction in patients with multiple sclerosis. _J. Clin. Med._ 12, 1880. doi:10.3390/jcm12051880
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Milgram, P., Takemura, H., Utsumi, A., and Kishino, F. (1995). Augmented reality: a class of displays on the reality-virtuality continuum. _Telemanipulator telepresence Technol. (Spie)_ 2351, 282–292. doi:10.1117/12.197321
+
+CrossRef Full Text | Google Scholar
+
+Morone, G., Bragoni, M., Iosa, M., De Angelis, D., Venturiero, V., Coiro, P., et al. (2011). Who may benefit from robotic-assisted gait training? a randomized clinical trial in patients with subacute stroke. _Neurorehabilitation Neural Repair_ 25, 636–644. doi:10.1177/1545968311401034
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Mubin, O., Alnajjar, F., Jishtu, N., Alsinglawi, B., and Al Mahmud, A. (2019). Exoskeletons with virtual reality, augmented reality, and gamification for stroke patients’ rehabilitation: systematic review. _JMIR rehabilitation assistive Technol._ 6, e12010. doi:10.2196/12010
+
+CrossRef Full Text | Google Scholar
+
+Nam, H. S., Koh, S., Kim, Y. J., Beom, J., Lee, W. H., Lee, S.-U., et al. (2017). Biomechanical reactions of exoskeleton neurorehabilitation robots in spastic elbows and wrists. _IEEE Trans. Neural Syst. Rehabilitation Eng._ 25, 2196–2203. doi:10.1109/TNSRE.2017.2714203
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Ng, T. P., Feng, L., Lim, W. S., Chong, M. S., Lee, T. S., Yap, K. B., et al. (2015). Montreal cognitive assessment for screening mild cognitive impairment: variations in test performance and scores by education in Singapore. _Dementia Geriatric Cognitive Disord._ 39, 176–185. doi:10.1159/000368827
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Nizamis, K., Athanasiou, A., Almpani, S., Dimitrousis, C., and Astaras, A. (2021). Converging robotic technologies in targeted neural rehabilitation: a review of emerging solutions and challenges. _Sensors_ 21, 2084. doi:10.3390/s21062084
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Nwosu, A. C., Sturgeon, B., McGlinchey, T., Goodwin, C. D., Behera, A., Mason, S., et al. (2019). Robotic technology for palliative and supportive care: strengths, weaknesses, opportunities and threats. _Palliat. Med._ 33, 1106–1113. doi:10.1177/0269216319857628
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Octavia, J. R., and Coninx, K. (2014). Adaptive personalized training games for individual and collaborative rehabilitation of people with multiple sclerosis. _BioMed Res. Int._ 2014, 1–22. doi:10.1155/2014/345728
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Patton, J., Dawe, G., Scharver, C., Mussa-Ivaldi, F., and Kenyon, R. (2006a). Robotics and virtual reality: a perfect marriage for motor control research and rehabilitation. _Assist. Technol._ 18, 181–195. doi:10.1080/10400435.2006.10131917
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Patton, J., Wei, Y., Scharver, C., Kenyon, R. V., and Scheidt, R. (2006b). “Motivating rehabilitation by distorting reality,” in _The first IEEE/RAS-EMBS international conference on biomedical robotics and biomechatronics, 2006_ (IEEE), 869–874.
+
+Google Scholar
+
+Patton, J. L., and Mussa-Ivaldi, F. A. (2004). Robot-assisted adaptive training: custom force fields for teaching movement patterns. _IEEE Trans. bio-medical Eng._ 51, 636–646. doi:10.1109/TBME.2003.821035
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Pau, M., Cocco, E., Arippa, F., Casu, G., Porta, M., Menascu, S., et al. (2023a). An immersive virtual kitchen training system for people with multiple sclerosis: a development and validation study. _J. Clin. Med._ 12, 3222. doi:10.3390/jcm12093222
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Pau, M., Porta, M., Bertoni, R., Mattos, F. G. M., Cocco, E., and Cattaneo, D. (2023b). Effect of immersive virtual reality training on hand-to-mouth task performance in people with multiple sclerosis: a quantitative kinematic study. _Multiple Scler. Relat. Disord._ 69, 104455. doi:10.1016/j.msard.2022.104455
+
+CrossRef Full Text | Google Scholar
+
+Pfeiffer, E. (1975). A short portable mental status questionnaire for the assessment of organic brain deficit in elderly patients. _J. Am. Geriatrics Soc._ 23, 433–441. doi:10.1111/j.1532-5415.1975.tb00927.x
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Pierella, C., and Micera, S. (2022). “Rehabilitation and assistive robotics: shared principles and common applications,” in _Robotics in neurosurgery: principles and practice_ (Springer), 255–272.
+
+CrossRef Full Text | Google Scholar
+
+Pillai, A., Sunny, M. S. H., Shahria, M. T., Banik, N., and Rahman, M. H. (2022). Gamification of upper limb rehabilitation in mixed-reality environment. _Appl. Sci._ 12, 12260. doi:10.3390/app122312260
+
+CrossRef Full Text | Google Scholar
+
+Plautz, E. J., Milliken, G. W., and Nudo, R. J. (2000). Effects of repetitive motor training on movement representations in adult squirrel monkeys: role of use versus learning. _Neurobiol. Learn. Mem._ 74, 27–55. doi:10.1006/nlme.1999.3934
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Podda, J., Marchesi, G., Squeri, V., De Luca, A., Bellosta, A., Pedullà, L., et al. (2023). Standard versus innovative robotic balance assessment for people with multiple sclerosis: a correlational study. _Eur. J. Med. Res._ 28, 254. doi:10.1186/s40001-023-01223-2
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Pruszyńska, M., Milewska-Jędrzejczak, M., Bednarski, I., Szpakowski, P., Głąbiński, A., and Tadeja, S. K. (2022). Towards effective telerehabilitation: assessing effects of applying augmented reality in remote rehabilitation of patients suffering from multiple sclerosis. _ACM Trans. Accessible Comput. (TACCESS)_ 15, 1–14. doi:10.1145/3560822
+
+CrossRef Full Text | Google Scholar
+
+Qiu, Q., Fluet, G. G., Saleh, S., Ramirez, D., and Adamovich, S. (2010). “Robot-assisted virtual rehabilitation (njit-ravr) system for children with cerebral palsy,” in _Proceedings of the 2010 IEEE 36th annual northeast bioengineering conference (NEBEC)_ (IEEE), 1–2.
+
+CrossRef Full Text | Google Scholar
+
+Rajavenkatanarayanan, A., Kanal, V., Tsiakas, K., Calderon, D., Papakostas, M., Abujelala, M., et al. (2019). A survey of assistive technologies for assessment and rehabilitation of motor impairments in multiple sclerosis. _Multimodal Technol. Interact._ 3, 6. doi:10.3390/mti3010006
+
+CrossRef Full Text | Google Scholar
+
+Ranzani, R., Eicher, L., Viggiano, F., Engelbrecht, B., Held, J. P. O., Lambercy, O., et al. (2021). Towards a platform for robot-assisted minimally-supervised therapy of hand function: design and pilot usability evaluation. _Front. Bioeng. Biotechnol._ 9, 652380. doi:10.3389/fbioe.2021.652380
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Regenbrecht, H., Hoermann, S., Ott, C., Müller, L., and Franz, E. (2014). Manipulating the experience of reality for rehabilitation applications. _Proc. IEEE_ 102, 170–184. doi:10.1109/jproc.2013.2294178
+
+CrossRef Full Text | Google Scholar
+
+Reinkensmeyer, D. J., Emken, J. L., and Cramer, S. C. (2004). Robotics, motor learning, and neurologic recovery. _Annu. Rev. Biomed. Eng._ 6, 497–525. doi:10.1146/annurev.bioeng.6.040803.140223
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Resquín, F., Gonzalez-Vargas, J., Ibáñez, J., Brunetti, F., and Pons, J. L. (2016). Feedback error learning controller for functional electrical stimulation assistance in a hybrid robotic system for reaching rehabilitation. _Eur. J. Transl. Myology_ 26, 6164. doi:10.4081/ejtm.2016.6164
+
+CrossRef Full Text | Google Scholar
+
+Rieke, N., Hancox, J., Li, W., Milletarì, F., Roth, H. R., Albarqouni, S., et al. (2020). The future of digital health with federated learning. _NPJ Digit Med._ 3, 119. doi:10.1038/s41746-020-00323-1
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Riener, R., Wellner, M., Nef, T., Von Zitzewitz, J., Duschau-Wicke, A., Colombo, G., et al. (2006). “A view on vr-enhanced rehabilitation robotics,” in _2006 international workshop on virtual rehabilitation_ (IEEE), 149–154.
+
+CrossRef Full Text | Google Scholar
+
+Rizzo, A., and Kim, G. J. (2005). A SWOT analysis of the field of virtual reality rehabilitation and therapy. _Presence Teleoperators Virtual Environ._ 14, 119–146. doi:10.1162/1054746053967094
+
+CrossRef Full Text | Google Scholar
+
+Rizzoglio, F., Pierella, C., De Santis, D., Mussa-Ivaldi, F., and Casadio, M. (2020). A hybrid body-machine interface integrating signals from muscles and motions. _J. Neural Eng._ 17, 046004. doi:10.1088/1741-2552/AB9B6C
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Rocca, M. A., Colombo, B., Falini, A., Ghezzi, A., Martinelli, V., Scotti, G., et al. (2005). Cortical adaptation in patients with ms: a cross-sectional functional mri study of disease phenotypes. _Lancet. Neurology_ 4, 618–626. doi:10.1016/S1474-4422(05)70171-X
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Rosati, G., Gallina, P., and Masiero, S. (2007). Design, implementation and clinical tests of a wire-based robot for neurorehabilitation. _IEEE Trans. neural Syst. rehabilitation Eng. a Publ. IEEE Eng. Med. Biol. Soc._ 15, 560–569. doi:10.1109/TNSRE.2007.908560
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Rudd, G., Daly, L., Jovanovic, V., and Cuckov, F. (2019). A low-cost soft robotic hand exoskeleton for use in therapy of limited hand–motor function. _Appl. Sci._ 9, 3751. doi:10.3390/app9183751
+
+CrossRef Full Text | Google Scholar
+
+Ruffaldi, E., Barsotti, M., Leonardis, D., Bassani, G., Frisoli, A., and Bergamasco, M. (2014). “Evaluating virtual embodiment with the alex exoskeleton,” in _Haptics: neuroscience, devices, modeling, and applications: 9th international conference, EuroHaptics 2014, versailles, France, june 24-26, 2014, proceedings, Part I 9_ (Springer), 133–140.
+
+CrossRef Full Text | Google Scholar
+
+Russo, M., Dattola, V., De Cola, M. C., Logiudice, A. L., Porcari, B., Cannavò, A., et al. (2018). The role of robotic gait training coupled with virtual reality in boosting the rehabilitative outcomes in patients with multiple sclerosis. _Int. J. rehabilitation Res._ 41, 166–172. doi:10.1097/mrr.0000000000000270
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Sadeghnejad, S., Abadi, V. S. E., and Jafari, B. (2023). Rehabilitation robotics: history, applications, and recent advances. _Med. Healthc. Robotics_, 63–85. doi:10.1016/b978-0-443-18460-4.00008-1
+
+CrossRef Full Text | Google Scholar
+
+Said, R. R., Heyat, M. B. B., Song, K., Tian, C., and Wu, Z. (2022). A systematic review of virtual reality and robot therapy as recent rehabilitation technologies using eeg-brain–computer interface based on movement-related cortical potentials. _Biosensors_ 12, 1134. doi:10.3390/bios12121134
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Saladino, M. L., Gualtieri, C., Scaffa, M., Lopatin, M. F., Kohler, E., Bruna, P., et al. (2023). Neuro rehabilitation effectiveness based on virtual reality and tele rehabilitation in people with multiple sclerosis in Argentina: reavitelem study. _Multiple Scler. Relat. Disord._ 70, 104499. doi:10.1016/j.msard.2023.104499
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Samaraweera, G., Guo, R., and Quarles, J. (2015). Head tracking latency in virtual environments revisited: do users with multiple sclerosis notice latency less? _IEEE Trans. Vis. Comput. Graph._ 22, 1630–1636. doi:10.1109/tvcg.2015.2443783
+
+CrossRef Full Text | Google Scholar
+
+Sampson, P., Freeman, C., Coote, S., Demain, S., Feys, P., Meadmore, K., et al. (2016). Using functional electrical stimulation mediated by iterative learning control and robotics to improve arm movement for people with multiple sclerosis. _IEEE Trans. Neural Syst. Rehabilitation Eng._ 24, 235–248. doi:10.1109/TNSRE.2015.2413906
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Sanchez, R., Reinkensmeyer, D., Shah, P., Liu, J., Rao, S., Smith, R., et al. (2004). Monitoring functional arm movement for home-based therapy after stroke. _Annu. Int. Conf. IEEE Eng. Med. Biol. - Proc._ 26, 4787–4790. doi:10.1109/IEMBS.2004.1404325
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Sánchez-Herrera-Baeza, P., Cano-de-la Cuerda, R., Oña-Simbaña, E. D., Palacios-Ceña, D., Pérez-Corrales, J., Cuenca-Zaldivar, J. N., et al. (2020). The impact of a novel immersive virtual reality technology associated with serious games in Parkinson’s disease patients on upper limb rehabilitation: a mixed methods intervention study. _Sensors_ 20, 2168. doi:10.3390/s20082168
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Schmidt, R. A., and Lee, T. D. (1988). Champain, IL: human kinetics, in _Motor control and learning. A behavioral emphasis_. Citation Key: Schmidt1988.
+
+Google Scholar
+
+Scholz, M., Haase, R., Schriefer, D., Voigt, I., and Ziemssen, T. (2021). Electronic health interventions in the case of multiple sclerosis: from theory to practice. _Brain Sci._ 11, 180. doi:10.3390/brainsci11020180
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Schuemie, M. J., Van Der Straaten, P., Krijn, M., and Van Der Mast, C. A. (2001). Research on presence in virtual reality: a survey. _Cyberpsychology Behav._ 4, 183–201. doi:10.1089/109493101300117884
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Shadmehr, R., and Mussa-Ivaldi, F. A. (1994). Adaptive representation of dynamics during learning of a motor task. _J. Neurosci. Official J. Soc. Neurosci._ 14, 3208–3224. doi:10.1523/JNEUROSCI.14-05-03208.1994
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Shirzad, N., and Van der Loos, H. F. M. (2013). Adaptation of task difficulty in rehabilitation exercises based on the user’s motor performance and physiological responses, 1–6. doi:10.1109/ICORR.2013.6650429
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Smith, M. A., and Shadmehr, R. (2005). Intact ability to learn internal models of arm dynamics in huntington’s disease but not cerebellar degeneration. _J. Neurophysiology_ 93, 2809–2821. doi:10.1152/jn.00943.2004
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Soares, I., Sousa, R., Petry, M., and Moreira, A. P. (2021). Accuracy and repeatability tests on hololens 2 and htc vive. _Multimodal Technol. Interact._ 5, 47. doi:10.3390/mti5080047
+
+CrossRef Full Text | Google Scholar
+
+Solaro, C., Cattaneo, D., Basteris, A., Carpinella, I., De Luca, A., Mueller, M., et al. (2020). Haptic vs sensorimotor training in the treatment of upper limb dysfunction in multiple sclerosis: a multi-center, randomised controlled trial. doi:10.1016/j.jns.2020.116743
+
+CrossRef Full Text | Google Scholar
+
+Sousa, M., Vieira, J., Medeiros, D., Arsenio, A., and Jorge, J. (2016). “Sleevear: augmented reality for rehabilitation using realtime feedback,” in _Proceedings of the 21st international conference on intelligent user interfaces_, 175–185.
+
+Google Scholar
+
+Stone, J. (2020). “Extended reality therapy: the use of virtual, augmented, and mixed reality in mental health treatment,” in _The video game debate 2_ (New York: Routledge), 95–106.
+
+CrossRef Full Text | Google Scholar
+
+Stone, R., Small, C., Knight, J., Qian, C., and Shingari, V. (2014). Virtual natural environments for restoration and rehabilitation in healthcare. _Virtual, Augmented Real. Serious Games Healthc._ 1, 497–521.
+
+CrossRef Full Text | Google Scholar
+
+Straudi, S., Tramontano, M., Russo, E. F., Perrero, L., Agostini, M., Gandolfi, M., et al. (2022). Robot-assisted upper limb training for patients with multiple sclerosis: an evidence-based review of clinical applications and effectiveness. _Appl. Sci._ 12, 222. doi:10.3390/app12010222
+
+CrossRef Full Text | Google Scholar
+
+Tada, K., Kutsuzawa, K., Owaki, D., and Hayashibe, M. (2022). “Quantifying motor and cognitive function of the upper limb using mixed reality smartglasses,” in _2022 44th annual international conference of the IEEE engineering in medicine and biology society (EMBC)_ (IEEE), 2556–2559.
+
+CrossRef Full Text | Google Scholar
+
+Tang, J., Carignan, C., and Gattewar, S. (2005). “Virtual environment for robotic tele-rehabilitation,” in _9th international conference on rehabilitation robotics, 2005. ICORR 2005_ (IEEE), 365–370.
+
+Google Scholar
+
+Taub, E., Miller, N., Novack, T., Cook, E., Fleming, W., Nepomuceno, C., et al. (1993). Technique to improve chronic motor deficit after stroke. _Archives Phys. Med. rehabilitation_ 74, 347–354.
+
+PubMed Abstract | Google Scholar
+
+Tedesco Triccas, L., Maris, A., Lamers, I., Calcius, J., Coninx, K., Spooren, A., et al. (2022). Do people with multiple sclerosis perceive upper limb improvements from robotic-mediated therapy? a mixed methods study. _Multiple Scler. Relat. Disord._ 68, 104159. doi:10.1016/J.MSARD.2022.104159
+
+CrossRef Full Text | Google Scholar
+
+Torrisi, M., Maggio, M. G., De Cola, M. C., Zichittella, C., Carmela, C., Porcari, B., et al. (2021). Beyond motor recovery after stroke: the role of hand robotic rehabilitation plus virtual reality in improving cognitive function. _J. Clin. Neurosci._ 92, 11–16. doi:10.1016/j.jocn.2021.07.053
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Tramontano, M., Casagrande Conti, L., Marziali, N., Agostini, G., De Angelis, S., Galeoto, G., et al. (2020a). Hand robotics rehabilitation in patients with multiple sclerosis: a pilot study. _Adv. Intelligent Syst. Comput. 1241 AISC_, 50–57. doi:10.1007/978-3-030-52538-5_6/COVER
+
+CrossRef Full Text | Google Scholar
+
+Tramontano, M., Morone, G., De Angelis, S., Casagrande Conti, L., Galeoto, G., and Grasso, M. G. (2020b). Sensor-based technology for upper limb rehabilitation in patients with multiple sclerosis: a randomized controlled trial. _Restor. Neurology Neurosci._ 38, 333–341. doi:10.3233/RNN-201033
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Trompetto, C., Marinelli, L., Mori, L., Pelosin, E., Currà, A., Molfetta, L., et al. (2014). Pathophysiology of spasticity: implications for neurorehabilitation. _BioMed Res. Int._ 2014, 1–8. doi:10.1155/2014/354906
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Vafadar, M. (2013). Virtual reality: opportunities and challenges. _Int. J. Mod. Eng. Res. (IJMER)_ 3, 1139–1145.
+
+Google Scholar
+
+Varoquaux, G., and Cheplygina, V. (2022). Machine learning for medical imaging: methodological failures and recommendations for the future. _npj Digit. Med._ 5, 48–8. doi:10.1038/s41746-022-00592-y
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Vergaro, E., Squeri, V., Brichetto, G., Casadio, M., Morasso, P., Solaro, C., et al. (2010). Adaptive robot training for the treatment of incoordination in multiple sclerosis. _J. NeuroEngineering Rehabilitation_ 7, 37–11. doi:10.1186/1743-0003-7-37
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Ward, D., Drahota, A., Gal, D., Severs, M., and Dean, T. P. (2008). Care home versus hospital and own home environments for rehabilitation of older people. _Cochrane Database Syst. Rev._ 2008, CD003164. doi:10.1002/14651858.CD003164.pub2
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Webster, A., Poyade, M., Rooney, S., and Paul, L. (2021). Upper limb rehabilitation interventions using virtual reality for people with multiple sclerosis: a systematic review. _Multiple Scler. Relat. Disord._ 47, 102610. doi:10.1016/j.msard.2020.102610
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Winter, L., Huang, Q., Sertic, J. V. L., and Konczak, J. (2022). The effectiveness of proprioceptive training for improving motor performance and motor dysfunction: a systematic review. _Front. Rehabilitation Sci._, 830166. doi:10.3389/fresc.2022.830166
+
+CrossRef Full Text | Google Scholar
+
+Wolbrecht, E. T., Chan, V., Reinkensmeyer, D. J., and Bobrow, J. E. (2008). Optimizing compliant, model-based robotic assistance to promote neurorehabilitation. _IEEE Trans. Neural Syst. Rehabilitation Eng._ 16, 286–297. doi:10.1109/TNSRE.2008.918389
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Xydas, E. G., and Louca, L. S. (2012). “Robotic rehabilitation of people with multiple sclerosis with the use of a haptic nine-hole pegboard test,” in _ASME 2012 5th annual dynamic systems and control conference joint with the JSME 2012 11th motion and vibration conference, DSCC 2012-MOVIC 2012_, 1, 759–768. doi:10.1115/DSCC2012-MOVIC2012-8706
+
+CrossRef Full Text | Google Scholar
+
+Zanatta, F., Farhane-Medina, N. Z., Adorni, R., Steca, P., Giardini, A., D’Addario, M., et al. (2023a). Combining robot-assisted therapy with virtual reality or using it alone? a systematic review on health-related quality of life in neurological patients. _Health Qual. Life Outcomes_ 21, 18. doi:10.1186/s12955-023-02097-y
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Zanatta, F., Giardini, A., Pierobon, A., D’Addario, M., and Steca, P. (2022). A systematic review on the usability of robotic and virtual reality devices in neuromotor rehabilitation: patients’ and healthcare professionals’ perspective. _BMC health Serv. Res._ 22, 523. doi:10.1186/s12913-022-07821-w
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Zanatta, F., Steca, P., Fundarò, C., Giardini, A., Felicetti, G., Panigazzi, M., et al. (2023b). Biopsychosocial effects and experience of use of robotic and virtual reality devices in neuromotor rehabilitation: a study protocol. _Plos one_ 18, e0282925. doi:10.1371/journal.pone.0282925
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Zasadzka, E., Trzmiel, T., Pieczyńska, A., and Hojan, K. (2021). Modern technologies in the rehabilitation of patients with multiple sclerosis and their potential application in times of covid-19. _Medicina_ 57, 549. doi:10.3390/medicina57060549
+
+PubMed Abstract | CrossRef Full Text | Google Scholar
+
+Zhu, M., Zhang, Z., Hirdes, J. P., and Stolee, P. (2007). Using machine learning algorithms to guide rehabilitation planning for home care clients. _BMC Med. Inf. Decis. Mak._ 7, 41. doi:10.1186/1472-6947-7-41
+
+PubMed Abstract | CrossRef Full Text | Google Scholar

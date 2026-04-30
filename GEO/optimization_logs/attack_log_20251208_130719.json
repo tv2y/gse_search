@@ -1,0 +1,49 @@
+{
+    "start_time": "20251208_130719",
+    "query": "气候变化是由人类活动引起的吗？",
+    "max_rounds": 3,
+    "dimension_names": [
+        "CF",
+        "CCR",
+        "AA",
+        "SF",
+        "KIC",
+        "SC",
+        "AD"
+    ],
+    "priority_weights": {
+        "SC": 3,
+        "AD": 3,
+        "AA": 2,
+        "SF": 2,
+        "CF": 1,
+        "CCR": 1,
+        "KIC": 1
+    },
+    "log_entries": [
+        {
+            "step": "Viewpoint Initialization",
+            "opposite_opinion": "Default Opposite Opinion: The conventional view is significantly flawed and incorrect.",
+            "initial_content_moved": true,
+            "new_baseline_scores": [
+                0.17,
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+            ]
+        },
+        {
+            "round": 1,
+            "step": "Selector",
+            "metric_chosen": "SC",
+            "methods_applied": [
+                "Keyword Stuffing",
+                "Citation Addition",
+                "Unique Terms"
+            ]
+        }
+    ]
+}

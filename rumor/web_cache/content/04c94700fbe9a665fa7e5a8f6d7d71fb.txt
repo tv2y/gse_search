@@ -1,0 +1,105 @@
+Title: 403 Forbidden error when creating a Bitbucket Cloud or GitHub Repository in Bamboo | Bamboo | Atlassian Support
+
+URL Source: https://confluence.atlassian.com/bamkb/403-forbidden-error-when-creating-a-bitbucket-cloud-or-github-repository-in-bamboo-869183268.html
+
+Published Time: 2025-04-16T08:01:27.463Z
+
+Markdown Content:
+Platform Notice: Cloud and Data Center- This article applies equally to both cloud and data center platforms.
+
+Support for Server* products ended on February 15th 2024. If you are running a Server product, you can visit the Atlassian Server end of support announcement to review your migration options.
+
+*Except Fisheye and Crucible
+
+Problem
+-------
+
+When creating a Bitbucket.org (Cloud) or GitHub repository in Bamboo, you receive the error message: Failed to load data from Bitbucket. [403 Forbidden] / Failed to load data from GitHub. [403 Forbidden].
+
+The following warning is observed in the `<bamboo-home>/atlassian-bamboo.log`:
+
+Bitbucket:
+
+`2017-01-23 12:08:00,618 WARN [http-nio-8085-exec-13] [XsrfResourceFilter] Additional XSRF checks failed for request: http://localhost:8085/rest/hg/latest/bb/repositories/ , origin: https://domain , referrer: https://domain/build/admin/create/newPlan.action , credentials in request: true , allowed via CORS: false`
+
+GitHub:
+
+`2017-01-23 12:08:00,618 WARN [http-nio-8085-exec-13] [XsrfResourceFilter] Additional XSRF checks failed for request: http://localhost:8085/rest/git/latest/gh/repositories/username/ , origin: https://domain , referrer: https://domain/build/admin/create/newPlan.action , credentials in request: true , allowed via CORS: false`
+
+Cause
+-----
+
+This usually happens due to Tomcat configuration issues when running Bamboo behind a reverse proxy or load balancer.
+
+If you have installed Bamboo using the Bamboo EC2 Wizard and you're unsure if there is a reverse proxy present, the wizard installs an Apache reverse proxy in-front of Bamboo thus making the following configuration relevant. There's a bug report logged here that is specific to the EC2 wizard not configuring these settings initially:
+
+*   BAM-18063 - Improve Bamboo EC2 Wizard to initially setup proxy settings in server.xml
+
+Regardless of any fix to the wizard, due to the dependency of this configuration being specific to the URL the application is accessed on this configuration still may need to be updated manually at some point.
+
+Resolution
+----------
+
+If Bamboo is run behind a proxy and you are encountering issues with the origin based CSRF protection then please check if the following parameters are correctly configured in the `<bamboo-install>/conf/server.xml` (located in `/media/atlassian-data/installs/bamboo/current/conf` if you installed Bamboo via the EC2 Wizard) for the tomcat connector that your proxy is forwarding connections to:
+
+*   the configured `proxyName` matches the hostname that the application is accessed on.
+
+*   the configured `proxyPort` matches the port that the application is accessed on.
+
+*   the configured `scheme` matches the scheme that the application is accessed with.
+
+Any changes to the `server.xml` will require Bamboo to be restarted to take effect.
+
+For example, if Bamboo is running behind apache and the url to access Bamboo is https://example.domain/ then the correct proxy settings are the following
+
+*   proxyName="example.domain"
+
+*   proxyPort="443"
+
+*   scheme="https"
+
+For the same example, and Bamboo is accessed over http instead of https:
+
+*   proxyName="example.domain"
+
+*   proxyPort="80"
+
+*   scheme="http"
+
+For reference, here is an example of the connector after the attributes have been added when the reverse proxy is proxying requests from https://example.domain to the tomcat http connector on port 8085:
+
+```
+<Connector
+            protocol="HTTP/1.1"
+            port="8085"
+
+            maxThreads="150" minSpareThreads="25"
+            connectionTimeout="20000"
+            disableUploadTimeout="true"
+            acceptCount="100"
+
+            enableLookups="false"
+            maxHttpHeaderSize="8192"
+
+            useBodyEncodingForURI="true"
+            URIEncoding="UTF-8"
+
+            redirectPort="8443"
+            scheme="https"
+            proxyName="example.domain"
+            proxyPort="443"
+            />
+```
+
+Updated on
+
+September 25, 2025
+
+Was this helpful?
+
+It wasn't accurate It wasn't clear It wasn't relevant
+
+Still need help?
+----------------
+
+The Atlassian Community is here for you.

@@ -1,0 +1,395 @@
+Title: How can I track down the source of a transitive dependency?
+
+URL Source: https://stackoverflow.com/questions/62225209/how-can-i-track-down-the-source-of-a-transitive-dependency
+
+Markdown Content:
+This question shows research effort; it is useful and clear
+
+116
+
+Save this question.
+
+Show activity on this post.
+
+In a project/solution with lots of `<PackageReference>` dependencies, it can be difficult to find the source of a transitive dependency that's being pulled in. For example, no projects in my solution directly reference the package System.Data.SqlClient, but something is pulling it in transitively. Tracking that down "by hand" is virtually impossible in a large solution or project with lots of direct package references.
+
+Is there any ready-made way (eg, a combination of .Net CLI commands) that, given a particular package, will find and reveal the source of the transitive reference? I use Rider, which has some awesome code navigation and "discovery"-type tools, but I can't find anything that helps with my goal.
+
+Note: I also have VisualStudio if it has this capability built-in somewhere, I'd just need a pointer to where/how.
+
+asked Jun 5, 2020 at 22:51
+
+E-Riz E-Riz
+
+33.5k 15 gold badges 109 silver badges 158 bronze badges
+
+0
+
+This answer is useful
+
+104
+
+Save this answer.
+
+Show activity on this post.
+
+A custom tool called `dotnet depends` is great for viewing reverse dependencies.
+
+*   Installation: `dotnet tool install --global dotnet-depends`
+*   Usage: `dotnet depends .\MyProject.csproj`
+
+NuGet 6.3 in Visual Studio also shows this if you hover over the transitive package.
+
+answered Apr 12, 2023 at 6:44
+
+Kim Kim
+
+2,204 1 gold badge 17 silver badges 15 bronze badges
+
+6 Comments
+----------
+
+Be aware that currently the Transitive Packages are only shown (and appear only in the search) if nuget version > 6.3 (Visual Studio 2022 17.3+) is used and nuget displays one Project (not the Project Solution / not within the multi Project Package View).
+
+2024-02-06T11:17:03.433Z+00:00
+
+I get "Unhandled exception. System.InvalidOperationException: Sequence contains no matching element" when I try to use this in my project.
+
+2024-02-26T18:58:15.057Z+00:00
+
+The part of "hover over transitive package" is the best answer!!!
+
+2024-02-28T18:41:10.647Z+00:00
+
+Saved my day! It's a pity that you need an external tool for that but this is finally what i needed. Thanks!
+
+2024-04-24T05:38:10.22Z+00:00
+
+|
+
+This answer is useful
+
+82
+
+Save this answer.
+
+Show activity on this post.
+
+Starting with net 8.0.4xx SDK you can use `dotnet nuget why <path.sln|path.csproj> <packageName>` to track those down. The project itself doesn't need to target this version, you just need the SDK.
+
+https://learn.microsoft.com/dotnet/core/tools/dotnet-nuget-why
+
+Make sure you ran dotnet restore or equivalent first, otherwise the results will be empty.
+
+answered Aug 24, 2024 at 14:07
+
+baywet baywet
+
+5,822 4 gold badges 28 silver badges 66 bronze badges
+
+2 Comments
+----------
+
+This worked exactly as I wanted it to. I got a tree printout showing the transitive dependency tree that I was looking for! Thankyou!! Worked in VS2022 for me.
+
+2025-03-14T00:40:07.737Z+00:00
+
+This should be the top answer!
+
+2025-03-24T10:48:11.33Z+00:00
+
+This answer is useful
+
+38
+
+Save this answer.
+
+Show activity on this post.
+
+Searching in VS did not work for me, at least not for a BCL package like System.Net.Http. What did work is looking in **obj\project.assets.json**, which lists all dependencies.
+
+It's a manual process of searching for each package up the tree: find your target package under the `"dependencies"` node of another package, e.g.:
+
+```
+"Some.Other.Package/1.0.0": {
+        ...
+        "dependencies": {
+          ...
+          "System.Net.Http": "4.3.4"
+        }
+      }
+```
+
+... then repeat for that package ("Some.Other.Package" in this example) until you get to one that is directly referenced.
+
+There is code to automate this at https://github.com/jerriepelser-blog/AnalyzeDotNetProject but I have not tried it.
+
+answered Mar 27, 2022 at 16:15
+
+EM0 EM0
+
+6,505 8 gold badges 61 silver badges 101 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+32
+
+Save this answer.
+
+Show activity on this post.
+
+I know this question is old and has many answers, but I wanted to point out a natively available option in Visual Studio 2022:
+
+If you use `Manage NuGet Packages for Solution...` this will not work. However, if you use `Manage NuGet Packages...` for a single project, you can simply search for the transitive dependency in the search box, and it will be shown under the "Transitive packages" section. What's more, if you hover over it, you'll see the dependency chain that leads to it:
+
+answered Jul 18, 2024 at 14:54
+
+1 Comment
+---------
+
++1 for "If you use Manage NuGet Packages for Solution... this will not work". That's what I was missing!
+
+2024-11-18T16:19:56.73Z+00:00
+
+This answer is useful
+
+23
+
+Save this answer.
+
+Show activity on this post.
+
+The capability is built into the latest Visual Studio 2019.
+
+With Visual Studio 2019, Update 6, I can see something like the following:
+
+Note that you can also discover packages by searching in the solution explorer.
+
+Unfortunately it's not available in the NuGet Package Manager installed view yet.
+
+answered Jun 5, 2020 at 23:14
+
+imps imps
+
+1,691 1 gold badge 17 silver badges 23 bronze badges
+
+9 Comments
+----------
+
+I tried that, but I don't think it's quite comprehensive because, for the specific package I'm trying to track down, it doesn't show any reference except in a project that isn't a dependency of the one I'm researching.
+
+2020-06-05T23:33:35.833Z+00:00
+
+I'm not following. How do you know that there's a reference to a package then? Note that packages can come in through project references too.
+
+2020-06-06T02:35:08.333Z+00:00
+
+I know because I can use classes from the package. And yes, I'm aware of project references bringing in transitive dependencies, too. That's part of what makes finding them so tricky.
+
+2020-06-07T22:52:23.643Z+00:00
+
+Can you look at your project.assets.json file? The SolutionExplorer looks at that as the source of truth. Happy to peek at it if you can share the content. Keep in mind it might contain some PII info in the form of PATs and package names. On the other hand, does search not help?
+
+2020-06-08T23:09:50.077Z+00:00
+
+|
+
+This answer is useful
+
+4
+
+Save this answer.
+
+Show activity on this post.
+
+Since I had the same problem and didn't find anything working (on SO, google and my installed VS2022 Ultimate), I've create a powershell and python script.
+
+The script uses the `nuget-deps-tree` - npm package to get a dependency tree and then traverses this tree to find the nuget.
+
+See: https://github.com/Kraego/NailDownNuget
+
+answered Jan 13, 2023 at 13:07
+
+Kraego Kraego
+
+4,002 3 gold badges 30 silver badges 38 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+2
+
+Save this answer.
+
+Show activity on this post.
+
+I have DependencyVisualizerTool that can show you the full dependency graph for a given project. For example, for a restore project, it can do the following:
+
+*   Project(blue) App depending on project Lib (blue), and package with a Vulnerability Newtonsoft.Json 12.0.3. (white means package, red border means vulnerable)
+*   It also shows, project Lib (blue) depending on a deprecated package Nuget.Core 2.14.0 (yellow)
+*   Finally, it shows NuGet.Core depending on Microsoft.Web.XDT 2.1.0.
+
+E-Riz
+
+33.5k 15 gold badges 109 silver badges 158 bronze badges
+
+answered Jan 26, 2024 at 2:01
+
+imps imps
+
+1,691 1 gold badge 17 silver badges 23 bronze badges
+
+3 Comments
+----------
+
+That output looks fantastic and super useful. I'm no longer working in .Net so I can't really accept the answer in good faith (I can't try it out), but this looks quite promising for future readers.
+
+2024-01-26T14:24:25.023Z+00:00
+
+I tried this and I couldn't figure out how to view the diagram.... is that something you have to have visual studio to view?
+
+2024-03-01T18:58:22.223Z+00:00
+
+You need Visual Studio's DGML viewer yes.
+
+2024-03-02T19:09:06.193Z+00:00
+
+This answer is useful
+
+2
+
+Save this answer.
+
+Show activity on this post.
+
+By using **Microsoft Visual Studio Community 2022** Version 17.12.4 I was able to find these dependencies by using search at the top of the solution explorer, but make sure you selected "**Search within external items**" by expanding the search dropdown options from the right side of the text search input, like it is shown in the screenshot.
+
+answered Jan 30 at 8:03
+
+Comments
+--------
+
+This answer is useful
+
+0
+
+Save this answer.
+
+Show activity on this post.
+
+Not an ideal solution in many cases but just to mention it. Switching to paket dependency manager could help as well, especially for bigger projects. It has a command called paket why that quickly tells you for each package whether it's a top level, a direct or a transient dependency and additionally shows the dependency chain. See this blog post for some examples.
+
+answered Oct 21, 2022 at 9:31
+
+NexX NexX
+
+333 3 silver badges 13 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+0
+
+Save this answer.
+
+Show activity on this post.
+
+I built a `powershell` script **net-pkg.psm1** to draw hierarchy of dependencies
+
+```
+> ipmo -Force "C:\dev-note\learning\net-pkg.psm1"
+> cd E:\path\to\folder\of\csproj
+> initialize-asset
+Target framework(s):
+- net6.0
+- net8.0
+
+> build-map 'net8.0'
+> show-tree
+
+└─ net8.0
+   ├─ Microsoft.AspNetCore.Mvc.NewtonsoftJson/8.0.3
+   ├─ MyOrg.Proj.Jobs/2.3.0
+   │  ├─ MyOrg.Proj.Persistence.CosmosDb/10.0.1
+   │  │  ├─ Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0
+   │  │  ├─ MyOrg.Proj.Persistence.Abstractions/10.0.1
+   │  │  │  ├─ Newtonsoft.Json/13.0.2 - 13.0.3
+   │  │  │  └─ MyOrg.Proj.Requests.Abstractions/6.0.0
+   │  │  ├─ Azure.ResourceManager.CosmosDB/1.2.1
+   │  │  ├─ MyOrg.Proj.ManagedIdentity.Cosmos/4.0.2
+   │  │  │  ├─ MyOrg.Proj.ManagedIdentity/4.0.2
+   │  │  │  │  └─ Microsoft.Extensions.Configuration.Abstractions/8.0.0
+   │  │  │  └─ Microsoft.Azure.Cosmos/3.35.4
+   │  │  └─ Microsoft.AspNetCore.Hosting.Abstractions/2.2.0
+   │  └─ MyOrg.Proj.Persistence.InMemory/10.0.1
+   │     ├─ MyOrg.Proj.Persistence.Abstractions/10.0.1
+   │     └─ MyOrg.Proj.Requests.Abstractions/6.0.0
+   └─ Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0
+
+> show-tree -yml > tree.yml
+
+- net8.0
+  - Microsoft.AspNetCore.Mvc.NewtonsoftJson/8.0.3
+  - MyOrg.Proj.Jobs/2.3.0
+    - Microsoft.Extensions.DependencyInjection.Abstractions/8.0.0
+    - MyOrg.Proj.Persistence.Abstractions/10.0.1
+      - Newtonsoft.Json/13.0.2 - 13.0.3
+    - Azure.ResourceManager.CosmosDB/1.2.1
+      - MyOrg.Proj.ManagedIdentity.Cosmos/4.0.2
+        - MyOrg.Proj.ManagedIdentity/4.0.2
+          - Microsoft.Extensions.Configuration.Abstractions/8.0.0
+        - Microsoft.Azure.Cosmos/3.35.4
+      - Microsoft.AspNetCore.Hosting.Abstractions/2.2.0
+  - MyOrg.Proj.Persistence.InMemory/10.0.1
+    - MyOrg.Proj.Persistence.Abstractions/10.0.1
+    - Newtonsoft.Json/13.0.2 - 13.0.3
+```
+
+answered Dec 23, 2024 at 8:51
+
+KevinBui KevinBui
+
+1,179 19 silver badges 33 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+-1
+
+Save this answer.
+
+Show activity on this post.
+
+I found that your project needs to be using package references instead of the old Packages.Config file. You can right click Packages.config in Solution Explorer then select Migrate packages.config to PackageReference... in the context menu. In the popup dialog, it actually lists the transitive dependencies before doing the migration.
+
+answered Apr 9 at 20:37
+
+SteveB SteveB
+
+271 3 silver badges 13 bronze badges
+
+1 Comment
+---------
+
+The question states that the solution is _already_ using packages references.
+
+2025-04-10T12:52:27.29Z+00:00
+
+Start asking to get answers
+
+Find the answer to your question by asking.
+
+Ask question
+
+Explore related questions
+
+See similar questions with these tags.

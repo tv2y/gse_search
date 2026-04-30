@@ -1,0 +1,725 @@
+Title: drones-08-00007
+
+URL Source: https://www.scribd.com/document/799584935/drones-08-00007
+
+Markdown Content:
+Drones 08 00007 | PDF | Machine Learning | Unmanned Aerial Vehicle
+
+===============
+
+Opens in a new window Opens an external website Opens an external website in a new window
+
+ This website utilizes technologies such as cookies to enable essential site functionality, as well as for analytics, personalization, and targeted advertising. To learn more, view the following link: Privacy Policy
+
+Open navigation menu
+
+Close suggestions Search Search
+
+en Change Language
+
+Upload
+
+Sign in
+
+Sign in
+
+Download free for 30 days
+
+0 ratings 0% found this document useful (0 votes)
+
+7 views 28 pages
+
+Drones 08 00007
+===============
+
+Document Information
+
+Uploaded by
+-----------
+
+John Marshle
+
+AI-enhanced title
+
+Go to previous items Go to next items
+*   Download 
+*   Save Save drones-08-00007 For Later 
+*   Share 
+*   0%0% found this document useful, undefined 
+*   0%, undefined 
+*   Print 
+*   Embed 
+*   Ask AI 
+*   Report 
+
+Download
+
+Save drones-08-00007 For Later
+
+You are on page 1/ 28
+
+Search
+
+Fullscreen
+
+See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/376953269
+
+Enhancing Urban Mobility through Trafﬁc Management with UAVs and VLC Technologies
+
+Article
+
+in
+
+Drones · January 2024
+
+DOI: 10.3390/d rones8010007
+
+CITATIONS
+
+6
+
+READS
+
+82
+
+2 authors:
+
+Javier Garau Guzmán Universitat Oberta de Catalunya
+
+3
+
+PUBLICATIONS
+
+8
+
+CITATIONS
+
+SEE PROFILE
+
+Victor Monzon Baeza University of Luxembour g
+
+82
+
+PUBLICATIONS
+
+640
+
+CITATIONS
+
+SEE PROFILE
+
+All content following this page was uploaded by Victor Monzon Baeza on 29 December 2023.
+
+The user has requested enhancement of the downloaded file.
+
+ad Download to read ad-free
+
+Citation:
+
+Garau Guzman, J.; Monzon Baeza, V. Enhancing Urban Mobility through Trafc Management with UAVs and VLC Technologies.
+
+Drones
+
+2024
+
+,
+
+8
+
+, 7.https://doi.org/10.3390/drones8010007 Academic Editor: Pablo Rodríguez-Gonz álvez and Riadh Dhaou Received: 1 November 2023 Revised: 19 December 2023 Accepted: 26 December 2023 Published: 29 December 2023
+
+Copyright:
+
+© 2023 by the authors.Licen see MDPI, Basel, Swit zerlan d.This article is an open access article dis tri but ed und er the ter ms and conditions o the Creative Commons Attribution (CC BY) license(https://creativecommons.org/licenses/by/
+
+4.0/).
+
+drones
+
+Article
+
+Enhancing Urban Mobility through Trafc Management with UAVs and VLC Technologies
+
+Javier Garau Guzman
+
+1
+
+and Victor Monzon Baeza
+
+2,
+
+*
+
+1
+
+Department o Computer Science, Multimedia and Telecomm unications, Universitat Oberta de Catalunya,08018 Barcelona, Spain; jgaraug@uoc.edu
+
+2
+
+SigCom Group in SnT, University o Luxembourg, L-1855 Luxembourg, Luxembourg
+
+*
+
+Correspondence: victor.monzon@uni.lu
+
+Abstract:
+
+This paper introduces a groundbreaking approach to transorm urban mobility by integrat-
+
+ing Unmanned Aerial Vehicles (UAVs) and Visible Light Communication (VLC) technologies into
+
+trafc management systems within smart cities. With the continued growth o urban populations, the
+
+escalating trafc density in large cities poses signifcant challenges to the daily mobility o citizens,rendering traditional ground-based trafc management methods increasingly inadequate. In this
+
+context, UAVs provide a distinctive perspective or real-time trafc monitoring and congestion detec-
+
+tion using the YOLO algorithm. Through image capture and processing, UAVs can rapidly identiy congested areas and transmit this inormation to ground-based trafc lights, acilitating dynamic trafc control adjustments. Moreover, VLC establishes a communication link between UAVs and
+
+trafc lights that complements existing RF-based solutions, underscoring visible light’s potential as a reliable and energy-efcient communication medium. In addition to integrating UAVs and VLC, we
+
+propose a new communication protocol and messaging system or this ramework, enhancing its
+
+adaptability to varying trafc ows. This research represents a signifcant stride toward developing
+
+more efcient, sustainable, and resilient urban transportation systems.
+
+Keywords:
+
+trafc management; VLC; UAV; automation; smart city
+
+1. Introduction
+
+In the modern era o urbanization, the concept o “smart cities” has emerged as a beacon o hope or addressing the myriad challenges posed by growing metropolitan populations. A smart city represents an integrated urban ecosystem that harnesses the
+
+pow er oadv anc ed tec hn olo gi es to enh anc e the qua lit y olieor its in hab ita nts. At the he art o this transormation lies an innovative approach to mobility management, a critical acet o urban lie. Smart cities strive to revolutionize how people move within and across urban
+
+spaces with the goal o creating more efcien t, sustainable, and accessible transpor tation
+
+networks, meeting the 2030 sustainable development goals [1].
+
+The traditional paradigms o urban mobility are being redefned through the inu-sion o cutting-edge technologies. From intelligent transportation systems and real-time data analytics to the integration o autonomous vehicles and sustainable transportation
+
+modes, smart cities are revolutionizi ng how individuals navigate their urban environments.
+
+By seamlessly weaving together modes o transport, optimizing trafc ows, and pri-oritizing accessibility or all, smart cities aim to alleviate congestion, reduce emissions,
+
+and enhance overall livability. Urban centers across the globe are grappling with escalating challenges in trafc congestion and mobility. As populations continue to surge, traditional trafc management systems encounter limitations in regulating ow and inefciently alle-viating congestion. This escalating urban mobility crisis necessitates innovative approaches
+
+integrating advanced technologies to revolutionize trafc management. In response to this imperative, this paper delves into the synergistic application o Unmanned Aerial
+
+Drones
+
+2024
+
+,
+
+8
+
+, 7.https://doi.org/10.3390/drones8010007 https://www.mdpi.com/journal/drones
+
+ad Download to read ad-free
+
+Drones
+
+2024
+
+,
+
+8
+
+, 7 2 o 27
+
+V ehicles (UA Vs) and Visible Light Communication (VLC) technologie s to augment urban
+
+trafc management.
+
+The evolution o urban mobility solutions has witnessed remarkable strides in recent
+
+years. Unmanned Aerial V ehicle (UA V) advancements have expanded their potential beyond recreationa l and surveillance applications. UA Vs are now pivotal instruments in real-time data acquisition and monitoring, oering unprecedented access to crucial inormation rom elevated vantage points. Furthermore, the emergence o Visible Light
+
+Communication (VLC) technology has introduced a transormative communication rame-work. This technology leverages the visible light spectrum, relieving congestion produced
+
+in the radio requency spectrum and opening new avenues or reliable, high-speed data transmission. While both UAVs and VLC technologies individually hold promise, their combined application in urban trafc management remains an emerging rontier with
+
+immense potential.
+
+1.1. Background
+
+In the rapidly evolving landscape o urban mobility, the integration o cutting-edge
+
+technologies has become imperative or addressing the complex challenges posed by grow-
+
+ing urbanization [
+
+2
+
+–
+
+4
+
+]. A diverse array o studies, each oerin g unique perspectives and insights, contribute signifcantly to the discourse on enhancing urban mobility [
+
+5
+
+]. This
+
+compilation o research endeavors encompasses a broad spectrum o topics, ranging rom
+
+trafc management strategies to the potential applications o Unmanned Aerial V ehicles
+
+(UAVs)[
+
+6
+
+] and Visible Light Communication (VLC)[
+
+7
+
+] technologies. While certain studiesoc us on the op tim iza tio n otraf c con tr ol sys tem s usi ng con ne cte d and aut oma ted veh icl es
+
+(CAVs) [
+
+8
+
+,
+
+9
+
+], others venture into the realm o urban air mobility, proposing hierarchical
+
+planning procedures or managing eets o aerial vehicles [
+
+10
+
+]. Additionally, the research
+
+delves into the potential o VLC-enabled UAVs, contemplating their power-efcient de-
+
+ployment or communication and illumination purposes [
+
+11
+
+]. However, it is important to
+
+note that not all studies explicitly explore the utilization o UAVs and VLC technologies
+
+or urban mobility enhancement. Additionally, not only trafc lights, as considered in this
+
+work, but VLC-enabled streetlights [
+
+12
+
+]can also play a pivotal role in enhancing urban mobility and trafc management, ensuring seamless connectivity and communication
+
+between vehicles and inrastructure.
+
+Furthermor e, a broader perspective emerges rom studies addressing the undamental
+
+challenges acing smart cities. Saety, privacy, ethical, and legal concerns surrounding the
+
+integration o UAVs in smart cities are aptly examined [
+
+13
+
+], underscoring the multiaceted consideratio ns accompanying technological advancements. Additionall y, the pivotal role ointelligent transportation systems (ITS) and artifcial intelligence (AI) in optimizing urban
+
+planning and predicting trafc conditions is explored, shedding light on the potential or
+
+data-driven solutions in shaping the uture o urban mobility [
+
+14
+
+]. Moreover, the papers
+
+collectively highligh t the increasi ng signifcance o urban air trafc management systems in accommodating the rising number o UAVs in smart cities [
+
+15
+
+]. The ocus is on harnessing the potential o CA Vs to provide valuable data or trafc management and actively improve
+
+trafc ow. For example, simulations conducted in[
+
+9
+
+] or a real-world arterial corridor show signifcant mobility and uel economy improvements, with total delay reduced by
+
+2.2% to 33.0% and uel consumption lowered by 3.9% to 7.4%. A groundbreaking approach
+
+to trafc control in smart cities is presented in [
+
+16
+
+], utilizing multiple UAVs or enhanced
+
+event detection.
+
+In trafc congestion detection, the choice o the right algorithm plays a pivotal role in ens uri ng acc ura cy and efci en cy. In thi s con tex t,we hav e opt edor the Y ou On ly Lo ok On ce
+
+(YOLO) algorithm as our preerred method or congestion detection, standing out among
+
+other available algorithms such as SSD and Faster R-CNN. YOLO presents a unique and
+
+promisi ng approach to real-time detection or trafc detection application [
+
+17
+
+]. Its ability to analyze entire images in a single pass provides a swit and comprehensive understanding
+
+o the trafc scenario. This introduction delves into the rationale behind selecting YOLO
+
+ad Download to read ad-free
+
+Drones
+
+2024
+
+,
+
+8
+
+, 7 3 o 27
+
+over alternative algorithms and sets the stage or a detailed exploration o its capabilities in revolutionizing congestion detection within urban environments. Here are the reasons or
+
+choosing YOLO:1.
+
+Real-T ime Processing Speed
+
+: YOLO processes rames at high speed, ranging rom 45 rames per second (ps) or larger networks to 150 ps or smaller networks. This real-time processing capability is crucial or applications like trafc management,
+
+where timely detection and response are essential. YOLO’s speed advantage ensures
+
+swit processing o video rames, enabling rapid decision-making in dynamic trafc
+
+scenarios.2.
+
+Efci ency in R esour ce U sage
+
+: YOLO is known or its efcien cy in reso urc e uti-lization, making it well-suited or deploymen t on resour ce-constrain ed devices like
+
+UAVs. While it may have comparatively lower recall and increased localization error,
+
+the trade-o is acceptable in scenarios where real-time processing and efciency are
+
+prioritized.3.
+
+Single-Pass Object Detection
+
+: YOLO ollows a single-pass object detection approach,
+
+dividing the input image into a grid and directly predicting bounding boxes and
+
+class probabilities. This design contrasts with two-pass methods like Faster R-CNN.
+
+The single-pass architecture aligns to minimize processing time and resource usage.4.
+
+Simplicity and Ease of Integration
+
+: YOLO’s simplicity and straightorward architec-
+
+ture make implementin g and integrating into the overall system easier. The stream-
+
+lined design contributes to aster inerence and acilitates deployment on UAVs with
+
+limited computational capabilities.5.
+
+Suitability or UA V Applications
+
+: Considering the use case involving Unmanned
+
+Aerial Vehicles (UAVs) or trafc management, YOLO’s balance between speed and
+
+accuracy aligns with the requirements o real-time processing images captured by
+
+UAVs.
+
+Table 1 illustrates YOLO’s superior precision and a higher count o true positives compared to alternative models. Although its rames-per-second processing speed alls between that o SSD and other models, we prioritize detection precision or our system.Since SSD sacrifces precision in our specifc context o identiying cars, we emphasize
+
+detection accuracy in our evaluation. These data are rom an example o car detection on
+
+the road in[17].
+
+Table 1.
+
+YOLO comparison with other algorithms or detection.
+
+Model A v e r a g e T r u e F a l s e F r a m e p e r P r e c i s i o n P o s i t i v e P o s i t i v e S e c o n d (F P R)
+
+Y O L O v 4 9 8.0 8% 2 7 3 2 5 8 2.1 R _ C N N 9 3.2% 2 6 2 1 7 3 6.3 2 S S D 9 2.7% 2 5 7 3 4 1 0 5.1 4
+
+In the context o [
+
+18
+
+], these identical models underwent a comparison or an alterna-
+
+tive image detection scenario, specifcally involving version 3 o YOLO, where the latter exhibited a superior perormance compared to other models. This scenario holds signif-
+
+cance as it involves substantial losses in the link due to the considerable distance between
+
+the satelli te and the ground. Such fnding s are rel evant as they can be extra pola ted to
+
+situations with low visibility caused by actors such as og, pollution, or other environmen-
+
+tal conditions. On the other hand, YOLO has presented a better perormance in terms oprocessi ng speed than RetinaNet, according to[
+
+19
+
+]. In the present era, chip technologies,such as AI accelerators based on GPUs, provide extensive signal processing advantages in diverse scenarios. Notably, these scenarios encompass nanosatellites, CubeSats, and,
+
+o particular relevance to our discussion, Unmanned Aerial Vehicles (UAVs), as elucidated
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+Share this document
+-------------------
+
+*   Share on Facebook, opens a new window
+*   Share on LinkedIn, opens a new window
+*   Share with Email, opens mail client
+*   Copy link
+
+Millions of documents at your fingertips, ad-free Subscribe with a free trial
+
+You might also like
+-------------------
+
+*   Iot Smart City Research Paper   100% (1)   Iot Smart City Research Paper 5 pages    
+*   The Evolution of Urban Mobility From Cars To Smart Cities   No ratings yet  The Evolution of Urban Mobility From Cars To Smart Cities 2 pages    
+*   Drones 08 00512 With Cover   No ratings yet  Drones 08 00512 With Cover 26 pages    
+*   Urban Mobility Forecasting Model   No ratings yet  Urban Mobility Forecasting Model 10 pages    
+*   Risman Yusuf 2201801522 Ld43 Traffic Engineering Artificial Intelligence Enabled Iot: Traffic Congestion Reduction in Smart Cities   No ratings yet  Risman Yusuf 2201801522 Ld43 Traffic Engineering Artificial Intelligence Enabled Iot: Traffic Congestion Reduction in Smart Cities 4 pages    
+*   Advancements in UAV-Enabled Intelligent Transportation 1   No ratings yet  Advancements in UAV-Enabled Intelligent Transportation 1 27 pages    
+*   555   No ratings yet  555 2 pages    
+*   Sustainable Urban Development Innovations in Smart City Design   No ratings yet  Sustainable Urban Development Innovations in Smart City Design 3 pages    
+*   The Impact of Autonomous Vehicles On Urban Mobility and Sustainability   No ratings yet  The Impact of Autonomous Vehicles On Urban Mobility and Sustainability 4 pages    
+*   New Reserch Report   No ratings yet  New Reserch Report 5 pages    
+*   Sensors 23 08753 With Cover   No ratings yet  Sensors 23 08753 With Cover 16 pages    
+*   The Future of Transportation   No ratings yet  The Future of Transportation 2 pages    
+*   Smart Cities and Urban Development A Vision For The Future   No ratings yet  Smart Cities and Urban Development A Vision For The Future 2 pages    
+*   Smart Urbanization   No ratings yet  Smart Urbanization 8 pages    
+*   IOT For Decongesting The Highways   No ratings yet  IOT For Decongesting The Highways 5 pages    
+*   Smart Traffic Management Summary   No ratings yet  Smart Traffic Management Summary 3 pages    
+*   IoT's Impact on Smart Cities   No ratings yet  IoT's Impact on Smart Cities 3 pages    
+*   Mobility in Smart Cities: Fabiana David de Oliveira Gomes Victor Albanezi de Figueiredo Mesquita   No ratings yet  Mobility in Smart Cities: Fabiana David de Oliveira Gomes Victor Albanezi de Figueiredo Mesquita 4 pages    
+*   Paper Draft G4   No ratings yet  Paper Draft G4 4 pages    
+*   IEEE Conference Template   No ratings yet  IEEE Conference Template 3 pages    
+*   Intro 231   No ratings yet  Intro 231 2 pages    
+*   A Review of IoT-Based Smart City Development and M   No ratings yet  A Review of IoT-Based Smart City Development and M 40 pages    
+*   Smart City Effects On Urban Mobility and   No ratings yet  Smart City Effects On Urban Mobility and 7 pages    
+*   IoT Smart Cities Research   No ratings yet  IoT Smart Cities Research 11 pages    
+*   8 - Fall Detection Agriculture   No ratings yet  8 - Fall Detection Agriculture 19 pages    
+*   IoT Smart Traffic & Parking Solutions   No ratings yet  IoT Smart Traffic & Parking Solutions 8 pages    
+*   Smart Cities: Building A Sustainable Urban Future   No ratings yet  Smart Cities: Building A Sustainable Urban Future 10 pages    
+*   1 s2.0 S0040162518319498 Main   No ratings yet  1 s2.0 S0040162518319498 Main 14 pages    
+*   Iot in Smart Cities   No ratings yet  Iot in Smart Cities 5 pages    
+*   Smart Urban Mobility Innovations Zensiert   No ratings yet  Smart Urban Mobility Innovations Zensiert 49 pages    
+*   Multifaceted Synthesis of AV-3 - Chapterpdf   No ratings yet  Multifaceted Synthesis of AV-3 - Chapterpdf 47 pages    
+*   Traffic Monitoring Systems   No ratings yet  Traffic Monitoring Systems 13 pages    
+*   Iot in Smart Cities   No ratings yet  Iot in Smart Cities 5 pages    
+*   SmartCity TrafficManagementSystemIT662DCNsubmission   No ratings yet  SmartCity TrafficManagementSystemIT662DCNsubmission 9 pages    
+*   ITS SG Bookchapter   No ratings yet  ITS SG Bookchapter 39 pages    
+*   RMIPR   No ratings yet  RMIPR 14 pages    
+*   Ijarcce 2024 134162   No ratings yet  Ijarcce 2024 134162 8 pages    
+*   Rspa 2019 0439   No ratings yet  Rspa 2019 0439 24 pages    
+*   I Jae Bs 3484911708725600   No ratings yet  I Jae Bs 3484911708725600 15 pages    
+*   Traffic   No ratings yet  Traffic 48 pages    
+*   Document5 Urban Planning   No ratings yet  Document5 Urban Planning 7 pages    
+*   Iot and Computer Vision For Urban Traffic Management: International Journal For Multidisciplinary Research February 2025   No ratings yet  Iot and Computer Vision For Urban Traffic Management: International Journal For Multidisciplinary Research February 2025 30 pages    
+*   End Sem Report On AOI   No ratings yet  End Sem Report On AOI 25 pages    
+*   Smart City Big Data Analytics Review   0% (1)   Smart City Big Data Analytics Review 52 pages    
+*   Digital Economy Self Assignment   No ratings yet  Digital Economy Self Assignment 11 pages    
+*   DownloadFull TextResearchPaperPDFPp80 94   No ratings yet  DownloadFull TextResearchPaperPDFPp80 94 16 pages    
+*   Traffic Assinment 2   No ratings yet  Traffic Assinment 2 8 pages    
+*   Rs 2   No ratings yet  Rs 2 24 pages    
+*   An Overview of Urban Mobility Revolutionizing With   No ratings yet  An Overview of Urban Mobility Revolutionizing With 17 pages    
+*   Traffic Management System Using IoT Technology   No ratings yet  Traffic Management System Using IoT Technology 16 pages    
+*   Iotpune   No ratings yet  Iotpune 6 pages    
+*   Drones 08 00702 v2   No ratings yet  Drones 08 00702 v2 28 pages    
+*   Smart Cities: Introducing Digital Innovation To Cities Oliver Gassmann No Waiting Time   No ratings yet  Smart Cities: Introducing Digital Innovation To Cities Oliver Gassmann No Waiting Time 136 pages    
+*   Untitled Document   No ratings yet  Untitled Document 8 pages    
+*   Machine Learning For Real-Time Traffic Management in Smart Cities   No ratings yet  Machine Learning For Real-Time Traffic Management in Smart Cities 16 pages    
+*   Iot Applications Promise To Bring Immense Value Into Our Lives. With Newer Wireless   No ratings yet  Iot Applications Promise To Bring Immense Value Into Our Lives. With Newer Wireless 35 pages    
+*   Mukim 048 Major Report Files   No ratings yet  Mukim 048 Major Report Files 45 pages    
+*   BTECH ISDF IOT Security QP   No ratings yet  BTECH ISDF IOT Security QP 8 pages    
+*   SSRN 4916398   No ratings yet  SSRN 4916398 8 pages    
+*   DSC Final   No ratings yet  DSC Final 22 pages    
+*   Grade 9 Economics Project Semester 2 - Smart Cities   No ratings yet  Grade 9 Economics Project Semester 2 - Smart Cities 32 pages    
+*   Smart Street Light Management System Using IOT: Yash Aringale   No ratings yet  Smart Street Light Management System Using IOT: Yash Aringale 6 pages    
+*   Smart House Thesis   100% (3)   Smart House Thesis 8 pages    
+*   Slide TPT 370   No ratings yet  Slide TPT 370 21 pages    
+*   Master Thesis in Smart Cities   No ratings yet  Master Thesis in Smart Cities 71 pages    
+*   Smart City Mangalore - IIDC Consortium - 19 Sept 2015   No ratings yet  Smart City Mangalore - IIDC Consortium - 19 Sept 2015 25 pages    
+*   Evans Et Al. 2019   No ratings yet  Evans Et Al. 2019 18 pages    
+*   IoT Privacy & Security Challenges   No ratings yet  IoT Privacy & Security Challenges 14 pages    
+*   Paper 5 Smart Cities Proposal For An Oxford Smart City Vision and Strategy   No ratings yet  Paper 5 Smart Cities Proposal For An Oxford Smart City Vision and Strategy 14 pages    
+*   CJKT Auto-ID Workshop 2017 Agenda   No ratings yet  CJKT Auto-ID Workshop 2017 Agenda 12 pages    
+*   SCPD - Course Booklet PDF   No ratings yet  SCPD - Course Booklet PDF 2 pages    
+*   FDP Brochure (SCM) - DYPIU   No ratings yet  FDP Brochure (SCM) - DYPIU 2 pages    
+*   Introduction To Artificial Intelligence   No ratings yet  Introduction To Artificial Intelligence 8 pages    
+*   Smart City Research Paper   No ratings yet  Smart City Research Paper 7 pages    
+*   Living Lab Projects For Best Living Lab Project Award   90% (10)   Living Lab Projects For Best Living Lab Project Award 42 pages    
+*   Turkey ASN   No ratings yet  Turkey ASN 6 pages    
+*   Mini Project Final   No ratings yet  Mini Project Final 40 pages    
+*   The Impact of Artificial Intelligence On Economic   No ratings yet  The Impact of Artificial Intelligence On Economic 14 pages    
+*   IOT Unit4   No ratings yet  IOT Unit4 19 pages    
+*   CIV1008 Module 2 - Current Trends and Evolution in Civil Engineering   No ratings yet  CIV1008 Module 2 - Current Trends and Evolution in Civil Engineering 7 pages    
+*   Smart Laws Seminar for Urban Reform   No ratings yet  Smart Laws Seminar for Urban Reform 9 pages    
+*   Overview of Faridabad Real Estate   No ratings yet  Overview of Faridabad Real Estate 3 pages    
+*   Jetking Prospectus 2019   0% (1)   Jetking Prospectus 2019 28 pages    
+*   Practice Test 5 With Answer   No ratings yet  Practice Test 5 With Answer 6 pages    
+*   The Tester Skills Program: Teaching Testers To Think For Themselves   No ratings yet  The Tester Skills Program: Teaching Testers To Think For Themselves 22 pages    
+*   IoT Solutions For Smart Cities Garbage Dustbin Management System and Report   No ratings yet  IoT Solutions For Smart Cities Garbage Dustbin Management System and Report 13 pages    
+*   Advances in Smart Roads For Future Smart Cities   No ratings yet  Advances in Smart Roads For Future Smart Cities 25 pages    
+*   ESSAY TOPIC: Jan Dhan Yojana: Fifty Gold in Olympics: Can This Be A Reality For India?   No ratings yet  ESSAY TOPIC: Jan Dhan Yojana: Fifty Gold in Olympics: Can This Be A Reality For India? 14 pages    
+*   Hull Smart City Final Report.   100% (1)   Hull Smart City Final Report. 26 pages    
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad Download to read ad-free
+
+ad
+
+Footer menu
+-----------
+
+Back to top
+
+About
+
+*   About Scribd, Inc.
+*   Everand: Ebooks & Audiobooks
+*   Slideshare
+*   Join our team!
+*   Contact us
+
+Support
+
+*   Help / FAQ
+*   Accessibility
+*   Purchase help
+*   AdChoices
+
+Legal
+
+*   Terms
+*   Privacy
+*   Copyright
+*   Cookie Preferences
+*   Do not sell or share my personal information
+
+Social
+
+*   Instagram Instagram
+*   Facebook Facebook
+*   Pinterest Pinterest
+
+Get our free apps
+
+About
+
+*   About Scribd, Inc.
+*   Everand: Ebooks & Audiobooks
+*   Slideshare
+*   Join our team!
+*   Contact us
+
+Legal
+
+*   Terms
+*   Privacy
+*   Copyright
+*   Cookie Preferences
+*   Do not sell or share my personal information
+
+Support
+
+*   Help / FAQ
+*   Accessibility
+*   Purchase help
+*   AdChoices
+
+Social
+
+*   Instagram Instagram
+*   Facebook Facebook
+*   Pinterest Pinterest
+
+Get our free apps
+
+*   Documents
+
+Language:
+
+English
+
+Copyright © 2025 Scribd Inc.
+
+We take content rights seriously. Learn more in our FAQs or report infringement here.
+
+We take content rights seriously. Learn more in our FAQs or report infringement here.
+
+Language:
+
+English
+
+Copyright © 2025 Scribd Inc.
+
+576648e32a3d8b82ca71961b7a986505

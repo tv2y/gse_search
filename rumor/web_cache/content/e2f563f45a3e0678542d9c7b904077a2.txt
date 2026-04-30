@@ -1,0 +1,68 @@
+Title: Setting the Record Straight on Quantum Computing and RSA Encryption | RSA Blog
+
+URL Source: https://www.rsa.com/resources/blog/zero-trust/setting-the-record-straight-on-quantum-computing-and-rsa-encryption/
+
+Published Time: 2024-10-28T07:00:42+00:00
+
+Markdown Content:
+RSA Algorithm PSA
+
+Abraham Lincoln once said that you shouldn’t believe everything you read on the internet, and that’s particularly true when it comes to reports claiming that researchers have used quantum computing to break the RSA encryption algorithm.
+
+PSA: We care about the integrity of the RSA algorithm, but we are not biased when it comes to evaluating its security. Ubiquity of the RSA algorithm across the World Wide Web means that nearly everyone has some skin in the game. That said, the algorithm in and of itself doesn’t have a commercial impact on RSA’s bottom line: while it is associated with our founders and shares its name with our company, it is a public standard (FIPS 186-5) and not owned by, or affiliated with, RSA Security.
+
+And because the algorithm has such an important role to play in securing the internet, wildly overblown stories about the latest academic research can be a distraction for our team, our customers, and our partners. And I really do mean the _latest_ research—media outlets also reported that the RSA algorithm had been broken in 2022 and 2023. Moreover, focusing on a future _theoretical_ threat from quantum computing misses the very real attack vectors that cybercriminals are actively exploiting today.
+
+So, let’s set the record straight and look at the hype surrounding the latest quantum computing research, what it really means, and what cybersecurity risks organizations should be focused on.
+
+Don’t believe the quantum computing hype
+
+Recent headlines referencing a South China Morning Post article claim that Chinese scientists have hacked “military grade encryption.”
+
+The basis of this claim is a May 2024 paper published by researchers at Shanghai University that demonstrates a method for factoring integers up to 50 bits in length using an innovative combination of quantum and classical algorithms and techniques. Since RSA encryption is based, in part, on the computational difficulty of factoring large prime numbers, some have speculated that these techniques could be extrapolated to eventually break the algorithm.
+
+After some alarmist early headlines about the story, a few outlets have started to correct the record. In Forbes, Craig Smith wrote that the process outlined by Shanghai University “represents incremental steps rather than a paradigm-shifting breakthrough that renders current cryptographic standards obsolete.” In The Quantum Insider, Matt Swayne noted that while the process “represents a technical milestone, it is far removed from cracking the highly secure encryption algorithms commonly used in military and financial systems today.”
+
+2048 bits is >50 bits, and it isn’t even close
+
+The problem with these claims is that factoring a 50-bit integer is a far cry from breaking the 2048-bit encryption used in modern implementations of the RSA algorithm. But just _how far_ is difficult for the human brain to fathom since encryption strength increases _exponentially_ with key length.
+
+For illustrative purposes, imagine a suitcase with a three-digit lock and 1,000 possible combinations. Add just one more dial and complexity increases _tenfold_ to 10,000 combinations. Now imagine a suitcase with 2,048 dials. Even with binary bits, the number becomes so large that the methods demonstrated in this paper would take many times the age of our universe to find a solution. Threat actors tend to have shorter deadlines.
+
+(For fun, try entering 2 2048 into Google Calculator. Google will round that up to “infinity”).
+
+Is quantum computing a near-term cybersecurity threat?
+
+Although the field continues to make steady advances, it’s important to note that quantum computing is still in its infancy and faces many daunting technical challenges before practical application of the technology will be possible. Today’s most powerful quantum computers have just recently surpassed 1,000 quantum bits (qubits) in size and can only maintain stable operation for 1-2 milliseconds _._ By comparison, researchers calculate that a theoretical 20 _million_ qubit computer would require eight hours to crack a _single_ 2048-bit key.Moreover, the latest methods documented by Shanghai University researchers involve a combination of quantum _and_ classical computing techniques. Until this dependency on classical techniques is eliminated, this method will reach its physical limits long before it can scale to 2048 bits.
+
+To put this all into perspective, classical techniques were first used to factor a simpler 330-bit version of the RSA algorithm more than 30 years ago, so quantum has a long way to go just to catch up. It’s the cybersecurity equivalent of using your smartphone to turn on the bedroom light when the light switch is just inches away.
+
+What organizations should do about quantum computing now
+
+While quantum computing may not represent a near-term threat, I’m not saying “there’s nothing to see here.” The National Institute of Standards and Technology (NIST) first asked the public for strategies to create post-quantum cryptography standards in 2016 and has released three new post-quantum FIPS encryption standards (FIPS 203, FIPS 204, and FIPS 205), with the fourth and final standard slated to be released by the end of 2024.
+
+I think that’s an appropriate response to a possible future threat: our security should be prepared for the potential of a security paradigm shift. RSA continues to monitor advancements in quantum computing and is committed to incorporating NIST best practices and post-quantum encryption technologies as they become commercially available. But at the same time, the sky is not falling.
+
+In the meantime, NIST has also said that the 2048-bit RSA keys should continue to offer sufficient protection through at least 2030. Organizations should continue following best practices for key length and key rotation until then to keep their encryption secure.
+
+Beyond that, the RSA algorithm already provides a built-in solution—extended key lengths. While 2048-bit keys are in common use today, modern web browsers already support larger 4096-bit keys should the need arise.
+
+The real cybersecurity threats
+
+Earlier I said that RSA doesn’t have a commercial interest in this fight. That said, I do get invested in and annoyed by this story—not as an RSA employee, but as someone who works in cybersecurity. Because worrying about the theoretical future threat of quantum computing misses the very clear, present, and low-tech exploits that cybercriminals are succeeding with today.
+
+Change Healthcare was compromised by stolen credentials and didn’t have MFA enabled on some of its accounts. Scattered Spider convinced IT help desk staff to disable or reset MFA credentials in order to launch a ransomware attack. And Colonial Pipeline was breached in part due to an orphaned VPN account.
+
+Quantum computing requires massive funding and resources. These data breaches did not. Instead, they relied on classic exploits like social engineering, password-based authentication, and organizations not keeping track of who has access to what. Those are the risks that demand organizations’ attention and action, not quantum computing.
+
+Three quantum computing outputs
+
+At the Enigma 2023 Conference, _Law and Policy for the Quantum Age,_ co-author Simson Garfinkel said, “In the near term, quantum computers are good for one thing, and that is getting papers published in prestigious journals. The second thing they are reasonably good at, but we don’t know for how much longer, is they’re reasonably good at getting funding.”
+
+After this latest spate of stories, I’d add a third near-term quantum computing output: creating sensationalist headlines.
+
+I’m curious to see what comes next for quantum. It may have real potential in researching new drugs, financial modeling, aerospace, and cybersecurity. And, like any new technology, it may also have the potential to introduce new threats.
+
+But for the time being, any effect quantum may have is still almost entirely theoretical. Until the technology advances beyond the science lab, we should treat any claims about quantum computing with a healthy dose of skepticism. Given that the latest round of news came only weeks before the US presidential election and amid ongoing reports of foreign election interference, it may be the case that this latest news serves some other purpose.
+
+There’s no need to borrow trouble: there are plenty of immediate cybersecurity risks that organizations should prioritize today rather than worry about a future quantum boogeyman.

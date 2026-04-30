@@ -1,0 +1,247 @@
+Title: Update 11 Center Touch Screen
+
+URL Source: https://lincolnforums.com/forums/threads/update-11-center-touch-screen.51645/page-3
+
+Published Time: Mon, 27 Oct 2025 01:30:06 GMT
+
+Markdown Content:
+*   #41
+
+> Got our upgrade to 11 tonight. PHX-25.1.2.4
+> 
+> 
+> Will see over the next few days how it goes.
+
+Do no like the new format of the clock. /any suggestions on how to put it back the way it was prior to the upgrade??
+
+*   #42
+
+Sweet - we got the Center Touch Screen APIM update at midnight (could see the SOC drop when it installed),
+
+I ran the multiple volume presses evolution to force a system restart. After that I went through several car start/stop cycles to check the changes, including persistence of things: 
+
+ -New widgets are there, as reported.
+
+-Navigation prompt volume changes persist, at least within a given drive cycle (I ran a lot of "hey Google, navigate to..." rounds, adjusting volume, to see that the new volume setting was used on the following responses)
+
+-Bonus! car-usb-handler appears to have been added (or fixed). AudioWagon retains access to the USB across restarts. @Sharbotcom
+
+(AudioWagon is a USB media manager app available from the car's Play Store. It lets you use commands like "hey Google play artist Fleetwood Mac album Rumours" if you're already listening to AudioWagon/USB, or "hey Google play Wake of the Fluid on USB" if you're presently listening to SiriusXM.)
+
+*   #43
+
+> -Bonus! car-usb-handler appears to have been added (or fixed). AudioWagon retains access to the USB across restarts. @Sharbotcom
+
+I had the update installed at the dealer and it still doesn't hold the permissions for AudioWagon.
+
+I'm back at the dealer on Monday for testing with the engineers. Let me know if anything changes with regards to persistent permissions on your vehicle this weekend. Thanks.
+
+*   #44
+
+> I had the update installed at the dealer and it still doesn't hold the permissions for AudioWagon.
+> 
+> 
+> I'm back at the dealer on Monday for testing with the engineers. Let me know if anything changes with regards to persistent permissions on your vehicle this weekend. Thanks.
+
+I will. Since the OTA it's been very consistent, working across multiple restarts testing things.
+
+______________________________
+
+Discover more
+
+Lincoln Nautilus
+
+Lincoln MKX
+
+vehicle
+
+Automobiles
+
+Vehicle
+
+Lincoln
+
+Car
+
+Car dealership
+
+AudioWagon
+
+software
+
+*   #45
+
+> I will. Since the OTA it's been very consistent, working across multiple restarts testing things.
+
+@markfm can you please confirm update id of your last update. I want to confirm it with the dealer that it has the same ID as what was loaded on mine (by the dealer). Thanks.
+
+*   #46
+
+This is what went in at midnight. Prior to this APIM flash AudioWagon was 100% consistent in needing to have USB access (the checkbox thing) thanks on every restart.
+
+Note: if you did have this update, it's always possible it was a bad flash, sometimes that happens without any obvious issue.
+
+Last edited: Oct 3, 2025
+
+Discover more
+
+Luxury car
+
+vehicle
+
+Lincoln
+
+Lincoln Way app
+
+Car dealership
+
+Lincoln MKX
+
+Lincoln Nautilus
+
+AudioWagon
+
+software
+
+Vehicle
+
+*   #47
+
+> View attachment 24047
+> 
+>  This is what went in at midnight. Prior to this APIM fish AudioWagon was 100% consistent in needing to have USB access (the checkbox thing) thanks on every restart.
+> 
+> 
+> Note: if you did have this update, it's always possible it was a bad flash, sometimes that happens without any obvious issue.
+
+Mine shows the same update release id but still no sticky permissions for AudioWagon. Thanks.
+
+*   #48
+
+> Mine shows the same update release id but still no sticky permissions for AudioWagon. Thanks.
+
+I tested it today and appeared to stick. Was the checkbook there before?
+
+______________________________
+
+Discover more
+
+Lincoln Nautilus
+
+Car
+
+Lincoln Way app
+
+vehicle
+
+AudioWagon
+
+Software
+
+MKX
+
+Lincoln MKX
+
+car
+
+car&#039;s
+
+*   #49
+
+> I tested it today and appeared to stick. Was the checkbook there before?
+
+Everytime I start the car the checkbox asking for access appears (or, I have to go into the AudioWagon settings to force it to appear).
+
+Last edited: Oct 3, 2025
+
+*   #50
+
+> Everytime I start the car the checkbox asking for access appears (or, I have to go into the AudioWagon settings to force it to appear).
+> 
+> View attachment 24049
+
+The checkbook i see is much smaller.
+
+*   #51
+
+> The checkbook i see is much smaller.
+
+You should only have seen it once to set it and never again if it working right.
+
+*   #52
+
+I no longer get the AudioWagon USB access pop-up on starting the vehicle. I'll check again tomorrow.
+
+______________________________
+
+#### RAB
+
+##### Junior Member
+
+*   #53
+
+I noticed that if you turn the radio off it stays off when you start the car (it used to turn on at every start), and the keep your hands on the wheel and keep your eyes on the road messages on the dash seem to be more prominent.
+
+I also noticed that my iOS Lincoln Way app was updated to Version 5.28.0 on 9/24/25, then later that day the app showed that an OTA update was ready to install. I don't know if that is a new app feature or just something I never noticed before.
+
+*   #54
+
+I finished a 650 road trip and blue cruise was available most of the time. We experienced far fewer keep hands on wheel and eyes on road announcements. We both keeps hands on wheel even in BC mode. The software is definitely more mature.
+
+The only software glitch was one mirror did not unfold.
+
+One annoyance is when you change drivers (switching profiles) the navigation is lost and has to be redone. If I use AA navigation, it persists since one phone is used with either driver.
+
+I did not use Audio Wagon but it does not prompt.
+
+*   #55
+
+Welp, one step forward, then two back...
+
+As of Friday, AudioWagon permissions were sticking throughout the day, I didn't have to keep giving it permissions on each car start, but no longer - back to requiring permissions.
+
+For google maps navigation, changing the prompt volume during the response to a "Hey google, navigate to..." command (where it says "navigating to...") works, does persist, but it no longer gives the spoken directions. I went back in under the main Settings - Sound, to check, nothing obvious to change. It is navigating, the directions are showing on both the center and panoramic displays, just no audio directions
+
+I'll play with it a bit more, but shrug...
+
+*   #56
+
+> Welp, one step forward, then two back...
+> 
+> 
+> As of Friday, AudioWagon permissions were sticking throughout the day, I didn't have to keep giving it permissions on each car start, but no longer - back to requiring permissions.
+
+Well, it appears, that the permissio will stick - albeit temporarily. I noticed if I don't lock the car and come back to the car before the system shuts down (5 minutes or so), it will keep the session alive, and therefore the permission. Beyond that, it looses the permission setting. So perhaps you were experiencing some.of this behavior.
+
+______________________________
+
+*   #57
+
+> Well, it appears, that the permissio will stick - albeit temporarily. I noticed if I don't lock the car and come back to the car before the system shuts down (5 minutes or so), it will keep the session alive, and therefore the permission. Beyond that, it looses the permission setting. So perhaps you were experiencing some.of this behavior.
+
+Good information. Assuming I reproduce the Maps not actually giving spoken directions again tomorrow, I'll be doing a Service round.
+
+(Honestly I can live without the verbal directions, prefer that to the crazy loud directions, but it gives me a "hook" to bring the vehicle in, and I can tack on the car-usb-handler issue along with it.)
+
+*   #58
+
+> Welp, one step forward, then two back...
+> 
+> 
+> As of Friday, AudioWagon permissions were sticking throughout the day, I didn't have to keep giving it permissions on each car start, but no longer - back to requiring permissions.
+> 
+> 
+> For google maps navigation, changing the prompt volume during the response to a "Hey google, navigate to..." command (where it says "navigating to...") works, does persist, but it no longer gives the spoken directions. I went back in under the main Settings - Sound, to check, nothing obvious to change. It is navigating, the directions are showing on both the center and panoramic displays, just no audio directions
+> 
+> 
+> I'll play with it a bit more, but shrug...
+
+Ours had no verbal commands after the last update, but the little icon on the screen showed it was on mute. We unmuted ours and it has had verbal commands since.
+
+*   #59
+
+Thanks, hopefully that's it
+
+*   #60
+
+I have no issue with loud directions since the volume is adjustable and stick. I can start driving before google is ready to accept verbal commands. There is some wake up period. After the software update, I noticed the prompt setting was on zero but I can adjust and they stick. They are profile dependent.

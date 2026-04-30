@@ -1,0 +1,847 @@
+Title: Final report Feb 4 2005, pb
+
+URL Source: https://netl.doe.gov/sites/default/files/2018-05/FG123104_1.pdf
+
+Published Time: Thu, 31 May 2018 17:44:45 GMT
+
+Markdown Content:
+National Energy Technology Laboratory Strategic Center For Natural Gas (SCNG) 
+
+# Acoustic Detecting and Locating Gas Pipe Line Infringement Final Contract Report 
+
+Reporting Start Date: July 5, 2002 
+
+Reporting End Date: December 31, 2004 
+
+Principle Authors : 
+
+John L. Loth (304) 293-4111 ext 2343 jloth@mail.wvu.edu Gary J. Morris ext 2342 gmorris@mail.wvu.edu (Mike) George M. Palmer ext 2342 gmpalmer@mail.wvu.edu and Research Assistants: Richard Guiler rguiler@aol.com ext 2342 Patrick Browning pbrownin@mix.wvu.edu ext 2342 
+
+# Issue Date: December 2004 DOE Award Number: DE-FC26-02NT41324 
+
+Submitting Organization: 
+
+West Virginia University Department of Mechanical and Aerospace Engineering G-70 Engineering Sciences Building P.O. Box 6106, Evansdale Drive Morgantown, WV 26506 
+
+SCNG Contact: 
+
+Daniel J. Driscoll (304) 285-4717 daniel.driscoll@netl.doe.gov 
+
+Industrial Contact: 
+
+Gregory May (304) 627-3454 c._gregory_may@dom.com Dominion Transmission, Inc Clarksburg, WV 26301 2
+
+DISCLAIMER 
+
+This report was prepared as an account of work sponsored by an agency of the United States Government. Neither the United States Government nor any of their employees, makes any warranty, express or implied, or assumes any legal liability or responsibility for the accuracy, completeness, or usefulness any information, apparatus, product, or process disclosed, or represents that its use would not infringe privately owned rights. Reference herein to any specific commercial product, process or service by trade name, trademark, manufacturer, or otherwise does not necessarily constitute or imply its endorsement, recommendation, or favoring by the United States Government or any agency thereof. The views and opinions of the authors expressed herein do not necessarily state or reflect those of the United States Government or any agency thereof. 
+
+ABSTRACT 
+
+The extensive network of high-pressure natural gas transmission pipelines covering the United States provides an important infrastructure for our energy independence. Early detection of pipeline leaks and infringements by construction equipment, resulting in corrosion fractures, presents an important aspect of our national security policy. The National Energy Technology Laboratory Strategic Center for Natural Gas (SCVG) is and has been funding research on various applicable techniques. The WVU research team has focused on monitoring pipeline background acoustic signals generated and transmitted by gas flowing through the gas inside the pipeline. In case of a pipeline infringement, any mechanical impact on the pipe wall, or escape of high-pressure gas, generates acoustic signals traveling both up and down stream through the gas. Sudden changes in flow noise are detectable with a Portable Acoustic Monitoring Package (PAMP), developed under this contract. It incorporates a pressure compensating microphone and a signal- recording device. Direct access to the gas inside the line is obtained by mounting such a PAMP, with a ½" NPT connection, to a pipeline pressure port found near most shut-off valves. An FFT of the recorded signal subtracted by that of the background noise recorded one-second earlier appears to sufficiently isolate the infringement signal to allow source interpretation. Using cell phones for data downloading might allow a network of such 1000-psi rated PAMP's to acoustically monitor a pipeline system and be trained by neural network software to positively identify and locate any pipeline infringement. 3
+
+TABLE OF CONTENTS EXECUTIVE SUMMARY I. INTRODUCTION 1) Project Objectives 2) Acoustic Leak Signal 3) Acoustic Leak Detection History II. EXPERIMENTAL 1) WVU 1 st Generation Natural Gas Transmission Line Monitoring package 2) WVU 2 nd Generation Portable Acoustic Monitoring Package (PAMP) i. Differential Pressure Transducer ii. High Pressure Microphone Compensation and Calibration iii. Data Acquisition and Management iv. Online Acoustic Sensor Calibrator (OASC) v. Signal Processing for Infringement Detection III. RESULTS AND DISCUSSION IV. CONCLUSIONS 
+
+V. BIBLIOGRAPHY VI. APPENDIX: PAMP OPERATING MANUAL LIST OF TABLES 
+
+Table 1: Examples of mechanical damage recorded on transmission lines in the United States. (Crouch et al. 1994) Table 2: Model 3051 dynamic response 
+
+Table 3: Signal view unit (svu) conversion in volts and millivolts. 
+
+LIST OF FIGURES 
+
+Figure 1: Dominion line 323 near Morgantown, WV, showing ½" NPT inspection ports on either side of the shut-off valve. Figure 2: WVU 1 st generation Acoustic Monitoring Package for 300-psi gas pipeline with diaphragm type aerodynamic signal amplifier. Figure 3: Schematic of Portable Acoustic Monitoring Package (PAMP) Figure 4: Optimus model 270-090 microphone wiring diagram. Figure 5: Performance comparison between a standard 270-090 microphone and a pressure equalized version, both being exposed to the same acoustic signal power and frequency. Figures 6 & 7: The Teac TASCAM PS-5 with audio inputs and outputs on the top. On the bottom are MIDI In, USB, and AC-adapter ports. The selector switches and the compact flash port are on the unit’s right side. (Broderson, S., 2003) 4
+
+Figure 8: Photograph of OASC installed on PAMP. Each of the blue handled valves is an OASC with a different frequency-pressure curve. Figure 9: Schematic of PAMP and the high-pressure laboratory apparatus Figure 10: 0.1-second acoustic signal sampling occurs at 1-second intervals. Figure 11: When “Sample A” FFT is subtracted from “Sample B” FFT, the difference FFT shows only slight frequency variation, indicating that no infringement signal has been detected. Figure 12: When “Sample B” FFT is subtracted from “Sample C” FFT, the difference FFT shows obvious frequency variation, indicating the presence of an infringement signal. Figure 13: Comparing the difference FFTs of Figures 3 and 4 reveals the vast difference between FFT’s from a normal background signal and one with an infringement superimposed. Figure 14: Open loop programming flow chart for NG pipeline infringement detection. Figure 15: On the left is a complete Pipeline Acoustic Monitoring Package (PAMP) with laptop for data analysis. PAMP (on right) shows that unit can also be operated without a laptop, using its internal data recorder. The internal microphone is pressure equalized up to 1000 psi. Figure 16: Acoustic signal damping test between adjacent stations on a Dominion Transmission pipeline Figure 17: PAMP Hardware- DAQ Center and TASCAM PS-5. Figure 18: PAMP Hardware- Sensor Tree. Figure 19: Setting the switches on the TASCAM PS-5. Figure 20: Hardware wiring diagram. Figure 21: DAQ Center shown with transducer data cables. Figure 22: DAQ-EZ virtual circuit preparation. Figure 23: Complete DAQ-EZ virtual circuit. Figure 24: Accessing DAQ-EZ’s adjustable sampling rate menu. Figure 25: Adjusting the data acquisition sampling rate. Figure 26: DAQ-EZ allows the user to record in common ASCII format. Figure 27: Front view of the TASCAM PS-5. Figure 28: Opening ASCII files in Signal View. Figure 29: Opening MP3 files in Signal View. Figure 30: Recording files with DAQ-EZ. Figure 31: Recording files with the TASCAM PS-5. Figure 32: Close-up examination of waveforms in Signal View. Figure 33: Sample result of Signal View’s FFT analysis. Figure 34: Copy and paste waveform images to outside documents. Figure 35: Waveform images can be overlapped or displayed side by side. Figure 36: Locating DAQ-EZ’s configuration information. Figure 37: Manual configuration of DAQ-EZ. Figure 38: Total pressure transducer output in a pressurized line. Figure 39: Microphone decibel response as a function of mV output. Figure 40: Microphone decibel response as a function of svu output. Figure 41: Electrical schematic of the PAMP DAQ Center. 5
+
+EXECUTIVE SUMMARY 
+
+The Portable Acoustic Monitoring Package (PAMP) has been designed to record the low frequency range (<6 kHz) of acoustic signals transmitted via the natural gas in high-pressure transmission lines. The 1000 psi Acoustic Monitoring Package has been reduced in weight from its 100 pound 1 st version to 5.5 lbs. The ultimate goal of the project was to catalog the various background acoustic signals in natural gas transmission lines as a first step to identify leak and infringement signals. Laboratory tests were followed by a number of field trials. Some of the problems that had to be solved prior to cataloging pipeline background signals were: 
+
+• Pressure compensate the microphone, and calibrate its sensitivity up to 1000 psig. 
+
+• Find a suitable data compression scheme to deal with the large data sets collected within minutes. 
+
+• Design a suitable pipeline acoustic generator (PAG) to allow measuring signal loss as a function of distance, frequency and pipeline characteristics. The research has developed a solution for these problems in the WVU acoustic laboratory and in field tests on pipelines operated by Dominion Transmission, Inc. The contract expires prior to cataloging the various background acoustic signals in natural gas transmission lines. The achievements were as follows: 
+
+• A new pressure-compensating microphone was developed, which drastically improved microphone sensitivity at higher pressures. 
+
+• A new data acquisition system, which compresses acoustic data files to MP3 format as used in the audio recording industry, has been procured. This allows the recording and efficient storage of large acoustic data files. 
+
+• A new signal-processing program capable of reading the compressed file format has been purchased and is currently being used for signal analysis. 
+
+• An online acoustic calibration system has been developed and tested. Safety and field portability issues demanded that known acoustic tones be generated. This could not be done electronically without exceeding the 5 VDC limit inside a gas pipeline. Therefore, a free-reed oscillator type system was installed to generate acoustic signals of known frequency and power. This system is powered by bleeding off some natural gas through a calibrated needle valve. 
+
+• The PAMP was tested and calibrated in the WVU acoustic laboratory for line pressures up to 1000 psi prior to field testing in lines of less than 1000 psi. The technology consists of installing low cost Portable Acoustic Monitoring Packages (PAMP), which include a pressure compensating microphone, a monotone calibrator and a signal recorder. They are installed on pipeline access ports, which are located near line 6shut-off valves. Computer software is used to digitize the recorded signal for analysis and interpretation. Most of the acoustic energy transmitted via the natural gas is in the form of flow noise and sources such as pumping stations. A high-pressure leak through a pipe-wall fracture generates vibrations in the pipe-wall with a wide range of frequencies. Only the lower frequency range signals can transmit over great distances via the gas inside the pipeline. Leak noise has its own unique acoustic signature. Isolating a leak signal from the background noise is a major focus of this research. In addition to leak detection, sensing physical impacts to a gas pipeline, such as made by errant excavating equipment or even sabotage, is important to maintaining the structural integrity of the pipeline infrastructure. This technology may also prove useful for monitoring the acoustic signals generated by compressors at pumping stations. Any change in signal could indicate the need for maintenance thereby permitting timely repairs. During a recent field test, two PAMP units were installed on shut-off valve access ports of a 12- inch pipeline operating at 200 pounds per square inch. The PAMP units were able to detect the signal generated by dropping a 1inch steel ball from a height of 2 cm (3/4 inch) on a pipeline access port located one kilometer away. The PAMP is 18 inches tall and weighs only 5.5 pounds. It connects to any accessible half- inch NPT pipeline fitting, is rugged, pressure tested to 1000 psi and costs less than $1000 to manufacture. By measuring the difference in signal arrival time at two PAMP units, and multiplying this by the speed of sound in natural gas, one can pinpoint the infringement. The PAMP is of interest to the natural gas transportation industry because it has the potential to provide an affordable pipeline health- monitoring network, and assist in securing the supply of gas to their customers. WVU Mechanical and Aerospace Engineering (MAE) professors John Loth, Gary Morris and Mike Palmer, working with research assistants Richard Guiler and Pat Browning, have developed the PAMP prototype. Currently pipelines are inspected at most twice a year by “pigs”, instrumented with very sophisticated pipeline wall integrity detectors. These "pigs" are placed within a pipeline and pushed along by the flow of the natural gas. The PAMP system is capable of providing an on- line, inexpensive addition to the current "pig" inspection technology. WVU researchers are working on cataloging the background sounds in natural gas pipelines. This includes flow noise through fittings and valves and compressor acoustic signature. As infringement signals must be filtered out from such wide range of noises, cataloging them will be beneficial to future applications. Through signal processing, the PAMP recorded signal can be analyzed to identify any anomalies in the signal. The challenge to the operator will be to minimize false alarms by properly identifying the recorded signal. WVU researchers have also developed a nine monotone generator, powered by gas bleed. This is used in conjunction with multiple PAMP units to measured acoustic signal damping rates as a function of distance. This should be done over a wide range of frequencies, line pressures, flow rates and pipeline size and wall properties. 7
+
+I. INTRODUCTION 
+
+Natural gas transmission lines transport dry clean natural gas from field processing facilities to cities where it is distributed to individual businesses, factories, and residences. Distribution to the final users is handled by utilities that take custody of the gas from the transmission line and then distribute it through small- metered pipelines to individual customers. Gas transmission pipelines cover wide geographic areas, for example from Texas and Louisiana to the populated areas of the northeastern United States. There are plans for a pipeline system to bring gas 4300 miles from Alaska’s north slope. Lines are being built from Russia to Europe and from Iran to Russia. Gas transmission lines operate at relatively high pressures. Turbine driven or reciprocating engine driven compressors are located at regular intervals to compensate for the friction pressure loss, to keep the gas mo ving through the pipeline. Transmission lines are typically made of welded steel pipe and buried below the ground surface. Pipe diameters range up to 42 inches in the US and up to 60 inches in Russia (Kennedy, 1984). Thirty percent of the energy produced in the United State comes from natural gas supplied through more than 1 million miles of transmission lines. In addition there are over 20,000 miles of sub-sea pipelines, which transport 12 billion cubic feet of natural gas per day. Of these most are made of steel (94000 miles made of plastic, 1975). Corrosion of the pipe wall is a major cause of leaks. There are still lines in use that were installed in the late 1800s. In 1975 there were 749,000 reported leaks. The number of reported leaks is increasing every year, from 533,000 in 1971 (Parker, 1981). Leaks can have many causes man made and natural. Catastrophic leaks or ruptures can be caused by nature during events like earthquakes, floods, and tsunamis or man made in what is called third party damage. Third party damage is the major cause of rupture, leaks and damage leading to corrosion leaks. This type of damage is from activities by man, by construction equipment, recreational vehicles, barges, anchors or excavation by a third party into a pipeline right of way. While the damage may not appear significant, it may result in a leak by corrosion inside stress fractures. Most gas transmission lines are made of coated steel and damage to its protective coating is likely to cause a corrosion leak in the future. DOT statistic from 1994-2001 gives 224 third party incidents on transmission lines: 7 deaths, 35 injuries, and $167 million in property damage. One incident cost 25 million dollars (Huebler, 2002). 
+
+Mechanical Damage Caused: 
+
+1. By Equipment 44.0% 2. Stress Corrosion Cracking 1.5% 3. Pitting Corrosion 13.5% 4. General Corrosion 9.0% 5. Chemical Bacterial 4.0% 6. Material Defect 12.5% 7. Construction and Upgrade 7.5% 8. Earth Movement, Washout, etc. 8.0% 
+
+> Table 1: Examples of mechanical damage recorded on transmission lines in the United States. (Crouch et al. 1994)
+
+8
+
+1) Project Objectives 
+
+The major objective of this project was to develop a reliable and affordable system capable of monitoring acoustic signals in the gas stream of a natural gas transmission line. Once a practical understanding of the background acoustic signals was developed, it was the goal of this project to isolate and identify signals from the background that are caused by an infringement, a leak, or damage which could at a later date cause a leak. To minimize cost and disruption of an operating transmission line, only readily available pipeline access ports are being considered, such as the ½" NPT inspection ports located at either side of most in- line shut-off valves (Figure 1).  
+
+> Figure 1: Dominion line 323 near Morgantown, WV, showing the ½" NPT inspection ports on either side of the shut-off valve.
+
+9
+
+2) Acoustic Leak Signal 
+
+Leaks can occur from pinhole sized perforations caused by corrosion up to catastrophic pipeline failure due to manmade damage or natural causes such as an earthquake or a tsunami. Even relatively small holes in a high-pressure gas line can produce dangerous clouds of gas. Leaks are actually very common and are classified as to the urgency of repair based on their potential danger. Typically they are classified into three groups: those that need repair in 24 to 48 hours, those which need to be repaired in 30 days, and those that don’t need immediate repair, but should be monitored (Huebler, 2000). Once gas escapes from a pipeline it can saturate the ground around the pipe and migrate along any conduit to other locations. The appearance of a rupture, leak, or damage that could cause a leak usually generates an acoustic signal. During the crack initiation and early crack growth, the steel pipe wall deformation creates a significant acoustic signal that can produce a transducer output ranging from several micro volts to several volts. The amplitude and frequency spectrum and the attenuation behavior are all a function of the pipe-wall materia l properties (Bassim, 1994). If damage causes a sudden leak, then the associated rapid change in fluid pressure produces a pressure transient often referred to as a “burst signal”. Once a leak is established, the supersonic jet of escaping gas generates acoustic energy. These acoustic emissions are continuous and have a wide frequency spectrum (1kHz-1MkHz), the majority of which is confined to the moderately high frequency portion (175kHz – 750kHz),(Shack, 1980). The frequencies of the acoustic signatures associated with structural fracturing of the pipe wall and the sound of escaping gas can range well into the hundreds of kilohertz. Generally, the signal frequencies transported by the gas are lower and travel slower than those in the pipe wall. However, due to the intimate contact of the pipeline with the backfill material, the longitudinal transmission of the higher frequency components of acoustic energy within the wall material is highly damped and does not travel any significant distance from the location of the source of the signal. Damping in proportion to the square of the frequency impedes long distance transmission of acoustic signals through gas. Viscous effects, wall-damping effects, and molecular relaxation effects all contribute to the attenuation of the strength of high frequency signals. Rocha, 1989, found that only relatively low frequency acoustic signals are useful for practical leak detection methods. Acoustic frequencies on the order of 10 Hz can propagate in the gas for distances on the order of 100 miles. In summary there are three types of signals associated with a pipeline infringement, which are as follows: a) a step (burst signal) function produced by the onset of a leak or third-party damage b) a ramp function resulting from step function signal attenuation c) a wide range of frequencies produced by the escaping supersonic jet 10 
+
+3) Acoustic Leak Detection History 
+
+Passive acoustic leak detection in pipelines can make use of the vibrational energy emitted by straining or fracturing pipe wall material or by the acoustic energy associated with high pressure gas escaping through a perforated or ruptured wall. By properly interpreting the acoustic signature of these phenomena, it is possible to detect an infringement event along the pipeline. The challenge is to accurately isolate the acoustic signature of an infringement from the background noise within the pipeline environment such as pumping noise, flow turbulence noise, valve actuation, etc. Details of the infringement-generated noise (acoustic signature) must be known as well as the details of the background noise within the pipe to enable separation between these two noises. A second challenge is to detect the acoustic signature far away from its source since the acoustic wave amplitudes are attenuated within the pipeline. Past acoustic studies have shown that while the acoustic signals of a pressurized fluid escaping through a leak may include a wide range of frequencies, only the relatively low frequencies are useful for practical leak detection methods due to the significant attenuation of the higher frequency components. Rocha states that acoustic frequencies on the order of 10Hz can propagate in a gas for distances on the order of 100 miles and gives the following approximation: the amplitude of the wave is related to the properties of the gas, the pressure at which the pipeline is being operated and the size of the leak. The local pressure drop due to the leak is given for a pipe without flow by: 
+
+∆p = 0.3 Ps (D1/D p)2
+
+Where: ∆p is the acoustic signal, P s is the static pressure in the pipe at the leak site, D 1 is the diameter of the leak hole and D p is the local diameter of the pipe .
+
+The detectable acoustic pressure of a leak can be as small as 5 millibars (0.073 psi) in a pipeline with a static pressure of 69 bars (1000 psi). This will require sophisticated noise cancellation techniques to increase the signal to noise ratio (Rocha 1989). Leis, et al, 1998, conducted experiments to determine the distance in which an acoustic step function impact could be transmitted through the pipe wall in a 24-inch diameter pipeline. By dropping weights ranging from a few pounds up to 90 pounds several inches into the pipe wall, the impact was detected up to 3.2 miles away. The researchers theorize that the impact could be detected as far as 25 miles away. They also indicate that signals with frequencies greater than 500 Hz were completely attenuated in their tests. Bassim and Tangri performed experiments to determine the effect of the attenuation of acoustic signals generated by strained/fractured pipe segments in a laboratory with both flowing and non-flowing helium gas. They also performed the experiments with a leak (hole) in the pipe segment. Transducers with a frequency range of 0.1MHz to 2 MHz were positioned along the pipe axis to record the acoustic signals. The results showed that the amplitude of the acoustic signal was not significantly affected by variations in the gas pressure up to 75 psig. The attenuation of the lower frequency signals were less than for the high frequency signals. They concluded that the acoustic signal strength varied linearly with leak hole size. 11 Repairing gas pipeline leaks has been going on for more than a century. Even Charles Dickens in the eighteen hundreds wrote “In the main street, at the corner of the court, some laborers were repairing the gas-pipes” (see “A Christmas Carol”). When one can get close to the source of a leak, acoustic detection has been found very useful in locating pipeline leaks. One of the oldest and most reliable technique is to walk the lines and listen for leaks. Experienced listeners are able to estimate the size of the leak from the tone of the sound. Mobile acoustic detection devices such as instrumented pigs (Crouch, 2000 and Varma, 2002) sent through the pipeline and cars driving over the pipeline are capable of detecting corrosion thinning of the pipeline wall and even differentiating between external and internal damage. These are not constant monitoring techniques but done when needed, or once a year for routine inspection. Although very sophisticated technologies are under development for instrumented pigs, their inability to provide “Online Acoustic Monitoring,” eliminates them from this review. The economic impact of gas pipeline leak repairs is very high, especially when one includes the cost of the gas lost. For 1000 cubic feet this was about $0.70 in 1970 and increased to $2.80 in 1980 and recently, in the 21 st century, inc reased to $5.00. For example, a utility with 7000 miles of distribution lines can expect these days to have to repair about four major leaks from corrosion per year. Moreover the indirect cost from adverse consumer reaction cannot be underestimated. Thus, rapid detection with online acoustic monitoring is a very desirable technology. Parker, (1981) wrote an excellent historical overview: The first attempts to develop improved methods for leak detection using acoustic techniques appeared in the 1930’s. In that decade four publications appeared: Smith, 1933; Gilmore 1935; Richardson 1935; Larson 1939. In accord with the statistical picture of steel gas pipeline corrosion, pipes installed in the 1880’s by then would have already attained the 30 to 40 years of age required for the appearance of significant leakage. Further interest in the problem did not appear until approximately 20 years later, see (McElwee 1957) and the paper (“Novel Devices Determines and Locates Gas Leaks by Sound”,1959). If one couples a sensor such as a microphone to the gas inside the pipe, leak generated noise is clearly audible, because the magnitude of the ambient noise is rendered negligible by high transmission loss through the external soil and the pipe wall. As in the earlier work, all these efforts were confined to a listening or passive approach. The first systematic attempt to develop an improved means of leak detection combining both active and passive approaches was initiated late in 1950 and continued through 1965. The American Gas Association (A.G.A) supported that effort with the technical work being carried out at the Institute of Gas Technology (IGT). A record of progress in developing an operational system is contained in two publications: (Reid 1961) and (Hogan 1964). Hogan’s “Field Results with Sonic Pinpointing” is particularly significant because it represents a summary of the results of extensive field-testing involving six major gas utilities. One noteworthy statement appearing in this summary has to do with difficulties involved with transfer of technology to the operators who were largely unskilled in the use of electronic instrumentation employed. This same point was raised by (Larson in 1939), in efforts to using a geophone for leak detection, he stated: “ Thus far the best results have been obtained from operators who have had some college training along engineering lines.” Although some success in leak location using the IGT approach was achieved, the system was not considered to be sufficiently reliable for an effort to be made to replace the time- honored technique of “barholing”. Analysis of the results of the extensive field measurements data indicated that the main problem was the unpredictable performance of the 12 system, coupled with the inability to predict quantitatively the change of success or failure in a given situation” Kovecevich, 1995 discussed pressurized piping and boilers in utility and industrial power plants where acoustic leak detection systems have been in use since the early 1970’s. These methods detect the continuous sound waves emanating from the turbulence created by the escaping gas. Sound waves are generated in three mediums: the high pressure fluid in the pipes, the pipe walls and the low pressure fluid outside of the pipes. Dynamic pressure transducers are installed in the pipe fluid and on the piping itself. Detection ranges are typical between 10 and 120 feet, depending on noise level and weather a pressure sensor is mounted on a pressure vessel, or some distance away with air in between. The optimum monitoring frequency range for structure borne leak detection sensors is 2-20 kHz and for airborne signals the monitoring frequency range is 2-15 kHz. Jolly, 1995 reviewed several different acoustic based leak detection methods and found the most promising method is the low frequency impulse detection method. The impulse method uses sensors mounted at the ends of the pipeline. This method could capture the transient acoustic event associated with a rapid rupture event. This method could only detect large size failures (over one inch in diameter) but then over distances up to 100 km. But the method would not detect small leaks, which grow over several hours. He found that when sensors are mounted on the outside of the pipe, to detect noise of a leak, the frequency range is typical in the range of 5 to 300 kHz. Detection range in a gas filled pipe is 2.5 times that of a liquid filled pipe. This technique is used only in industrial plants and typical detection ranges from 140 meters for a 2 gpm leak to 350 meters for a 200 cfm leak. Parker J.G.(1981), undertook the necessary fundamental research (both theoretical and experimental) to identify factors of major importance in the operation of a system of active acoustic leak detection and then investigated in detail the interrelation of these factors. To increase the signal to noise ratio, through the use of a correlation, only active methods where considered to detect the acoustic signal S A emitted by a 1/64” orifice in a pipeline buried 2 ft deep to the background noise N. Thus the detected signal S D was NSS AD += in which the acoustic signal frequency f = 2 πf is known but the phase angle φ is not. )cos( 11 φω += tASA . An excitation signal S E is used to excite the acoustic signal )cos( ooE tAS φω += . Then their correlation over time period T: ∫ −== 
+
+> TooDE
+
+AAdt TtStSC 
+
+> 011
+
+)cos( 5.0)()( φφ becomes independent of T, with the result that signals with very small initial values of S A /N can be detected. Another major issue was to decide exactly what is meant by a leak. It is clear that a hole in the pipe wall itself is not sufficient. The final definition adopted was that a leak must be responsible for a loss of gas from the distribution system. Thus there must exist a path extending to the surface in addition to the pipe-wall perforation. The external path develops slowly in response to either the increase in pressure in the surrounding soil caused by the gas pressure build- up, or more suddenly by soil movement caused by nearby excavation or freeze-thaw and wet-dry cycles accompanying seasonal weather changes. The method proved to be successful but limited application to very near the leak site thereby requiring a sensor moving along the pipeline. Such a technology does not represent continuous monitoring by sensors that are fixed to the pipeline. 
+
+Historically, various types of sensors have been employed to detect acoustic signals emitted by gas escaping through a leak or emitted by structural impact or failure of the pipe wall. Sinha, 13 2002, gives a detailed description of the method of operation of acoustic sensors. Such sensors must be very responsive to dynamic signals, have a wide frequency response, and be robust and dependable. Accelerometers have been widely used to detect acoustic signals in a pipeline by attaching such sensors to the outside of the pipe wall or into the surrounding soil. The sensor portion of the accelerometer is usually a piezoelectric crystal that is highly sensitive to accelerations caused by vibrations. Minute vibrational amplitudes of the crystal result in a tiny electric current output that can be highly amplified to produce an excellent dynamic instrument. Accelerometers can easily measure signal frequencies on the order of hundreds of kilohertz. The limitation of the dynamic response is generally limited by the inertia of the article to which the instrument is coupled. Foil strain gages applied to the pipe wall are also used to sense the vibrational modes of the pipeline in response to an infringement event. While less expensive than accelerometers, in general, foil strain gages do not have the dynamic frequency response exhibited by piezoelectric accelerometers. Vibrating- line strain gages detect the change in frequency of a taut line stretched between two anchoring points on the pipe wall. Microphones have been widely used to detect the acoustic signal in the gas in the pipeline. Microphones consist of varying types and configurations but all must be capable of maintaining sensitivity in a high ambient pressure. Microphone types consist of crystal transducers, capacitive transducers, inductive transducers, magnetic transducers, and strain sensitive transducers. The response of the microphones to acoustic signals is characterized by the dynamics range, freque ncy response, and directionality of the device (Hall, 1980). Dynamic pressure transducers can also be used to detect the acoustic signal in pipelines. The sensing element of such transducers is usually piezoelectric or piezo-resistive. The pressure transducers are coupled to the gas but may also inherently respond to acoustic signals transported by the pipe wall if the transducer is rigidly mounted to the pipe by a standard pipe fitting connection. Some researchers in acoustic leak detection have used optical methods to detect leaks. Jette, et. al. ,1977 compared the results of an earth-coupled accelerometer with a laser interferometer configured to measure the local displacements of the ground above the pipe transporting an acoustic signal. The results were promising since the laser-based system could detect smaller ground surface displacement amplitudes than the accelerometer used. Many researchers have conducted research on acoustic leak detection in pipelines. There has been considerable success in liquid pipelines, but very few techniques have been proven in gas systems and of those of which claim to be successful are mostly privately funded and proprietary. One of the more successful systems to fit into this category is Wave Alert by Acoustic Systems Inc. (ASI) of Houston Texas In conducting a patent search for new developments, WVU’s previous reports have been listed in the references cited section of US patent # 6,668,619 B2 assigned to Acoustics Systems Inc. ASI uses acoustic pattern recognition systems for leak detection. 14 
+
+II. EXPERIMENTAL 1) WVU 1 st Generation Natural Gas Transmission Line Monitoring Package 
+
+The 1st generation acoustic monitoring package was designed to detect and analyze weak acoustic signals inside natural gas transmission lines. Along with a microphone-type sensor, it housed a three- inch diameter diaphragm to amplify the signal and maximize sensitivity to leak induced ∆p type signals. 
+
+The WVU 1st Generation Acoustic Monitoring Package utilized a combination of sensing devices contained in a removable sensor housing. The four sensors installed were: 1) a 0.5 inch diameter B & K model 4133 microphone, 3 Hz-40 Khz 2) a mono phono-graph moving coil sensor, sensitive in the audible frequency range 3) a Piezo-electric pressure transducer with a max reading of 400 psi 4) the WVU designed floating 3" diameter diaphragm to detect transient flow induced pressure signals The WVU acoustic ramp-signal sensor with aerodynamic signal amplification used a small reservoir connected to the pipeline via three items: a small needle valve, and two small spring-loaded check valves mounted for flow in either direction. The valves limited the pressure difference between the container and the pipeline to their set value, for example ±1 psi. The passage of any ramp function inside the pipeline produced a proportional pressure differential between the container and the pipeline, which can safely be measured by a ±1 psi differential pressure commercial available transducer. This allowed the detection of pipeline pressure transients down to 10 Pascal per second. The total sensor pack weight was 96 lbs without batteries. 15  
+
+> Figure 2: WVU 1 st generation Acoustic Monitoring Package for 300 psi gas pipeline with diaphragm type aerodynamic signal amplifier.
+
+The aerodynamic signal amplifier/sensor combination turned out to have a very limited frequency response. Housing such a large (three- inch diameter) sensor required the use of a steel 300-psi rated 4" welded neck flange, which itself weighed 29 pounds. The completed 1st generation Acoustic Monitoring Package weighed almost 100 pounds. This was too cumbersome to mount in the field on an access port at a pipeline shut-off valve. To meet the desired operating pressure range of 0-1000 psig. This system would need to be many times lighter. These initial results caused the WVU team to change its strategy to considering a wider range of sensors excluding any sensor over ½” in diameter. 16 
+
+2) WVU 2 nd Generation Portable Acoustic Monitoring Package (PAMP) 
+
+The weight problem of the 1st generation acoustic monitoring package with its 4" flanged pipe, was solved by finding the Rosemont Inc. Model 3051CD-Range 0, self contained ∆p type signal sensor, rated for line pressures up to 1000 psi and a base weight of only 6 pounds. This unit is software driven and is believed to have the best total performance industry-wide. The lowest range unit was purchased with a ∆p range from 0 to 3" water. This allowed the construction of a 2nd generation Portable Acoustic Monitoring Package (PAMP) for pipelines up to 1000 psi. The high sensitivity of this instrument eliminated the need for the three- inch diameter aerodynamic signal amplifier, with its associated heavy housing. Although this sensor's software can be reprogrammed to increase its range, for this instrumentation development phase it was found advantageous to use a simple needle- valve and a 1 liter accumulator to extend its ∆p range up to ten-fold by adjusting a knob. In addition to a pressure tolerant microphone linear from 70 to 16,000 Hertz, an Omega pressure transducer is used with a frequency response up to 3 dB. The entire plumbing tree consisted mainly of steel cadmium plated 4600 psi, 1/2 and 1/4 " NPT plumbing fittings. Only the microphone requires a 3/4 " NPT nipple and fittings. The result is a well laid-out and balanced plumbing tree with a weight of 26 pounds, including a 26 VDC rechargeable battery to power the ∆p sensor. This portable acoustic monitoring package (PAMP) was more manageable and was used during the initial field tests. 17 The Natural gas transmission line WVU instrumentation tree has been designed to: 
+
+Measure the following signals electronically: 
+
+1) Pipeline internal acoustic sounds by means of one or more microphones 2) Pipeline external acoustic sounds by means of one or more microphones 3) Pipeline very low frequency pressure waves and zero frequency step functions by means of a delta p sensor, with 1000 psi overload protection, and sensitivity operating range adjustable down to 3 inch water pressure, controlled by needle valve E setting and volume of a small accumulator tank 4) Pipeline temperature with thermocouple 5) Pipeline pressure with high frequency response piezoelectric transducer. 
+
+Measure the following signals with dial gages: 
+
+1) Pipeline pressure in psig 2) Instrumentation tree accumulator pressure in psig 3) Pipeline very low frequency pressure waves and zero frequency step functions by means of a 10 psi delta p sensor with 1000 psi overload protection 
+
+The following four ball valves are used to isolate instruments in the pipeline tree. 
+
+1) Valve (A) is the gas pipeline access valve below mounting flange tapped with 1/2" NPT. 2) Valve (B) is a 1/4" ball valve closest to the access flange 3) Valve (C) is the 1/2" ball valve on centerline with valve 1, providing unobstructed access to the natural gas transmission line. 4) Valve (D) is a 1/4" ball valve to bleed instrumentation tree, located furthest away from tree centerline. 
+
+Valves E and F should only be adjusted to alter the instrumentation response rate. 
+
+Valve Manipulation Sequence for Gas-line Instrumentation Tree (GIT) 
+
+1) Always start after making sure that all valves (A), (B), (C) and (D) are closed 2) Mount instrumentation tree on access flange. 3) Open valve (A) and read pipeline pressure on the dial of pressure gauge 1 4) Open valve (B) and notice on the dial of pressure gauge 2 that tree pressure rises slowly, rate controlled by needle valve (F) setting. 5) Open valve (C) after: both dial gages 1 and 2 read the same pipeline pressure. and 10 psi ?p gauge reads zero and expose microphones by means of an unobstructed 1/2" pipe to the natural gas transmission line. 6) Activate instrumentation data acquisition system 7) Upon completion of all tests, turn off data acquisition system 8) Close valve (A) 9) Close valve (B) 10) Close valve (C) 11) Open valve (D) to discharge pressure from instrumentation tree 12) Close valve (D) and remove instrumentation trees from access flange. 18 
+
+> Nomenclature:
+
+Needle valve, color coded 
+
+1/4" NPT One pipe coupling 3/4 " NPT for microphone Pressure relief valve flows only from left to right Ball valves A,B,C are 1/2" NPT and valve D is 1/4" NPT Pressure gauge in psig 
+
+ABCDEF
+
+1 liter cylinder Microphone 
+
+# ∆p
+
+# ∆p Data 
+
+acquisition boards and batteries 
+
+G
+
+> Figure 3: Schematic of Portable Acoustic Monitoring Package (PAMP)
+
+19 
+
+i. Differential Pressure Transmitter 
+
+The sensor technology in the Rosemont Model 3051 allows for optimal performance of unprecedented ±0.075% reference accuracy, resulting in total operating performance of ±0.15%. The Model 3051 also has a five-year stability of ±0.125%. Transmitter stability is a critical measure of transmitter performance over time. Through aggressive simulation testing, the operational history of the Model 3051 has proven its ability to maintain performance over a five-year period under the most demanding process conditions. This transmitter stability reduces calibration. In dynamic applications, speed of measurement is as important as repeatability. The Model 3051 responds up to eight times faster than the typical Smart pressure transmitter to detect and control variations quickly and efficiently. Superior dynamic response yields more accurate measurements to reduce variability and increase profitability. Its coplanar platform enables complete point solutions, enabling the right process connection for all pressure applications. The Model 3051 has a scalable, flexible design, which includes performance diagnostics and control diagnostics - such as plugged impulse line detection and statistical process monitoring - to evaluate the performance of the entire measurement system. This system provides user-configurable transmitter-resident function blocks, such as PID, Math, and signal characterization.  
+
+> Table 2: Model 3051 dynamic response
+
+20 
+
+ii. High Pressure Microphone Design and Calibration 
+
+The current PAMP uses a high-quality Optimus model 270-090 omni-directional condenser type microphone. Its wide frequency response is ideal for pipeline acoustic applications. The frequency response is fairly constant between 30 Hz and 3000 Hz, which is also the frequency range that is most valuable for the monitoring of acoustic signals in natural gas transmission lines. The microphone is installed inside the PAMP on a 1000 psi triple conductor feed-through. The new feed-through design is based on using existing a ¾” stainless steel plug with a 9/16 ” diameter hole. This plug has a ½” wide chip mounting board bonded to the inside on which the ½” microphone is soldered. The mounting board connects to the outside through three solid copper wires. These wires pass through ¼”NPT 3000 psi short nipple, which is filled with a mixture of milled glass fibers and epoxy to form a 1000 psi seal. External connection is achieved through the use of a ¼” stereo phone plug. A preamplifier is mounted externally with its power supplied by a 1.55 VDC Toshiba LR44 battery. 
+
+Microphone Signal R2 100k C2 1uF C1 10uF R1 1k +V 1.55 VDC 
+
+> Figure 4: Optimus model 270-090 microphone wiring diagram.
+
+The preamplifier has ¼” stereophonic male and female connectors on either side of a 1½” x 2 ½” x 2” aluminum shielded box with an On/Off switch to provide 1.55 VDC to the preamplifier. The Optimus 270-090 microphone performed well in laboratory experiments with line pressures up to 200 psig. It became apparent during higher-pressure field tests that performance dropped off drastically. Once a high-pressure laboratory test apparatus was developed (Figure 9) a pressure compensated microphone was developed. Through a number of experiments, a new design was developed which uses the original Optimus 270-090 microphone with a 0.022 inch diameter pressure equalization hole. The pressure equalization hole is drilled directly behind the microphone’s diaphragm. The pressure equalized microphone performed well 21 up to 1000 psig and its calibration test has been included in the results and discussion section. The PAMP microphone is calibrated using a Textronix model CF6250 signal generator and a 10 O driver mounted to the plumbing tree. A sinusoidal 450 Hz constant power signal is generated. Then at various line pressures up to 1000 psig an FFT of the microphone output is taken. The power of the 450 Hz component of the signal is recorded and used to judge the relative performance of the microphone. Figure 5 shows the relative performance between a standard and equalized microphone, both being pressured and depressurizing. 
+
+> Figure 5: Performance comparison between a Standard 270-090 microphone and a Pressure equalized version, both being exposed to the same power and frequency acoustic signal.
+
+iii. Data Acquisition and Management 
+
+A recently completed survey of recent developments in the leak detection field indicated that Acoustic Systems Inc. (ASI) of Houston Texas appears to have made great strides recently with their WaveAlert system. In conducting a patent search for new developments, WVU’s previous reports have been listed in the references cited section of US patent # 6,668,619 B2 assigned to Acoustics Systems Inc. ASI uses acoustic pattern recognition systems for leak detection. Their pattern recognition systems use proprietary catalogs and local surveys of background acoustic signals as a baseline for comparison. This emphasizes the value of creating a catalog available for the public domain of background acoustic signals inside gas transmission lines. 22 To catalog the acoustic signals found in a natural gas transmission line, a wide frequency range must be considered. The sampling rate needed for the higher frequency content of these signals was determined to be 44 kHz. At this high sampling rate the data files quickly reached the limits of computer data storage and analysis capabilities. This inability to deal with large data sets collected when cataloging led to the procurement of a new data acquisition system. The audio recording industry has a number of systems exactly for this purpose. These systems compress acoustic data files to MP3 format. This allows the recording and efficient storage of very large acoustic data files. For example, 15 minutes of high resolution data (44 kHz) can be store in as little as 32 Mb, compared with the original system where 30 seconds of relatively low resolution data (4kHz) consumed over 360 Mb of space. 
+
+The TEAC TASCAM PS5 was implemented for the recording of acoustic signals. The unit is rugged and extremely portable. Along with its own battery power the units weighs only 1.5 lbs and measures only 6” x 9” x 2”. 
+
+Analog Audio Inputs (1) unbalanced with level control; (1) unbalanced” TS mic/line (switchable); (1) unbalanced” TS mic (switchable to built- in mic) 
+
+Analog Audio Outputs (1) unbalanced” TRS stereo main; (1) 1.8” stereo headphone 
+
+Data Ports (1) USB; (1) MIDI In 
+
+Physical/Virtual Audio Tracks 4/0 
+
+Simultaneous Record/Play Channels 2/4 
+
+Tone Generator GM-compatible; 64-note polyphonic; 16-part multitimbral 
+
+Internal Data Format 44.1 kHz, 24-bit 
+
+A/D/A Conversion 44.1 kHz, 16-bit 
+
+Storage Medium Compact Flash (3.3V, Type I; maximum 128 MB); maximum 60 minutes per card 
+
+Built-in Microphone condenser 
+
+Power 9 VAC adapter; (6) rechargeable NiMh AA batteries 
+
+Signal-to-Noise Ratio 87 dB 
+
+Total Harmonic Distortion 0.01% 
+
+Frequency Response 20 Hz–20 kHz (+0.5/–3.0 dB) 
+
+Display Backlit LCD; 2.28” (W) . 0.90” (H) 
+
+Dimensions 5.50” (W) . 8.50” (H) . 1.75” (D) 
+
+Weight 1.5 lb. 
+
+> Table 1: TEAC TASCAM PS5 specifications. (Broderson, S. , 2003)
+
+23 
+
+Figures 6 & 7: The Teac TASCAM PS-5 with audio inputs and outputs on the top. On the bottom are MIDI In, USB, and AC-adapter ports. Selector switches and the Compact Flash port are on the unit’s right side. (Broderson, S., 2003) 24 
+
+A new signal-processing program capable of reading the compressed MP3 file format has been purchased and is currently being used for signal analysis. SIGVIEW is a complete real-time spectral analysis software package. This software has a wide range of powerful FFT spectral analysis tools, statistics functions and comprehensive visualization system. Real time data display, signal analysis and control Optimized FFT algorithm with fine parameter tuning are all built in. Time FFTs with powerful graphical solutions and parameter control, cross-spectral analysis and a real time signal calcula tor (subtract, multiply or add signals or analysis results, perform cross analysis) for fast data analysis. The program’s statistics functions, graphical block diagram environment, custom tools and workspaces can be created and reused for dozens of signals. Signals can be combined and analyzed at the same time with no artificial limitations. 
+
+iv. Online Acoustic Sensor Calibrator (OASC) 
+
+The complexity of the PAMP’s sensing and recording equipment makes it desirable to conduct an online calibration at the beginning of field recording activities. Gas transmission line safety standards make it prohibitive to mount a signal generator and driver on the PAMP in the field because of the associated power and voltage required, therefore another signal generation device had to be found. Another design consideration was weight. An acoustic inline signal generator was developed using a precision-tuned, heavy bronze free-reed, double-checked to the A440 standard, which is mounted in an 1/8” copper tube. This instrument generates a specific acoustic signal depending on the gas flow through it. To limit the gas leakage rate, a valve and plug with a 0.040 inch diameter choke hole are installed downstream of the signal generator. The choked hole orifice determines the flow for a specific pressure. For a given pressure and flow the signal generator creates an acoustic signal with specific frequency and amplitude which can be measured with the PAMP instruments. 
+
+> Figure 8: Photograph of OASC installed on PAMP. Each of the blue handled valves is an OASC with a different frequency-pressure curve.
+
+25 
+
+Figure 9: Schematic of PAMP and the high-pressure laboratory apparatus 26 
+
+v. Signal Processing for Infringement Detection 
+
+Pipeline infringement by accidental heavy equipment impact or deliberate terrorist activity can be detected by monitoring acoustic signals carried by the gas. Difficulty in detection arises because these burst signals can be very short in duration (less than 0.1 second). Burst signals may also be much lower in amplitude than the normal background acoustic signals that reflect the dynamics of the particular region including local pipeline geometry, gas flow rate, and online equipment such as compressors and turbines. In order to detect infringements, it becomes necessary to continually compare new acoustic signals to the background acoustic signal at that location. Only by removing the background acoustic signal from newly acquired acoustic signals can burst signals be easily identified. An acoustic signal in its raw (amplitude versus time) state is difficult to interpret and not recommended. Using Fast Fourier Transform (FFT) analysis, an acoustic signal may be broken down into its individual frequency components. FFTs provide the synchronized signal characteristics required to properly remove background signal characteristics from new acoustic signals so that unique frequency variations caused by pipeline impacts can be revealed. Because low frequency (0-2000 Hz) waves travel much farther than high frequency (>2000 Hz) waves without substantial attenuation, FFT analysis was initially performed within the range of 0-1200 Hz. As an acoustic signal is received by monitoring equipment, it can be split into two separate channels. Both signals are broken into 0.1-second data packets for FFT analysis, but one of the signals is delayed for 1 second. Once a new signal is processed, the delayed signal’s FFT may be subtracted from it. This new “difference FFT” reveals information about any variations in freque ncy and power that have occurred within the 1-second time lapse. This process is best illustrated in the example of Figure 10. When Sample A reaches the monitoring equipment, it undergoes FFT analysis and is then delayed for one second. Once Sample B has been processed into FFT format, the delayed FFT from Sample A may be subtracted from the FFT of Sample B. If no burst has occurred within the 0.1-second time frame of Sample B, there will be almost no difference between the two curves (Figure 11). However, if a burst has taken place in Sample B, then the difference between the two FFT’s will be substantial (Figure 12). These rapidly changing frequency spectra are clear indicators of pipeline bursts and infringement. .
+
+> Figure 10: 0.1-second acoustic signal sampling occurs at 1-second intervals.
+
+27 
+
+Figure 11: When Sample A’s FFT is subtracted from Sample B’s FFT, the difference FFT shows only slight frequency variation, indicating an absence of any burst signal. 
+
+> Sample B
+> Sample A
+> Difference FFT
+
+28 
+
+Figure 12: When Sample B’s FFT is subtracted from Sample C’s FFT, the difference FFT shows obvious frequency variation, indicating the presence of a burst signal. 
+
+Figure 13: Comparing the difference FFTs of Figures 3 and 4 reveals the vast difference between normal and burst difference FFTs. 
+
+> Sample B
+> Sample C
+> Difference FFT
+> Figure 3 Difference FFT
+> Figure 4 Difference FFT
+
+29 Readily available digital recording devices with FFT analysis software can be used in conjunction with the 3 rd generation PAMP sensor technology to provide low-cost 24- hour monitoring of natural gas (NG) pipelines. Wireless data links (i.e., FM or cellular transmission) will allow NG providers and carriers to quickly respond to significant pipeline bursts or infringements (Figure 14). Further programming of these units will also allow users to develop an extensive database of normal background acoustic signals. This information can then be compared with current signals to determine maintenance needs along the pipeline such as identifying line leak noise or abnormal compressor noises indicating the need for maintenance. 
+
+> Raw Signal Raw Signal FFT Analysis 1 Second Delay
+> New FFT Old FFT
+> New FFT - Old FFT "Difference FFT"
+> New FFT
+> Significant Variation? Digital Display Delete Recent Data; Go to New Raw Data
+> No Yes
+> Save Data Set & Activate Burst Detection Alert
+
+Figure 14: Open loop programming flow chart for NG pipeline burst detection. 30 
+
+III. RESULTS AND DISCUSSION 
+
+Recent natural gas pipeline tests were performed on Dominion Transmission, Inc. pipelines near the Swisher-Uffington pumping station. Two PAMP units were installed on shut-off valve access ports of a 12-inch pipeline operating at 200 pounds per square inch. The PAMP units were able to detect the signal generated by dropping a 1-inch steel ball from a height of 2 cm (3/4 inch) onto a pipeline access port located one kilometer downstream. Of the two PAMP units used in this test, one of these was a newly designed 3rd generation PAMP. This new PAMP is 18 inches tall and weighs only 5.5 pounds. It connects to any half- inch pipeline fitting, is rugged, pressure tested to 1000 psi and costs less than $1000 to manufacture. A preliminary investigation indicated that acoustic signals up to 6000 Hz experience little attenua tion in a natural gas pipeline. Impact on the pipeline of a 1” diameter steel ball dropped from a height of 2 cm could be clearly identified by a PAMP located at a distance of one kilometer (0.6 mile). 
+
+> Figure 15: On the left is a complete Pipeline Acoustic Monitoring Package (PAMP) shown with a laptop for data analysis. The PAMP (on right) shows that unit can also be operated without a laptop, using its internal data recorder. The internal microphone is pressure equalized up to 1000 psi.
+
+31 
+
+IV. CONCLUSIONS 
+
+A new technology to monitor natural gas pipelines for leaks has been successfully tested in Morgantown, WV. It relies on acoustic signals transmitted via the natural gas itself. Tests have been conducted on a pipeline owned and operated by Dominion Transmission Inc. The Department of Energy’s National Energy Technology Laboratory (NETL) has worked with West Virginia University for the last two years to develop this novel pipeline infringement detection system. The technology consists of installing low cost Portable Acoustic Monitoring Packages (PAMP), which include a pressure compensating microphone, a monotone calibrator and a signal recorder. They are installed on pipeline access ports, which are located near line shut-off valves. Computer software is used to digitize the recorded signal for analysis and interpretation. Most of the acoustic energy transmitted via the natural gas is in the form of flow noise and sources such as pumping stations. A high-pressure leak through a pipe-wall fracture generates vibrations in the pipe-wall with a wide range of frequencies. Only the lower frequency range is transmitted via the gas inside over great distances. Leak noise has its own unique acoustic signature. Isolating a leak signal from the background noise is a major focus of this research. In addition to leak detection, sensing physical impacts to a gas pipeline, such as made by errant excavating equipment or even sabotage, is important to maintaining the structural integrity of the pipeline infrastructure. This technology may also prove useful for monitoring the acoustic signals generated by compressors at pumping stations. Any change in signal could indicate the need for maintenance and permit timely repairs. During a recent field test, two PAMP units were installed on shut-off valve access ports of a 12- inch pipeline operating at 200 pounds per square inch. The PAMP units were able to detect the signal generated by dropping a 1inch steel ball from a height of 2 cm above the pipeline at a distance of one kilometer. The PAMP is 18 inches tall and weighs only 5.5 pounds. It connects to any half- inch pipeline fitting, is rugged, pressure tested to 1000 psi and costs less than $1000 to manufacture. By measuring the difference in signal arrival time at two PAMP units, and multiplying this by the speed of sound in natural gas, one can pinpoint its location. The PAMP is of interest to the natural gas transportation industry because it has the potential to provide an affordable pipeline health- monitoring network, and assist in securing the supply of gas to their customers. WVU Mechanical and Aerospace Engineering (MAE) professors John Loth, Gary Morris and Mike Palmer, working with research assistants Richard Guiler and Pat Browning, have developed the PAMP prototype. Currently pipelines are inspected at most twice a year by “pigs”, instrumented with very sophisticated pipeline wall integrity detectors. These "pigs" are placed within a pipeline and pushed along by the flow of the natural gas. The PAMP system is capable of providing an on- line, inexpensive addition to the current "pig" inspection technology. 32 WVU researchers are working on cataloging the background sounds in natural gas pipelines. This includes flow noise through fittings and valves and the acoustic signature of piston engine and turbine driven compressors. As infringement signals must be filtered out from such a wide range of noise sources, cataloging them will be beneficial to future detection research. Through signal processing, the PAMP recorded signal has demonstrated the ability to isolate any anomalies in the signal. The challenge to the operator will be to minimize false alarms by properly identifying the recorded signal. WVU researchers have also developed a nine monotone generator, actuated by gas bleed. This is used in conjunction with multiple PAMP units to calibrate acoustic signal damping rates as a function of distance, frequency, line pressure, flow rate and pipeline size and wall properties. 33 
+
+V. BIBLIOGRAPHY 
+
+Amir, N., and Shimony, U. “A Discrete Model for Tubular Acoustic Systems with Varying Cross Section, Part 1 Theory, Part 2 Experiments. Acustica Vol. 81 (1995) pp 450-474 Bassim, M.N., and Tangri, K.”Leak Detection in Gas Pipelines using Acoustic Emission”, Proceedings from International Conference on Pipeline Inspection, Edmonton Alberta, pp. 529-544, Canada, 1984. Blackstock, D. T., “Fundamentals of Physical Acoustics”, Wiley 2000. Brodetsky, Igal and Savic, Michael, “Leak Monitoring Systems for Gas Pipelines” Proceedings: Institute of Electrical and Electronic Engineers, pp 111.17-111.20, New York, 1980. Brodetsky, Igal and Savic, Michael, “Digital Speech Processing, IEEE Int. Conf. On Acoustics, Speech and Signal processing, Apr 27-30 1993, Minneapolis MN. Campbell, M. and Greated, C., “ The Musicians Guide to Acoustics” Chapter 14, Schirmer Books, pp. 525-547, New York, 1987. Cist, D.B., and Schutz, A.E. “State of the Art Pipe & Leak Detection, A Low Cost GPR Gas Pipe & Leak Detector, DE-FC26-01NT41317” U.S. Department of Energy Report, pp. 1-5, November 2001. Crouch, A. E., Burkhardt, G. L., “The Non-Linear Harmonic Method for Detection and Characterization of Mechanical Damage in Pipelines”. Int. Chem. And Pet. Industry Inspec. Tech Topical Conf, Houston Texas June 1999. Crouch, A. E., “Optimizing the Nonlinear Harmonic Method for Detection of Mechanical Damage, Pipeline Pigging, Integrity Assessment and Repair”, Houston Texas, Feb. 2000. DECI Newsletter, “Acoustic Emissions from Leaks”, http://www.deci.com/oct96.htm, Dunegan Engineering Consultants Inc., October 1996. Dunegan, H.L., “A New Acoustic Emissions Technique for Detecting and Locating Growing Cracks in Complex Structures”, Dunegan Engineering Consultants Inc. Report, pp. 1-9, May 2000. Ferdinand, M., “Building an Acoustic Emission Data Analysis Program”, Sensor Online Magazine http://www.sensormag.com, September 1999. Flournoy, N. E., and Schroeder, W.W., “Development of a Pipeline Leak Detector”, The Journal of Canadian Petroleum Technology, Vol. 17, No. 3, pp. 33-36, July 1978. 34 Gilmore R. E. “Lost Gas Speaking,” Gas Age-Record 1-4 ,July 6, 1935. Hall, D. E. “Musical Acoustics-Chapter 16 Sound Reproduction” , Wadsworth Publishing Company, pp. 374-388, Belmont CA, 1980. Hogan D.P., “ Field Results with Sonic Pinpointing”- Progress report 64-D-213, presented at the 1964 A.G.A. Operating Section distribution Conf. Huebler, J.E., “Leak Detection and Measurement Facts”, Gas Utility Manager Online Magazine, http://www.gasindustries.com, February 2000. Huebler, J.E., “Detection of Unauthorized Construction Equipment in Pipeline Right of Ways”, Presentation given at U. S. Department of Energy, National Energy Technology Center Natural Gas Infrastructure Reliability Industry Forums, Morgantown, WV, September 2002. Jette, N., Morris, M.S., Murphy J.C., and Parker, J.G.,”Active Acoustic Detection of Leaks in Underground Natural Gas Distribution Lines”, Materials Evaluation Journal, Vol. 35, Iss. 10, pp. 90-96, 99, October 1977. Jolly, W.D., Morrrow, T.B., O’Brien, F.F., Spence, H.F., and Svedeman, S.J., “New Methods for Rapid Leak Detection in Offshore Pipelines”, Final Report for U.S. Department of the Interior Minerals Management Service, pp. 1-84, April 1992. Kennedy, J.L., “Oil and Gas Pipeline Fundamentals” PennWell Books, Tulsa Oklahhoma, 1984. Kovecevich, J.J., Sanders, D.P., Nuspl, S.P., Robertson, M.O., “Recent Advances in Application of Acoustic Leak Detection to Process Recovery Boilers”, Babcock and Wilcox Report No. BR-1594, pp. 1-7, http://www.babcock.com, September 1995. Larson D.B. “Practical use of sound amplifiers in gas leak detection,” Proc. Pacific Coast Gas Association 30,81-82, 1939. Leis, B.N., Francini, R.B., Stulen, F.B., Hyatt, R.W., and Norman, R., “Real Time Monitoring to Detect Third Party Damage”, Proceedings of the Eigth International Offshore and Polar Engineering Conference, Montreal Canada, pp. 34-38, May 1998. Lee, M, and Lee J., “Acoustic Emissions Technique for Pipeline Leak Detection”, Key Engineering Vols. 183-187, pp. 887-892, Trans Tech Publications, Switzerland, 2000. McElwee L. A. and Scott T.W., “The Sonic Leak detector”, Am. Gas J. 184, 14-17, 1957. Moorthy, J. K., “Non destructive testing”, Proceedings of the 13 th world conference on non destructive testing, Brazil, October 1992. 35 “Novel Devices Determines and Locates Gas Leaks by Sound”, Gas Age 124, 21-22, 1959. Parker, John, “Acoustic Detection and Location of Leaks in Underground Natural Gas Distribution Lines”, John Hopkins APL Technical Digest, V2, N2, Apr-Jun, pp. 90-101, 1981. Peterson, Arnold, Gross, Ervin., “Hand book of noise measurement” 1978. Proakis, J. G. and Manolakis, D.G., “ Digital Signal Processing”, Prentice Hall, 1996 Qian, Shie, “Introduction to Time-Frequency and Wavelet Transforms”, Prentice Hall, 2002 Raijtar, J.M., Muthieh, R., and Scott, L.R., “ Pipeline Leak Detection System for Oil Spills Prevention”, USDOE and New Mexico Waste-management Education and Research Consortium, Technical Completion Report, Project # WERC-01-4-23222, pp. 601-614, August 1994. Reid, J. M., Hogan D.P. and Michel P. L., “A New Approach to Pinpointing Gas Leaks with Sonics”, DMC 61-22, presented at the 1961 A.G.A. Operating Section Distribution Conference. Richardson, R.B., “Listening for leaks, Gas Age-Record”, 47-48, July 30, 1935. Rocha, M. S., ”Acoustic Monitoring of Pipeline Leaks” Paper # 89-0333, ISA, 1989 Salava, T., “Acoustic Monitoring on Gas Pipelines by System AMOS” ETOS Advertisement, pp. 1-3, http://web.telecom.cz/etos/amosw.htm, 1999 Seaford, H.. “Acoustic Leak Detection through Advanced Signal Processing Technology”, ERA Technology Ltd. Surrey, England, May, 1994. 
+
+Settles, G.S., “Imaging Gas Leaks using Schleiren Optics”, ASHRAE Journal, pp.19-26, July 1997. Shack, W.J., Ellingson, W. A., and Youngdahl, C.A., “Development of a Noninvasive Acoustic Leak Detection System for Large High Pressure Gas Valves”, ISA Transactions, Vol. 19, No. 4, pp. 65-71, 1980. Sharp, D.B. and Campbell, D.M., “Leak Detection in Pipes Using Acoustic Pulse Reflectometry”, EPSRC Report, pp. 1-14, http://www.acoustics.open.ac.uk, 1996. 36 Shimony, A.U. and Rosenhouse, G., “A Discrete Model for Tubular Acoustic Systems with Varying Cross Section- The Direct and Inverse Problems, Part 1 and Part 2: Theory and Experimants”, Acustica Journal, Vol. 81, pp. 450-474, 1995. Shinha, N.D., “Multi-Purpose Acoustic Sensor”, Los Alamos National Lab., Presented at the National Gas Infrastructure Reliability Industry Forum, Sept. 16-17, 02 at NETL, Morgantown WV. Varma, V.K., “Gas Pipeline Safety: ORNL’s Role” ORNL Review Vol. 35, No. 2, pp. 1-3, http://www.ornl.gov, 2002. Smith, O. L. “The Soundograph System for Gas Leak Detection,” Gas Age-record 381-383(Apr 15, 1933) Taghavie, R.R. @ all, “Noise from Shock Containing Jets of Non-Uniform Geometry”, Int. J. of Aeroacoustics, ISSN 1475 472x. Vol 1, No 1, March 2002 Thompson, W.C. and Skogman, K.D., “Application of Real Time Flow Modeling to Pipeline Leak Detection”, J. of Energy Resources Tech., transactions of ASME, v 105, n 4, p536-541, Dec,. 1983. Varma, V.K., “State of the Art Natural Gas Pipe Inspection” U. S. Department of Energy Report, National Energy Technology Center, pp. 1-5, 2002, Sept 16-17, Natural Gas Infrastructure Reliability Industry Forum, NETL, Morgantown WV. Watanabe, K., Matukawa, S., Yukawa, H., and Himmelblau, D. M., “Detection and Location of a Leak in a Gas Transport Pipeline By a New Acoustic Method”, Hosei University, Department of Instrumentation and Engineering Journal, N1, pp. 129-157, March 1985. Watanabe, K., and Himmelblau, D. M., “Detection and Location of a Leak in a Gas Transport Pipeline By a New Acoustic Method”, AIChE Journal, V 32, N10, pp. 1690-1701, 1986. Watanabe, K., Koyama, H., and Ohno, H., “Location of Leaks in a Gas Transport Pipeline By Acoustic Method”, Instrument Society of America Technical Paper, No. 87-1106, pp. 619-626, 1987. Wylie, E. B., and Streeter, V. L. with Suo, L., “Fluid Transients in Systems” Prentice Hall, 1993. Zhang, Jun,”Designing a Cost Effective and Reliable Pipeline Leak Detection System”, Pipeline Reliability Conference, Houston, USA, November 19-22, 1996. 37 
+
+APPENDIX: PAMP OPERATING MANUAL 
+
+Hardware Required 
+
+TASCAM PS-5 Data Acquisition (DAQ) Center Laptop Computer with DAQ-EZ DAQ Card Installed PAMP Sensor Tree 
+
+Software Required 
+
+DAQ-EZ Professional, V 1.17 TASCAM PS-5, V2.04 (internal software) Signal View, V 1.91 
+
+> Figure 17: PAMP Hardware- DAQ Center and TASCAM PS-5.
+
+A) TASCAM PS-5 B) DAQ Center C) Headphones (optional) D) ¼” Microphone Data Cable E) ¼” Pressure Transducer Data Cables F) 37-Pin Serial Data Cable 38 
+
+> Figure 18: PAMP Hardware- Sensor Tree.
+
+D) ¼” Microphone Data Cable E) ¼” Pressure Transducer Data Cables G) High-Pressure Microphone and Pre-Amplifier H) Differential Pressure Transducer I) Total Pressure Transducer 39 
+
+Hardware Settings 
+
+TASCAM PS-5 (Figure 19) 
+
+The TASCAM PS-5 has a variety of adjustable features. First, the physical switches available on the PS-5 will be covered. 
+
+On the front of the PS-5 (from left to right)… 
+
+• All of the gray fader switches (labeled “ 1”, “ 2”, “ 3”, “ 4”, & “ TG ”) should be moved as far down as possible. 
+
+• The red fader switch (labeled “ MASTER ”) should be as far up as possible. 
+
+On the top of the PS-5… 
+
+• The “ POWER ” switch should be in the “ ON ” position. 
+
+On the bottom of the PS-5 (from left to right)… 
+
+• The “ GUITAR/LINE ” rotary dial should be in the maximum position of “10 ”. 
+
+• The “ MIC/LINE ” rotary dial should be in the maximum position of “ 10 ”. 
+
+• The “ PHONES ” rotary dial can be adjusted to the operator’s own comfort level since it does not affect the actual data recording level. If no headphones are being used, any position is acceptable for this dial. 
+
+On the right side of the PS-5 (from bottom to top)… 
+
+• The “ GUITAR LINE ” switch should be set to “ LINE ” (switch should be as far up as possible). 
+
+• The “ BUILT IN MIC LINE ” switch should be set to “ MIC ” (switch should be in the center position). 
+
+> Figure 19: Setting the switches on the TASCAM PS-5.
+
+40 
+
+Data Acquisition (DAQ) Center 
+
+The DAQ Center can be used as both a power source for the PAMP sensors and as a central junction that adapts data input connectors to the appropriate data output connectors. This allows the PAMP to be quickly connected or disconnected during normal use. The DAQ Center has only one hardware setting requirement. On the side of the DAQ Center… 
+
+• The “ ON OFF ” toggle switch should be set on “ ON ” during data recording sessions. 
+
+• The “ ON OFF ” toggle switch should be set on “ OFF ” while the PAMP is not being used to record data. 
+
+• The latest data acquisition recorder could also be connected by a USB cable to a laptop to derive power from its batteries and for data downloading. 
+
+Laptop Computer with DAQ-EZ DAQ Card Installed 
+
+A laptop computer is absolutely essential to the PAMP system. The DAQ-EZ data acquisition board should be properly installed on the computer, and adequate memory storage must be available to record any incoming data. Installation notes are available for both the DAQ-EZ card and its associated software in DAQ-EZ Installation. Aside from proper installation, the only hardware setting for the laptop computer is that the computer must be turned on. 
+
+PAMP Sensor Tree 
+
+The Sensor Tree is the part of the PAMP system that actually connects to the gas line using a ½” NPT pipe thread. Various sensors are hard-mounted to the Sensor Tree and are configured for high-pressure (up to 1000 psig) use. A pressure-equalized microphone is located at the top of the Sensor Tree to monitor acoustic signals inside the pipeline. A pressure transducer that monitors line total pressure and a differential pressure transducer that monitors relatively small fluctuations in line pressure are mounted on the side of the Sensor Tree. Before connecting the Sensor Tree to the gas line, it is imperative that the unit is checked for leaks! All valves should be in the closed position prior to initial pressurization. Hardware settings for the Sensor Tree are as follows. 
+
+On the top of the Sensor Tree: 
+
+• The ¼” microphone output jack should be plugged into the microphone pre-amplifier (or pre-amp). The pre-amp has only one power switch, located on its side. The power should be turned to the “ ON ” setting just prior to data recording. 
+
+• When recording is complete, the pre-amp’s power switch should be turned to the “ OFF ” position. 41 
+
+On the side of the Sensor Tree: 
+
+• During data recording, the valves of the Sensor Tree may be turned to a variety of settings to accommodate optimal recording levels. 
+
+• When the PAMP is not being used to collect data, all Sensor Tree valves should be returned to the closed position to prevent sudden pressurization during the next test. 42 
+
+Connecting the Hardware 
+
+Once all hardware settings have been properly selected, cable connections must be made between the components of the PAMP to facilitate data transfer. A wiring schematic of these connections is shown in Figure 20. 
+
+Connecting the Sensor Tree to the DAQ Center… 
+
+• Connect the yellow 4-pin female plug to the total pressure transducer. 
+
+• A red cable is already hard wired in to the differential pressure transducer. 
+
+• Connect the white/yellow pair of ¼” male plugs into the side of the DAQ Center. The corresponding female plugs are labeled “ TPT (wht) ” and “ TPT (yel) ”. (See Figure 21) 
+
+• Connect the white/red pair of ¼” male plugs into the side of the DAQ Center. The corresponding female plugs are labeled “ DPT (wht) ” and “ DPT (red) ”. (See Figure 21) 
+
+Connecting the Sensor Tree to the PS-5… 
+
+• Connect the blue ¼” female plug to the ¼” male plug of the microphone pre-amp. 
+
+• Connect the blue ¼” male plug to the ¼” female plug on the PS-5 labeled “MIC/LINE ”. 
+
+Connecting the DAQ Center to the laptop computer… 
+
+• Connect the 37-pin serial connector to the circuit board located in the DAQ Center. Tighten both screws hand tight. 
+
+• Connect the 37-pin male connector to the DAQ-EZ card located on the side of the laptop. 
+
+Connecting the PS-5 to the laptop computer… 
+
+• Connect the appropriate end of the USB interface cable to the top of the PS-5. 
+
+• Connect the opposite end of the USB cable to the USB port of the computer (usually located in the back or side of most laptops). 
+
+Connecting the optional headphones… 
+
+• Connect the 1/8” male plug of the headphones to the 1/8” female plug (labeled “PHONES ”) of the PS-5. Note: When using the TASCAM headphone with the available headset microphone, do not connect the red 1/8” male plug labeled “MIC ”. 43 
+
+Figure 20: Hardware wiring diagram. 
+
+Figure 21: DAQ Center shown with transducer data cables. 44 
+
+Software Settings 
+
+There are two main categories of software required by the PAMP. The first is a data collection type software that records the analog voltage signals of various sensors. With the push of a button, the software begins recording from all three sensors over a preset time interval. Discrete values are recorded digitally, usually using binary code. The second type of software used by the PAMP system is an analytical program for data analysis. This software has the ability to perform many different mathematical algorithms to “filter” raw data so that it can be analyzed. The PAMP uses DAQ-EZ Professional and the PS-5’s built in software to convert analog signals to recorded digital files. The PAMP system then uses Signal View to obtain meaningful data “signatures” which can be easily interpreted by the operator. 
+
+DAQ-EZ Professional, V1.17 
+
+Creating the Virtual Circuit… 
+
+We will begin by setting up the simple schematic required to perform the data collection. In general terms, we want to connect a virtual circuit. This means that we need a source (the DAQ card) that sends signals to a file (“ Save Disk ”). While this is going on, we may as well see what it is recording, so we will also hook up a virtual digital meter (“ Digital Meter ”) to the circuit. 
+
+• From the Windows Desktop, select the “ DaqEZ Professional ” icon. 
+
+• From the DaqEZ Professional window, select “ File ”, then select “ New Project ”
+
+• In the left hand column (under “ Source ”), select the “ DAQP 208H ” icon. 
+
+Note: This will bring up a small box labeled “ DAQP-208H ” inside the program window, and the left hand column will show many new icons. 
+
+• From the left hand column, select the “ Digital Meter ” icon. Note: This will bring up another small box in the program window labeled “ DigMet 1 ”. 
+
+• From the left hand column, select the “ Save Data ” icon. Note: This will bring up yet another small box in the program window labeled “ SaveDisk 1 ”. 
+
+• Repeat the previous step by selecting the “ Save Data ” icon again. Note: This time, the small box that comes up will be labeled “ SaveDisk 2 ”. 
+
+• Click and drag the two SaveDisk boxes and the DigMet box so that the terminals on their left sides (labeled T0, T1, T2, etc.) can be cleanly connected to the right side channel outputs of the DAQP-208H box (labeled CH00-00, CH01-00, etc.). Note: Refer to Figure 22 for more help. 45 
+
+> Figure 22: DAQ-EZ virtual circuit preparation.
+
+• Now connect the terminals of the boxes by left clicking on a terminal block (T1, T2,…,TX) and then left clicking on the channel blocks (CH00-00, CH01-00,…, CH0X-00). Once the channel block is left clicked, the thin straight black line coming from the terminal block becomes a thick bent green line. Note: After successful completion of a connection, the terminal block label changes from TX to CH0X-00. See Figure 23 for more help. 
+
+• Connect the terminals in exactly this way: From “ DigMet ”- Connect T1 to CH01-00, connect T2 to CH02-00. From “ SaveDisk 1 ”- Connect T0 to CH01-00. From “ SaveDisk 2 ”- Connect T0 to CH02-00. Note: As the terminals from the “DigMet ” box are connected, a small meter window will appear. Likewise, as the terminals from the “ SaveDisk X ” boxes are connected, small file save windows appear. 46 
+
+> Figure 23: Complete DAQ-EZ virtual circuit.
+
+Setting the Scan Rate… 
+
+Now that the circuit has been constructed, it is time to fine-tune the specific sampling rate with which we acquire digitized signals from the DAQ-EZ software. Too high a sampling rate will lead to very large data file sizes, but too low a sampling rate can lead to inaccurate data. For the purpose of the total and differential pressure transducers, a sampling rate of 10 samples per second (10 Hz) appears to be optimum. 
+
+• With the schematic in plain view, double click on the blank spot just to the left of the channel blocks on the small “ DAQP-208H ” box (see Figure 24). Note: Awindow should appear titled “ A/D Request Information ”47 
+
+> Figure 24: Accessing DAQ-EZ’s adjustable sampling rate menu.
+
+• In the “ A/D Request Information ” window under “ Scan Settings ”, click on the down arrow of the upper box. From the drop menu, select “ Scans / Second (Hz) ”. 
+
+• Now click and hold on the sliding needle selector just below the box you were just at. Move the needle sideways to the left side of the box so that the number above it gets to “ 10 ” (see Figure 25). Note: It may be difficult to get the needle exactly at “ 10 ” with the mouse. You can use the keyboard directional keys once you get close to “ 10 ” to avoid over or undershooting. For reasons that will be explained later, you must make a note of the sampling frequency with which you are recording. 
+
+• Click on “ OK ”. Note: Remember to write down your sampling rate! 
+
+> Figure 25: Adjusting the data acquisition sampling rate.
+
+48 
+
+Naming Saved Files… 
+
+Finding the stored data for different test runs can become a problem if DAQ-EZ is allowed to automatically name your files. Giving the file a particular name will allow the operator to quickly find the specific sample. To name a file, perform the following steps. 
+
+• With the schematic in plain view, double click on the blank spot just to the right of the terminal blocks on the small “ SaveDisk X ” box. Note: This will bring up a window titled “ SaveDisk X Configuration ”. (See Figure 26) 
+
+• Click inside the box labeled “Data File Name” and enter the file name you wish to save as. 
+
+• Click “ OK ”. Note: If the file name you have chosen already exists, DAQ-EZ will alert you and allow you the option to overwrite it or change the file name. 
+
+Setting Up Files for ASCII Format… 
+
+DAQ-EZ’s system of file storage (in particular its file type system) makes it very hard to read the file with anything other than DAQ-EZ software. Since the PAMP system uses Signal View to analyze the stored data, a common file type is needed. To do this, we need to set DAQ-EZ so that it can record in ASCII format. As will be seen later, Signal View has the ability to read this type of file. For ASCII formatting, perform the following steps. 
+
+• Access the “ SaveDisk X Configuration ” window (see Naming Saved Files…). 
+
+• Click in the box labeled “ ASCII Format (.TXT) ” (see Figure 26). Note: 
+
+This will make a small check mark appear in the box. 
+
+• Click “ OK ”. 
+
+> Figure 26: DAQ-EZ allows the user to record in common ASCII format. TASCAM PS-5 Internal Software
+
+49 The internal software available on the TASCAM PS-5 is the second of the two data recording programs used in the PAMP system. Starting the PS-5 digital recorder is a relatively simple procedure. Once the power to the unit has been turned on, follow these steps to configure the software. For additional help, refer to Figure 27. 
+
+Creating and Saving MP3 Files… 
+
+• Turn the power switch to “ ON ”. Note: The screen will display “ TASCAM POCKETSTUDIO 5 V2.04 ”, then “ Card Inserted! ”, then “ Song Loading… ”. 
+
+• After startup, the screen will display a timer in the upper right hand corner and “SONGX ” on the left hand side of the screen. Press the “ MP3 ” button located under the screen. Note: After displaying “ MIX TO MP3 mode… ”, the “ MP3 ”button will flash red while the screen shows “ Create MP3 Name ⇒STMIX Sure?>>[ENTER] ”. “ STMIX ” is the factory default name of the new MP3 file, but this name is easy enough to change. 
+
+• Using the pointer cross, move the cursor to each letter position that you wish to change. To change a letter, simply rotate the silver dial located above the pointer cross. Rotating clockwise will go forward in the alphabet while rotating counterclockwise will go backward. Once the file name has been selected, simply push the “ ENTER/YES ” button located in the center of the silver dial to confirm the new name. Note: After pressing “ ENTER/YES ”, the “ MP3 ” button will be steadily lit red and the screen will display the new file name along with the timer. 
+
+• Press the “ PLAY ” and “ RECORD ” buttons located at the lower right corner of the PS-5 to begin recording. Note: While recording, the “ PLAY ” button will be lighted green and the “ RECORD ” button will be lighted red. See Hardware Settings and Connecting the Hardware to ensure proper setup before you record. 
+
+• Press the “ STOP ” button to finish recording. Note: When “ STOP ” is pushed, the screen will display the name of the file at the top of the screen. Below this the screen will display “ Record again? Sure?>>[ENTER] ”. If you wish to overwrite the last sample taken with a new sample of the same file name press “ENTER/YES ”. To save the file press the “ EXIT ” button located near the 7 o’clock position of the silver dial. Remember, if you wish to keep the sample you just recorded, you must push “ EXIT ”. 
+
+• After “ EXIT ” has been pushed, the “ MP3 ” button will be steadily lit green to indicate “ MP3 PLAY mode… ”. In this mode, the file can be played back through the headphones to review the sample. 
+
+• After each file is recorded, it will be necessary to toggle the “ MP3 ” button back to MP3 recording mode. Note: If you try to create a new MP3 file using a preexisting filename, the PS-5 will alert you that the file already exists. You will then have the option to overwrite the old file or rename the new file. 50 
+
+> Figure 27: Front view of the TASCAM PS-5.
+
+Transferring and Deleting Saved MP3 Files from the PS -5 to the Laptop… 
+
+• Turn the PS-5 power switch to “ OFF ”. Make sure that the USB interface cable has been properly installed (see Connecting the Hardware for more details). 
+
+• While holding the “ ENTER/YES ” button down, turn the power switch back to “ ON ”. Note: After a few seconds, the screen will display “ USB MODE ”. 
+
+• The laptop will automatically detect the PS-5’s internal memory as a removable drive- all you must do now is access the appropriate drive letter from the Windows My Computer window. 
+
+• Double click on the folder labeled “ MP3 ” to copy and/or delete your recorded MP3 files from the PS-5. Note: Be sure to copy these files to an easily recognizable folder on the computer’s hard drive to avoid losing your data. It is also recommended that you do not delete MP3 files from the PS-5 until you have verified the condition of the copied MP3 files on the computer’s hard drive. 
+
+Signal View, V1.91 
+
+Signal View is used by the PAMP system to analyze the data recorded earlier by both the DAQ-EZ and PS-5 software. While perhaps the most difficult of the three programs to operate, Signal View is quite a powerful tool that allows the operator to use various techniques to characterize digitized data. Let’s get started. 
+
+• From Windows Program Files, select the “ Sigview ” icon. 51 
+
+• Click on “ Start SIGVIEW ”. 
+
+Opening Files Recorded by DAQ-EZ (as shown in Figure 28): 
+
+• From the top of the Sigview main window, select “ File ”. 
+
+• Place the mouse pointer over “ ASCII files… ”. 
+
+• Select “ Import signal… ”. 
+
+• To access the files recorded by DAQ-EZ, look in C:\Program Files\Omega\DaqEZ-Pro\Data Files . Note: In this folder, there will be three files listed with the same filename but different file types. The first listed is strictly used with DAQ-EZ software and is a .DEZ file type. The second is a DAQ-EZ version of an ASCII file and is a .TX^ file type. The third is a pure ASCII file and is a .TXT file type. This last file type is the one that Signal View can understand. 
+
+• Double click on the file you would like to view, making sure that it is a .TXT file type. Note: This will bring up a small box titled “ Sample rate ”. 
+
+• Enter the sample rate (or “ scan rate ”) that you used during recording sessions with the DAQ-EZ software. Note: See Software Settings, DAQ-EZ Professional V1.17, Setting the Scan Rate… for more details 
+
+• Click “ OK ”. 
+
+> Figure 28: Opening ASCII files in Signal View.
+
+52 
+
+Opening Files Recorded by the TASCAM PS-5 (as shown in Figure 29): 
+
+• From the top of the Sigview main window, select “ File ”. 
+
+• Select “ Open signal… ”
+
+• Go to the folder on the hard drive in which your MP3 files are stored. Note: 
+
+To see the MP3 files in the file select window, it will be necessary to change the “Files of type ” drop down menu so that “ MPEG Audio Layer III (.MP3) ” is shown in the box. 
+
+• Double click on the file you wish to open. 
+
+> Figure 29: Opening MP3 files in Signal View.
+
+53 
+
+Preparation of the PAMP 
+
+After reviewing the procedures for the setup of the PAMP system, preparation for gas line acoustic monitoring is relatively simple. Begin by looking at the parts of the system in a checklist format. 
+
+Connect the Hardware:  
+
+> q
+
+Set up the DAQ Center, laptop computer, and TASCAM PS-5 on a rigid surface at least 15 ft from the intended Sensor Tree gas line mount location.  
+
+> q
+
+Thread the Sensor Tree into the gas line tap. Note: You must use a high-pressure pipe joint compound when connecting the plumbing. Permatex 51H Pipe Joint Compound is recommended. Be sure that all valves on the tree are in the closed position before mounting.  
+
+> q
+
+Connect the three color coded data cables to the Sensor Tree.  
+
+> q
+
+Blue connects to the microphone pre-amp.  
+
+> q
+
+Red is pre-wired to the differential pressure transducer.  
+
+> q
+
+Yellow connects to the total pressure transducer.  
+
+> q
+
+Connect the red and yellow data cables to the DAQ Center. Note: See Connecting the Hardware for more details.  
+
+> q
+
+Connect the blue data cable to the PS-5. Note: See Connecting the Hardware for more details.  
+
+> q
+
+Connect the DAQ cable between the DAQ Center and the laptop.  
+
+> q
+
+Connect USB cable between the PS-5 and the laptop.  
+
+> q
+
+Connect the headphones to the PS-5 (Optional). 
+
+Powering Up the PAMP System:  
+
+> q
+
+At the Sensor Tree, turn the microphone pre-amp power switch to “ ON ”.  
+
+> q
+
+Turn the laptop on.  
+
+> q
+
+Turn the TASCAM PS-5 on.  
+
+> q
+
+At the DAQ Center, turn the power switch to “ ON ”. 
+
+Prepare the Software for Signal Recording:  
+
+> q
+
+Refer to Software Settings while performing the following steps for more detailed information.  
+
+> q
+
+On the laptop, load and prepare DAQ-EZ for data acquisition.  
+
+> q
+
+On the PS-5, load and prepare the device for MP3 data acquisition. That’s it! You are now ready to begin recording gas line acoustic signals (see Figures 30 and 31) 54 
+
+Recording Data 
+
+Now that the PAMP system is properly connected and powered up, you may begin recording. To start recording the pressure transducer signals, click on the play button of the DAQ-EZ software. The play button is located in the upper left corner of the program’s main window. Just as you are clicking on DAQ-EZ’s play button, press the “PLAY ” and “ RECORD ” buttons of the PS-5 simultaneously. 
+
+> Figure 30: Recording files with DAQ-EZ.
+> Figure 31: Recording files with the TASCAM PS-5.
+
+55 
+
+Analyzing Data 
+
+Now that you have the files saved from the recording software, Signal View can be used to analyze the data. It is important to keep in mind that although Signal View allows quick access to key information about a string of data, it is the job of the operator to critically evaluate that information. Some minor equations will be given later on to help in this evaluation process. 
+
+Opening Signal View/Opening Files in Signal View: 
+
+• See Software Settings, Signal View, V1.91 for a detailed procedure list. 
+
+Looking at Waveform Graphs (as shown in Figures 32): 
+
+Once a graph has been opened on Signal View’s main window, you will need to decide what part(s) of the graph are of importance. Pressure graphs can be read directly from Signal View’s initial intensity-versus-time setup. Investigating acoustic waves, however, requires the additional step of performing a Fast Fourier Transform (FFT) analysis. This is done in Signal View by first highlighting a section of the initial graph and then selecting “ FFT ” from the “ Signal tools ” menu. Within a few seconds, an intensity-versus- frequency graph will appear showing the different frequency components of the original highlighted section. On any Signal View graph the specific y value of a peak or trough can be determined relatively quickly by first highlighting the area of interest and then using the zoom function. Follow the proceeding steps to find output values of interest. 
+
+• Left click, hold, and drag the mouse pointer along the waveform to highlight the peak(s) of interest. 
+
+• Release the left mouse button to end highlighting. 
+
+• While the mouse pointer is inside the highlighted section, right click to access the scrolling options menu. 
+
+• Click on “ Zoom In ”. Note: A new zoomed in waveform will appear after clicking “ Zoom In ”. You may continue the same procedure multiple times to achieve the desired view of the waveform. 
+
+• Moving the mouse along the waveform produces a vertical black line indicating the mouse pointer’s x position on the waveform. Another smaller horizontal line will appear that crosses the vertical black line and the nearest y value of the recorded data point. The value of the x and y coordinates is given in the lower right hand portion of the Signal View window. 
+
+• Zoom out of the close up view by simply right clicking anywhere on the graph and selecting “ Zoom Out ” from the scrolling options menu. 56 
+
+Figure 32: Close-up examination of waveforms in Signal View. 57 
+
+Preparing an FFT Analysis: 
+
+Acoustic signals from the microphone can best be analyzed using Signal View’s built in FFT tool. This allows the operator to characterize specific acoustic signals in a format that is easily identifiable. Complete the following steps to produce an FFT graph. 
+
+• Highlight a section of the intensity-versus-time graph as discussed in the previous section. 
+
+• Click on “ Signal tools ” at the top of the main window. 
+
+• Click on “ FFT ”. Note: Signal View may take several seconds to perform the requested calculations. 
+
+• A new graph will appear showing intensity plotted along increasing frequency rather than time (see Figure 33). 
+
+> Figure 33: Sample result of Signal View’s FFT analysis.
+
+58 
+
+Interpreting Waveform Graphs: 
+
+The x and y coordinate values given for each data point in Signal View must be interpreted separately. All x values can be taken exactly as they are displayed: initial intensity-versus-time graphs show all x values in terms of time in seconds while intensity-versus- frequency graphs show all x values in terms of frequency in Hertz. Y values, on the other hand, must be translated directly into volts. Pressure can then be determined based on the new voltage output. It is also possible to change the voltage output into terms of decibels, a useful unit when examining the output of the microphone. Changing Signal View’s numbers into a more useful format requires the introduction of a few simple formulae. The linear relationship between Signal View units (svu’s) and volts (V) is as follows. 1 V = 3266 svu; 1 mV = 3.266 svu (1a) 
+
+1 svu = 0.0003062 V; 1svu = 0.3063 mV (1b) 
+
+Voltage output from the total pressure transducer (V T ) may be changed to pressure (P T ) using the following equation. PT (psig) = [V T (Volts) – 0.7837] / 0.005 (2) 
+
+Graphs and conversion tables of the above formulae are also available in Appendix B: Unit Conversion. 
+
+Copying Waveform Graphs: 
+
+It may be beneficial to copy Signal Vie w graphs for later review. To copy a graph, place the mouse pointer over “ Edit ” at the top of Signal View’s main window. Select “ Copy picture to clipboard ” from the scroll down menu. Now that the graph is on the clipboard, it is possible to paste the image in many different programs including MS Word, Excel, or Paint (see Figure 34). 
+
+> Figure 34: Copy and paste waveform images to outside documents.
+
+59 
+
+Comparing Waveform Graphs: 
+
+Graphs can be overlapped using Signal View’s overlay function. To put two or more sets of data on the same graph, perform the following procedure (see Figure 35). 
+
+• Open all the data files that you wish to compare. 
+
+• Right click on any of the graph windows to access the scrolling option menu. 
+
+• Place the mouse pointer over “ Overlay with ” to reveal a menu of all open data files in the Signal View window. 
+
+• Click on the file(s) you want to overlap the file you are currently looking at. 
+
+> Figure 35: Waveform images can be overlapped or displayed side by side.
+
+60 
+
+DAQ-EZ Installation 
+
+Installation of the DAQ-EZ software onto the laptop computer will require the following items: 
+
+• Omega data acquisition card (“ DAQP-208H-OM ”) 
+
+• Omega “ DaqSuite Data Acquisition Software ” CD 
+
+• Driver update for DAQ-EZ (“ DAQPDRV.sys ”) Begin installation by placing the software CD into the CD drive of the computer. Follow all the onscreen instructions and setup procedures. After installation, slide the DAQ-EZ hardware card labeled “ DAQP-208H-OM ” into the PCMCIA port on the side or back of the computer. Windows will now be able to recognize the new hardware and will attempt to auto configure it for use. It will now be necessary to “patch” one of the driver files from the original disk. Copy the file “ DAQPDRV.sys ” from the CD labeled “DAQ-EZ Driver Patch ” to the following location: 
+
+C:\WINNT\SYSTEM32\DDRIVERS\ . A window will appear notifying you that the file already exists. This is not a problem, just overwrite the existing file. If this patch is not completed, DAQ-EZ will not be able to recognize any data coming from an outside source. The DAQ-EZ software may not be able to auto configure correctly on the laptop. If this occurs, you will need to manually configure the hardware so that data may be acquired. Manually configure the card by performing the following steps. 
+
+Finding the Correct Configuration Information (as shown in Figure A.1): 
+
+• From the Windows main window, click on the “ Start ” menu. 
+
+• Place the mouse pointer over “ Settings ”. 
+
+• From the “ Settings ” scroll menu, select “ Control Panel ”. 
+
+• Double click on the “ System ” icon. 
+
+• From the System Properties window, click on the “ Hardware ” tab. 
+
+• Click on the “ Device Manager… ” button. 
+
+• Double click on “ Data_Acquistion ”. 
+
+• Double click on “ Omega DAQP-208H: PCMCIA 12-bit High Gain Analog I/O ”. 
+
+• From the pop- up window, click on the “ Resources ” tab. 
+
+• Look under “ Resource Settings: ” for the interrupt request (IRQ) and input/output range (base address) numbers. Note: The IRQ is typically a two-digit number (e.g. “03”) and the base address is usually shown as a range between two hexadecimal numbers (e.g. “DFF0-DFFF”). Use only the first hexadecimal number listed in the given range for your base address. 
+
+• Write these numbers down so that you can type them in the next few steps. 
+
+o Interrupt Request (IRQ): ____________ 
+
+o Input/Output Range (base address): ____________ 
+
+• Close all open windows and return to the Windows main screen. 61 
+
+Entering the Configuration Information (as shown in Figures 36 and 37): 
+
+• Double click on the “ DAQDRIVE Config Utility ” icon. 
+
+• From the DAQDRIVE Configuration Utility window, right click on “ Computer ”. 
+
+• Place the mouse pointer over “ Add Board ”. 
+
+• From the Add Board scroll menu, highlight and click on “ DAQP-208H ”. 
+
+• Right click on “ BOARD: DAQP-208H ”. 
+
+• Click on “ Configure… ”. 
+
+• In the “ Gene ral Configuration ” menu, click the “ USE AUTO CONFIGURATION ” checkbox to remove the check mark. Note: When the box is unchecked, the first uppermost box below will become white to indicate that it is ready for user input. 
+
+• Type in the base address and IRQ as it was listed in “ Resource Settings: ”. 
+
+• Click on “ OK ” at the bottom of the menu to confirm the new settings. That’s it! DAQ-EZ is now ready for action! 
+
+> Figure 36: Locating DAQ-EZ’s configuration information.
+
+62 
+
+> Figure 37: Manual configuration of DAQ-EZ.
+
+Typical instrument responses are shown in Figures 38, 39 and 40, as well as in Table 3. The wiring diagram of the connected PAMP and DAQ Center is shown in Figure 41. 63 
+
+Unit Conversion 
+
+Total Pressure Transducer Output in Pressurized Line 
+
+y = 0.005x + 0.784   
+
+> 0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5 5.0 5.5 6.0 050 100 150 200 250 300 350 400 450 500 550 600 650 700 750 800 850 900 950
+
+Line pressure (psig) TPT output (VDC) 
+
+Figure 38: Total pressure transducer output in a pressurized line. 
+
+Volts (V) millivolts (mV) Signal View Units (svu) 1 Volt (1 V) = 1 1000 3266 1 millivolt (1 mV) = 0.001 1 3.266 1 Signal View Unit (1 svu) = 0.0003062 0.3062 1
+
+Tabl e 3: Signal view unit (svu) conversion in volts and millivolts. 64 
+
+60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 0500 1000 1500 2000 2500 3000 3500 4000 4500 5000 5500 6000 6500 7000 7500 8000 Mic Response (mV) Mic Response (dB) 
+
+Figure 39: Microphone decibel response as a function of mV output. 
+
+60 65 70 75 80 85 90 95 100 105 110 115 120 125 130 135 140 
+
+> 01000 2000 3000 4000 5000 6000 7000 8000 9000 10000 11000 12000 13000 14000 15000 16000 17000 18000 19000 20000 21000 22000 23000 24000 25000 26000
+
+Mic Response (svu) Mic Response (dB) 
+
+Figure 40: Microphone decibel response as a function of svu output. 65 
+
+DAQ Center Schematic 
+
+Figure 41: Electrical schematic of the PAMP DAQ Center.

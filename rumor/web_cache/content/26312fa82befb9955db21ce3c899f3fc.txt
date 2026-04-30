@@ -1,0 +1,54 @@
+Title: Google Researcher Lowers Quantum Bar to Crack RSA Encryption
+
+URL Source: https://thequantuminsider.com/2025/05/24/google-researcher-lowers-quantum-bar-to-crack-rsa-encryption/
+
+Published Time: 2025-05-24T08:33:02+00:00
+
+Markdown Content:
+**Insider Brief**
+
+*   A new study from Google Quantum AI estimates that breaking RSA-2048 encryption could be achieved in under a week using fewer than one million noisy qubits—sharply reducing previous resource estimates.
+*   The analysis relies on algorithmic improvements and efficient system designs, including approximate arithmetic and compressed error-correction layouts, to lower the number of qubits needed.
+*   Despite the reduced threshold, no existing quantum computer can meet the performance requirements, which include five days of continuous operation with fast, low-error cycles.
+
+A new study from a Google Quantum AI researcher suggests that a 2048-bit RSA encryption key, a common standard for securing online data, could be cracked in less than a week using a quantum computer with fewer than a million noisy qubits—an order-of-magnitude drop from previous estimates.
+
+The paper, authored by researcher Craig Gidney and posted to arXiv, redefines the technical barrier required to threaten one of the most widely used public-key cryptography systems in the world. The revised estimate represents a sharp drop from Gidney’s own 2019 projection, which pegged the cost at around 20 million qubits.
+
+The study could prompt experts to reassess both the urgency of post-quantum cryptography deployment and the practical feasibility of such an attack on currently envisioned hardware. Broadly speaking, the study also shows that while factors such as qubit count, gate fidelity and error rates are important, meaningful progress in quantum computing and toward milestones, like quantum advantage, can also come from algorithmic innovations and better hardware-software integration.
+
+### Algorithmic Advances
+
+Gidney’s latest calculations lean on several recent algorithmic and architectural advances. By combining approximate residue arithmetic, low-overhead logical qubit storage, and more efficient state preparation for quantum circuits, the new model trims the number of required qubits while maintaining a realistic execution time and error tolerance.
+
+At the heart of the effort is the continued refinement of quantum algorithms that build on Peter Shor’s foundational 1994 discovery that quantum computers could factor large numbers exponentially faster than classical computers. Since then, researchers have been trying to quantify the exact resources needed to implement Shor’s algorithm at scale. Gidney’s new estimate focuses on the specific challenge of factoring RSA-2048, a 2048-bit encryption key representing a 617-digit number that is the product of two large prime numbers. This is an important target because the security of this encryption standard underpins much of today’s online banking, email and digital certificates and relies on the difficulty conventional methods face in factoring such large numbers.
+
+To make the math more tractable, Gidney writes that the paper builds upon earlier work that introduced a shortcut for handling large number calculations that dramatically cuts the number of logical qubits, or error-protected quantum bits that help deal with the noise and instability of quantum systems.
+
+The research further improves the tradeoff between time and space by refining how these approximations are accumulated and validated, while also introducing a more efficient qubit storage model using “yoked surface codes” — a denser arrangement of error-correcting qubits.
+
+### Fewer Than One Million Physical Qubits
+
+Using these techniques, Gidney estimates that factoring RSA-2048 would require fewer than one million physical qubits. However, according to the paper, it would require a quantum computer capable of sustaining five days of continuous operation with 1 microsecond surface code cycles and gate error rates no higher than 0.1% — a level of performance well beyond today’s systems, but not out of question for devices on the books for the future. That type of system would need a robust control system capable of reacting within 10 microseconds and would use a combination of hot and cold storage zones for active and idle qubits, respectively. A small compute region would manage interactions and generate high-fidelity logic gates, such as Toffoli and CCZ gates, using magic state distillation, which is a way to make reliable quantum gates for more difficult operations.
+
+The runtime assumes the computer can avoid or manage logical errors throughout a process involving more than 6.5 billion Toffoli gate operations. The layout of the computation is broken down into three regions: a compute region that handles logic operations, a hot storage region that supports active qubit use, and a cold storage region designed for idle logical qubits at high density. These assumptions reflect hardware trends seen in the latest proposals for scalable quantum computers.
+
+### Narrowing The Gap
+
+While the estimated hardware still doesn’t exist, the study narrows the gap between today’s experimental systems and a hypothetical attack machine. Superconducting and trapped-ion qubit platforms have already demonstrated some of the ingredients required, including surface codes and basic lattice surgery operations. Major quantum hardware firms such as IBM, Quantinuum and PsiQuantum have also published multi-year roadmaps targeting systems with hundreds of thousands to millions of qubits by the early 2030s.
+
+Gidney’s analysis stresses that, despite the dramatic reduction in required resources, the threat remains hypothetical. The hardware to execute such a factoring attack is not yet available, and the estimate assumes idealized fault-tolerance and modular operations. Furthermore, he notes that pushing the requirement below the one-million-qubit mark would be significantly harder given current methods. The use of approximate methods introduces small probabilities of failure in each run, which are compensated by repeated trials and statistical filtering, but cannot be eliminated entirely.
+
+### Implications For PQC
+
+Gidney points out this this isn’t a call to panic, but the results likely bolster calls by standards bodies such as NIST to migrate away from RSA and other vulnerable cryptographic protocols well before practical quantum computers arrive. NIST’s current guidance recommends deprecating these systems after 2030 and prohibiting them altogether after 2035 — a timeline that aligns with the long lead time necessary for infrastructure-wide upgrades across government, finance, healthcare and enterprise systems.
+
+He writes: “Looking forward, I agree with the initial public draft of the NIST internal report on the transition to post-quantum cryptography standards [nist2024]: vulnerable systems should be deprecated after 2030 and disallowed after 2035. Not because I expect sufficiently large quantum computers to exist by 2030, but because I prefer security to not be contingent on progress being slow.”
+
+By providing concrete parameters for what a real attack machine could look like, the study also gives hardware designers a target for evaluating readiness. Previous estimates ranged widely, often involving tens of millions of qubits and years of runtime. With a more grounded figure, the question becomes less about feasibility and more about when.
+
+The paper includes extensive appendices with Python code, circuit layouts and mockups for the major components, including the arithmetic circuits and the lattice surgery operations. These engineering-level details make the study more than a theoretical advance — they offer a near-blueprint for implementation once hardware catches up.
+
+The work also adds weight to the axiom in cryptography that “attacks always get better.” As algorithmic improvements continue and as qubit quality and gate fidelity improve, the real-world cost of quantum factoring may continue to fall.
+
+The study and readers interested in the deeper details are encouraged to review the full text. It’s important to note that arXiv is a pre-print server, which allows researchers to receive quick feedback on their work. However, it is not — nor is this article, itself — official peer-review publications. Peer-review is an important step in the scientific process to verify the work.

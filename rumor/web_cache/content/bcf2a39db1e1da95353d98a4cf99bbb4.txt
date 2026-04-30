@@ -1,0 +1,284 @@
+Title: How I Acted Like A Pundit And Screwed Up On Donald Trump
+
+URL Source: https://fivethirtyeight.com/features/how-i-acted-like-a-pundit-and-screwed-up-on-donald-trump/
+
+Published Time: 2016-05-18T07:01:23-04:00
+
+Markdown Content:
+Since Donald Trump effectively wrapped up the Republican nomination this month, I’ve seen a lot of critical self-assessments from empirically minded journalists — FiveThirtyEight included, twice over — about what they got wrong on Trump. This instinct to be accountable for one’s predictions is good since the conceit of “data journalism,” at least as I see it, is to apply the scientific method to the news. That means observing the world, formulating hypotheses about it, and making those hypotheses falsifiable. (Falsifiability is one of the big reasons we make predictions.1
+In the absence of predictions, there are ways for journalism to be more falsifiable, such as if the reporting is transparent, precise, accessible, comprehensive, and does not rely on arguments from authority.
+
+) When those hypotheses fail, you should re-evaluate the evidence before moving on to the next subject. The distinguishing feature of the scientific method is not that it always gets the answer right, but that it fails forward by learning from its mistakes.
+
+But with some time to reflect on the problem, I also wonder if there’s been too much #datajournalist self-flagellation. Trump is one of the most astonishing stories in American political history. If you really expected the Republican front-runner to be bragging about the size of his anatomy in a debate, or to be spending his first week as the presumptive nominee feuding with the Republican speaker of the House and embroiled in a controversy over a tweet about a taco salad, then more power to you. Since relatively few people predicted Trump’s rise, however, I want to think through his nomination while trying to avoid the seduction of hindsight bias. What should we have known about Trump and when should we have known it?
+
+It’s tempting to make a defense along the following lines:
+
+> Almost nobody expected Trump’s nomination, and there were good reasons to think it was unlikely. Sometimes unlikely events occur, but data journalists shouldn’t be blamed every time an upset happens,2
+> Nor should they get credit whenever a favorite wins.
+> 
+>  particularly if they have a track record of getting most things right and doing a good job of quantifying uncertainty.
+
+We could emphasize that track record; the methods of data journalism have been highly successful at forecasting elections. That includes quite a bit of success this year. The FiveThirtyEight “polls-only” model has correctly predicted the winner in 52 of 57 (91 percent) primaries and caucuses so far in 2016, and our related “polls-plus” model has gone 51-for-57 (89 percent). Furthermore, the forecasts have been well-calibrated, meaning that upsets have occurred about as often as they’re supposed to but not more often.
+
+But I don’t think this defense is complete — at least if we’re talking about FiveThirtyEight’s Trump forecasts. We didn’t just get unlucky: We made a big mistake, along with a couple of marginal ones.
+
+The big mistake is a curious one for a website that focuses on statistics. Unlike virtually every other forecast we publish at FiveThirtyEight — including the primary and caucus projections I just mentioned — our early estimates of Trump’s chances weren’t based on a statistical model. Instead, they were what we “subjective odds” — which is to say, educated guesses. In other words, we were basically acting like pundits, but attaching numbers to our estimates.3
+I think we should have designed a model — but given that we didn’t, I don’t think there’s anything wrong with framing our guesstimates in percentage terms. It’s easy to make weasel-worded statements along the lines of “Trump is an underdog to win the nomination, but we can’t rule anything out,” leaving enough ambiguity in that sentence that you can claim to have been prescient, whatever the result. Putting things in percentage terms is more accountable, especially if you want to test your forecasts for calibration later on.
+
+But sometimes I wish that we had a clearer way to distinguish when we’re just spitballing from when we’re listing the result of a model or formula. Maybe we could use a different font, like Comic Sans?
+
+ And we succumbed to some of the same biases that pundits often suffer, such as not changing our minds quickly enough in the face of new evidence. Without a model as a fortification, we found ourselves rambling around the countryside like all the other pundit-barbarians, randomly setting fire to things.
+
+There’s a lot more to the story, so I’m going to proceed in five sections:
+
+> 1. Our early forecasts of Trump’s nomination chances weren’t based on a statistical model, which may have been most of the problem.
+> 
+> 
+> 2. Trump’s nomination is just one event, and that makes it hard to judge the accuracy of a probabilistic forecast.
+> 
+> 
+> 3. The historical evidence clearly suggested that Trump was an underdog, but the sample size probably wasn’t large enough to assign him quite so low a probability of winning.
+> 
+> 
+> 4. Trump’s nomination is potentially a point in favor of “polls-only” as opposed to “fundamentals” models.
+> 
+> 
+> 5. There’s a danger in hindsight bias, and in overcorrecting after an unexpected event such as Trump’s nomination.
+
+Our early forecasts of Trump’s nomination chances weren’t based on a statistical model, which may have been most of the problem.
+--------------------------------------------------------------------------------------------------------------------------------
+
+Usually when you see a probability listed at FiveThirtyEight — for example, that Hillary Clinton has a 93 percent chance to win the New Jersey primary — the percentage reflects the output from a statistical model. To be more precise, it’s the output from a computer program that takes inputs (e.g., poll results), runs them through a bunch of computer code, and produces a series of statistics (such as each candidate’s probability of winning and her projected share of the vote), which are then published to our website. The process is, more or less, fully automated: Any time a staffer enters new poll results into our database, the program runs itself and publishes a new set of forecasts.4
+There are some checks and balances; if the model shows a very large swing in the probabilities for a race, the program will ask a human to double-check the numbers to ensure that we haven’t entered a poll incorrectly, for example.
+
+ There’s a lot of judgment involved when we build the model, but once the campaign begins, we’re just pressing the “go” button and not making judgment calls or tweaking the numbers in individual states.
+
+Anyway, that’s how things _usually_ work at FiveThirtyEight. But it’s not how it worked for those skeptical forecasts about Trump’s chance of becoming the Republican nominee. Despite the lack of a model, we put his chances in percentage terms on a number of occasions. In order of appearance — I may be missing a couple of instances — we put them at 2 percent (in August), 5 percent (in September), 6 percent (in November), around 7 percent (in early December), and 12 percent to 13 percent (in early January). Then, in mid-January, a couple of things swayed us toward a significantly less skeptical position on Trump.
+
+First, it was becoming clearer that Republican “party elites” either didn’t have a plan to stop Trump or had a stupid plan. Also, that was about when we launched our state-by-state forecast models, which showed Trump competitive with Cruz in Iowa and favored in New Hampshire. From that point onward, we were reasonably in line with the consensus view about Trump, although the consensus view shifted around quite a lot. By mid-February, after his win in New Hampshire, we put Trump’s chances of winning the nomination at 45 percent to 50 percent, about where betting markets had him. By late February, after he’d won South Carolina and Nevada, we said, at about the same time as most others, that Trump would “probably be the GOP nominee.”
+
+But why didn’t we build a model for the nomination process? My thinking was this: Statistical models work well when you have a lot of data, and when the system you’re studying has a relatively low level of structural complexity. The presidential nomination process fails on both counts. On the data side, the current nomination process dates back only to 1972, and the data availability is spotty, especially in the early years. Meanwhile, the nomination process is among the most complex systems that I’ve studied. Nomination races usually have multiple candidates; some simplifying assumptions you can make in head-to-head races don’t work very well in those cases. Also, the primaries are held sequentially, so what happens in one state can affect all the later ones. (Howard Dean didn’t even come close to defeating John Kerry in 2004, for example, finishing with barely more than 100 delegates to Kerry’s roughly 2,700, but if Dean had held on to win Iowa, he might have become the nominee.) To make matters worse, the delegate rules themselves are complicated, especially on the GOP side, and they can change quite a bit from year to year. The primaries may literally be chaotic, in the sense that chaos theory is defined. Under these conditions, any model is going to be highly sensitive to its assumptions — both in terms of which variables are chosen and how the model is parameterized.
+
+The thing is, though, that if the nomination is hard to forecast with a model, it’s just as hard to forecast _without_ a model. We don’t have enough historical data to know which factors are really predictive over the long run? Small, seemingly random events can potentially set the whole process on a different trajectory? Those are problems in understanding the primaries period, whether you’re building a model or not.
+
+And there’s one big advantage a model can provide that ad-hoc predictions won’t, which is how its forecasts evolve over time. Generally speaking, the complexity of a problem decreases as you get closer to the finish line. The deeper you get into the primaries, for example, the fewer candidates there are, the more reliable the polls become, and the less time there is for random events to intervene, all of which make the process less chaotic. Thus, a well-designed model will generally converge toward the right answer, even if the initial assumptions behind it are questionable.
+
+Suppose, for instance, we’d designed a model that initially applied a fairly low weight to the polls — as compared with other factors like endorsements — but increased the weight on polls as the election drew closer.5
+Roughly speaking, this is how most of our election models work. They initially use a blend of polls and “fundamentals,” but become closer to polls-only as the election approaches.
+
+ Based on having spent some time last week playing around with a couple of would-be models, I suspect that at some point — maybe in late November after Trump had gained in polls following the Paris terror attacks — the model would have shown Trump’s chances of winning the nomination growing significantly.
+
+A model might also have helped to keep our expectations in check for some of the other candidates. A simple, two-variable model that looked at national polls and endorsements would have noticed that Marco Rubio wasn’t doing especially well on either front, for instance, and by the time he was beginning to make up ground in both departments, it was getting late in the game.
+
+Without having a model, I found, I was subject to a lot of the same biases as the pundits I usually criticize. In particular, I got anchored on my initial forecast and was slow to update my priors in the face of new data. And I found myself selectively interpreting the evidence and engaging in some lazy reasoning.6
+For instance, I’d look at betting markets, which gave Trump, say, a 15 percent chance of winning the nomination as of mid-October, and I’d calibrate my estimates of his chances relative to those. Trump was priced too high, I figured, because the conventional wisdom wasn’t sufficiently aware of the poor predictive track record of national polls. But the market was _already_ assigning a fairly steep discount to Trump’s price relative to where polls had him. (By contrast, Rubio was priced at about 30 percent in betting markets in October, despite being well behind Trump in polls.) Was it too much of a discount or too little? Without a model, it was hard to say.
+
+Another way to put it is that a model gives you discipline, and discipline is a valuable resource when everyone is losing their mind in the midst of a campaign. Was an article like this one — the headline was “Dear Media, Stop Freaking Out About Donald Trump’s Polls” — intended as a critique of Trump’s media coverage or as a skeptical analysis of his chances of winning the nomination? Both, but it’s all sort of a muddle.
+
+Trump’s nomination is just one event, and that makes it hard to judge the accuracy of a probabilistic forecast.
+---------------------------------------------------------------------------------------------------------------
+
+The campaign has seemed to last forever, but from the standpoint of scoring a forecast, the Republican nomination is just one event. Sometimes, low-probability events come through. Earlier this month, Leicester City won the English Premier League despite having been a 5,000-to-1 underdog at the start of the season, according to U.K. bookmakers. By contrast, our 5 percent chance estimate for Trump in September 2015 gave him odds of “only” about 20-to-1 against.
+
+What should you think about an argument along the lines of “sorry, but the 20-to-1 underdog just so happened to come through this time!” It seems hard to disprove, but it also seems to shirk responsibility. How, exactly, do you evaluate a probabilistic forecast?
+
+The right way is with something called calibration. Calibration works like this: Out of all events that you forecast to have (for example) a 10 percent chance of occurring, they should happen around 10 percent of the time — not much more often but also not much _less_ often. Calibration works well when you have large sample sizes. For example, we’ve forecast every NBA regular season and playoff game this year. The biggest upset came on April 5, when the Minnesota Timberwolves beat the Golden State Warriors despite having only a 4 percent chance of winning, according to our model. A colossal failure of prediction? Not according to calibration. Out of all games this year where we’ve had one team as at least a 90 percent favorite, they’ve won 99 out of 108 times, or around 92 percent of the time, almost exactly as often as they’re supposed to win.
+
+Another, more pertinent example of a well-calibrated model is our state-by-state forecasts thus far throughout the primaries. Earlier this month, Bernie Sanders won in Indiana when our “polls-only” forecast gave him just a 15 percent chance and our “polls-plus” forecast gave him only a 10 percent chance. More impressively, he won in Michigan, where both models gave him under a 1 percent chance. But there have been dozens of primaries and only a few upsets, and the favorites are winning about as often as they’re supposed to. In the 31 cases where our “polls-only” model gave a candidate at least a 95 percent chance of winning a state, he or she won 30 times, with Clinton in Michigan being the only loss. Conversely, of the 93 times when we gave a candidate less than a 5 percent chance of winning,7
+Remember, there were a lot of also-rans in the Republican race, so there can be several candidates in each state with long odds.
+
+ Sanders in Michigan was the only winner.
+
+| WIN PROBABILITY RANGE | NO. FORECASTS | EXPECTED NO. WINNERS | ACTUAL NO. WINNERS |
+| --- | --- | --- | --- |
+| 95-100% | 31 | 30.5 | 30 |
+| 75-94% | 15 | 12.5 | 13 |
+| 50-74% | 11 | 6.9 | 9 |
+| 25-49% | 12 | 4.0 | 2 |
+| 5-24% | 22 | 2.4 | 1 |
+| 0-4% | 93 | 0.9 | 1 |
+Calibration for FiveThirtyEight ”polls-only” forecast
+
+| WIN PROBABILITY RANGE | NO. FORECASTS | EXPECTED NO. WINNERS | ACTUAL NO. WINNERS |
+| --- | --- | --- | --- |
+| 95-100% | 27 | 26.7 | 26 |
+| 75-94% | 15 | 13.1 | 14 |
+| 50-74% | 14 | 8.7 | 11 |
+| 25-49% | 13 | 4.8 | 3 |
+| 5-24% | 27 | 3.1 | 1 |
+| 0-4% | 88 | 0.8 | 1 |
+Calibration for FiveThirtyEight ”polls-plus“ forecast
+
+It’s harder to evaluate calibration in the case of our skeptical forecast about Trump’s chances at the nomination. We can’t put it into context of hundreds of similar forecasts because there have been only 18 competitive nomination contests 8
+By competitive, I mean excluding races where an incumbent president was running without significant competition.
+
+ since the modern primary system began in 1972 (and FiveThirtyEight has only covered them since 2008). We could possibly put the forecast into the context of _all elections_ that FiveThirtyEight has issued forecasts for throughout its history — there have been hundreds of them, between presidential primaries, general elections and races for Congress, and these forecasts have historically been well-calibrated. But that seems slightly unkosher since those other forecasts were derived from models, whereas our Trump forecast was not.
+
+Apart from calibration, are there other good methods to evaluate a probabilistic forecast? Not really, although sometimes it can be worthwhile to look for signs of whether an upset winner benefited from good luck or quirky, one-off circumstances. For instance, it’s potentially meaningful that in down-ballot races, “establishment” Republicans seem to be doing just fine this year, instead of routinely losing to tea party candidates as they did in 2010 and 2012. Perhaps that’s a sign that Trump was an outlier — that his win had as much to do with his celebrity status and his $2 billion in free media coverage as with the mood of the Republican electorate. Still, I think our early forecasts were overconfident for reasons I’ll describe in the next section.
+
+The historical evidence clearly suggested that Trump was an underdog, but the sample size probably wasn’t large enough to assign him quite so low a probability of winning.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Data-driven forecasts aren’t just about looking at the polls. Instead, they’re about applying the empirical method and demanding evidence for one’s conclusions. The historical evidence suggested that early primary polls _weren’t_ particularly reliable — they’d failed to identify the winners in 2004, 2008 and 2012 9
+In 2004, John Kerry did not lead in national polls until after his win in Iowa. In 2008, Hillary Clinton and Rudy Giuliani were consistently ahead in national polls before Iowa. In 2012, Romney usually trailed down the pre-Iowa stretch run to Herman Cain or Newt Gingrich.
+
+ — and that other measurable factors, such as endorsements, were more predictive. So my skepticism over Trump can be chalked up to a kind of rigid empiricism. When those indicators had clashed, the candidate leading in endorsements had won and the candidate leading in the polls had lost. Expecting the same thing to happen to Trump wasn’t going against the data — it was consistent with the data!
+
+To be more precise about this, I ran a search through our polling database for candidates who led national polls at some point in the year before the Iowa caucuses, but who lacked broad support from “party elites” (such as measured by their number of endorsements, for example). I came up with six fairly clear cases and two borderline ones. The clear cases are as follows:
+
+From top left: George Wallace, Jesse Jackson, Gary Hart, Jerry Brown, Herman Cain and Newt Gingrich.
+
+Getty Images
+
+*   **George Wallace**, the populist and segregationist governor of Alabama, led most national polls among Democrats throughout 1975, but Jimmy Carter eventually won the 1976 nomination.
+*   **Jesse Jackson**, who had little support from party elites, led most Democratic polls through the summer and fall of 1987, but Michael Dukakis won the 1988 nomination.
+*   **Gary Hart** also led national polls for long stretches of the 1988 campaign — including in December 1987 and January 1988, after he returned to the race following a sex scandal. With little backing from party elites, Hart wound up getting just 4 percent of the vote in New Hampshire.
+*   ****Jerry Brown****, with almost no endorsements, regularly led Democratic polls in late 1991 and very early 1992, especially when non-candidate Mario Cuomo wasn’t included in the survey. Bill Clinton surpassed him in late January 1992 and eventually won the nomination.
+*   **Herman Cain** emerged with the Republican polling lead in October 2011 but dropped out after sexual harassment allegations came to light against him. Mitt Romney won the nomination.
+*   **Newt Gingrich** surged after Cain’s withdrawal and held the polling lead until Romney moved ahead just as Iowa was voting in January 2012.
+
+Note that I don’t include Rick Perry, who also surged and declined in the 2012 cycle but who had quite a bit of support from party elites, or Rick Santorum, whose surge didn’t come until after Iowa. There are two borderline cases, however:
+
+*   ****Howard Dean**** led most national polls of Democrats from October 2003 through January 2004 but flamed out after a poor performance in Iowa. Dean ran an insurgent campaign, but I consider him a borderline case because he did win some backing from party elites, such as Al Gore.
+*   **Rudy Giuliani** led the vast majority of Republican polls throughout 2007 but was doomed by also-ran finishes in Iowa and New Hampshire. Giuliani had a lot of financial backing from the Republican “donor class” but few endorsements from Republican elected officials and held moderate positions out of step with the party platform.
+
+So Trump-like candidates — guys who had little party support but nonetheless led national polls, sometimes on the basis of high name recognition — were somewhere between 0-for-6 and 0-for-8 entering this election cycle, depending on how you count Dean and Giuliani. Based on that information, how would you assess Trump’s chances this time around?
+
+This is a tricky question. Trump’s eventual win was unprecedented, but there wasn’t all that much precedent. Bayes’ theorem can potentially provide some help, in the form of what’s known as a uniform prior. A uniform prior works like this: Say we start without any idea at all about the long-term frequency of a certain type of event.10
+In fact, our initial assumption (our prior belief) is that the long-term frequency is equally likely to be anywhere from 0 percent of the time to 100 percent of the time.
+
+ Then we observe the world for a bit and collect some data. In the case of Trump, we observe that similar candidates have won the nomination zero times in 8 attempts. How do we assess Trump’s probability now?
+
+According to the uniform prior, if an event has occurred _x_ times in _n_ observations, the chance of it occurring the next time around is this:
+
+x+1 n+2
+
+For example, if you’ve observed that an event has occurred 3 times in 4 chances (75 percent of the time) — say, that’s how often your pizza has been delivered on time from a certain restaurant — the chance of its happening the next time around is 4 out of 6, according to the formula, or 67 percent. Basically, the uniform prior has you hedging a bit toward 50-50 in the cases of low information.11
+With a lot of observational data, the uniform prior won’t matter much. If you’d observed that an event had occurred 300 times in 400 chances, applying the prior would reduce your estimate only to 74.9 percent from 75 percent.
+
+In the case of Trump, we’d observed an event occurring either zero times out of 6 trials, or zero times out of 8, depending on whether you include Giuliani and Dean. Under a uniform prior, that would make Trump’s chances of winning the nomination either 1 in 8 (12.5 percent) or 1 in 10 (10 percent) — still rather low, but higher than the single-digit probabilities we assigned him last fall.
+
+We’ve gotten pretty abstract. The uniform prior isn’t any sort of magic bullet, and it isn’t always appropriate to apply it. Instead, it’s a conservative assumption that serves as a sanity check. Basically, it’s saying that there wasn’t a ton of data and that if you put Trump’s chances much below 10 percent, you needed to have a pretty good reason for it.
+
+Did we have a good reason? One potentially good one was that there was seemingly sound theoretical evidence, in the form of the book “The Party Decides,” and related political science literature, supporting skepticism of Trump. The book argues that party elites tend to get their way and that parties tend to make fairly rational decisions in who they nominate, balancing factors such as electability against fealty to the party’s agenda. Trump was almost the worst imaginable candidate according to this framework — not very electable, not very loyal to the Republican agenda and opposed by Republican party elites.
+
+There’s also something to be said for the fact that previous Trump-like candidates had not only failed to win their party’s nominations, but also had not come close to doing so. When making forecasts, closeness counts, generally speaking. An NBA team that loses a game by 20 points is much less likely to win the rematch than one that loses on a buzzer-beater.
+
+And in the absence of a large sample of data from past presidential nominations, we can look toward analogous cases. How often have nontraditional candidates been winning Republican down-ballot races, for instance? Here’s a list of insurgent or tea party-backed candidates who beat more established rivals in Republican Senate primaries since 2010 12
+You might notice there are no examples from 2014 in the table; that’s because there were no clear cases of insurgent candidates upsetting establishment-backed alternatives that year.
+
+ (yes, Rubio had once been a tea party hero):
+
+| YEAR | CANDIDATE | STATE | YEAR | CANDIDATE | STATE |
+| --- | --- | --- | --- | --- | --- |
+| 2010 | Sharron Angle | Nevada | 2010 | Marco Rubio | Florida |
+| 2010 | Ken Buck | Colorado | 2012 | Todd Akin | Missouri |
+| 2010 | Mike Lee | Utah | 2012 | Ted Cruz | Texas |
+| 2010 | Joe Miller | Alaska | 2012 | Deb Fischer | Nebraska |
+| 2010 | Christine O’Donnell | Delaware | 2012 | Richard Mourdock | Indiana |
+| 2010 | Rand Paul | Kentucky |  |  |  |
+Winning insurgent candidates, 2010-14
+
+That’s 11 insurgent candidate wins out of 104 Senate primaries during that time period, or about 10 percent. A complication, however, is that there were several candidates competing for the insurgent role in the 2016 presidential primary: Trump, but also Cruz, Ben Carson and Rand Paul. Perhaps they began with a 10 percent chance at the nomination collectively, but it would have been lower for Trump individually.
+
+There were also reasons to be _less_ skeptical of Trump’s chances, however. His candidacy resembled a financial-market bubble in some respects, to the extent there were feedback loops between his standing in the polls and his dominance of media coverage. But it’s notoriously difficult to predict when bubbles burst. Particularly after Trump’s polling lead had persisted for some months — something that wasn’t the case for some of the past Trump-like candidates 13
+Although it was true for others, such as Giuliani.
+
+ — it became harder to justify still having the polling leader down in the single digits in our forecast; there was too much inherent uncertainty. Basically, my view is that putting Trump’s chances at 2 percent or 5 percent was too low, but having him at (for instance) 10 percent or 15 percent, where we might have wound up if we’d developed a model or thought about the problem more rigorously, would have been entirely appropriate. If you care about that sort of distinction, you’ve come to the right website!
+
+Trump’s nomination is potentially a point in favor of “polls-only” as opposed to “fundamentals” models.
+-------------------------------------------------------------------------------------------------------
+
+In these last two sections, I’ll be more forward-looking. Our initial skepticism of Trump was overconfident, but given what we know now, what should we do differently the next time around?
+
+One seeming irony is that for an election that data journalism is accused of having gotten wrong, Trump led in the polls all along, from shortly after the moment he descended the elevator at Trump Tower in June until he wrapped up the nomination in Indiana.14
+Although, note that while the topline results from the polls were usually good for Trump, other poll-based measures pointed toward the possibility that he had a “ceiling” with GOP voters. Trump’s favorability ratings among Republicans were middling, and he sometimes polled behind candidates like Rubio and Cruz in hypothetical one-on-one matchups, suggesting that he’d lose ground as the field winnowed. Trump also never polled well in Iowa (and he eventually lost the state), raising the possibility that he’d lose favor with voters once they got a closer look at him.
+
+ As I mentioned before, however, polls don’t enjoy any privileged status under the empirical method. The goal is to find out what works based on the historical evidence, and historically polls are considerably more reliable in some circumstances (a week before the general election) than in others (six months before the Iowa caucuses).
+
+Still, Trump’s nomination comes at a time when I’ve had increasing concern about how much value other types of statistical indicators contribute as compared with polls. While in primaries, there’s sometimes a conflict between what the polls say and “The Party Decides” view of the race, in general elections, the battle is between polls and “fundamentals.” These fundamentals usually consist of economic indicators 15
+A better economy is thought to help the party holding the White House.
+
+ and various measures of incumbency.16
+An incumbent seeking a second term is supposed to have an advantage for re-election, but some models say a party is at a disadvantage when the incumbent is term-limited and a party is seeking a third consecutive term, as Democrats are this year.
+
+ (The conflict is pertinent this year: Polls have Clinton ahead of Trump, whereas fundamentals-based models suggest the race should be a toss-up.)
+
+But there are some big problems with fundamentals-based models. Namely, while they backtest well — they can “explain” past election results almost perfectly — they’ve done poorly at predicting elections when the results aren’t known ahead of time. Most of these models expected a landslide win for Al Gore in 2000, for example. Some of them predicted George H.W. Bush would be re-elected in 1992 and that Bob Dole would beat Bill Clinton in 1996. These models did fairly well as a group in 2012, but one prominent model, which previously had a good track record, wrongly predicted a clear win for Romney. Overall, these models have provided little improvement over polls-only forecasts since they regularly began to be published in 1992. A review from Ben Lauderdale and Drew Linzer suggests that the fundamentals probably do contribute some predictive power, but not nearly as much as the models claim.
+
+These results are also interesting in light of the ongoing replication crisis in science, in which results deemed to be highly statistically significant in scientific and academic journals often can’t be duplicated in another experiment. Fundamentals-based forecasts of presidential elections are particularly susceptible to issues such as “p-hacking” and overfitting because of the small sample sizes and the large number of potential variables that might be employed in a model.
+
+Polling-based forecasts suffer from fewer of these problems because they’re less sensitive to how the models are designed. The FiveThirtyEight, RealClearPolitics and Huffington Post Pollster polling averages all use slightly different methods, for example, but they’re usually within a percentage point or two of one another for any given election, and they usually predict the same winner unless the election is very close. By contrast, subtle changes in the choice of “fundamentals” variables can produce radically different forecasts. In 2008, for instance, one fundamentals-based model had Barack Obama projected to win the election by 16 percentage points, while another picked John McCain for a 7-point victory.
+
+Put another way, polling-based models are simpler and less assumption-driven, and simpler models tend to retain more of their predictive power when tested out of sample.
+
+This is a complicated subject, and I don’t want to come across as some sort of anti-fundamentals fundamentalist. Reducing the weight placed on fundamentals isn’t the same as discarding them entirely, and there are methods to guard against overfitting and p-hacking. And certain techniques, especially those that use past voting results, seem to add value even when you have plenty of polling. (For instance, extrapolating from the demographics in previous states to predict the results in future states generally worked well in the Democratic primaries this year, as it had in 2008.) The evidence is concerning enough, however, that we’ll probably publish both “polls-only” and “polls-plus” forecasts for the general election, as we did for the primaries.
+
+There’s a danger in hindsight bias, and in overcorrecting after an unexpected event such as Trump’s nomination.
+---------------------------------------------------------------------------------------------------------------
+
+Not so long ago, I wrote an article about the “hubris of experts” in dismissing an unconventional Republican candidate’s chances of becoming the nominee. The candidate, a successful businessman who had become a hero of the tea party movement, was given almost no chance of winning the nomination despite leading in national polls.
+
+The candidate was a fairly heavy underdog, my article conceded, but there weren’t a lot of precedents, and we just didn’t have enough data to rule anything out. “Experts have a poor understanding of uncertainty,” I wrote. “Usually, this manifests itself in the form of overconfidence.” That was particularly true given that they were “coming to their conclusions without any statistical model,” I said.
+
+The candidate, as you may have guessed, was not Trump but Herman Cain. Three days after that post went up in October 2011, accusations of sexual harassment against Cain would surface. About a month later, he’d suspend his campaign. The conventional wisdom would prevail; Cain’s polling lead had been a mirage.
+
+_Listen to the latest episode of the FiveThirtyEight politics podcast._
+
+When Trump came around, I’d turn out to be the overconfident expert, making pretty much exactly the mistakes I’d accused my critics of four years earlier. I did have at least a little bit more information at my disposal: the precedents set by Cain and Gingrich. Still, I may have overlearned the lessons of 2012. The combination of hindsight bias and recency bias can be dangerous. If we make a mistake — buying into those polls that showed Cain or Gingrich ahead, for instance — we feel chastened, and we’ll make doubly sure not to make the same mistake again. But we can overcompensate and make a mistake in the opposite direction: For instance, placing too little emphasis on national polls in 2016 because 2012 “proved” they didn’t mean anything.
+
+There are lots of examples like this in the political world. In advance of the 2014 midterms, a lot of observers were convinced that the polls would be biased against Democrats because Democrats had beaten their polls in 2012. We pointed out that the bias could just as easily run in the opposite direction. That’s exactly what happened. Republicans beat their polls in almost every competitive Senate and gubernatorial race, picking up a couple of seats that they weren’t expected to get.
+
+So when the next Trump-like candidate comes along in 2020 or 2024, might the conventional wisdom overcompensate and overrate his chances? It’s possible Trump will change the Republican Party so much that GOP nominations won’t be the same again. But it might also be that he hasn’t shifted the underlying odds that much. Perhaps once in every 10 tries or so, a party finds a way to royally screw up a nomination process by picking a Trump, a George McGovern or a Barry Goldwater. It may avoid making the same mistake twice — the Republican Party’s immune system will be on high alert against future Trumps — only to create an opening for a candidate who finds a novel strategy that no one is prepared for.
+
+Cases like these are why you should be wary about claims that journalists (data-driven or otherwise) ought to have known better. Very often, it’s hindsight bias, sometimes mixed with cherry-picking 17
+While I can’t blame people for criticizing our Trump coverage, I’m less sympathetic to those who made a big deal of the misses for our polling-based models in state primaries such as the Democratic contests in Indiana and Michigan, given that the models have had a strong overall track record this year.
+
+ and — since a lot of people got Trump wrong — occasionally a pinch of hypocrisy.18
+For instance, The New York Times’s Jim Rutenberg, who wrote a critical column about FiveThirtyEight’s coverage, dismissed Trump’s chances when Trump was contemplating a bid four years ago because early polling “has proven to be an unreliable barometer of actual primary and caucus results months later.”
+
+Still, it’s probably helpful to have a case like Trump in our collective memories. It’s a reminder that we live in an uncertain world and that both rigor and humility are needed when trying to make sense of it.
+
+Footnotes
+---------
+
+1.   In the absence of predictions, there are ways for journalism to be more falsifiable, such as if the reporting is transparent, precise, accessible, comprehensive, and does not rely on arguments from authority.
+
+2.   Nor should they get credit whenever a favorite wins.
+
+3.   I think we should have designed a model — but given that we didn’t, I don’t think there’s anything wrong with framing our guesstimates in percentage terms. It’s easy to make weasel-worded statements along the lines of “Trump is an underdog to win the nomination, but we can’t rule anything out,” leaving enough ambiguity in that sentence that you can claim to have been prescient, whatever the result. Putting things in percentage terms is more accountable, especially if you want to test your forecasts for calibration later on.
+
+But sometimes I wish that we had a clearer way to distinguish when we’re just spitballing from when we’re listing the result of a model or formula. Maybe we could use a different font, like Comic Sans?
+
+4.   There are some checks and balances; if the model shows a very large swing in the probabilities for a race, the program will ask a human to double-check the numbers to ensure that we haven’t entered a poll incorrectly, for example.
+
+5.   Roughly speaking, this is how most of our election models work. They initially use a blend of polls and “fundamentals,” but become closer to polls-only as the election approaches.
+
+6.   For instance, I’d look at betting markets, which gave Trump, say, a 15 percent chance of winning the nomination as of mid-October, and I’d calibrate my estimates of his chances relative to those. Trump was priced too high, I figured, because the conventional wisdom wasn’t sufficiently aware of the poor predictive track record of national polls. But the market was _already_ assigning a fairly steep discount to Trump’s price relative to where polls had him. (By contrast, Rubio was priced at about 30 percent in betting markets in October, despite being well behind Trump in polls.) Was it too much of a discount or too little? Without a model, it was hard to say.
+
+7.   Remember, there were a lot of also-rans in the Republican race, so there can be several candidates in each state with long odds.
+
+8.   By competitive, I mean excluding races where an incumbent president was running without significant competition.
+
+9.   In 2004, John Kerry did not lead in national polls until after his win in Iowa. In 2008, Hillary Clinton and Rudy Giuliani were consistently ahead in national polls before Iowa. In 2012, Romney usually trailed down the pre-Iowa stretch run to Herman Cain or Newt Gingrich.
+
+10.   In fact, our initial assumption (our prior belief) is that the long-term frequency is equally likely to be anywhere from 0 percent of the time to 100 percent of the time.
+
+11.   With a lot of observational data, the uniform prior won’t matter much. If you’d observed that an event had occurred 300 times in 400 chances, applying the prior would reduce your estimate only to 74.9 percent from 75 percent.
+
+12.   You might notice there are no examples from 2014 in the table; that’s because there were no clear cases of insurgent candidates upsetting establishment-backed alternatives that year.
+
+13.   Although it was true for others, such as Giuliani.
+
+14.   Although, note that while the topline results from the polls were usually good for Trump, other poll-based measures pointed toward the possibility that he had a “ceiling” with GOP voters. Trump’s favorability ratings among Republicans were middling, and he sometimes polled behind candidates like Rubio and Cruz in hypothetical one-on-one matchups, suggesting that he’d lose ground as the field winnowed. Trump also never polled well in Iowa (and he eventually lost the state), raising the possibility that he’d lose favor with voters once they got a closer look at him.
+
+15.   A better economy is thought to help the party holding the White House.
+
+16.   An incumbent seeking a second term is supposed to have an advantage for re-election, but some models say a party is at a disadvantage when the incumbent is term-limited and a party is seeking a third consecutive term, as Democrats are this year.
+
+17.   While I can’t blame people for criticizing our Trump coverage, I’m less sympathetic to those who made a big deal of the misses for our polling-based models in state primaries such as the Democratic contests in Indiana and Michigan, given that the models have had a strong overall track record this year.
+
+18.   For instance, The New York Times’s Jim Rutenberg, who wrote a critical column about FiveThirtyEight’s coverage, dismissed Trump’s chances when Trump was contemplating a bid four years ago because early polling “has proven to be an unreliable barometer of actual primary and caucus results months later.”
+
+Nate Silver founded and was the editor in chief of FiveThirtyEight. @natesilver538

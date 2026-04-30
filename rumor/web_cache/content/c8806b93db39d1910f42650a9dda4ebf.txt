@@ -1,0 +1,92 @@
+Title: Major leak exposes 1.5 billion Weibo, DiDi, Shanghai Communist Party, and others’ records
+
+URL Source: https://cybernews.com/security/chinese-data-leak-expose-didi-weibo-kfc-communist-party/
+
+Published Time: 2025-01-16T07:00:00+00:00
+
+Markdown Content:
+**_One of the largest data leaks involving mostly Chinese nationals includes a colossal 1.5 billion records, with full names and government ID numbers exposed. The dataset revealed details taken from Weibo, various Chinese banks, and mobile carriers, encompassing info from multiple sectors._**
+
+While the mundanity of daily data leaks is hardly debatable, not all leaks are created equally. Take this, for example. An exposed database comprising a whopping 1.5 billion records covering numerous companies across different economic and social sectors. One uniting feature, however, is that victims are mostly Chinese citizens, making this discovery among the biggest of its kind.
+
+The unprotected server with hundreds of millions of records, uncovered by the Cybernews research team, houses data from several major brands such as JD.com, a Chinese e-commerce company, Weibo, China’s top social media platform, DiDi, the country’s largest ride-hailing company, and many others.
+
+Researchers believe the dataset is likely a mix of known and completely new data leaks collated on a single now-closed Elasticsearch server. While not all 1.5 billion records were exposed for the first time, some undoubtedly were, as we’ve found no indication of previous data leaks from companies included in the list.
+
+Worryingly, the exposed instance had no clear indication of its true ownership, giving off hints of malicious intent behind such a large and diverse dataset. Threat actors treasure such large collections, as aggregated data allows for a wide range of attacks, including identity theft, sophisticated phishing schemes, targeted cyberattacks, and unauthorized access to personal and sensitive accounts.
+
+The server was exposed for several months but was finally closed after multiple attempts by our team to contact China’s CERT.
+
+Sample of the leaked data. Image by Cybernews.
+
+What data was exposed?
+----------------------
+
+While nearly 1.5 billion records were exposed in total, that doesn’t mean the same number of individuals had their details leaked online. Since details come from different platforms, organizations, and economic sectors, some users may have had their data leaked several times. According to the researchers, the unprotected server exposed:
+
+*    Full names 
+*    Email addresses 
+*    Platform ID numbers 
+*    Usernames 
+*    Phone numbers 
+*    Healthcare data 
+*    Financial records 
+*    Transportation-related details 
+*    Education-related records 
+
+Not all users had the same details exposed, as different datasets within the exposed server had different data corresponding to the company or sector it was added from. Researchers observed data from China’s healthcare, financial, transport, social media, e-commerce, and education sectors included in the data set.
+
+The largest number of identifiable records were grouped in a collection credited to QQ messenger, Tencent’s instant messaging software. However, QQ leaks are quite common and likely come from previous incidents.
+
+The second largest collection of leaked records, 504 million, were credited to Weibo, sometimes referred to as China’s Twitter. However, the team noted that in 2020, a similar amount of Weibo user data, 538 million, was put up for sale on data leak forums, which suggests that the information in Cybernews’ uncovered leak could be duplicated.
+
+However, another entry in the leaked dataset, JD.com (Jingdong), had no previously known major data leaks. Meanwhile, the exposed instance our team discovered had a whopping 142 million JD.com records exposed.
+
+The third largest exposed dataset, with over 25 million records, was credited to China’s largest courier service, SF Express. Another entry on the exposed server, with 100,000 records, was also credited to SF Express. However, the latter refers specifically to the company’s deliveries.
+
+Meanwhile DiDi, China’s largest ride-hailing service had over 20 million records under its name in the exposed server. According to the team, while there have been doubts about the company’s data security practices in the past, a major breach of this magnitude has not been previously reported.
+
+KFC, the Communist Party, and the unknowns
+------------------------------------------
+
+Even though other recognizable entries in the exposed server had fewer exposed records, their addition to the dataset is interesting, to say the least. The team discovered tens of thousands of leaked records titled Sichuan Nurse, another million titled Doctor and Patient, and 400k more credited to pharmacies.
+
+Collections like Securities (243k), China Provident Fund (531k), China Union Pay Users (1.1 million), China Merchants Bank (1 million), Bank of China (985k), as well as a collection named Cryptocurrency (100k), strongly suggest a massive financial data exposure.
+
+The Zhejiang Student Records collection (9 million) as well Graduate data collection (366k) points to exposure of educational data likely involving millions of Chinese students.
+
+There’s also the addition of the Zhilian collection (1.1 million), which likely refers to Zhillian Technology, an automotive R&D company, 2.6 million records credited to vehicle owners, and another 3.5 million records credited to an unnamed driving school, which points to the server owners’ interest in Chinese motorists.
+
+> _“Saying the magnitude of this leak is alarming is an understatement. The leaks’ volume alone is mind-boggling. Worse so, the exposed server had data from essential sectors like healthcare and finance, amplifying the potential harm.”_
+
+Another 65k records were attributed to customers of an unknown mobile carrier, residents of Beijing (196k), KFC China (5 million), and Household registration data (5.4 million)
+
+Interestingly, some collections were ominously dubbed ‘friendly nations’ (313k) and ‘data of multiple neighboring countries’ (2 million), signaling at least some level of political motivation for whoever’s behind the dataset. The inclusion of 1.6 million records in a collection titled The Communist Party of Shanghai only strengthened the impression.
+
+Another 74 million records were included in collections that we either were unable to reliably translate or named using random collections of numbers and letters.
+
+“The presence of both known and potentially unknown breaches suggests that while some of the data may have originated from previously reported incidents, other portions could represent new and unreported breaches,” the team said.
+
+Why is the leak dangerous?
+--------------------------
+
+Such detailed and highly sensitive personal data is an extremely valuable asset for skilled cybercriminals, as they can utilize leaked details for identity theft, financial fraud, and at the very least, erosion of victims’ privacy.
+
+“Saying the magnitude of this leak is alarming is an understatement. The leaks’ volume alone is mind-boggling. Worse so, the exposed server had data from essential sectors like healthcare and finance, amplifying the potential harm,” researchers said.
+
+The vast numbers of exposed records, encompassing different socioeconomic sectors, enable malicious actors to carry out many types of attacks. From identity theft to targeted spear phishing campaigns, there’s little that the attackers could not do, given the time and persistence to analyze 1.5 billion leaked records.
+
+“What’s more, depending on who owns the data and what their intentions are, the leak could pose national security risks as well since some of the exposed data could be attributed to government entities or critical infrastructure,” the team said.
+
+While 1.5 billion exposed records aren’t even close to the largest known Chinese data leak, the Shanghai National Police (SHGA), which likely exposed one billion Chinese nationals, it still could rank among the largest known so far.
+
+However, it‘s worth noting that the nature of the server could point to it being a compilation of leaks, rather than a separate leak, consisting mostly of new data. And the title of the largest compilation still resides with the Mother of all Breaches (MOAB), 12 terabytes of information discovered in early 2024.
+
+_Note: Some server collection names discovered on the exposed server were translated using artificial intelligence tools._
+
+* * *
+
+*   **Leak discovered**: August 31st, 2024 
+*   **Initial disclosure**: November 29th, 2024 
+*   **CERT contacted**: December 20th, 2024 
+*   **Leak closed**: January 6th, 2025

@@ -1,0 +1,20 @@
+Title: How to change a licence number in all AVG clients – Scotters Blog
+
+URL Source: https://www.stephen-scotter.net/computers/anti-virus/how-to-change-a-licence-number-in-all-avg-clients
+
+Markdown Content:
+If you would like to change a license number for all computers in the network, please do the following:
+
+*   Run **AVG Admin Console.**
+*   From the left navigation tree select**Licenses -> Shared settings.**
+*   Double-click “Shared settings” option in the Shared settings area.
+*   Fill the new license number and press Enter key.
+*   Right-click the “Shared settings” option and from context menu select “Mandatory”.
+*   Ask all stations for synchronization (select all needed stations and click on some of them by right mouse button, then please select the **“Synchronize settings”** option).
+*   Restart of clients’ stations is recommended after this change.
+
+Please let us inform you,that if you use also **AVG Email Server Edition** and this e-mail server is connected to the **AVG Remote Administration** as well, it is needed to create a special group for your e-mail server and do not change license numbers in **“Shared settings”** but for**group of stations**. If you use **AVG Network Edition** license number on your e-mail server, the e-mail server edition functionality **will not be supported**.
+
+**Note:** When reactivating AVG in your network with the new AVG License Number, please do not forget to enter the new AVG License Number also into the **AVG Admin Server**. Using the expired AVG License Number in Admin Server would limit the funtionality of the Remote Administration (centralized updates, management of stations, etc.).
+
+You can reactivate the AVG Admin Server with the new AVG License Number as follows: Run the **AVG Admin Server Monitor** ->**Server settings** ->**General** tab -> Click on the **Change** button.

@@ -1,0 +1,363 @@
+Title: How to fix the 403 Forbidden error (11 simple methods)
+
+URL Source: https://www.hostinger.com/tutorials/what-is-403-forbidden-error-and-how-to-fix-it
+
+Published Time: 2021-08-31T11:00:00+00:00
+
+Markdown Content:
+Aug 22, 2025
+
+Ariffud M. & Jordana A.
+
+8min Read
+
+A 403 Forbidden error is an **HTTP status code that blocks access due to permission or configuration issues**. This error indicates that the server understands the request but refuses to authorize it, typically because of restricted permissions.
+
+Keep reading as we walk you through actionable solutions to fix the 403 Forbidden error, from simple troubleshooting steps to more advanced server-side configurations:
+
+*   Clear browser cache and cookies.
+*   Temporarily disable your VPN.
+*   Scan for malware.
+*   Disable conflicting WordPress plugins.
+*   Turn off your CDN temporarily.
+*   Restore or regenerate the **.htaccess** file.
+*   Reset file and directory permissions.
+*   Edit file ownership settings.
+*   Upload an index page.
+*   Verify your A record.
+*   Update your nameservers.
+
+Additionally, potential causes that can trigger this error include:
+
+*   **Misconfigured file and folder permission settings**. Prevents users from accessing sensitive files or certain parts of a website, often leading to a 403 Forbidden error.
+*   **Corrupt .htaccess file**. Misconfiguration or malware can break the **.htaccess** code.
+*   **Missing index page**. The **index.html** or **index.php** file, which is the default homepage template, isn’t available in the website’s directory.
+*   **Incompatible WordPress plugin**. A WordPress plugin might be conflicting with another plugin or could’ve been incorrectly configured.
+*   **Incorrect IP address**. The domain name points to an inaccurate IP address, blocking access to your website.
+*   **Malware scan**. Your website’s security measures can limit access to specific resources to prevent malicious attacks.
+*   **New webpage link**. The webpage link was recently updated, causing it to differ from the cached version.
+*   **Empty website directory**. The URL is trying to access your website’s directory instead of a file.
+
+Download comprehensive HTTP status codes cheat sheet
+
+*   1. Clear your browser cache and cookies
+*   2. Temporarily disable VPN
+*   3. Scan for malware
+*   4. Disable WordPress plugins
+*   5. Temporarily disable CDN
+*   6. Restore the .htaccess file
+*   7. Reset file and directory permissions
+*   8. Edit File Ownership
+*   9. Upload an index page
+*   10. Verify the A record
+*   11. Update nameservers
+    *   Learn how to fix the 403 Forbidden error with Hostinger Academy
+
+*   Key takeaways
+
+1. Clear your browser cache and cookies
+---------------------------------------
+
+Browser cache stores outdated files, which can conflict with updated site permissions and trigger a 403 error. Cookies save login and preference data, and when they become corrupted or outdated, they may block access to some pages.
+
+First, clear your browser cache and cookies to remove any conflicting or outdated data. This forces the browser to fetch fresh files from the server, which can resolve access issues – though you’ll need to log in again to most sites afterward.
+
+Here’s how to do it in Google Chrome (similar steps apply to Firefox and Safari):
+
+1.   Click the three-dot icon in the top-right corner and select **Settings**.
+2.   Go to **Privacy and security** → **Delete browsing data**.
+3.   In the time range menu, choose **All time**.
+4.   Check **Cookies and other site data** and **Cached images and files**.
+5.   Click **Delete data** to remove them.
+
+After clearing cache and cookies, revisit the website and try logging in to see if the 403 Forbidden error is resolved.
+
+2. Temporarily disable VPN
+--------------------------
+
+A virtual private network (VPN) routes your connection through remote servers. However, some websites block these servers for security or regional compliance, often resulting in a 403 error.
+
+Temporarily disable your VPN and try accessing the website again. If this resolves the issue, switch to a different VPN server or contact your VPN provider for guidance.
+
+If these simple checks don’t solve the problem, move on to the next steps, which involve checking your website’s security.
+
+3. Scan for malware
+-------------------
+
+Malware can insert harmful code into your website’s files. This can change permissions or configuration rules, leading to restricted access and a 403 Forbidden response.
+
+Scan your website for malware to identify and remove any harmful code. On Hostinger web hosting plans, you can use the built-in **Malware Scanner** in hPanel without third-party tools:
+
+1.   Go to your website’s dashboard, then select**Security → Malware Scanner** from the left sidebar.
+2.   If no malware is found, you’ll see your hosting plan’s name and the time since the last scan.
+
+1.   Otherwise, the tool will list the infected files and the actions taken to clean them.
+
+For additional protection, use reputable WordPress malware scanner plugins like **Wordfence** or **Solid Security**. These tools detect threats in real time and block suspicious activity before it can cause further issues.
+
+If the scan reveals infections, clean or replace the affected files, then recheck your site to confirm the 403 error is gone.
+
+4. Disable WordPress plugins
+----------------------------
+
+Faulty or incompatible WordPress plugins may override permission settings. When this happens, affected pages can become inaccessible and return a 403 Forbidden error.
+
+Disable your WordPress plugins to determine if one is causing the issue. You can do this from your WordPress dashboard or directly in hPanel if you’re a Hostinger customer:
+
+1.   From your website’s dashboard, go to **WordPress → Security**.
+2.   Scroll down to the **Installed plugins** section.
+3.   Toggle each plugin off individually and check your site after each change.
+
+If you prefer a manual method, you can disable all plugins at once via the file manager or an FTP client:
+
+1.   Navigate to the **wp-content** folder in **public_html**.
+2.   Rename the **plugins** folder to **disabled-plugins**. This will deactivate all plugins simultaneously.
+
+1.   Check your website. If the error is gone, one of the plugins is the culprit.
+2.   Rename the folder back to **plugins** to reactivate them.
+3.   From your WordPress dashboard, deactivate plugins one by one to identify the problematic one.
+
+Once you’ve found the plugin causing the error, update it or remove it entirely.
+
+If security-related fixes don’t work, the next steps address server configurations and file settings.
+
+5. Temporarily disable CDN
+--------------------------
+
+A content delivery network (CDN) stores cached copies of your site across multiple servers, and outdated or misconfigured cache can lead to a 403 status code.
+
+If your website uses a CDN, temporarily turn it off to check if it’s serving the error instead of your origin server. Hostinger automatically enables the **in-house CDN** for the **Business** web hosting plan and above. To disable it in hPanel:
+
+1.   Go to **Performance → CDN**.
+2.   In the CDN status section, hit **Disable**.
+
+1.   If this resolves the problem, keep the CDN disabled temporarily and contact our support for further troubleshooting.
+
+6. Restore the .htaccess file
+-----------------------------
+
+A corrupted or misconfigured **.htaccess** file can apply incorrect server rewrite or access rules, blocking visitors and returning a 403 Forbidden error.
+
+If recent changes or malware have altered your **.htaccess** file, replace it with a clean version. If you’re using Hostinger, you can create a new .htaccess file through hPanel’s File Manager:
+
+1.   Go to **Files → File Manager** in your website dashboard.
+2.   Open the **public_html** directory and locate the **.htaccess** file.
+3.   Right-click the file and select **Download** to create a backup.
+
+1.   Delete the current **.htaccess** file.
+2.   Click **New file** and name it **.htaccess** without any extensions.
+
+1.   Paste the following default code and save the file:
+
+Plain text
+
+Copy to clipboard
+
+Open code in new window
+
+EnlighterJS 3 Syntax Highlighter
+
+# Enable URL Rewriting
+
+RewriteEngine On
+
+# Rewrite rule to redirect requests to index.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?/$1[L]
+
+# Enable URL Rewriting RewriteEngine On # Rewrite rule to redirect requests to index.php RewriteCond %{REQUEST_FILENAME} !-f RewriteCond %{REQUEST_FILENAME} !-d RewriteRule ^(.*)$ index.php?/$1 [L]
+
+# Enable URL Rewriting
+RewriteEngine On
+# Rewrite rule to redirect requests to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?/$1 [L]
+For WordPress websites, you can also regenerate the file without using File Manager:
+
+1.   Log in to your WordPress dashboard.
+2.   Go to **Settings → Permalinks**.
+3.   Hit **Save Changes** without modifying any settings.
+
+After restoring **.htaccess**, try accessing your site again. If the error disappears, the file was likely the cause.
+
+7. Reset file and directory permissions
+---------------------------------------
+
+File permissions control access to your website’s data. When a file is too restrictive, the server blocks access for security reasons, resulting in a 403 Forbidden error.
+
+If your file permissions are incorrect, you can easily reset them in just one click using Hostinger’s built-in **Fix File Ownership** tool:
+
+1.   In hPanel, search for **Fix File Ownership**.
+2.   Select the checkbox to confirm and hit **Execute**. The tool will automatically set default permissions for all website files and folders.
+
+Alternatively, you can reset file permissions manually using an FTP client like FileZilla:
+
+1.   Connect FileZilla to your website.
+2.   Right-click the **public_html** directory and select **File Attributes**.
+
+1.   In the **Numeric value** field, enter **755** for directories. This lets the owner read, write, and execute the file but prevents others from modifying it.
+
+1.   Select **Apply to directories only**, then hit **OK**.
+2.   For files, repeat the process, entering **644** for the **Numeric value** and selecting **Apply to files only**. This gives the owner read and write access, while others can only read.
+
+Once you’ve applied the correct permissions, revisit your site to confirm if the 403 error disappears.
+
+8. Edit File Ownership
+----------------------
+
+In Linux and VPS hosting environments, the ownership settings decide which users can modify or execute files. If ownership is incorrectly assigned, you may be denied access to certain resources, causing a 403 error.
+
+This fix is more technical, as it requires using SSH to connect to your server and running Linux commands. Follow these steps to check and adjust file ownership in Linux:
+
+1.   Connect to your server using an SSH client like PuTTY.
+2.   To check the ownership of a file, run:
+
+Plain text
+
+Copy to clipboard
+
+Open code in new window
+
+EnlighterJS 3 Syntax Highlighter
+
+ls -l [file name]
+
+ls -l [file name]
+
+ls -l [file name]
+The output will look like this:
+
+Plain text
+
+Copy to clipboard
+
+Open code in new window
+
+EnlighterJS 3 Syntax Highlighter
+
+-rwxrw-rw- 1[owner][group]22 Sep 22 10:00 filename.txt
+
+-rwxrw-rw- 1 [owner][group] 22 Sep 22 10:00 filename.txt
+
+-rwxrw-rw- 1 [owner][group] 22 Sep 22 10:00 filename.txt
+1.   **Owner** and **group** should match your hosting account’s username. If not, use the **chown** command to fix it:
+
+Plain text
+
+Copy to clipboard
+
+Open code in new window
+
+EnlighterJS 3 Syntax Highlighter
+
+chown [owner][:group][file name]
+
+chown [owner][:group] [file name]
+
+chown [owner][:group] [file name]
+For example, if your username is **John**, use:
+
+Plain text
+
+Copy to clipboard
+
+Open code in new window
+
+EnlighterJS 3 Syntax Highlighter
+
+chown John filename.txt
+
+chown John filename.txt
+
+chown John filename.txt
+9. Upload an index page
+-----------------------
+
+If your website lacks an index page, such as **index.html** or**index.php**, users may receive a 403 Forbidden error when trying to access it.
+
+This occurs because the web server expects an index page to load by default, and without one, the server blocks access.
+
+First, check if your homepage is named **index.html** or**index.php**. If not, rename it through your FTP client or file manager.
+
+If the index page is missing, create one. Here’s how:
+
+1.   Access your website’s directory.
+2.   Upload or create an **index.html** or **index.php** file inside the **public_html** directory.
+3.   After uploading, try visiting your website again to verify that it now loads the homepage correctly.
+
+If you’re still facing issues, we have two more troubleshooting steps involving domain-related configurations that you can try.
+
+10. Verify the A record
+-----------------------
+
+The A record is a type of Domain Name System (DNS) record that maps your domain to the correct IP address. If your domain’s A record points to the wrong IP, users may be denied access to your website. This leads to a 403 Forbidden response.
+
+If you host your website with Hostinger, first find your site’s IP address by going to **hPanel → Hosting Plan → Plan Details**.
+
+Then, check if your domain’s A record is pointed correctly by following these steps:
+
+1.   Navigate to **Advanced → DNS Zone Editor**.
+2.   Locate the A records by scanning the **Type** column.
+3.   Examine the IP addresses listed in the **Content** column.
+4.   If the A record doesn’t point to the correct IP address, click **Edit** to modify it, then click **Update**.
+
+Please note that editing the A record may affect the services or subdomains using it.
+
+If this doesn’t resolve the error or causes disruptions, consider creating a new A record instead:
+
+1.   In the same **DNS / Nameserver** page, scroll up to the **Manage DNS records** section.
+2.   Select **A** for the **Type**, then enter the correct IP address in the **Points to** field.
+3.   Click **Add Record** to create the new A record.
+
+11. Update nameservers
+----------------------
+
+When you change hosting providers, your domain’s DNS records need to be updated to point to the correct nameservers. If you skip this step, users will still be directed to your old host, which leads to access issues like the 403 Forbidden error.
+
+If you register your domain at Hostinger, here’s how to update your domain’s nameservers:
+
+1.   Go to **Domains → Domain portfolio → Manage** next to your domain.
+2.   Select **DNS / Nameservers → DNS records**.
+3.   Choose **Use Hostinger nameservers (recommended)** if your website is with Hostinger, or **Change nameservers** if you host your site elsewhere.
+4.   Fill in the correct nameserver details, then hit **Save**.
+
+### Learn how to fix the 403 Forbidden error with Hostinger Academy
+
+If you prefer a visual guide, watch our video to discover easy-to-follow solutions for fixing the 403 Forbidden error. We’ll show you step-by-step instructions on how to apply key troubleshooting methods, like adjusting file permissions and resolving issues with the **.htaccess** file.
+
+Subscribe For more educational videos!Hostinger Academy
+
+Key takeaways
+-------------
+
+Troubleshooting the 403 Forbidden error requires a systematic approach. Start with the simplest fixes and gradually progress to more complex solutions.
+
+*   **Clear your browser cache and cookies and switch off your VPN connection** to rule out local issues like outdated data or restricted access.
+*   **Perform malware scans and update plugins** to avoid conflicts and ensure that your site is secure.
+*   **Reset file permissions and restore your .htaccess file** to correct server-side issues that may be blocking access.
+*   **Verify your domain’s A record and nameservers** to ensure that your domain points to the correct IP address and has the right configuration for server communication.
+
+If the 403 problem persists, there are still some other methods worth trying:
+
+*   **Check for issues with hidden files or directories** that might be causing the error.
+*   **Inspect the server error logs** for detailed information about what might be causing the 403 error.
+*   **Contact your hosting provider’s support team** to help you diagnose and fix the error.
+
+**All of the tutorial content on this website is subject to Hostinger's rigorous editorial standards and values.**
+
+The author
+
+Ariffud Muhammad
+
+Ariffud is a Technical Content Writer with an educational background in Informatics. He has extensive expertise in Linux and VPS, authoring over 200 articles on server management and web development. Follow him on LinkedIn.
+
+The Co-author
+
+Jordana Alexandrea
+
+Jordana is a Senior Content Writer with a background in Information Systems. She has over five years of experience in WordPress and is casually dabbling with PHP and MySQL. Her passion for writing and technology drives her to create tutorials for anyone wanting to build their online presence. Follow her on LinkedIn.

@@ -1,0 +1,1130 @@
+Title: nyt-2020-election-scraper/battleground-state-changes.html at master · alex/nyt-2020-election-scraper
+
+URL Source: https://github.com/alex/nyt-2020-election-scraper/blob/master/battleground-state-changes.html
+
+Markdown Content:
+nyt-2020-election-scraper/battleground-state-changes.html at master · alex/nyt-2020-election-scraper · GitHub
+
+===============
+
+Skip to content
+Navigation Menu
+---------------
+
+Toggle navigation
+
+Sign in
+
+Appearance settings
+
+*    Platform 
+
+    *   GitHub Copilot Write better code with AI
+    *   GitHub Spark New Build and deploy intelligent apps
+    *   GitHub Models New Manage and compare prompts
+    *   GitHub Advanced Security Find and fix vulnerabilities
+    *   Actions Automate any workflow
+
+    *   Codespaces Instant dev environments
+    *   Issues Plan and track work
+    *   Code Review Manage code changes
+    *   Discussions Collaborate outside of code
+    *   Code Search Find more, search less
+
+Explore
+    *   Why GitHub
+    *   Documentation
+    *   GitHub Skills
+    *   Blog
+
+Integrations
+    *   GitHub Marketplace
+    *   MCP Registry
+
+View all features
+
+*    Solutions 
+
+By company size
+    *   Enterprises
+    *   Small and medium teams
+    *   Startups
+    *   Nonprofits
+
+By use case
+    *   App Modernization
+    *   DevSecOps
+    *   DevOps
+    *   CI/CD
+    *   View all use cases
+
+By industry
+    *   Healthcare
+    *   Financial services
+    *   Manufacturing
+    *   Government
+    *   View all industries
+
+View all solutions
+
+*    Resources 
+
+Topics
+    *   AI
+    *   DevOps
+    *   Security
+    *   Software Development
+    *   View all
+
+Explore
+    *   Learning Pathways
+    *   Events & Webinars
+    *   Ebooks & Whitepapers
+    *   Customer Stories
+    *   Partners
+    *   Executive Insights
+
+*    Open Source 
+
+    *   GitHub Sponsors Fund open source developers
+
+    *   The ReadME Project GitHub community articles
+
+Repositories
+    *   Topics
+    *   Trending
+    *   Collections
+
+*    Enterprise 
+
+    *   Enterprise platform AI-powered developer platform
+
+Available add-ons
+    *   GitHub Advanced Security Enterprise-grade security features
+    *   Copilot for business Enterprise-grade AI features
+    *   Premium Support Enterprise-grade 24/7 support
+
+*   Pricing
+
+Search or jump to...
+
+Search code, repositories, users, issues, pull requests...
+==========================================================
+
+ Search  
+
+Clear
+
+Search syntax tips
+
+Provide feedback
+================
+
+We read every piece of feedback, and take your input very seriously.
+
+- [x] Include my email address so I can be contacted 
+
+ Cancel  Submit feedback 
+
+Saved searches
+==============
+
+Use saved searches to filter your results more quickly
+------------------------------------------------------
+
+Name 
+
+Query 
+
+To see all available qualifiers, see our documentation.
+
+ Cancel  Create saved search 
+
+Sign in
+
+Sign up
+
+Appearance settings
+
+Resetting focus
+
+You signed in with another tab or window. Reload to refresh your session.You signed out in another tab or window. Reload to refresh your session.You switched accounts on another tab or window. Reload to refresh your session.Dismiss alert
+
+{{ message }}
+
+alex/**nyt-2020-election-scraper**Public
+
+*   Notifications You must be signed in to change notification settings
+*   Fork 292
+*   Star 1.8k 
+
+*   Code
+*   Issues 6
+*   Pull requests 5
+*   Actions
+*   Security### Uh oh!
+There was an error while loading.Please reload this page.    
+*   Insights
+
+Additional navigation options
+
+*   Code
+*   Issues
+*   Pull requests
+*   Actions
+*   Security
+*   Insights
+
+Collapse file tree
+------------------
+
+Files
+-----
+
+master
+
+Search this repository
+
+*         .github  
+*         flags  
+*       .gitignore  
+*       CONTRIBUTING.md  
+*       LICENSE  
+*       README.md  
+*       all-state-changes.csv  
+*       all-state-changes.html  
+*       all-state-changes.txt  
+*       all-state-changes.xml  
+*       battleground-state-changes.csv  
+*       battleground-state-changes.html  
+*       battleground-state-changes.html.tmpl  
+*       battleground-state-changes.txt  
+*       battleground-state-changes.xml  
+*       icon.png  
+*       notification-updates.json  
+*       print-battleground-state-changes  
+*       requirements.txt  
+*       results.json  
+
+Breadcrumbs
+-----------
+
+1.   nyt-2020-election-scraper
+
+/
+battleground-state-changes.html
+===============================
+
+Copy path
+
+Blame More file actions
+
+Blame More file actions
+
+Latest commit
+-------------
+
+Automated
+
+Regenerate battleground-state-changes.txt/html
+
+Jan 6, 2021
+
+ba249bc·Jan 6, 2021
+
+History
+-------
+
+History
+
+Open commit details
+
+15932 lines (12073 loc) · 623 KB
+
+Breadcrumbs
+-----------
+
+1.   nyt-2020-election-scraper
+
+/
+battleground-state-changes.html
+===============================
+
+Top
+
+File metadata and controls
+--------------------------
+
+*   Code 
+*   Blame 
+
+15932 lines (12073 loc) · 623 KB
+
+Raw
+
+Copy raw file
+
+Download raw file
+
+You must be signed in to make or propose changes
+
+More edit options
+
+Open symbols panel
+
+Edit and raw actions
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+13
+
+14
+
+15
+
+16
+
+17
+
+18
+
+19
+
+20
+
+21
+
+22
+
+23
+
+24
+
+25
+
+26
+
+27
+
+28
+
+29
+
+30
+
+31
+
+32
+
+33
+
+34
+
+35
+
+36
+
+37
+
+38
+
+39
+
+40
+
+41
+
+42
+
+43
+
+44
+
+45
+
+46
+
+47
+
+48
+
+49
+
+50
+
+51
+
+52
+
+53
+
+54
+
+55
+
+56
+
+57
+
+58
+
+59
+
+60
+
+61
+
+62
+
+63
+
+64
+
+65
+
+66
+
+67
+
+68
+
+69
+
+70
+
+71
+
+72
+
+73
+
+74
+
+75
+
+76
+
+77
+
+78
+
+79
+
+80
+
+81
+
+82
+
+83
+
+84
+
+85
+
+86
+
+87
+
+88
+
+89
+
+90
+
+91
+
+92
+
+93
+
+94
+
+95
+
+96
+
+97
+
+98
+
+99
+
+100
+
+101
+
+102
+
+103
+
+104
+
+105
+
+106
+
+107
+
+108
+
+109
+
+110
+
+111
+
+112
+
+113
+
+114
+
+115
+
+116
+
+117
+
+118
+
+119
+
+120
+
+121
+
+122
+
+123
+
+124
+
+125
+
+126
+
+127
+
+128
+
+129
+
+130
+
+131
+
+132
+
+133
+
+134
+
+135
+
+136
+
+137
+
+138
+
+139
+
+140
+
+141
+
+142
+
+143
+
+144
+
+145
+
+146
+
+147
+
+148
+
+149
+
+150
+
+151
+
+152
+
+15859
+
+15860
+
+15861
+
+15862
+
+15863
+
+15864
+
+15865
+
+15866
+
+15867
+
+15868
+
+15869
+
+15870
+
+15871
+
+15872
+
+15873
+
+15874
+
+15875
+
+15876
+
+15877
+
+15878
+
+15879
+
+15880
+
+15881
+
+15882
+
+15883
+
+15884
+
+15885
+
+15886
+
+15887
+
+15888
+
+15889
+
+15890
+
+15891
+
+15892
+
+15893
+
+15894
+
+15895
+
+15896
+
+15897
+
+15898
+
+15899
+
+15900
+
+15901
+
+15902
+
+15903
+
+15904
+
+15905
+
+15906
+
+15907
+
+15908
+
+15909
+
+15910
+
+15911
+
+15912
+
+15913
+
+15914
+
+15915
+
+15916
+
+15917
+
+15918
+
+15919
+
+15920
+
+15921
+
+15922
+
+15923
+
+15924
+
+15925
+
+15926
+
+15927
+
+15928
+
+15929
+
+15930
+
+15931
+
+15932
+
+<!-- Don't update me by hand, I'm generated by a program -->
+
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+<!-- Required meta tags -->
+
+<meta charset="utf-8">
+
+<meta name="twitter:card" content="summary" />
+
+<meta name="twitter:title" content="ANN Election Data" />
+
+<meta name="twitter:description" content="Battleground state changes, updated every five minutes using NYT data." />
+
+<meta name="twitter:url" content="https://alex.github.io/nyt-2020-election-scraper/battleground-state-changes.html" />
+
+<meta property="og:title" content="ANN Election Data" />
+
+<meta property="og:description" content="Battleground state changes, updated every five minutes using NYT data." />
+
+<meta property="og:image" content="https://avatars3.githubusercontent.com/u/772?s=400&u=7c00c7c8ac3691da556d7686e16ff08b797d4a38&v=4" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+<link rel="apple-touch-icon" href="icon.png">
+
+<meta name="apple-mobile-web-app-title" content="2020 Results">
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🗳️</text></svg>">
+
+<link rel="alternate" type="application/rss+xml" title="ANN Election Data RSS Feed" href="/nyt-2020-election-scraper/battleground-state-changes.xml" />
+
+<!-- Bootstrap CSS -->
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+
+ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+<style>
+
+ .table-responsive.table-responsive {
+
+ overflow-x: unset;
+
+ }
+
+ .timestamp {
+
+ min-width: 8rem;
+
+ }
+
+ .hurdle {
+
+ min-width: 15rem;
+
+ }
+
+ .table td, .table th {
+
+ padding: .25rem .5rem;
+
+ }
+
+ .table.shrunk tbody tr:not(.always-visible) {
+
+ display: none;
+
+ }
+
+ thead td {
+
+ background-color: #e9ecef;
+
+ line-height: 1.2rem;
+
+ }
+
+ thead .text-left {
+
+ font-weight: normal;
+
+ }
+
+ thead span.statename {
+
+ font-weight: bold;
+
+ /* If changing these, update "thead tr:nth-child(2) th" too */
+
+ font-size: 1.2rem;
+
+ line-height: 1.2rem;
+
+ }
+
+ thead tr:nth-child(1) td {
+
+ position: sticky;
+
+ top: -1px;
+
+ border-bottom: none;
+
+ }
+
+ thead tr:nth-child(2) th {
+
+ position: sticky;
+
+ /* Padding, first line, second line, padding */
+
+ top: calc(.25rem + 1.2rem + 1.2rem + .25rem);
+
+ border-right-width: 0;
+
+ border-left-width: 0;
+
+ border-top-width: 0;
+
+ }
+
+ thead tr:nth-child(2) th:first-child {
+
+ border-left-width: 1px;
+
+ }
+
+ thead tr:nth-child(2) th:last-child {
+
+ border-right-width: 1px;
+
+ }
+
+ tr {
+
+ /* Fixes position: sticky headers from covering rows when deep linked, by keeping the anchor away from the top */
+
+ scroll-margin-top: 130px;
+
+ }
+
+ .has-tip {
+
+ text-decoration: underline;
+
+ text-decoration-style: dotted;
+
+ }
+
+ .flag-bg {
+
+ background-position: fixed;
+
+ background-repeat: no-repeat;
+
+ background-size: auto 100%;
+
+ background-position: 100%;
+
+ }
+
+ .Biden{
+
+ background-color: #84C4EE
+
+ }
+
+ .Trump{
+
+ background-color: #ED98A9;
+
+ }
+
+ .numeric {
+
+ text-align: right;
+
+ }
+
+ @media (prefers-color-scheme: dark) {
+
+ body {
+
+ color: #ffffff;
+
+ background-color: #202020;
+
+ }
+
+ .table {
+
+ color: #dedad6;
+
+ background-color: #202020;
+
+ }
+
+ .table .thead-light th, .table .thead-light td {
+
+ background-color: #495057;
+
+ color: #e9ecef;
+
+ }
+
+ .table .thead-light th, .table td {
+
+ border-color: #211d19;
+
+ }
+
+ .Biden {
+
+ background-color: #05456F;
+
+ }
+
+ .Trump {
+
+ background-color: #6E192A;
+
+ }
+
+ }
+
+</style>
+
+<title>Election 2020 Results</title>
+
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.9.5/dayjs.min.js"
+
+ integrity="sha384-I8UysxWXKTbAFvVRecMrWcGRGR4RDZ7mOuoWjMA84MWM0OQ+4IriYjgc2+hHzEo8"
+
+ crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.9.5/plugin/utc.js"
+
+ integrity="sha384-PcsSBVvWDlTmn0uPlrBbd/cUxDra/qov78qWgB2Qh6TwCiXAyuJQerEmS4PoVaRQ"
+
+ crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.9.5/plugin/relativeTime.js"
+
+ integrity="sha384-Dy9nN0yYkuj/yhJJITfTyN7H84joqwvGkDsyXr+JavETPnhOzTe48kfPQEI1ee0Q"
+
+ crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.9.5/plugin/advancedFormat.js"
+
+ integrity="sha384-y6wn9TDoovj2ZC4/cCf+qm4Kxiha/hhqfOb/L5RThIKLYDrhcLLfTSPyyHLMM9kF"
+
+ crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.9.5/plugin/timezone.js"
+
+ integrity="sha384-ABtdoJNGKT1efF9sGomlK3/sBQIhkJb0H32JGT5/7DP8H5kKBMS5mwMLu0SExhQH"
+
+ crossorigin="anonymous"></script>
+
+ location.reload(true);
+
+ return;
+
+ }
+
+ if (shouldNotify && Notification.permission === "granted") {
+
+ const notification = new Notification(`New ballots were counted in: ${latestMetadata.states_updated.join(", ")}!`);
+
+ notification.onclick = function (event) {
+
+ // focus page
+
+ window.parent.focus();
+
+ // just in case, older browsers
+
+ window.focus();
+
+ // dismiss notification
+
+ event.target.close();
+
+ };
+
+ }
+
+ $('[data-toggle="tooltip"]').tooltip('hide')
+
+ const elementsToUpdate = [
+
+ ...Array.from(document.getElementsByTagName("table")),
+
+ document.getElementById("timestamps"),
+
+ ];
+
+ elementsToUpdate.forEach(oldElement => {
+
+ let newElement = latestContent.dom.getElementById(oldElement.id);
+
+ oldElement.parentNode.replaceChild(newElement, oldElement);
+
+ });
+
+ loadTooltips();
+
+ refreshFeature(shrinkTablesFeature);
+
+ return latestContent.metadata;
+
+ };
+
+ // do a test update
+
+ updateCheck(undefined, location.hash === '#notify');
+
+ location.hash = "";
+
+ const startLiveUpdates = async () => {
+
+ let currentMetadata = (await fetchLatestContent()).metadata;
+
+ console.log("current content", currentMetadata);
+
+ const nextCheck = () => {
+
+ return isDeveloperEnvironment() ? 5 * 1000 : 60 * 1000;
+
+ };
+
+ const runner = async () => {
+
+ if (!isFeatureEnabled(liveUpdatesFeature)) return;
+
+ try {
+
+ currentMetadata = await updateCheck(currentMetadata, false);
+
+ } catch (e) {
+
+ console.log("failed to check for updates", e);
+
+ }
+
+ setTimeout(runner, nextCheck());
+
+ };
+
+ setTimeout(runner, nextCheck());
+
+ };
+
+ const liveUpdatesFeature = 'live-updates';
+
+ feature(liveUpdatesFeature, '#live_update_button', false, button => {
+
+ button.html('Disable Live Updates');
+
+ if ('Notification' in window && Notification.permission !== 'granted') {
+
+ Notification.requestPermission();
+
+ }
+
+ startLiveUpdates();
+
+ }, button => {
+
+ button.html('Enable Live Updates');
+
+ });
+
+</script>
+
+</body>
+
+Footer
+------
+
+ © 2025 GitHub,Inc. 
+
+### Footer navigation
+
+*   Terms
+*   Privacy
+*   Security
+*   Status
+*   Community
+*   Docs
+*   Contact
+*    Manage cookies 
+*    Do not share my personal information 
+
+ You can’t perform that action at this time. 
+
+While the code is focused, press Alt+F1 for a menu of operations.

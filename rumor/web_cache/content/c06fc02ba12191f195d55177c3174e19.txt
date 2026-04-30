@@ -1,0 +1,415 @@
+Title: Sex differences in work-related accidents extracted from free text in Spanish using natural language processing
+
+URL Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12341284/
+
+Markdown Content:
+Abstract
+--------
+
+### Background
+
+Evidence from the global north shows that women and men significantly differ in work accidents and occupational disease rates. However, more data is needed for countries elsewhere.
+
+### Methods
+
+Using natural language processing (NLP), we extracted accident mechanisms from 350,000 admission reports from the largest occupational health provider in Chile. In addition, using the same technique, we normalize occupations written in free text, following the nomenclature from the International Labour Organization (ILO).
+
+### Results
+
+We found that in 57.3% of accidents, a man is affected, while in 42.7% is a woman. The most common occupation for men is operator, while for women, it is related to cleaning duties. The most common form of accident for women is falling from the same height while for men is contact with sharp objects. In this work, we demonstrate the power of NLP in the massive analysis of work-related accidents by reporting the use of large language models with human expert annotation to evaluate mechanisms extraction.
+
+### Conclusion
+
+By sharing our prompts and code, we aim to help other institutions and countries extract crucial information from free text to a controlled vocabulary of ILO. Future work includes the analysis of commuting accidents and occupational diseases.
+
+### Supplementary Information
+
+The online version contains supplementary material available at 10.1186/s12889-025-24130-z.
+
+**Keywords:** Occupational accidents, Mechanisms, Natural language processing, Sex-differences
+
+Introduction
+------------
+
+For decades, the relationship between health, working conditions and the quality of employment has been considered an unquestionable problem. The International Labour Organization (ILO) estimates that nearly three million workers die each year due to work-related accidents and diseases [1]. Work-related deaths account for 6.71 percent of all deaths worldwide. For this reason, it is a primary concern to ensure that all work activities are carried out without deteriorating people’s quality of life as they become a fundamental pillar for their development [2]. Our work emerges from the need for more sex-disaggregated data on the mechanisms of work-related accidents in Chile [3]. To do so, we employed Natural Language Processing (NLP), which can deal with large volumes of non-structured text, in particular, occupations and accident descriptions.
+
+Sex refers to a biological attribute related to genetic, biological, hormonal, and functional characteristics that enable sexual reproduction. Gender, on the other hand, corresponds to norms, rules, customs, practices, roles, characteristics, and opportunities through which biological differences are translated into socially constructed and unequally valued identities [4]. Both socially constructed gender differences and biological sex differences can significantly impact occupational health. For example, gender influences occupation distribution through societal expectations of roles for men and women in various industries, while biological factors may affect the size and strength of equipment or machinery [5]. Thus, a nuanced understanding of both gender and sex-based factors is crucial for developing equitable and effective occupational health strategies.
+
+Women have always worked, but they have often done so without receiving compensation or in informal jobs, which has historically rendered their labor invisible. This has resulted in a deficit of studies addressing the risks faced by female workers in their workplaces. Women have increasingly joined the labor force and paid employment in recent decades. However, much of the research on occupational health has focused on traditional jobs, mostly male-dominated [6], such as construction and manufacturing, rather than professions with a high proportion of female workers, like office jobs or care services [7]. This has led to less attention in terms of research and prevention of occupational risks.
+
+Approximately 20 years ago, a study was conducted to compare compensable occupational injuries and illnesses occurring in women and men across all major industry sectors and occupations in the USA, which found that female workers were at greater risk of specific injuries or illnesses than male workers in different sectors [8]. At a similar date, a study was conducted comparing work-related musculoskeletal disorders in workers of both sexes who performed the same tasks repetitively, with the result that the symptoms were mainly related to the length of time the person had been doing the job and not to their sex [9].
+
+Systematic reviews of studies more than ten years old revealed that employed women had more job insecurity, worse contractual working conditions, and poorer self-perceived physical and mental health than men. In contrast, male employees had a higher degree of physically demanding work, higher levels of effort-reward imbalance, higher job status, were more exposed to noise, and worked longer hours than women [10]. Recent reviews show that men and women may have different risks of injury and occupational disability, either for the same occupation or for different occupations, especially for some physical but also for chemical and biological exposures [11]. Most studies that analyzed psychological exposures found no differences in risk between men and women in different occupations [12]. More recently, Santoro et al. provided a narrative review on this matter using PubMed articles, finding sex and gender differences in occupational risks and hazards [13].
+
+The main objective of this work is first, normalize occupations (which are written in free text), and secondly, detect the mechanisms from the description of the accident, and in that way inform stakeholders about those differences that are hard to summarize because they are written in free text. The way to achieve this goal is by using NLP.
+
+Natural language processing, or NLP for shortness, is an area of artificial intelligence that deals with language communication between humans and machines [14, 15]. Using NLP for analyzing health-related data is an active area of research [16–18]. In particular, in occupational health, we find a 2023 systematic review by Ricketts et al. that summarizes different techniques, mainly machine learning, used in occurrence reports [19]. In terms of specific areas, examples are Ref. [20] that used rule-based and machine learning to analyze clinical visit notes of violence perpetrated by patients and clients in the US. Another example is the papers by Khairuddin et al. that provided a systematic review by extracting occupational injuries from reports published in Scopus, PubMed, and Science Direct. [21], while Ref. [22] worked on the detection of injury severity from the US Occupational Safety and Health Administration (OSHA). Specifically in the construction industry, Shayboun et al. provided a review on the use of machine learning [23], while Khan et al. measured correlations between accident types and activities using k-means clustering and keyword matching using OSHA database [24]. Also in this industry, Kumi et al. detected the type of accident, the type of facility, and the type of work in Korea using machine learning models [25].
+
+To the best of our knowledge, our paper is unique because it combines several attributes: a) works with real clinical notes to extract accident mechanisms instead of analyzing published literature; b) employs NLP methods for the Spanish language; c) it applies cutting-edge generative NLP instead of machine learning methods.
+
+This paper is organized as follows. First, we describe the source of the information, the methods used to group occupations and how we automatically extracted the mechanism of the accident. We then move to the Results Section, where the most common occupations seen in the dataset are described for women and men. After that, the most common mechanisms for the period analyzed are summarized and compared to a gold standard manually annotated by humans. We end with a discussion and conclusions.
+
+Methods
+-------
+
+### Data source
+
+The accident reports used in this project result from a collaboration between the University and the Chilean Safety Association (in Spanish, _Asociación Chilena de Seguridad_, ACHS), which is a non-profit insurance and health provider. ACHS accommodates over 2.6 million affiliated workers (51% of the contract workers in Chile) and over 73,000 affiliated employing entities nationwide. The stringent regulations under Law No. 16,744 mandate that all Chilean employing entities, regardless of their operational scale, must be affiliated with a Social Safety Administration agency. This agency is responsible for safeguarding against the risks of Occupational Accidents and Diseases. As one of three private administrative bodies, ACHS is tasked with formulating risk prevention programs. It also offers health coverage and compensation for occupational and commuting accidents as well as professional illnesses.
+
+The type of labor accidents can be of two types: work-related and commuting accidents. Work-related accidents happen at the workplace or as a result of work. Commuting accidents happen on the way to or from work with no stops in between (direct trips). When a patient arrives at one of their clinics, the admission staff writes a report detailing the accident. This report includes rich contextual data about what happened in the accident. After admission, a physician checks the patient and records the relevant clinical information for mnemotechnical and legal reasons. The medical and administrative board of every clinic decides a final coverage rating for each accident on the next business day, considering both reports (see Fig. S1 in the Supplementary Material).
+
+These reports are a combination of free text to describe the situation (in our case, we used a combination of the admission and medic’s records) and some numerical and categorical variables to characterize the worker. Within these accident reports, there is a crucial entity: the mechanism of the accident, which is the specific cause or action leading to the injury (e.g., a fall or a blow). The occupation is described as unstructured text, which, as discussed later, made the quantitative analysis of accidents very difficult. It is important to note that sex is registered as a binary attribute (female and male). In the discussion section, we comment on the difference between listing sex or gender in the Chilean context. The dataset under examination consists of several columns, which are briefly described here:
+
+*   accident_id: Accident’s identification number.
+
+*   event_type: This column represents the type of accident, being represented with one if it is an accident that occurred at the workplace or two if it is a commuting accident.
+
+*   patient_number: Patient’s identification number.
+
+*   sex: This column represents the binary sex, not gender identity. It is hard to know if, at the national level, it is something assumed by the person filling the form or if it is something the person declares.
+
+*   occupation: Initially recorded as free text, the occupations were later mapped to the International Standard Occupation Classification (ISCO), _Clasificación Internacional Uniforme de Ocupaciones_ in Spanish.
+
+*   creation_date: Date of accident report creation.
+
+*   admission_report: Worker’s description of what happened at the time of the accident.
+
+*   mechanism: This is a numerically generated categoric classification describing the cause of the accident.
+
+Our analysis covered a substantial dataset of 342,017 accidents recorded between January 1 st, 2022, and December 31, 2023. From them, 191,301 are men (55.9%), and 150,711 are women workers (44.1%). Thus, our study is retrospective and cross-sectional.
+
+A flowchart summarizing the next steps in the methodology, from data extraction to classification and sex-disaggregated analysis, is shown in Fig.1. The code for reproducing our analysis can be found in https://github.com/Work-Related-Accidents.
+
+#### Fig. 1.
+
+Flowchart summarizing the data processing and analysis steps
+
+### Normalization of occupations
+
+We aim to understand the most common accidents among males and females while comparing the occupations frequently associated with these incidents. A significant challenge arises from the occupation data, which is recorded in a non-standardized format as free text input fields. This approach resulted in 42,928 unique occupation entries within the dataset of 342,361 accidents, complicating the analysis due to the lack of consistency in occupation classification. The discussion section provides examples of how these occupations were grouped to address the variability in the absence of more detailed information.
+
+The International Standard Classification of Occupations (ISCO) is a tool generated by ILO “for organizing jobs into a series of clearly defined groups according to the tasks involved in each job” [26]. In Chile, the National Statistics Institute (INE for its acronym in Spanish) developed an adaptation of this classifier for the Chilean context.
+
+The ISCO-08-CL [27] is the standard used for analyzing occupations, intending to capture changes in our market and to compare with internationally measured variables. The structure of the classifier, as shown in Table 1, is divided into four hierarchical levels, where each of them is represented by a code of a certain number of digits: large group (one digit), main subgroup (two digits), subgroup (three digits), and primary group (four digits).
+
+#### Table 1.
+
+Structure of ISCO hierarchical classification for occupations
+
+| Large group | Main subgroup | Subgroup | Primary group |
+| --- | --- | --- | --- |
+| Large Group 1 | Main Subgroup 1.1 | Subgroup 1.1.1 | Primary Group 1.1.1.1 |
+| Primary Group 1.1.1.2 |
+| Primary Group 1.1.1.3 |
+| Subgroup 1.1.2 | Primary Group 1.1.2.1 |
+| Primary Group 1.1.2.2 |
+| Main Subgroup 1.2 | Subgroup 1.2.1 | Primary Group 1.2.1.1 |
+| Primary Group 1.2.1.2 |
+| ... | ... | ... | ... |
+
+ISCO-08-CL’s main subgroups and subgroups from the ILO were used due to their specificity in capturing the characteristics of occupations, providing a structured framework that organizes the analysis of occupational differences in safety and risk exposure. To achieve this, OpenAI Large Language Models (LLMs) were utilized through Openai’s Application Programming Interface (API) with the default temperature setting of 1 with possible values ranging from 0 to 2. The models were provided with plain text descriptions of occupations along with the corresponding categories and codes for classification.
+
+Due to the inherent nature of the data, the classification mechanism was addressed at two levels, with a distinct chat generated to classify each occupation in both instances.
+
+1.   
+For the classification of occupations by main subgroups, the GPT-4o-mini model was employed. In this case, the prompt used was the following:
+
+    *   “role”: “system”, “content”: “You will receive some occupation titles from the user. Your task is to classify them according to the International Labour Organization occupational classification system. For instance, Professor, Teacher, and Preschool Teacher should be categorized under the same class. Do not assign occupations into managerial classes unless the occupation title explicitly states so, like ’Company manager’. Your answer should consist of only the number of the class; for example, the occupation ’doctor’ should be answered with only ‘22’.”
+
+    *   “role”: “system”, “content”: “{list_oit_main_subgroups}”
+
+    *   “role”: “user”, “content”: “What is the classification of the occupation {occupation}?”
+
+2.   
+Subsequently, given the predominance of occupational accidents in class 93 “Mining, construction, manufacturing, and transportation laborers”, this analysis employs the GPT-4o model to explore the classifications more deeply to segment by industry, thereby achieving a higher level of insight. In this case, the system and user directives for the model correspond to the following:
+
+    *   “role”: “system”, “content”: “You will receive some occupation titles from the user and a table for the International Labour Organization (ILO) occupational classification system. Your task is to classify the occupations into one of the ILO’s classes. For instance, Operator, Production Operator, and Operations Assistant should be under the same class. It is important that you reply only with the class number. Provide the most probable class; for example, for ’dam cleaning’, answer with ‘933’.”
+
+    *   “role”: “system”, “content”: “code;description 931;Mining and construction laborers 932;Manual packers and manufacturing laborers 933;Transport and storage laborers”
+
+    *   “role”: “user”, “content”: “What is the classification of the occupation {occupation}?”
+
+### Automatic detection of the mechanism in the free text
+
+Within the text describing the accident, is it possible to identify and assign a code to the mechanism that captures how the accident happened. Mechanism categories are structured following a hierarchical order, from a general category or group to a more specific one, which ends up linked to a code and becomes the official coding of the accident. As Table 2 explains, there are in total three levels: level one is composed of five groups, level two is composed of 17 subgroups, and level three is composed of 60 categories.
+
+#### Table 2.
+
+Example of the hierarchical nature of the coding using the ILO ontology for accident mechanism
+
+| Level 1 | Level 2 | Level 3 |
+| --- | --- | --- |
+| Group 1 | Subgroup 1.1 | Category 1.1.1 |
+| Category 1.1.2 |
+| Category 1.1.3 |
+| Subgroup 1.2 | Category 1.2.1 |
+| Category 1.2.2 |
+| ... | ... | ... |
+
+One way to automate the task of coding accident mechanisms is through the use of a LLMs, which are advanced AI models trained on vast amounts of text data, enabling them to understand and generate human-like language. They work by analyzing input text and predicting the next word or phrase based on the context. This ability makes LLMs highly versatile and helpful for a variety of tasks, including text classification, summarization, and even automating processes such as assigning codes to accident mechanisms. By using the power of LLMs, it becomes possible to streamline and standardize complex tasks that typically require human expertise, such as interpreting accident reports and suggesting appropriate code.
+
+This process migrated to an automatized flow using GPT through Openai’s API, which allows you to interact with the LLM and do the task with Python code and not on the web user interface. ChatCompletion method was used, which receives a request as input, along with other parameters, and returns an answer. We mainly adjusted the engine, temperature, and prompt. Bellow detailed some of the adjustments of these parameters:
+
+*   “GPT-3.5-turbo” was used as the engine of the requests.
+
+*   Temperature parameter was set to 0. This parameter can have values from 0 to 1 and represents the level of creativity of the response, where 0 is the most conservative level. We took this decision based on the context of the work done because it involves work accidents, which require the highest objectivity possible.
+
+*   The prompt was adjusted to ensure better results when making the requests. First, it included the dimension “system,” which allows you to give context to the request, and second, the “user” dimension, which represents the message of the request itself. We wanted to ensure conciseness and the cleanest answer text to reduce the post-processing process.
+
+Due to token capacity issues and API usage limitations, and following the hierarchical nature of the category levels, the flow was resolved in three stages:
+
+1.   
+First level 2 is classified. In this case, “system” is defined as the indication to classify texts of work-related accidents, and “user” incorporates the list of subgroups from level 2 and the input text corresponding to the admission report and anamnesis. The admission report is prioritized, but the second is used to ensure a minimum degree of completeness of the information, if necessary. In this case, the message has the following structure (translated from Spanish):
+
+    *   “role”: “system”, “content”: “You are going to classify texts of work-related accidents.”
+
+    *   “role”: “user”, “content”: “In which of the following categories {list_subgroups_level_2}; would you classify the text: {input_text}. Just return one of the labels I gave you, without final point and no additional comments.”
+
+2.   
+In second place, level 3 is classified, corresponding to the final category. The same “system” indication is given to classify text of work-related accidents, also adding the subgroup obtained in the previous iteration. “user” has the same format as previously, but in this case, is given a list of categories that belongs to the subgroup of level two already determined, and the exact input text as in the previous iteration (admission report and anamnesis). In this case, the message has the following structure (translated from Spanish):
+
+    *   “role”: “system”, “content”: “You are going to classify texts of work-related accidents which belongs to category {subgroup_level_2}.”
+
+    *   “role”: “user”, “content”: “In which of the following categories {list_categories_level_3} would you classify the text: {input_text}. Just return one of the labels I gave you without a final point and no additional comments.”
+
+3.   Finally, there is a generic code for level three of each subgroup of level two. If the model does not find any category within it, an “other” code is assigned. In addition, if the model fails to determine the subgroup of level two, and therefore neither level three, there is a global category “others”, which represents “the accident cannot be classified.”
+
+Following is an example of an accident’s admission report (translated from Spanish): “At the time of the accident, I was installing optical fiber in a house. The ladder I was on moved; I lost my balance and fell, hitting my left arm.” In this case, according to GPT processing flow shown previously, it was first determined that it corresponds to the subgroup “falls” of level 2 within the list of 17 options. In the next step, level 3 was classified within the subset of categories belonging to “falls” which are: “Falls from heights greater than or equal to 1.8 meters”, “Falls from heights less than 1.8 meters”, “Falls to a depth” and “Falls in the same level”. It was determined that it corresponds to “Fall from heights greater than or equal to 1.8 meters,” whose associated code is 11.1; therefore, the final coding of the accident is 11.1.
+
+Results
+-------
+
+Figures 2 and 3 show the most common occupations in the accident dataset. For both women and men, the categories correspond to typical sex roles reflected in occupations. For example, for women, we can observe categories corresponding to cleaning jobs, teaching, nursing, sales, and administrative work, among others. Meanwhile, for men, we have machine operators, security guards, and construction workers, among others. Interestingly, cleaning duties concentrate the most significant amount for female workers. This could be the tip of the iceberg since it is very prevalent in Chile that women work as cleaners without a contract [28]. Therefore, this number could be much higher when considering women working without formal contracts or in unpaid situations.
+
+### Fig. 2.
+
+Distribution of the top 10 most common occupations for female workers, classified according to the International Labour Organization (ILO) standard. Each bar represents the total count of accidents recorded for that occupational category within the study period
+
+### Fig. 3.
+
+Distribution of the top 10 most common occupations for male workers, classified according to the International Labour Organization (ILO) standard. Each bar shows the total count of accidents for each occupational category recorded for male workers
+
+Regarding the most common mechanisms disaggregated by sex Fig. 4, it shows that for female workers, falling from the same level is the most common accident while for males, is contact with sharp objects, closely followed by falls. It is worth noting that men represent 57% of the cases in the dataset. However, when analyzing falls, we find that in 39,000 cases, it is a woman falling, while in 25,000, it is a man.
+
+### Fig. 4.
+
+Frequency of the most common accident mechanisms, disaggregated by sex. The bars show the total count of accidents for each mechanism, with separate colors for female (purple) and male (orange) workers
+
+Given the differing representation of each sex across occupational categories and accident mechanisms, we conducted a separate analysis focusing on the occupations with the highest prevalence of male and female workers, respectively.
+
+We performed a manual identification process to select the most prevalent occupations. For women, we selected occupations within the category of care duties, which female workers predominantly hold [29]. We found that the most common mechanisms were falls, consistent with the general results, followed by blows/impacts, contact with sharp objects, accidents involving vehicles, and other forms of accidents (for more details, see Supplementary Material).
+
+For men, we selected occupations with the highest number of accidents, most associated with manual and machinery-based occupations. As shown in Supplementary Material, the most common mechanisms in this group were contact with sharp objects, falls, blows/impacts, accidents involving vehicles, and entrapments.
+
+To analyze the relationship between the variables of sex and the mechanism of accidents globally, we performed a chi-square test. Figure 5 reveals a statistically significant association with a p-value of 0.0001, indicating a strong dependency between these two attributes. These results are in line with systematic reviews on the sex differences of work-related accidents [13, 19]. As shown in Fig. 5, the analysis of the standardized residuals highlights the most over- and under-represented combinations:
+
+*   Among females, the most over-represented mechanism was falls (residual: +39.0), followed by contact with extreme heat or cold (residual: +8.4).
+
+*   Among males, the most over-represented mechanism was contact with sharp objects (residual: +24.9), followed by particle projection (residual: +17.4).
+
+### Fig. 5.
+
+Standard residuals of chi-square analysis over sex and mechanism
+
+Discussion
+----------
+
+In this section, we will discuss in more detail some situations we encountered while working on the project.
+
+### Human evaluation of mechanisms detection
+
+It is known that models make mistakes. To measure the performance of the model to detect mechanisms, a subset of 1,103 documents were labeled by humans. This subset of cases was not chosen randomly but through a careful sampling strategy designed to ensure a robust and fair evaluation of the model’s capabilities. The selection criteria were as follows:
+
+*   Temporal Stratification: To avoid seasonal bias (e.g., a higher prevalence of certain types of accidents during specific times of the year), we sampled a balanced number of reports from each month within the study period.
+
+*   Complexity Stratification: To prevent the F1-score from being overestimated by testing on predominantly simple cases, we stratified the sample by the length of the free-text description. We ensured that the subset included a representative mix of short, medium, and long texts, thus challenging the model with varying levels of detail and complexity.
+
+The classes shown correspond to level 1 presented in Table 2. This process involved the creation of annotation guidelines and a rigorous annotation process for accident mechanisms. One annotator labeled 612 documents, another labeled 365, and the remaining 126 documents were labeled by both and then underwent a curation process. A confusion matrix of the model’s prediction and human labels (our gold standard) can be found in the Supplementary Material.
+
+The model achieved a weighted F1-score of 0.62 for the level 2 classes of the ILO ontology. To calculate these metrics the results of the model were compared to the ground-truth created using human annotators trained especially for this task. It should be emphasized that our goal was to measure the LLMs performance on a dataset that mirrors the natural, real-world distribution of incoming accident reports, including its inherent class imbalances. Creating a balanced sample of rare and common accident types would have tested the model in an artificial environment and might not reflect its true performance in a production setting. By testing on a representative sample, the reported F1-score of 0.62 provides a more realistic estimate of the model’s effectiveness and the inherent difficulty of the task when applied to the data as it naturally occurs.
+
+### Mechanisms of accidents
+
+Many of the observed discrepancies between the model and human evaluation can be logically explained through semantic overlaps. For instance, 22 accidents classified as “excessive force” were labeled as “overexertion” by the model. This reflects a nuanced understanding, as both classes involve the exertion of force, though in distinct contexts: “excessive force” pertains to accidents from consistently high exertion during work hours, while “overexertion” refers to immediate accidents due to sudden force misapplication. Similarly, 25 documents labeled as “explosions or fires” were classified as “contact with extreme heat/cold,” a reasonable misclassification given that fire-related incidents often involve extreme heat exposure.
+
+Nevertheless, the model exhibited some misclassifications that are less straightforward. For example, the class “steps” was sometimes confused with “falls,” “animal attacks” were misclassified as other accident types, and “projection of particles” was confused with “contact with sharp objects” and “contact with substances.” These instances suggest that further refinement of the class descriptions in the prompt could enhance differentiation. Improving the clarity and specificity of these descriptions would likely lead to even greater accuracy, underscoring the model’s robust potential in this classification task. Overall, “GPT-3.5-turbo” shows substantial promise in categorizing accident mechanisms, but it needs to be evaluated by humans periodically as well as checking new versions of this model and others that will become available.
+
+Beyond the model’s performance, our substantive findings reveal important patterns in accident mechanisms. A particularly striking result is the higher number of same-level falls among women, accounting for 59% percent of all such accidents (Fig. 4), even though men account for a larger share of total accidents in our dataset, and national statistics indicates that in general men suffer more accidents than women [30]. This finding resonates with studies from other regions, such as Refs. [8] and [11], which report that women and men often face different types and risks of injury. While men may experience more accidents overall, often linked to the physically demanding nature of their jobs, as noted by [10], women appear to be at a higher risk for specific accidents like falls. This could be attributed to environmental factors common in female-dominated occupations, such as wet floors in cleaning or the fast-paced nature of service and care jobs, which warrants further investigation.
+
+When analyzing the occupations with the highest prevalence of fall-related accidents, we observe that they are led by cleaning assistants and domestic workers, education professionals, manual packers, and manufacturing industry laborers.
+
+An inferential statistical analysis was performed on individual accident records to examine the associations between sex, occupation, and the incidence of falls. The results revealed a statistically significant association between sex and the accident mechanism (, ), with a moderate effect size (Cramér’s ), indicating that the distribution of accident types varies by sex. Additionally, a significant relationship was observed between occupation and the occurrence of falls (, ), highlighting that certain occupational groups exhibit a higher prevalence of fall accidents. Furthermore, comparative analysis of fall proportions by sex demonstrated a significantly greater concentration of falls among females (, ), underscoring the importance of integrating a sex-sensitive approach in occupational risk prevention strategies.
+
+### Similar occupations
+
+We realized how difficult it is to work with datasets where information that should belong to a category, in this case occupation, was registered as free text. We proceed to highlight some of the occupations we had to make assumptions and agreements:
+
+*   _Operario vs. operador:_ In the dataset, we often found the words _operario_ (that can be translated as “operator”) and _operador_, which, according to the portal Linguee, is also translated to English as operator. For these two categories, we decided to group them since we needed more information about the occupation to find out if there was a different level of competency. In fact, as stated earlier, the ISCO-08-CL distinguishes job, occupation and competency. But since we were not sure if the person who registered the information had in mind the competence at the moment to decide between _operario_ and _operador_, we prefer to group them. Future work includes interviewing people who work at the registration of work-related accidents to ask how they decide what to write in their occupation.
+
+*   _Docente vs. profesor:_ Similarly, _docente_ and _profesor_ can be mapped to “teacher.” Of course, there are variations of teaching depending on the student’s academic level, and in English, we recognize jobs such as tutor, lecturer or professor. When checking with our counterparts in ACHS about the teacher specification, we got the answer that probably the variation observed in the dataset is a result of registering with free text and not a difference in competencies. As said before, we would like to understand better how the variable occupation is filled during the admission process in future work.
+
+### Using word embeddings to map occupations to an ontology
+
+To classify more than 42,000 occupations written in free text, we initially employed word embeddings, which assign a vector to each word in the vocabulary [14]. Subsequently, the cosine similarity algorithm serves as a mathematical criterion, quantifying the affinity between each occupation’s vector and the standardized classifications. When compared to a gold standard made by humans, this method showed worse results than the one finally presented here, namely GPT-4o-mini.
+
+We include this part of the discussion to highlight the irruption of generative LLMs that can be instructed to do complex tasks. It has profoundly changed the way NLP is done, but as we mentioned before, it is not perfect. It requires human evaluation, and the professionals behind the solution evaluate alternatives now and then. In addition, it is particularly promising the emergence of open-code models, such as Llama-3 or Mistral.
+
+### Sex vs. gender
+
+The dataset had a column called “sex”, registering in a binary way for male and female, and according to our investigation, it is not asked but instead assumed from the worker’s look. Suggestions from this work include asking for gender identity and allowing the option “non-binary.” Nevertheless, it is essential to note that ACHS has recently added gender but has to report the accidents to an association called the Superintendency of Social Safety (SUSESO in Spanish), which collects information from every occupational health provider. Therefore, to introduce a change in the way gender is asked, the SUSESO needs to update it, and an agreement must be reached among all the health providers.
+
+One of the main limitations of this database is the disaggregation only by sex and the impossibility of accessing information beyond binarism that could be relevant to the understanding of occupational accidents. The accounting systems must provide the possibility of self-reporting both sex and gender and not assume this information due to the biases that could be generated, but above all, to avoid the damage generated to people.
+
+In Chile, progress in the differentiation between sex at birth and gender in national statistics has been promoted by the National Statistics Institute (INE). INE increasingly uses this differentiation in its surveys because it allows measuring some gaps not captured by the sex declared at birth. This occurs especially in practices affected by the socialization of sex, which impacts cultural, economic, and social phenomena [31]. In the case of the labor market, it is important because some discriminations and gaps become even more visible in the consideration of gender, for example, in the participation of women in paid and unpaid domestic work. It also becomes fundamental to advance towards measuring and considering minoritized groups of the population that generally have not been considered through public policies, such as people who are not considered within the male-female binomial.
+
+### Mostly female and male occupations
+
+While women’s participation in various economic activities has undergone significant changes over the past five years [32], our findings reveal the persistent reproduction of gender roles in the labor market. In particular, there is a high concentration of women in care-related occupations, such as domestic work, cleaning, education, and childcare. In the data provided by the ACHS, 11% of the accidents registered were in care occupations. Of this percentage, 84% of the workers were women. Taking into account that we are only analyzing paid occupations and that approximately 46.7% of inactive women in middle-income countries identify themselves as working in an unpaid care occupation [33], the importance of this analysis lies in the fact that by studying what happens in this group of occupations more precisely, we could come closer to understanding problems affecting women not in the paid labor force. This significant concentration of women in care roles, both paid and, by extension, unpaid, is a critical component of the gendered division of labor that impacts occupational health, a theme explored in broader terms by systematic reviews like [10] and [13], which link these roles to different health outcomes and exposures compared to male-dominated professions.
+
+In contrast, as shown in Fig. 4, male participation is primarily concentrated in occupations such as vehicle drivers and operators of heavy mobile equipment; manual packers and manufacturing laborers; metal workers, machine tool operators, and vehicle mechanics; agricultural, fishery, and forestry laborers; and fixed installation and machine operators. The data analyzed indicate that men experience a higher proportion of occupational accidents: while women account for 44.1% of the cases recorded in our dataset, men represent 55.9%. National data support this trend [32], which confirms a consistently higher relative risk of occupational accidents among men throughout the analyzed period (2019–2023).
+
+These findings underscore the importance of disaggregating occupational accident data by sex when analyzing work-related accidents. Such disaggregation could provide valuable input for developing more targeted prevention strategies that respond to the specific needs of both men and women in the workplace, ultimately making these differentiated measures more effective for everyone.
+
+### Workers without contracts
+
+As we mentioned earlier, ACHS mainly receives people with employment contracts. However, less than 2% of their affiliates are independent workers. It is known that women in Chile have more precarious jobs, which can be easily translated into the absence of employment contracts [3]. This means they are outside the application of labor laws and therefore, at low wages, exposed to job insecurity and without social benefits such as pension, sick leave, or health insurance [34]. According to national statistics, 3 out of 10 employed women work informally, with a gap of 1.9 percentage points concerning men [28]. This is an important limitation of the database we are analyzing since we are not considering women who work more precariously and are ultimately exposed to occupational accidents without adequate benefits.
+
+Conclusion
+----------
+
+It this work we leveraged information about work-related accidents with a sex perspective for Chile. This is especially needed in areas of the world with less information, such as the Global South. Leveraging these statistics often has the extra challenge of the format in which the data is recorded, namely, in free text that could not even be in a digitalized form in some scenarios. The methodology proposed here tackles the normalization of the occupation and the accident’s mechanism from free text in Spanish to the ontology provided by the ILO. By detailing our methodology, we aim to help other institutions and countries to do a similar analysis and, in that way, fill the gap of gender-disaggregated information on occupational health. We believe that normalized occupations and coded mechanisms is of vital importance to decision makers since it saves valuable human time to create nationwide statistics.
+
+Throughout this study, we have highlighted the importance of analyzing sex-based differences in occupational accidents. By quantitatively analyzing the distribution of men and women across occupations and the specific mechanisms of workplace accidents, we found consistent patterns reflecting the gendered labor organization in Chile. The unequal distribution of men and women across different occupations helps explain the nature of the accidents each group is exposed daily. Men are predominantly employed in construction, transportation, and machinery operations, exposing them to mechanisms such as contact with sharp objects, falls, impacts, and vehicle-related accidents. In contrast, women primarily concentrate on care-related occupations, particularly cleaning services, education, healthcare, and administrative roles. These jobs tend to involve risks such as falls, blows or impacts, contact with sharp objects, and threats or assaults by people.
+
+It is important to note that falls are significantly more common among women than men. This may be related to the constant movement required in cleaning tasks, which increases the likelihood of slips or trips. The most frequent mechanism for men is contact with sharp objects, which is closely associated with construction-related tasks where men are heavily overrepresented. We also highlight the “threats or assaults by people” category, which affects both men and women, but to a greater extent among women. These incidents may occur in their workplaces or while commuting to or from work. This finding reflects a broader pattern in Chilean society, where women report higher levels of victimization compared to men [35], which is echoed in our analysis.
+
+These findings carry practical significance. The sex-differentiated analysis presented in this study can contribute to the development of public policies aimed at reducing workplace accidents by placing greater emphasis on the specific needs of each group. Our analysis shows that men and women differ significantly in occupational concentration and the mechanisms of injury they are most exposed to. This approach can help direct targeted efforts toward more efficient and effective prevention campaigns that address the distinct realities men and women face in their workplaces and during their commutes to and from work.
+
+Some of the limitations of our work is that we have a sample of accidents provided by ACHS, which is 51% percent of the Chilean population. Some industries, such as construction, could be underrepresented in this sample since these workers tend to be in another association. In addition, we have the problem of the record of sex and not gender, which is not optimal. Finally, as previously noted, this dataset only covers paid employment.
+
+Future work includes the use of different large language models with particular emphasis on open-source. In addition, we want to present these results to stakeholders and complement prevention actions with a sex perspective. Finally, we plan to extend this analysis to occupational diseases.
+
+Supplementary Information
+-------------------------
+
+Acknowledgements
+----------------
+
+We are highly grateful for the collaboration with Chilean Sadety Association (ACHS) and the access to the data. In particular, we thank Sebastián Viteri for being a counterpart in ACHS. We also thank Caua Santiago-Paz for participating in early work and discussions. We are grateful for the work of Sofia Correa, Alan Rubio, and Gabriela Berrios for annotating mechanisms of accidents for human evaluation. Finally, we are thankful for the work of Pamela Bacho and Paula Silva in producing the videos that explain this work.
+
+### Clinical trial number
+
+Not applicable.
+
+Abbreviations
+-------------
+
+NLP
+Natural Language Processing
+
+ACHS
+Chilean Safety Association
+
+ISCO
+International Standard Occupation Classification)
+
+LLM
+Large Language Model
+
+API
+Application Programming Interface
+
+INE
+National Statistics Institute
+
+SUSESO
+Superintendency of Social Safety
+
+Authors' contributions
+----------------------
+
+J.D., V.R. and D.M. conceptualized the study. J.D., V.R. and D.M. guided the methodology. R.L.G., V.C., L.M. and P.P perform the analysis and investigation. J.D. wrote the first draft of the manuscript. J.D. and V.R. secured funding. All authors reviewed and edited the manuscript.
+
+Funding
+-------
+
+We thank the support of the A+ Alliance through its funding Feminist AI Research Network f<A+I>r. We also acknowledge the support from _Agencia Nacional de Investigación y Desarrollo_ (ANID) for the Millennium Science Initiative Program ICN17_002 (IMFD) and Fondecyt Regular 1241825 (JD).
+
+Data availability
+-----------------
+
+The data used for the study cannot be shared. The code is shared within this publication: https://github.com/Work-Related-Accidents.
+
+Declarations
+------------
+
+### Ethics approval and consent to participate
+
+The consent to participate was waived by the Institutional Review Board at the Pontificia Universidad Católica de Chile. This study has the ethics approval from the same institution (reference number 230603001).
+
+### Consent for publication
+
+Not applicable.
+
+### Competing interests
+
+The authors declare no competing interests.
+
+Footnotes
+---------
+
+**Publisher's Note**
+
+Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+Valentina Campaña-Herrera, Luis Miranda and Rocío Ladrón de Guevara contributed equally to this work.
+
+References
+----------
+
+*   1.International Standard Classification of Occupations. A call for safer and healthier working environments. International Standard Classification of Occupations. 2023. Technical Report.
+*   2.World Health Organization. Occupational health; 1978. Technical Report.
+*   3.Criado Perez C. Invisible women: Data bias in a world designed for men. New York: Abrams; 2019. [Google Scholar]
+*   4.Krieger N. Genders, sexes, and health: what are the connections–and why does it matter? Int J Epidemiol. 2003;32(4):652–7.  [DOI] [PubMed] [Google Scholar]
+*   5.Kennedy SM, Koehoorn M. Exposure assessment in epidemiology: does gender matter? Am J Ind Med. 2003;44(6):576–83.  [DOI] [PubMed] [Google Scholar]
+*   6.Schlünssen V, Jones RM. Gender aspects in occupational exposure and health studies. Ann Work Expo Health. 2023. 10.1093/annweh/wxad063.  [DOI] [PubMed] [Google Scholar]
+*   7.Messing K, Stellman JM. Sex, gender and women’s occupational health: the importance of considering mechanism. Environ Res. 2006;101(2):149–62.  [DOI] [PubMed] [Google Scholar]
+*   8.Islam SS, Velilla AM, Doyle EJ, Ducatman AM. Gender differences in work-related injury/illness: analysis of workers compensation claims. Am J Ind Med. 2001;39(1):84–91.  [DOI] [PubMed] [Google Scholar]
+*   9.Coury HJCG, Porcatti IA, Alem ME, Oishi J. Influence of gender on work-related musculoskeletal disorders in repetitive tasks. Int J Ind Ergon. 2002;29(1):33–9. [Google Scholar]
+*   10.Campos-Serna J, Ronda-Pérez E, Artazcoz L, Moen BE, Benavides FG. Gender inequalities in occupational health related to the unequal distribution of working and employment conditions: a systematic review. Int J Equity Health. 2013;12(1):1–18.  [DOI] [PMC free article] [PubMed] [Google Scholar]
+*   11.Romero-Serrano R, Arnaiz C, Torres-Enamorado D, Lancharro-Tavero I, Arroyo-Rodríguez A. Occupational Health Injuries and Illnesses Among Women Workers in the Chemical Industry: A Scoping Review. Work Health Saf. 2025;73(6):286–99. [DOI] [PubMed] [Google Scholar]
+*   12.Biswas A, Harbin S, Irvin E, Johnston H, Begum M, Tiong M, et al. Differences between men and women in their risk of work injury and disability: a systematic review. Am J Ind Med. 2022;65(7):576–88.  [DOI] [PMC free article] [PubMed] [Google Scholar]
+*   13.Santoro PE, Borrelli I, Gualano MR, Amantea C, Tumminello A, Daniele A, et al. Occupational hazards and gender differences: a narrative review. J Sex Gend Specif Med. 2022;8(3):154–62. [Google Scholar]
+*   14.Jurafsky D, Martin J. Speech and Language Processing. New Yersey: Prentice Hall; 2023. [Google Scholar]
+*   15.Clay B, Bergman HI, Salim S, Pergola G, Shalhoub J, Davies AH. Natural language processing techniques applied to the electronic health record in clinical research and practice-an introduction to methodologies. Comput Biol Med. 2025;188: 109808.  [DOI] [PubMed] [Google Scholar]
+*   16.Dalianis H. Clinical Text Mining: Secondary Use of Electronic Patient Records. Dalianis H, editor. Berlin: Springer International Publishing; 2018.
+*   17.Li I, Pan J, Goldwasser J, Verma N, Wong WP, Nuzumlalı MY, et al. Neural natural language processing for unstructured data in electronic health records: a review. Comput Sci Rev. 2022;46:100511. [Google Scholar]
+*   18.Zhang X, Wang Y, Jiang Y, Pacella CB, Zhang W. Integrating structured and unstructured data for predicting emergency severity: an association and predictive study using transformer-based natural language processing models. BMC Med Inform Decis Mak. 2024;24(1):1–13.  [DOI] [PMC free article] [PubMed] [Google Scholar]
+*   19.Ricketts J, Barry D, Guo W, Pelham J. A scoping literature review of natural language processing application to safety occurrence reports. Safety. 2023;9(2):22. [Google Scholar]
+*   20.Byon HD, Harris C, Crandall M, Song J, Topaz M. Identifying Type II workplace violence from clinical notes using natural language processing. Work Health Saf. 2023;71(10):484–90. [DOI] [PubMed] [Google Scholar]
+*   21.Khairuddin MZF, Hasikin K, Abd Razak NA, Lai KW, Osman MZ, Aslan MF, et al. Predicting occupational injury causal factors using text-based analytics: a systematic review. Front Public Health. 2022;10:984099.  [DOI] [PMC free article] [PubMed] [Google Scholar]
+*   22.Khairuddin MZF, Sankaranarayanan S, Hasikin K, Abd Razak NA, Omar R. Contextualizing injury severity from occupational accident reports using an optimized deep learning prediction model. PeerJ Comput Sci. 2024;10:e1985.  [DOI] [PMC free article] [PubMed] [Google Scholar]
+*   23.Shayboun M, Kifokeris D, Koch C. A review of machine learning for analysing accident reports in the construction industry. J Inf Technol Constr. 2025;30:439–60. [Google Scholar]
+*   24.Khan N, Nadeau S, Pham XT, Boton C. Exploring associations between accident types and activities in construction using natural language processing. Autom Constr. 2024;164:105457. [Google Scholar]
+*   25.Kumi L, Jeong J, Jeong J. Data-driven automatic classification model for construction accident cases using natural language processing with hyperparameter tuning. Autom Constr. 2024;164:105458. [Google Scholar]
+*   26.International Labour Organization. International Standard Classification of Occupations; 2016. https://www.ilo.org/public/spanish/bureau/stat/isco/index.htm. Accessed 21 July 2024.
+*   27.Instituto Nacional de Estadísticas de Chile. Clasificador Chileno de Ocupaciones; Technical Report. 2018. https://www.ine.gob.cl/docs/default-source/buenas-practicas/clasificaciones/ciuo/clasificador/ciuo-08-cl.pdf. Accessed 21 July 2024.
+*   28.Instituto Nacional de Estadísticas de Chile. Género y Mercado Laboral en Chile; 2023. https://www.ine.gob.cl/docs/default-source/genero/infograf%C3%ADas/autonomia-economica/inf-ond22-empleo-sexo.pdf?sfvrsn=aa849346_3. Technical Report.
+*   29.International Labour Organization (ILO). Care work and care jobs for the future of decent work. 2018. https://www.ilo.org/publications/major-publications/care-work-and-care-jobs-future-decent-work. Technical Report.
+*   30.Superintendencia de Seguridad Social. Informe anual de seguridad y salud en el trabajo. Superintendencia de Seguridad Social; 2024. Technical Report.
+*   31.Instituto Nacional de Estadísticas de Chile. Evaluación de comprensión y estimación de preguntas de sexo al nacer, identidad de género y orientación sexual; 2019. https://www.ine.gob.cl/docs/default-source/genero/gu%C3%ADas-y-documentos/documentos/evaluaci%C3%B3n-de-comprensi%C3%B3n-y-estimaci%C3%B3n-de-preguntas-de-sexo-al-nacer-identidad-de-genero-y-orientacion-sexual-2019.pdf?sfvrsn=78209faf_4. Technical Report.
+*   32.Superintendencia de Seguridad Social. Estadísticas de accidentEs del trabajo y enfermedades profesionales en mujeres. Superintendencia de Seguridad Social; 2024. https://www.suseso.cl/607/articles-735709_archivo_01.pdf. Technical Report.
+*   33.Addati L, Cattaneo U, Valarino VEeI. El trabajo de cuidados y los trabajadores del cuidado para un futuro con trabajo decente. 2019. Technical Report.
+*   34.United Nations Women. Trabajo Informal. 2016. https://interactive.unwomen.org/multimedia/infographic/changingworldofwork/es/index.html. Accessed 2 Sept 2024.
+*   35.Ministerio de la Mujer y la Equidad de Género. Una mirada de género: Encuesta nacional de seguridad ciudadana 2023. Ministerio de la Mujer y la Equidad de Género; 2024. https://minmujeryeg.gob.cl/wp-content/uploads/2024/09/Infograf%C3%ADa-ENUSC-2023-1.pdf. Technical Report.
+
+Associated Data
+---------------
+
+_This section collects any data citations, data availability statements, or supplementary materials included in this article._
+
+### Supplementary Materials
+
+### Data Availability Statement
+
+The data used for the study cannot be shared. The code is shared within this publication: https://github.com/Work-Related-Accidents.

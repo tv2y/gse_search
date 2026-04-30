@@ -1,0 +1,1288 @@
+Title: 
+
+URL Source: https://combinatorialpress.com/article/jcmcc/Volume%20127/Volume%20127a/timesnet-elevator-operation-accident-prediction-fusing-dlinear-and-deformable-convolution.pdf
+
+Published Time: Wed, 16 Apr 2025 12:02:19 GMT
+
+Markdown Content:
+J. COMBIN. MATH. COMBIN. COMPUT. 12 7a (2025 ) 35 --51 
+
+## Journal of Combinatorial Mathematics and 
+
+## Combinatorial Computing 
+
+www.combinatorialpress.com/jcmcc 
+
+# TimesNet Elevator Operation Accident Prediction Fusing 
+
+# DLinear and Deformable Convolution 
+
+Jingdong Shan 1,3, Chen Wang 2,✉, Huan Zhang 1,3, Runhe Qiu 1,3       
+
+> 1College of Information Sciences and Technology, Donghua University, Shanghai, 261620 , China
+> 2Shanghai Institute of Special Equipment Inspection and Technology Research, Shanghai, 200062 , China
+> 3Engineering Research Center of Digitized Textile & Apparel Technology, Ministry of Education, Shanghai, 261620 , China
+> ABSTRACT
+
+Elevator is a convenient building transportation for people to travel, and more and more elevators are being 
+
+registered and put into use, and the  ACCOMPANYING  problems of elevator failure and maintenance are 
+
+becoming more and more prominent. In this study, the Kalman filter algorithm is used to optimize the 
+
+feature extraction performance and prediction accuracy of the deformable convolutional TimesNet model 
+
+for  elevator operation time series data, and the improved TimesNet model is fused with the DLinear model 
+
+to construct the TimesNet -DLinear model for predicting elevator operation accidents. Finally, the 
+
+TimesNet -DLinear model is used as the main analysis modu le to design the elevator operation accident 
+
+prediction system. After testing, it is found that the TimesNet -DLinear model can maintain a low error in 
+
+the prediction of elevator operation data, with an average absolute error of  0.167 , and the prediction 
+
+ac curacy is better than other prediction models. It is also found that the elevator operation accident 
+
+prediction system is able to predict the accidents in the elevator operation in a certain district and make a 
+
+warning according to the current error thresh old situation. The elevator operation accident prediction 
+
+system proposed in this study is able to realize real -time monitoring and early warning of elevator failures, 
+
+providing an effective solution for real -time decision -making and scheduling of elevator  maintenance. 
+
+Keywords:  TimesNet , Dlinear , feature extraction , Kalman filter , elevator accident prediction 
+
+## 1. Introduction 
+
+Both DLinear and TimesNet are models for time series forecasting, while TimesNet is a Python library for 
+
+time series forecasting  that  provides some common time series forecasting models and tools. The 
+
+innovation of this model is to fold one -dimensional time series into two -dimensional space and extract 
+
+time series features using  2D convolution [ 1-4]. This processing allows the time -series analysis task to 
+
+directly benefit from the flourishing visual backbone network.TimesNet achieves comprehensive leadership 
+
+✉Corresponding author.      
+
+> E-mail address: 19533325739 @163 .com (C. Wang).
+> Received 02 January 2024; Revised 30 July 2024; Accepted 29 August 2024; Published Online 15 April 2025.
+> DOI: 10.61091/jcmcc127a -003
+> ©2025 The Author(s). Published by Combinatorial Press. This is an open access article under the CC BY license
+> (https://creativecommons.org/licenses/by/ 4.0/).
+
+36 SHAN ET AL .
+
+in several mainstream time -series analysis tasks, including long and short time predict ion, missing value 
+
+filling, anomaly detection, and classification [ 5-8].TimesNet has a wide range of application scenarios, 
+
+which are of great significance in predicting elevator operation accidents. 
+
+In recent ye ars, as the number of elevators in China continues to grow at a high rate, vicious accidents 
+
+such as elevator trapping, pinching, and falling have been frequently exposed. Elevator accidents pose a 
+
+great threat to the safety of passengers, so elevator safe ty has received more and more attention [ 9-12 ]. 
+
+The ownership, management and use of the elevator involves a number of subjects, any party's negligence 
+
+may lead to elevator safety accidents. In fact, before most  serious accidents occur, elevators have different 
+
+degrees of abnormal conditions. The failure rate of elevators can be greatly reduced by monitoring the 
+
+operation status and performing predictive maintenance [ 13 -16 ]. Therefore, the TimesNet elevator 
+
+accident prediction with DLinear and deformable convolution is of great research significance and practical 
+
+value. 
+
+Literature [ 17 ] collected the investigation reports of elevator accidents, ca rried out data mining, and 
+
+extracted the “ 4M” unsafe factors. The causal network model of elevator accidents was constructed, and 
+
+the entropy weight -topsis was used to construct a comprehensive evaluation model of the importance of 
+
+network nodes. The resul ts emphasize that irregular operation and weak safety awareness are the key 
+
+causes of elevator accidents, which need to be strengthened and controlled. Literature [ 18 ] pointed out 
+
+the characteristics of knowledge graph based on the a nalysis of elevator fault prediction methods. Based 
+
+on this the fault phenomena and causes of the elevator operation system are linked with other related 
+
+factors, the knowledge graph of elevator operation system faults is created, and the process and steps  of 
+
+fault prediction are discussed. Literature [ 19 ] proposes the GNN -LSTM -BDANN deep learning model, 
+
+which uses historical sound data from other elevators to predict the service life of the target elevator 
+
+system. The effectiveness o f this approach was experimentally demonstrated to predict the potential failure 
+
+timeframe of different elevator systems. Literature [ 20 ] has formed standardized annotation data for the 
+
+actual needs of elevator emergency response,  based on answering processing records for elevator fault 
+
+cause analysis and fault type classification. The practical application shows that AI technology plays a 
+
+positive role in improving the effectiveness of elevator emergency services. Literature [ 21 ] examined the 
+
+impact of elevator -related feature information on elevator failure by collecting information data from 
+
+elevator installation, maintenance, and other links, applying classification models and data mining 
+
+techniques of expe rt supervised learning, and predicting elevator failure based on elevator information 
+
+data. Literature [ 22 ] from the future of elevator production and service enterprises, and based on the 
+
+“predictive maintenance” proposed based on t he concept of industry  4.0 intelligent elevator service 
+
+intelligent predictive maintenance system framework. Literature [ 23 ] proposed an intelligent elevator 
+
+management system based on “BIM+IOT”. Combining BIM, Internet and other tec hnologies with the 
+
+elevator intelligent management system, it realizes the monitoring and information sharing of the whole 
+
+equipment and provides a research direction for intelligent buildings. Literature [ 24 ] curated a visual 
+
+elevat or anomaly event dataset as a benchmark for evaluating the performance of the detection model, and 
+
+improved it to improve the performance in elevator anomaly detection, implemented the ELEvent system, 
+
+and proved its effectiveness in practice. Literature [ 25 ] utilized MPGA to improve the initial weights of 
+
+the BP algorithm, adjusted the neural network, and established a door lock fault prediction model. 
+
+Simulation results show that the MPGA -BP model significantly improves the generaliz ation ability and 
+
+prediction accuracy of the BP neural network. Literature [ 26 ] introduces various AI algorithms for 
+
+elevator fault diagnosis, including BP neural network, radial basis function, etc., from both theoretical 
+
+methods an d practical applications, and launches a review of their applications in elevator fault diagnosis, 
+
+and looks forward to the development trend of AI in elevator fault diagnosis. 
+
+In this paper, the deformable convolutional TimesNet model is used to extract t he cycles in the elevator 
+
+operation time -series feature data, and the Inception model is used to extract the relevant data information 
+
+in the elevator operation process, and the predictive analysis of the elevator operation data is realized 
+
+through the ada ptive fusion process. Then the Kalman filter algorithm is introduced into the TimesNet TIMESNET ELEVATOR OP ERATION ACCIDENT PRE DICTION FUSING 37 
+
+basic model, and the algorithm is used to estimate the elevator operation signal state, remove the noise and 
+
+interference in the elevator operation data predicted by the  model, and realize the accuracy of prediction. 
+
+Subsequently, a new high -precision time series prediction model of DLinear is proposed, which is combined 
+
+with the improved deformable convolutional TimesNet model to construct the TimesNet -DLinear model, 
+
+and  then the elevator operation accident prediction system is constructed by piggybacking on this model. 
+
+In this study, the prediction accuracy of the TimesNet -DLinear model is analyzed by determining the 
+
+average absolute error and other index values in the d ata related to elevator operation predicted by the 
+
+TimesNet -DLinear model. Then the elevator operation data of a district is used as a case study to analyze 
+
+the application of the elevator operation accident prediction system and explore its application ef fect. 
+
+## 2. Elevator operation accident prediction modeling 
+
+2.1. Improved TimesNet model construction 
+
+2.1.1. Generalized time network fundamentals . TimesNet model [ 27 ] innovatively extends one -
+
+dimensional time series data to two -dimensional spa ce for analysis, folding one -dimensional time series 
+
+based on multiple cycles, multiple two -dimensional tensors can be obtained, and the columns and rows of 
+
+each two -dimensional tensor reflect the time series changes within the cycle and between the cycles ,
+
+respectively, i.e., two -dimensional time series changes are obtained. 
+
+In order to uniformly represent the temporal variations within a cycle and between cycles, the periodicity 
+
+of the time series needs to be mined first. For a thought time series *T C ID X R with time length T and 
+
+channel dimension C , its periodicity can be computed by Fast Fourier Transform (FFT) with time 
+
+dimension, i.e.:  
+
+#  
+
+#  
+
+> ID
+
+A A g Amp FFT X
+
+
+
+(1)*  
+
+> 1,,2
+
+,..., arg ( )k Tf I
+
+f f Topk A        
+
+> 
+
+
+
+(2),..., ,..., l kl k
+
+T Tp p f f
+
+          
+
+(3)
+
+where: T
+
+A R represents the intensity of each frequency component in ID X and the k frequencies { ,..., }l kf f
+
+with the largest intensities correspond to the most significant k cycle lengths { ,..., }I kp p .
+
+The above process is simplified and recorded as:    
+
+, ,..., , ,..., ( )l k l k lD A f f p p Period X 
+
+(4)
+
+Folding the original one -dimensional time  series data ID X in accordance with Eq. ( 5) according to a 
+
+fixed periodicity, the 2 , ( ) , {1,..., } ( )i i   
+
+> iDpfID
+
+X Reshape Padding X i k 
+
+(5)
+
+where ( )ID Padding X  is aligned by complementing zeros at the end of the sequence so that the length of 
+
+the sequence is divisible by ip .
+
+Finally a set of  2D tensors       
+
+> 1232222
+
+, , ,..., kD D D DX X X X ,2
+
+> iD
+
+X is obtained after the above operations 
+
+corresponding to  2D temporal variations dominated by period ip .
+
+TimesNet consists of stacked time blocks, and the input sequence is first embedded into layers to obtain 
+
+the depth feature mad T d al iID X R 
+
+ . For the time block in layer l , the input is mad T d al lID X R 
+
+> 
+
+ , and then the 
+
+2D temporal variations are extracted by convolution with 2D :38 SHAN ET AL .( )l l l l lID lD ID X TimesBlock X X 
+
+ 
+
+(6)
+
+The  specific process of time block is as follows. 
+
+1) Convert one -dimensional to two -dimensional, firstly, extract the period for the input one -dimensional 
+
+temporal feature l lID X  , and convert it into a two -dimensional tensor to represent  the two -dimensional 
+
+temporal change. 
+
+2) Extract the two -dimensional timing change representation, for the two -dimensional tensor      
+
+> ,.2 .222
+
+, ,..., l l l l k D D DX X X
+
+, because of its two -dimensional localization, the Inception model is used in this study 
+
+to extract t he information, i.e.: , ,2 2
+
+ˆ ( )l i l i D DX Inception X 
+
+(7)
+
+3) Transform two -dimensional to one -dimensional, and for the extracted temporal features, transform 
+
+them back to one -dimensional space for information aggregation: , ,,( ) 2
+
+ˆ ˆRe , { ,..., } ( ( )) i i     
+
+> l i l i ID lpfD
+
+X Trunc shape X i l k 
+
+(8)
+
+where mod ( ) 
+
+> ,,2
+
+ˆ ˆ, (Re ( ))si p fi i    
+
+> Tdl j l j ID ID
+
+X R Trunc shape X
+
+> 
+> 
+
+ denotes the removal of zeros complemented by the ( )ID Padding X 
+
+operation. 
+
+4) Adaptive fusion, where the one -dimensional representations   
+
+> ,,
+
+ˆ ˆ,..., l l l k 
+
+X X are weighted and 
+
+summed according to the correspondin g frequencies to obtain the final output: 1 1 1 1ˆ ˆ,..., max( ,..., )l k l k      
+
+> llllffff
+
+A A Soft A A   
+
+
+
+(9)1 ,1
+
+ˆ ˆ    
+
+> i
+> klll i ID fID i
+
+X A X
+
+ 
+
+(10 )
+
+2.1.2. TimesNet model data processing . In the convolvable TimesNet model, in order to determine the 
+
+periodicity in the time series, the Fourier Transform (FT) is used to transform the time series. After the 
+
+Fourier transform, the major cycles are presented with corresponding frequency components of high 
+
+amplitude.TimesNe t sets the hyperparameter k and takes only the frequency components corresponding 
+
+to the ( ) top k  largest amplitudes, resulting in ( ) top k  major cycles, a process known as timeseries 
+
+folding. Th ere are two main steps in timeseries folding as follows. 
+
+1) Period extraction . For a one -dimensional time series with a time length of T and a channel dimension 
+
+of C , the cycle information can be extracted directly by the fast Fourier transform (FFT) of the time 
+
+dimension, i.e.:  
+
+> 1
+
+( ( )) DA Avg Amp FFT X 
+
+(11 )*   
+
+> 11, ,2
+
+{ , , } arg ( )k Tf
+
+f f Topk A      
+
+
+
+(12 )11
+
+, , , ,kk
+
+r rp p f f
+
+        
+
+(13 )
+
+where ( ) FFT  represents the computation of the fast Fourier transform, ( ) Amp  represents the 
+
+computation of the amplitude values, and ( ) Avg  represents the averaging from the C -dimensional 
+
+channel. TIMESNET ELEVATOR OP ERATION ACCIDENT PRE DICTION FUSING 39 
+
+2) Sequence folding (lD ->2D) . Based on the selected frequency 1{ , , }kf f and the corresponding period 
+
+length 1{ , , }kp p , the 1D time series 1
+
+> T
+
+X D C  is reshaped into multiple 2D tensors, a process 
+
+called 1D ti me series folding, which can be formalized as: 2 , 1(( )Re ) , {1, , } i i   
+
+> iDpfD
+
+X shape Padding X i k 
+
+(14 )
+
+where ( ) Padding  is the complementary  0 at the end of the sequence, making the length of the sequence 
+
+divisible. 
+
+2.1.3. Model improvement based on Kalman filter algorithm . Kalman filtering algorithm is a recursive 
+
+filtering algorithm [ 28 ], which estimates the state of the signal by using observed data and predictive 
+
+models. In the Kalman filtering algorithm, the noise and interferenc e in the measurement is removed by 
+
+estimating the signal state and modeling the measurement error and system noise to get a more accurate 
+
+signal estimation. 
+
+The Kalman filtering algorithm is based on Bayesian theory, which regards the signal state as a sto chastic 
+
+process, and predicts the future state by modeling and predicting it. At the same time, the Kalman filtering 
+
+algorithm also utilizes the measurement error of the sensor data and the characteristics of the system 
+
+noise to correct the prediction resu lts and obtain more accurate signal estimation results. 
+
+The specific implementation of the Kalman filtering algorithm in a one -dimensional time series includes 
+
+the following steps: 
+
+1) Establish a state space model: model the signal as a random variable tha t changes over time. 
+
+2) Predict the state: according to the current state space model, predict the value of the next state. 
+
+3) Calculate Kalman gain: based on the error between the predicted state and the observed value, 
+
+calculate the Kalman gain, which is  used to correct the predicted value. 
+
+4) Update the state: according to the Kalman gain, the predicted state is corrected to get a more accurate 
+
+state estimate. 
+
+5) Update state covariance: according to the observed value and Kalman gain, update the state c ovariance 
+
+to reflect the accuracy of state estimation. Through the above steps, the Kalman filtering algorithm can 
+
+remove the noise and interference in the measurements, so as to obtain a more accurate one -dimensional 
+
+time series. 
+
+Therefore, in this paper, the improvement of the convolvable TimesNet model is realized by introducing 
+
+the Kalman filtering algorithm to deal with the individual outliers generated in the elevator operation data. 
+
+Assume that a discrete linear dynamic syste m is modeled as: 1 1* *k k k kx A x B u w   
+
+(15 )*k k kz H x v 
+
+(16 )
+
+where kx is the system state matrix, kz is the observation (measured value) of the state array, A is the 
+
+state transfer matrix, B is the control input matrix, H is the state observation matrix, 1kw  is the 
+
+process noise, which is generally regarded as obeying a normal distribution , i.e., its probability density 
+
+function ( ) (0, )p w N Q , with a mean value of  0, and Q is the covariance matrix, kv represents the 
+
+measurement noise, and it is a Gaussian white noise, which obeys  normal distribution, ( ) (0, )p v N R ,
+
+with a mean value of  0, and the covariance matrix is R .
+
+After the state estimation algorithm [ 29 ], three values of the state quantity can be obtained, which are 
+
+the state prediction value x 
+
+> 
+
+(also known as the a priori state estimation value), the optimal estimation 
+
+value kx (also known as the a posteri ori state estimation value), and the true value kx , and the Kalman 
+
+filtering algorithm is the use of the Kalman gain to correct the state prediction value to make it 
+
+approximate the true value. 
+
+The state prediction value x 
+
+> 
+
+can be derived from the state prediction equation, i.e.: 40 SHAN ET AL .1* *k kk
+
+x A x B u 
+
+(17 )
+
+The state optimal estimate kx can be derived from the state update equation, i.e: ( * )k kk k
+
+x x K z H x  
+
+(18 )
+
+where  Kalman gain K actually characterizes the weight of the model prediction error (PE) to the 
+
+measurement error (ME) in the state -optimal estimation process, i.e: , [0,1] ( )
+
+PE K KPE ME 
+
+ 
+
+(19 )
+
+When 0K  , i.e., the prediction error is  0, the state value of the system depends entirely on the 
+
+predicted value, i.e., k k
+
+x x . When 1K  , i.e., the measurement error is  0, the state value of the system 
+
+depends entirely on  the measured value. 
+
+2.2. DLinear model construction 
+
+DLinear [ 30 ] is a new type of high -accuracy time series prediction model.The simple structure of DLinear ,
+
+which consists of only one decomposition scheme and two linear connectivity networks, reduces the 
+
+computational memory and computational time consumed during model training.DLinear not only has a 
+
+very simple model structure, but also has significantly be tter prediction accuracy than the more complex 
+
+LSTM model. In the process of elevator operation fault prediction, DLinear firstly decomposes the original 
+
+time series inputs by a moving average kernel to obtain the trend and seasonal components of the power 
+
+load data, and then assigns weights to the decomposed components by using two single -layer time linear 
+
+layers according to the basic formula. Finally, the outputs of the linear layers are combined to obtain the 
+
+prediction results. 
+
+The two temporal linear  layers decompose the seasonal and trend components of the input data for 
+
+separate prediction. DLinear can significantly improve the prediction performance of the network by 
+
+processing the trend and seasonality of the time series data, especially for the el evator operation data with 
+
+obvious trend and seasonality. The formula is: s s sH W X 
+
+(20 )t t tH W X 
+
+(21 )ˆ t sX H H 
+
+(22 )
+
+where sH and tH represent the outputs of the seasonal and trend components of the two single -layer 
+
+time -linear networks, respectively, sW and tW represent the single -layer time -linear networks for the 
+
+seasonal and trend com ponents, respectively, and ˆX is the sum of the predicted values of sH and tH .
+
+In addition, DLinear utilizes the output of direct multi -step prediction. The output of multistep 
+
+predict ion usually consists of two types, direct multistep prediction and iterative multistep prediction. As 
+
+an example, using data from the past  24  moments to predict data from the next  24  moments, the direct 
+
+multistep prediction approach requires the model to l earn by training on the past  24  moments 1 2 24 ( , , )X X X 
+
+and inputs the prediction results for the next  24  moments 25 26 48 ( , , )X X X  at once. 
+
+In contrast, iterative multistep prediction predicts each time step incrementally, i.e., a rolling prediction. 
+
+The model first predicts the first time step 25 X , then uses that prediction to construct a new loss 2 3 25 ( , ,...... )X X X
+
+
+
+for the next time step 26 X , and so on until all the prediction steps have been iterated 
+
+up to 48 X . It is worth noting, however, that the iterative multi -step prediction approach may result in a 
+
+gradual accumulation of errors, which affects the prediction accuracy. TIMESNET ELEVATOR OP ERATION ACCIDENT PRE DICTION FUSING 41 
+
+2.3. TimsNet -DLinear Prediction Modeling 
+
+In this study, a TimsNet -DLinear hybrid model based on the improved TimsNet model and DLinear model 
+
+is proposed for the prediction study of elevator o peration accidents. The elevator operation accident 
+
+prediction process of this hybrid model is shown in Fig.  1. The original elevator operation and related 
+
+feature data are preprocessed to form a numerical matrix containing elevator o peration and features, and 
+
+the processed data are proportionally divided into training set, validation set and test set. Then the 
+
+hyperparameters of the TimsNet -DLinear hybrid model are set and the preprocessed data matrix of the 
+
+training set is input into  the hybrid model. The deep mining of important feature information in the 
+
+elevator operation data is realized by the DLinear model, and finally the prediction results are obtained by 
+
+means of the fully connected layer. During the model training process, t he parameters of the network 
+
+model are iteratively updated by Adam optimization algorithm. The model prediction results are verified 
+
+to meet the accuracy requirements through the validation set. If the accuracy requirement is met, the 
+
+relevant parameters o f the model are saved as the optimal model. If it does not meet the requirements, the 
+
+weight parameters of each model are updated according to the error back -propagation method to fully 
+
+meet the accuracy requirements. After obtaining the final optimal mode l, the feature matrix of the test set 
+
+data is input into this optimal model for prediction. The prediction accuracy and error of the model are 
+
+evaluated by calculating the error index. And compared with other models. Historical load   
+
+> data entry
+> Data
+> preprocessing
+> Data set
+> partitioning
+> Training set
+> TimesNet -DLinear Model
+> hyperparameter Settings
+> The TimesNet -DLinear model weights
+> were initialized and training began
+> The optimal
+> model is obtained
+> Forecast result
+> Validation
+> set
+> Whether meet the
+> accuracy requirement
+> Model hyperparameter
+> adjustment
+> Test set
+> Yes
+> No
+> Fig .1.Flowchart of TimesNet -DLinear model prediction
+
+## 3. Design of an early warning platform for elevator operation incidents 
+
+The elevator operation fault monitoring and early warning system constructed in this paper is aimed at 
+
+realizing real -time monitoring of ele vator operation safety, fault early warning, fault diagnosis and other 
+
+functions through the processing and analysis of elevator operation data. The elevator operation accident 
+
+warning platform designed with TimesNet -DLinear model is shown in Figure  2. Due to the characteristics 42 SHAN ET AL .
+
+of elevator real -time streaming data, such as fast generation speed, multiple data categories, and large data 
+
+volume, it is necessary to screen out invalid data when dealing with these massive elevator data, an d then 
+
+distribute the processed data to various distributed clusters for processing and computation. Therefore, the 
+
+core data stream processing engine of the data layer module is built by Flume, Kafka and Spark Streaming. 
+
+The TimesNet -DLinear model runs on  the data stream processing engine to analyze and process the data 
+
+stream accurately and quickly, and realize the basic system functions. Data    
+
+> acquisition
+> MySQL
+> Flume
+> Kafka
+> Fault diagnosis
+> module
+> Fault warning
+> module
+> Database
+> Backend
+> Front end Visualization Echarts
+> Mybatis
+> Spring
+> SpringBoot
+> JavaScript Vue ElementUI
+> Data acquisition,
+> transmission and
+> storage module
+> Data distribution
+> module
+> Data and business logic
+> processing module
+> Result visualization
+> module
+> Fig .2.Elevator operation accident monitoring system
+
+## 4. Application analysis of the elevator operation accident prediction system 
+
+4.1. TimesNet -Dlinear model test results 
+
+4.1.1. Performance evaluation indicators . In this paper, the following four indicators are uniformly 
+
+selected as the indicators for evaluating the effectiveness of the model. 
+
+1) Mean absolute error (MAE) . The mean absolute error is the average of the absolute value of the error 
+
+between the observed value and the true value, calculated as follows: 1
+
+1 |ˆ| 
+
+> miii
+
+MAE y ym 
+
+ 
+
+(23 )
+
+where iy denotes the tru e observed value, ˆiy denotes the predicted value, and m is the number of 
+
+predicted values. 
+
+MAE is used to evaluate the fitting effect of each prediction model, and the prediction effect of the 
+
+model can be ranked by comparing the MAE of the model's predicted value with the actual value on the 
+
+test set.The smaller the MAE value, the higher the pr ediction accuracy of the model. 
+
+2) Mean Square Error (MSE) . The mean square error is the squared mean of the error between the observed 
+
+value and the true value and is calculated as follows: TIMESNET ELEVATOR OP ERATION ACCIDENT PRE DICTION FUSING 43 21
+
+1 ˆ( ) 
+
+> miii
+
+MSE y ym 
+
+ 
+
+(24 )
+
+where iy denotes the true observed value, ˆiy denotes the predicted value and m is the number of 
+
+predicted values. 
+
+The range of MSE is [0, )  , the larger the error, the larger the value. The  smaller the MSE value, 
+
+the higher the prediction accuracy of the model. 
+
+3) Mean Absolute Percentage Error (MAPE) . Mean Absolute Percentage Error (MAPE) is the mean 
+
+absolute value of the proportion of the error between the observed value and the true value to the true 
+
+value, and is calculated by the following formula: 1
+
+ˆ100% mi ii i
+
+y yMAPE m y
+
+ 
+
+(25 )
+
+where iy denotes the true observed value, ˆiy denotes the predicted value, and m is the number of 
+
+predicted values. 
+
+The range of MAPE is [0, )  , the larger the error, the larger the value. The smaller the value of 
+
+MAPE, the higher the prediction accuracy of the model. 
+
+4) Coefficient of determination 2
+
+( )R . The coefficient of determination reflects the proportion of all 
+
+variations of the dependent variable that can be explained by the independent variable through the 
+
+regression relationship, and the formula is as follows: 22 121
+
+ˆ( )1( )  
+
+> miiimiii
+
+y yRy y
+
+> 
+
+ 
+
+# 
+
+(26 )
+
+where iy is the true observed value, ˆiy is the predicted value, iy is the mean of the true observed value, 
+
+and m is the number of predicted values. 2
+
+R can be interpreted as using the mean as the error 
+
+benchmark to see if the prediction error is greater or less than the mean benchmark error. Generally 
+
+speaking, the larger 2
+
+R is, the better the model fit is . However, 2
+
+R can only be roughly quantified, and 
+
+as the sample size increases, 2
+
+R is bound to increase, and cannot really quantify the degree of accuracy. 
+
+4.1.2. Experimental data sets . The experimental data in the test of the effectiveness of TimesNet -Dlinear 
+
+model in predicting accidents during elevator operation are 3600 data ( 400 sets) of elevator operation in a 
+
+large shopping mall in Changchun within one year collected by various sensors in the monitorin g and 
+
+warning system. Among them, 2700 data ( 300 groups) are used as training inputs for the prediction model, 
+
+and the remaining 900 data ( 100 groups) are used as test inputs, and each data package contains 6 input 
+
+variables. The data were preprocessed by max -min normalization as shown in Table  1. Matlab 2017 is used 
+
+to simulate the experiment, which is implemented by Neural Net Clustering inside the Matlab 2017 toolbox, 
+
+uploading 6 input v ariables as well as 3 output variables.The 6 input variables are selected from the many 
+
+operational parameters of the elevator, which will have a large impact on the prediction results, including 
+
+current, acceleration, The six input variables are selected from the many operational parameters of the 
+
+elevator, which will have a large impact on the prediction results, including current, acceleration, load, and 
+
+whether or not someone enters the elevator, and are denoted as X 1, X 2...X 6. The three output variable s
+
+are the topping fault, squatting bottom, and elevator door entrapment faults, which are denoted as Y 1, Y 2,
+
+and Y 3, respectively. 44 SHAN ET AL .                                                                                                     
+
+> Table 1.Experimental training data
+> Date X1X2X3X4X5X6Y1Y2Y3
+> 10.942 0.953 0.855 0.627 0.528 0.617 0.062 0.999 0.024
+> 20.947 0.968 0.85 0.428 0.500 0.837 0.041 0.996 0.017
+> 30.362 0.394 0.86 0.632 0.542 0.466 0.04 0.006 0.965
+> 40.957 0.944 0.893 0.373 0.444 0.958 0.03 0.994 0.017
+> 50.254 0.284 0.66 0.415 0.361 0.936 0.095 0.012 0.954
+> 60.969 0.941 0.662 0.386 0.491 0.607 0.065 0.996 0.019
+> …………………………
+> 97 0.943 0.922 0.878 0.62 0.422 0.414 0.082 0.991 0.025
+> 98 0.934 0.942 0.705 0.377 0.378 0.618 0.044 0.995 0.028
+> 100 0.964 0.933 0.776 0.553 0.393 0.732 0.018 0.991 0.014
+
+4.1.3. Experimental results and analysis . In this paper, TimesNet -Dlinear model, Autoformer model and 
+
+Pyrafoemer model are used to predict the parameters of elevator operation variables in the test data set 
+
+respectively, and compared with the real values to calculate the mean values of p rediction errors of different 
+
+models for various parameters of elevator operation, and the results of prediction accuracy analysis of the 
+
+models are shown in Table  2.The average MAE value ( 0.167 ), MSE value ( 0.3496 ) and MAPE value ( 2.94 %) 
+
+of the TimesNet -Dlinear model has the smallest average MAE value ( 0.167 ), MSE value ( 0.3496 ) and 
+
+MAPE value ( 2.94 %) in the prediction of various parameters during elevator operation, and also performs 
+
+optimally in evaluation index 2
+
+R , with an average index value of 97 .46 %. This indicates that the 
+
+TimesNet -Dlinear model has a higher prediction accuracy than the Autoformer and Pyrafoemer models 
+
+for parameters such as acceleration and topping failure during eleva tor operation. This is due to the fact 
+
+that the time series data during elevator operation may change over time, and with the increase of time, 
+
+these changes may become more significant, and the adaptability of Autoformer and Pyrafoemer models to 
+
+these cha nges in the sequence values will be reduced accordingly, and the bias of the sequence values in 
+
+the long -term prediction will increase, and the prediction accuracy will be reduced accordingly. The 
+
+TimesNet -Dlinear model, on the other hand, is able to make more accurate judgments due to its learning 
+
+of the changes in the sequences between different periods of the week.The obvious advantages of the 
+
+TimesNet -Dlinear model enable it to make smaller prediction errors for the data in the elevator operation, 
+
+which effectively improves the prediction accuracy of the model. TIMESNET ELEVATOR OP ERATION ACCIDENT PRE DICTION FUSING 45      
+
+> Table 2.Model prediction accuracy analysis
+> Predictor variable Model MAE MSE 2
+
+R MAPE                                                                                                                         
+
+> X1
+> TimesNet -Dlinear 0.15 0.39 99 .78 %3.00 %
+> Autoformer 0.309 0.48 91 .73 %3.94 %
+> Pyrafoemer 0.42 0.422 88 .79 %4.30 %
+> X2
+> TimesNet -Dlinear 0.176 0.271 99 .99 %2.14 %
+> Autoformer 0.349 0.414 91 .04 %3.83 %
+> Pyrafoemer 0.597 0.443 87 .67 %4.09 %
+> X3
+> TimesNet -Dlinear 0.144 0.374 95 .22 %2.75 %
+> Autoformer 0.392 0.449 91 .72 %3.71 %
+> Pyrafoemer 0.474 0.44 89 .23 %4.19 %
+> X4
+> TimesNet -Dlinear 0.118 0.363 95 .72 %2.72 %
+> Autoformer 0.371 0.469 92 .67 %3.62 %
+> Pyrafoemer 0.573 0.439 88 .22 %4.01 %
+> X5
+> TimesNet -Dlinear 0.166 0.338 95 .14 %3.41 %
+> Autoformer 0.261 0.44 92 .84 %3.89 %
+> Pyrafoemer 0.485 0.48 87 .53 %4.23 %
+> X6
+> TimesNet -Dlinear 0.134 0.359 99 .66 %3.22 %
+> Autoformer 0.388 0.479 92 .09 %3.66 %
+> Pyrafoemer 0.521 0.451 89 .74 %4.06 %
+> Y1
+> TimesNet -Dlinear 0.22 0.363 97 .30 %3.30 %
+> Autoformer 0.341 0.462 92 .75 %3.90 %
+> Pyrafoemer 0.559 0.432 88 .07 %4.32 %
+> Y2
+> TimesNet -Dlinear 0.182 0.352 96 .46 %3.44 %
+> Autoformer 0.264 0.484 92 .16 %3.53 %
+> Pyrafoemer 0.509 0.426 89 .60 %4.35 %
+> Y3
+> TimesNet -Dlinear 0.213 0.336 97 .90 %2.49 %
+> Autoformer 0.244 0.428 90 .41 %3.85 %
+> Pyrafoemer 0.409 0.48 88 .41 %4.20 %
+> Average
+> TimesNet -Dlinear 0.167 0.3496 97 .46 %2.94 %
+> Autoformer 0.3243 0.4561 91 .93 %3.77 %
+> Pyrafoemer 0.5052 0.4459 88 .58 %4.19 %
+
+4.2. Application Analysis of Elevator Operation Emergency Stop Fault Prediction 
+
+4.2.1. Elevator operation data processing . In this study, the data of 52 elevators with a floor height of 
+
+26 floors manufactured in the same batch and put into use at the same time in a certain district are selected 
+
+to obtain data through the elevator operation status data acquisition system, and d ata cleaning has been 
+
+carried out in the process of data acquisition. The analysis results of the collected data of an elevator 
+
+running in a certain descending process are shown in Fig.  3, with (a) and (b) representing unscreened data 
+
+and screened data, respectively. It can be found that the same elevator with the same running process 
+
+exhibits very similar time series shapes, but there are still obvious errors due to disturbed controller coding. 
+
+Firstly, we find the baseline standard v alue of all the samples from the 20 th floor to the 5th floor, then we 
+
+carry out the one -way linear regression operation between each sample and the baseline sample value, and 
+
+finally we delete the samples with large linear and tilt shifts, so that we can r ealize the screening of the 
+
+data of the same operation state. The time series of elevator motor currents from the 20 th floor to the 5th 
+
+floor of this elevator were filtered to filter out the obvious unusable data. 46 SHAN ET AL .    
+
+> (a) Unscreened data (b) Post -screening data
+> Fig .3.A collection of data from a line process elevator
+
+The results of the mean and standard deviation analysis of the time series of motor currents for 
+
+different operating states of the same elevator are shown in Fig.  4, which connects the mean values of the 
+
+currents of different sampled floors with a line for each operating state. Whether it is the length of the 
+
+time series or the maximum starting current or the maximum braking current, the differen t running 
+
+processes of the elevator show obvious differences. For example, during the descent of the elevator from 
+
+the  20 th floor to the  9th floor, the current value reaches its maximum at the  19 th floor ( 1.62 A), while the 
+
+maximum current value occurs at t he  18 th floor when the elevator descended from the  20 th floor to the 
+
+5th floor, which is  12 .5A.    
+
+> Fig .4.Analysis of the performance of different elevator operations TIMESNET ELEVATOR OP ERATION ACCIDENT PRE DICTION FUSING
+
+47 
+
+4.2.2. Results of empirical prediction of elevator operation accidents . It is known from the measurements 
+
+that each elevator in the district has an average of 150 running processes per day. According to the time 
+
+information of an elevator safety switch disconnection fault from the IoT elevator maintenance platform 
+
+system, the elevator motor running current time series data of one month before the fault occurs is selected 
+
+as a training sample, and the data on the day of the fault is used as a test sample. For unequal long time 
+
+series, the filling method 1 is used to complement t he event sequence with zero. The coding of different 
+
+elevator operation test sets is shown in Table  3, and the maximum length of unequal long time series 
+
+segments is 10 . The time series segments are coded by the autoencoder in the Tim esNet -Dlinear model, 
+
+and the coded value largely preserves the length of the time series and the intrinsic structural information, 
+
+which realizes the compression and extraction of the unequal long time series information.                                                                                                                                       
+
+> Table 3.Different elevators run t he code of the test set
+> Number 0123456789Coded value Starting current
+> 279 0.001 0.904 0.875 0.305 0.242 0.184 0.000 0.000 0.000 0.000 30 .524 1.524
+> 1255 0.001 0.843 0.47 0.334 0.229 0.189 0.005 0.000 0.000 0.000 22 .639 0.632
+> 987 0.001 1.117 1.082 0.619 0.567 0.338 0.000 0.000 0.000 0.000 24 .526 1.496
+> 256 0.001 0.863 0.713 0.60.38 0.313 0.021 0.000 0.000 0.000 27 .635 1.126
+> 1100 0.001 0.841 0.539 0.46 0.37 0.347 0.006 0.000 0.000 0.000 30 .261 1.324
+> 1086 0.001 1.133 0.566 0.279 0.229 0.149 0.000 0.000 0.000 0.000 6.534 0.524
+> 958 0.001 1.083 0.272 0.222 0.194 0.000 0.000 0.000 0.000 0.000 18 .524 1.854
+> 1326 0.001 1.173 0.973 0.689 0.248 0.000 0.000 0.000 0.000 0.000 14 .526 0.152
+> 211 0.001 0.868 0.791 0.343 0.30.000 0.000 0.000 0.000 0.000 8.526 0.096
+> 1052 0.001 0.955 0.927 0.631 0.258 0.000 0.000 0.000 0.000 0.000 5.324 0.326
+
+The early prediction results of elevator faults obtained using the prediction model proposed in this paper 
+
+are shown in Fig.  5. Comparing the  predicted and true values and calculating their errors, the early 
+
+anomalies before the elevator operation accidents and accidents are successfully detected by setting an error 
+
+threshold of ± 0.5. The anomaly here is marked by the elevator safety switch open ing and closing. It can 
+
+be found that when the number of elevator runs is  6, the error between the real current value ( 0.236 A) and 
+
+the predicted current value ( 1.416 A) of elevator operation reaches  1.18 A, which indicates that the elevator 
+
+will have an oper ational accident during this section of operation. The anomaly generated during the 48 SHAN ET AL .
+
+operation of this segment from the  12 th floor to the  3rd floor affects the value and structure of the tractor 
+
+current time series of this elevator, and when the elevator ru ns from the  12 th floor to the  3rd floor, the 
+
+safety switch is disconnected and the elevator fault is generated. Therefore, it is found that by setting the 
+
+threshold value and can realize the early warning of the elevator operation accident, and can determi ne 
+
+the maintenance parts needed according to the elevator operation floor information  12  floors.   
+
+> Fig .5.Long time feature elevator failure prediction results
+
+## 5. Conclusion 
+
+In this study, the TimesNet -DLinear model is established by integrating the DLinear  model with the 
+
+TimesNet model improved based on the Kalman filter algorithm to realize the prediction of elevator 
+
+operation accidents, and the elevator operation accident prediction system is designed and obtained. The 
+
+analysis of the prediction accuracy  of the model shows that the average absolute error ( 0.167 ), the mean 
+
+square error ( 0.3496 ) and the average absolute percentage error ( 2.94 %) of the TimesNet -DLinear model 
+
+in predicting the various parameters in the elevator operation process are lower than  those of the 
+
+comparison model, and it also performs optimally on the evaluation index 2
+
+R (97 .46 %). This indicates 
+
+that the model is more accurate in predicting different parameters such as current and acceleration during 
+
+elevator  operation. An application analysis of the elevator operation data in a community reveals that the 
+
+elevator operation accident prediction system proposed in this paper is able to successfully detect elevator 
+
+operation accidents and early anomalies before ac cidents occur. 
+
+The research in this paper contributes to the research in the field of elevator safety risk monitoring and 
+
+early warning, and the designed elevator operation accident prediction system is able to effectively predict 
+
+elevator failures and  make early warnings. Further research can be carried out in the future to make the 
+
+constructed accident prediction model applicable to any occasions and to enhance the practicality of the 
+
+model. TIMESNET ELEVATOR OP ERATION ACCIDENT PRE DICTION FUSING 49 
+
+## Funding 
+
+This research was supported by the University -Industr y Collaborative Education Program (No. 
+
+230805384035416 ). 
+
+## About the Author 
+
+Jingdong Shan ( 1997 -), male, from Xilinhot, Inner Mongolia, master's degree candidate, main research 
+
+directions: deep learning, data mining 
+
+Chen Wang ( 1986 -), corresponding author, f emale, from Shanghai, engineer, master's degree, main 
+
+research directions: software engineering, data mining, artificial intelligence, etc. 
+
+Huan Zhang ( 1998 -), female, from Shangqiu, Henan, master's degree candidate, main research directions: 
+
+deep learning , data mining. 
+
+Runhe Qiu (1961 -), male, from Shanghai, professor, Ph.D., main research directions: wireless 
+
+communication, data processing and analysis, cognitive radio technology, intelligent detection systems. 
+
+## References 
+
+[1]  Zhou, N., Zeng, H., & Zhou, J. ( 2024 , January). DLinear -Based Prediction of the RUL of PEMFC. In 2024 4th 
+
+International Conference on Consumer Electronics and Computer Engineering (ICCECE) (pp. 221 -224 ). 
+
+IEEE. 
+
+[2]  Zuo, C., Wang, J., Liu, M., Deng, S., & Wang, Q. ( 2023 ).  An ensemble framework  for short -term load 
+
+forecasting based on timesnet and tcn. Energies,  16 (14 ),  5330 .
+
+[3]  Feng, X., Fu, J., Zhang, Z., Li, J., Li, T., & Zhao, M. ( 2024 , August).  A study on long -term industrial electricity 
+
+consumption and carbon emission forecasting methods base d on TimesNet models. In Journal of Physics: 
+
+Conference Series (Vol.  2814 , No.  1, p.  012019 ). IOP Publishing. 
+
+[4]  Deng, F., Li, H., Deng, Z., Si, J., Yu, B., Guo, X., & Zeng, Y. ( 2023 , December).  TimesNet Model for Multi -
+
+industry Electricity Demand Forecasting . In International Conference on Applied Intelligence (pp.  64 -75 ). 
+
+Singapore: Springer Nature Singapore. 
+
+[5]  Lei, M., & Wang, X. ( 2023 , December).  DWT -TimesNet: An Improved Model for Wheat Price Long -Time 
+
+Series Forecasting. In  2023  IEEE International Conference on Big Data (BigData) (pp.  3431 -3438 ). IEEE. 
+
+[6]  Ouyang, Z., Gao, Y., Zhang, X., Wu, X., & Zhang, D. ( 2024 ).  Significant Wave Height Forecasting Based on 
+
+EMD -TimesNet Networks. Journal of Marine Science and Engineering,  12 (4),  53 6.
+
+[7]  Zhang, X., Yang, K., & Zheng, L. ( 2024 , February).  Transformer Fault Diagnosis Method Based on TimesNet 
+
+and Informer. In Actuators (Vol.  13 , No.  2, p.  74 ). MDPI. 
+
+[8]  Ding, T., Wu, D. A., Li, Y., Shen, L., & Zhang, X. ( 2024 ).  A hybrid CEEMDAN -VMD -TimesNet mo del for 
+
+significant wave height prediction in the South Sea of China. Frontiers in Marine Science,  11 , 1375631 .
+
+[9]  Zhang, T., Liu, A., Zhang, T., Yu, C., & Zou, H. ( 2023 , November).  Decoding Elevator Accidents: Insights 
+
+from Trajectory Intersection Theory. In  Proceedings of the  2023  3rd International Conference on Big Data, 
+
+Artificial Intelligence and Risk Management (pp.  16 -21 ). 
+
+[10]  Wang, H., Zeng, M., Xiong, Z., & Yang, F. ( 2017 ).  Finding main causes of elevator accidents via multi -
+
+dimensional association rule in edge computing environment. China communications,  14 (11 ),  39 -47 .
+
+[11]  Kim, B. S., & Park, P. ( 2020 ).  Safety Management Improvement Plan for Elevator Worker Safety Accident 
+
+Prevention. Journal of the Korea Safety Management & Science,  22 (2),  23 -29 .50 SHAN ET AL .
+
+[12]  Zhang, X., & Liang, D. ( 2019 , July). Construction of Elevator Inspection Quality Evaluation System Based on 
+
+Big Data. In 2019 IEEE 9th International Conference on Electronics Information and Emergency 
+
+Communication (ICEIEC) (pp. 238 -242 ). IEEE. 
+
+[13]  Kim, H. J., Hwang, M. S., Choi, O. M., Lee, A. K., & Kim, J. C. ( 2017 ). A study on the estimation of the optimum 
+
+lifetim e of elevator components for elevator accident prevention. The transactions of The Korean Institute of 
+
+Electrical Engineers, 66 (8), 1278 -1284 .
+
+[14]  Niu, D., Guo, L., Bi, X., & Wen, D. ( 2021 ).  Preventive maintenance period decision for elevator parts based on 
+
+mu lti -objective optimization method. Journal of Building Engineering,  44 , 102984 .
+
+[15]  Shi, F., & Wu, Z. ( 2024 ). Construction of Knowledge Graph of the Elevator Safety Accidents and Analysis of 
+
+Key Risk Factors —Based on KG -DEMATEL -ISM -MICMAC Method. IEEE Access. 
+
+[16]  Qiu, J., Yang, L., & Wang, C. ( 2021 , June).  Research on Fault Prediction Based on Elevator Life Cycle Big 
+
+Data. In  2021  International Conference on Intelligent Computing, Automation and Applications (ICAA) (pp. 
+
+572 -575 ). IEEE. 
+
+[17]  Du, W., Chen, Y., Zhou, Q., Z hang, M., & Yi, R. ( 2024 ).  Cause Analysis of Elevator Accidents Based on 
+
+Complex Network. Journal of Electrical Systems,  20 (2),  808 -815 .
+
+[18]  Hou, J., Qiu, R., Xue, J., Wang, C., & Jiang, X. Q. ( 2020 , July). Failure prediction of elevator running system 
+
+based on knowledge graph. In Proceedings of the 3rd International Conference on Data Science and 
+
+Information Technology (pp. 53 -58 ). 
+
+[19]  Pan, J., Shao, C., Dai, Y., Wei, Y., Chen, W., & Lin, Z. ( 2024 ). Res earch on fault prediction method of elevator 
+
+door system based on transfer learning. Sensors, 24 (7), 2135 .
+
+[20]  Liu, L., Chen, S., Liu, J., Li, J., Li, G., Li, C., ...  & Li, L. ( 2023 , July). Elevator Fault Prediction and Early 
+
+Warning Method Based on ERNIE Pre -training. In  2023  2nd Conference on Fully Actuated System Theory 
+
+and Applications (CFASTA) (pp.  449 -454 ). IEEE. 
+
+[21]  Wang, C., & Feng, S. ( 2020 , October). Research on big data mining and fault prediction based on elevator life 
+
+cycle. In 2020 International Confe rence on Big Data & Artificial Intelligence & Software Engineering 
+
+(ICBASE) (pp. 103 -107 ). IEEE. 
+
+[22]  Wang, K., Dai, G., & Guo, L. ( 2016 , November). Intelligent predictive maintenance (IPdM) for elevator 
+
+service -through CPS, IOT&S and data mining. In 6th Intern ational Workshop of Advanced Manufacturing 
+
+and Automation (pp. 1-6). Atlantis Press. 
+
+[23]  An, Z., Bai, D., Huang, Y., Ning, W., Deng, Y., Gan, N., & Liu, S. ( 2021 , May). Building elevator safety 
+
+monitoring system based on the BIM technology. In Journal of Physics: Conference Series (Vol. 1939 , No. 1,
+
+p. 012026 ). IOP Publishing. 
+
+[24]  Yan, X., Xu, S., Zhang, Y., & Li, B. ( 2024 , May). ELEvent: An Abnormal Event Detection S ystem in Elevator 
+
+Cars. In 2024 27 th International Conference on Computer Supported Cooperative Work in Design (CSCWD) 
+
+(pp. 675 -680 ). IEEE. 
+
+[25]  Qiu, J., Qiu, B., & Yang, L. ( 2022 ).  Fault prediction of elevator door lock based on MPGA -BP algorithm. In 
+
+Journal o f Physics: Conference Series (Vol.  2179 , No.  1, p.  012030 ). IOP Publishing. 
+
+[26]  Chen, L., Lan, S., & Jiang, S. ( 2019 , November).  Elevators fault diagnosis based on artificial intelligence. In 
+
+Journal of Physics: Conference Series (Vol.  1345 , No.  4, p.  042024 ).  IOP Publishing. 
+
+[27]  Xiaowei Feng,Jiayu Fu,Zhili Zhang,Jingjie Li,Tianyu Li & Minrui Zhao. ( 2024 ). A study on long -term 
+
+industrial electricity consumption and carbon emission forecasting methods based on TimesNet models. 
+
+Journal of Physics: Conference Series( 1), 012019 -012019 .TIMESNET ELEVATOR OP ERATION ACCIDENT PRE DICTION FUSING 51 
+
+[28]  Changping Xie,Xinjian Fang & Xu Yang. (2024 ). Improved Kalman Filtering Algorithm Based on 
+
+Levenberg –Marquart Algorithm in Ultra -Wideband Indoor Positioning. Sensors( 22 ), 7213 -7213 .
+
+[29]  Ausrukona Ray,Md. Zasim Uddin,Kamrul Hasan,Zinat Rahman Melody,Prodip Kumar Sarker & Md Atiqur 
+
+Rahman Ahad. ( 2024 ). Multi -Biometric Feature Extraction from Multiple Pose Estimation Algorithms for 
+
+Cross -View Gait Recognition. Sensors( 23 ), 7669 -7669 .
+
+[30]  Jialin Liu,Chen Gong,Suhua Chen & Nanrun Zhou. ( 2023 ). Multi -Ste p-Ahead Wind Speed Forecast Method 
+
+Based on Outlier Correction, Optimized Decomposition, and DLinear Model. Mathematics( 12 ).

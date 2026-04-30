@@ -1,0 +1,2352 @@
+Title: Analysis of the Antrim County, Michigan, November 2020 Election Incident
+
+URL Source: https://content.govdelivery.com/attachments/MISOS/2021/03/26/file_attachments/1736734/Antrim.pdf
+
+Published Time: Fri, 26 Mar 2021 20:51:25 GMT
+
+Markdown Content:
+## Analysis of the Antrim County, Michigan November 2020 Election Incident 
+
+> J. Alex Halderman
+> March 26, 2021
+
+## Contents 
+
+1 Overview . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31.1 Summary of Findings . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31.2 Summary of the Incident . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 41.3 Organization of this Report . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 62 Background . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 72.1 Antrim County’s Election Technology . . . . . . . . . . . . . . . . . . . . . . . . 72.2 The November 2020 Election in Antrim County . . . . . . . . . . . . . . . 82.3 Materials Examined for this Report . . . . . . . . . . . . . . . . . . . . . . . . . . 83 Discrepancies in County-Level Reporting . . . . . . . . . . . . . . . . . . . . . . . . . . 11 3.1 Preparations for the Election . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 11 3.2 Events on Election Night . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 13 3.3 How the Voting System Represents Ballots and Votes . . . . . . . . . . 16 3.4 Effects of the Ballot Design Changes . . . . . . . . . . . . . . . . . . . . . . . . . 17 3.5 Why Cards Failed to Load . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 19 3.6 Effects on the Presidential Contest . . . . . . . . . . . . . . . . . . . . . . . . . . 21 3.7 Anomalies in the Second Results Report . . . . . . . . . . . . . . . . . . . . . 24 3.8 Data Entry Errors Corrected After Certification . . . . . . . . . . . . . . . 25 3.9 Confirming that All Reporting Errors have been Corrected . . . . . 26 4 Discrepancies in the Scanner Poll Tapes . . . . . . . . . . . . . . . . . . . . . . . . . . . 28 4.1 Logic and Accuracy Testing . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 28 4.2 Use of Outdated Ballots and Election Definitions . . . . . . . . . . . . . . 29 4.3 Effects in Warner Township . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30 4.4 Effects in Mancelona . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 30 4.5 Effects in Central Lake . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 31 4.6 Additional Discrepancies in the Central Lake Scans . . . . . . . . . . . . 36 4.7 Results of the Presidential Hand Count . . . . . . . . . . . . . . . . . . . . . . 38 5 Response to ASOG Report . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40 5.1 Claims Regarding Adjudication . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 40 5.2 Claims Regarding Errors and Error Rates . . . . . . . . . . . . . . . . . . . . 41 5.3 Claims Regarding Log Entries . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 42 5.4 Claims Regarding Software Updates . . . . . . . . . . . . . . . . . . . . . . . . . 43 5.5 Claims Regarding Central Lake and Mancelona Townships . . . . . . 44 5.6 Claims Regarding Venezuela . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 44 5.7 Claims Regarding Security Problems . . . . . . . . . . . . . . . . . . . . . . . . . 45 6 Conclusion . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 47 7 Recommendations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 49 A Qualifications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 54 1 Overview 
+
+On the night of the November 3, 2020, general election, Antrim County, Michigan published inaccurate unofficial results, attracting national attention (e.g., [29]). Totals in the presidential race and other contests were initially misreported by up to several thousand votes [3], and over the next three weeks, the county restated its results four times to correct this and other errors [4–7]. Antrim’s presidential results have since been confirmed by examining the paper ballots in a county-wide hand count [21] and further affirmed by a state-wide risk-limiting audit [24]. Nevertheless, the incident in Antrim raises several questions: What caused the errors? Are they evidence of a cyberattack or other foul play? Have they been fully corrected? Could similar problems affect other localities? What should be done to prevent such issues in the future? The Michigan Secretary of State and the Department of Attorney General asked me to perform a forensic investigation of the incident in order to answer these questions. I analyzed data from Antrim County’s election management system (EMS) and from the memory cards used in the county’s ballot scanners. Using this data, I reconstructed the events that led to the initially erroneous results. I was able to precisely account for the discrepancies and identify the underlying causes. I also electronically recounted the votes using data from the memory cards to further check the accuracy of the final reported totals. 
+
+1.1 Summary of Findings 
+
+On the basis of my investigation, I draw several main findings and conclusions: 
+
+– The explanations provided by the county [2] and the Department of State [23] are correct that the inaccurate unofficial results were a consequence of human errors, but the problems were somewhat more complicated than initially understood. The human errors that initiated the incident were compounded by gaps in election procedures and their adherence. The election software also could have done more to help election staff avoid making mistakes that could lead to erroneous results. 
+
+– Although vulnerabilities in election technology are well documented (see, e.g., [11, 27]), the Antrim County incident was not caused by a security breach. There is also no credible evidence that it was caused deliberately. While this report is not a comprehensive security review of Antrim’s voting system, I note in passing some opportunities for security improvements. 
+
+– The major discrepancies in Antrim’s results have been fully corrected. The final results match the poll tapes printed by the individual ballot scanners, and there is no evidence that the poll tapes are inaccurate, except for in specific precincts where particular circumstances I explain affected small numbers of votes, mainly in down-ballot races. These remaining errors affect too few votes to change the outcome of any contest but the Central Lake 3Village Marihuana 1 Retailer Initiative, for which the final reported outcome is potentially incorrect due to the omission of a single vote because of a separate human error. 
+
+– The incident in Antrim County arose due to the county’s mishandling of last-minute ballot design changes, a circumstance that is unlikely to have occurred widely in Michigan during the 2020 election. Nevertheless, in Antrim, several layers of protections that are supposed to ensure accuracy broke down due to human errors on multiple levels, including mistakes by county and township staff while operating the election technology, procedural missteps while processing ballots in some localities, and the failure of the county canvassers to detect lingering discrepancies. These failings suggest a need for greater oversight of county and local election administration in Michigan. I also recommend several changes to election technology, training, and procedures in order to better guard against similar problems in future elections. 
+
+1.2 Summary of the Incident 
+
+My analysis shows that the incident in Antrim County unfolded as follows: 1. In October, Antrim changed three ballot designs to correct local contests after the initial designs had already been loaded onto the memory cards that configure the ballot scanners. For technical reasons, all memory cards should have been updated following the changes. Antrim used the new designs in its election management system and updated the memory cards for one affected township, but it did not update the memory cards for any other scanners. 2. When the changes were made, a small number of voters had already received absentee ballots reflecting the initial designs. These voters were mailed revised ballots, but some of the initial ballots were voted. Protections ensured that at most one ballot was accepted from each voter, but there was no technical or procedural mechanism in place to distinguish between the different versions of the ballot designs. 3. Local staff performed logic and accuracy testing to ensure that the scanners were working. However, testing was not repeated after the ballot design changes, except in the one township where the memory cards were updated. The county did not test loading scanner results into its election management system, which the state recommends but does not require. 4. On election day, the scanners appear to have functioned normally for ballots that matched the ballot designs on their memory cards. However, they were not configured to handle the initial and revised ballot designs simultaneously, which caused inaccurate results in specific down-ballot contests in the three precincts where ballot designs had changed. In all other precincts, the results on the poll tapes from individual scanners were unaffected by this problem. 
+
+> 1This is the spelling used in the title of the initiative and in Michigan statutes.
+
+45. After polls closed, the county loaded results from the memory cards into its election management system for reporting. Three cards failed to load and were entered manually from the poll tapes. The other 15 cards appeared to load normally, but 13 had not been updated after the ballot design changes. Internally, the Dominion voting system uses a sequence of numbers to identify all available choices across all ballot designs. The scanners use these identifiers to record voter selections. The ballot design changes had the effect of altering the expected candidate identifiers in most of the county’s precincts. When memory cards that used the old identifiers were interpreted by the election management system using the new identifiers, votes were assigned to the wrong candidates, causing large errors in the initial reported results for most contests in all but a few precincts. The election management system did not alert the operator about this problem while loading the results. 6. County staff, who finished generating the initial unofficial results at 4 a.m. on election night, apparently did not review them closely enough to detect the ob-vious discrepancies before publishing them. A few hours later, Antrim learned that the initial results were erroneous and took them down. Staff manually en-tered results from the poll tapes for the affected scanners, and the county pub-lished revised unofficial results on November 5. However, county staff neglected to remove some of the inaccurate data that had been loaded from the memory cards, so the reported totals in some precincts were the sum of the corrected and erroneous results. The county took down the results again to correct this. 7. In one locality, Central Lake Village, the election day poll tape showed the wrong school board race, because, although the ballot design had been changed to include the correct race, the scanner’s configuration had not been updated to reflect this. On November 6, Central Lake rescanned its ballots using the updated configuration, and the results were incorporated into the county’s certified results published that day. However, the evidence I exam-ined suggests that three ballots from Central Lake Village that were scanned on election day were not rescanned—potentially due to human error—and are not included in the final results. One of these ballots, if it is actually valid, would likely change the outcome of the Central Lake Village Marihuana Retailer Initiative, which was decided by a single vote. 8. Antrim’s November 6 certified results contained data entry errors that oc-curred when results were entered manually to correct the initial reporting problem. These errors should have been detected during the county canvass but were not. The county restated its results on November 16 to correct some of the data entry errors and again on November 21 to correct the reminder. 9. The final certified results match the scanner poll tapes in essentially all cases. However, my analysis shows that both the poll tapes and the final results are inaccurate with respect to a few down-ballot contests in the three precincts where ballot designs changed, as a result of the county’s failure to appropriately distinguish between ballots voted using the old and new ballot designs. The largest discrepancy is in Central Lake Village, where the poll 5tape is inaccurate for the Central Lake Schools school board contest and State Proposal 20-1. I estimate that approximately 72 ballots are affected. Small numbers of votes may also have been affected in Mancelona Village for the Village Trustee race and in Warner Township for the Boyne Falls Public Schools Sinking Fund Millage Proposal. The circumstances that caused these discrepancies did not affect any other contests and do not affect enough votes to change the outcome of any contest. 10. In December, the state conducted a county-wide hand count of the presi-dential contest that agreed with the final reported results to within 0.08%. In January, the state conducted a state-wide risk-limiting audit of the pres-idential contest that affirmed the reported outcome. These findings and my analysis all support the conclusion that there are no significant errors in Antrim County’s final presidential results. 
+
+1.3 Organization of this Report 
+
+In Section 2, I describe Antrim County’s voting system and the data from it that I examined. In Section 3, I investigate and explain the discrepancies that occurred during county-level reporting. In Section 4, I investigate and explain the discrepancies that occurred on poll tapes from individual scanners. In Section 5, I respond to the report prepared by Allied Security Operations Group. In Section 6, I state additional conclusions, and in Section 7, I offer a series of recommendations for preventing similar problems in future elections. My own qualifications and background are stated in Appendix A. 62 Background 
+
+2.1 Antrim County’s Election Technology 
+
+In 2017 and 2018, Michigan deployed new voting equipment [30]. County and local clerks selected from among three approved systems produced by different vendors. Antrim County adopted the Democracy Suite system produced by Dominion Voting Systems, consisting of ImageCast Precinct (ICP) ballot scanners, ImageCast X (ICX) ballot-marking devices (BMDs), 2 and the Democracy Suite election management system (EMS). As deployed in Antrim, the EMS consists of a single desktop PC running specialized software for election preparation and results aggregation and reporting. Antrim uses Democracy Suite version 5.5, which is federally certified by the U.S. Election Assistance Commission [31]. During a typical election, Antrim’s equipment operates as follows: 1. Election preparation. Before the election, workers design the ballots using Election Event Designer (EED), one of several modular components of the EMS software [8]. They create an “election project” (a database corresponding to the election) and define the contests and choices for each precinct. EED then generates ballot designs for printing and election definition files (digital descriptions of the ballot designs) for use by the scanners and BMDs. 3
+
+Like most Michigan counties, Antrim outsources these steps to a service provider, in this case Grand Rapids-based ElectionSource. ElectionSource sends the county an “election package”—a file containing the election project, ballot designs, election definitions, and other associated data. The county imports these into its EMS and loads the election definitions onto memory cards used by the scanners and USB sticks used with the BMDs [8]. Finally, townships load the memory cards into their scanners and perform logic and accuracy (L&A) testing. In this process, workers scan ballots with known selections and confirm that the scanners produce accurate results [13, 19]. 2. Voting and counting. Vote counting begins on election day. In-person voters insert their ballots into the scanners, which tabulate the selections and retain the physical ballots in a ballot box. To process absentee ballots, most localities have poll workers feed them into the same scanners used for in-person voting. Other localities operate separate absent voter counting boards (“AV boards” or “AVCBs”) with dedicated scanners [15]. The scanners count votes by detecting marks in particular ballot locations called “voting targets”, which are specified by the election definition on the 
+
+> 2In Michigan, most voters mark ballots by hand, but each poll place also provides one or more touch-screen BMDs that voters may use to mark and print their ballots. Michigan election procedures refer to the BMDs as “voter-assist terminals” or VATs.
+> 3Although Michigan election procedures sometime refer to election definitions as “programming” or “programs” [13, 14], in the Dominion system they are not computer programs in the sense of “software” but rather collections of data files. It is incorrect to characterize changing the election definition as a “software update.”
+
+7scanner’s memory card. If the area within a voting target is darker than a set threshold, the scanner treats the target as marked. For each ballot, the scanner records which voting targets were marked on its memory card. 4
+
+After all ballots have been scanned, the scanner prints a “poll tape,” a paper record showing the number of votes recorded for each choice. Poll workers sign the poll tape and return it, along with the the scanner memory card, to the county [14]. The paper ballots are retained by the locality. 3. Reporting. County workers use the EMS to aggregate results. An EMS appli-cation called Results Tally & Reporting (RTR) [9] loads vote data from the scanner memory cards and stores it in the election project database. Workers then use RTR to generate a report containing results from the entire county. Antrim publishes these result reports on its county website. 4. Post-election verification. Several post-election activities involve checks of the accuracy of results. Before the Board of County Canvassers certifies the results, it is supposed to compare the reported totals from the EMS to the poll tape from each scanner [17]. The paper ballots and other records are required to be securely retained, and candidates can petition for a hand recount [16]. In addition, the state audits some selected precincts to verify procedural compliance and accuracy [18]. The state also recently began con-ducting risk-limiting audits, in which randomly sampled ballots are inspected to confirm the accuracy of the reported outcome for particular contests [22]. 
+
+2.2 The November 2020 Election in Antrim County 
+
+For the November 2020 election, Antrim used 18 scanners. Most of the 15 townships operated a single scanner, but Mancelona Township used two, and an additional two scanners were used for AV counting boards in Elk Rapids and Milton townships. Within each township, there were up to four ballot designs (for residents of villages versus unincorporated areas, or for voters within different school districts), for a total of 43 ballot designs. According to the final results, 16,044 votes were cast from among 22,082 registered voters, a turnout of 73%. The county posted five sets of election results, dated November 4, 5, 6, 16, and 21 [3–7]. Each had widespread differences from the one before, and in some instances candidates gained or lost more than 5000 votes. The results and differences for the first four contests are summarized in Table 1. 
+
+2.3 Materials Examined for this Report 
+
+I examined a forensic image of the hard drive from Antrim County’s EMS. The image was provided by the Department of Attorney General; it appears to be the image described in §F and §G of the Allied Security Operations Group (ASOG) report [1], which says ASOG collected it on December 6. I also examined forensic 
+
+> 4The ICP scanners can also store a digital image of each ballot, but this is an optional feature that was not enabled in Antrim County during the November election.
+
+8Results published on: Difference:                                                                                                                                                                  
+
+> 11/4 11/5 11/6 11/16 11/21 b−ac−bd−ce−d
+> (a)(b)(c)(d)(e)President Biden 7769 7289 5960 5960 5960 −480 −1329 00Trump 4509 9783 9748 9748 9748 5274 −35 00Jorgensen 93 197 189 189 189 104 −800Blankenship 20 22 16 16 16 2−600De La Fuente 12 8888−4000Hawkins 20 28 28 28 28 8000U.S. Sen. Peters 7863 6807 5441 5758 5758 −1056 −1366 317 0Squier 47 81 79 83 86 34 −243James 4484 9345 9340 9924 9924 4861 −5584 0Willis 91 960 81 82 82 869 −879 10Dern 19 26 26 27 27 7010U.S. Rep. Ferguson 7745 6603 5235 5235 5235 −1142 −1368 00Bergman 4794 10344 10292 10292 10292 5550 −52 00Boren 125 266 263 263 263 141 −300State Rep. Burke 7697 6143 4800 4800 5578 −1554 −1343 0778 Borton 4529 8772 8761 8761 9936 4243 −11 01175
+
+Table 1: Election Results. Antrim published five results reports, two labeled unofficial ( a, b) and three labeled official ( c, d, e). Results and differences for the first five contests are shown here, but many others were also in error. The initial report ( a) was badly incorrect due to the election definition mismatch. The second report ( b) added results entered by hand from poll tapes but failed to remove all of the bad data. The third ( c) fixed this, but the manual inputs contained data entry errors that were corrected in two subsequent reports ( d, e). images of the 18 compact flash memory cards used in Antrim’s ICP scanners. At my request, Michigan Bureau of Elections personnel inserted each card into a Digital Intelligence USB 3.0 Forensic Card Reader (in write-blocking mode, to ensure the cards were not inadvertently modified) and used the AccessData FTK Imager application to make a complete copy of the data. Table 2 lists the hashes of these data sources. Several kinds of data were relevant for my analysis. I will describe others later, but one of the most important was the EMS database. Democracy Suite uses the Microsoft SQL Server database engine, and data for each election project is maintained in a separate database. I extracted the database corresponding to the November 2020 election, which is stored in the files /Databases/Antrim November 2020-2020-08-03-12-38-25.mdf and .ldf . I analyzed it using Microsoft SQL Server Management Studio and purpose-built software that I wrote in Python. In reconstructing the sequence of events, I made repeated use of log files stored in the EMS and memory cards. The election database records the actions that users perform on the election project in a table named UserLog . These log 9Description SHA-256 Hash of Forensic Image 
+
+Computer hard drive: 
+
+County EMS 1d0d7248a0d1db99051a164766a08c895f67f358a58046102e06c20ad4785d81 
+
+Ballot scanner memory cards: 
+
+Banks 784ccc460346ba85554c4798f9a1711cd73c860eaea58fa458ac241b049d2510 
+
+Central Lake 5bd0798b4a21edd390bee784519764fccc4369bdda6dbe1cafbdf28c11a098bd 
+
+Chestonia 48a55e328dcf1816b42a0163a334bb4cf35fa964f1c5460ebc7a4b3fe1a2a474 
+
+Custer 1cc9a044a69567a7a38f45892b91c32a4acf631699ad1b4d9d9fbfe72e28e433 
+
+Echo 371eb895e922cd2d36cf1859c1d84df01e6fd9176132ec86c889930a20c1a8f8 
+
+Elk Rapids 1 ad69dfcadf17b5bb3a744417daae2251aca0f19ccf34af7b5e732a688a4f68f5 
+
+Elk Rapids AV 3d4ffc1d8f3ef2b336e5934f0ab98048ad0e24c96efd027f539c68239f6cdbac 
+
+Forest Home a93c1021367b93ebc89957b5d0c5df6828c885877b2640bf4495441bbe7df474 
+
+Helena 529bc91c0d012ef4df947898d8fbde3e0d1c5f430e374080c2e52fb29d02e565 
+
+Jordan c2fc4e0e50ca56d55cfa9b2111b120f319be602e357dd09fa12c14203297f3d7 
+
+Kearney 2cd3fccb9640738fb062da32d3bb1ea1e4bbafc2e97ca70d87863d12cc8fd38c 
+
+Mancelona 1 35f7d069f5556ea9aed3727a0433819b6940cb3474579cf969d2cc208324fbae 
+
+Mancelona 2 8931572f6aaeff7c7f80000ca6958da172660b9e3e8d40c073c48008593aa572 
+
+Milton 1 386390a3edfa366bb12c8263825d96b51d63a9a4711685edbd7c63fe38e2ba4a 
+
+Milton AV 255e1e27daadadbfc7ecc64d1a2c9a8e4f9cf7c65c21e9f18a2ff615dc041d09 
+
+Star 9aed3328e89ac4a98ac8ff8877a99b400f092f04a71b738b3e56579384a60379 
+
+Torch Lake 60bf46c9fb769fa6a2d238bb1d34387c0854594c9b83c72723ff306dd6abd775 
+
+Warner 8132a7e3bf7ac839152d7c6f6f68e9d1316911039241a49f23489a1c2d8e1801 
+
+Table 2: Data Sources. These are the hashes of the forensic images I examined. The data was collected from the EMS hard drive and 18 scanner memory cards. entries extended back to the creation of the election project. Each memory card also contains a detailed log of events that occurred on the scanner, in a file named 
+
+slog.txt . These logs extend back to time that each card was initialized, and the EMS stores a copy in the election database when each card is loaded. I further analyzed the EMS by booting a copy of the hard drive in a virtual machine and interacting with the software. Notably, I was able to do so without Antrim County providing any passwords. The EMS runs Windows 10, and I circumvented the Windows account passwords using a well-known technique [28]. Microsoft SQL Server Management Studio was already installed on the system, and I found that I could use it to view and edit the election databases with no additional passwords. Within the D-Suite application software, each election project is individually password protected. However, I circumvented this by creating a new project with a known password, extracting the password hash from the project’s database, and copying it into the databases for the other projects. Performing similar steps on the real EMS would require physical access to the computer or the hard drive, and I have been informed that Antrim County applies physical controls to limit such access to authorized personnel. 10 3 Discrepancies in County-Level Reporting 
+
+The first part of my investigation concerns errors that were introduced in the course of aggregating and reporting results from precincts across the county, including the major discrepancies in the initial results posted on November 4. I reconstruct the events that led to the errors, explain their causes, and verify that they have been corrected. My analysis confirms that the final reported results match the results obtained by the individual scanners. 
+
+3.1 Preparations for the Election 
+
+The sequence of events that led to the reporting discrepancies began long before the election, during the process of designing the ballots. According to a timeline produced by Antrim County [2], the county received initial proofs of the ballot designs from ElectionSource on September 5. After a series of corrections, county staff approved the designs on September 18 and received a flash drive from ElectionSource containing the election package on September 29. County staff loaded the election package into the EMS, copied the election definition files for the scanners and BMDs to removable media, and distributed the media to localities for use in the election. The memory card logs show that townships loaded the media into their scanners and BMDs and performed logic-and-accuracy testing on various dates in October. Typically, the ballot designs and election definitions would have remained unchanged from this point on. However, according to Antrim’s timeline, on October 5 and 7, the county alerted ElectionSource about errors that had been identified in three of the ballot designs, which affected parts of Central Lake, Mancelona, and Warner townships. ElectionSource applied the corrections and provided a revised election package on October 23. The election project log shows that Antrim loaded the revised election package into its EMS that day. At this point, county staff should have updated the removable media for every scanner and BMD in the county to ensure that their election definitions matched the EMS’s. In fact, the only scanners that were updated before election day were the two in Mancelona Township. This would prove to be a consequential mistake. 
+
+Election Packages By inspecting the EMS image, I identified an election package file with metadata indicating that it was created and last accessed on September 29. The file is located at /Users/EMSADMIN/Desktop/Project Package/Project Package/Antrim November 2020-2020-08-03-12-38-25 package.zip .It appears to be a backup of the first election package provided by ElectionSource on September 29. I will refer to this file as the initial election package. I also identified an election package file with metadata indicating that it was created and last accessed on October 23. It is located at /Users/EMSADMIN/ Desktop/Project Package/Antrim November 2020-2020-08-03-12-38-25 package.zip .It appears to be a backup of the second election package provided by Election-Source. I will refer to this file as the revised election package. 11 Township 
+
+Nonpartisan Section 
+
+Judicial 
+
+Intermediate School District 
+
+Intermediate School District 
+
+Village 
+
+Local School District 
+
+Proposal Section 
+
+State 
+
+State 
+
+Village 
+
+Clerk 
+
+Vote for not more than 1
+
+Judy Kosloski 
+
+Republican 
+
+Treasurer 
+
+Vote for not more than 1
+
+Andrew Smith 
+
+Republican 
+
+Trustee 
+
+Vote for not more than 2
+
+Patrick Hanlon 
+
+Republican 
+
+Pat Marshall 
+
+Republican 
+
+Justice of Supreme Court 
+
+Vote for not more than 2
+
+Mary Kelly 
+
+Bridget Mary McCormack 
+
+Justice of Supreme Court 
+
+Kerry Lee Morgan 
+
+Katherine Mary Nepton 
+
+Brock Swartzle 
+
+Elizabeth M. Welch 
+
+Susan L. Hubbard 
+
+Judge of Court of Appeals 
+
+4th District 
+
+Incumbent Position 
+
+Vote for not more than 2
+
+Michael J. Kelly 
+
+Judge of Court of Appeals 
+
+Amy Ronayne Krause 
+
+Judge of Court of Appeals 
+
+Judge of Court of Appeals 
+
+4th District 
+
+Non-Incumbent Position 
+
+Vote for not more than 1
+
+Michelle Rick 
+
+Judge of Circuit Court 
+
+13th Circuit 
+
+Incumbent Position 
+
+Vote for not more than 1
+
+Kevin A. Elsenheimer 
+
+Judge of Circuit Court 
+
+Board Member 
+
+Charlevoix-Emmet Intermediate 
+
+School District 
+
+6 Year Term 
+
+Vote for not more than 3
+
+Thelma A. Chellis 
+
+Jean E. Frentz 
+
+Mary P. Jason 
+
+Board Member 
+
+Charlevoix-Emmet Intermediate 
+
+School District 
+
+Partial Term Ending 12/31/2024 
+
+Vote for not more than 1
+
+Larry Cassidy 
+
+Board Member 
+
+Charlevoix-Emmet Intermediate 
+
+School District 
+
+Partial Term Ending 12/31/2022 
+
+Vote for not more than 1
+
+President 
+
+Village of Central Lake 
+
+Vote for not more than 1
+
+Rob Tyler 
+
+Trustee 
+
+Village of Central Lake 
+
+Vote for not more than 3
+
+Bill Chapman 
+
+John Michael Ring 
+
+Board Member 
+
+Ellsworth Schools 
+
+Vote for not more than 2
+
+Mark Edward Groenink 
+
+Christopher Wallace 
+
+Proposal 20-1 
+
+A proposed constitutional amendment 
+
+to allow money from oil and gas mining 
+
+on state-owned lands to continue to be 
+
+collected in state funds for land 
+
+protection and creation and 
+
+maintenance of parks, nature areas, and 
+
+public recreation facilities; and to 
+
+describe how money in those state 
+
+funds can be spent 
+
+This proposed constitutional amendment would: 
+
+Allow the State Parks Endowment Fund to ·
+
+continue receiving money from sales of oil 
+
+and gas from state-owned lands to 
+
+improve, maintain and purchase land for 
+
+State parks, and for Fund administration, 
+
+until its balance reaches $800,000,000. 
+
+Require subsequent oil and gas revenue ·
+
+from state-owned lands to go into the 
+
+Natural Resources Trust Fund. 
+
+Require at least 20% of Endowment Fund ·
+
+annual spending go toward State park 
+
+improvement. 
+
+Require at least 25% of Trust Fund annual ·
+
+spending go toward parks and public 
+
+recreation areas and at least 25% toward 
+
+land conservation. 
+
+Should this proposal be adopted? 
+
+Yes 
+
+No 
+
+Proposal 20-2 
+
+A proposed constitutional amendment 
+
+to require a search warrant in order to 
+
+access a person’s electronic data or 
+
+electronic communications 
+
+This proposed constitutional amendment would: 
+
+Prohibit unreasonable searches or ·
+
+seizures of a person’s electronic data and 
+
+electronic communications. 
+
+Require a search warrant to access a·
+
+person’s electronic data or electronic 
+
+communications, under the same 
+
+conditions currently required for the 
+
+government to obtain a search warrant to 
+
+search a person’s house or seize a
+
+person’s things. 
+
+Should this proposal be adopted? 
+
+Yes 
+
+No 
+
+A Proposed Initiated Ordinance to 
+
+Authorize One (1) Marihuana Retailer 
+
+Establishment Within the Village of 
+
+Central Lake 
+
+This ordinance would: 
+
+Authorize one (1) marihuana retailer ·
+
+establishment within the Village of Central 
+
+Lake 
+
+Require a person to obtain a permit from ·
+
+the Village before operating the 
+
+marihuana retailer establishment within 
+
+the Village. The permit would be valid for 
+
+one calendar (1) year and subject to 
+
+renewal annually. The permit must be 
+
+displayed in a conspicuous location in the 
+
+building. 
+
+Require, if more than one application is ·
+
+submitted for the marihuana retail 
+
+establishment, that the Village Council 
+
+rank the applications based on the criteria 
+
+specified in the ordinance. 
+
+Require that marihuana retail ·
+
+establishment be located in the 
+
+appropriate zoning district by amendment 
+
+of the Village of Central Lake Zoning 
+
+Ordinance. 
+
+Allow an issued permit from the Village to ·
+
+be transferred to another location within 
+
+the Village and to a different individual or 
+
+entity upon written approval from the 
+
+Village Clerk and the state, provided the 
+
+different location is within an allowed 
+
+zoning district and the different individual 
+
+or entity complies with the requirements of 
+
+the ordinance. 
+
+Impose a fee to help defray administrative ·
+
+and enforcement costs for the initial permit 
+
+and each renewal permit, but not to 
+
+exceed $5,000 each. 
+
+Allow revocation or suspension of an ·
+
+issued permit by the Village Clerk for any 
+
+violation of the ordinance, after written 
+
+notice and public hearing. 
+
+Make a violation of the ordinance a·
+
+municipal civil infraction, subject to a fine 
+
+of not more than $500. 
+
+Should this ordinance be enacted? 
+
+Yes 
+
+No 
+
+VOTE BOTH FRONT AND BACK OF BALLOT 1107 Township 
+
+Nonpartisan Section 
+
+Judicial 
+
+Intermediate School District 
+
+Intermediate School District 
+
+Village 
+
+Local School District 
+
+Proposal Section 
+
+State 
+
+State 
+
+Village 
+
+Clerk 
+
+Vote for not more than 1
+
+Judy Kosloski 
+
+Republican 
+
+Treasurer 
+
+Vote for not more than 1
+
+Andrew Smith 
+
+Republican 
+
+Trustee 
+
+Vote for not more than 2
+
+Patrick Hanlon 
+
+Republican 
+
+Pat Marshall 
+
+Republican 
+
+Justice of Supreme Court 
+
+Vote for not more than 2
+
+Mary Kelly 
+
+Bridget Mary McCormack 
+
+Justice of Supreme Court 
+
+Kerry Lee Morgan 
+
+Katherine Mary Nepton 
+
+Brock Swartzle 
+
+Elizabeth M. Welch 
+
+Susan L. Hubbard 
+
+Judge of Court of Appeals 
+
+4th District 
+
+Incumbent Position 
+
+Vote for not more than 2
+
+Michael J. Kelly 
+
+Judge of Court of Appeals 
+
+Amy Ronayne Krause 
+
+Judge of Court of Appeals 
+
+Judge of Court of Appeals 
+
+4th District 
+
+Non-Incumbent Position 
+
+Vote for not more than 1
+
+Michelle Rick 
+
+Judge of Circuit Court 
+
+13th Circuit 
+
+Incumbent Position 
+
+Vote for not more than 1
+
+Kevin A. Elsenheimer 
+
+Judge of Circuit Court 
+
+Board Member 
+
+Charlevoix-Emmet Intermediate 
+
+School District 
+
+6 Year Term 
+
+Vote for not more than 3
+
+Thelma A. Chellis 
+
+Jean E. Frentz 
+
+Mary P. Jason 
+
+Board Member 
+
+Charlevoix-Emmet Intermediate 
+
+School District 
+
+Partial Term Ending 12/31/2024 
+
+Vote for not more than 1
+
+Larry Cassidy 
+
+Board Member 
+
+Charlevoix-Emmet Intermediate 
+
+School District 
+
+Partial Term Ending 12/31/2022 
+
+Vote for not more than 1
+
+President 
+
+Village of Central Lake 
+
+Vote for not more than 1
+
+Rob Tyler 
+
+Trustee 
+
+Village of Central Lake 
+
+Vote for not more than 3
+
+Bill Chapman 
+
+John Michael Ring 
+
+Board Member 
+
+Central Lake Schools 
+
+Vote for not more than 3
+
+Melanie Eckhardt 
+
+Keith Shafer 
+
+Proposal 20-1 
+
+A proposed constitutional amendment 
+
+to allow money from oil and gas mining 
+
+on state-owned lands to continue to be 
+
+collected in state funds for land 
+
+protection and creation and 
+
+maintenance of parks, nature areas, and 
+
+public recreation facilities; and to 
+
+describe how money in those state 
+
+funds can be spent 
+
+This proposed constitutional amendment would: 
+
+Allow the State Parks Endowment Fund to ·
+
+continue receiving money from sales of oil 
+
+and gas from state-owned lands to 
+
+improve, maintain and purchase land for 
+
+State parks, and for Fund administration, 
+
+until its balance reaches $800,000,000. 
+
+Require subsequent oil and gas revenue ·
+
+from state-owned lands to go into the 
+
+Natural Resources Trust Fund. 
+
+Require at least 20% of Endowment Fund ·
+
+annual spending go toward State park 
+
+improvement. 
+
+Require at least 25% of Trust Fund annual ·
+
+spending go toward parks and public 
+
+recreation areas and at least 25% toward 
+
+land conservation. 
+
+Should this proposal be adopted? 
+
+Yes 
+
+No 
+
+Proposal 20-2 
+
+A proposed constitutional amendment 
+
+to require a search warrant in order to 
+
+access a person’s electronic data or 
+
+electronic communications 
+
+This proposed constitutional amendment would: 
+
+Prohibit unreasonable searches or ·
+
+seizures of a person’s electronic data and 
+
+electronic communications. 
+
+Require a search warrant to access a·
+
+person’s electronic data or electronic 
+
+communications, under the same 
+
+conditions currently required for the 
+
+government to obtain a search warrant to 
+
+search a person’s house or seize a
+
+person’s things. 
+
+Should this proposal be adopted? 
+
+Yes 
+
+No 
+
+A Proposed Initiated Ordinance to 
+
+Authorize One (1) Marihuana Retailer 
+
+Establishment Within the Village of 
+
+Central Lake 
+
+This ordinance would: 
+
+Authorize one (1) marihuana retailer ·
+
+establishment within the Village of Central 
+
+Lake 
+
+Require a person to obtain a permit from ·
+
+the Village before operating the 
+
+marihuana retailer establishment within 
+
+the Village. The permit would be valid for 
+
+one calendar (1) year and subject to 
+
+renewal annually. The permit must be 
+
+displayed in a conspicuous location in the 
+
+building. 
+
+Require, if more than one application is ·
+
+submitted for the marihuana retail 
+
+establishment, that the Village Council 
+
+rank the applications based on the criteria 
+
+specified in the ordinance. 
+
+Require that marihuana retail ·
+
+establishment be located in the 
+
+appropriate zoning district by amendment 
+
+of the Village of Central Lake Zoning 
+
+Ordinance. 
+
+Allow an issued permit from the Village to ·
+
+be transferred to another location within 
+
+the Village and to a different individual or 
+
+entity upon written approval from the 
+
+Village Clerk and the state, provided the 
+
+different location is within an allowed 
+
+zoning district and the different individual 
+
+or entity complies with the requirements of 
+
+the ordinance. 
+
+Impose a fee to help defray administrative ·
+
+and enforcement costs for the initial permit 
+
+and each renewal permit, but not to 
+
+exceed $5,000 each. 
+
+Allow revocation or suspension of an ·
+
+issued permit by the Village Clerk for any 
+
+violation of the ordinance, after written 
+
+notice and public hearing. 
+
+Make a violation of the ordinance a·
+
+municipal civil infraction, subject to a fine 
+
+of not more than $500. 
+
+Should this ordinance be enacted? 
+
+Yes 
+
+No 
+
+VOTE BOTH FRONT AND BACK OF BALLOT 1107 (a) Central Lake, Precinct 1V Township 
+
+Nonpartisan Section 
+
+Judicial 
+
+Village 
+
+Local School District 
+
+Proposal Section 
+
+State 
+
+Clerk 
+
+Vote for not more than 1
+
+Michael Biehl 
+
+Republican 
+
+Treasurer 
+
+Vote for not more than 1
+
+Jessie Ayoub 
+
+Republican 
+
+Trustee 
+
+Vote for not more than 2
+
+Yousef M. Jabara 
+
+Democrat 
+
+Rod Vesey 
+
+Republican 
+
+Donna Gundle-Krieg 
+
+Libertarian 
+
+Constable 
+
+Vote for not more than 1
+
+Linden M. Bielecki 
+
+Republican 
+
+Justice of Supreme Court 
+
+Vote for not more than 2
+
+Kerry Lee Morgan 
+
+Katherine Mary Nepton 
+
+Brock Swartzle 
+
+Elizabeth M. Welch 
+
+Susan L. Hubbard 
+
+Mary Kelly 
+
+Bridget Mary McCormack 
+
+Justice of Supreme Court 
+
+Judge of Court of Appeals 
+
+4th District 
+
+Incumbent Position 
+
+Vote for not more than 2
+
+Michael J. Kelly 
+
+Judge of Court of Appeals 
+
+Amy Ronayne Krause 
+
+Judge of Court of Appeals 
+
+Judge of Court of Appeals 
+
+4th District 
+
+Non-Incumbent Position 
+
+Vote for not more than 1
+
+Michelle Rick 
+
+Judge of Circuit Court 
+
+13th Circuit 
+
+Incumbent Position 
+
+Vote for not more than 1
+
+Kevin A. Elsenheimer 
+
+Judge of Circuit Court 
+
+Trustee 
+
+Village of Mancelona 
+
+Vote for not more than 3
+
+Aaron Biehl 
+
+Steven Elder 
+
+Board Member 
+
+Mancelona Schools 
+
+Vote for not more than 3
+
+Kim Musselman 
+
+Tom Ross 
+
+Burt Thompson 
+
+Proposal 20-1 
+
+A proposed constitutional amendment 
+
+to allow money from oil and gas mining 
+
+on state-owned lands to continue to be 
+
+collected in state funds for land 
+
+protection and creation and 
+
+maintenance of parks, nature areas, and 
+
+public recreation facilities; and to 
+
+describe how money in those state 
+
+funds can be spent 
+
+This proposed constitutional amendment would: 
+
+Allow the State Parks Endowment Fund to ·
+
+continue receiving money from sales of oil 
+
+and gas from state-owned lands to 
+
+improve, maintain and purchase land for 
+
+State parks, and for Fund administration, 
+
+until its balance reaches $800,000,000. 
+
+Require subsequent oil and gas revenue ·
+
+from state-owned lands to go into the 
+
+Natural Resources Trust Fund. 
+
+Require at least 20% of Endowment Fund ·
+
+annual spending go toward State park 
+
+improvement. 
+
+Require at least 25% of Trust Fund annual ·
+
+spending go toward parks and public 
+
+recreation areas and at least 25% toward 
+
+land conservation. 
+
+Should this proposal be adopted? 
+
+Yes 
+
+No 
+
+Proposal 20-2 
+
+A proposed constitutional amendment 
+
+to require a search warrant in order to 
+
+access a person’s electronic data or 
+
+electronic communications 
+
+This proposed constitutional amendment would: 
+
+Prohibit unreasonable searches or ·
+
+seizures of a person’s electronic data and 
+
+electronic communications. 
+
+Require a search warrant to access a·
+
+person’s electronic data or electronic 
+
+communications, under the same 
+
+conditions currently required for the 
+
+government to obtain a search warrant to 
+
+search a person’s house or seize a
+
+person’s things. 
+
+Should this proposal be adopted? 
+
+Yes 
+
+No 
+
+VOTE BOTH FRONT AND BACK OF BALLOT 1132 Township 
+
+Nonpartisan Section 
+
+Judicial 
+
+Village 
+
+Local School District 
+
+Proposal Section 
+
+State 
+
+Clerk 
+
+Vote for not more than 1
+
+Michael Biehl 
+
+Republican 
+
+Treasurer 
+
+Vote for not more than 1
+
+Jessie Ayoub 
+
+Republican 
+
+Trustee 
+
+Vote for not more than 2
+
+Yousef M. Jabara 
+
+Democrat 
+
+Rod Vesey 
+
+Republican 
+
+Donna Gundle-Krieg 
+
+Libertarian 
+
+Constable 
+
+Vote for not more than 1
+
+Linden M. Bielecki 
+
+Republican 
+
+Justice of Supreme Court 
+
+Vote for not more than 2
+
+Kerry Lee Morgan 
+
+Katherine Mary Nepton 
+
+Brock Swartzle 
+
+Elizabeth M. Welch 
+
+Susan L. Hubbard 
+
+Mary Kelly 
+
+Bridget Mary McCormack 
+
+Justice of Supreme Court 
+
+Judge of Court of Appeals 
+
+4th District 
+
+Incumbent Position 
+
+Vote for not more than 2
+
+Michael J. Kelly 
+
+Judge of Court of Appeals 
+
+Amy Ronayne Krause 
+
+Judge of Court of Appeals 
+
+Judge of Court of Appeals 
+
+4th District 
+
+Non-Incumbent Position 
+
+Vote for not more than 1
+
+Michelle Rick 
+
+Judge of Circuit Court 
+
+13th Circuit 
+
+Incumbent Position 
+
+Vote for not more than 1
+
+Kevin A. Elsenheimer 
+
+Judge of Circuit Court 
+
+Trustee 
+
+Village of Mancelona 
+
+Vote for not more than 2
+
+Aaron Biehl 
+
+Steven Elder 
+
+Eugene K. Kerr 
+
+Board Member 
+
+Mancelona Schools 
+
+Vote for not more than 3
+
+Kim Musselman 
+
+Tom Ross 
+
+Burt Thompson 
+
+Proposal 20-1 
+
+A proposed constitutional amendment 
+
+to allow money from oil and gas mining 
+
+on state-owned lands to continue to be 
+
+collected in state funds for land 
+
+protection and creation and 
+
+maintenance of parks, nature areas, and 
+
+public recreation facilities; and to 
+
+describe how money in those state 
+
+funds can be spent 
+
+This proposed constitutional amendment would: 
+
+Allow the State Parks Endowment Fund to ·
+
+continue receiving money from sales of oil 
+
+and gas from state-owned lands to 
+
+improve, maintain and purchase land for 
+
+State parks, and for Fund administration, 
+
+until its balance reaches $800,000,000. 
+
+Require subsequent oil and gas revenue ·
+
+from state-owned lands to go into the 
+
+Natural Resources Trust Fund. 
+
+Require at least 20% of Endowment Fund ·
+
+annual spending go toward State park 
+
+improvement. 
+
+Require at least 25% of Trust Fund annual ·
+
+spending go toward parks and public 
+
+recreation areas and at least 25% toward 
+
+land conservation. 
+
+Should this proposal be adopted? 
+
+Yes 
+
+No 
+
+Proposal 20-2 
+
+A proposed constitutional amendment 
+
+to require a search warrant in order to 
+
+access a person’s electronic data or 
+
+electronic communications 
+
+This proposed constitutional amendment would: 
+
+Prohibit unreasonable searches or ·
+
+seizures of a person’s electronic data and 
+
+electronic communications. 
+
+Require a search warrant to access a·
+
+person’s electronic data or electronic 
+
+communications, under the same 
+
+conditions currently required for the 
+
+government to obtain a search warrant to 
+
+search a person’s house or seize a
+
+person’s things. 
+
+Should this proposal be adopted? 
+
+Yes 
+
+No 
+
+VOTE BOTH FRONT AND BACK OF BALLOT 1132 
+
+(b) Mancelona, Precinct 1V Township 
+
+Nonpartisan Section 
+
+Judicial 
+
+Intermediate School District 
+
+Intermediate School District 
+
+Local School District 
+
+Proposal Section 
+
+State 
+
+State 
+
+Clerk 
+
+Vote for not more than 1
+
+Pamela Zaremba 
+
+Republican 
+
+Treasurer 
+
+Vote for not more than 1
+
+Lori A. Herman 
+
+Republican 
+
+Trustee 
+
+Vote for not more than 2
+
+Linda M. Franckowiak 
+
+Republican 
+
+Robert K. Herman 
+
+Republican 
+
+Justice of Supreme Court 
+
+Vote for not more than 2
+
+Mary Kelly 
+
+Bridget Mary McCormack 
+
+Justice of Supreme Court 
+
+Kerry Lee Morgan 
+
+Katherine Mary Nepton 
+
+Brock Swartzle 
+
+Elizabeth M. Welch 
+
+Susan L. Hubbard 
+
+Judge of Court of Appeals 
+
+4th District 
+
+Incumbent Position 
+
+Vote for not more than 2
+
+Michael J. Kelly 
+
+Judge of Court of Appeals 
+
+Amy Ronayne Krause 
+
+Judge of Court of Appeals 
+
+Judge of Court of Appeals 
+
+4th District 
+
+Non-Incumbent Position 
+
+Vote for not more than 1
+
+Michelle Rick 
+
+Judge of Circuit Court 
+
+13th Circuit 
+
+Incumbent Position 
+
+Vote for not more than 1
+
+Kevin A. Elsenheimer 
+
+Judge of Circuit Court 
+
+Board Member 
+
+Charlevoix-Emmet Intermediate 
+
+School District 
+
+6 Year Term 
+
+Vote for not more than 3
+
+Thelma A. Chellis 
+
+Jean E. Frentz 
+
+Mary P. Jason 
+
+Board Member 
+
+Charlevoix-Emmet Intermediate 
+
+School District 
+
+Partial Term Ending 12/31/2024 
+
+Vote for not more than 1
+
+Larry Cassidy 
+
+Board Member 
+
+Charlevoix-Emmet Intermediate 
+
+School District 
+
+Partial Term Ending 12/31/2022 
+
+Vote for not more than 1
+
+Board Member 
+
+Boyne Falls Public Schools 
+
+6 Year Term 
+
+Vote for not more than 3
+
+Laura Brunmeier 
+
+William Cousineau 
+
+Karena E. Haug 
+
+Barbara Loper 
+
+Board Member 
+
+Boyne Falls Schools 
+
+Partial Term Ending 12/31/2024 
+
+Vote for not more than 1
+
+Proposal 20-1 
+
+A proposed constitutional amendment 
+
+to allow money from oil and gas mining 
+
+on state-owned lands to continue to be 
+
+collected in state funds for land 
+
+protection and creation and 
+
+maintenance of parks, nature areas, and 
+
+public recreation facilities; and to 
+
+describe how money in those state 
+
+funds can be spent 
+
+This proposed constitutional amendment would: 
+
+Allow the State Parks Endowment Fund to ·
+
+continue receiving money from sales of oil 
+
+and gas from state-owned lands to 
+
+improve, maintain and purchase land for 
+
+State parks, and for Fund administration, 
+
+until its balance reaches $800,000,000. 
+
+Require subsequent oil and gas revenue ·
+
+from state-owned lands to go into the 
+
+Natural Resources Trust Fund. 
+
+Require at least 20% of Endowment Fund ·
+
+annual spending go toward State park 
+
+improvement. 
+
+Require at least 25% of Trust Fund annual ·
+
+spending go toward parks and public 
+
+recreation areas and at least 25% toward 
+
+land conservation. 
+
+Should this proposal be adopted? 
+
+Yes 
+
+No 
+
+Proposal 20-2 
+
+A proposed constitutional amendment 
+
+to require a search warrant in order to 
+
+access a person’s electronic data or 
+
+electronic communications 
+
+This proposed constitutional amendment would: 
+
+Prohibit unreasonable searches or ·
+
+seizures of a person’s electronic data and 
+
+electronic communications. 
+
+Require a search warrant to access a·
+
+person’s electronic data or electronic 
+
+communications, under the same 
+
+conditions currently required for the 
+
+government to obtain a search warrant to 
+
+search a person’s house or seize a
+
+person’s things. 
+
+Should this proposal be adopted? 
+
+Yes 
+
+No 
+
+VOTE BOTH FRONT AND BACK OF BALLOT 1142 Township 
+
+Nonpartisan Section 
+
+Judicial 
+
+Intermediate School District 
+
+Intermediate School District 
+
+Local School District 
+
+Proposal Section 
+
+State 
+
+State 
+
+Local School District 
+
+Clerk 
+
+Vote for not more than 1
+
+Pamela Zaremba 
+
+Republican 
+
+Treasurer 
+
+Vote for not more than 1
+
+Lori A. Herman 
+
+Republican 
+
+Trustee 
+
+Vote for not more than 2
+
+Linda M. Franckowiak 
+
+Republican 
+
+Robert K. Herman 
+
+Republican 
+
+Justice of Supreme Court 
+
+Vote for not more than 2
+
+Mary Kelly 
+
+Bridget Mary McCormack 
+
+Justice of Supreme Court 
+
+Kerry Lee Morgan 
+
+Katherine Mary Nepton 
+
+Brock Swartzle 
+
+Elizabeth M. Welch 
+
+Susan L. Hubbard 
+
+Judge of Court of Appeals 
+
+4th District 
+
+Incumbent Position 
+
+Vote for not more than 2
+
+Michael J. Kelly 
+
+Judge of Court of Appeals 
+
+Amy Ronayne Krause 
+
+Judge of Court of Appeals 
+
+Judge of Court of Appeals 
+
+4th District 
+
+Non-Incumbent Position 
+
+Vote for not more than 1
+
+Michelle Rick 
+
+Judge of Circuit Court 
+
+13th Circuit 
+
+Incumbent Position 
+
+Vote for not more than 1
+
+Kevin A. Elsenheimer 
+
+Judge of Circuit Court 
+
+Board Member 
+
+Charlevoix-Emmet Intermediate 
+
+School District 
+
+6 Year Term 
+
+Vote for not more than 3
+
+Thelma A. Chellis 
+
+Jean E. Frentz 
+
+Mary P. Jason 
+
+Board Member 
+
+Charlevoix-Emmet Intermediate 
+
+School District 
+
+Partial Term Ending 12/31/2024 
+
+Vote for not more than 1
+
+Larry Cassidy 
+
+Board Member 
+
+Charlevoix-Emmet Intermediate 
+
+School District 
+
+Partial Term Ending 12/31/2022 
+
+Vote for not more than 1
+
+Board Member 
+
+Boyne Falls Public Schools 
+
+6 Year Term 
+
+Vote for not more than 3
+
+Laura Brunmeier 
+
+William Cousineau 
+
+Karena E. Haug 
+
+Barbara Loper 
+
+Board Member 
+
+Boyne Falls Schools 
+
+Partial Term Ending 12/31/2024 
+
+Vote for not more than 1
+
+Proposal 20-1 
+
+A proposed constitutional amendment 
+
+to allow money from oil and gas mining 
+
+on state-owned lands to continue to be 
+
+collected in state funds for land 
+
+protection and creation and 
+
+maintenance of parks, nature areas, and 
+
+public recreation facilities; and to 
+
+describe how money in those state 
+
+funds can be spent 
+
+This proposed constitutional amendment would: 
+
+Allow the State Parks Endowment Fund to ·
+
+continue receiving money from sales of oil 
+
+and gas from state-owned lands to 
+
+improve, maintain and purchase land for 
+
+State parks, and for Fund administration, 
+
+until its balance reaches $800,000,000. 
+
+Require subsequent oil and gas revenue ·
+
+from state-owned lands to go into the 
+
+Natural Resources Trust Fund. 
+
+Require at least 20% of Endowment Fund ·
+
+annual spending go toward State park 
+
+improvement. 
+
+Require at least 25% of Trust Fund annual ·
+
+spending go toward parks and public 
+
+recreation areas and at least 25% toward 
+
+land conservation. 
+
+Should this proposal be adopted? 
+
+Yes 
+
+No 
+
+Proposal 20-2 
+
+A proposed constitutional amendment 
+
+to require a search warrant in order to 
+
+access a person’s electronic data or 
+
+electronic communications 
+
+This proposed constitutional amendment would: 
+
+Prohibit unreasonable searches or ·
+
+seizures of a person’s electronic data and 
+
+electronic communications. 
+
+Require a search warrant to access a·
+
+person’s electronic data or electronic 
+
+communications, under the same 
+
+conditions currently required for the 
+
+government to obtain a search warrant to 
+
+search a person’s house or seize a
+
+person’s things. 
+
+Should this proposal be adopted? 
+
+Yes 
+
+No 
+
+Boyne Falls Public Schools Sinking 
+
+Fund Millage Proposal 
+
+Shall the limitation on the amount of taxes 
+
+which may be assessed against all property in 
+
+Boyne Falls Public Schools, Charlevoix and 
+
+Antrim Counties, Michigan, be increased by 
+
+and the board of education be authorized to 
+
+levy not to exceed 2 mills ($2.00 on each 
+
+$1,000 of taxable valuation) for a period of 10 
+
+years, 2020 to 2029, inclusive, to create a
+
+sinking fund for the construction or repair of 
+
+school buildings, for school security 
+
+improvements, for the acquisition or upgrading 
+
+of technology and all other purposes authorized 
+
+by law; the estimate of the revenue the school 
+
+district will collect if the millage is approved and 
+
+levied in 2020 is approximately $353,750? 
+
+Yes 
+
+No 
+
+VOTE BOTH FRONT AND BACK OF BALLOT 1142 
+
+(c) Warner, Precinct 1BF 
+
+Figure 1: Ballot Design Changes. The designs of three ballots were changed between the initial election package ( left column ) and the revised package ( center column ). The differences are highlighted in red ( right column ). These changes started a chain of events that led to the publication of erroneous results. 12 Ballot Design Changes I extracted the contents of the election packages. Among other files, each contains a PDF file of each ballot design. I compared the PDF files in the initial election package to those in the revised election package and found that exactly three ballot designs differed, as illustrated in Figure 1. The differences match Antrim’s description of the ballot changes [2]. They are: 
+
+– Central Lake, Precinct 1V. On the ballot for Central Lake Village, the school board contest was corrected from the Ellsworth School District to the Central Lake School District, as shown in Figure 1a. The number of choices remained the same, but the contest changed from vote-for-two to vote-for-three, necessitating an additional write-in blank. This shifted the position of the contest below, State Proposal 20-1, down by one row. 
+
+– Mancelona, Precinct 1V. On the ballot for Mancelona Village, a candidate (Eugene K. Kerr) was added to the Village Trustee contest, shown in Figure 1b. The contest was also changed from vote-for-three to vote-for-two, so there was one fewer write-in blank and no change to the position of any contest. 
+
+– Warner, Precinct 1BF. On the ballot for part of Warner Township, a contest was added for the Boyne Falls Public Schools Sinking Fund Millage Proposal, as shown in Figure 1c. The new contest appears at the end of the last column of the last page of the ballot, so no other contest changed position. 
+
+Scanner Election Definitions The election packages also contain election definition files to be copied to each scanner’s memory card. I compared the election definition files that are actually on the memory cards to those in the initial and revised election packages. Every memory card matched either the initial or the revised election package, indicating that the election definitions on the cards were not altered after being written. Four cards matched the revised election package: Banks Township, Cen-tral Lake Township, and both precincts from Mancelona Township. The Central Lake card contains the revised election definition because it was reinitialized after the election in order to rescan the ballots. In Banks Township, the election definitions from the initial and revised packages are identical (for reasons that will become clear), so although the card was initialized using the initial election package, it happens to match the revised election package as well. All of this is consistent with Antrim’s claim that the only scanners that used the revised election definitions on election day were those in Mancelona Township. 
+
+3.2 Events on Election Night 
+
+On the night of the election, November 3, county staff began loading results into the EMS as scanner memory cards arrived from around the county. I reconstructed events that night from the EMS user log, as summarized in Table 4. The first card was successfully loaded at 9:49 p.m. The earliest sign of trouble occurred when loading the next card, from Warner Township, at 10:31 p.m.: despite multiple attempts, the EMS refused to accept the data. The log shows 13 Hash of election definition files from:                                                              
+
+> Scanner Memory Card Initial Package Revised Package Banks (a) ff03cbbb51cc3a5d ff03cbbb51cc3a5d ff03cbbb51cc3a5d Central Lake (b) c00dcf4ca35ef7f6 7b8591f6740fb8f5 c00dcf4ca35ef7f6 Chestonia f391bbd613fdc6c4 f391bbd613fdc6c4 74a7117cfd151c4f Custer bb84f43854455a1e bb84f43854455a1e ba8ae12c2be863bd Echo 0ee14f49f5791a81 0ee14f49f5791a81 34715b0f5e2f0023 Elk Rapids 1 c02565674b0f5c98 c02565674b0f5c98 20070f5cbd169c97 Elk Rapids AV 112ec69d110e5a3b 112ec69d110e5a3b e7eec7a46e512890 Forest Home f78c3d04faf939d3 f78c3d04faf939d3 87619945510c2734 Helena 506f34c5dafa9089 506f34c5dafa9089 df345e890f6790ac Jordan 564abac2dddffc0d 564abac2dddffc0d ee2ed5c613862e05 Kearney b21d1803326105b7 b21d1803326105b7 103428ac3f693dfe Mancelona 1 (c) 1a98842abe440234 820b4e24a3794af3 1a98842abe440234 Mancelona 2 (c) f7261e8ce3d4e2f2 5de5f2843b9791f9 f7261e8ce3d4e2f2 Milton 1 d6707193f98ac434 d6707193f98ac434 13eafaa33fe413d1 Milton AV f12ae9d71f3e56fe f12ae9d71f3e56fe b61c12678d3e9279 Star 8137bf3b0ddc8769 8137bf3b0ddc8769 77c67db8aa97ef02 Torch Lake 2f2de2a0f8bfbdb8 2f2de2a0f8bfbdb8 b45c508fae9aa39f Warner 850d06f4a744f588 850d06f4a744f588 3eb6246c63c5d88a Notes: (a) Definition is same in both packages; (b) Used initial definition Nov. 3 but rescanned Nov. 6 with revised definition; (c) Revised definition loaded before Nov. 3.
+
+Table 3: Scanner Election Definitions. Only four of 18 scanners (Banks, Cen-tral Lake, Mancelona 1 and 2) used election definitions that matched the revised election package. Each entry shows the truncated SHA-256 hash of the election definition files. Matching hashes ( highlighted ) indicate files that are identical. that after successfully loading two further cards, at 11:03 p.m. a staffer began manually entering the Warner results from the poll tape. At 12:28 a.m., the EMS was unable to load any votes from the card from Elk Rapids Precinct 1, although there was no problem with the Elk Rapids AV Board card. At 12:39 a.m., the EMS similarly was unable to load votes from the card from Milton Precinct 1 even though the Milton Township AV Board card had loaded normally. The EMS operator manually entered the results from these scanners. In all, 15 of the 18 cards loaded successfully, and three failed to load and were entered manually. The last card was loaded at 3:44 a.m, and the EMS generated the initial unofficial results report at 4:09 a.m. This report was printed, scanned, and uploaded to the county website [3]. Antrim’s timeline states that it received the first reports of errors in the initial results early the next morning, around 8:15 a.m. on November 4 [2]. The county confirmed that the totals were widely inconsistent with the poll tapes, took down the published results, and began manually entering results from the poll tapes for the affected scanners that had not already been entered manually. 14 Nov. 3 21:48 EMS begins loading results from scanner memory cards. 
+
+21:49 Chestonia Township Card loaded successfully. 22:31–22:38 Warner Township Failed to load, 7 attempts. 22:41 Banks Township Card loaded successfully. 22:53 Echo Township Card loaded successfully. 22:56 Warner Township Final failed loading attempt. 23:03–00:18 Warner Township Manually entered from poll tape. Nov. 4 00:20 Helena Township Card loaded successfully. 00:23 Star Township Card loaded successfully. 00:26 Custer Township Card loaded successfully. 00:28 Elk Rapids, Precinct 1 Failed to load. 00:31 Elk Rapids, AV Board Card loaded successfully. 00:34 Torch Lake Township Card loaded successfully. 00:36 Forest Home Township Card loaded successfully. 00:38 Milton Township, AV Board Card loaded successfully. 00:38 Milton Township, Precinct 1 Failed to load. 01:10–01:41 Elk Rapids, Precinct 1 Manually entered from poll tape. 01:43 Central Lake Township Card loaded successfully. 01:48–02:04 Milton Township, Precinct 1 Manually entered from poll tape. 02:05 Jordan Township Card loaded successfully. 03:36 Kearney Township Card loaded successfully. 03:43 Mancelona, Precinct 1 Card loaded successfully. 03:44 Mancelona, Precinct 2 Card loaded successfully. 03:51–04:09 EMS produces unofficial results report for public distribution. 
+
+Table 4: Election Night Timeline. The EMS log shows that county staff worked through the night of Nov. 3–4 to load results from scanner memory cards. Three of 18 cards failed to load, and those results were entered manually from scanner poll tapes. At 4:09 a.m., the EMS produced the unofficial results report posted on Antrim’s website. Officials learned hours later that the results were erroneous. 15 3.3 How the Voting System Represents Ballots and Votes 
+
+Antrim County and the Bureau of Elections have explained that the major discrepancies in the initial results were caused by the use of mismatched election definitions on the EMS and on some of the county’s scanners [23]. To verify this, I first determined how Democracy Suite internally represents data about ballot designs, voted ballots, and election results. Election Event Designer (EED) is the component of the D-Suite EMS software used to generate ballot layouts and election definition files [8]. Election workers use EED to define contests and associated choices (e.g., candidates), then assign each contest to one or more polling districts . Some precincts consist of only one district, but others are split into multiple polling districts with different local contests, e.g., if portions of the precinct fall within different school districts. Based on this data, EED automatically generates the election definition and ballot design for each polling district [8]. Internally, Democracy Suite represents the structure of the ballots using a collection of database tables. Each row in the BallotManifestation table corresponds to the ballot design used in a particular polling district; each row in the the 
+
+ContestManifestation table represents an instance of a contest appearing on a particular ballot design; and each row in the ChoiceManifestation table represents an instance of a choice appearing on a particular ballot design. Every row in these tables is associated with a numeric identifier called the 
+
+internalMachineId . When EED generates election definitions, it automatically assigns sequential internalMachineId numbers to every ballot design, to every contest, and to every choice, across all polling districts. These sequences continue from one polling district to the next, in alphabetical order. For instance, in the initial election definition, the ChoiceManifestation s for “Central Lake Township, Precinct 1V” are assigned internalMachineId 820–961 and those for “Chestonia Township, Precinct 1C7AL” (the alphabetically-next polling district) are assigned 
+
+internalMachineId 962–1091. The other two tables follow the same pattern. Each memory card is loaded with a subset of the election definition data. For each ballot design used in the polling place, this data specifies the coordinates of each voting target and the internalMachineId s of the corresponding ChoiceMani-festation , ContestManifestation , and BallotManifestation . The memory card also contains names of the choices and contests and other data necessary to count the votes, such as the maximum number of selections allowed in each contest and the party affiliations of the choices in contests where straight-party voting applies. This allows the scanner to tally the results itself and produce the poll tape. The memory cards record results in two ways. First, each card contains a file with a name ending in TOTALS.DVD that stores the scanner’s tallies. A second file, with a name ending in DETAIL.DVD , stores the scanner’s interpretation of each ballot, which is known as a cast-vote record or CVR. It records whether or not the scanner detected a mark for each voting target on each contest on each ballot. These files do not contain the names of the contests and candidates. Instead, each result or selection is associated with the internalMachineId s of the 16 corresponding BallotManifestation , ContestManifestation , and ChoiceManifestation 
+
+from the scanner’s copy of the election definition. When the EMS loads results from the memory card, it interprets these files using its copy of the election definition. As long as the scanner and the EMS use copies of the same election definition, the files should be read correctly—as will normally be the case when they are properly configured. However, the EMS does not verify that the election definitions actually are the same. When they are different—as was the case in Antrim County for scanners that were not updated after the ballot design changes—this can lead to inaccurate results. 
+
+3.4 Effects of the Ballot Design Changes 
+
+The election project log shows that when Antrim requested the last-minute corrections to the ballot designs, ElectionSource modified the election project in EED and regenerated the ballot layouts and election definitions. I followed the same steps, and the only indication given by the EMS software that the changes might cause problems was a notice that “All previously created and deployed election files will be unusuable”. The software did not warn that use of the old files could potentially lead to inaccurate results. Antrim did use the previously deployed election definition files in 16 of 18 scanners, which caused result data from the scanners to be incorrectly interpreted by the EMS. The way that ElectionSource regenerated the election definitions had the side-effect of assigning different ChoiceManifestation identifiers to most voting targets throughout the county, while leaving the BallotManifestation identifiers and most of the ContestManifestation identifiers the same. This rendered the revised election definitions subtly incompatible with those that had already been deployed. I compared the databases from the initial and revised election projects to determine precisely how the ballot design changes affected these identifiers. Correcting the school board contest in Central Lake required adding a write-in blank. When EED regenerated the election definitions, this addition caused the 
+
+ChoiceManifestation numbers assigned to all subsequent voting targets to increase by one. This affected all choices in later contests on the Central Lake Precinct 1V ballot and all choices in all contests for alphabetically later townships. 5
+
+These changes to the identifiers, coupled with the county’s failure to update the memory cards in most scanners, caused the major errors in the initial unofficial results. Figure 2 illustrates what went wrong. Scanners using the initial election definition recorded votes to the memory cards using the old ChoiceManifestation 
+
+numbers. The EMS interpreted the data using the revised election definition and the new ChoiceManifestation numbers. Where these identifiers differed, the EMS assigned the votes to the wrong candidates. If the voter marked the first choice in an affected contest, the ChoiceManifestation identifier was no longer associated with the same ContestManifestation under the revised election definition, and the 
+
+> 5This explains why the election definition for Banks Township did not change: “Banks” comes before “Central Lake” in alphabetical sequence.
+
+17 Text 
+
+Central Lake, Precinct 1V 
+
+Initial Ballot Definition 
+
+Central Lake, Precinct 1V 
+
+Revised Ballot Definition 
+
+> 963
+> 962
+> 965
+> 964
+> 966
+> 967
+> 968
+> 969
+> 970
+> 971
+> 964
+> 963
+> 966
+> 965
+> 967
+> 968
+> 969
+> 970
+> 971
+> 972
+> 952
+> 953
+> 954
+> 955
+> 956
+> 957
+> 952
+> 953
+> 954
+> 955
+> 956
+> 957
+> 958
+
+(1) The Central Lake, Precinct 1V 
+
+ballot was modified to reflect the correct 
+
+school board contest. This necessitated 
+
+inserting an additional write-in blank. 
+
+(2) The insertion 
+
+incremented the 
+
+ID number of every 
+
+subsequent voting target. 
+
+(4) A scanner using the 
+
+initial definition records 
+
+this Trump vote as ID 970. 
+
+The EMS, using the 
+
+revised definition, reports 
+
+ID 970 as a vote for Biden. 
+
+(3) In alphabetically later 
+
+townships, the change in 
+
+Central Lake incremented 
+
+the ID for every choice. Figure 2: Explaining the Major Reporting Discrepancy. D-Suite automat-ically assigns sequential ID numbers to voting targets across every ballot style. Correcting the ballot design for Central Lake Village required adding a write-in blank, which increased the ID number of every subsequent voting target by 1, including all targets in alphabetically later townships. Scanners in most precincts used the initial election definition (from before the change) and recorded votes under the old ID numbers. The EMS interpreted these ID numbers using the revised election definition, causing it to assign the votes to the wrong candidates. 18 EMS ignored the selection. A mark for any other choice was interpreted by the EMS as a mark for the choice above it on the ballot. The changes to the other two ballot designs were less significant for reporting. The correction in Mancelona Township left the number of choices the same, so it did not change the identifier sequence. In Warner Township Precinct 1BF, the addition of the missing Sinking Fund contest increased the identifiers of later 
+
+ChoiceManifestation s and ContestManifestation s. However, since Warner was the last township alphabetically, and its results were entered manually on election night, these changes had no effect on reporting. 
+
+3.5 Why Cards Failed to Load 
+
+In order to understand what the EMS operator saw when loading the memory cards on election night, I followed the same steps, loading the memory card data using the D-Suite RTR application running on a copy of the EMS. The Warner Township card resulted in a generic error message, “ Failed to load [ filename ]. ”The Elk Rapids 1 and Milton 1 cards resulted in a somewhat similar looking warning message with different text, “ Result file [ filename ] has not been closed. Result file will be loaded. ” Despite this message, no votes were loaded from either card. For all the other cards, the EMS reported, “ Result file [ filename ] was loaded successfully .” This message appeared even for cards which were loaded incorrectly due to the mismatched election definitions. I investigated why the three memory cards failed to load. The EMS error log shows that the Warner Township card failed to load because of the mismatched election definitions. Unlike in the other townships where ballot designs changed, in Warner, there was a contest added to the ballot. This increased the identifiers for subsequent ContestManifestation s, including those in later polling districts in Warner Township. Consequently, the Warner memory card contained votes for which the ContestManifestation identifiers were no longer associated with the same 
+
+BallotManifestation under the revised election definition. The EMS apparently detected this inconsistency and refused to load the card. 6
+
+The Elk Rapids 1 and Milton 1 memory cards failed to load for a different reason: they did not contain any election results. To determine why, I examined the scanner logs on those cards. As shown in Figure 3, the logs indicate that on election night, after closing the polls and printing poll tapes, workers in these townships commanded the scanners to “re-zero” their memory cards, discarding the results and resetting the cards to a pre-election state. Re-zeroing the cards is a significant deviation from normal election procedures. Although the poll tape contains a record of the scanner’s totals, manually entering the results is a laborious (and error-prone) process. Moreover, the data on the memory card is the primary electronic record of the votes and an important source of evidence if the integrity of the physical ballots is called into question.   
+
+> 6This is analogous to the situation in other townships where ChoiceManifestation
+> identifiers were no longer associated with the same ContestManifestation . However, in those cases, the EMS loaded the cards and simply ignored the affected selections.
+
+19 Nov 03/2020 06:46:02 *********************************** Nov 03/2020 06:46:02 * System Starting Nov 03/2020 06:46:02 * Model Type PCOS-320C (Rev 1072) Nov 03/2020 06:46:02 * Serial Number: AAFAJHX0109 Nov 03/2020 06:46:02 * Protective Counter: 5360 Nov 03/2020 06:46:02 * Software Version: 5.5.3-0002 #2 Fri Jul 27 09:18:31 CDT 2018 Nov 03/2020 06:46:02 * Election Project: Antrim November 2020 Nov 03/2020 06:46:02 *********************************** 
+
+[...] 
+
+Nov 03/2020 06:47:54 Admin chose to Open Poll Nov 03/2020 06:47:59 Printing 1 copy of ZERO TAPE Nov 03/2020 07:22:26 Administrator declined to print another copy of ZERO TAPE. Nov 03/2020 07:22:26 Poll Opened for Voting Location ID 6, Tabulator ID 6 
+
+[...] 
+
+Nov 03/2020 20:15:28 Total number of ballots = 1423. Nov 03/2020 20:16:14 Administrator key for ’Admin’ detected. Nov 03/2020 20:16:14 Administrative Key inserted Nov 03/2020 20:16:18 Admin chose to Close the Poll Nov 03/2020 20:16:38 Correct passcode entered for Close. Nov 03/2020 20:16:38 Requesting confirmation to close poll. Nov 03/2020 20:16:49 Starting election database close poll procedure. Nov 03/2020 20:16:49 Saving Poll-Close time. Nov 03/2020 20:17:38 Beginning to create Total Results file. Nov 03/2020 20:18:45 - Successfully created Total Results file ’/cflash/1120_6_6_0_TOTALS.DVD’. Nov 03/2020 20:18:46 Printing 1 copy of RESULTS TAPE Nov 03/2020 20:21:44 Administrator chose to print another copy of RESULTS TAPE. Nov 03/2020 20:21:45 Printing 1 copy of RESULTS TAPE Nov 03/2020 20:24:57 Administrator chose to print another copy of RESULTS TAPE. Nov 03/2020 20:24:57 Printing 1 copy of RESULTS TAPE Nov 03/2020 20:29:11 Administrator chose to print another copy of RESULTS TAPE. Nov 03/2020 20:29:11 Printing 1 copy of RESULTS TAPE Nov 03/2020 20:31:53 Administrator declined to print another copy of RESULTS TAPE. Nov 03/2020 20:31:53 Poll Closed for Voting Location ID 6, Tabulator ID 6 Nov 03/2020 20:32:59 Admin chose Utilities Options Nov 03/2020 20:33:07 Admin chose to Rezero the Results. Nov 03/2020 20:33:16 Correct passcode entered for Rezero. Nov 03/2020 20:33:16 Start election database re-zero poll procedure. Nov 03/2020 20:33:20 Comparing Raw Results files on primary and secondary cards... Nov 03/2020 20:33:20 ... Raw Results files match. Nov 03/2020 20:33:20 Comparing Detail Results files on primary and secondary cards... Nov 03/2020 20:33:20 ... Detail Results files match. Nov 03/2020 20:33:20 Comparing Write-in Image files on primary and secondary cards... Nov 03/2020 20:33:20 ... Write-in Images files match. Nov 03/2020 20:33:21 Image Partition reset. Nov 03/2020 20:33:21 Results re-zeroed. Nov 03/2020 20:33:32 Admin chose to Shutdown the Unit Nov 03/2020 20:35:23 Shutdown system. Nov 03/2020 20:35:24 >> DvsShutdown(fast:00000000). Nov 03/2020 20:35:24 Creating total results file Nov 03/2020 20:35:24 Beginning to create Total Results file. Nov 03/2020 20:35:24 - Successfully created Total Results file ’/cflash/1120_6_6_0_TOTALS.DVD’. Nov 03/2020 20:35:24 Total Results completed (rc=0) Nov 03/2020 20:35:24 >> Shutting down AVS. 
+
+Figure 3: Memory Cards Mistakenly Re-zeroed. Scanner logs from Elk Rapids Precinct 1 ( excerpt above ) and Milton Precinct 1 show that workers at both locations made a serious procedural error. After closing the polls and printing the poll tapes, they “re-zeroed” the memory cards, discarding the digital results and resetting the cards to a pre-election state. This explains why the EMS was unable to load the two cards, forcing results to be entered manually. 20 It is noteworthy that workers in separate polling places re-zeroed the memory cards almost simultaneously. Furthermore, this was not the first time that Antrim poll workers made this mistake. I examined the election project database from the previous election, in August 2020, which is present in the EMS image. During 
+
+that election, the memory card for the Elk Rapids AV Board was re-zeroed and entered manually. This pattern of lapses suggests that there may be a serious deficiency in the poll worker training or documentation employed in the county. These procedural errors may have contributed to the publication of incorrect results in November. Had the Elk Rapids and Milton cards loaded, the county-wide discrepancies would have been even more stark, making it more likely that county staff would have noticed before posting the report. Moreover, the EMS error message when loading the Warner Township card might have alerted the operator that there was a potentially serious problem, had not a superficially similar issue occurred in August for which the solution was simply to enter results manually. This appears to be an instance of “normalization of deviance”— aberrant practices coming to be considered harmless if they do not immediately cause a catastrophe—a phenomenon that has contributed to major disasters in aerospace and other industries [33]. 
+
+3.6 Effects on the Presidential Contest 
+
+To further understand the effects of the mismatched election definitions, I closely examined how they impacted the initial results for the presidential contest. The presidential candidates appeared in the same order on all ballots, begin-ning with Biden, Trump, and Libertarian Party candidate Jo Jorgensen. The ballots also contained a “Straight Party Ticket” option, for which the first three choices were the Democratic, Republican, and Libertarian parties. If the voter selected a party, that party’s presidential candidate would receive a vote unless the voter selected a presidential candidate from a different party or a write-in. The initial presidential results from several scanners were unaffected by the election definition mismatch for various reasons: 
+
+– Banks Township . Since Banks comes first in alphabetical sequence—before the townships where the ballot designs were altered—its election definition did not change and initial results there were not affected. 
+
+– Central Lake Township . Although the modification to the school board race in Central Lake Village affected all subsequent contests, it occurred after every instance of the presidential contest in Central Lake Township, so the initial presidential results there were not affected. 
+
+– Mancelona Township . Mancelona was the only locality to have its memory cards provisioned with the revised election definition before the election, so the initial results in all contests there were loaded correctly by the EMS. 
+
+– Elk Rapids 1, Milton 1, and Warner. Since the EMS could not load these cards, results were entered manually and unaffected. (Initial results for the Elk Rapids and Milton AV Boards came from other scanners and were affected.) 21 Final Results Reproduced Error ∆                                                                                                                                                           
+
+> Biden Trump Jorgen. Biden Trump B T Banks 349 756 11 (a) 349 756 00Central Lake 549 906 16 (a) 549 906 02Chestonia 93 197 3←197 300Custer 240 521 11 ←521 11 20Echo 198 392 8←392 800Elk Rapids 1 784 611 5(b) 784 611 00Elk Rapids AV 202 414 12 ←414 12 02Forest Home 610 753 19 ←753 19 20Helena 306 431 4←431 410Jordan 183 371 13 ←371 13 10Kearney 471 743 16 ←743 16 10Mancelona 1 276 835 20 (c) 276 835 00Mancelona 2 247 646 13 (c) 247 646 00Milton 1 143 478 12 (b) 143 478 00Milton AV 626 543 6←543 600Star 161 462 10 ←462 10 00Torch Lake 462 526 7←526 711Warner 60 163 3(b) 60 163 00
+> Total 5960 9748 189 7761 4504 8 5
+> Precinct notes: (a) IDs not shifted; (b) Entered manually; (c) Used updated card.
+
+Table 5: Approximating the Erroneous Presidential Results. A simple rule closely reproduces the erroneous initial presidential results. Working backwards from the final results ( left ), shift Trump’s votes into Biden’s column and Jorgensen’s votes into Trump’s ( right ), except for in precincts that were unaffected by the election definition mismatch for reasons noted. This yields totals that differ from the initial reported results by only 13 votes, or 0 .1% ( ∆). The initial unofficial results from all other scanners were impacted in a consistent way, shown in Table 6. The EMS ignored selections for Biden, treated selections for Trump as selections for Biden, and treated selections for Jorgensen as selections for Trump. Other third-party candidates and write-ins were similarly shifted. The same pattern occurred with the straight-party option. Considering the effects on the straight-party and presidential selections together, the EMS ignored most votes intended for Biden, reported all votes intended for Trump as votes for Biden, and reported all votes intended for Jorgensen as votes for Trump. This pattern lets us almost exactly reproduce the erroneous initial results from the final presidential results by simply shifting the totals for each candidate in the affected precincts, as shown in Table 5. 7 Biden and Trump’s totals in 
+
+> 7In the table, I have split out the Elk Rapids and Milton AV boards from the rest of these townships using data from the EMS, since only the AV boards were affected.
+
+22 Voter Marks Scanner Reads EMS Interprets Straight Party Ticket                             
+
+> Democratic Democratic No selection
+> Republican Republican Democratic Libertarian Libertarian Republican U.S. Taxpayers U.S. Taxpayers Libertarian Working Class Working Class U.S. Taxpayers Green Green Working Class Natural Law Natural Law Green
+> President and Vice President
+> Biden Biden No selection
+> Trump Trump Biden Jorgensen Jorgensen Trump Blankenship Blankenship Jorgensen Hawkins Hawkins Blankenship De La Fuente De La Fuente Hawkins
+> Write-in Write-in De La Fuente
+
+Table 6: Misattributed Selections. As a result of the mismatched election definitions, scanners that used the initial election definition read votes for most contests correctly, but when their memory cards were interpreted by the EMS using the revised election definition, selections were attributed to the wrong can-didates. This table shows the effects in the straight-party option and presidential contest, but others were similarly affected.                                                  
+
+> Voter’s Selection EMS Interpretation Voter Intended EMS Reported Party President Party President
+> No selection Trump No selection Biden Trump Biden
+> XTrump X−1Biden Trump Biden Republican No selection Democratic No selection Trump Biden Republican Biden Democratic No selection Biden Biden
+> No selection Jorgensen No selection Trump Jorgensen Trump
+> XJorgensen X−1Trump Jorgensen Trump Libertarian No selection Republican No selection Jorgensen Trump Libertarian Biden Republican No selection Biden Trump
+
+Table 7: Votes Reported for Trump and Biden. As a result of the mismatched election definitions, when the EMS interpreted memory cards from most scanners that used the initial election definition, Biden received the votes intended for Trump plus those of voters who selected the Republican straight-party option but split the ticket for Biden. Trump received the votes intended for Libertarian candidate Jo Jorgensen plus those of voters who selected the Libertarian straight-party option but split the ticket for Biden. 23 this reconstruction differ from the initial results by only 13 votes (0.1%). This demonstrates that the election definition mismatch caused the major errors. The small differences between the reconstruction and the actual initial results are due to unusual cases not covered by the rule above. Ballots with both the Republican straight-party option and Biden selected were correctly reported as votes for Biden, because the EMS misinterpreted the candidate selection as blank but also misinterpreted the party selection as Democratic. Similarly, ballots marked for the Libertarian straight-party option and for Biden were reported as votes for Trump, since the EMS misinterpreted them as having the Republican Party selected with no selection in the presidential contest. Table 7 lists all cases in which the EMS attributed correctly marked ballots to Biden and to Trump. The final circumstance in which the election definition mismatch caused the EMS to misreport presidential votes is for certain kinds of overvotes. If the voter made two selections in the straight-party option or the presidential contest, this should create an overvote condition and lead to both selections being ignored. However, if one of the marks was for the Democratic Party or Biden, the EMS ignored that mark but accepted the second mark as if it had been shifted one place up the ballot, leading to a complicated set of potential errors. 8 Such overvotes were extremely rare in Antrim County. In Section 3.9, I confirm that correcting for the full effects of the election definition mismatch, including overvotes and split-ticket votes, exactly reproduces the anomalous initial presidential results. 
+
+3.7 Anomalies in the Second Results Report 
+
+To correct the errors caused by the mismatched election definitions, county work-ers manually entered results for all affected tabulators and published a second, partial set of unofficial results on November 5 [4]. However, these results were still badly erroneous, as shown in Table 1. Due to an operator error, totals for three precincts included both the manually entered results and the incorrect results loaded from the memory cards. This affected Custer, Echo, and the Elk Rapids AV Board. By manually the data in the EMS, I confirmed that the presidential results published on November 5 matched the sum of the results from the memory card and the manually entered results for these three scanners. This was a simple mistake to make. From the operator’s perspective, the EMS stored each version of the precincts’ results as a separate “result file”. For most precincts, there was one result file that had been loaded from the memory card and a second that had been entered manually. To include result files in the reported results, the operator sets them to the “published” state. After adding the manual results, the operator should have set the memory card result files to a “rejected” state. However, the EMS log shows that this step was missed for the three scanners mentioned above.   
+
+> 8For example, ballots simultaneously marked for both the Democratic and Republican straight-party options would be misreported as votes for Biden if the presidential contest was marked in any of the following ways: Trump; Biden and Trump; any two candidates except Biden; any combination of three or more candidates; or nobody.
+
+24 While manually entering the results, county staff discovered that the poll tape for Central Lake Village contained the wrong school board race, because the scanner memory card had used the initial election definition, from before the race was corrected. To fix the problem, county staff reinitialized the Central Lake memory card using the revised election definition, and the township used it to scan its ballots again on November 6 [2]. 
+
+3.8 Data Entry Errors Corrected After Certification 
+
+The County Board of Canvassers certified the official results late on November 6, including the results from rescanning Central Lake. However, some contests in the original certified results from several precincts did not match the poll tapes as a result of data entry errors. The errors affected about 2.6% of votes county-wide. Michigan canvassing procedures call for county canvassers to compare the reported results to the poll tapes from individual machines [17], so these errors should have been caught on November 6, but they were not. Checking the poll tapes is important not only for catching data entry errors, but also as a security mechanism. If results are carefully checked, it would be impossible for an attacker to manipulate results during transmission from the polling places, or by accessing the EMS after the election, without the changes being detected. That this comparison was not correctly completed by the canvassers in Antrim County is a significant procedural breakdown that warrants further investigation. Antrim restated its certified results twice to correct the data entry errors: 1. On November 16, the county updated the certified results [6] to correct Kearney Township, Precinct 1T. The EMS shows that the manually entered results had omitted the U.S. Senate and Regent of the University of Michigan contests and the number of write-ins in the presidential contest. 2. On November 21, Antrim corrected further data entry errors across several more townships. Manually entered results in Chestonia Township, Precinct 1C7AL, had omitted the results for the State Representative contest and one school board candidate. In Custer Township, Precinct 1C5BE, the number of votes for two members of the State Board of Education had been transposed. In Milton Township, Precinct 1, results had been omitted for State Represen-tative, State Board of Education, Trustee of Michigan State University, and a variety of county and local offices. In Star Township, Precinct 1, results for State Representative and County Sheriff had been omitted. In Elk Rapids, Precinct 1T, votes for a third-party U.S. Senate candidate had been omitted, as was the number of write-in votes in the State Representative race in Precinct 1V. Also in Elk Rapids, Precinct 1V, there were typographical errors in results for County Drain Commissioner candidate Mark Stone (468 instead of 488) and Village Trustee candidate Laura Shumate (163 instead of 168). The County published the second amended certified results on November 21, and they remain the final results [7]. The Board of State Canvassers certified Michigan’s state and federal results on November 23 [12]. 25 3.9 Confirming that All Reporting Errors have been Corrected 
+
+I conducted a series of experiments to confirm that the explanations discussed above fully account for the discrepancies between the county-level results and the poll tapes and to verify that these discrepancies have been corrected. 
+
+Rectifying the Election Definition Mismatch 
+
+First, I used the EMS software to test whether loading the memory cards using a matching election definition would produce the reported results. I restored the initial election project from the first election package, thus ensuring that the EMS was using the initial election definitions. I then used RTR to load the memory cards from all scanners that had used the initial election definition and for which electronic results were available. (That is, all but Central Lake and Mancelona 1 and 2, which scanned using the revised definition, and Elk Rapids 1 and Milton 1, where the cards were re-zeroed at the polling places.) These 13 cards loaded successfully, including Warner Township’s, which had failed to load on election night under the revised election definition. Using a series of SQL queries, I compared the results obtained in this way to the final certified results contained in the EMS database. The only discrepancy was that the Boyne Falls Public Schools Sinking Fund Millage appears in the reported results for Warner Township (with zero recorded votes) but is not present on the Warner memory card. I explain this discrepancy in Section 4. Next, I restored the revised election project and loaded the Central Lake and Mancelona 1 and 2 memory cards under the revised election definition. I used further SQL queries to compare the loaded results in this way to the final certified results contained in the EMS database. There were no discrepancies. These results demonstrate that using matching election definitions would have prevented the reporting anomalies. They also confirm that the manually entered results from the 16 scanners for which memory card data is available do not contain further data entry errors and match the results that would have been obtained from the memory cards. 
+
+Electronically Counting Votes without the EMS 
+
+In a second experiment, I created my own software to count the presidential results from the memory cards, without relying on the software from the EMS. This provides an independent check of the accuracy of the results aggregation. Each memory card stores cast vote records (CVRs) in a file with a name ending in DETAIL.DVD . The files are encrypted using AES in CBC mode, but the encryption key and initialization vector can be retrieved from the ElectionEvent 
+
+table in the EMS database. I decrypted the files and determined the data format. Each voting target is represented by the associated BallotManifestation ,
+
+ContestManifestation , and ChoiceManifestation identifiers and by a boolean value that indicates whether the scanner detected that the target was marked. I wrote Python programs to extract the set of marked targets from each memory card and to count them using election definition data from either the initial or the revised election project database. Producing correct counts required several considerations: 26 1. First, the program checks the EMS database to verify that each marked 
+
+ChoiceManifestation is in fact associated with the ContestManifestation and 
+
+BallotManifestation indicated in the CVR. Otherwise, it ignores the mark completely. This appears to match the effects of database logic within the EMS and is necessary to reproduce the erroneous results. 2. Next, the program checks for overvotes by determining whether the number of valid marks in a given contest is greater than the allowed number of selections. If so, the contest is skipped and no votes are recorded. 3. Finally, the program applies Michigan’s straight-party voting rules to all partisan contests. Using these programs, I first counted the CVRs on all cards using the revised election definition, mimicking the behavior of the EMS on election night. As expected, the presidential results were an exact match for the initial results for every scanner except Elk Rapids 1, Milton 1, and Warner, for which results were entered manually on election night, and Central Lake. (The Central Lake card was reused to scan the ballots again on November 5, and the presidential results from that card match the reported results of the rescan.) This confirms that the mismatched election definitions caused the major errors in the initial results. Next, to undo the effects of the mismatched election definitions, I used the programs to count the CVRs for each card using the election definition version found on that card, as shown in Table 3. This provides a form of confirmation of the results that does not rely on the EMS’s counting and reporting logic. The presidential results exactly matched the final reported totals for every card that contained results data (i.e., all but Elk Rapids 1 and Milton 1). This further confirms that all reporting errors in the presidential contest have been corrected. 
+
+Manually Comparing the Reported Results to the Poll Tapes 
+
+As a final confirmation, I manually compared the final certified results [7] to copies of the poll tapes provided by the county. 9 The results on the poll tapes for all contests in all precincts are correctly reflected in the final results. This confirms that the county-level reporting anomalies have been fully corrected. 
+
+> 9The final certified results as published on Antrim County’s website are missing pages 47–48 of the 185-page report. These contain part of the Banks Township Trustee contest and the Central Lake Township Supervisor contest. Other pages are out of order or duplicated, so this omission is likely the result of human error or a mechanical error while scanning the report for posting. Antrim provided the missing pages at my request.
+
+27 4 Discrepancies in the Scanner Poll Tapes 
+
+The analysis in Section 3 firmly establishes that the major reporting anomalies on election night were caused by Antrim County’s failure to ensure that all scanners used the same election definition as the EMS. I also showed that the errors introduced during county-wide reporting have been corrected, and the final reported results match the poll tapes produced by the individual scanners. However, the poll tapes from certain precincts themselves contain errors that affect smaller numbers of votes, mainly in specific down-ballot contests. These errors have a different pattern than the major reporting anomalies. In most precincts, the design of the printed ballots was not changed, and so the individual scanners counted normally whether they were using the initial or the revised election definition. But ballot designs were changed in parts of three townships—Central Lake, Mancelona, and Warner—and I show that the changes led to a small number of errors on poll tapes within these localities. I investigate what caused the poll tape errors, determine the effects, and show that certain errors affecting a small number of votes remain uncorrected in the final results. 
+
+4.1 Logic and Accuracy Testing 
+
+Logic and accuracy testing (L&A testing) is an important pre-election procedure that is intended to check that polling place equipment produces accurate poll tapes. In order to produce accurate counts, the scanners need to use election definitions that are properly prepared and that match the design of the ballots being scanned. Correctly performed L&A testing checks both. Although L&A testing cannot protect against sophisticated attacks on voting equipment [10], it 
+
+should prevent both accidental and deliberate scanner configuration errors. Michigan election procedures require L&A testing of all scanners and voter-assist terminals [19]. Workers use a “test deck”, a set of ballots marked in advance so that all voting targets are tested and the correct results are known. After scanning the test deck, they verify that the poll tape matches the expected results. Any deviations are a potential indication of an error in the election definition. I examined the scanner logs from the memory cards to determine whether L&A testing occurred. 10 Every scanner was tested before the election, as shown in Table 8. Notably, both Mancelona Township cards were tested after the cards were updated with the revised election definition. Although the Central Lake scanner was tested before election day, it was not tested again after the card was reinitialized with the revised election definition prior to the November 6 re-scan. Despite the fact that every scanner was tested prior to election day, the testing was not successful at flagging certain problems. The poll tapes produced during testing in Central Lake and Warner townships reflected the initial ballot designs, so they contained an incorrect contest and were missing a contest, respectively. By the time the testing occurred, the county was aware of the ballot design errors, 
+
+> 10 The original log for Central Lake was erased when the memory card was reinitialized for the November 6 re-scan, so I examined a copy of the log from the EMS database.
+
+28 Scanner L&A Test Dates Number of Test Ballots                                     
+
+> Banks October 22 50, 256 Central Lake October 23 128 Chestonia October 19 262 Custer October 24 256 Echo October 14 and 21 192; 192 Elk Rapids 1 October 14 and 21 64, 64; 128 Elk Rapids AV October 14, 21, and 29 64, 64; 128; 8 Forest Home October 23 192 Helena October 20 64 Jordan October 28 192 Kearney October 27 192 Mancelona 1 October 24 126 Mancelona 2 October 24 127 Milton 1 October 17 64, 64 Milton AV October 17 64 Star October 20 64 Torch Lake October 21 64, 64, 64 Warner October 20 64, 192
+
+Table 8: Logic & Accuracy Testing. L&A testing checks that scanners produce correct poll tapes when tallying a “test deck” of ballots with known selections. Every memory card used on election day was tested at least once. In Central Lake and Warner, the testers should have flagged errors in the poll tapes but did not. and so presumably were the townships. The workers who performed the testing may have either ignored these discrepancies or failed to review the test decks and poll tapes carefully enough to spot them. Had the townships reacted to these errors by updating their election definitions, it would have prevented some (but not all) of the residual anomalies described in this section. Michigan only requires L&A testing at the local level. The Bureau of Elections recommends, but does not require, further tests to confirm that loading results from the scanner memory cards into the EMS produces correct results. The EMS logs confirms that no such testing was conducted in Antrim County. Had the county performed such “end-to-end” pre-election testing, it is likely that the effects of the mismatched election definitions would have been detected, and the county-level reporting anomalies might have been averted. 
+
+4.2 Use of Outdated Ballots and Election Definitions 
+
+The three townships where ballot designs were altered scanned ballots a total of four times: once in Warner using the initial election definition, once in Mancelona using the revised election definition, and twice in Central Lake using the initial and then the revised election definition. Two factors led to inaccuracies in particular down-ballot contests during these scans. First, the scans that used initial election definitions necessarily produced results that omitted contests or candidates that 29 were added when the ballot designs were revised. Second, some of the paper ballots that were scanned themselves used the outdated designs. The last-minute ballot design changes in Central Lake, Mancelona, and Warner occurred after absentee voting had begun. For instance, according to Antrim County, 224 absentee ballots for Central Lake Village had been sent to voters before the change. Although these voters were later sent corrected ballots, some of them voted using the initial ballot designs. 11 There were procedures to ensure that voters did not return more than one ballot, but there was apparently no special process for handling the initial ballots that were received—they were scanned mixed together with the revised ballots. This was problematic, because ElectionSource had regenerated the ballot designs in such a way that the initial and revised designs used the same ballot design identifiers. Normally, every ballot design has a unique identifier that allows the scanners to recognize it and correctly locate the voting targets, but there was no way for the scanners to distinguish between the two versions of the ballots where the design had changed. They treated them as if they were all using the initial design or as if they were all using the revised design, depending on which version of the election definition Antrim had loaded onto the memory card. 
+
+4.3 Effects in Warner Township 
+
+The ballot design for Warner Township, Precinct 1BF, was altered to add a missing contest, the Boyne Falls Public Schools Sinking Fund Millage Proposal, as shown in Figure 1c. The contest was added to the end of the last column of the ballot, so no other contests or voting targets were affected. However, as Warner scanner was never updated to read the revised ballot design, the votes in this contest were not read or reported by the scanner at all. The contest does not appear on the scanner poll tape and is not recorded on the memory card. Only a small number of Warner Township voters live in the Boyne Falls School District and were eligible to vote in the Sinking Fund contest. The final results show that there were three registered voters and three ballots cast, but no “Yes” or “No” votes were recorded in the contest. Some voters may have left the contest blank, and any who voted absentee using the initial ballot design would have returned ballots that lacked the contest entirely. Therefore, we can conclude only that between zero and three votes in the Sinking Fund contest were never counted. This is too few votes to affect the outcome. 
+
+4.4 Effects in Mancelona 
+
+The Mancelona, Precinct 1V (Mancelona Village) ballot was revised to add a missing candidate for Village Trustee, Eugene K. Kerr. The contest also changed from vote-for-three to vote-for-two, so the effect was that Kerr replaced a write-in blank, and no other contests or choices changed position, as shown in Figure 1c. 
+
+> 11 There is also no indication that Central Lake, Mancelona, or Warner Township updated its voter-assist terminals (VATs) to reflect the revised ballot designs. If they did not, voters who used the VATs would have been presented with outdated ballots. However, according to Antrim County, no voters used the VATs in the affected townships.
+
+30 Mancelona’s scanners used the revised election definition, but some absentee voters may have returned ballots that used the initial ballot design. Since the scanners were not configured to read the initial ballot design, if any of these voters selected the first write-in blank, the scanners would have misinterpreted the vote as a vote for Kerr. Likewise, if any of these voters selected three candidates, the votes would have been unexpectedly ignored as overvotes. The data I examined is insufficient to determine how many votes, if any, were affected by these cases. However, they are likely uncommon, and the Village Trustee contest was decided by a large margin, so they are unlikely to have altered the outcome. 
+
+4.5 Effects in Central Lake 
+
+The effects of the ballot design changes in Central Lake were considerably more complicated. Figure 1a shows how the ballot design in Central Lake Precinct 1V (Central Lake Village) was altered to correct the school board contest from Ellsworth Schools to Central Lake Schools. This changed the name of the contest and candidates and also the allowed number of selections, which increased from two to three. The increase necessitated an additional write-in blank, which shifted the position of the contest below, State Proposal 20-1, down by one row. Central Lake used the initial election definition on election day, and results loaded from the memory card were included in the first unofficial results. The township then rescanned using the revised election definition on November 6, producing a second poll tape, which was manually entered as part of the certified results. Results in the three contests affected by the ballot design change differed dramatically between the two scans, as shown in the poll tape excerpts in Figure 4. Although most of the voted ballots in Central Lake Village used the revised ballot design, a substantial minority used the initial ballot design. In neither scan was the scanner properly configured to read both versions of the ballot design simultaneously; as a result, both sets of scan results are partially incorrect with respect to certain down-ballot contests. Those that used the revised design were scanned incorrectly during the first scan, and those that used the initial design were scanned incorrectly during the second scan. I explain these errors below. 
+
+Errors in the Election Day Scan 
+
+Central Lake used the initial election definition on election day, but most voted ballots used the revised ballot design. This had several consequences for the accuracy of the poll tape. First, the school board contests were affected as follows: 1. Central Lake Village votes were incorrectly included in the Ellsworth Schools contest. For ballots that used the initial design, which incorrectly showed the Ellsworth contest, votes were counted towards this contest even though the voters were not eligible to vote in it. For ballots that used the revised design, which showed the correct Central Lake Schools contest, votes were incorrectly tabulated for the candidates in the equivalent ballot positions in the Ellsworth contest. Thus, Groenink received Eckhardt’s votes on the poll tape, and Wallace received Shafer’s votes. 31 (a) Election Day Scan (Nov. 3) (b) Second Scan (Nov. 6) 
+
+Figure 4: Central Lake Poll Tapes. Central Lake scanned twice: on election day using the initial election definition and on November 6 using the revised election definition. The poll tapes from the second scan showed large differences in three contests, excerpted above, due to the changes in the election definition. Although the second scan is closer to the correct results, my analysis shows that the Central Lake School Board and State Proposal 20-1 results are still in error. 32 2. On ballots that used the revised design, any write-in selections that used the third write-in blank were ignored, since there was no voting target in that position in the initial ballot design. These were not reflected in the election-day poll tape or on the memory card. 3. The revised ballot design allowed up to three votes for school board. However, since the initial design had only allowed up to two, if a voter selected three candidates, other than by using the third write-in blank, the scanner ignored all the selections as if the contest had been overvoted, and they were not included in the poll tape. The poll tapes in Figure 4 reflect these errors. The numbers shown for each school board contest are the total number of votes received in all precinct splits in Central Lake: 1V (Central Lake Village), 1CENT (Central Lake Schools), and 1ELS (Ellsworth Schools, which has only a small number of voters). As a result of the changes to the election definition, in the first scan, school board votes from 1V were included in the Ellsworth totals, and in the second scan, they were included in the Central Lake totals. Thus the second scan total for each of the two Central Lake Schools candidates approximately equals the sum of the votes in the first scan for the Central Lake and Ellsworth candidates in the equivalent position. Due to the election definition mismatch between the EMS and scanner, the election night results from the EMS were also wrong for these contests, but in a different way than the poll tapes. The memory card used the initial election definition, but the EMS used the revised election definition. Both election definitions used the same ContestManifestation identifier for the Central Lake Village school board contest and the same ChoiceManifestation identifiers values for the four voting targets that were present in both ballot designs. Thus, ballots that used the revised ballot design and only included marks among the first four choices were reported correctly by the EMS. Those on which the fifth choice (the third write-in blank) was selected were interpreted incorrectly, since the scanners did not record marks for this target. Ballots that used the initial design (with the Ellsworth contest) were also interpreted incorrectly by the EMS, with votes counted towards the Central Lake Schools candidates in equivalent positions. The first Central Lake poll tape also contains incorrect results for State Proposal 20-1. In the revised ballot design, the voting target for “Yes” is in the same position as the target for “No” was in the old design, and the target for “No” is in a position that was unused in the old design, as depicted in the left half of Figure 5. In the first scan, the scanner used the initial election definition. This caused it to misread Proposal 20-1 selections for ballots that used the revised design. For these ballots, the poll tape reported “Yes” votes as “No” and failed to record “No” votes at all. Ballots using the initial design were read correctly. When the EMS loaded the memory card from the first scan, Proposal 20-1 votes were additionally affected by the election definition mismatch. The net effect was that both ballots using the initial design that were marked for “No” 
+
+and ballots using the revised design that were marked for “Yes” were reported by the EMS as votes for “Yes,” and all other selections were ignored. 33 Initial Ballot Design  Revised Ballot Design Initial Ballot Design          
+
+> Yes Yes
+> No No
+> Revised Ballot Design
+> First Scan ? Initial Election Definition
+> Yes No
+> No
+> Yes ?
+> No Yes
+> Scanner target
+> positions changed
+> between the election
+> definition versions.
+> Second Scan ? Revised Election Definition
+> Yes Yes
+> No No ?
+> Initial Ballot
+> scanned with
+> Revised Definition
+> Revised Ballot
+> scanned with
+> Initial Definition
+> Initial Ballot
+> scanned with
+> Initial Definition
+> Revised Ballot
+> scanned with
+> Revised Definition
+
+Figure 5: How State Prop. 20-1 was Scanned in Central Lake Village. 
+
+Central Lake scanned ballots twice, once with the initial election definition ( left )and again with the revised definition ( right ). Some ballots used the initial design and others used the revised design, with targets for Prop. 20-1 shifted down by one row. In both scans, Prop. 20-1 selections on ballots that did not match the election definition in use were miscounted (as shown in boxes at bottom). 
+
+Errors in the November 6 Scan 
+
+Central Lake completed a second scan on November 6, using the revised election definition. This time, ballots that used the revised design were counted correctly, but ballots from Central Lake Village that used the initial design were partially misinterpreted, because the scanner was not configured to read them correctly. The school board race was affected as follows: 1. The initial ballot design showed the wrong school board contest (Ellsworth). The scanner interpreted these ballots as if they had votes for the Central Lake Schools contest. Votes for Groenink were interpreted as votes for Eckhardt, votes for Wallace were interpreted as votes for Shafer, and votes in the first two write-in blanks were interpreted as write-ins. 2. The position of the voting target for the third write-in blank in the revised ballot design lined up with the position of the darkly shaded “Proposal Section” header on the original ballot. The scanner likely misinterpreted this header as a mark in the third write-in target. The memory card records 10 write-ins cast using the first blank, 4 using the second, and 74 using the third. 34 Choice Poll Tape First Second                     
+
+> Yes 61 370 No 371 69
+> Choice Ballot Design Total ∆
+> Initial Revised
+> Yes 61 a≈359 420 +50 No b≈11 69 80 +11
+
+Table 9: Remaining Errors in State Prop. 20-1. Some voters in Central Lake Village cast ballots using the initial ballot design. Their votes in State Prop. 20-1 were counted incorrectly when the ballots were scanned using the revised election definition. My estimate ( blue ) is that approximately 61 votes are not incorporated in the final results for this contest: 50 for “Yes” and 11 for “No”. Since voters usually use earlier write-in blanks before later ones, this strongly suggests that at least 70 ballots used the outdated ballot design. State Proposal 20-1 was affected too during the second scan. This time, voters who used the initial ballot design had their Proposal 20-1 votes misinterpreted, as shown on the right side of Figure 5. Those who selected “Yes” had the votes ignored, and those who selected “No” were counted for “Yes”. Since the final reported results match the poll tapes, these errors have not been corrected. 
+
+Estimating the Size of the Error for State Proposal 20-1 
+
+The two scan results from Central Lake provide enough information to estimate the number of ballots that used the initial ballot design and the size of the errors. The first poll tape, based on the initial election definition, showed 61 votes for “Yes” and 371 for “No” from Central Lake Village. Per Figure 5, the “Yes” votes would have been only those marked for “Yes” and using the initial ballot design, while the “No” votes would have been those marked “Yes” using the initial ballot design plus those marked “No” using the revised ballot design. The second poll tape, based on the revised election definition, shows 370 votes for “Yes” and 69 for “No”. Votes counted for “Yes” would have been those marked “Yes” using the revised ballot design plus those marked “No” using the initial ballot design. Those counted for “No” would have been only those marked “No” using the revised ballot design. 12 
+
+We can use these facts to estimate the results without the error. Let a be the number of votes for “Yes” cast using the revised ballot design, and let b be the number for “No” cast using the initial ballot design. Based on the facts above, 
+
+a + b ≈ 370. In the rest of Central Lake Township, which was unaffected by the error,“Yes” received 84% of the votes. Under the assumption that Central Lake Village voted for each option in the same proportion: 61 + a
+
+(61 + a) + ( b + 69) ≈ 84%  
+
+> 12 This implies that the 371 and 370 counts should be equal. The difference is due to one of the three ballots that were not included in the second scan, as discussed in §4.6.
+
+35 By simple algebra, a ≈ 359 and b ≈ 11. This implies that approximately 61 + 11 = 72 votes were cast using the initial ballot design, and that approximately 50 + 11 = 61 votes are not incorporated in the final results for the contest. Table 9 summarizes this analysis. Since State Proposal 20-1 was decided by a margin of more than 3 million votes, the error could not have affected the outcome. 
+
+4.6 Additional Discrepancies in the Central Lake Scans 
+
+Beyond the discrepancies noted above, the poll tapes from the two Central Lake scans show a large number of smaller differences. Many contests have one or two fewer votes in the second scan. One of these differences potentially affected the outcome of a contest. As shown in Figure 6, in the first scan, the Central Lake Village Marihuana Retailer Initiative was tied (and thus defeated), but in the second scan, which became the final result, it passed by a single vote. The data I examined suggests that three ballots that were included in the first scan were omitted when the ballots were scanned again, either correctly or due to human error. The scanner log from election day, as recorded in the EMS database, shows that 1494 ballots were scanned. Yet the log from the memory card shows that only 1491 ballots were scanned on November 6. The memory card from the first scan was overwritten to prepare it for the second scan, so the original digital records of the ballots are not available. However, the EMS database contains  
+
+> (a) Election Day Scan (Nov. 3) (b) Second Scan (Nov. 6)
+
+Figure 6: Central Lake Village Marihuana Retailer Initiative. In this local contest, the poll tapes differ by one vote—enough to change the outcome. The data suggests that three ballots that were scanned on Nov. 3 were omitted when the ballots were re-scanned on Nov. 6, either correctly or due to human error. 36 Ballot 1 — Central Lake Township, Precinct 1CENT 
+
+President and Vice President of the United States : Donald J. Trump / Michael R. Pence United States Senator for State : John James Representative in Congress 1st District : Jack Bergman Representative in State Legislature 105th District : Ken Borton Member of the State Board of Education : Tami Carlone, Michelle A. Frederick Regent of the University of Michigan : Sarah Hubbard, Carl Meyers Trustee of Michigan State University : Pat O’Keefe, Tonya Schuitmaker Governor of Wayne State University : Don Gates County Prosecuting Attorney : Write-in County Sheriff : Write-in County Clerk : Sheryl Guy County Treasurer : Sherry A. Comben County Register of Deeds : Patty Niepoth County Drain Commissioner : Mark Stone County Surveyor : Scott Papineau County Commissioner 2nd District : Joshua E. Watrous Township Supervisor for Central Lake Township : Write-in Township Clerk for Central Lake Township : Judy Kosloski Township Treasurer for Central Lake Township : Andrew Smith Township Trustee for Central Lake Township : Patrick Hanlon, Pat Marshall Justice of Supreme Court : Katherine Mary Nepton, Brock Swartzle Judge of Court of Appeals 4th District Incumbent Position : Michael J. Kelly, Amy Ronayne Krause Judge of Court of Appeals 4th District Non-Incumbent Position : Michelle Rick Judge of Circuit Court 13th Circuit Incumbent Position : Kevin A. Elsenheimer Board Member for Charlevoix-Emmet Intermediate School District 6 Year Term : Thelma A. Chellis State Proposal 20-1 : Yes State Proposal 20-2 : Yes 
+
+Ballot 2 — Central Lake Township, Precinct 1V 
+
+[*No selections. ]
+
+Ballot 3 — Central Lake Township, Precinct 1V 
+
+Straight Party Ticket : Republican Party President and Vice President of the United States : Donald J. Trump / Michael R. Pence United States Senator for State : John James Representative in Congress 1st District : Jack Bergman Member of the State Board of Education : Tami Carlone, Michelle A. Frederick Regent of the University of Michigan : Sarah Hubbard, Carl Meyers Trustee of Michigan State University : Pat O’Keefe, Tonya Schuitmaker County Prosecuting Attorney : James L. Rossiter County Sheriff : Daniel S. Bean County Clerk : Sheryl Guy County Treasurer : Sherry A. Comben County Register of Deeds : Patty Niepoth County Commissioner 2nd District : Joshua E. Watrous Township Supervisor for Central Lake Township : Stanley A. Bean Village President for Village of Central Lake : Rob Tyler Village Trustee for Village of Central Lake : Bill Chapman 
+
+* School Board Member for Central Lake Schools : Melanie Eckhardt, Keith Shafer 
+
+* State Proposal 20-1 : — 
+
+* State Proposal 20-2 : — 
+
+* A Proposed Initiated Ordinace to Authorize One (1) Marihuana Retailer Establishment Within the Village of Central Lake : No 
+
+* indicates contests that are potentially incomplete due to limited data. 
+
+Figure 7: Reconstructed Omitted Ballots from Central Lake. This figure shows selections registered by the scanner on Nov. 3 for three ballots that were not included when the ballots were scanned again on Nov. 6. It is possible that these ballots were properly excluded due to some disqualifying defect. However, if Ballot 3 was valid and omitted due to human error, it is likely that the outcome of the Central Lake Village Marihuana Retailer Initiative is incorrect. 37 CVRs derived from the original memory card, in the CastVoteRecord table. Using this data, I was able to reconstruct the scanner’s interpretation of the three ballots. The CVRs in the EMS record the EMS’s interpretation of each ballot, which was sometimes affected by the election definition mismatch. Within Central Lake, only ballots from Central Lake Village are affected, and then only particular contests. Selections for the third write-in blank in the school board contest were never recorded. In subsequent contests, selections for the first choice were never recorded, and those for any later choice were assigned to the preceding choice. I extracted the CVRs for the first scan from the EMS database and corrected for the election definition mismatch. I also extracted the CVRs for the second scan from the memory card. Every ballot from the first scan also appears in the second scan, except for three ballots. My reconstruction of these is shown in Figure 5. The first ballot is from Central Lake Precinct 1CENT; the reconstruction is complete, since this precinct was not affected by the election definition mismatch. The second ballot is from Central Lake Village and so would have been affected by the mismatch, but it was recorded by the EMS as blank. Since it is implausible that the voter marked only choices that would have been omitted under the EMS’s interpretation, the ballot very likely had no readable selections. The third ballot is also from Central Lake Village. The contests marked with an asterisk in Figure 5 are potentially missing certain selections due to the election definition mismatch. For the school board contest, the reconstruction is likely correct; neither of the first two write-ins was selected, so the third probably was not either. The EMS did not record selections for State Proposal 20-1 or 20-2, but it is impossible to determine whether this is because the scanner detected a mark for “Yes”, which would have been omitted by the EMS, or because there was no detected selection. Finally, the data indicate that the scanner detected a mark for “No” in the Central Lake Village Marihuana Retailer Initiative. 13 
+
+The data supports the conclusion that these three ballots fully account for the residual differences between the poll tapes from the two scans. There are multiple possibilities for why they were not included in the second scan. While it is possible that they were ruled invalid due to some defect and properly excluded, it is also possible that elections staff simply did not scan them the second time, due to human error. If these ballots are valid, it is likely that the final reported outcome of the Central Lake Village Marihuana Retailer Initiative is incorrect and that the true result is a tie, as shown on the election day poll tape. 
+
+4.7 Results of the Presidential Hand Count 
+
+On December 17, the State Bureau of Elections conducted a county-wide hand-count of the presidential contest [21]. It provides strong empirical evidence that there are no significant errors in Antrim County’s final reported presidential results. The results [20] showed a loss of 1 vote for Biden, a gain of 12 votes for Trump, and gains of 1 vote for each of three third-party candidates. Although 
+
+> 13 While it is possible that there was also a mark for “Yes”, which would not have been recorded due to the election definition mismatch, such overvotes are uncommon.
+
+38 Figure 8: Examples of Marginal Marks. Hand counts often produce slightly different results from machine counts due to “marginal marks”, instances where voters fill in voting targets incompletely or otherwise deviate from the ballot instructions. These images, from ballots cast in Georgia’s 2020 partisan primaries, illustrate instances where a human might count the vote differently than would a scanner that simply measures shading within the voting target ovals. Trump’s total changed by more than any other candidate’s, it differed from the county’s final reported result by only about 0.1%. (Trump lost state-wide by 2.8%.) The precinct-level totals closely matched the scanner results. Within individual precincts, Trump and Biden’s results changed by at most three votes, except in Star Township, where Biden gained 5 votes and Trump gained 6. Eight precincts showed no change for either Trump or Biden, and six (including Central Lake and Warner) showed no net change for any candidate. Small differences are common when ballots are counted by hand. Sometimes workers counting ballots make mistakes. Humans also interpret some votes differently than optical scanners, which merely sense the intensity of shading within the voting targets. Scanners can misread votes when voters incompletely fill-in voting targets or otherwise deviate from ballot instructions, as illustrated in Figure 8. Such “marginal marks” can cause scanners to fail to count a valid vote, count an invalid vote, or assign a vote to the wrong candidate. Notably, the hand-count results from Central Lake agree with the results of the township’s second scan, which found 906 votes for Trump, and not the first scan, which found 908 votes for Trump. This may indicate that the three ballots discussed in the previous section were not present during the hand count. (Per my reconstruction in Figure 7, two of the ballots were marked for Trump.) However, it is possible that this is a coincidence, and Trump lost two votes in Central Lake during the hand count for unrelated reasons. 39 5 Response to ASOG Report 
+
+I have reviewed the “Antrim Michigan Forensics Report—Revised Preliminary Summary, v2”, dated December 13, 2020, prepared by Russell James Ramsland, Jr. of Allied Security Operations Group (the “ASOG Report”, redacted version available at [1]). The report contains an extraordinary number of false, inaccurate, or unsubstantiated statements and conclusions, the most serious of which I refute below. Paragraph numbers that follow refer to the unredacted report. 
+
+5.1 Claims Regarding Adjudication 
+
+Mr. Ramsland’s central conclusion is that “the Dominion Voting System is in-tentionally and purposefully designed with inherent errors to create systemic fraud and influence election results” ( ¶B.2). His reasoning is that the system intentionally generates many errors while scanning ballots in order to cause the images of the ballots to be reviewed by an EMS operator, a process known as “adjudication” during which the votes can be manually edited ( ¶B.12). This pro-vides an opportunity, Mr. Ramsland believes, for a malicious operator to change votes without being detected. Citing his forensic examination, Mr. Ramsland claims that a “staggering number of votes [in Antrim] required adjudication” (¶B.12), and that “all adjudication log entries for the 2020 election cycle are missing” and must “have been manually removed” ( ¶B.15). There are several problems with this theory. First, adjudication occurs after ballots are scanned and poll tapes are printed. In Antrim County, the final reported results match the poll tapes in essentially all cases. Therefore, the final results could not have been altered using adjudication. Second, Mr. Ramsland mischaracterizes the adjudication process. Dominion’s adjudication system produces detailed logs, which are recorded in the EMS to-gether with the ballot scan and the scanner’s original interpretation, as illustrated in Figure 9. Far from being an ideal way to cheat without possibility of detection, adjudication creates abundant digital evidence. 
+
+Figure 9: An Adjudicated Vote. These are excerpts from a ballot that was adjudicated after the 2020 presidential primary in Georgia. Dominion’s adjudica-tion system stores the ballot image together with the scanner’s interpretation of the votes and a log of any changes made by the system operator. Adjudication is an optional feature of the Dominion system and was not used in Antrim County. 40 Third, and fatally, adjudication functionality was not enabled at all in Antrim County during the November 2020 election. The adjudication software application is an optional component of Democracy Suite. Antrim did not purchase it, and my examination of the EMS shows that it was not installed. There are no adjudi-cation logs for the simple reason that adjudication was not used. Moreover, the tabulators were not configured to store ballot images—a necessary precondition for adjudication—and my inspection of the memory cards confirms that no ballot images are present. This means that it would have been impossible to use the adjudication feature even if the software were somehow installed after the election. Far from a “staggering number” of ballots being adjudicated, the actual number was zero. Therefore, Mr. Ramsland’s theories are completely inapplicable to the incident in Antrim County. 
+
+5.2 Claims Regarding Errors and Error Rates 
+
+Mr. Ramsland claims that Antrim’s scanners exhibited a high rate of errors during ballot processing as a means of enabling systemic fraud ( ¶¶ B.2, B.12). Some errors did occur during scanning, as I explained in Section 4, but they affected only specific contests in a small number of precincts, and there is no reason to believe they were intentional. However, Mr. Ramsland is largely referring to others kinds of errors that he believes occurred on the basis of his mistaken interpretations of the forensic evidence. For instance, the report repeatedly refers repeated to an error rate of 68.05% (¶¶ B.6, B.8, J.1, J.3). Mr. Ramsland calculated this percentage from the scanner log for the November 6 rescan in Central Lake, which contains 15,676 lines, 10,667 of which Mr. Ramsland classified as errors. “These errors resulted in overall tabulation errors or ballots being sent to adjudication,” he says, concluding that “[t]his high error rate proves the Dominion Voting System is flawed and does not meet state or federal election laws” ( ¶B.8). In actuality, the 68% figure is meaningless. Scanning a single ballot produces a variable number of lines in the log file—ranging from two to dozens—often including many benign warnings or errors. Many other entries and warnings are generated during pre-election testing or while starting or shutting down the machine. This means that the fraction of lines that are errors does not represent a fraction of ballots or votes, the entities for which an error rate would be relevant. Moreover, the errors in the log file do not mean what Mr. Ramsland purports them to. He claims that “[i]n Central Lake Township there were 1,222 ballots 
+
+reversed out of 1,491 total ballots cast, resulting in an 81.96% rejection rate. All reversed ballots are sent to adjudication for a decision by election personnel” (¶B.10, emphasis in the original). This is referring to log entries like those in Figure 10 that say “ Ballot has been reversed ”. However, these entries have nothing to do with adjudication. They simply mean that the ballot has been returned to the voter; i.e., the paper feeding mechanism has been reversed, as when a vending machine returns a dollar bill that has been misfed. This is a common and benign occurrence. In my experience, it often takes multiple tries to feed a ballot into a scanner, particularly when using a secrecy sleeve like those provided in Michigan. 41 Figure 10: Central Lake Scanner Log Entries. This log excerpt from the Central Lake memory card shows several ballots being processed. The warning messages relate to benign instances where ballots did not feed into the scanner correctly and were ejected (“reversed”) for the voter to try again. This is analogous to a vending machine returning a dollar bill that was inserted incorrectly. By way of example, 11 of 26 lines in Figure 10 are classified by the scanner as warnings, which might result in an “error rate” of 42% by Mr. Ramsland’s methods. However, upon closer inspection, the log merely shows two instances where ballots were misfed and returned to the voter. Both times, ballots were successfully processed a few seconds later, so it is likely that the voters simply tried again. 
+
+5.3 Claims Regarding Log Entries 
+
+Mr. Ramsland makes several further mistakes in interpreting the election system logs. He states that the scanner log shows that “Divert Options” were selected and claims that this means “all write-in ballots were sent for ‘adjudication’ by a poll worker or election official to process the ballot based on voter ‘intent’. Adjudication files allow a computer operator to decide to whom to award those votes (or to trash them)” ( ¶J.4). In reality, the divert option simply means that when a voter has selected a write-in, the scanner directs the physical ballot into a separate compartment within the ballot box. This makes it more convenient for a worker to later read the name that was written in. All voter selections, including the presence of a write-in, are processed normally by the scanner and reflected on the poll tape. The setting has nothing to do with electronic adjudication. Mr. Ramsland also points to scanner log entries that show “Override Options” were enabled for several classes of ballots. He mistakenly claims that these settings “allow[] any operator to change those votes” ( ¶J.5). “This gives the system operators carte blanche to adjudicate ballots,” he further claims ( ¶J.6). In actuality, the “Override Options” refer to situations where the scanner warns 42 a voter that they may have made a mistake when marking their ballot, such as an overvote or undervote. If the override option is enabled, voters are allowed to acknowledge the warnings and cause the scanner to accept their ballots despite the error conditions. These settings have nothing to do with “overriding” voters’ selections, and they do not mean the ballots will be sent to adjudication. Mr. Ramsland further claims that the scanner log shows that “RCV or Ranked Choice Voting Algorithm was enabled” which “allows the user to apply a weighted numerical value to candidates and change the overall result” ( ¶J.2). In reality, although some log entries reference the voting system’s RCV feature, they do not indicate that it was enabled. The EMS and memory card data data show that RCV was not in use, as do the results of the hand recount of the presidential contest. Mr. Ramsland claims that on “November 21, 2020, an unauthorized user unsuccessfully attempted to zero out election results” ( ¶B.17). The only evidence he offers for this assertion is an EMS log file entry that reads “ EmsLogger - There is no permission to {0}”, which he claims “is direct proof of an attempt to tamper with evidence” ( ¶J.8). This is absurd and misleading. A programmer would immediately recognize that {0} is merely a placeholder, in this case one that was intended to be replaced with a description of the attempted action [26]. It has nothing to do with “zeroing” election results. Citing another error message logged to the EMS, “ XmlException: The ’ ’ character, hexadecimal value 0x20, cannot be included in a name ”, Mr. Ramsland concludes, “Bottom line is that this is a calibration that rejects the vote” ( ¶J.8). This is completely baseless. The error refers to a field name in a data structure (an XML entity), which the relevant programming standard does not allow to contain a space. It has no relation to the names of contests or candidates, and there is nothing that suggests the error resulted in a rejected vote. 
+
+5.4 Claims Regarding Software Updates 
+
+Mr. Ramsland repeatedly mischaracterizes the updates to the scanner election definitions as “software updates” ( ¶¶ B.9, B.18, D.14–17, E.1). Although some-times referred to as “ballot programming”, election definitions in the Dominion system are not software in the sense of a computer program but rather data files that specify the content and layout of the ballots. In normal operation, they do not change the scanner’s software, although they do affect its behavior. Mr. Ramsland is wrong when he describes Central Lake Township as scanning twice with “different software versions of the operating program to calculate, not tabulate votes” ( ¶D.16). The scanner used the same software both times, but it was configured using different election definition files. Elsewhere, Mr. Ramsland seems to confuse ballot definition changes with firmware updates, which do change the scanner’s software ( ¶D.17). Ballot defini-tions are necessarily changed before every election, but firmware updates are a relatively rare occurrence that typically requires re-certification of the software under U.S. Election Assistance Commission guidelines. There is no evidence that any firmware updates occurred during the 2020 election cycle in Antrim County. 43 5.5 Claims Regarding Central Lake and Mancelona Townships 
+
+The report discusses the differences between the poll tapes from the two scans in Central Lake Township ( ¶¶ D.1–19). It points to three down-ballot contests where there were large changes to the results: the Central Lake and Ellsworth school board races and State Proposal 20-1. I explained in Section 4 precisely how these changes resulted from revisions to the ballot design in Central Lake Village. No other contests were affected by those revisions. The report states that the Central Lake Township Clerk told the ASOG team that three ballots that were damaged were not included in the second scan ( ¶D.3). Elections staff transcribed them onto new ballots, but they were not reflected in the final numbers ( ¶D.5). As I explained in Section 4.6, the data indicate that three ballots were not included during the second scan. If those were the three damaged ballots, this supports the conclusion that the ballots were omitted due to human error by elections staff. The report also discusses Mancelona Township and states that there is no indication that logic and accuracy testing was performed there following the update to the election definition ( ¶E.2). This is incorrect. The scanner logs from the Mancelona Township memory cards clearly show that this testing was performed. Lines 1–855 of the log from Precinct 1 and lines 1–971 of the log from Precinct 2 indicate that testing was performed from approximately 2–3 p.m. on October 24, the day after the county received the updated election definition. During that time, each log shows 126 or 127 ballots being scanned, a poll tape being printed, and the card being reset for use by voters. I discussed when logic and accuracy testing was performed and its impact on the incident in Section 4.1. Mr. Ramsland claims that “the Help America Vote Act, Safe Harbor provides a 90-day period prior to elections where no changes can be made to election systems” ( ¶D.17), and he says that the use of the revised election definition in Mancelona Township violated this rule, calling it “an election de-certifying event” (¶E.1). In fact, no such rule exists. Moreover, it would not have been possible for Antrim to finalize any of its election definitions 90 days before the November 3 election, since many candidates were not determined until after the results of the August 4 primary election were certified. 
+
+5.6 Claims Regarding Venezuela 
+
+Mr. Ramsland cites the work of Gustavo Delfino, who used statistical methods to investigate election fraud in Venezuela in the early 2000s. Although Mr. Ramsland writes that “[o]ur investigation into the error rates and results of the Antrim County voting tally reflect the same tacticts” ( ¶B.24), the relevance to Antrim is unclear. Venezuela uses completely different voting technology than Michigan, produced by a different company and based on touch-screen direct-recording electronic voting machines rather than hand-marked paper ballots. To my knowledge, neither Mr. Ramsland nor Mr. Delfino has performed any credible statistical analysis of the Antrim County results, let alone one that supports the conclusion that there was fraud. 44 5.7 Claims Regarding Security Problems 
+
+Some of the ASOG report’s claims about security problems in Antrim County election equipment are correct or based in fact, but Mr. Ramsland draws several incorrect conclusions. 
+
+Software Updates The report is correct that the EMS is missing important Windows security updates, potentially leaving it vulnerable to various methods of attack ( ¶I.2). The system is running Windows 10 version 1607, which was released in 2016, and it appears not to have had any updates installed for at least two years. The antivirus definitions are similarly out of date. This is a serious security problem. However, Mr. Ramsland is wrong that “[t]here is no way this election management system could have passed tests or have been legally certified” ( ¶B.16). In fact, missing software updates are frequently an unfortunate consequence of the federal certification process, under which voting system vendors must obtain EAC approval for any changes to election system software, including Windows updates [32]. If there are any security updates that have been approved for the Dominion system, Antrim County should promptly install them. However, installing unapproved updates, even for critical vulnerabilities, would potentially violate the system’s certification. 
+
+Security Event Log The report is correct that the Windows security event log in the EMS image only contains entries extending back to November 4, 2020, the day after the election ( ¶B.16). However, the timing appears to be a coincidence. The system is configured so that the maximum size for this log file is 192 MB, and when it grows beyond this size, the oldest entries are automatically removed. Nevertheless, security logs are important sources for forensic investigation and should be retained for as long as they are potentially relevant. Having a fixed maximum size is contrary to best practice. 
+
+Network Connectivity The report is correct that Dominion scanners have the ability to be connected to external networks ( ¶B.20). Some Michigan jurisdictions use this functionality to transmit preliminary results to their EMSes using wireless modems. Connecting scanners or EMSes to the Internet or other external networks creates significant risks. According to the Michigan Election Security Advisory Commission, “[i]t is possible that unofficial results could be intercepted or manipulated, that the locality’s election management system server could be attacked remotely over the network, or that optical scanners could themselves be remotely attacked” [25]. For these reasons, the Commission recommended that jurisdictions discontinue wireless result transmission. However, Antrim County did not purchase and does not use the Dominion wireless results transmission functionality. Instead, results are returned by physi-cally transporting the memory cards. Based on the EMS event log, it does not appear that the EMS has ever been connected to a network. 
+
+Authentication and Access Control The report is correct that the authen-tication and access control mechanisms on the EMS have serious weaknesses. Antrim workers almost exclusively used a single Windows user account that had full administrative privileges over the computer ( ¶I.10). This account has the nec-45 essary privileges to alter log files and bypass other security controls. For instance, anyone logged into this account has full access to the SQL server databases that run the election, with no additional authentication required ( ¶I.4). This database access can then be used to circumvent account passwords within the Democracy Suite applications ( ¶I.5), as I did to conduct my tests in Section 3. The report also states that the EMS hard disk was not encrypted ( ¶I.3). I was unable to find evidence in the disk image to confirm or refute this. If it is true, an attacker with physical access to the computer can bypass the Windows account passwords, install malicious software, and read or change data arbitrarily. Whether or not Antrim County maintains strong physical security for the EMS, disk encryption should be enabled to provide an additional layer of defense. These problems should be promptly mitigated. However, I am not aware of any credible evidence that any security problem was ever exploited against Antrim County’s election system. As my analysis shows, the anomalies that occurred in the November 2020 results are fully explained by human error. 46 6 Conclusion 
+
+My investigation shows that the Antrim County incident was initiated by unusual circumstances that are unlikely to have widely affected other jurisdictions. After making last-minute revisions to certain ballot designs, workers made two key human errors that directly led to inaccurate results: 
+
+– County staff failed to ensure that all ballot scanners used the revised election definition. This caused the EMS to misinterpret results from the scanners, leading to major election-night reporting errors (that are now fully corrected). 
+
+– Township staff failed to ensure that all ballots used the revised ballot designs. Ballots that did not match the scanner configurations were misread, leading to smaller errors in specific down-ballot contests (that remain uncorrected). Antrim could have discovered these problems before incorrect results were pub-lished or deemed official, but several opportunities to do so were missed: 
+
+– Townships failed to notice poll tape errors during pre-election testing. 
+
+– Poll workers erased memory cards, making the reporting errors harder to spot. 
+
+– County staff did not adequately investigate EMS errors on election night. 
+
+– County staff failed to “sanity-check” the initial results before posting them. To their credit, the county and state quickly understood the technical cause of the major anomalies. However, during the process of correcting the original problems, further human errors occurred that led to additional inaccurate results: 
+
+– County staff neglected to remove bad data before publishing updated results on November 5, again causing widespread reporting errors (later corrected). 
+
+– County staff made data entry errors when manually inputting results, affecting more than 2% of reported votes across the county (now fully corrected). 
+
+– County canvassers failed to ensure that all results matched the poll tapes, al-lowing data entry errors to affect some of the certified results (now corrected). 
+
+– Three ballots may have been omitted when Central Lake re-scanned on Novem-ber 6, due to a separate human error. This possibly changed the outcome of the Central Lake Village Marihuana Retailer Initiative (and remains uncorrected). Some of these human errors would have been harmless individually, but their combined effects undermined safeguards that should have ensured accuracy. Their number speaks to the extreme pressures that election workers faced last year, in the midst of a global pandemic and a bitterly contested presidential contest. There is no credible evidence that the Dominion system was deliberately designed to induce errors, but there were missed opportunities for the software to do more to election staff avoid making mistakes: 
+
+– When modifying the ballot designs, the software stated that old ballots and election definitions would be “unusable”. However, it failed to clearly warn that using them anyway could result in erroneous results. 47 – The EMS and scanners could have prevented or detected the use of incom-patible ballots and election definitions. They did not and gave no indication when incompatible ballots or election definitions were used. Several of the election procedures that broke down due to human error are important security protections. Furthermore, the EMS lacks important security updates, has weak authentication and access control mechanisms, and is vulnera-ble to compromise if an attacker has physical access to the computer. These are serious vulnerabilities that should be mitigated on a priority basis, but there is no evidence that any of these problems was ever exploited in Antrim County. My analysis has precisely accounted for all known anomalies in Antrim’s November 2020 election results, and none was the product of a security breach. 48 7 Recommendations 
+
+On the basis of my investigation, I offer the following recommendations to improve the administration of future elections: 1. Michigan and other states should expand the use of risk-limiting audits (RLAs) so that they occur in all major contests. RLAs provide a last line of defense against error and fraud and provide an added basis for voter confidence. 2. The Bureau of Elections should require counties to perform end-to-end pre-election testing, in which memory cards from L&A testing are loaded into the EMS and the results report is check for accuracy. Such testing would have detected the mismatched election definitions in Antrim County. 3. The Bureau of Elections should revise L&A testing procedures to ensure that testing is repeated after any change to election definitions or ballot designs. 4. The Bureau of Elections should revise county canvassing procedures and training to ensure that reported results in all contests are accurately compared to the results on scanner poll tapes and any discrepancies fully explained. 5. States that do not require canvassers to compare results to poll tapes, as Michigan does, should introduce this form of validation, which provides an important safeguard against reporting errors. 6. The Bureau of Elections should revise procedures and training to clarify what steps must be taken if absentee voters return ballots that use outdated designs. 7. The Bureau of Elections should revise training materials to include discussion of lessons from the Antrim County incident, including the importance of reviewing results for obvious errors or omissions before making them public. 8. Antrim County should provide additional training for county and township staff concerning the correct operation of the Dominion voting system, includ-ing proper procedures for operating the EMS and polling place equipment. 9. Dominion should revise its documentation to more prominently warn that mismatched election definitions could lead to erroneous results. 10. Other voting system vendors should review their equipment to determine whether reporting errors could potentially occur under similar circumstances. 11. Dominion should enhance D-Suite to verify that the election definition on a memory card being loaded is compatible with the one used by the EMS. 12. Dominion should revise documentation and training to emphasize that routine EMS tasks should not be performed from privileged user accounts. 13. Dominion should ensure that customers receive and are instructed to apply all appropriate security updates affecting EMS software components. 14. Dominion should advise customers to enable disk encryption on EMS systems and to increase the retention period of the Windows security event log. 15. The Bureau of Elections should audit the physical security of county EMSes. 16. The Bureau of Elections should require election technology, including EMSes, to promptly receive all appropriate security updates. 49 17. Counties that transmit scanner results over the Internet or using wireless modems should discontinue these practices, as recommended by the Michigan Election Security Advisory Commission [25]. 18. Jurisdictions should consider enabling the capability of their scanners to save ballot images. These could help resolve questions about the accuracy of results in future incidents, especially if the integrity of the paper trail is questioned. 19. Jurisdictions should retain electronic election records, such as memory cards and EMS data, for as long as physical records. These provide important ev-idence for investigating (or disproving) problems later discovered or alleged. 20. When future election incidents occur, even if they receive less public attention than the events in Antrim County, states should consider performing investi-gations like this one, to ensure that the problems are well understood and that any lessons are disseminated to help other jurisdictions avoid similar issues. 50 References 
+
+[1] Allied Security Operations Group. Antrim Michigan Forensics Report, Revised Preliminary Summary, v2 (redacted version) . Dec. 2020. url :http://www.13thcircuitcourt.org/DocumentCenter/View/15743/Antrim-Michigan-Forensics-Report-12-13-2020--v2-REDACTED. [2] Antrim County. Election Timeline . Prepared by Antrim County Clerk Sheryl Guy. Nov. 2020. url : https://committees.senate.michigan.gov/ testimony / 2019 - 2020 / Testimony, %20Antrim % 20County % 20Clerk % 20Sheryl%20Guy.pdf. [3] Antrim County. Unofficial Election Results . Nov. 4, 2020. url : http://www. antrimcounty.org/downloads/unofficial election results november 3 2020. pdf. [4] Antrim County. Partial Unofficial Election Results . Nov. 5, 2020. [5] Antrim County. Partial Unofficial Election Results . Nov. 6, 2020. [6] Antrim County. Official Election Results, 1st Amended . Nov. 16, 2020. [7] Antrim County. Official Election Results, 2nd Amended . Nov. 21, 2020. url :http://www.antrimcounty.org/downloads/official results 2nd amended. pdf. [8] Dominion Voting Systems. Democracy Suite EMS Election Event Designer User Guide, Version 5.5::212 . Oct. 10, 2017. [9] Dominion Voting Systems. Democracy Suite EMS Results Tally & Reporting User Guide, Version 5.5::16 . Oct. 10, 2017. [10] Ariel J. Feldman, J. Alex Halderman, and Edward W. Felten. “Security Analysis of the Diebold AccuVote-TS Voting Machine.” In: Proc. USENIX/ ACCURATE Electronic Voting Technology Workshop (EVT) . 2007. [11] J. Alex Halderman. “Practical Attacks on Real-world E-voting.” In: Real-World Electronic Voting: Design, Analysis and Deployment . Ed. by Feng Hao and Peter Y. A. Ryan. 2016, pp. 145–171. [12] Michigan Board of State Canvassers. Draft meeting minutes . Nov. 23, 2020. 
+
+url : https://www.michigan.gov/documents/sos/112320 draft minutes 708672 7.pdf. [13] Michigan Bureau of Elections. Election Officials Manual, Chapter 10: Preparation of Election Equipment . Feb. 2019. url : https://www.michigan. gov/documents/sos/X Preparation of Voting Equipment 266000 7.pdf. [14] Michigan Bureau of Elections. Election Officials Manual, Chapter 12: Precinct Canvass – Closing the Polls . Feb. 2019. url : https : / / www . michigan.gov/documents/sos/XII Precinct Canvass - Closing the Polls 266013 7.pdf. [15] Michigan Bureau of Elections. Election Officials Manual, Chapter 8: Absent Voter Ballot Election Day Processing . Oct. 2020. url : https : / / www . michigan.gov/documents/sos/VIII Absent Voter County Boards 265998 7.pdf. [16] Michigan Bureau of Elections. Election Recounts . Aug. 2018. url : https: //www.michigan.gov/documents/sos/Recount Process Summary REV August 2018 629821 7.pdf. 51 [17] Michigan Bureau of Elections. Manual for Boards of County Canvassers .Oct. 2020. url : https://www.michigan.gov/documents/sos/BCC Manual 464331 7.pdf. [18] Michigan Bureau of Elections. Post-Election Audit Manual . Jan. 2020. url :https://www.michigan.gov/documents/sos/Post Election Audit Manual 418482 7.pdf. [19] Michigan Bureau of Elections. Test Procedure for Tabulators and Voter Assist Terminals (VAT) . Jan. 2019. url : https://www.michigan.gov/ documents/test deck manual05 131814 7.pdf. [20] Michigan Department of State. Antrim hand count tally sheet . Dec. 17, 2020. url : https://www.michigan.gov/documents/sos/AntrimCounty Presidential Race Full Hand Count November2020 711027 7.pdf. [21] Michigan Department of State. Final numbers from Antrim County audit continue to affirm accuracy of election results . Dec. 18, 2020. url : https: //www.michigan.gov/som/0,4669,7-192-47796-547970--,00.html. [22] Michigan Department of State. General Election Audit Processes . 2020. 
+
+url : https://www.michigan.gov/documents/sos/2020 Gen Election Audit Processes 711978 7.pdf. [23] Michigan Department of State. Isolated User Error in Antrim County Does Not Affect Election Results, Has no Impact on Other Counties or States . Nov. 7, 2020. url : https://www.michigan.gov/documents/sos/ Antrim Fact Check 707197 7.pdf. [24] Michigan Department of State. Statewide election audit process affirms presidential election outcome . Feb. 2021. url : https://www.michigan.gov/ sos/0,4670,7-127--552029--,00.html. [25] Michigan Election Security Advisory Commission. Report and Recommen-dations . Oct. 2020. url : https://www.michigan.gov/documents/sos/ ESAC Report Recommendations 706522 7.pdf. [26] Microsoft. C# Reference: String Interpolation . url : https://docs.microsoft. com/en-us/dotnet/csharp/language-reference/tokens/interpolated. [27] National Academies of Sciences, Engineering, and Medicine. Securing the Vote: Protecting American Democracy . Washington, DC: The National Academies Press, 2018. isbn : 978-0-309-47647-8. url : https://www.nap. edu/catalog/25120/securing-the-vote-protecting-american-democracy. [28] PCUnlocker. Reset Forgotten Windows 10 Password with Install Disk . url :http://www.pcunlocker.com/reset- windows- 10- password- with- install-disk.html. [29] Nicole Perlroth and Jack Nicas. No, Software Glitches Are Not Affecting Vote Counts . The New York Times. Nov. 9, 2020. url : https : / / www . nytimes . com / 2020 / 11 / 09 / technology / no - software - glitches - are - not -affecting-vote-counts.html. [30] Secretary of State Ruth Johnson. Media release: Secretary Johnson an-nounces next-generation voting equipment . Jan. 2017. url : https://www. michigan.gov/documents/sos/SecJohnsonAnnounce 549600 7.pdf. 52 [31] U.S. Election Assistance Commission. Democracy Suite 5.5–A (Modifica-tion) . Jan. 2019. url : https://www.eac.gov/voting-equipment/democracy-suite-55-modification. [32] U.S. Election Assistance Commission. Windows Update Critical FAQ . 2020. 
+
+url : https://www.eac.gov/windows-critical-update-faq. [33] Diane Vaughan. The Challenger Launch Decision: Risky Technology, Cul-ture, and Deviance at NASA . University of Chicago Press, 1996. 53 A Qualifications 
+
+My name is J. Alex Halderman. I am Professor of Computer Science and Engineer-ing, Director of the Center for Computer Security and Society, and Director of the Software Systems Laboratory at the University of Michigan in Ann Arbor. I hold a Ph.D. (2009), a master’s degree (2005), and a bachelor’s degree (2003), summa cum laude , in computer science, all from Princeton University. My background, qualifications, and professional affiliations are set forth in my curriculum vitae ,which is available online at https://alexhalderman.com/home/halderman-cv.pdf. My research focuses on computer security and privacy, with an emphasis on problems that broadly impact society and public policy. Among my areas of research are software security, network security, computer forensics, and election cybersecurity. I have authored more than 90 articles and books, and my work has been cited in more than 11,000 scholarly publications. I have served as a peer-reviewer for more than 35 research conferences and workshops. I have published numerous peer-reviewed research papers analyzing security problems in electronic voting systems used in U.S. states and in other countries. I have also investigated methods for improving election security, such as efficient techniques for auditing whether computerized election results match paper ballots. I regularly teach courses in computer security, network security, and election cybersecurity at the graduate and undergraduate levels. I am the creator of Securing Digital Democracy, a massive, open, online course about computer security and elections that has attracted more than 20,000 students. I serve as co-chair of the State of Michigan’s Election Security Advisory Commission, by appointment of the Michigan Secretary of State. I have also performed security testing of electronic voting systems for the Secretary of State of California. I have testified before the U.S. Senate Select Committee on Intelligence and before the U.S. House Appropriations Subcommittee on Financial Service and General Government on the subject of cybersecurity and U.S. elections. I received the John Gideon Award for Election Integrity from the Election Verification Network, the Andrew Carnegie Fellowship, the Alfred P. Sloan Foundation Research Fellowship, the IRTF Applied Networking Research Prize, the Eric Aupperle Innovation Award, the University of Michigan College of Engineering 1938 E Award for teaching and scholarship, and the University of Michigan President’s Award for National and State Leadership. 
+
+Affirmation 
+
+I declare under penalty of the perjury laws of the State of Michigan and the United States that the foregoing is true and correct, and that this report was executed this 26 th day of March, 2021. 
+
+J. Alex Halderman 54

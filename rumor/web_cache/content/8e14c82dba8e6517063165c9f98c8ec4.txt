@@ -1,0 +1,393 @@
+Title: Difference between @Before, @BeforeClass, @BeforeEach and @BeforeAll
+
+URL Source: https://stackoverflow.com/questions/20295578/difference-between-before-beforeclass-beforeeach-and-beforeall
+
+Markdown Content:
+This question shows research effort; it is useful and clear
+
+532
+
+Save this question.
+
+Show activity on this post.
+
+What is the main difference between
+
+*   `@Before` and `@BeforeClass`
+    *   and in JUnit 5 `@BeforeEach` and `@BeforeAll`
+
+*   `@After` and `@AfterClass`
+
+According to the JUnit Api`@Before` is used in the following case:
+
+> When writing tests, it is common to find that several tests need similar objects created before they can run.
+
+Whereas `@BeforeClass` can be used to establish a database connection. But couldn't `@Before` do the same?
+
+asked Nov 30, 2013 at 1:43
+
+Evgenij Reznik Evgenij Reznik
+
+18.7k 42 gold badges 116 silver badges 194 bronze badges
+
+This answer is useful
+
+765
+
+Save this answer.
+
+Show activity on this post.
+
+The code marked `@Before` is executed before each test, while `@BeforeClass` runs once before the entire test fixture. If your test class has ten tests, `@Before` code will be executed ten times, but `@BeforeClass` will be executed only once.
+
+In general, you use `@BeforeClass` when multiple tests need to share the same computationally expensive setup code. Establishing a database connection falls into this category. You can move code from `@BeforeClass` into `@Before`, but your test run may take longer. Note that the code marked `@BeforeClass` is run as static initializer, therefore it will run before the class instance of your test fixture is created.
+
+In JUnit 5, the tags `@BeforeEach` and `@BeforeAll` are the equivalents of `@Before` and `@BeforeClass` in JUnit 4. Their names are a bit more indicative of when they run, loosely interpreted: 'before each tests' and 'once before all tests'.
+
+Erik
+
+4,593 3 gold badges 39 silver badges 57 bronze badges
+
+answered Nov 30, 2013 at 1:50
+
+7 Comments
+----------
+
+@pacoverflow `@BeforeClas` is static. It runs before test class instances are created.
+
+2015-10-05T15:00:21.56Z+00:00
+
+Keep in mind that when you use @BeforeClass your method/parameter needs to be static
+
+2017-05-12T13:19:06.3Z+00:00
+
+I will only add that `@BeforeAll` may be non-static and call on every new test-instance run. See the corresponding answer stackoverflow.com/a/55720750/1477873
+
+2019-04-30T09:22:19.29Z+00:00
+
+are you sure `Before` and `BeforeEach` are the same things because my test cases fail the mocks when i use `@Before` on my `init()` function but works with `@BeforeEach`
+
+2020-10-25T14:42:31.873Z+00:00
+
+|
+
+This answer is useful
+
+180
+
+Save this answer.
+
+Show activity on this post.
+
+**Difference between each annotation are :**
+
+```
++-------------------------------------------------------------------------------------------------------+
+¦                                       Feature                            ¦   Junit 4    ¦   Junit 5   ¦
+¦--------------------------------------------------------------------------+--------------+-------------¦
+¦ Execute before all test methods of the class are executed.               ¦ @BeforeClass ¦ @BeforeAll  ¦
+¦ Used with static method.                                                 ¦              ¦             ¦
+¦ For example, This method could contain some initialization code          ¦              ¦             ¦
+¦-------------------------------------------------------------------------------------------------------¦
+¦ Execute after all test methods in the current class.                     ¦ @AfterClass  ¦ @AfterAll   ¦
+¦ Used with static method.                                                 ¦              ¦             ¦
+¦ For example, This method could contain some cleanup code.                ¦              ¦             ¦
+¦-------------------------------------------------------------------------------------------------------¦
+¦ Execute before each test method.                                         ¦ @Before      ¦ @BeforeEach ¦
+¦ Used with non-static method.                                             ¦              ¦             ¦
+¦ For example, to reinitialize some class attributes used by the methods.  ¦              ¦             ¦
+¦-------------------------------------------------------------------------------------------------------¦
+¦ Execute after each test method.                                          ¦ @After       ¦ @AfterEach  ¦
+¦ Used with non-static method.                                             ¦              ¦             ¦
+¦ For example, to roll back database modifications.                        ¦              ¦             ¦
++-------------------------------------------------------------------------------------------------------+
+```
+
+Most of annotations in both versions are same, but few differs.
+
+Reference
+
+**Order of Execution.**
+
+Dashed box -> optional annotation.
+
+answered Jul 11, 2017 at 14:49
+
+Comments
+--------
+
+This answer is useful
+
+19
+
+Save this answer.
+
+Show activity on this post.
+
+**Before and BeforeClass in JUnit**
+
+The function `@Before` annotation will be executed before each of test function in the class having `@Test` annotation but the function with `@BeforeClass` will be execute only one time before all the test functions in the class.
+
+Similarly function with `@After` annotation will be executed after each of test function in the class having `@Test` annotation but the function with `@AfterClass` will be execute only one time after all the test functions in the class.
+
+**SampleClass**
+
+```
+public class SampleClass {
+    public String initializeData(){
+        return "Initialize";
+    }
+
+    public String processDate(){
+        return "Process";
+    }
+ }
+```
+
+**SampleTest**
+
+```
+public class SampleTest {
+
+    private SampleClass sampleClass;
+
+    @BeforeClass
+    public static void beforeClassFunction(){
+        System.out.println("Before Class");
+    }
+
+    @Before
+    public void beforeFunction(){
+        sampleClass=new SampleClass();
+        System.out.println("Before Function");
+    }
+
+    @After
+    public void afterFunction(){
+        System.out.println("After Function");
+    }
+
+    @AfterClass
+    public static void afterClassFunction(){
+        System.out.println("After Class");
+    }
+
+    @Test
+    public void initializeTest(){
+        Assert.assertEquals("Initailization check", "Initialize", sampleClass.initializeData() );
+    }
+
+    @Test
+    public void processTest(){
+        Assert.assertEquals("Process check", "Process", sampleClass.processDate() );
+    }
+
+}
+```
+
+**Output**
+
+```
+Before Class
+Before Function
+After Function
+Before Function
+After Function
+After Class
+```
+
+**In Junit 5**
+
+```
+@Before = @BeforeEach
+@BeforeClass = @BeforeAll
+@After = @AfterEach
+@AfterClass = @AfterAll
+```
+
+answered Aug 13, 2018 at 11:05
+
+Comments
+--------
+
+This answer is useful
+
+12
+
+Save this answer.
+
+Show activity on this post.
+
+**JUnit @BeforeEach, @AfterEach, @BeforeAll, @AfterAll**
+
+`@Before`(JUnit4) ->`@BeforeEach`(JUnit5) - method is called **before** every test
+
+`@After`(JUnit4) ->`@AfterEach`(JUnit5) - method is called **after** every test
+
+`@BeforeClass`(JUnit4) ->`@BeforeAll`(JUnit5) - **static** method is called **before** executing all tests in this class. It can be a large task as starting server, read file, making db connection...
+
+`@AfterClass`(JUnit4) ->`@AfterAll`(JUnit5) - **static** method is called **after** executing all tests in this class.
+
+answered Jan 19, 2021 at 20:50
+
+yoAlex5 yoAlex5
+
+35k 10 gold badges 234 silver badges 251 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+2
+
+Save this answer.
+
+Show activity on this post.
+
+```
+import org.junit.Assert
+import org.junit.Before
+import org.junit.BeforeClass
+import org.junit.Test
+
+class FeatureTest {
+    companion object {
+        private lateinit var heavyFeature: HeavyFeature
+        @BeforeClass
+        @JvmStatic
+        fun beforeHeavy() {
+            heavyFeature = HeavyFeature()
+        }
+    }
+
+    private lateinit var feature: Feature
+
+    @Before
+    fun before() {
+        feature = Feature()
+    }
+
+    @Test
+    fun testCool() {
+        Assert.assertTrue(heavyFeature.cool())
+        Assert.assertTrue(feature.cool())
+    }
+
+    @Test
+    fun testWow() {
+        Assert.assertTrue(heavyFeature.wow())
+        Assert.assertTrue(feature.wow())
+    }
+}
+```
+
+Same as
+
+```
+import org.junit.Assert
+import org.junit.Test
+
+ class FeatureTest {
+    companion object {
+        private val heavyFeature = HeavyFeature()
+    }
+
+    private val feature = Feature()
+
+    @Test
+    fun testCool() {
+        Assert.assertTrue(heavyFeature.cool())
+        Assert.assertTrue(feature.cool())
+    }
+
+    @Test
+    fun testWow() {
+        Assert.assertTrue(heavyFeature.wow())
+        Assert.assertTrue(feature.wow())
+    }
+}
+```
+
+answered Feb 27, 2019 at 15:05
+
+k4dima k4dima
+
+6,277 5 gold badges 44 silver badges 42 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+1
+
+Save this answer.
+
+Show activity on this post.
+
+The basic difference between all these annotations is as follows -
+
+1.   **@BeforeEach** - Use to run a common code before( eg setUp) each test method execution. analogous to JUnit 4’s @Before.
+2.   **@AfterEach** - Use to run a common code after( eg tearDown) each test method execution. analogous to JUnit 4’s @After.
+3.   **@BeforeAll** - Use to run once per class before any test execution. analogous to JUnit 4’s @BeforeClass.
+4.   **@AfterAll** - Use to run once per class after all test are executed. analogous to JUnit 4’s @AfterClass.
+
+All these annotations along with the usage is defined on Codingeek - Junit5 Test Lifecycle
+
+answered Jan 2, 2021 at 18:05
+
+Hitesh Garg Hitesh Garg
+
+1,211 1 gold badge 10 silver badges 22 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+0
+
+Save this answer.
+
+Show activity on this post.
+
+`@BeforeClass` will be run before the entire test suits whereas `@Before` will be run is executed before each test, while `@BeforeClass` runs once before the entire test fixture. If your test class has ten tests, `@Before` code will be executed ten times, but `@BeforeClass` will be executed only once.
+
+Abdur Rahman
+
+1,686 1 gold badge 23 silver badges 34 bronze badges
+
+answered Sep 27, 2021 at 23:40
+
+Comments
+--------
+
+This answer is useful
+
+0
+
+Save this answer.
+
+Show activity on this post.
+
+Methods with @Before and @After annotations SHOULD NOT BE STATIC.
+
+answered Sep 22, 2024 at 7:59
+
+1 Comment
+---------
+
+Your answer could be improved with additional supporting information. Please edit to add further details, such as citations or documentation, so that others can confirm that your answer is correct. You can find more information on how to write good answers in the help center.
+
+2024-09-23T03:59:43.697Z+00:00
+
+Start asking to get answers
+
+Find the answer to your question by asking.
+
+Ask question
+
+Explore related questions
+
+See similar questions with these tags.

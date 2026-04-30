@@ -1,0 +1,523 @@
+Title: ERROR: [generic] None: Unable to download webpage: HTTP Error 403: Forbidden (caused by <HTTPError 403: 'Forbidden'>);
+
+URL Source: https://github.com/yt-dlp/yt-dlp/issues/6016
+
+Published Time: 2023-01-11T23:06:51.000Z
+
+Markdown Content:
+ERROR: [generic] None: Unable to download webpage: HTTP Error 403: Forbidden (caused by <HTTPError 403: 'Forbidden'>); · Issue #6016 · yt-dlp/yt-dlp
+
+===============
+
+Skip to content
+Navigation Menu
+---------------
+
+Toggle navigation
+
+Sign in
+
+Appearance settings
+
+*    Platform 
+
+    *   GitHub Copilot Write better code with AI
+    *   GitHub Spark New Build and deploy intelligent apps
+    *   GitHub Models New Manage and compare prompts
+    *   GitHub Advanced Security Find and fix vulnerabilities
+    *   Actions Automate any workflow
+
+    *   Codespaces Instant dev environments
+    *   Issues Plan and track work
+    *   Code Review Manage code changes
+    *   Discussions Collaborate outside of code
+    *   Code Search Find more, search less
+
+Explore
+    *   Why GitHub
+    *   Documentation
+    *   GitHub Skills
+    *   Blog
+
+Integrations
+    *   GitHub Marketplace
+    *   MCP Registry
+
+View all features
+
+*    Solutions 
+
+By company size
+    *   Enterprises
+    *   Small and medium teams
+    *   Startups
+    *   Nonprofits
+
+By use case
+    *   App Modernization
+    *   DevSecOps
+    *   DevOps
+    *   CI/CD
+    *   View all use cases
+
+By industry
+    *   Healthcare
+    *   Financial services
+    *   Manufacturing
+    *   Government
+    *   View all industries
+
+View all solutions
+
+*    Resources 
+
+Topics
+    *   AI
+    *   DevOps
+    *   Security
+    *   Software Development
+    *   View all
+
+Explore
+    *   Learning Pathways
+    *   Events & Webinars
+    *   Ebooks & Whitepapers
+    *   Customer Stories
+    *   Partners
+    *   Executive Insights
+
+*    Open Source 
+
+    *   GitHub Sponsors Fund open source developers
+
+    *   The ReadME Project GitHub community articles
+
+Repositories
+    *   Topics
+    *   Trending
+    *   Collections
+
+*    Enterprise 
+
+    *   Enterprise platform AI-powered developer platform
+
+Available add-ons
+    *   GitHub Advanced Security Enterprise-grade security features
+    *   Copilot for business Enterprise-grade AI features
+    *   Premium Support Enterprise-grade 24/7 support
+
+*   Pricing
+
+Search or jump to...
+
+Search code, repositories, users, issues, pull requests...
+==========================================================
+
+ Search  
+
+Clear
+
+Search syntax tips
+
+Provide feedback
+================
+
+We read every piece of feedback, and take your input very seriously.
+
+- [x] Include my email address so I can be contacted 
+
+ Cancel  Submit feedback 
+
+Saved searches
+==============
+
+Use saved searches to filter your results more quickly
+------------------------------------------------------
+
+Name 
+
+Query 
+
+To see all available qualifiers, see our documentation.
+
+ Cancel  Create saved search 
+
+Sign in
+
+Sign up
+
+Appearance settings
+
+Resetting focus
+
+You signed in with another tab or window. Reload to refresh your session.You signed out in another tab or window. Reload to refresh your session.You switched accounts on another tab or window. Reload to refresh your session.Dismiss alert
+
+{{ message }}
+
+yt-dlp/**yt-dlp**Public
+
+*   Sponsor Sponsor yt-dlp/yt-dlp
+=====================    ### Uh oh!
+
+There was an error while loading. Please reload this page.     
+*   Notifications You must be signed in to change notification settings
+*   Fork 10.7k
+*   Star 133k 
+
+*   Code
+*   Issues 1.7k
+*   Pull requests 451
+*   Actions
+*   Projects 4
+*   Wiki
+*   Security 7### Uh oh!
+There was an error while loading.Please reload this page.    
+*   Insights
+
+Additional navigation options
+
+*   Code
+*   Issues
+*   Pull requests
+*   Actions
+*   Projects
+*   Wiki
+*   Security
+*   Insights
+
+ERROR: [generic] None: Unable to download webpage: HTTP Error 403: Forbidden (caused by <HTTPError 403: 'Forbidden'>);#6016
+===========================================================================================================================
+
+New issue
+
+Copy link
+
+New issue
+
+Copy link
+
+Closed
+
+Closed
+
+ERROR: [generic] None: Unable to download webpage: HTTP Error 403: Forbidden (caused by <HTTPError 403: 'Forbidden'>);#6016
+
+Copy link
+
+Labels
+
+question Question Question
+
+Description
+-----------
+
+prisoneer
+
+opened on Jan 11, 2023 · edited by prisoneer
+
+Edits
+
+Issue body actions
+
+### DO NOT REMOVE OR SKIP THE ISSUE TEMPLATE
+
+*    - [x]  I understand that I will be **blocked** if I remove or skip any mandatory* field          To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.   
+
+### Checklist
+
+*    - [x]  I'm reporting a bug unrelated to a specific site        - [x]  I've verified that I'm running yt-dlp version **2023.01.06** (update instructions) or later (specify commit)        - [x]  I've checked that all provided URLs are playable in a browser with the same IP and same login details        - [x]  I've checked that all URLs and arguments with special characters are properly quoted or escaped        - [x]  I've searched the bugtracker for similar issues **including closed ones**. DO NOT post duplicates        - [x]  I've read the guidelines for opening an issue          To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.   
+
+### Provide a description that is worded well enough to be understood
+
+I am paying for online courses at softuni.bg and I was downloading the videos to watch them at work (no internet there). So far I was able to download everything but today I received this error
+
+ERROR: [generic] None: Unable to download webpage: HTTP Error 403: Forbidden (caused by <HTTPError 403: 'Forbidden'>);
+
+Here's the full cmd text:
+
+`C:\Users\user>yt-dlp "https://videos.softuni.bg/hls/PROFESSIONAL-MODULES/2023/FRONT-END/2023-01-HTML-CSS/20230110/20230110-HTML-1-,720p,480p,240p,.mp4/urlset/master.m3u8"
+
+ [generic] Extracting URL: https://videos.softuni.bg/hls/PROFESSIONAL-MODULES/2023/FRONT-END/2023-01-HTML-CSS/20230110/20230...4/urlset/master.m3u8
+
+ [generic] master: Downloading webpage
+
+ ERROR: [generic] None: Unable to download webpage: HTTP Error 403: Forbidden (caused by <HTTPError 403: 'Forbidden'>); please report this issue on https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using yt-dlp -U
+
+C:\Users\user>yt-dlp -U
+
+ Latest version: 2023.01.06, Current version: 2023.01.06
+
+ yt-dlp is up to date (2023.01.06)`
+
+### Provide verbose output that clearly demonstrates the problem
+
+*    - [x]  Run **your** yt-dlp command with **-vU** flag added (`yt-dlp -vU <your command line>`)        - [x]  Copy the WHOLE output (starting with `[debug] Command-line config`) and insert it below          To pick up a draggable item, press the space bar. While dragging, use the arrow keys to move the item. Press space again to drop the item in its new position, or press escape to cancel.   
+
+### Complete Verbose Output
+
+undefinedshell
+[debug] Command-line config: ['-vU', 'https://videos.softuni.bg/hls/PROFESSIONAL-MODULES/2023/FRONT-END/2023-01-HTML-CSS/20230110/20230110-HTML-1-,720p,480p,240p,.mp4/urlset/master.m3u8']
+[debug] User config "C:\Users\user\AppData\Roaming\yt-dlp\config.txt": ['-f', 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best', '-i', '-o', 'D:/Courses/%(title)s.%(ext)s', '--no-mtime']
+[debug] Encodings: locale cp1251, fs utf-8, pref cp1251, out utf-8, error utf-8, screen utf-8
+[debug] yt-dlp version 2023.01.06 [6becd25] (win_exe)
+[debug] Python 3.8.10 (CPython AMD64 64bit) - Windows-10-10.0.17763-SP0 (OpenSSL 1.1.1k  25 Mar 2021)
+[debug] exe versions: ffmpeg 2021-02-02-git-2367affc2c-full_build-www.gyan.dev, ffprobe 2021-02-02-git-2367affc2c-full_build-www.gyan.dev
+[debug] Optional libraries: Cryptodome-3.16.0, brotli-1.0.9, certifi-2022.12.07, mutagen-1.46.0, sqlite3-2.6.0, websockets-10.4
+[debug] Proxy map: {}
+[debug] Loaded 1760 extractors
+[debug] Fetching release info: https://api.github.com/repos/yt-dlp/yt-dlp/releases/latest
+Latest version: 2023.01.06, Current version: 2023.01.06
+yt-dlp is up to date (2023.01.06)
+[generic] Extracting URL: https://videos.softuni.bg/hls/PROFESSIONAL-MODULES/2023/FRONT-END/2023-01-HTML-CSS/20230110/20230110-HTML-1-,720p,480p,240p,.mp4/urlset/master.m3u8
+[generic] master: Downloading webpage
+ERROR: [generic] None: Unable to download webpage: HTTP Error 403: Forbidden (caused by <HTTPError 403: 'Forbidden'>); please report this issue on  https://github.com/yt-dlp/yt-dlp/issues?q= , filling out the appropriate issue template. Confirm you are on the latest version using  yt-dlp -U
+  File "yt_dlp\extractor\common.py", line 680, in extract
+  File "yt_dlp\extractor\generic.py", line 2384, in _real_extract
+  File "yt_dlp\extractor\common.py", line 825, in _request_webpage
+
+  File "yt_dlp\extractor\common.py", line 807, in _request_webpage
+  File "yt_dlp\YoutubeDL.py", line 3730, in urlopen
+  File "urllib\request.py", line 531, in open
+  File "urllib\request.py", line 640, in http_response
+  File "urllib\request.py", line 569, in error
+  File "urllib\request.py", line 502, in _call_chain
+  File "urllib\request.py", line 649, in http_error_default
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+undefined
+
+Activity
+--------
+
+prisoneer
+
+added 
+
+bug Bug that is not site-specific Bug that is not site-specific
+
+triage Untriaged issue Untriaged issue
+
+on Jan 11, 2023
+
+### bashonly commented on Jan 12, 2023
+
+bashonly
+
+on Jan 12, 2023
+
+Member
+
+More actions
+
+*   add `--referer "URL"` to your yt-dlp command, replacing `URL` with the actual URL of the webpage that you are getting the m3u8 link from
+*   add `--cookies-from-browser chrome` to your yt-dlp command, or replace `chrome` with the name of the browser that you are logged into the site with
+
+If that doesn't work, it's possible that there are other HTTP headers required by the site. You could look in your browser's dev tools and see what other headers your browser is sending with the request for the m3u8. You can use the `--add-header` option to pass these to yt-dlp, e.g. `--add-header "Accept:*/*"`
+
+🎉React with 🎉3 sistematico, jhriyaz and rayanamukami❤️React with ❤️2 prisoneer and trdaya
+
+bashonly
+
+added 
+
+question Question Question
+
+ and removed 
+
+bug Bug that is not site-specific Bug that is not site-specific
+
+triage Untriaged issue Untriaged issue
+
+on Jan 12, 2023
+
+emversch
+
+mentioned this on Jan 14, 2023
+
+*   [GoPlay] Unable to download JSON metadata: HTTP Error 403: Forbidden #6032 
+
+pukkandan
+
+closed this as completed on Jan 15, 2023
+
+### sistematico commented on Jan 24, 2023
+
+sistematico
+
+on Jan 24, 2023
+
+More actions
+
+> *   add `--referer "URL"` to your yt-dlp command, replacing `URL` with the actual URL of the webpage that you are getting the m3u8 link from
+> 
+> 
+>     *   add `--cookies-from-browser chrome` to your yt-dlp command, or replace `chrome` with the name of the browser that you are logged into the site with
+> 
+> 
+> 
+> If that doesn't work, it's possible that there are other HTTP headers required by the site. You could look in your browser's dev tools and see what other headers your browser is sending with the request for the m3u8. You can use the `--add-header` option to pass these to yt-dlp, e.g. `--add-header "Accept:*/*"`
+
+First two steps solved for me, thank you.
+
+### jhriyaz commented on Apr 18, 2023
+
+jhriyaz
+
+on Apr 18, 2023
+
+More actions
+
+> *   add `--referer "URL"` to your yt-dlp command, replacing `URL` with the actual URL of the webpage that you are getting the m3u8 link from
+> *   add `--cookies-from-browser chrome` to your yt-dlp command, or replace `chrome` with the name of the browser that you are logged into the site with
+> 
+> 
+> If that doesn't work, it's possible that there are other HTTP headers required by the site. You could look in your browser's dev tools and see what other headers your browser is sending with the request for the m3u8. You can use the `--add-header` option to pass these to yt-dlp, e.g. `--add-header "Accept:*/*"`
+
+it worked for me as well.thanks.
+
+### anesh commented on Aug 23, 2023
+
+anesh
+
+on Aug 23, 2023 · edited by anesh
+
+Edits
+
+More actions
+
+i checked via dev tools and since it was giving me a 403 error, i checked for an authroization header, adding the authorization header via --add-header fixed the issue, The authorization header is available from the Call to /youtubei/v1/att/get?key
+
+### trdaya commented on Apr 17, 2024
+
+trdaya
+
+on Apr 17, 2024
+
+More actions
+
+> *   add `--referer "URL"` to your yt-dlp command, replacing `URL` with the actual URL of the webpage that you are getting the m3u8 link from
+> *   add `--cookies-from-browser chrome` to your yt-dlp command, or replace `chrome` with the name of the browser that you are logged into the site with
+> 
+> 
+> If that doesn't work, it's possible that there are other HTTP headers required by the site. You could look in your browser's dev tools and see what other headers your browser is sending with the request for the m3u8. You can use the `--add-header` option to pass these to yt-dlp, e.g. `--add-header "Accept:*/*"`
+
+Worked. Thanks mate!
+
+bashonly
+
+mentioned this on Apr 27, 2024
+
+*   Unable to download webpage: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>) #9807 
+
+### word4adobe commented on Aug 23, 2024
+
+word4adobe
+
+on Aug 23, 2024
+
+More actions
+
+> > *   add `--referer "URL"` to your yt-dlp command, replacing `URL` with the actual URL of the webpage that you are getting the m3u8 link from
+> > 
+> > 
+> >     *   add `--cookies-from-browser chrome` to your yt-dlp command, or replace `chrome` with the name of the browser that you are logged into the site with
+> > 
+> > 
+> > 
+> > If that doesn't work, it's possible that there are other HTTP headers required by the site. You could look in your browser's dev tools and see what other headers your browser is sending with the request for the m3u8. You can use the `--add-header` option to pass these to yt-dlp, e.g. `--add-header "Accept:*/*"`
+> 
+> 
+> First two steps solved for me, thank you.
+
+can you explain how to be ?
+
+### Happosai17 commented on Oct 21, 2025
+
+Happosai17
+
+on Oct 21, 2025 · edited by github-actions
+
+Edits
+
+More actions
+
+Caution
+
+This comment may contain links to malicious content. **DO NOT** follow any links below
+
+I have the same error trying to download a google drive video. Any hints?
+
+ C:\Users\m.toblini\Downloads>yt-dlp_x86 --cookies cookies.txt --no-check-certificates https://drive(dot)google.com/file/d/1ZoiOtjUGscrNVrHt5i3fF3Gl-gay3C3J/view?usp=drive_link
+
+ [GoogleDrive] Extracting URL: https://drive(dot)google.com/file/d/1ZoiOtjUGscrNVrHt5i3fF3Gl-gay3C3J/view?usp=drive_link
+
+ [GoogleDrive] 1ZoiOtjUGscrNVrHt5i3fF3Gl-gay3C3J: Downloading video webpage
+
+ ERROR: [GoogleDrive] 1ZoiOtjUGscrNVrHt5i3fF3Gl-gay3C3J: Unable to download webpage: HTTP Error 403: Forbidden (caused by <HTTPError 403: Forbidden>)
+
+Sign up for free**to join this conversation on GitHub.** Already have an account? Sign in to comment
+
+Metadata
+--------
+
+Metadata
+--------
+
+### Assignees
+
+No one assigned
+
+### Labels
+
+question Question Question
+
+### Type
+
+No type
+
+### Projects
+
+No projects
+
+### Milestone
+
+No milestone
+
+### Relationships
+
+None yet
+
+### Development
+
+Code with agent mode
+
+Select code repository
+
+No branches or pull requests
+
+### Participants
+
++4
+
+Issue actions
+-------------
+
+Footer
+------
+
+ © 2025 GitHub,Inc. 
+
+### Footer navigation
+
+*   Terms
+*   Privacy
+*   Security
+*   Status
+*   Community
+*   Docs
+*   Contact
+*    Manage cookies 
+*    Do not share my personal information 
+
+ You can’t perform that action at this time. 
+
+ERROR: [generic] None: Unable to download webpage: HTTP Error 403: Forbidden (caused by <HTTPError 403: 'Forbidden'>); · Issue #6016 · yt-dlp/yt-dlp

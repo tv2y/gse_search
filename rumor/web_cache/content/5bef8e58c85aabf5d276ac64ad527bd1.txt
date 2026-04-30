@@ -1,0 +1,586 @@
+Title: How to identify all stored procedures referring a particular table
+
+URL Source: https://stackoverflow.com/questions/7272157/how-to-identify-all-stored-procedures-referring-a-particular-table
+
+Markdown Content:
+This question shows research effort; it is useful and clear
+
+189
+
+Save this question.
+
+Show activity on this post.
+
+I created a table on development environment for testing purpose and there are few sp's which are refreing this table. Now I have have to drop this table as well as identify all sp's which are referring this table. I am facing difficulty to find list of all sp's. Please suggest some query by assuming that the table name is 'x' and database is sql server 2005.
+
+asked Sep 1, 2011 at 14:54
+
+3
+
+This answer is useful
+
+388
+
+Save this answer.
+
+Show activity on this post.
+
+```
+SELECT Name
+FROM sys.procedures
+WHERE OBJECT_DEFINITION(OBJECT_ID) LIKE '%TableNameOrWhatever%'
+```
+
+BTW -- here is a handy resource for this type of question: _Querying the SQL Server System Catalog FAQ_
+
+Smandoli
+
+7,049 3 gold badges 53 silver badges 83 bronze badges
+
+answered Sep 1, 2011 at 15:07
+
+Chains Chains
+
+13.2k 8 gold badges 48 silver badges 62 bronze badges
+
+11 Comments
+-----------
+
+Is there any reason to do this over accessing the `ROUTINE_DEFINITION` on `INFORMATION_SCHEMA.ROUTINES`?
+
+2016-06-23T16:54:41.967Z+00:00
+
+@Marie -- SQL-Server 2005 (AFAIK) doesn't have that.
+
+2016-08-10T22:57:29.533Z+00:00
+
+Question, does this solution find referenced objects when they are referenced _inside_ of a string? like, `set @Query = “SELECT * FROM Object_I_Need_To_Find_References…”;`
+
+2016-11-07T17:16:22.177Z+00:00
+
+@Jeff.Clark -- There's an easy way to find out :-) -- but yes, it searches the text of the procedure directly, so it would find that.
+
+2016-12-28T21:55:41.067Z+00:00
+
+yeah yeah :) It was going to take me a while to set up the test, and I was just looking for a lazy/easy answer :)
+
+2016-12-31T01:09:29.763Z+00:00
+
+|
+
+This answer is useful
+
+43
+
+Save this answer.
+
+Show activity on this post.
+
+sometimes above queries will not give correct result, there is built in stored procedure available to get the table dependencies as:
+
+```
+EXEC sp_depends @objname = N'TableName';
+```
+
+answered Oct 16, 2014 at 4:59
+
+2 Comments
+----------
+
+For me, this showed triggers & views but not stored procs.
+
+2018-02-07T19:44:08.563Z+00:00
+
+NOTE: I ran this on a system where I had access to tables, but not Stored Procs, so of course the Stored Procs didn't show up in the result.
+
+2018-02-07T19:54:55.167Z+00:00
+
+This answer is useful
+
+39
+
+Save this answer.
+
+Show activity on this post.
+
+The following works on SQL2008 and above. Provides a list of both stored procedures and functions.
+
+```
+select distinct [Table Name] = o.Name, [Found In] = sp.Name, sp.type_desc
+  from sys.objects o inner join sys.sql_expression_dependencies  sd on o.object_id = sd.referenced_id
+                inner join sys.objects sp on sd.referencing_id = sp.object_id
+                    and sp.type in ('P', 'FN')
+  where o.name = 'YourTableName'
+  order by sp.Name
+```
+
+answered Aug 7, 2013 at 15:10
+
+3 Comments
+----------
+
+OP needs the answer for SQL-Server-2005
+
+2013-12-20T19:16:47.83Z+00:00
+
+For some reason, this is not working for me. It is returning 0 rows.
+
+2020-09-11T06:50:45.387Z+00:00
+
+It may not work for SQL Server 2005, but I'm happy I found it as this is the correct answer for "modern" versions of SQL Server.
+
+2021-02-03T12:18:40.423Z+00:00
+
+This answer is useful
+
+23
+
+Save this answer.
+
+Show activity on this post.
+
+A non-query way would be to use the Sql Server Management Studio.
+
+Locate the table, right click and choose "View dependencies".
+
+**EDIT**
+
+But, as the commenters said, it is not very reliable.
+
+answered Sep 1, 2011 at 15:29
+
+Hans Keﬆing Hans Keﬆing
+
+39.5k 10 gold badges 84 silver badges 119 bronze badges
+
+2 Comments
+----------
+
+In 2005 the dependencies information is unreliable if objects are not created in the correct order.
+
+2011-09-01T15:30:28.247Z+00:00
+
+As @Martin Smith noted, a stored procedure referencing a non-existent object will get created, albeit with a warning, but not entry will be placed in sysdepends. Also, the same holds true for stored procedures referencing a table in a foreign database: No entry is ever placed in sysdepends in either database. Antoher feature is that dropping/recreating a table or view breaks the dependency chain. These...err...features make SQL Server's dependency tracking pretty much useless.
+
+2011-09-01T16:31:37.353Z+00:00
+
+This answer is useful
+
+10
+
+Save this answer.
+
+Show activity on this post.
+
+The following query will fetch all Stored Procedure names and the corresponding definition of those SP's
+
+```
+select 
+   so.name, 
+   text 
+from 
+   sysobjects so, 
+   syscomments sc 
+where 
+   so.id = sc.id 
+   and UPPER(text) like '%<TABLE NAME>%'
+```
+
+Chains
+
+13.2k 8 gold badges 48 silver badges 62 bronze badges
+
+answered May 30, 2014 at 11:27
+
+Deepak Kothari Deepak Kothari
+
+1,793 1 gold badge 27 silver badges 41 bronze badges
+
+1 Comment
+---------
+
+This one perfect.
+
+2023-03-07T09:54:11.093Z+00:00
+
+This answer is useful
+
+8
+
+Save this answer.
+
+Show activity on this post.
+
+In management studio you can just right click to table and click to 'View Dependencies'
+
+than you can see a list of Objects that have dependencies with your table :
+
+answered Sep 5, 2018 at 9:11
+
+nzrytmn nzrytmn
+
+7,131 1 gold badge 48 silver badges 44 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+6
+
+Save this answer.
+
+Show activity on this post.
+
+```
+SELECT
+    o.name
+FROM
+    sys.sql_modules sm
+INNER JOIN sys.objects o ON
+    o.object_id = sm.object_id
+WHERE
+    sm.definition LIKE '%<table name>%'
+```
+
+Just keep in mind that this will also turn up SPs where the table name is in the comments or where the table name is a substring of another table name that is being used. For example, if you have tables named "test" and "test_2" and you try to search for SPs with "test" then you'll get results for both.
+
+answered Sep 1, 2011 at 14:57
+
+Tom H Tom H
+
+47.5k 15 gold badges 90 silver badges 133 bronze badges
+
+3 Comments
+----------
+
+Querying `syscomments` in this manner is not reliable for long procedures as it splits the definition into 4000 character chunks across multiple rows. `sys.sql_modules` avoids this.
+
+2011-09-01T14:59:09.64Z+00:00
+
+Good point. I've updated it to use `sys.sql_modules` instead.
+
+2011-09-01T15:03:57.097Z+00:00
+
+syscomments has been debunked in every one of my dozen or so answers to the same question stackoverflow.com/…
+
+2011-09-01T15:03:57.343Z+00:00
+
+This answer is useful
+
+6
+
+Save this answer.
+
+Show activity on this post.
+
+The query below works only when searching for dependencies on a table and not those on a column:
+
+```
+EXEC sp_depends @objname = N'TableName';
+```
+
+However, the following query is the best option if you want to search for all sorts of dependencies, it does not miss any thing. It actually gives more information than required.
+
+```
+select distinct
+        so.name
+        --, text 
+  from 
+       sysobjects so, 
+       syscomments sc 
+  where 
+     so.id = sc.id 
+     and lower(text) like '%organizationtypeid%'
+  order by so.name
+```
+
+answered Aug 25, 2015 at 10:42
+
+1 Comment
+---------
+
+For me, didn't return anything on SSMS 2014 running against database on SQL Server 12.0)
+
+2018-02-07T19:47:31.563Z+00:00
+
+This answer is useful
+
+3
+
+Save this answer.
+
+Show activity on this post.
+
+```
+SELECT DISTINCT OBJECT_NAME(OBJECT_ID),
+object_definition(OBJECT_ID)
+FROM sys.Procedures
+WHERE object_definition(OBJECT_ID) LIKE '%' + 'table_name' + '%'
+
+GO
+```
+
+This will work if you have to mention the table name.
+
+Neels
+
+2,543 6 gold badges 36 silver badges 41 bronze badges
+
+answered Jun 12, 2017 at 14:29
+
+Comments
+--------
+
+This answer is useful
+
+1
+
+Save this answer.
+
+Show activity on this post.
+
+You have basically 2 options:
+
+**----Option 1**
+
+```
+SELECT DISTINCT so.name
+FROM syscomments sc
+INNER JOIN sysobjects so ON sc.id=so.id
+WHERE sc.TEXT LIKE '%tablename%'
+```
+
+**----Option 2**
+
+```
+SELECT DISTINCT o.name, o.xtype
+FROM syscomments c
+INNER JOIN sysobjects o ON c.id=o.id
+WHERE c.TEXT LIKE '%tablename%'
+```
+
+These 2 queries will get you all the stored procedures that are referring the table you desire. This query relies on 2 sys tables which are sysobjects and syscomments. The sysobjects is where all of your DB object names are stored this includes the stored procedures.
+
+The syscomments contains the text for all of your procedures.
+
+If you query: **SELECT * FROM syscomments**
+
+You'll have a table containing the id which is the mapping to the sysobjects table with the text contained in the stored procedures as the last column.
+
+answered Sep 12, 2019 at 10:38
+
+Comments
+--------
+
+This answer is useful
+
+1
+
+Save this answer.
+
+Show activity on this post.
+
+This will tell you every table name and column name that is referenced in every procedure in a database.
+
+This does not include views, functions, etc...
+
+The problem frequently when learning a database is that you aren't interested in just where a table or a column is being used but how is that table and column are being used. I have C# code that provides that information but that's a bit too lengthy to post here.
+
+I am more interested if the table is being inserted into, deleted from or updated or just selected. I want to know if that table/column is joining to another table, used in a WHERE, GROUP BY, ORDER BY or aggregated.
+
+answered May 30, 2024 at 19:03
+
+1 Comment
+---------
+
+SELECT DISTINCT schemaname = SCHEMA_NAME(Procedures.schema_id) , procedurename = Procedures.name , tablename = Tables.name , columnname = Columns.name FROM sys.sql_dependencies Dependencies INNER JOIN sys.procedures Procedures ON Procedures.object_id = Dependencies.object_id INNER JOIN sys.tables Tables ON Tables.object_id = Dependencies.referenced_major_id INNER JOIN sys.columns Columns ON Columns.object_id = Tables.object_id AND Columns.column_id = Dependencies.referenced_minor_id ORDER BY schemaname , procedurename , tablename , columnname
+
+2024-05-30T19:04:51.407Z+00:00
+
+This answer is useful
+
+0
+
+Save this answer.
+
+Show activity on this post.
+
+This useful query also works if you are using Azure SQL / Synapse Anlaytics
+
+```
+SELECT DISTINCT o.name AS Object_Name,o.type_desc
+FROM sys.sql_modules m
+INNER JOIN sys.objects o
+ON m.object_id=o.object_id
+WHERE m.definition Like '%Table_Name%'
+```
+
+Cleptus
+
+3,551 4 gold badges 31 silver badges 38 bronze badges
+
+answered Jan 7, 2021 at 8:15
+
+Comments
+--------
+
+This answer is useful
+
+0
+
+Save this answer.
+
+Show activity on this post.
+
+For `Azure SQL`, followig can be used to check `external table` as well.
+
+sys.dm_sql_referenced_entities`If a stored procedure is the specified referencing entity, this function returns all user-defined entities that are referenced in the stored procedure such as tables, views, user-defined types (UDTs), or other stored procedures`
+
+```
+SELECT B.name + '.'+A.name AS Proc_Name, ROW_NUMBER() OVER(ORDER BY A.name) AS Row_Num
+INTO #ProcNames
+FROM sys.Procedures A
+INNER JOIN sys.schemas B
+    ON A.schema_id = B.schema_id
+ORDER BY A.name
+
+--DROP TABLE #Result
+CREATE TABLE #Result(Proc_Name VARCHAR(255), Table_Name VARCHAR(255), External_Datasource_Name VARCHAR(255))
+
+DECLARE @spName VARCHAR(255)
+DECLARE @Iterator INT = 0
+DECLARE @ProcCount INT
+
+SELECT @ProcCount = COUNT(*)
+FROM #ProcNames
+
+SELECT @ProcCount AS '@ProcCount'
+
+WHILE @Iterator < @ProcCount
+BEGIN
+    SET @Iterator = @Iterator+1;
+
+    
+    SELECT @spName = Proc_Name
+    FROM #ProcNames
+    WHERE Row_Num = @Iterator
+
+    INSERT INTO #Result
+    SELECT DISTINCT @spName AS Proc_Name,
+          [object_name] = SCHEMA_NAME(o.[schema_id]) + '.' + o.name,  ----Add schema name prefix
+          ED.name AS External_Datasource_Name
+    FROM sys.dm_sql_referenced_entities (@spName, 'OBJECT') d
+    INNER JOIN sys.objects o 
+        ON d.referenced_id = o.[object_id]
+    INNER JOIN sys.tables T
+        ON T.object_id = O.Object_ID
+    LEFT OUTER JOIN sys.external_tables E
+        ON E.object_id = t.object_id
+    LEFT OUTER JOIN sys.external_data_sources ED
+        ON ED.data_source_id = E.data_source_id
+    WHERE o.[type] IN ('U', 'V')
+    --AND ED.name IN ('abc', 'xxx' ) -- DataSource_Name
+
+END
+
+SELECT *
+FROM #Result
+ORDER BY Proc_Name, External_Datasource_Name, Table_Name
+```
+
+answered May 14, 2024 at 15:57
+
+LCJ LCJ
+
+22.8k 69 gold badges 268 silver badges 438 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+0
+
+Save this answer.
+
+Show activity on this post.
+
+It works better for me
+
+```
+SELECT OBJECT_NAME(sd.object_id) AS ProcedureName
+FROM sys.sql_dependencies sd
+JOIN sys.procedures sp on sp.object_id = sd.object_id
+WHERE referenced_major_id = OBJECT_ID('@TableName')
+group by OBJECT_NAME(sd.object_id)
+```
+
+answered Mar 25 at 8:46
+
+Павел Павел
+
+11 1 bronze badge
+
+Comments
+--------
+
+This answer is useful
+
+-1
+
+Save this answer.
+
+Show activity on this post.
+
+Try This
+
+```
+SELECT DISTINCT so.name
+    FROM syscomments sc
+    INNER JOIN sysobjects so ON sc.id=so.id
+    WHERE sc.TEXT LIKE '%your table name%'
+```
+
+answered Feb 9, 2019 at 6:53
+
+Comments
+--------
+
+This answer is useful
+
+-1
+
+Save this answer.
+
+Show activity on this post.
+
+```
+SELECT DISTINCT o.name, o.xtype
+FROM syscomments c
+INNER JOIN sysobjects o ON c.id=o.id
+WHERE c.TEXT LIKE '%tablename%'
+```
+
+Jin Lee
+
+3,578 14 gold badges 57 silver badges 93 bronze badges
+
+answered Mar 10, 2021 at 11:52
+
+Ajay Ajay
+
+105 1 silver badge 5 bronze badges
+
+Comments
+--------
+
+Start asking to get answers
+
+Find the answer to your question by asking.
+
+Ask question
+
+Explore related questions
+
+See similar questions with these tags.

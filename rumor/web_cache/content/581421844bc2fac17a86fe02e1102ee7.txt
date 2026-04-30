@@ -1,0 +1,499 @@
+Title: Study on the Remote Sensing Spectral Method for Disaster Loss Inversion in Urban Flood Areas
+
+URL Source: https://www.mdpi.com/2073-4441/14/14/2165
+
+Markdown Content:
+1. Introduction
+---------------
+
+In recent years, climate change has exacerbated the frequency and severity of major floods. Moreover, the extreme value of hydrometeorology has changed more and more. These conditions have a significant impact on the intensity and frequency of urban flood disasters and bring new challenges to urban flood control and disaster reduction [1,2]. Urban flood disasters caused by heavy rain have occurred frequently, such as the heavy rain on 7 May 2018, in Xiamen, on 22 May 2020, in Guangzhou, and on 20 July 2021, in Zhengzhou [2,3]. The flood disasters caused by heavy rains are fast, wide-ranging, and destructive, causing serious losses to the urban economy and negatively impacting people’s lives and safety [4]. Driven by anthropogenic activities, the occurrence of heavy rain extreme weather will be more frequent in the future, and deep urbanization will lead to a sharp expansion of impervious areas, changing the confluence mechanism of surface production, and urban flooding impacts will become more serious [5]. To clarify the scope of urban floods and strengthen the management of urban flood disasters, in-depth research on the temporal and spatial distribution of urban flood disasters and estimation of disaster damage are urgently needed [6].
+
+At present, the calculation of urban flood damage mainly adopts hydrological and hydraulic methods such as the Info Works model, Storm Water Management Model (SWMM), and water damage loss function [7,8,9]. Sidek et al. [7] used Info Works models and hydrological-hydraulic models of urban floods to simulate flood losses. Huang et al. [8] constructed a coupled hydrological and hydrodynamic model based on the SWMM model to assess urban damage. Chen et al. [9] and Li et al. [10] constructed a water damage loss function to assess flood damage. However, hydrological and hydraulic estimation methods are small in scale, have poor timeliness, and their data inputs are difficult to obtain data [11]. Moreover, the urban scale is large, the land type is complex and diverse, and it is not appropriate to build a large number of ground detection platforms therein [9,11]. With the development of remote sensing technology, spatiotemporal resolution has been greatly improved. The application of remote sensing technology in the field of urban flooding will reduce the personnel costs, time, and costs compared to traditional submerged mapping processes and effectively solve the problems of lagging ground data and the difficulty of obtaining such data [12]. Some researchers have constructed different model methods based on remote sensing spectra combined with flood disasters in their respective countries, contributing to the research on flood disasters and the estimation of losses. In the agricultural field, crops are vulnerable to flood disasters. Therefore, researchers have combined real-time dynamic meteorological data, such as weather forecasts, to estimate flood damage and provide theoretical guidance for flood disaster management. Nghia et al. [13] applied Google Earth engine to flood mapping and monitoring in lower Mekong provinces. Karthikeyan et al. [14], based on MODIS 8-day reflectance data, used K-means clustering and hot spot analysis methods to measure the spatiotemporal distribution of flood areas and estimate flood disaster losses suffered by farmers. Auliagisni et al. [15] used the community-based flood map to explain the flood disaster in northern New Zealand. Based on satellite and precipitation data, Vecere et al. [16] divided index insurance thresholds to achieve flood damage monitoring. In the field of urban flood disasters, Kim et al. [14] used high-resolution digital terrain to improve urban flood disaster estimation [3,17,18]. Wang et al. [19] proposed a multiband water index algorithm based on Landsat 8 images, which automatically extracted urban surface floods using K-means clustering methods and analyzed the characteristics of flood disasters [20,21,22]. These studies have promoted the in-depth study of urban flood disaster loss assessment methods but still focus on parameter solutions using complex hydrological and hydraulic methods. Although these model methods are optimized and improved, the problems of small scale, poor timeliness, and difficulty in data acquisition have not yet been solved [23,24,25,26].
+
+Remote sensing spectroscopy has the advantages of a large scale, high accuracy, and easy data acquisition. At present, there are some applications of remote sensing in urban flood disasters. However, there is no relevant research literature on the joint estimation of flood damage in urban areas based on multidimensional remote sensing [27,28,29]. Therefore, this study proposes a disaster loss inversion method for estimating urban flood areas based on a multidimensional remote sensing spectrum. To this end, this study uses the 7.20 Henan rainstorm event as a case study and proposes a disaster inversion method for urban flood areas based on a multidimensional remote sensing spectrum. First, large-scale multidimensional remote sensing spectral orthoimages are used to invert the spatial distribution of urban flood disasters. Then, the urban economic density is simulated by remote sensing of night lights, and the spatial coupling inversion of the remote sensing spectrum-urban economy-flood disaster is carried out. Finally, the accuracy of the calculation results of the disaster loss in urban flood areas and the applicability of the method are further discussed. The study effectively solves the problems of low precision, slow speed, and small range of the traditional hydrological and hydraulic disaster loss estimation method in urban flood areas. At the same time, the study provides theoretical and technical support for the accurate and efficient estimation of large-scale urban flood damage.
+
+2. Materials and Methods
+------------------------
+
+#### 2.1. The Study Area
+
+Henan Province (Figure 1) is located in the central plains and the middle and lower reaches of the Yellow River (longitude 110°21′–116°39′ E, latitude 31°23′–36°22′ N), governing important cities such as Zhengzhou, Luoyang, and Kaifeng, with high terrain in the west and low terrain in the east and a total area of approximately 16.7 km 2 [28,29]. Henan’s geographical location and environmental conditions are excellent. Moreover, the water system and transportation network have been developed [30]. In recent years, Henan Province has developed rapidly, its scale of urbanization has gradually increased, and its total gross domestic product (GDP) ranks among the top five in China, making it an important economic province in China [31]. The annual rainfall is concentrated in the summer (between June and September), and due to the large population in the province, the total asset value and population density per unit area of its major cities are increasing each year, as is the risk of urban flood disasters [30,31].
+
+**Figure 1.** Remote sensing images of the study area in Henan Province.
+
+#### 2.2. Access to Data and Materials
+
+In this paper, based on multidimensional remote sensing spectroscopy inversion of the urban rainfall and flood disaster distribution in Henan Province, a large amount of data collection and processing is required to analyze the spatiotemporal variation characteristics of historical rainfall probability, interpret the remote sensing image metadata, construct a flood economic loss calculation model, and realize a disaster loss estimation. Data acquisition information is shown in Table 1.
+
+**Table 1.** Statistical table of data name and source.
+
+#### 2.3. Methods
+
+#### 2.3.1. Inversion Model of Rainfall Distribution
+
+In this study, the ordinary kriging method is used to invert the rainfall distribution. In the kriging method, there is an inherent stationary random field (under the isotropic hypothesis), the mathematical expectation mu is unrelated to the location (s), and the covariance is a function of the distance between the point |h| only. In general, the covariance function C of random fields is unknown, so the variogram is used as an approximation. In this case, the variogram γ is related only to the distance between points [32,33]:
+
+E Y s=μ
+
+(1)
+
+var Y s−Y s+h=2 C 0−C h=2 γ h
+
+(2)
+
+By definition,
+
+Y s 1,⋯,Y s n
+are the corresponding values for n samples
+
+s 1,⋯,s n
+, and the kriging variance can be represented by the following equation:
+
+Y^s 0=∑i=1 n a i Y s i
+
+(3)
+
+σ s 0 2=E Y^s 0−Y s 0 2=∑i=1 n∑i=1 n a i a j C(s i,s j)−2∑i=1 n a i C s i,s 0+C 0
+
+(4)
+
+In Equation (4)
+
+Y^s 0
+is the estimate of Y at the position
+
+s 0
+.
+
+C s i,s j
+is the covariance function between points
+
+s i
+and
+
+s j
+. According to BLUP theory, kriging’s unbiased estimation condition is satisfied when the sum of ownership weight coefficients is 1 (
+
+∑i=1 n a i=1
+). Therefore, the Lagrange Multiplier Method is used to construct the following solving functions and obtain the kriging problem equations [34]:
+
+f a 1,⋯,a n,λ=σ s 0 2+2 λ(∑i=1 n a i−1)
+
+(5)
+
+∑j=1 n a j=1∑j=1 n a j s i,s j−C s i,s 0+λ=0;i=1,⋯,n
+
+(6)
+
+The system consists of
+
+n+1
+equations to solve
+
+n
+weight coefficients. The kriging system is written in matrix form and the matrix is inverted. The kriging weight is expressed in matrix form after solving, as shown in Equation (7) [35,36]:
+
+a=C 0+1−C 0 T C−1 1 1 T C−1 1−1 1 T C−1
+
+(7)
+
+In Equation (7), C is the covariance matrix,
+
+C 0
+is the column vector composed of the covariance between the unknown point and the sample, and 1 is the column vector composed of n ones. The unbiased estimator of ordinary kriging
+
+Y^s 0
+can be obtained by substituting the obtained weights into Equation (3) above, and the result is shown in Equation (8).
+
+Y^s 0=C 0 T C−1 Y+1−C 0 T C−1 1 1 T C−1 1−1 1 T C−1 Y
+
+(8)
+
+#### 2.3.2. Economic Loss Calculation Model of Floods
+
+The affected areas of different research subjects of flood disasters are divided into categories. Then, according to the actual survey data of typical disasters in the region, the relationship between the loss rate and inundation characteristics of each type of area is established. After that, combined with the statistics of the market value of the affected area, the cumulative classified losses are calculated. Finally, the economic loss of flooding in the overall submerged area is obtained:
+
+L D=C p+1+k∑i=1 m∑j=1 n β i,j V i,j
+
+(9)
+
+In Equation (9),
+
+L D
+is the sum of flood loss;
+
+C p
+is the cost of flood fighting and disaster relief;
+
+k
+is the indirect loss coefficient;
+
+β i,j
+is the loss rate of the
+
+j
+risk area of the
+
+i
+type of disaster area; and
+
+V i,j
+is the value of the j risk area of the
+
+i
+disaster area.
+
+Based on remote sensing inversion of the area of large-scale river basin victims, combined with the comprehensive flood loss indicators per unit area, the total amount of economic loss is determined. The calculation formula is:
+
+L D p=1+k×β×A+C p
+
+(10)
+
+A=∑i=1 n f i
+
+(11)
+
+β=a∗1+α γ β′
+
+(12)
+
+In Equations (10) and (11),
+
+L D p
+is the comprehensive flood economic loss;
+
+k
+is the indirect loss coefficient;
+
+β
+is the direct loss per unit area, calculated based on light remote sensing and GDP;
+
+C p
+is the cost of flood fighting and disaster relief;
+
+A
+is the area of flood disaster;
+
+f i
+is the ith pixel of the remote sensing spectrum; and
+
+n
+is the number of pixels. The size of each pixel can be calculated according to the resolution of the remote sensing data. Multidimensional remote sensing spectra are introduced into the flood loss calculation model.
+
+β′
+is the loss per unit area in the level year of historical flood disaster,
+
+a
+is the conversion coefficient, which is estimated according to the fitting of remote sensing brightness value of light,
+
+α
+is the empirical coefficient of flood damage, generally taken as 0.04,
+
+γ
+is the degree of power, set by historical years. Next, the cell is used as the calculation unit to effectively improve the solution accuracy of the submerged area (
+
+A
+) and the direct economic loss per unit area (
+
+β
+).
+
+#### 2.4. Flow Chart
+
+First, the distribution of urban rainstorm is studied. Then, the urban economic density is simulated based on night light remote sensing and urban GDP. Next, using large-scale and multi-dimensional remote sensing data, combined with relevant data and models, the urban economic flood disaster assessment is completed. Finally, the distribution of rainstorm and flood and the disaster damage estimation results are verified. The specific process is shown in Figure 2.
+
+**Figure 2.** Flow chart of urban rainfall distribution inversion and flood remote sensing disaster loss calculation.
+
+3. Results
+----------
+
+#### 3.1. Rainfall Probability and Disaster Level
+
+According to the national precipitation grading standard, the historical rainfall of cities in Henan in the past 50 years (1 January 1970, to December 2021) was graded. Then, through the analysis of long-term sequence rainfall data, the probability distribution model was fitted, as shown in Table 2, and the probability distribution of rainfall levels in each urban area of Henan Province was plotted, as shown in Figure 3.
+
+**Figure 3.** Probability distribution of rainfall grades in cities of Henan Province.
+
+**Table 2.** Probability distribution table of different rainfall categories in major cities of Henan Province (1970–2021).
+
+Among the cities in Henan, light rain accounts for the highest proportion (73.02–78.68%), accounting for 3/4 of the total historic rainfall frequency. Moderate rain (13.46–15.86%) accounts for 3/20 and heavy rain (5.35–7.09%) accounts for 3/50 of the total. The cumulative probability distribution of heavy rain, heavy rainstorms, and exceptionally heavy rainstorms is less than 3.5%. Overall, the fitted curves of each rainfall type show an exponential distribution (0.94 ≤ R 2 ≤0.99). The calculation results of rainfall probability distribution are consistent with many previous studies, such as those of McFeeters et al. and Xu et al. [37,38]. Moreover, according to the previous relevant research of experts, the economic loss of flood disaster is strongly positively correlated with the rainfall level [6,9]. The higher the rainfall level is, the greater the losses caused by flood disasters, and when the rainfall level is lower than that of general heavy rain, the economic losses to the city are negligible. According to the “Henan Province Rainstorm Intensity Formula Compilation”, when the rainfall reaches approximately 150 mm (that is, heavy rainfall and above), urban flood disasters occur. Based on the measured data of the occurrence of events, the actual probability of historical rainfall in each urban area is analyzed and the disaster level is categorized, as shown in Table 3. A correspondence between multiple indicators of rainfall level, flood disaster level, rainfall interval, and rainfall recurrence period is then constructed.
+
+**Table 3.** Comparison table of grades of rainfall and flood disasters.
+
+#### 3.2. Inversion of Precipitation Development and Distribution in Henan Province
+
+Around 20 July 2021, heavy rains in Henan Province triggered large-scale flooding in its cities. In the context of rapid urbanization, through analysis and study of meteorological conditions such as rainfall distribution, rainfall, and rain intensity, the inherent dynamic change pattern of urbanization, economic development, and flood disaster loss was first analyzed. Then, based on the above study, the flood formation mechanism of extreme rainstorms in the province was revealed. Finally, this study provides theoretical and data support for the estimation of flood remote sensing losses in watersheds and at large scales [39,40]. Using the processed longitude, latitude, longitude, and rainfall (
+
+p
+) data of the national standard meteorological stations (116 position points), the distribution of daily rainfall changes in Henan Province was plotted by the kriging regression algorithm, as shown in Figure 4.
+
+**Figure 4.** Inversion of rainfall development distribution in Henan Province from July 19 to July 22: (**a**) Rainfall development and distribution on July 19 in Henan Province; (**b**) Rainfall development and distribution on July 20 in Henan Province; (**c**) Rainfall development and distribution on July 21 in Henan Province; (**d**) Rainfall development and distribution on July 22 in Henan Province.
+
+This heavy rainfall began on July 19 (Figure 4 a), and the daily rainfall (p) in all regions of Henan Province was 0–352 mm/d. Among these regions, the rainfall in central Henan (Zhengzhou, Kaifeng, Xuchang, Pingdingshan, Luoyang, etc.) was significantly higher than that in marginal areas (such as Sanmenxia, Xinyang, Anyang, Shangqiu, and other cities). The peak rainfall was mainly concentrated in the red area in Figure 4 a, in areas such as southwest Zhengzhou, west Xuchang, southwest Pingdingshan, east Luoyang, and north Nanyang. By 20 July, the scope of rainfall in Henan Province continued to expand. The rainfall center shifted to Zhengzhou, Xinxiang, Kaifeng, Xuchang, Luohe, and other areas. The maximum daily rainfall (p) reached 630 mm/d, 1.79 times greater than that of the previous day. The maximum hourly rainfall (Figure 4 b) occurred in Zhengzhou, Henan Province, on 20 July, and the rainfall intensity reached 210 mm/h, which was a “once in a thousand years” heavy rain event in Zhengzhou. Zhengzhou is adjacent to prefecture-level cities and is also affected by heavy rainfall. For example, the daily rainfall in the city of Kaifeng is approximately 292 mm, the maximum hourly rainfall reaches 103 mm/h, the daily rainfall in Xinxiang is approximately 278 mm/d, and the daily rainfall in Jiaozuo and Xuchang reaches 190 and 181 mm/d, respectively. By 21 July (Figure 4 c), data calculations and rainfall development maps showed that the rainfall area continued to shift to the north of Henan Province and the south of Shanxi Province. Daily rainfall ranged from 0 to 447 mm/d. Rainfall in most areas, such as the southern and central parts of Henan Province, decreased significantly and shifted mainly to Hebi, Xinxiang, Anyang, and other areas, affecting Hebi the most seriously. By 22 July (Figure 4 d), the current round of heavy rainfall in Henan Province slowly passed. Only some parts of the northern and western parts of the province had rainfall, and the maximum daily rainfall was 159 mm/d, which was significantly lower than the previous rainfall.
+
+#### 3.3. Inversion of Flood Disaster Zoning and Distribution Based on Remote Sensing Images
+
+Based on MODIS (MOD09A1) remote sensing data, the normalized differential water body index (NDWI) proposed by Mcfeeters was used to interpret flood disaster water body images in Henan Province.
+
+N D W I=G R E E N−N I R G R E E N+N I R
+
+(13)
+
+The parameters of this equation are detailed in the references [41,42]. The NDWI of water bodies was calculated according to the model and was effectively distinguished from soil, vegetation, and other categories. Using the ArcGIS software remote sensing data processing platform, the pixel range of the flood water body was extracted. Then, combined with the DEM, the spatial distribution of the rainstorms and flood disasters in Henan Province was plotted, as shown in Figure 5 a.
+
+**Figure 5.** Analysis of disaster distribution in urban flood areas retrieved by remote sensing: (**a**) MODIS remote sensing inversion of flood disaster distribution map; (**b**) Regression model of flood disaster area and maximum rainfall in Henan; (**c**) Extraction of flood disaster areas in the directly administered areas of Henan Province from remote sensing images; (**d**) Zipf’s law map of urban disaster area in Henan Province.
+
+A mask map was constructed by using the water index threshold to construct the area of interest (flood water pixel). With the SHP vector boundary of Henan Province, the flood disaster area in the administrative region was calculated by pixel extraction, which is shown in Figure 5 c. Through the high-precision SHP vector boundary of its cities, the main economically developed urban areas of the Henan urban agglomeration were extracted, and the area statistics of the disaster remote sensing images in each municipality under this jurisdiction were calculated. Then, field visits were used to investigate the scope of disasters in different regions. Next, in combination with the relevant documents of the local government bureau of statistics, the disaster scope information was excavated and verified by NDWI interpretation of the scope of flood water bodies. The remote sensing inversion disaster pixels of the July 20 Henan rainstorm were mainly distributed in heavy rainfall areas (Figure 5 b,
+
+R 2
+= 0.75, F = 47.50, p< 0.05), such as Zhengzhou, Luoyang, Kaifeng, and other cities. The urban economic scale (GDP) was classified into four grades. Based on the analysis of the spatial distribution of rainstorms and flood disasters in Henan Province (Figure 5 a), using Zhengzhou as the center, flood disasters spread to surrounding areas. According to the ranking order of urban GDP, the urban economic grade was divided. The urban economy is ranked by GDP. Then, take the economic grade (urban GDP value) divided by cities as the abscissa. The disaster area extracted from remote sensing of the corresponding city is the vertical coordinate. The change of flood area and corresponding economic scale of each city conforms to Zipf’s law, as shown in Figure 5 d. The area of urban flood disasters increased with the trend of economic development (the affected area was fitted with a GDP regression,
+
+R 2
+= 0.95). The results show that remote sensing inversion of flood disaster distribution is intuitive, accurate, and has the advantage of a large scale compared with traditional related methods.
+
+#### 3.4. Establishing a Spatial Coupling Model of Remote Sensing—Urban Economy-Flood Disaster
+
+#### 3.4.1. Plane Feature Mining Based on Night Light and Urban GDP
+
+First, the GDP was selected as a measure of urban economic development. Then, the GDP data and remote sensing pixels were extracted and analyzed by fitting the total GDP of each city (top 100 cities and provincial capitals in terms of GDP, unit: RMB 100 million) with the national night light remote sensing image (Figure 6 a). Finally, the accuracy of the regression model was verified (Figure 6 b) (
+
+R 2
+= 0.93, F = 1667.85, p< 0.05).
+
+**Figure 6.** (**a**) Night light remote sensing image of China; (**b**) Regression model of DMSP/OLS and Gross Domestic Product of Chinese cities.
+
+The data show that the distribution of DMSP/OLS remote sensing data was highly positively correlated with the development of the urban economy. With the increase in the DN value, the total urban economy and the scale of development showed an upwards trend. The results of the light remote sensing and the two-dimensional distribution of GDP were consistent with the development of China’s urban economic belt. Figure 6 a shows that there are many lights in Beijing-Tianjin-Hebei, the Yangtze River Delta, and the Pearl River Delta of China, which are adjacent areas. In the northeast part of the province, the brightness of the cities of Harbin, Changchun, and Shenyang is obvious. In the central region, large cities such as Zhengzhou in Henan, Xi’an in Shaanxi, Wuhan in Hubei, Chengdu in Sichuan, Chongqing in Henan, and their surrounding urban agglomerations present point and network distributions. There are fewer lights in Northwest China, and only a few cities, such as Lhasa, have a higher lighting intensity. In conclusion, the scientific method of describing the urbanization scale and economic development level from a two-dimensional space angle by using the lamp DN value is consistent with actual observations.
+
+#### 3.4.2. Analysis of the Relationship between Urban Night Light, GDP, and Flood Distribution
+
+Based on light remote sensing images and urban flood distribution maps of Henan Province, a comparison map of light DN values and flood distributions in each municipality directly under the jurisdiction of Henan Province was drawn. The data show that the distribution of DMSP/OL remote sensing in Henan cities basically coincides with the affected area, as shown in Figure 7.
+
+**Figure 7.** Regional comparison and regression model map of lighting DN value, GDP, and flood distribution in Henan Province: (**a**) Comparison map of regional lamp DN value and flood distribution area in Henan Province; (**b**) Establishment of regression model for corresponding remote sensing lighting pixels and urban disaster-stricken area in Henan Province; (**c**) Remote sensing lamp pixel (DMSP/OL, DN value) and regression model of urban disaster area and urban GDP.
+
+First, the DMSP/OL remote sensing DN values and disaster pixels of Henan municipalities were extracted based on the SHP data of city boundaries. Then, the actual disaster area was calculated by disaster pixels (as shown in Figure 7 a, the disaster remote sensing image area of each city directly under the jurisdiction of Henan Province was extracted and counted). On this basis, the regression model of the DN value of light intensity and the disaster area in Henan Province and its accuracy verification was established (Figure 7 b) (
+
+R 2
+= 0.72, F = 34.98, p< 0.05). Finally, a regression analysis and an accuracy verification were performed on the affected areas and GDP of the Henan municipalities directly under the jurisdiction of Henan Province (Figure 7 c) (
+
+R 2
+= 0.75, F = 33.70, p< 0.05). The result shows that the light brightness remote sensing image effectively simulated the total urban economy and the scale of development. The higher the ND value of light intensity and the GDP were, the worse the disaster. Through image analysis, the central and northern areas of Henan Province, such as Zhengzhou City, Jiaozuo City, Hebi City, and other cities, were seriously affected. The calculation results were highly consistent with the actual disaster observations. In summary, based on the DMSP/OL distribution and urban GDP, a three-way correlation model of city size, light range, and total economic volume was established to realize a two-dimensional planar regionalization simulation of the economic scale and provide an intuitive visual expression of the urban economy.
+
+#### 3.5. Economic Loss Assessment of Flood Disasters
+
+In this study, first, remote sensing images were used to retrieve the disaster areas of Henan cities, extract the disaster pixels, and interpret the flood disaster area. Then, an economic loss assessment of the 20 July Henan rainstorms and flood disasters was carried out by using a calculation model of flood-related economic losses. Finally, the flood inundation area of prefecture-level cities in Henan Province was calculated, and the direct economic loss (RMB 100 million), indirect economic loss (CNY 100 million), and direct loss per unit area (CNY 100 million/km 2) of urban flood disasters were estimated. Comprehensive flood losses (CNY 100 million) and urban losses as a percentage of the GDP are shown in Table 4.
+
+**Table 4.** Loss assessment for flood disasters in cities and counties of Henan Province.
+
+On the whole, the 20 July rainstorm in Henan Province caused the urban agglomeration of Henan Province to suffer flood disaster losses to varying degrees, and the comprehensive economic loss was calculated as 132.256 billion yuan. Among them, Zhengzhou suffered the most serious flood losses, with direct economic losses of 43.147 billion yuan, accounting for 32.6% of those of the province and 0.04% of the city’s GDP (according to the official data released, the direct economic loss of Henan Province was 120.06 billion yuan and that of Zhengzhou was 40.9 billion yuan, accounting for 34.1% of that of the province). The direct economic losses of Luoyang, Nanyang, Xuchang, and Zhoukou were 11.137 billion yuan, 8.131 billion yuan, 7.057 billion yuan, and 5.902 billion yuan, respectively, and the severity of the losses ranked in the top five according to the calculated data. Through the analysis and verification with the survey report of the “7.20 rainstorm disaster in Zhengzhou, Henan Province”, the accuracy of the inversion result is more than 90%, and the linear regression result is good (
+
+R 2
+≥ 0.95).
+
+4. Discussion
+-------------
+
+In this study, first, using the typical rainstorm event in Henan Province on 20 July as an example, the rainstorm event process was analyzed and a rainfall distribution map was drawn based on the kriging method. Second, the spatial distribution of urban flood disasters in Henan Province was retrieved based on a multidimensional remote sensing spectrum. Then, the urban economic density was simulated by the night remote sensing single spectrum to realize the spatial coupling inversion of the remote sensing spectrum, urban economy, and flood disaster. Finally, the disaster loss estimation method in urban flood areas was proposed to determine the disaster loss in urban flood areas.
+
+According to the distribution map of daily rainfall variation in Henan Province (Figure 4), at a time scale, the rainfall, rainfall intensity, and rainfall duration in the urban flood areas were consistent with the actual situation (Linear Regression Test Result
+
+R 2=0.94
+). At a spatial scale, the simulation results of the location and area of the rainfall center in each urban flood area were consistent with those published by the National Meteorological Bureau. Generally, this extraordinary rainstorm seriously affected most areas of Henan Province, resulting in record-breaking extreme rainfall values at 10 national meteorological observation stations in Zhengzhou, Xinxiang, Kaifeng, Zhoukou, and Luoyang. As shown in Figure 8, (19 July–22 July), the most rainfall was in Zhengzhou (777 mm), followed by Anyang (539 mm), Jiaozuo (480 mm), Crane Wall (478 mm), Xinxiang (451 mm), and Kaifeng (370 mm). Combined with the ratio analysis of maximum hourly rainfall to total rainfall (shown in Figure 9), the highest ratio was in Puyang (accounting for approximately 50%) and the lowest was in Jiyuan (accounting for approximately 6%). The maximum hourly rainfall in Zhengzhou accounted for approximately 26% of the total rainfall in the province. However, the intensity of rainfall there was the highest (202 mm/h) due to the large amount of total rainfall. Rainstorms and floods caused traffic jams, casualties, and property losses in many regions of the province [32,33].
+
+**Figure 8.** Inversion of rainfall development distribution in Henan Province from 19 July to 22 July: (**a**) Statistical distribution of total rainfall; (**b**) Statistical distribution of hourly maximum rainfall.
+
+**Figure 9.** Proportion of hourly maximum rainfall of the 20 July rainstorm event in Henan.
+
+It is difficult to spatially combine remote sensing data with economic data from different regions. Urban economic development conditions are multielement, multiscale, and multichannel comprehensive effects. The GDP is an important indicator of a country’s economic condition and level of development. Therefore, this study uses DMSP/OLS remote sensing and GDP to establish a spatial coupling model of urban economic flood disaster (shown in Figure 6 and Figure 7). The more developed the urban economy and the larger the urbanization scale are, the more frequent the city activities at night, the more night light remote sensing pixels (DMSP/OL remote sensing DN value) in the urban area, and the higher the DMSP/OL remote sensing DN value [43].
+
+According to the analysis of direct loss per unit area (shown in Table 4), Zhengzhou, the provincial capital, has a concentrated distribution of economic value, resources, and population. The loss per unit area caused by floods and waterlogging is approximately 2.38 times higher than that of Luoyang, which has the second highest GDP. The higher the degree of urbanization is, the more developed the regional economy, which results in a large population density and a high asset value per unit area in the urban center [7,18]. Therefore, under this condition, the sensitivity to urban flood disaster losses increases, resulting in a great need for flood control and waterlogging removal standards and a great risk of suffering from flood disasters [22]. Moreover, the flood disaster is sudden. Secondly, the scope of disasters is very wide. The traditional flood loss estimation method has difficulty accurately calculating the flood loss. Based on multi-dimensional remote sensing, this paper has great advantages in timeliness and scale. It can help different urban areas to quickly and accurately calculate the level and severity of flood disasters and carry out flood disaster assessment. Especially for disaster and emergency departments, the model method in this paper provides data and theoretical support for personnel evacuation and subregional flood control and disaster relief according to the severity of flood disaster [1,13,15]. It provides a theoretical method and calculation basis for the government’s post-disaster reconstruction and the compilation of flood loss reports in various cities. In summary, the urban flood damage estimation model based on remote sensing and GDP has a large scale, strong applicability, and high accuracy. However, two areas of caution and future work remain. First, there are some problems in spectral remote sensing such as cloud cover, and more accurate extraction model of disaster information needs to be further improved. Second, the disaster loss inversion result of “7.20 Rainstorm disaster in Zhengzhou, Henan Province” was verified by official document data, without comparative analysis with other models. This should be explored as a future enhancement to work.
+
+5. Conclusions
+--------------
+
+The main conclusions are as follows:
+
+(1)
+According to data from research on historical rainfall, the rainfall probability is analyzed and the rainfall probability distribution model is constructed (R 2 ≥ 0.95). The disaster grade is categorized from high to low (grades I, II, III, and IV), and the corresponding relationship between flood disaster grade and rainfall grade, rainfall interval, and rainfall return period is constructed.
+
+(2)
+The daily rainfall development distribution of the 20 July rainstorm in Henan Province is retrieved by the kriging regression algorithm. According to the analysis of the inversion results, the daily maximum rainfall in Henan Province from 19 July to 22 July is 352 mm/d, 630 mm/d, 447 mm/d, and 159 mm/d, respectively. The maximum hourly rainfall occurs in Zhengzhou on 20 July (210 mm/h). On 21 July, the rainfall distribution shifts from southwestern Zhengzhou and western Xuchang to northern Henan Province, and the rainfall in most parts of Henan Province gradually decreases. On 22 July, only the northern and western parts of the province have rainfall.
+
+(3)
+
+The disaster distribution in the Henan urban flood area retrieved by the multidimensional remote sensing spectrum is consistent with the rainfall distribution (
+
+R 2
+= 0.75, F = 47.50, p< 0.05). The spatial distribution of urban flood disasters (centered on Zhengzhou) conforms to Zipf’s law. The urban economic spatial distribution is characterized by night light remote sensing (
+
+R 2
+= 0.93, F = 1667.85, p< 0.05), the spatial coupling inversion of the remote sensing spectrum-urban economy-flood disaster is realized, and a disaster loss estimation method for urban flood areas is proposed (in comparing the disaster loss calculation results with official data, the accuracy is greater than 90%,
+
+R 2
+≥ 0.95). Therefore, this study can provide technical support for accurate and efficient estimation of large-scale urban flood disaster. At the same time, this study provides data and theoretical support for the implementation of personnel evacuation by disaster and emergency departments and subregional flood control and disaster relief. It also provides a theoretical method and calculation basis for the government’s post-disaster reconstruction and the compilation of flood loss reports in various cities.
+
+Author Contributions
+--------------------
+
+Conceptualization, C.D., X.Z. and L.J.; methodology, C.D.; software, C.D. and Y.C.; validation, X.Z., L.J. and Y.C.; data curation, C.D. and R.L.; writing—original draft preparation, C.D. and R.L.; writing—review and editing, C.D.; visualization, C.D. and Y.Y.; supervision, X.Z., L.J. and Y.C.; funding acquisition, X.Z. and L.J. All authors have read and agreed to the published version of the manuscript.
+
+Funding
+-------
+
+This research was funded by the National Natural Science Foundation of China (Grant Number 52179136 and 51878385), and the Humanities and Social Sciences planning fund project of the Ministry of Education (Grant Number 21YJA630038).
+
+Institutional Review Board Statement
+------------------------------------
+
+Not applicable.
+
+Informed Consent Statement
+--------------------------
+
+Not applicable.
+
+Data Availability Statement
+---------------------------
+
+Not applicable.
+
+Conflicts of Interest
+---------------------
+
+The authors declare no conflict of interest.
+
+References
+----------
+
+1.   Maziar, Y.D.; Mohammad, M.; Martin, L.; David, S. A modelling framework to design an evacuation support system for healthcare infrastructures in response to major flood events. Prog. Disaster Sci.**2022**, 13, 100218. [Google Scholar] [CrossRef]
+2.   Wang, X.; Wu, Z.; Liang, G. WRF/CHEM modeling of impacts of weather conditions modified by urban expansion on secondary organic aerosol formation over Pearl River Delta. Particuology**2009**, 7, 384–391. [Google Scholar] [CrossRef]
+3.   Trifonova, T.; Arakelian, M.; Bukharov, D.; Abrakhin, S.; Abrakhina, S.; Arakelian, S. Catastrophic floods in large River Basins: Surface water and groundwater interaction under dynamic complex natural processes-forecasting and presentation of flood consequences. Water**2022**, 14, 1405. [Google Scholar] [CrossRef]
+4.   Liu, K.; Li, X.; Wang, S. Characterizing the spatiotemporal response of runoff to impervious surface dynamics across three highly urbanized cities in southern China from 2000 to 2017. Int. J. Appl. Earth Obs. Geoinf.**2021**, 100, 102331. [Google Scholar] [CrossRef]
+5.   Jin, K.; Wang, F.; Han, J.; Shi, S.; Ding, W. Contribution of climatic change and human activities to vegetation NDVI change over China during 1982–2015. Acta Geogr. Sin.**2020**, 75, 961–974. [Google Scholar] [CrossRef]
+6.   Xu, X.; Du, Y.; Tang, J.; Wang, Y. Variations of temperature and precipitation extremes in recent two decades over China. Atmos. Res.**2011**, 101, 143–154. [Google Scholar] [CrossRef]
+7.   Sidek, L.M.; Jaafar, A.S.; Majid, W.H.; Basri, H.; Marufuzzaman, M.; Fared, M.M.; Moon, W.C. High-resolution hydrological-hydraulic modeling of urban floods using infoworks ICM. Sustainability**2021**, 13, 10259. [Google Scholar] [CrossRef]
+8.   Huang, G.; Chen, W.; Yu, H. Construction and evaluation of an integrated hydrological and hydrodynamics urban flood model. Adv. Water Sci.**2021**, 32, 334–344. [Google Scholar] [CrossRef]
+9.   Chen, M.; Zhou, F.; Ma, J.; Chen, G.; Ni, H.; Hu, Y. Waterinduced disaster damage function and flood and water-logging damage assessment. J. Hydraul. Eng.**2015**, 46, 883–891. [Google Scholar] [CrossRef]
+10.   Li, C.C.; Cheng, X.T.; Wang, Y.Y.; Fu, D.Y. A three-parameter flood damage function, part I. Theory and development. J. Hydraul. Eng.**2020**, 51, 349–357. [Google Scholar] [CrossRef]
+11.   Zimba, H.; Kawawa, B.; Chabala, A.; Phiri, W.; Selsam, P.; Meinhardt, M.; Nyambe, I. Assessment of trends in inundation extent in the Barotse Floodplain, upper Zambezi River Basin: A remote sensing-based approach. J. Hydrol. Reg. Stud.**2018**, 15, 149–170. [Google Scholar] [CrossRef]
+12.   Barnett, B.J.; Mahul, O. Weather index insurance for agriculture and rural areas in lower-income countries. Am. J. Agric. Econ.**2007**, 89, 1241–1247. [Google Scholar] [CrossRef]
+13.   Nghia, B.P.Q.; Pal, I.; Chollacoop, N.; Mukhopadhyay, A. Applying Google earth engine for flood mapping and monitoring in the downstream provinces of Mekong river. Prog. Disaster Sci.**2022**, 14, 100235. [Google Scholar] [CrossRef]
+14.   Karthikeyan, M.; Niranga, A.; Rajesh, P.; Giriraj, A. Flood risk assessment in South Asia to prioritize flood index insurance applications in Bihar, India. Geomat. Nat. Hazards Risk**2019**, 10, 26–48. [Google Scholar] [CrossRef] [Green Version]
+15.   Auliagisni, W.; Wilkinson, S.; Elkharboutly, M. Using community-based flood maps to explain flood hazards in Northland, New Zealand. Prog. Disaster Sci.**2022**, 14, 100229. [Google Scholar] [CrossRef]
+16.   Vecere, A.; Martina, M.; Monteiro, R.; Galasso, C. Satellite precipitation–based extreme event detection for flood index insurance. Int. J. Disaster Risk Reduct.**2021**, 55, 102108. [Google Scholar] [CrossRef]
+17.   Kim, Y.D.; Tak, Y.H.; Park, M.H.; Kang, B. Improvement of urban flood damage estimation using a high-resolution digital terrain. J. Flood Risk Manag.**2020**, 13, e12575. [Google Scholar] [CrossRef] [Green Version]
+18.   Xu, Z.; Cheng, T.; Hong, S.; Wang, L. Review on applications of remote sensing in urban flood modeling. Chin. Sci. Bull.**2018**, 63, 2156–2166. [Google Scholar] [CrossRef]
+19.   Wang, X.; Xie, S.; Zhang, X.; Chen, C.; Guo, H.; Du, J.; Duan, Z. A robust multi-band water index (MBWI) for automated extraction of surface water from landsat 8 OLI imagery. Int. J. Appl. Earth Obs. Geoinf.**2018**, 68, 73–91. [Google Scholar] [CrossRef]
+20.   Yang, T.; Xie, J.; Li, G.; Zhang, L.; Mou, N.; Wang, H.; Zhang, X.; Wang, X. Extracting disaster-related location information through social media to assist remote sensing for disaster analysis: The case of the flood disaster in the Yangtze River Basin in China in 2020. Remote Sens.**2022**, 14, 1199. [Google Scholar] [CrossRef]
+21.   Deng, G.; Chen, H.; Wang, S. Risk assessment and prediction of rainstorm and flood disaster based on Henan Province, China. Math. Probl. Eng.**2022**, 2022, 5310920. [Google Scholar] [CrossRef]
+22.   Du, S.; Cheng, X.; Huang, Q.; Chen, R.; Ward, P.J.; Aerts, J.C.J.H. Brief communication: Rethinking the 1998 China floods to prepare for a nonstationary future. Nat. Hazards Earth Syst. Sci.**2019**, 19, 715–719. [Google Scholar] [CrossRef] [Green Version]
+23.   David, C. Role of insurance in reducing flood risk. Geneva Pap. Risk Insur. Issues Pract.**2008**, 33, 117–132. [Google Scholar] [CrossRef] [Green Version]
+24.   Li, H.; Wang, X.; Dai, S.; Tian, G. Flood monitoring in Hainan Island based on HJ-CCD data. Trans. Chin. Soc. Agric. Eng.**2015**, 31, 191–198. [Google Scholar] [CrossRef]
+25.   Chen, C.K.; Sun, F.L. Flood damage assessments based on entropy weight-grey relational analyses. J. Tsinghua Univ. (Sci. Technol.)**2022**, 62, 1067–1073. [Google Scholar] [CrossRef]
+26.   Tang, Y.; Cai, H.; Liu, R. Farmers’ demand for informal risk management strategy and weather index insurance: Evidence from China. Int. J. Disaster Risk Sci.**2021**, 12, 281–297. [Google Scholar] [CrossRef]
+27.   Chen, J.; Wang, Y.Q.; Zhang, X.Q. Study on the strategy of water supply security in the Yangtze River economic belt. J. Hydraul. Eng.**2021**, 52, 1369–1378. [Google Scholar] [CrossRef]
+28.   Wang, Y.Y.; Li, N.; Wang, S.; Wang, J.; Zhang, N.Q. Development and application of flood damage assessment system. J. Hydraul. Eng.**2019**, 50, 1103–1110. [Google Scholar] [CrossRef]
+29.   Jiang, C.B.; Zhou, Q.; Shen, Y.X.; Liu, G.F.; Zhang, D. Review on hydrological and hydrodynamic coupling models for flood forecasting in mountains watershed. J. Hydraul. Eng.**2021**, 52, 1137–1150. [Google Scholar] [CrossRef]
+30.   Liu, Y.; Qin, Y.; Ge, Q.; Dai, J.; Chen, Q. Reponses and sensitivities of maize phenology to climate change from 1981 to 2009 in Henan Province, China. J. Geogr. Sci.**2017**, 27, 1072–1084. [Google Scholar] [CrossRef]
+31.   Shi, C.; Zhou, L.; Fan, L.; Zhang, W.; Cao, Y.; Wang, C.; Xiao, F.; Lü, G.; Liang, H. Analysis of “21· 7” extreme rainstorm process in Henan Province using BeiDou/GNSS observation. Chin. J. Geophys.**2022**, 65, 186–196. [Google Scholar] [CrossRef]
+32.   Azari, B.; Tabesh, M. Urban storm water drainage system optimization using a sustainability index and LID/BMPs. Sustain. Cities Soc.**2022**, 76, 103500. [Google Scholar] [CrossRef]
+33.   Hasan, K.; Paul, S.; Chy, T.J.; Antipova, A. Analysis of groundwater table variability and trend using ordinary kriging: The case study of Sylhet, Bangladesh. Appl. Water Sci.**2021**, 11, 120. [Google Scholar] [CrossRef]
+34.   Rossat, D.; Baroth, J.; Briffaut, M.; Dufour, F. Bayesian inversion using adaptive polynomial Chaos Kriging within subset simulation. J. Comput. Phys.**2022**, 455, 110986. [Google Scholar] [CrossRef]
+35.   Rossi, R.E.; Dungan, J.L.; Beck, L.R. Kriging in the shadows: Geostatistical interpolation for remote sensing. Remote Sens. Environ.**1994**, 49, 32–40. [Google Scholar] [CrossRef]
+36.   Cressie, N. The origins of kriging. Math. Geol.**1990**, 22, 239–252. [Google Scholar] [CrossRef]
+37.   McFeeters, S.K. The use of the normalized difference water index (NDWI) in the delineation of open water features. Int. J. Remote Sens.**1996**, 17, 1425–1432. [Google Scholar] [CrossRef]
+38.   Xu, D.; Liu, Y. Research on the effect of rainfall flood regulation and control of wetland park based on SWMM model—A case study of wetland park in Yuanjia village, Qishan county, Shaanxi Province. IOP Conf. Ser. Earth Environ. Sci.**2018**, 121, 052014. [Google Scholar] [CrossRef]
+39.   Xu, Z.X.; Ye, C.L. Simulation of urban flooding/waterlogging processes: Principle, models and prospects. J. Hydraul. Eng.**2021**, 52, 381–392. [Google Scholar] [CrossRef]
+40.   Xu, K.; Mao, W.S.; Zhao, H.B. Characteristics of rainstorm variation in Longquanyi District of Chengdu. Sci. J.**2021**, 9, 443–453. [Google Scholar] [CrossRef]
+41.   Huang, C.; Zhang, S.; Dong, L.; Wang, Z.; Li, L.; Cui, L. Spatial and temporal variabilities of rainstorms over China under climate change. J. Geogr. Sci.**2021**, 31, 479–496. [Google Scholar] [CrossRef]
+42.   Ashok, A.; Rani, H.P.; Jayakumar, K.V. Monitoring of dynamic wetland changes using NDVI and NDWI based landsat imagery. Remote Sens. Appl. Soc. Environ.**2021**, 23, 100547. [Google Scholar] [CrossRef]
+43.   Chen, Z.Q.; Wei, Y.; Shi, K.F.; Zhao, Z.Y.; Wang, C.X.; Wu, B.; Qiu, B.; Yu, B.L. The potential of nighttime light remote sensing data to evaluate the development of digital economy: A case study of China at the city level. Comput. Environ. Urban Syst.**2022**, 92, 101749. [Google Scholar] [CrossRef]
+
+**Figure 1.** Remote sensing images of the study area in Henan Province.
+
+**Figure 2.** Flow chart of urban rainfall distribution inversion and flood remote sensing disaster loss calculation.
+
+**Figure 3.** Probability distribution of rainfall grades in cities of Henan Province.
+
+**Figure 4.** Inversion of rainfall development distribution in Henan Province from July 19 to July 22: (**a**) Rainfall development and distribution on July 19 in Henan Province; (**b**) Rainfall development and distribution on July 20 in Henan Province; (**c**) Rainfall development and distribution on July 21 in Henan Province; (**d**) Rainfall development and distribution on July 22 in Henan Province.
+
+**Figure 5.** Analysis of disaster distribution in urban flood areas retrieved by remote sensing: (**a**) MODIS remote sensing inversion of flood disaster distribution map; (**b**) Regression model of flood disaster area and maximum rainfall in Henan; (**c**) Extraction of flood disaster areas in the directly administered areas of Henan Province from remote sensing images; (**d**) Zipf’s law map of urban disaster area in Henan Province.
+
+**Figure 6.** (**a**) Night light remote sensing image of China; (**b**) Regression model of DMSP/OLS and Gross Domestic Product of Chinese cities.
+
+**Figure 7.** Regional comparison and regression model map of lighting DN value, GDP, and flood distribution in Henan Province: (**a**) Comparison map of regional lamp DN value and flood distribution area in Henan Province; (**b**) Establishment of regression model for corresponding remote sensing lighting pixels and urban disaster-stricken area in Henan Province; (**c**) Remote sensing lamp pixel (DMSP/OL, DN value) and regression model of urban disaster area and urban GDP.
+
+**Figure 8.** Inversion of rainfall development distribution in Henan Province from 19 July to 22 July: (**a**) Statistical distribution of total rainfall; (**b**) Statistical distribution of hourly maximum rainfall.
+
+**Figure 9.** Proportion of hourly maximum rainfall of the 20 July rainstorm event in Henan.
+
+**Table 1.** Statistical table of data name and source.
+
+| Data Name | Data Sources | Website |
+| --- | --- | --- |
+| meteorological data | China National Meteorological Information Center | http://data.cma.cn accessed on 2 January 2022 |
+| Rainfall data | China National Meteorological Information Center | http://data.cma.cn accessed on 2 January 2022 |
+| MODIS Remote Sensing | LAADS and DAAC | https://ladsweb.nascom.nasa.gov/search accessed on 7 December 2021 |
+| digital elevation model, DEM | China geospatial data cloud platform | http://www.gscloud.cn accessed on 7 December 2021 |
+| GDP of cities in Henan Province | Statistical yearbook of Henan Province in 2020 | https://tjj.henan.gov.cn/tjfw/tjcbw/tjnj/ accessed on 14 December 2021 |
+| Night light remote sensing | National Oceanic and Atmospheric Administration | https://ngdc.noaa.gov/eog/dmsp.html accessed on 14 December 2021 |
+
+**Table 2.** Probability distribution table of different rainfall categories in major cities of Henan Province (1970–2021).
+
+|  | Frquency | Light Rain % | Moderate Rain % | Heavy Rain % | Rainstorm % | Heavy Rainstorm % | Extremely Heavy Rainstorm % | Probabilistically Distributed Model | Imitative Effect R 2 |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Region |  |
+| Zhengzhou | 76.47% | 14.27% | 6.84% | 2.07% | 0.33% | 0.03% | y = 4.30*e−1.50 x | R 2 = 0.96 |
+| Luoyang | 77.57% | 14.31% | 6.07% | 1.84% | 0.17% | 0.02% | y = 4.61*e−1.56 x | R 2 = 0.98 |
+| Nanyang | 77.23% | 14.12% | 5.68% | 2.43% | 0.52% | 0.02% | y = 3.95*e−1.46 x | R 2 = 0.95 |
+| Xuchang | 76.88% | 13.92% | 6.34% | 2.32% | 0.51% | 0.02% | y = 4.09*e−1.47 x | R 2 = 0.95 |
+| Zhouko | 75.54% | 15.01% | 6.67% | 2.27% | 0.46% | 0.05% | y = 3.44*e−1.39 x | R 2 = 0.97 |
+| Xinxiang | 78.58% | 13.58% | 5.35% | 2.00% | 0.44% | 0.06% | y = 2.97*e−1.36 x | R 2 = 0.98 |
+| Shangqiu | 74.92% | 15.05% | 6.86% | 2.63% | 0.48% | 0.05% | y = 3.35*e−1.37 x | R 2 = 0.97 |
+| Zhumadian | 73.02% | 16.32% | 7.09% | 2.97% | 0.55% | 0.06% | y = 3.22*e−1.33 x | R 2 = 0.97 |
+| Xinyang | 73.78% | 15.86% | 6.79% | 2.84% | 0.70% | 0.03% | y = 3.67*e−1.39 x | R 2 = 0.94 |
+| Pingdingshan | 76.02% | 14.53% | 6.12% | 2.66% | 0.58% | 0.09% | y = 2.63*e−1.27 x | R 2 = 0.98 |
+| Kaifeng | 76.02% | 14.53% | 6.12% | 2.66% | 0.58% | 0.09% | y = 2.80*e−1.31 x | R 2 = 0.98 |
+| Anyang | 77.31% | 14.33% | 5.57% | 2.33% | 0.31% | 0.14% | y = 2.35*e−1.25 x | R 2 = 0.99 |
+| Jiaozuo | 78.01% | 14.18% | 5.66% | 1.73% | 0.40% | 0.03% | y = 3.93*e−1.48 x | R 2 = 0.97 |
+| Puyang | 76.08% | 14.66% | 6.55% | 2.05% | 0.63% | 0.03% | y = 3.77*e−1.43 x | R 2 = 0.95 |
+| Luohe | 75.22% | 15.06% | 6.62% | 2.54% | 0.45% | 0.11% | y = 2.57*e−1.26 x | R 2 = 0.99 |
+| Sanmenxia | 78.68% | 14.95% | 5.40% | 0.85% | 0.10% | 0.02% | y = 4.73*e−1.638 x | R 2 = 0.99 |
+| Hebi | 77.13% | 13.46% | 6.27% | 2.32% | 0.74% | 0.07% | y = 2.61*e−1.27 x | R 2 = 0.97 |
+| Jiyuan | 76.49% | 15.51% | 5.99% | 1.73% | 0.26% | 0.03% | y = 4.41*e−1.53 x | R 2 = 0.98 |
+
+**Table 3.** Comparison table of grades of rainfall and flood disasters.
+
+| Rainfall Level | Light Rain, Moderate Rain, Heavy Rain | Rainstorm | Heavy Rainstorm | Extremely Heavy Rainstorm |
+| --- | --- | --- | --- | --- |
+| Flood disaster level | Ordinary (level IV) | Larger (level III) | Great (level II) | Especially serious (level I) |
+| Rainfall (mm/d) | p< 50 | 50 ≤ p< 100 | 100 ≤ p<200 | p ≥ 200 |
+| Rainfall return period (a) | a ≤ 5 | 5 <a ≤ 20 | 20 <a ≤ 50 | a> 50 |
+
+**Table 4.** Loss assessment for flood disasters in cities and counties of Henan Province.
+
+|  | Items | DMSP/OL DN Value | GDP (CNY 100 million) | Direct Loss per Unit Area (CNY 100 million/km 2) | Inundation Area A (km 2) | Direct Economic Loss (CNY 100 million) | Indirect Economic Loss (CNY 100 million) | Comprehensive Flood Losses (CNY 100 million) | Loss as a Percentage of GDP % |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Regions |  |
+| Zhengzhou | 21,420 | 12,003.00 | 0.52 | 829.82 | 431.79 | 86.36 | 518.15 | 0.05 |
+| Luoyang | 5355 | 5128.40 | 0.24 | 459.18 | 111.37 | 22.27 | 133.64 | 0.03 |
+| Nanyang | 4335 | 3925.90 | 0.19 | 437.96 | 81.31 | 16.26 | 97.58 | 0.02 |
+| Xuchang | 2805 | 3449.20 | 0.16 | 432.60 | 70.57 | 14.11 | 84.68 | 0.02 |
+| Zhouko | 2550 | 3267.20 | 0.15 | 382.01 | 59.02 | 11.80 | 70.83 | 0.02 |
+| Xinxiang | 4080 | 3014.50 | 0.14 | 334.84 | 47.74 | 9.55 | 57.28 | 0.02 |
+| Shangqiu | 4335 | 2925.30 | 0.14 | 312.55 | 43.24 | 8.65 | 51.89 | 0.02 |
+| Zhumadian | 3570 | 2859.30 | 0.14 | 308.91 | 41.77 | 8.35 | 50.13 | 0.02 |
+| Xinyang | 2040 | 2805.70 | 0.13 | 303.55 | 40.28 | 8.06 | 48.33 | 0.02 |
+| Pingdingshan | 4590 | 2455.80 | 0.12 | 268.18 | 31.15 | 6.23 | 37.38 | 0.02 |
+| Kaifeng | 2550 | 2371.80 | 0.11 | 266.03 | 29.84 | 5.97 | 35.81 | 0.02 |
+| Anyang | 2805 | 2300.50 | 0.11 | 262.39 | 28.55 | 5.71 | 34.26 | 0.01 |
+| Jiaozuo | 2805 | 2123.60 | 0.10 | 257.03 | 25.81 | 5.16 | 30.98 | 0.01 |
+| Puyang | 2295 | 1650.00 | 0.08 | 241.59 | 18.85 | 3.77 | 22.62 | 0.01 |
+| Luohe | 1530 | 1573.90 | 0.07 | 231.52 | 17.23 | 3.45 | 20.68 | 0.01 |
+| Sanmenxia | 1785 | 1450.70 | 0.07 | 182.21 | 12.50 | 2.50 | 15.00 | 0.01 |
+| Hebi | 1020 | 981.00 | 0.05 | 145.56 | 6.75 | 1.35 | 8.10 | 0.01 |
+| Jiyuan | 765 | 703.20 | 0.05 | 126.91 | 4.23 | 1.01 | 5.24 | 0.01 |
+
+Total: Direct economic loss was 110.2 billion yuan; indirect economic losses were 22.056 billion yuan; comprehensive flood loss was 132.256 billion yuan.
+
+**Publisher’s Note:** MDPI stays neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+© 2022 by the authors. Licensee MDPI, Basel, Switzerland. This article is an open access article distributed under the terms and conditions of the Creative Commons Attribution (CC BY) license (https://creativecommons.org/licenses/by/4.0/).

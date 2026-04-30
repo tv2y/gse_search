@@ -1,0 +1,17 @@
+[
+  "Archived transcripts include morning and evening news and newsmagazine programs on ABC and CBS.",
+  "They include most programming on Fox News and CNN.",
+  "There is of course more content on the cable networks than the broadcast networks.",
+  "All sentences, regardless of network, are given equal weight in this measure.",
+  "Measures for the Democratic candidate rely on Biden sentences until he steps down, and Harris sentences thereafter.",
+  "Once sentences are extracted from news transcripts, each sentence is scored for positive and negative sentiment using the Lexicoder Sentiment Dictionary.",
+  "Each sentence is assigned a net sentiment score, which is the difference between the number of positive words and the number of negative words. [Following past work, it is calculated as follows: log ( (positive words + .5) / (negative words + .5)).] The daily result is then the mean of net sentiment in all Republican-candidate sentences minus the mean of net sentiment in all Democratic-candidate sentences.",
+  "That daily measure, capturing the difference in the net sentiment of Republican- and Democratic-candidate sentences, is what is shown in the above figure.",
+  "*   There is always some degree of error in automated content analysis.",
+  "*   There are alternative strategies for aggregating results that take the sum rather than the mean of sentiment, or weight sentences differently, averaging across networks or weighting by viewership.",
+  "*   This measure does not distinguish between things that are being said _about_ a candidate and things that are said _by_ a candidate.",
+  "Note also that the predictive capacity of the measure is likely not because news content actually _predicts_ attitudes; in fact, media coverage may often follow electoral preferences.",
+  "This is most likely because (a) journalists are following the campaign carefully, and their output tends to mirror the direction of the campaign, and (b) news content is measured relatively easily, and quickly, and so sometimes reflects shifts that are only just emerging in public opinion polling.",
+  "These findings are not exclusive to campaigns; thinking more generally, media coverage may not affect public attitudes so much as it reflects them.",
+  "It nevertheless is true that analyses of media coverage can provide a valuable indictor of the partisan ‘tone’ of the campaign."
+]

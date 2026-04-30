@@ -1,0 +1,15 @@
+[
+  "Platform Notice: Cloud and Data Center- This article applies equally to both cloud and data center platforms.",
+  "Support for Server* products ended on February 15th 2024.",
+  "If you are running a Server product, you can visit the Atlassian Server end of support announcement to review your migration options.",
+  "When creating a Bitbucket.org (Cloud) or GitHub repository in Bamboo, you receive the error message: Failed to load data from Bitbucket. [403 Forbidden] / Failed to load data from GitHub. [403 Forbidden].",
+  "This usually happens due to Tomcat configuration issues when running Bamboo behind a reverse proxy or load balancer.",
+  "Regardless of any fix to the wizard, due to the dependency of this configuration being specific to the URL the application is accessed on this configuration still may need to be updated manually at some point.",
+  "*   the configured `proxyName` matches the hostname that the application is accessed on.",
+  "*   the configured `proxyPort` matches the port that the application is accessed on.",
+  "*   the configured `scheme` matches the scheme that the application is accessed with.",
+  "Any changes to the `server.xml` will require Bamboo to be restarted to take effect.",
+  "Was this helpful?",
+  "Still need help?",
+  "The Atlassian Community is here for you."
+]

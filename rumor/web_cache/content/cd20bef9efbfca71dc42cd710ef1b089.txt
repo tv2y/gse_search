@@ -1,0 +1,322 @@
+Title: Efficiency of UAV-based last-mile delivery under congestion in low-altitude air
+
+URL Source: https://par.nsf.gov/servlets/purl/10313346
+
+Markdown Content:
+Transportation Research Part C 122 (2021) 102878 Available online 10 December 2020 0968-090X/© 2020 Elsevier Ltd. All rights reserved. Efficiency of UAV-based last-mile delivery under congestion in low-altitude air Ruifeng She , Yanfeng Ouyang *
+
+> Department of Civil and Environmental Engineering, University of Illinois at Urbana Champaign, 205 North Mathews Ave, Urbana, IL 61801, USA
+
+A R T I C L E I N F O 
+
+> Keywords:
+> UAV Congestion Continuous equilibrium Energy
+
+A B S T R A C T Emerging unmanned aerial vehicle (UAV) technologies have motivated logistics carriers to seek last-mile parcel delivery through the air so as to benefit from its convenience and flexibility. However, UAV-based delivery services are limited by several binding factors, such as low battery capacities and short delivery range, which in turn require simultaneous use of a large fleet for commercial scale operations. In such cases, congestion in low-altitude air will inevitably arise. This paper investigates self-organized UAV traffic flow in low altitude 3D airspace, and formu -
+
+lates the user equilibrium condition as a set of partial differential equations. We propose a finite element scheme to numerically solve the traffic equilibrium and compute system performance. Two specific test scenarios for last-mile freight delivery systems are studied, including one with a conventional ground-based distribution facility, and the other with a novel concept of airborne fulfillment center. We evaluate the operational cost and energy consumption of these systems under a variety of system configurations. The results provide insights that could be useful for logistic carriers and policy makers to achieve efficiency and sustainability for last-mile delivery. 
+
+1. Introduction 
+
+Attention to unmanned aerial vehicles (UAVs), or drones, has been rising in recent years, as their applications are extended from recreational activities and military missions to large-scale civilian/industrial mobility solutions. Frachtenberg (2019) provided a comprehensive review on drone applications, their potentials, and the associated challenges. One emerging and promising application of drones is to use them as the “last-mile ” vehicles in parcel delivery services. Drone-based delivery is superior to traditional automobile-based alternatives, mainly from its capability of bypassing challenges associated with accessibility (especially in resi -
+
+dential areas), surface transportation congestion, as well as safety. Such logistics systems typically utilize vehicle-to-vehicle (V2V) communication and self-navigation technologies to achieve high-levels of automation. Economies of scale and scope could be ach -
+
+ieved, hence, as compared with traditional delivery options that involve human crew, through mass production of drone fleets, low training cost, and extended operating hours. Leading logistic enterprises, such as Federal Express, Universal Parcel Services (UPS), SF Express (China) and DHL have all been developing their own drone fleets and supportive infrastructure systems (Frachtenberg, 2019). In 2012, Alphabet also initiated ”Project Wing ” to develop technologies for drone-based freight delivery. Amazon first successfully delivered 5 lbs of goods for over 7 miles in 2016 using one of the Amazon Prime Air fleet aircraft, spending only 13 min in door-to-door delivery time (Forbes News, 2019). 
+
+* Corresponding author. 
+
+E-mail address: yfouyang@illinois.edu (Y. Ouyang). 
+
+Contents lists available at ScienceDirect Transportation Research Part C 
+
+journal homepage: www.elsevier.com/locate/trc 
+
+https://doi.org/10.1016/j.trc.2020.102878 Received 8 June 2020; Received in revised form 9 September 2020; Accepted 4 November 2020 Transportation Research Part C 122 (2021) 102878 
+
+> 2
+
+A large number of studies have been conducted to investigate pros and cons of drone-based logistics systems. Many efforts are centered around enabling technologies that systematize deployment of unmanned vehicle fleets in connected environments. Motlagh et al. (2016) conducted a survey to identify challenges associated with Internet-of-Things (IoT) systems for drones, including collision avoidance, regulation development and interference management. Many innovative infrastructures and hardware have been proposed as well, such as those related to utilization of 5G wireless communication to enhance real-time drone control (Shah et al., 2018), localization systems to achieve high-precision landing (Lu et al., 2019), and dedicated drone design and control mechanisms to minimize swing of the load in motion (Guerrero et al., 2015). On the service planning side, Dorling et al. (2017) formulated a vehicle routing problem to minimize the total operating cost for sequential drone deliveries. Shavarani et al. (2018) formulated a facility location problem for both charging and launching stations so as to minimize the system cost while allowing prohibitively long trips. Branching along this direction, Zhang et al. (2018) proposed a dynamic pricing and charging assignment model to optimize the coupled operations of a drone fleet and the supportive charging network under time-varying demand. On the operational level, Kim et al. (2019) proposed a cloud-based drone navigation system which gathers and utilizes real-time information to make routing de -
+
+cisions. Sawadsitang et al. (2019) studied a multi-objective optimization problem to find schedules and routes of drone deliveries, such that the total delivery cost, lateness, and percentage of unsuccessful deliveries are minimized. Reliability of drones and risk of sto -
+
+chastic failure were considered as well. Torabbeigi et al. (2018) proposed a heuristic approach to design robust delivery schedules that minimize the expected loss of demand; Swanson (2019) proposed a simulation-based alternative. Despite obvious advantages, drone-based delivery systems face many challenges. Joerss et al. (2016) predicted that such a system is only viable in rural areas where landscape is simple, safety risk is low, and there are few mid-air obstacles. Full-scale commercial application of drones for delivery service has yet to mount physical constraints related to energy efficiency. The mainstream models experimented so far, Amazon ’s prototype for instance, can deliver packages up to 5 lbs for a distance of 10 miles (CBS News, 2013). While such performance would be satisfactory for most home-delivery merchandises (such as food and clothes) in most cities, the horsepower and battery life constraints do impose restrictions. If deliveries all start from a central depot, in most operating scenarios, drones are limited to making a single delivery per trip, and as a result, a large fleet of drones will be needed to achieve economies-of-scale and timeliness. Sustainability and profitability of drone-based deliveries hence require more efficient service design and oper -
+
+ation plans. In light of such concerns, new service configurations are also gaining popularity in recent years. The basic idea is to combine the flexibility of drones with the energy/cost efficiency of traditional shipment modes. For example, the drones could be hauled by trucks over long linehaul distances and launched only near customer neighborhoods (i.e., for the last mile). UPS has recently formed a subsidiary company to provide truck-and-drone based delivery service after receiving approval from the Federal Aviation Adminis -
+
+tration (CNBC News, 2019). Amazon is even considering using flying warehouses, officially named as the Airborne Fulfillment Centers (AFC), to replace trucks. AFC airships serve as afloat carriers of goods and charging platforms, such that loaded drones can be dis -
+
+patched from mid-air, so as to save drone battery consumption. In this direction, Carlsson and Song (2018) investigated the integrated delivery framework where trucks serve as moving station, and illustrated its efficiency using continuum approximation models. Another challenge that drone-based delivery systems will face, once reaching full commercial scale, is congestion in low altitude air. Foreseeably, traffic will be shifted from surface roadways to the air space, causing local concentration of drones around key points (such as launching sites). Per the current technology, commercial drones generally have a diameter of less than a meter, but they require substantial spatial separation to avoid safety hazards caused by interfering air torrents. Consequently, congestion will inev -
+
+itably arise and potentially generate significant delay and even safety hazards. A control center equipped with optimized route planner is required to not only estimate the capacity of drone delivery systems (i.e., throughput of traffic), but also to regulate the traffic so as to achieve a higher level of mobility. It hence remains pressing to understand the optimal service efficiency of drone traffic under congestion, and in turn to find ways to realistically enhance the capacity of drone-based delivery systems. To the authors ’ best knowledge, continuous path planning and control models have not been developed for congested drone traffic, but some building blocks are available from studies on human pedestrian flow in an open space. The currently prevailing way of studying pedestrian flow is through agent-based simulation models, such as the social force model (Helbing and Moln ´ar, 1995) and the cellular automaton model (Was, 1995), which describe pedestrians as microscopic particles. Helbing et al. (2005) illustrated through simulations that properly designed guideways can regulate pedestrian flow (by detouring a portion of the pedestrians) and improve average throughput (by shifting traffic condition at bottlenecks away from stagnation). The simulation models are suitable for real -
+
+ization of small crowds for a given system configuration, but from a macroscopic point of view, a continuous predictive model better serves the purpose for system planning and design. To this end, Hughes (2002) introduced the pedestrian flow-density relation as two coupled non-linear partial differential equations (PDE), consisting of the Eikonal equation and the continuity equation. The flux field is determined by the descend direction of minimum travel cost, which is penalized in areas of high density. Yang and Wong (2000) showed that the PDE formulation exactly describes the optimality conditions of user equilibrium, and they proposed a solution approach based on the finite element method. If uniform outbound flow at exits is anticipated, the problem resembles the Neumann problem, which is a special case of Poisson equation with pure Neumann boundary condition. Recently, Wang (2017) and Wang and Ouyang (2020) proposed analytical solution approaches to the problem under linear congestion cost function. Ouyang et al. (2015) proposed discrete and continuous models for service facility location design where transportation cost is evaluated under continuous traffic equilibrium, and Zhang et al. (2020) further used topological optimization methods to design pedestrian guideways. Bridging towards dynamic traffic modeling, Wong et al. (2008) formulated the reactive dynamic user equilibrium for pedestrians, and proposed a numerical solution approach using the Discontinuous Galerkin (DG) method and the Runge –Kutta time stepping scheme. In the context of urban traffic flow, Jiang et al. (2016) developed a macroscopic departure time assignment model with elastic demand for a polycentric urban city. Further, Lin et al. (2018) developed a predictive dynamic user-optimal model and simultaneously optimized 
+
+> R. She and Y. Ouyang Transportation Research Part C 122 (2021) 102878
+> 3
+
+departure and route choices through variational inequality. There is a lack of literature on using user equilibrium models to analyze drone-based delivery systems, especially those new ones, that operate in continuous air space, and this study aims to fill this gap. In the circumstance of drone-based delivery service fulfilling demands with equal priority, the user equilibrium (Wardrop, 1952) describes the optimal route choices that each drone takes to minimize its own travel time or cost. We focus on studying macroscopic PDE formulation for drone traffic in low-altitude air, and developing a suitable customized finite element solution scheme to approximate the optimal steady-state flow pattern considering mid-air congestion. Travel cost in local areas is modeled as a nonlinear non-decreasing function of the local flux intensity, and we put an emphasis on both travel time and energy consumption. 1 We first use the modeling scheme to evaluate the performance of last-mile drone delivery systems in some anticipated business scenarios, including both ground-based launching sites, as well as the AFC sce -
+
+nario. Then we use the results as a building block to quantify impacts of design factors that influence system capacity and efficiency of drone-based delivery systems. Parametric sensitivity analysis is conducted to provide key insights for operational managers in practice. The remainder of this paper is organized as follows. Section 2 introduces the notation and formulation of continuous drone traffic equilibrium in 3D space. Section 3 discusses the finite element scheme developed to solve the PDE and the technical details for al -
+
+gorithm implementation. Section 4 presents two numerical cases that examine the dependence of delivery systems efficiency on system design. Finally, we make concluding remarks in Section 5. 
+
+2. Formulation 
+
+We consider a continuous closed domain Ω ∈ R3 representing the bounded traffic space in the low-altitude air, which is shared by a batch of drones to conduct their last-mile delivery tasks. Every delivery involves a round trip, including an outbound leg from the launching site to the customer, and an inbound leg for return. We assume that all deliveries have the same priority, and due to symmetry the outbound and inbound legs of a trip follow exactly the same spatial path. As such, our model only needs to consider the inbound legs of the trips from the customer locations toward a common launching site. Drones enter and leave the domain Ω through designated areas on the boundary Γ, which consists of three parts: the entrances, exits and non-traversing walls, denoted by Γin , Γout 
+
+and Γn respectively, such that Γ = Γin ∪ Γout ∪ Γn. In our context, Γin refers to the 2-D ground surface on which customers are distributed, and Γout the launching site. We consider a period of time with steady delivery tasks, such that a time-invariant but location dependent inflow rate q(x) enters the domain at x ∈ Γin . Accordingly, the steady-state flux at position x ∈ Ω is denoted f(x), and it induces a flux-dependent local travel cost per unit distance as specified by a nondecreasing function c(x, ‖f(x)‖) . Under user equilibrium, the Wardrop Principal (Wardrop, 1952) states that each drone is assigned a cost-minimizing path conditional on the choice of all others, i.e. for a drone originated at x, it has generalized cost along a continuous path p(x) toward the launching site satisfies ∫
+
+> p(x)
+
+c(x, ‖f‖) dx⩽∫ 
+
+> p′(x)
+
+c(x, ‖f‖) dx for any unused path p′ (x).There exists a continuous potential function u(x) = min p(x)
+
+∫
+
+> p(x)
+
+c(x, ‖f‖) dx, whose level contours are always perpendicular to the local flux. This potential can be interpreted as the total travel cost for a drone originated at x to reach its launching site along the best possible path. We use u0 to denote the potential on exit boundaries, which in this context measures time to be spent after reaching the destinations (such as queue, handling time, etc.), and serves as a notion of preference among exits. The exit boundaries are modeled as equipotential surfaces such that any point on which can be considered a destination. It can be shown that the user equilibrium (UE) condition can be written as the following PDE (Yang and Wong, 2000) 2 :
+
+∇u = − c(x, ‖f‖) f
+
+‖f‖, (1a) 
+
+∇ ⋅ f(x) = 0, (1b) 
+
+f(x) ⋅ n(x) = 0 ∀x ∈ Γn , (1c) 
+
+f(x) ⋅ n(x) = q(x) ∀x ∈ Γin , (1d) 
+
+u(x) = u0(x) ∀x ∈ Γout , (1e) where ∇ and ⋅ are the gradient and inner product operators; n(x) is the inward facet normal on boundaries. (1a) is the Eikonal equation; (1b) is the divergence theorem which governs flow conservation at any interior point; (1c), (1d), (1e) are the boundary conditions at corresponding boundaries. While one could assume any local relationship between travel cost and traffic volume (i.e., the magnitude of local flux), we follow     
+
+> 1Such an equilibrium model, of course, can be easily modified (i.e., by including externalities in the local cost function) to address centrally controlled drone traffic that achieves minimal overall system-wide cost or time. See Ouyang et al. (2015) for more detail. 2The UE formulation is most suitable when the UAVs are coordinated based on vehicle-to-vehicle communications, which could be the case where multiple logistics providers are sharing the airspace. Ouyang et al. (2015) showed that the counterpart PDE formulation for system optimum can be obtained by simply adding a marginal travel cost term; i.e., replacing the cost function by c(x,‖f‖) + ‖ f‖
+
+∂c(x, ‖f‖) /∂‖f‖. The proposed formulation and solution framework still apply. We refer interested readers to Ouyang et al. (2015) for more discussion. 
+
+> R. She and Y. Ouyang Transportation Research Part C 122 (2021) 102878
+> 4
+
+the literature and consider the BPR-type polynomial function which takes the form c(x, ‖f‖) = α(x) + β(x)‖ f‖γ(x), where α is the reciprocal of free flow speed; β and γ are coefficients measuring the sensitivity of travel cost to existent traffic. 3Taking safety into concern to avoid potential collision among drones, we impose an upper limit constraint on the drone density 
+
+ρ(x).4 Given the fundamental flow-density-speed relation ‖f(x)‖ c(x, ‖f‖) = ρ(x) (since c(x, ‖f‖) can be interpreted as the reciprocal of isotropic speed), the density ρ(x) is given by 
+
+ρ(x) = α(x)‖ f(x)‖ + β(x)‖ f(x)‖ γ(x)+ 1, (2) and if we want to ensure spatial separation among the drones, we can check the following constraint everywhere in the domain: 
+
+ρ(x)⩽ρ0 ∀x ∈ Ω. (3) Since the launching site is the common destination of all trips, the highest drone density is anticipated on the outflow boundary. Due to mass conservation, for a problem to be well posed, the total inflow from the entrances, ∫ 
+
+> Γin
+
+q(x)dx, must not exceed ∫
+
+> Γout
+> ρ0
+> c(x,‖f‖)
+
+̂ ef dx;otherwise the density constraint at Γout will be violated. This constraint affects the value of the inflow boundary condition and requires limited entrance area for a given inbound demand such that the maximum density limit is not exceeded. 
+
+3. Numerical solution method 
+
+The above PDE formulation resembles the mixed-form Poisson problem, where the major solution difficulty resides in the nonlinear term c(x,‖f‖) f
+
+> ‖f‖
+
+. We choose to solve f(x) and u(x) in their respective solution spaces. The test function space is selected to be the same as the trial function space, per Galerkin ’s method (Chung, 1978). We use L2(Ω) and W1,2(Ω) to denote the 2-Lebesgue space and Sobolev space, respectively. By multiplying (1a) and (1b) with test functions τ and v and integral by parts, the mixed weak form of the problem then reads as follows: find u ∈ W1,2(Ω), f ∈ L2(Ω) satisfying 
+
+c(x, ‖f‖) ‖f‖ (f, τ)Ω + (∇ u, τ)Ω = 0 ∀τ ∈ L2(Ω), (4a) 
+
+(f, ∇v)Ω − ( q, v)Γin = 0 ∀v ∈ W1,2(Ω), (4b) 
+
+u(x) = u0(x) ∀x ∈ Γout . (4c) Here, notation (⋅, ⋅)A indicates inner product of two functions defined over any domain A.During implementation, the weak form to be solved is the summation of Eq. (4a), (4b). The residual is expressed by collecting all terms to the left-hand side: 
+
+f (f, u; τ, v) = c(x, ‖f‖) ‖f‖ (f, τ)Ω + (∇ u, τ)Ω + ( f, ∇v)Ω − ( q, v)Γin 
+
+where the semicolon is used to distinguish that the residual function f is linear with respect to the arguments after the semicolon, τ, v,but not to those before. A finite element scheme is implemented to evaluate the solution (f, u) by an approximation (fh, uh) in the following form 
+
+fh = ∑Nf
+
+> i=1
+
+ϕf 
+
+> i
+
+fi uh = ∑N ui=1
+
+ϕ ui ui,
+
+where N⋅ and ϕ⋅, with the respective subscripts, denote degrees of freedom and the number of associated shape functions, and fi and ui
+
+are the discrete solutions corresponding to each degree of freedom. The subscript h indicates the approximated solution. Given a spatial discretization with tetrahedron cells T, a stable choice is the Taylor –Hood element (Wieners, 2003), given by: 
+
+U h := { W1,2(Ω) : u h|k ∈ P d (k) ∀k ∈ T uh},
+
+F h := { L2(Ω) : fh|k ∈ Pd+1(k) ∀k ∈ Tf
+
+> h
+
+},
+
+where P d denotes the space of continuous Lagrange polynomials of degree d. The Taylor –Hood element consists of the pair Pd+1/P d for the vector/scalar function space, respectively. Fig. 1 shows the cubic and quadratic elements on a tetrahedron. From our experiment, parameter d = 2 performs reasonably well for our particular problem. 3 The BPR function does not capture the phenomenon that a higher speed may likely be associated with a higher flow in very congested traffic. Other variants of cost function (e.g., the concave flow-density relationship obtained from the traffic fundamental diagram) could be implemented with special treatments (e.g., piece-wise differentiable functions). This will be left for future research. 4 Additional bounds on UAV kinematics can also be considered. For instance, we can impose a constraint on the acceleration, given by a = ∇ x v ⋅ v
+
+where v is the velocity vector field, such that ‖a‖⩽acc max .
+
+> R. She and Y. Ouyang Transportation Research Part C 122 (2021) 102878
+> 5
+
+Due to nonlinearity of the residual function, we resort to Newton ’s method to iteratively approach the stationary point. In each Newton step the residual is linearized with respect to the solution vector, using the G ˆateaux derivatives (Schrimpf, 2018): 
+
+J(f, u; τ, v,̂ f,̂ u) = lim 
+
+> ∊→0
+
+1
+
+∊
+
+[
+
+f (f + ∊̂ f , u + ∊̂ u; τ, v) − f (f, u; τ, v)
+
+]
+
+= c(x, ‖f‖) ‖f‖ (̂ f , τ)Ω + (∇ ̂ u, τ)Ω + ( ̂ f, ∇v)Ω,
+
+which is linear with respect to (̂ f ,̂ u). We can analogously write the Taylor series approximation to the functional: 
+
+f (f + ∊̂ f , u + ∊̂ u; τ, v) = f (f, u; τ, v) + J(f, u; τ, v,̂ f,̂ u) + O(∊2),
+
+and at the nth iteration, the descent update is given by (fn+1, u n+1) = ( fn, u n) + ( ̂ f,̂ u), where (̂ f,̂ u) is the solution to 
+
+J(f, u; τ, v,̂ f ,̂ u) = − f (f, u; τ, v).
+
+Then the problem reduces to solving a system of linear equations consisting of the Galerkin approximation at each element. The Newton process is terminated when the relative residual (divided by the initial residual) from (5) has reached the stopping criterion; e. g. being smaller than the commonly accepted tolerance of 10 −6 , as long as the initial residual is not too close to zero. 5At convergence, the accuracy of the FEM solution must be verified by some credible benchmarks. Since no experimental results or analytical solution to similar drone routing problems exist, we numerically verify our solution based on the Wardrop ’s first principal. To this end, we sample a set of points on the inlet surface and check the closeness of assigned flight trajectories, represented by the path lines constructed from the flux vector field, to the shortest path generated with the Dijkstra ’s algorithm along the discrete mesh (where the link cost is computed as the absolute difference of the solution u(x)). Since the velocity field is point-wise parallel to the flux field and can be computed as v(x) = f(x)
+
+> ρ(x)
+
+, the trajectories are curves that satisfy the following ordinary differential equation: 
+
+˙xp (t) = v(xp(t)) , ∀t > t0
+
+xp(t0) = x0.
+
+Utilizing the mesh, an approximation of a trajectory can be constructed by tracing through adjacent nodes such that 
+
+V i+1 = arg max   
+
+> V∈C(Vi)
+
+f(̂ V i)‖f(̂ V i)‖ ⋅ (̂ V −̂ V i),
+
+where C(Vi) denotes the set of adjacent nodes to the ith node along a path, whose coordinate is  ̂ V i. Alternatively, smooth trajectories can be constructed using Euler ’s method: xp(t + dt ) = x(t) + v(x(t)) dt , ∀t.
+
+4. Numerical examples 
+
+We tested our solution scheme on two possible scenarios for drones to be used for large-scale delivery in the foreseeable future. The    
+
+> Fig. 1. Taylor –Hood element on a tetrahedron. 5Note that the Newton method is not guaranteed to converge to the global optimum, especially when the residual function is highly non-convex, in which case a proper initial guess close to the optimum helps greatly. One readily available starting point is the solution to the linear version of the problem; e.g., by selecting
+
+α(x) = 0, β(x) = 1, γ(x) = 1, ∀x, such that the problem reduces to a linear Poisson equation with a positive semi-definite mass matrix and can be directly solved with a Krylov subspace solver. 
+
+> R. She and Y. Ouyang Transportation Research Part C 122 (2021) 102878
+> 6
+
+first case is a conventional ground-based distribution center serving customers in the surrounding area. The second case is the AFC proposed by Amazon. In each case the maximum and average travel times are computed to indicate performance and give insights to the optimal system design parameters. Our implementation of the finite element scheme benefits from DOLFIN (FEniCS Project, 2019a), a C ++ finite element library with a Python interface. Supplied with the weak form, the Unified Form Language (UFL) (FEniCS Project, 2019b) library provides handy transmission to numerical setup, such as linearization and matrix assembly. A collection of popular element classes is available to construct the Taylor –Hood element used in this study. The meshing functionality is provided by MSHR package (FEniCS Project, 2015), which utilizes the CGAL library (Hemmer et al., 2020) to generate unstructured mesh for 3D geometries. The mesh is con -
+
+structed in the format compactible with DOLFIN and allows ad hoc refinement and adjustment. At each iterative Newton step, the PETSc library (Abhyankar et al., 2018) provides several Krylov subspace methods to solve the assembled matrix equation. The parallel solver MUMPS (Amestoy et al., 2000), and if needed, the GMRES (Saad and Schultz, 1986) solver coupled with the ILU preconditioner are used for our examples. 
+
+4.1. Case 1 – conventional distribution center 
+
+Fig. 2(a) illustrates a depot on the ground from where drones are dispatched to serve nearby customers. For convenience, we set up a conventional Cartesian-coordinate system with the origin at the depot and the ground being the z = 0 plane. The depot is modeled as a circular area on the ground with a 100 m radius; i.e., Γin = { x : ‖x‖⩽100 } ∩ { z = 0} where the distance unit is meter. Consider identical customers that are uniformly distributed around the depot within a radius of 2000 m. To avoid numerical singularity where 
+
+Γin and Γout are directly adjacent, we set a rim with radius 100 m around the depot ’s perimeter to separate them. Hence, Γout = { x :
+
+200 < ‖x‖⩽2000 } ∩ { z = 0}. We further anticipate that the needed 3D domain to accommodate the drone traffic is the upper  
+
+> Fig. 3. Drone flux and cost potential distribution for ground-based depot.
+
+# (a) Dimensions of the traf fi c domain. (b) Wireframe outline of the mesh.  
+
+> Fig. 2. Dimensions and mesh outline of the traffic domain for ground-based depot.
+> R. She and Y. Ouyang Transportation Research Part C 122 (2021) 102878
+> 7
+
+hemisphere 6 with an outer radius of 2000 m. Fig. 2(b) illustrates the discretization of the domain with 17,436 Taylor –Hood tetra -
+
+hedron elements. We use the following model parameters: α(x) = 0.1 (s/m), β(x) = 10 7 (s 5 m7 ), γ(x) = 4, q(x) = 0.0001 (s −1m−2), ∀x. 7Fig. 3 shows the cross-sectional view of the flux vector field and cost potential on plane x = 0. The direction of the flux, which is also the direction of the velocity, is parallel to the gradient of the potential. A virtual streamline connecting the flux vectors can help visualize the complete trajectory of a drone from the launching site. An example of drone trajectory from Euler ’s method is also shown in Fig. 3. The figure clearly shows the impact of congestion on equilibrium traffic distribution. Intuitively, since the inflow and outflow boundaries are both on the same ground plane z = 0, the shortest distance path solution for every drone should all remain on that plane as well. They will all enter the depot via the perimeter and cause high concentration of traffic there. As a result, we observe from the figure that some of traffic detours into the air space and enter the depot center from the above in order to bypass the heavy congestion. Hence, the presence of sufficient air space is critical to the efficiency (and even feasibility) of drone-based deliveries. In many urban areas, the presence of buildings and obstacles limits the availability of air space for drones. Furthermore, it might be helpful to require minimum drone cruising height so as to ensure safety of both the drones and those on the ground. Freight carriers and policy makers would be interested in knowing whether it is costly to impose a minimal height restriction in certain parts of the traffic domain. To test such scenarios, we consider putting virtual traffic barriers around the depot to mimic buildings so the drones cannot travel arbitrarily close to the ground when they access the depot. For illustrative purposes, we cast the virtual barrier at a radius     
+
+> Fig. 5. Drone flux and cost potential distribution for ground-based depot with 60% barrier opening.
+> Fig. 4. Dimensions and mesh outline of the traffic domain for ground-based depot with virtual barrier. 6A valid spatial discretization can take any geometry that fully encloses all nodes with non-zero degree of freedom. The geometries of mesh in this numerical case are made smallest to reduce computational cost. 7We assume that the drones have a free-flow speed of 10 m/s, and the futuristic e-commerce service demand is generated from a population density of 30,000 per square km with an average of 6 packages per capita-day delivered within a time window of 30 min.
+> R. She and Y. Ouyang Transportation Research Part C 122 (2021) 102878
+> 8
+
+of 500 m, with a 200 m height and 100 m width. Four identical openings on the virtual barrier, used to mimic the air space between buildings, are centered at the 0, 90, 180, and 270 degree locations respectively, and their width is to be varied as a parameter. Fig. 4 illustrates dimension and mesh for the test case where the total width of all four openings equals 60% of the perimeter length. Note too that the case in Fig. 3 corresponds to a special case with 100% opening. Fig. 5(a) illustrates the flux field and potential value with 60% opening. Fig. 5(b) is the side view which shows how the barrier detours a portion of the traffic to the space above the depot and alleviates the congestion near the ground. Clearly, the portion of traffic that can go through the openings is directly influenced by the percentage of opening as well as the height of the virtual barrier. We would like to further investigate what combination of opening percentage and barrier height forms a good design that can possibly reduce negative impacts on drone delivery efficiency. Fig. 6(a)-(b) plots the free-flow travel cost and average total travel cost and, respectively, across all customers for 21 test cases, where the barrier opening ranges from 0 to 100 percent, and the barrier height varies from 50 m to 500 m. The free flow travel time decreases monotonically with the reduction of barrier (e.g., via more opening percentages or lower heights), indicating a decreasing   
+
+> Fig. 7. Flux vector field near the exit with barrier opening of 50% and barrier heights of 100, 300 and 500 m.
+> Fig. 6. Travel cost and maximum drone density versus percentage of barrier opening.
+> R. She and Y. Ouyang Transportation Research Part C 122 (2021) 102878
+> 9
+
+portion of drones that are forced to detour from straight-line travel. On the other hand, such detours cause scattering of traffic that turns out to be able to reduce the total travel time, as local congestion is meliorated, and drones spend less time flying slowly through those regions. For example, when barrier heights are low (i.e., up to 200 m), substantial efficiency improvements in terms of overall travel costs are observed with the reduction of openings or the increase in barrier heights. Such improvements can only be caused by reduction of congestion delay near the openings because some of the traffic is forced to detour. This phenomenon is similar to the Braess paradox in congested transportation networks. Fig. 7 shows the change in the divergence of UAV traffic approaching the exit through the openings against those above the barriers. The cross-sections are sliced at z = 50 (top view) and x = 0 (side view), respectively. The virtual barriers disable the near-ground paths and force the UAVs to utilize the less congested region at higher altitude. Yet, very tall barriers force the travel distance and free flow travel time to be large, and hence increase the overall travel cost as well. There exists an optimal combination of barrier height and opening ratio such that the trade-off between free-flow travel time and congestion delay is balanced. With the chosen parameters, a percentage of 0% opening (full blockage) with a barrier height of 200 m is observed to provide the best performance. Fig. 6(c) plots the maximum density across all neighborhoods when barrier is present. Clearly, the presence of low virtual barriers near the depot has a noticeable impact on meliorating local drone concentration. If we would like the maximum density not to exceed 1 drone/m 3 , we would like to keep the opening to be less than about 10%. 
+
+4.2. Case 2 – Airborne Fulfillment Center (AFC) 
+
+In this case study we examine the traffic performance when drones are dispatched from Amazon ’s airborne fulfillment centers to serve homogeneous demand in the circular area on the ground. We assume that the traffic domain is a simple cylinder with a radius of 2000 m and a height of 2000 m, as shown in Fig. 8(a). The airship is modeled as an ellipsoid, with axial dimensions of 100 m, 100 m, 50 m respectively, located on the central line of the cylinder (i.e., the z-axis). An illustration of the finite element mesh is shown in Fig. 8(b). One of the key decisions for freight carriers as well as policy makers is the height of the airship, which clearly affects the efficiency and energy performance of the system. Intuitively, higher airship gives more traffic space for drones and hence may reduce congestion delay and the associated energy consumption, but at the same time it elongates trip distance and potential time and energy con -
+
+sumption for free flow travel. As such, we vary the height of the airship from 100 m to 1000 m and compute the average total travel time (including the free flow travel time and delay time) for all customers.   
+
+> Fig. 8. Dimensions and mesh outline of the traffic domain for AFC-based drone system.
+> Fig. 9. Drone flux and potential cost distribution for AFC (hovering at 500 m).
+> R. She and Y. Ouyang Transportation Research Part C 122 (2021) 102878
+> 10
+
+The facets of the ellipsoid (airship) are assigned zero potential such that it forms an equipotential exit; the set of path lines con -
+
+necting any customer points from the ground surface to any point on the ellipsoid is a feasible drone trajectory. All model parameters are the same as those in the ground-based depot example. Fig. 9 shows the cross-sectional view of the spatial distributions of cost potential and the associated flux vector field at equilibrium. The length of the arrows indicates local flux intensity. From the trajectories we see a clear pattern in which some drones, especially those from the peripheral area, choose to detour from straight lines and access the airship from the side (or even the top) to avoid severe congestion right beneath the airship. To further understand the trade-off between free-flow travel cost and delay-related cost, Fig. 10(a) plots the averages of these cost components with different airship hovering heights. We observe that the total travel time decreases with height when the AFC is hovering below 300 m. This indicates that more congested traffic is formed when the AFC is close to the ground, which compensates the savings from shorter travel distance. As hovering height increases, traffic pattern near the AFC stabilizes and free-flow travel time starts to increase. If the freight carrier is simply aiming at minimizing the total drone travel time per delivery (as the measure of system efficiency), then the lower hovering height of about 500 m is probably favorable. However, we recognize that one of the major advantages of airship (as compared to ground-based counterparts) is the battery power consumption (BPC) savings. We may be interested in un -
+
+derstanding how energy consumption is influenced by airship height. Also, note that energy consumption rate also influences effi -
+
+ciency, because quick battery depletion often leads to longer recharge duration between dispatches and hence decreases system efficiency. To investigate the power consumption during the drone trips, we further convert the travel time components in Fig. 10(a) into energy consumption components. The lost time due to congestion delay can be interpreted as the time drones spend hovering in the air. Tseng et al. (2017) conducted experiments on battery consumption of the type of 3DR solo test drones, which each weigh 2 kg itself and carry a battery capacity of 5200 mAh. Under various motion and wind conditions, with zero payload, the tested drones demonstrated power consumption rates of 260 W and 320 W while hovering and ascending, respectively. When a payload weighing 500 g is attached to the drone, the hovering power consumption rate increases to 360 W. Assuming the drones are able to steadily glide from the airship to the ground using gravity during the descend, and the incremental power required is proportional to the payload, we can compute the total power consumption rate with an average payload of 2 kg (i.e., the load capacity of the Amazon PrimeAir prototype) to be the   
+
+> Fig. 11. Energy consumption for ground-based drone trips.
+> Fig. 10. Average travel time, energy consumption and maximum density for AFC-based drone trips.
+> R. She and Y. Ouyang Transportation Research Part C 122 (2021) 102878
+> 11
+
+following: descending (with or without payload) in free-flow glide: 0 W; hovering during delay (with payload): 260 +( 2kg /500 g) × ( 360 −260 ) = 660 W; ascending (without payload) during free flow travel: 320 W; ascending (without payload), hovering due to delay: 260 W; ascending from ground (with payload) during free flow travel: 320 +( 2kg /500 g) × ( 360 −260 ) = 720 W. The average energy consumption per delivery trip is shown in Fig. 10(b), after summing the product of the drone trip time of each type with the corresponding power consumption rate. As the airship hovers higher, the trajectories are more regulated during ascending, and loss time due to congestion decreases. Consequently, energy consumption rate is optimized at hovering height between at around 700 m. The impact of AFC hovering height on energy consumption is also more prominent than on travel time. The minimum (at 700 m) is about 25% lower than that with airship hovering 100 m in the air. The maximum density is plotted in Fig. 10(c). It also shows that, as expected, a larger AFC hovering height also monotonically reduces the maximum drone concentration. In this regard, it is probably also better to choose a hovering height around 700 m than 500 m. Finally, Fig. 11 presents the same energy consumption analysis for drone trips from the ground base facility in the previous example. A comparison shows that airborne distribution systems, if operating at a proper altitude (e.g. at 700 m as the benchmark), could consume much less power than conventional ground-based systems. It should be noted that the above analysis focused on drones and hence has not considered the cost/energy associated with operating the airship. However, we anticipate that the airship enjoys economics of scale and hence is far more energy efficient on lifting goods than individual drones. In addition, saving energy for drones (rather than time) is more essential for most drone delivery systems. 
+
+5. Conclusion 
+
+In this study we developed a steady-state continuum traffic equilibrium model to describe last-mile delivery operations of a large fleet of drones in low-altitude air. Each drone seeks a route that minimizes its own travel cost, while congestion is induced in areas with high drone concentration. The drones ’ optimal path choices are described by a set of PDEs, and a customized finite element solution scheme is implemented to effectively solve the model. The coupled Eikonal and continuity equations are directly solved with the Taylor –Hood element pair. We presented two numerical cases to examine the performance of two likely scenarios in which last-mile drone delivery service may be provided. The level of congestion around launching facilities as well as the optimal drone trajectories can be computed to estimate the overall system efficiency in terms of average travel time and the energy consumption under traffic equilibrium. Insights are cast on how the operational efficiency is affected by key parameters of the delivery system, and in particular how the trade-off between delivery time and power efficiency may be utilized to design the system for more sustainable operations. It is shown that the freight carriers may be able to benefit from investing in AFC to reduce long-term operational cost (battery power consumption). Future research may branch out from this work by exploring other possible modes of delivery, including hybrid systems utilizing mobile distribution centers (e.g. airship or trucks) to cover line-haul distance, and drones to serve the last mile. The solution scheme of this work may be used to evaluate system performance and determine the optimal service area of drones during such operations. Along this line, we may further consider cooperative systems where multiple trucks (or airships) are simultaneously in operation within a region, and drones may deadhead across lines for delivering and charging. Such a cooperation may benefit from service pooling to achieve a better operational efficiency; e.g., scheduling, assignment and routing of drones can be optimized such that the delivery-charging routine is covered by the least number of drones to minimize investment. In addition, this work can be improved by considering alternative travel cost function (e.g., based on realistic traffic fundamental diagram), and by further enhancing operational safety, as the UAVs ’ equilibrium PDE may explicitly include constraints that bound the density and kinematics (e.g., acceleration and  
+
+> Fig. 12. Inflation layer near boundaries.
+> R. She and Y. Ouyang Transportation Research Part C 122 (2021) 102878
+> 12
+
+turning angle). Routing strategy and even air space partitions (e.g., air corridors) based on trajectories under UE may be designed to achieve system optimum, especially if centralized control is adopted by the carrier. Furthermore, since the static equilibrium model is incapable of predicting operational uncertainties, such as disturbance from birds or malfunctioning drones, a dynamic reactive model (together with collision-avoiding mechanisms based on density and kinematics constraints) may also be useful to estimate and improve system robustness. Finally, the single-commodity traffic flow used in this paper is a strong simplification. In realistic cases where multiple logistics carriers compete in a shared airspace, the interactions among multiple traffic groups is significant. Even the inbound and outbound traffic for the same delivery destination could cross and interact. Therefore, a multi-commodity flow formulation is necessary, and this effort is currently in progress. 
+
+CRediT authorship contribution statement Ruifeng She: Formal analysis, Investigation, Methodology, Software, Validation, Visualization, Writing - original draft. Yanfeng Ouyang: Conceptualization, Funding acquisition, Methodology, Project administration, Supervision, Writing - review & editing. 
+
+Acknowledgments 
+
+The authors thank three anonymous reviewers for providing many helpful suggestions and interesting directions for future research. This research was supported in part by the U.S. National Science Foundation via Grant CMMI-1662825, a grant from the USDOT Region V University Transportation Center, and the ZJU-UIUC Institute Joint Research Center for Infrastructure Resilience in Cities as Livable Environments. 
+
+Appendix A. Mesh setup 
+
+In the development of the finite element model framework, spatial discretization is done using MSHR (FEniCS Project, 2015), an integrated Python package in FEniCS, which utilizes and interfaces with the Computational Geometry Algorithms Library (CGAL) (Hemmer et al., 2020). The CGAL is a C ++ library providing functionalities for generation and processing of polygon graph structures, such as the tetrahedral mesh used in this study. During implementation, spatial geometry information is used to generate an initial mesh, and then further refined by an ad hoc procedure, as briefly described below. The geometry of the computation domain can be specified by using Boolean operations on a collection of built-in shapes (e.g., spheres and cylinders). While MSHR only supports basic operations (union and intersection), more advanced modifications can be made with other tools (as long as compatibility with DOLFIN is ensured). The initial mesh can then be refined, such as increasing resolution at local neighborhoods where non-linearity is anticipated to enhance fidelity, or decreasing resolution to reduce compu -
+
+tational cost. Additional care is taken near boundaries to provide smooth approximation in anticipation of drastic condition change as well as to prevent singularity. For instance, inflation layers (i.e., thin layers of very fine mesh, as shown in Fig. 12) are applied near domain boundaries to capture non-linearity and potential shocks in traffic flux. During the refinement process, the mesh quality must be ensured everywhere, e.g., by checking maximum face size and skewness to eliminate oversize or ill-shaped elements. Once the mesh is established, it can be equipped with elements of selected type. Using DOLFIN, the Taylor –Hood element is composed by Lagrangian-type elements of degree 3 and 2 in two and one dimensions, respectively. 
+
+References  
+
+> Abhyankar, S., Brown, S., Constantinescu, E.M., Ghosh, D., Smith, B.F., Zhang, H., 2018. Petsc/ts: A modern scalable ode/dae solver library. arXiv preprint arXiv: 1806.01437. Amestoy, P.R., Duff, I.S., I ’Excellent, J.Y., 2000. Multifrontal parallel distributed symmetric and unsymmetric solvers. Comput. Methods Appl. Mech. Eng. Carlsson, J.G., Song, S., 2018. Coordinated logistics with a truck and a drone. Manage. Sci. 3971 –4470. CBS News, 2013. Amazon unveils futuristic plan: Delivery by drone. www.cbsnews.com/news. Chung, T.J., 1978. Finite Element Analysis in Fluid Dynamics. McGraw Hill International Book Co. CNBC News, 2019. Ups wins first broad faa approval for drone delivery. Dorling, K., Heinrichs, J., Messier, G.G., Magierowski, S., 2017. Vehicle routing problems for drone delivery. IEEE Trans. Syst. Man Cybernet.: Syst. 47, 70 –85. FEniCS Project, 2015. Mshr documentation. https://bitbucket.org/fenics-project/mshr/wiki/Home. FEniCS Project, 2019. Dolfin python documentation. https://fenicsproject.org/docs/dolfin/2018.1.0/python. FEniCS Project, 2019. Unified form language documentation. https://fenics.readthedocs.io/projects/ufl/en/latest. Forbes News, 2019. Amazon ’s new delivery drone will start shipping packages ’in a matter of months ’. https://www.forbes.com/sites/jilliandonfro. Frachtenberg, E., 2019. Practical drone delivery. Computer 52, 53 –57. Guerrero, M.E., Mercado, D.A., Lozano, R., García, C.D., 2015. Passivity based control for a quadrotor uav transporting a cable-suspended payload with minimum swing. In: 2015 54th IEEE Conference on Decision and Control, pp. 6718 –6723. Helbing, D., Moln ´ar, P., 1995. Social force model for pedestrian dynamics. Phys. Rev. E. Helbing, D., Buzna, L., Johansson, A., Werner, T., 2005. Self-organized pedestrian crowd dynamics: experiments, simulations, and design solutions. Transp. Sci. 1 –24. Hemmer, M., Hert, S., Pion, S., Schirra, S., 2020. The CGAL project. CGAL User and Reference Manual. Hughes, R.L., 2002. A continuum theory for the flow of pedestrians. Transp. Res. Part B: Methodol. 507 –535. Jiang, Y.Q., Zhang, P., Wang, S.C., Choi, K., 2016. Dynamic continuum model with elastic demand for a polycentric urban city. Transp. Sci. 931 –945. Joerss, M., Schrder, A., Neuhaus, F., Klink, C., Mann, F.T., 2016. Parcel delivery: The future of the last mile. Travel Transp. Logist. Kim, J., Kim, S., Jeong, K., Kim, H., Park, J.S., Kim, T., 2019. CBDN: Cloud-based drone navigation for efficient battery charging in drone networks. IEEE Trans. Intell. Transp. Syst. 4174 –4191.
+> R. She and Y. Ouyang
+
+Transportation Research Part C 122 (2021) 102878 
+
+13 Lin, Z.Y., Zhang, P., Wang, S.C., Choi, K., 2018. A predictive continuum dynamic user-optimal model for the simultaneous departure time and route choice problem in a polycentric city. Transp. Sci. 1496 –4508. Lu, K., Chiu, C., Feng, K., Tseng, P., 2019. Device-free csi-based wireless localization for high precision drone landing applications. 2019 IEEE 90th Vehicular Technology. Motlagh, N.H., Taleb, T., Arouk, O., 2016. Low-altitude unmanned aerial vehicles-based internet of things services: comprehensive survey and future perspectives. IEEE Internet Things J. 3, 899 –922. Ouyang, Y., Wang, Z., Yang, H., 2015. Facility location design under continuous traffic equilibrium. Transp. Res. Part B. Saad, Y., Schultz, M.H., 1986. GMRES: A generalized minimal residual algorithm for solving nonsymmetric linear systems. SIAM J. Sci. 856 –869. Sawadsitang, S., Niyato, D., Tan, P.S., Wang, P., Nutanong, S., 2019. Multi-objective optimization for drone delivery. In: 2019 IEEE 90th Vehicular Technology Conference, pp. 1 –5. Schrimpf, P., 2018. Lecture notes on differential calculus. https://faculty.arts.ubc.ca/pschrimpf/526/calculus-526.pdf. Shah, S.A.A., Ahmed, E., Imran, M., Zeadally, S., 2018. 5G for vehicular communications. IEEE Commun. Mag. 111 –117. Shavarani, S.M., Nejad, M., Rismanchian, F., Izbirak, G., 2018. Application of hierarchical facility location problem for optimization of a drone delivery system: a case study of amazon prime air in the city of san francisco. Int. J. Adv. Manuf. Technol. 3141 –3153. Swanson, D., 2019. A simulation-based process model for managing drone deployment to minimize total delivery time. IEEE Eng. Manage. Rev. 154 –167. Torabbeigi, M., Lim, G.J., Kim, S.J., 2018. Drone delivery schedule optimization considering the reliability of drones. In: 2018 International Conference on Unmanned Aircraft Systems, pp. 1048 –1053. Tseng, C.M., Chau, C.K., Khaled, E., Majid, K., 2017. Flight tour planning with recharging optimization for battery-operated autonomous drones. Wang, Z., 2017. Planning service facilities and infrastructures under continuous traffic equilibrium. Ph.D Dissertation at. University of Illinois at Urbana-Champaign. Wang, Z., Ouyang, Y., 2020. On solving a class of continuous traffic equilibrium problems and planning facility location under congestion. Working Paper, University of Illinois at Urbana-Champaign (Submitted for review). Wardrop, J.G., 1952. Some theoretical aspects of road traffic research. ICE Proc.: Eng. Div. 325 –362. Was, J., 1995. Cellular automata model of pedestrian dynamics for normal and evacuation conditions. In: 5th International Conference on Intelligent Systems Design and Applications, pp. 154 –159. Wieners, C., 2003. Analysis and Simulation of Multifield Problems, vol. 12. Springer. Wong, S.C., Huang, L., Zhang, M., Shu, C.W., Lam, W.H.K., 2008. Revisiting hughes ’ dynamic continuum model for pedestrian flow and the development of an efficient solution algorithm. Transp. Res. Part B 127 –141. Yang, H., Wong, S.C., 2000. A continuous equilibrium model for estimating market areas of competitive facilities with elastic demand and market externality. Transp. Sci. 34, 216 –227. Zhang, K., Lu, L., Lei, C., Zhu, H., Ouyang, Y., 2018. Joint operations of electric aircraft systems and power networks through dynamic pricing. Transp. Res. Part C 472 –485. Zhang, X., Li, W., Ouyang, Y., 2020. Paved guideway topology optimization for pedestrian traffic under Nash equilibrium. Struct. Multidiscip. Optim. (in press). 
+
+R. She and Y. Ouyang

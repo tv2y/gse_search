@@ -1,0 +1,1011 @@
+Title: Breaking RSA with a Quantum Computer - Schneier on Security
+
+URL Source: https://www.schneier.com/blog/archives/2023/01/breaking-rsa-with-a-quantum-computer.html
+
+Published Time: 2023-01-03T17:38:12+00:00
+
+Markdown Content:
+Breaking RSA with a Quantum Computer - Schneier on Security
+
+===============
+
+Schneier on Security
+====================
+
+Menu
+
+*   Blog
+*   Newsletter
+*   Books
+*   Essays
+*   News
+*   Talks
+*   Academic
+*   About Me
+
+### Search
+
+_Powered by DuckDuckGo_
+
+Blog Essays Whole site 
+
+### Subscribe
+
+Home Blog
+
+Breaking RSA with a Quantum Computer
+------------------------------------
+
+A group of Chinese researchers have just published a paper claiming that they can—although they have not yet done so—break 2048-bit RSA. This is something to take seriously. It might not be correct, but it’s not obviously wrong.
+
+We have long known from Shor’s algorithm that factoring with a quantum computer is easy. But it takes a big quantum computer, on the orders of millions of qbits, to factor anything resembling the key sizes we use today. What the researchers have done is combine classical lattice reduction factoring techniques with a quantum approximate optimization algorithm. This means that they only need a quantum computer with 372 qbits, which is well within what’s possible today. (The IBM Osprey is a 433-qbit quantum computer, for example. Others are on their way as well.)
+
+The Chinese group didn’t have that large a quantum computer to work with. They were able to factor 48-bit numbers using a 10-qbit quantum computer. And while there are always potential problems when scaling something like this up by a factor of 50, there are no obvious barriers.
+
+Honestly, most of the paper is over my head—both the lattice-reduction math and the quantum physics. And there’s the nagging question of why the Chinese government didn’t classify this research. But…wow…maybe…and yikes! Or not.
+
+> “Factoring integers with sublinear resources on a superconducting quantum processor”
+> 
+> 
+> **Abstract:** Shor’s algorithm has seriously challenged information security based on public key cryptosystems. However, to break the widely used RSA-2048 scheme, one needs millions of physical qubits, which is far beyond current technical capabilities. Here, we report a universal quantum algorithm for integer factorization by combining the classical lattice reduction with a quantum approximate optimization algorithm (QAOA). The number of qubits required is O(logN/loglogN ), which is sublinear in the bit length of the integer N , making it the most qubit-saving factorization algorithm to date. We demonstrate the algorithm experimentally by factoring integers up to 48 bits with 10 superconducting qubits, the largest integer factored on a quantum device. We estimate that a quantum circuit with 372 physical qubits and a depth of thousands is necessary to challenge RSA-2048 using our algorithm. Our study shows great promise in expediting the application of current noisy quantum computers, and paves the way to factor large integers of realistic cryptographic significance.
+
+In email, Roger Grimes told me: “Apparently what happened is another guy who had previously announced he was able to break traditional asymmetric encryption using classical computers…but reviewers found a flaw in his algorithm and that guy had to retract his paper. But this Chinese team realized that the step that killed the whole thing could be solved by small quantum computers. So they tested and it worked.”
+
+EDITED TO ADD: One of the issues with the algorithm is that it relies on a recent factoring paper by Claus Schnorr. It’s a controversial paper; and despite the “this destroys the RSA cryptosystem” claim in the abstract, it does nothing of the sort. Schnorr’s algorithm works well with smaller moduli—around the same order as ones the Chinese group has tested—but falls apart at larger sizes. At this point, nobody understands why. The Chinese paper claims that their quantum techniques get around this limitation (I think that’s what’s behind Grimes’s comment) but don’t give any details—and they haven’t tested it with larger moduli. So if it’s true that the Chinese paper depends on this Schnorr technique that doesn’t scale, the techniques in this Chinese paper won’t scale, either. (On the other hand, if it does scale then I think it also breaks a bunch of lattice-based public-key cryptosystems.)
+
+I am _much_ less worried that this technique will work now. But this is something the IBM quantum computing people can test right now.
+
+EDITED TO ADD (1/4): A reporter just asked me my gut feel about this. I replied that I don’t think this will break RSA. Several times a year the cryptography community received “breakthroughs” from people outside the community. That’s why we created the RSA Factoring Challenge: to force people to provide proofs of their claims. In general, the smart bet is on the new techniques not working. But someday, that bet will be wrong. Is it today? Probably not. But it could be. We’re in the worst possible position right now: we don’t have the facts to know. Someone needs to implement the quantum algorithm and see.
+
+EDITED TO ADD (1/5): Scott Aaronson’s take is a “no”:
+
+> In the new paper, the authors spend page after page saying-without-saying that it _might_ soon become possible to break RSA-2048, using a NISQ (i.e., non-fault-tolerant) quantum computer. They do so via two time-tested strategems:
+> 
+> 
+> 1.   the detailed exploration of irrelevancies (mostly, optimization of the number of qubits, while ignoring the number of gates), and
+> 2.   complete silence about the one crucial point.
+> 
+> 
+> Then, finally, they come clean about the one crucial point in a single sentence of the Conclusion section:
+> 
+> 
+> > It should be pointed out that the quantum speedup of the algorithm is unclear due to the ambiguous convergence of QAOA.
+> 
+> 
+> “Unclear” is an understatement here. It seems to me that a miracle would be required for the approach here to yield any benefit at all, compared to just running the classical Schnorr’s algorithm on your laptop. And if the latter were able to break RSA, it would’ve already done so.
+> 
+> 
+> All told, this is one of the most actively misleading quantum computing papers I’ve seen in 25 years, and I’ve seen … many.
+
+EDITED TO ADD (1/7): More commentary. Again: no need to panic.
+
+EDITED TO ADD (1/12): Peter Shor has suspicions.
+
+Tags: academic papers, China, cryptanalysis, cryptography, quantum computing, RSA
+
+Posted on January 3, 2023 at 12:38 PM • 76 Comments
+
+### Comments
+
+Emoya • January 3, 2023 1:04 PM
+
+Let the games begin…
+
+Alan • January 3, 2023 2:21 PM
+
+What exactly does “break” mean in this context? That it takes 10 million years instead of 100 million years?
+
+Bruce Schneier • January 3, 2023 2:34 PM
+
+@Alan:
+
+In this context, “break” means factor in reasonable human time. Fast enough that we normal people care.
+
+Greg • January 3, 2023 2:41 PM
+
+What are the implications if they can? Please be specific.
+
+I’d love practical examples.
+
+Eg: if RSA == public key, does that mean people can just start printing/stealing BTC? What can be DONE with such things?
+
+(For context someone told me long ago the NSA can do this, odd to see it written about a decade later with the nation swapped.)
+
+Frazzled • January 3, 2023 2:42 PM
+
+Keeping scientific research a secret is difficult. Allowing its public release, suggesting U.S. govt RSA encryption is insecure, may benefit China by disrupting military and intelligence security.
+
+Anonymous • January 3, 2023 2:49 PM
+
+I wonder how long it will take for elliptic curve cryptography to go as well – hopefully before NIST standardize quantum-resistant algorithms in 2024.
+
+vas pup • January 3, 2023 3:40 PM
+
+China cracks advanced microchip technology in blow to Western sanctions
+
+https://finance.yahoo.com/news/china-cracks-advanced-microchip-technology-171655972.html
+
+“China has cracked a microchip design method previously only mastered by the West, in a challenge that could undermine sanctions.
+
+Using so-called extreme ultraviolet lithography (EUV) technology, transistors can be created that are just nanometers in size. The most powerful computer chips contain millions of transistors and advances in miniaturization allow for the creation of hugely powerful chips.
+
+The highly specialized technique has only ever been cracked by Netherlands-based company ASML. A €208bn business, ASML’s chip-making secrets are jealously guarded by both the company and the West.”
+
+I had no doubt they will do this because they many talented electric and other technology specialized engineers, supporting staff. Regardless of ideology, China appreciate real merits. That is why sooner or later becoming # 1 world leader.
+
+Anonymous • January 3, 2023 4:11 PM
+
+So much for Lastpass’s “millions of years” estimate to crack all the vaults that were stolen.
+
+Clive Robinson • January 3, 2023 4:20 PM
+
+@ Bruce, ALL,
+
+> “This is something to take seriously. It might not be correct, but it’s not obviously wrong.”
+
+Either way it’s serious food for thought.
+
+I must admit though that if it is wrong, knowing why it’s wrong, may turn out to be rather more interesting than if it’s right.
+
+Clive Robinson • January 3, 2023 4:42 PM
+
+Vas pup,
+
+> “China cracks advanced microchip technology in blow to Western sanctions”
+
+These days “cracks” is not the word I’d use as it carries to many adverse conitations –same as “hacks”– thanks to journalists and prosecutors.
+
+What they have done is simple to describe more elegantly.
+
+That is,
+
+“China has by independent research created a technology to use extream ultraviolet light for chip lithography of nano scale parts”.
+
+I would say that it was inevitable that they would for two reasons,
+
+1, It’s known it can be done.
+
+ 2, They have a need for such technology.
+
+The interesting question will be how different will the techniques or methods be, especially as it is a very many step process.
+
+That there is more than sufficient information in the public domain to be able to follow the Dutch Path is known. Thus the Chinese could end up with broadly the same method.
+
+However there has been continuing research since the original Dutch implementation, so the Chinese systen could use different methods, that might ultimately be more beneficial in some ways.
+
+I guess we are going to have to watch to see.
+
+However this news is not good geo-politically. Some US Government actions and political agendas with regards other nations in the West Pacific and South China Seas have been predicated on keeping china away from such technology…
+
+So there will be political fall out.
+
+Itan Barmes • January 3, 2023 4:49 PM
+
+The authors do not elaborate on the scalability of this method. They use a quantum algorithm called QAOA which is known to be problematic in scaling.
+
+So far is QAOA questionable in showing quantum advantage in general, let alone for such a specific and important problem. I wouldn’t get worried just yet
+
+Victor Miller • January 3, 2023 6:00 PM
+
+Be careful about counting qbits. I believe that the paper in question needs 372 _reliable_ qbits. The IBM quantum computer only has noisy qbits. It requires a lot more than that using the best quantum error correction.
+
+Anonymous • January 3, 2023 6:30 PM
+
+Why hasn’t Shor factored 35 yet?
+
+Matt Kocaj • January 3, 2023 7:02 PM
+
+and if the IBM people do test it, and it works, will any of us find out? 😮
+
+Quantum Quack • January 3, 2023 7:37 PM
+
+IMHO, only reason Chinese may be interested in developing quantum computers is to spy on the US. Most of the tech is completely out of reach of anyone other than either state actors or large corporations w/cash to spare (a.k.a. G, or IBM).
+
+Quantum computers still strike me as an expensive pipe dream.
+
+Clive Robinson • January 3, 2023 8:48 PM
+
+@ Quantum Quack, ALL,
+
+Re : Quantum Computers(QCs).
+
+> “IMHO, only reason Chinese may be interested in developing quantum computers is to spy on the US.”
+
+Don’t be daft, the Chinese most certainly do not need QCs to spy on the USA. Because ordinary “Computer Security”(CS) is so badly practiced in the USA they can just “walk in the network front door and take up residence”. Or had you not noticed this over the past couple of decades?
+
+They used to call it “Advanced Persistant Threat”(APT) more to cover the USA and other Nations “Cyber-Security” embarrassment than that it required any great level of skill to do.
+
+I’ve yet to see any commercial ICT setup that is even remotely secure because all the commercial and consumer software used is so full of vulnerabilities, the only way to stop it becoming successfully attacked is,
+
+“Disconnect from everything including the power.”
+
+So leave it in it’s shipping crate never powered up, in a locked and alarmed room…
+
+But of course the NSA or GCHQ or any other SigInt agency that can get in the “supply chain” can plant back-door or similar in the equipment before the shipping crate even reaches your “loading bay”/”Goods Inward”.
+
+If the Chinese were going to use it for surveillance, it would be against HTTPS and similar in their own territory.
+
+Just as “it will be / is being” used in the UK, USA, and every other Western nation that has a SigInt agency.
+
+It’s effectively a “hoovering tool” not a “targeted tool”.
+
+As for,
+
+> “Quantum computers still strike me as an expensive pipe dream.”
+
+All sufficiently new technology from the “cotton gin”, “steam engine”, “electric battery” has been met with,
+
+“It’s an expensive pipe dream”
+
+Or similar, but they all end up as they become mastered,
+
+“Changing the world around them.”
+
+To the point they become “essential” and life unthinkable without them.
+
+Try going back to a lifestyle of forty years ago, before the Cellular Phone was even an unreliable brick that cost six months wages for a labouring individual. You can not do it, even though it is easily within living memory.
+
+Dave • January 3, 2023 10:12 PM
+
+Looks like the old “Assume a perfectly spherical elephant of negligible mass or volume” joke needs to be updated to “Assume a perfectly functioning quantum computer”.
+
+Yuhong Bao • January 4, 2023 1:34 AM
+
+“but falls apart at larger sizes”
+
+ Does it really or was it never proven one way or the other?
+
+MarkH • January 4, 2023 5:57 AM
+
+@Bruce:
+
+Maybe it’s premature to be much less worried …
+
+I looked back to your post and the discussion from:
+
+https://www.schneier.com/blog/archives/2021/03/no-rsa-is-not-broken.html
+
+What my internet reading had found at the time, is that Schnorr’s algorithm is much slower than he proposed in his paper, because he incorrectly estimated how many relations (components of the factoring process) would come from solving a lattice problem.
+
+The lattice problem has to be much bigger, to get the job done (which kills Schnorr’s supposed efficiency).
+
+If the Chinese team has found a way to use their not-so-huge QC to solve the scaled-up lattice problem in reasonable time — which is what their paper seems to claim — then perhaps this _is_ the RSA killer.
+
+If they publish factors for challenge number RSA1024 anytime soon, the consequences could be world-shaking.
+
+Tony • January 4, 2023 8:04 AM
+
+I asked Peter Shor about it and he said there could be a few problems with that paper
+
+https://twitter.com/PeterShor1/status/1607864880324804608
+
+Anonymous • January 4, 2023 11:10 AM
+
+Bruce,
+
+If this came out of America, would you ask “And there’s the nagging question of why the American government didn’t classify this research.”?
+
+Virus • January 4, 2023 11:17 AM
+
+“And there’s the nagging question of why the Chinese government didn’t classify this research.”
+
+Just guessing…
+
+Maybe the next day they have a quantum computer to sell…
+
+ with a price-tag in rubels?
+
+MT • January 4, 2023 12:26 PM
+
+I’m confused by this _“Schnorr’s algorithm works well with smaller moduli—around the same order as ones the Chinese group has tested—but falls apart at larger sizes. At this point, nobody understands why.”_
+
+Does the algorithm come with proof that it would work? If so, I would assume it works (at least for the moduli that the proof covers) – otherwise the proof must be wrong.
+
+ If it doesn’t come with a proof, why was there a presumption that the algorithm would work (given “nobody understood why” it doesn’t)? Is it like an ’empirical’ algorithm that seems to work on smaller input yet turns out to fail on larger?
+
+Sam • January 4, 2023 12:44 PM
+
+Please forgive my ignorance. I know very little about cryptography and quantum information science.
+
+RSA-2048 appears to be the longest RSA number length. To preempt the specific vulnerability, can we simply lengthen RSA again?
+
+Feynman's Ghost • January 4, 2023 2:59 PM
+
+“I think I can safely say that nobody understands quantum mechanics.” -Richard Feynman
+
+“I think I can safely say that nobody understands if the Chinese can actually crack a 2048-bit asymmetric encryption key.”
+
+Francis Louis Mayer • January 4, 2023 3:08 PM
+
+The best comment on all this that I have seen is at this blog https://brianlovin.com/hn/34235350
+
+“Even when it worked, QC itself is not massively deployable right now. Agencies will be sucking their thumbs while everyone migrates to something stronger or even quantum-proof algorithms. No drama.”
+
+Quantum Computing is a threat, HOWEVER, getting time on a quantum computer is a limited resource and I agree that we need to be actually testing these theoretical issues. As an old system engineer and tester, I am adamant about testing everything rigorously. Good science involves testing things in the real world with real world conditions. Many things are theoretically possible but practically unrealistic to the point the exploit costs more than the value of the thing exploited. Symmetric encryption is efficient and is used as the real basis of the bulk of encryption with the asymmetric cryptography being used for key exchange.
+
+vas pup • January 4, 2023 5:20 PM
+
+Quantum computers become reality:
+
+https://www.dw.com/en/how-does-a-quantum-computer-work/video-64161225
+
+https://www.dw.com/en/quantum-computers-a-vision-becomes-reality/video-64161222
+
+Two short and good videos related to the subject.
+
+@Clive – thank you for Your input on Chinese technology.
+
+Magooey • January 4, 2023 7:00 PM
+
+Sam asked “To preempt the specific vulnerability, can we simply lengthen RSA again?” That shouldn’t be a problem. Just go to FIPS 186-3 and use the algorithm there to create larger sized (pseudo) primes.
+
+entertain_us • January 4, 2023 7:48 PM
+
+while I can barely spell all the words for crypto:
+
+it smells like teen spirit to me.
+
+nirvana
+
+ridiculous!
+
+lurker • January 4, 2023 8:43 PM
+
+> The IBM quantum computer only has noisy qbits.
+
+As an old analog guy that statement keeps me feeling happy about quantum computers.
+
+MarkH • January 4, 2023 8:56 PM
+
+@Magooey:
+
+Probably you meant probable (not pseudo) prime.
+
+A pseudoprime is a composite number which passes some test(s) for probable primality. While recipes to find pseudoprimes are interesting mathematically, they aren’t useful for realizing typical cryptosystems.
+
+Clive Robinson • January 4, 2023 9:03 PM
+
+@ lurker,
+
+> “As an old analog guy that statement keeps me feeling happy…”
+
+As an old guy… Showing young digital whipper-snappers that a CMOS inverter is actually an anolog amplifier and how to bias it and derive gain bandwidth equations for it similar to those of an Op-Amp …”keeps me feeling more than happy”.
+
+For those that do not know, or have never thought about it,
+
+“All that digital circuitry is analog circuitry biased in odd ways”
+
+From there you can start to move forward with understanding what “meta-stability” is and why “soft-latchups” happen.
+
+But that as they say “Is a bedtime story for another night” 😉
+
+MarkH • January 4, 2023 9:45 PM
+
+@Yuhong Bao, MT:
+
+If I understand correctly (I’m no expert), in this context “falls apart” means that depending on at least one parameter value, the algorithm either
+
+(a) runs to completion in some reasonable length of time without finding a factor, or
+
+(b) would presumably succeed at factoring, but need a very extreme amount of computation to do so.
+
+Finding algorithms for factoring is easy: for example, you could write a Python script in a minute or two to perform trial division (dividing by every possible odd integer, for example), which is mathematically guaranteed to succeed: it will always factor a semiprime.
+
+However, its running time of trial division for an input of cryptographic size is practically infinite. To put it another way, the probability that it would factor within 100 years is practically zero.
+
+MarkH • January 4, 2023 9:50 PM
+
+Part 2:
+
+Among publicly known algorithms for factoring real-world RSA semiprimes, the fastest is the General Number Field Sieve (GNFS).
+
+Schnorr’s lattice-based factoring algorithm is interesting mathematically, but it’s only relevant to cryptographic security if it makes factoring cheaper (which usually means faster) than using GNFS.
+
+Schnorr thought that his algorithm is fast, because the lattice problem can be solved in a reasonable amount of time. However, experimental tests seemed to show that the lattice problem must be set up in many more dimensions than Schnorr expected, in order to bear fruit.
+
+The need for many dimensions means (1) that it’s not so fast, and (2) for big enough inputs, nobody knows how to solve the lattice problem in enough dimensions.
+
+MarkH • January 4, 2023 9:56 PM
+
+Part 3:
+
+If the first two parts I just wrote are correct, then a big question about this new paper is:
+
+Can the Quantum Computer approach in the paper practically solve the many-dimensional lattices needed for big RSA numbers? Or did the researchers in China accept Schnorr’s (reportedly) incorrect estimate of how many dimensions are needed?
+
+Scott Aaronson is a complexity theory researcher expert on computational cost of both classical and quantum algorithms, who pays close skeptical attention to quantum computing developments.
+
+I will be very interested to find out what Scott has to say about this new paper.
+
+Marco Ermini • January 5, 2023 1:32 AM
+
+Sam:
+
+> RSA-2048 appears to be the longest RSA number length. To preempt the specific vulnerability, can we simply lengthen RSA again?
+
+Not sure where this information comes from, but RSA-3072 and RSA-4096 are available and supported and can be used, for instance to generate TLS certificates for the web.
+
+I hope this helps.
+
+Yuhong Bao • January 5, 2023 3:58 AM
+
+AFAIK the algorithm they were trying to use is QAOA.
+
+MarkH • January 5, 2023 4:54 AM
+
+@Yuhong Bao:
+
+As usual with Public Key Cryptography computations, several algorithms are used.
+
+The main algorithm is Schnorr’s, or really a variant of his algorithm. Basically, the factoring algorithm has two phases: lattice computations, and then algebra.
+
+The idea of the new paper is to use QAOA to greatly speed up part of the lattice computation.
+
+My main question: are the authors realistic about how many dimensions the lattice must have for giant semiprimes?
+
+If so, and if usable QCs available now can manage the required lattices, then the authors will be world-famous.
+
+Yuhong Bao • January 5, 2023 5:16 AM
+
+Looks like there is a “Supplementary material” section which discusses these issues.
+
+Fazal Majid • January 5, 2023 6:56 AM
+
+Quantum Computin specialist Scott Aaronson dismisses this out of hand:
+
+https://scottaaronson.blog/?p=6957
+
+Still, QC crypto is making strides, and it is prudent to prepare, as Google et al are doing, for post-quantum crypto.
+
+Gert-Jan • January 5, 2023 6:58 AM
+
+> To preempt the specific vulnerability, can we simply lengthen RSA again?
+
+To know if that helps, you would need to know what the scalability problems are with this quantum computing approach. How much this can be scaled up seems to be the biggest discussion point.
+
+> Even when it worked, QC itself is not massively deployable right now. Agencies will be sucking their thumbs while everyone migrates to something stronger or even quantum-proof algorithms. No drama.
+
+I agree that limited availability would be a mitigating factor initially.
+
+But you seem to be thinking only forward in time. Governments globally have been grabbing encrypted internet traffic for maybe a decade now. If this approach works, it would enable them to retroactively decrypt it.
+
+Zeki • January 5, 2023 9:39 AM
+
+Aaronson: “All told, this is one of the most actively misleading quantum computing papers I’ve seen in 25 years…” – https://scottaaronson.blog/?p=6957
+
+MarkH • January 5, 2023 2:50 PM
+
+There it is …
+
+Scott Aaronson has weighed in: what is sensational in the paper is not known to be valid, and what is known to be valid is not sensational.
+
+I learned from him that QAOA has not even been shown to be faster than classical (ordinary computer) counterparts!
+
+I wonder, what does it tell us that a paper lists two dozen authors? I leave the last word to the Gang of 24 with their paper’s final sentence:
+
+> Besides, the quantum speedup is unknown, **it is still a long way** to break RSA quantumly.
+
+Phillip • January 5, 2023 5:16 PM
+
+Nice to get an update. I was unaware of the _Shor_ algorithm breaking down with larger key sizes.
+
+Clive Robinson • January 5, 2023 5:25 PM
+
+@ Bruce, ALL,
+
+Even assuming the paper is a “cow-bird”[1] rather than a “goose with auricolor product” it does raise another question…
+
+From above @Sam asks,
+
+> “To preempt the specific vulnerability, can we simply lengthen RSA again?”
+
+There are various answers but the one of perhaps most intetest would be that of “diminishing returns”.
+
+An SMS is about usable 140bytes long or ~980bits. Most people can keep a sensible communication in ordinary daily life down below this.
+
+A 2048bit RSA key is rather bigger, and by the time the various protocols have been “walked through” that’s not just one heck of a lot of extra traffic but CPU cycles thus green-house gasses as well.
+
+So the question brcomes,
+
+“Are larger RSA keys actually practicle in real terms just on a bit for bit basis?”
+
+And that’s before we talk about the “meta-data” issues of such KeyMat.
+
+[1] Try reading it to try and get a handle on what it’s actually saying… Lets just say,
+
+“As a print out it’s going to add a lot more insoluble fibre to your diet than you might expect”
+
+And it’s certainly given me enough IBS for now 😉
+
+Publius • January 5, 2023 7:51 PM
+
+The bigger practical threat is not in the realm of some theoretical mathematical optimization that breaks encryption.
+
+The biggest threat is the possibility of players across the stack colluding with governments “for the greater good.”
+
+echo • January 5, 2023 9:28 PM
+
+The first impression I had was the Chinese were just messing with people. It’s like their annoying habit of putting on an act of their submarines “surprise” surfacing right next to US aircraft carriers. The goal is simply propaganda to undermine confidence and cast doubt.
+
+It’s as annoying and pointless as Russian military doctrine where they test air defence by flying their buckets of bolts right up to borders. Or that bragging where they always claim to have a special and unique technology even when it’s a tired rehash of something the West did in the 1960’s.
+
+There’s something to be said for the days when everything was baked into the hardware at the point of manufacture, or printed on ink on real paper. The cost of a product recall was large enough people too care to get things right before release. It forced people to slowdown and do their due diligence.
+
+Only this past week I’ve read one journalist and one economist giving an opinion like they hadn’t actually paid attention to the detail of a keynote speech, and didn’t remember what the public policy was 30-40 years ago, and failed to review it in the current context. There’s also a journalist who had to issue a complete rewrite of one story where they got the detail of the public policy issues completely wrong. Yet another got their entire framing wrong and completely neglected to examine the full facts which let to a lot of stink and forced a review of editorial policy among other things.
+
+I think one problem with media is people having put effort into examining a story instead of spiking it or doing a proper rounded job simply push something through and publish it anyway because of sunk costs and a desire to maximise profit.
+
+Erdem Memisyazici • January 5, 2023 11:23 PM
+
+Could you possibly report it online if you had a 20 million qbit quantum computer using Rydberg states or something of that nature or would your windows break and canisters of smoke start filling up your lab as the past thing you remember? These are nation-state actor interests and all it takes is a rubber-stampted national security letter which even prevent media from hinting at the topic in question.
+
+NIST stated that such a computer would cost 1 billion dollars in 2030s. That’s roughly 10 years from now. I’ll go with that and all that it implies as the timeline.
+
+Clive Robinson • January 6, 2023 5:27 AM
+
+@ Erdem Memisyazici,
+
+Re : QC cost timeline
+
+> “NIST stated that such a computer would cost 1 billion dollars in 2030s. That’s roughly 10 years from now. I’ll go with that and all that it implies as the timeline.”
+
+What about the hyper-inflation that is gaining ground rather rapidly?
+
+It could change $1billion into a weeks wages by 2025…
+
+Ismar • January 6, 2023 5:41 AM
+
+To me this announcement only makes sense if the researchers (whoever they might be) are expecting to gain some useful insights resulting from all the discussions about the paper which might help them get a working solution?
+
+walti • January 6, 2023 6:02 AM
+
+did Roger Grimes just call Prof Claus Peter Schnorr ‘another guy’?
+
+MarkH • January 6, 2023 6:04 PM
+
+@walti:
+
+Schnorr’s a genius, but he’s been promoting his factoring technique for 30 years … without one quick factorization of a big semiprime.
+
+If there’s a boundary between persistent and stubborn, maybe on the far side of it one becomes “another guy.”
+
+@Ismar:
+
+Simple hypothesis: Remember OPERA claiming that neutrinos were going faster than _c_?
+
+That paper had (by my count) 190 authors. They must have known that their result was almost certainly wrong … but if by some chance it turned out to be true, they’d be famous!
+
+It’s like buying a lottery ticket.
+
+Delgado • January 6, 2023 6:56 PM
+
+@ Sam,
+
+<
+
+blockquote>To preempt the specific vulnerability, can we simply lengthen RSA again?
+
+<
+
+blockquote>
+
+In principle, going to 4096 bits (already somewhat common for PGP keys) might delay the attack—if not bogus anyway—by a few years, till quantum computers improve. To be more generally secure against quantum computers, the key length would have to be increased to an absurdly impractical extent. But it can be done; Bruce wrote about a 2017 paper (“the final multiplication of two 512 GB integers took 176,223 seconds in wall-clock time, using 3.166TB of RAM and 2.5 TB of swap storage”).
+
+Clive Robinson • January 6, 2023 8:23 PM
+
+@ Delgado, Sam, ALL,
+
+Re : Practical Key Lengths.
+
+First remember it’s not just “multiple key” systems that will require longer keys symmetric key systems will as well, if QComps become practical.
+
+But there are three asspects to longer key lengths,
+
+1, Key storage becomes impractical
+
+ 2, CPU cycles will eat up energy
+
+ 3, Time to compute becomes impractical.
+
+The last one is the one that is going to hurt the most.
+
+Consider what is the point of having a high speed high bandwidth network capable of sending a DVD quality movie around the world in just a second or two, if it takes two days –173kSec– to calculate the decryption key?
+
+Now consider what that would mean for “Internet Shopping” and the like.
+
+We thus need to have a serious think about how we do not just encryption but key transfer and importantly authentication.
+
+I suspect that is why several people are looking at the practicality of “Quantum Key Distribution”(QKD) that can in our current understanding of fundemental physics enable provable security equivalent to the usage of a “One Time Pad”(OTP) in near real-time.
+
+The problem is that like all physical sysyems, the QKD channel is bounded, thus at any given length a percentage of the particles get absorbed or equivalent and travel no further. The usuall solution of “turn up the wick” or “pump more power into the channel” does not work as for security to hold you have to use individual energy quanta. So currently there are both range and speed limits. Which boils down to about 1k bit/sec at the distance you could maintain with a “Low Earth Orbit”(LEO) satellite.
+
+The Chinese we know have been experimenting with LEO sats generating entangled pairs and sebding one down one path to Earth and the other down a second path to Earth with a reasonable distance between the two touch down points.
+
+So QKD is something that a many LEO sat constalation of the sort Starlink are building could do as a secondary function.
+
+But it still leaves the problem of “key length” 1k Bits/Sec is not going to be anywhere close to sufficient…
+
+Which raises the question,
+
+“Does it have to be?”
+
+We’ve asked this question before with regards Security and that is with respect “Random Number Generation”(RNG).
+
+The solution that came out of it was the so called “entropy pool” where relatively few bits of entropy could be used for stirring a very large pool of bits securely.
+
+Thus what if you had two entropy pools, both stired by those verified entangled quantum bits?
+
+They would remain in sync, but also have the effect of generating significantly more bits all be it with a slightly lower security margin.
+
+Now the thing is that in turn you can use the output of two or more entropy pools to generate further secure bits.
+
+So we need to consider the idea of regional entropy pools that we can use to build secure local bits to make the equivalent of a secure stream cipher to enable a fast, secure but above all timely key transfer system.
+
+Clive Robinson • January 6, 2023 9:39 PM
+
+@ MarkH, Ismar,
+
+Re : CERN, OPERA and a loose connection.
+
+> “That paper had (by my count) 190 authors. They must have known that their result was almost certainly wrong”
+
+According to the account at Wikipedia[1] they did know it was very probably not right, but did not know why, thus were “publishing the results for comments”.
+
+https://en.m.wikipedia.org/wiki/Faster-than-light_neutrino_anomaly
+
+If what Wikipedia reports is correct, then those involved did behave reasonably. It’s also what one member of the MSM that is usually reliable the UK’s “The Guardian” reported,
+
+https://www.theguardian.com/science/2011/sep/22/faster-than-light-particles-neutrinos
+
+What however I remember was reported in the more general MSM[2], it was in “breathless ways” that more than suggested it was a verified claim of faster than light travel. With typical “Red Top” reporting giving the impression Warp Speed travel was just around the corner…
+
+But we have to be carefull as something can appear to travel faster than the speed of light when infact it is not. That is it takes a shorter route than we think it is traveling and so appears to be traveling faster than it actually is. One way this can happen is when making alowance for “Velocity Factor” in signal cables.
+
+That said, we have no actual idea of what would happen if we could go faster than the speed of light, but we do have some hypothetical models. Some of which suggest time would go backwards and thus cause would follow effect. Which if true and was possible would kind of make a mess of just about all our scientific models and our understanding of the universe as we currently know it.
+
+[1] Remember, I’ve caught Wikipedia “Revising History” on a number of occasions in areas where I have “personal knowledge”. So I would advise going back to the original paper if you have a printed version, to do some verification.
+
+[2] As you are aware I tend to be a bit more than cautious with what MSM and even Trade Journalists publish. Because it feels like not more than a month passes before I spot something down right wrong or highly questionable, or things “given as facts” that most certainly are not, nor were reported as such (most recent I’ve commented on here, being the ultra-thin solar cells for flat roof space, and the fusion results from a US Weapons lab).
+
+MarkH • January 6, 2023 10:03 PM
+
+@Clive:
+
+I don’t think the original paper (of which I retain a copy from that time) to be objectionable in its claims.
+
+Simply, had I been one of those 190, and didn’t have some gun pointed to my head, I would have preferred my name not to be included.
+
+Anybody with an ounce of sense knew it had to be a mistake. Why immortalize my connection to that?
+
+Maybe it was a three musketeers thing, I don’t know.
+
+But I tend to think of great breakthrough papers as authored by a small number – or even a single individual.
+
+MarkH • January 6, 2023 10:56 PM
+
+.
+
+**Reality Check**
+
+Defining an RSA-semiprime as the product of two distinct primes of nearly equal length, on the basis of published reports:
+
+The largest RSA-semiprime yet factored is 829 bits long.
+
+The largest RSA-semiprime factored primarily by a quantum computer is 19 bits long.
+
+The largest RSA-semiprime factored with Shor’s algorithm (the known super speed-up for QC factoring) is 5 bits long.
+
+Although 1024 is only 24% larger than 829, the cost of the fastest available factoring technique grows very steeply as a function of the number’s length.
+
+It’s likely that it would still cost a million dollars or more to factor a 1024-bit RSA-semiprime.
+
+MarkH • January 6, 2023 11:08 PM
+
+@Sam, Delgado:
+
+Breaking RSA by quantum computing remains a speculative conjecture, see above.
+
+People have been predicting the death of RSA for a long time now. If I recall correctly, around 2005 the sage advice was to abandon 1024-bit RSA as soon to become insecure.
+
+In practice, secrets protected by 1024-bit RSA keys are still unreadable except, perhaps, by a few national intelligence agencies.
+
+Even when QCs running Shor’s algorithm can factor 1024-bit RSA semiprimes, major technological improvements will be needed to factor 2048-bit numbers
+
+Researchers expect 2048 bits to need coherence times on the order of an hour or more; the record so far (for a MUCH smaller system) seems to be less than one minute.
+
+MarkH • January 6, 2023 11:16 PM
+
+Between the 1970s publication of RSA and 2000, public factoring techniques made amazing progress.
+
+Since then, the progress in factoring records has been drastically slower — and progress in Quantum Computing technology seems also to fall short of expectations from 5 or 10 years ago.
+
+If QCs ever become practical — still not a certainty! — they’ll be technology, not magic.
+
+As Scott Aaronson says, “quantum computers won’t solve hard problems instantly by just trying all solutions in parallel.”
+
+Clive Robinson • January 7, 2023 1:01 AM
+
+@ MarkH, ALL,
+
+Re : Factoring progress
+
+> “Between the 1970s publication of RSA and 2000, public factoring techniques made amazing progress.”
+
+A few years back I was having a chat with someone in QMU East London where they have an interest in such things. The answer I got back was somewhat interesting.
+
+For many decades factoring had become a quiet back-road at best, and was considered almost as career suicide to get involved with as there was in effect no need for faster factoring academically or practically.
+
+RSA came along and changed that not quite overnight factoring had become sexy again and a place where compeating research got going again.
+
+This provided a spurt of “catch-up” which has now effectively run it’s course. So whilst factoring is still of significant interest the easy wins from taking research from other areas and re-jiging for factoring is over, and awaits totally fresh insights, ideas and results as and when they come along, at a more pedestrian progress.
+
+I was told of one or two fields to keep an eye on but not to hold my breath as it was new insights that were needed…
+
+It kind of reminded me of another story from the USA, where what some called the era of crazy-concept ideas in maths and science had apparently just died in the 1980’s. This was according to some due to the interferance of Nancy Reagan’s “just say no” campaign which forcefully brought a stop to what some “creative types” were doing recreationaly with compulsory drugs testing and the like. As we now know it turned into the disastrous “War on Drugs” money pit that badly destorts federal spending policy, very probably at the expense of US mental health care, pain relief and similar.
+
+Anonymous Visitor • January 8, 2023 5:56 AM
+
+@ MarkH:
+
+Factoring algorithms are used to break down a composite number into its prime factors. While it is easy to find algorithms for factoring, the running time of many of these algorithms can be impractical for larger numbers. One such example is trial division, which is mathematically guaranteed to succeed but has a practically infinite running time for input of cryptographic size.
+
+One of the fastest publicly known algorithms for factoring real-world RSA semiprimes is the General Number Field Sieve (GNFS). Schnorr’s lattice-based factoring algorithm is an interesting mathematical approach, but it is only relevant to cryptographic security if it can factor numbers faster than using GNFS. However, experimental tests have shown that the lattice problem, which is key to Schnorr’s algorithm, requires many more dimensions than expected in order to be effective. This need for many dimensions means that the algorithm is not as fast as initially thought and may not be practical for larger inputs.
+
+A recent paper has proposed using a quantum computer to solve the many-dimensional lattices needed for factoring large RSA numbers. It is unclear if this approach is practical or if the researchers in China accepted Schnorr’s potentially incorrect estimate of the number of dimensions needed. Scott Aaronson, an expert in the computational cost of both classical and quantum algorithms, may have insight into the feasibility of this approach.
+
+Anonymous Visitor • January 8, 2023 5:59 AM
+
+@ MarkH:
+
+The factoring of RSA-semiprimes, which are the product of two distinct primes of nearly equal length, has been an important area of research in cryptography. The size of the RSA-semiprime is an important factor in its security, as the cost of factoring increases significantly with the length of the number.
+
+Currently, the largest RSA-semiprime that has been factored is 829 bits long. While this may seem like a large number, it is important to note that the cost of factoring grows very steeply with the size of the number. In comparison, the largest RSA-semiprime that has been factored primarily using a quantum computer is only 19 bits long, and the largest RSA-semiprime that has been factored with Shor’s algorithm, a known speed-up for quantum computing factoring, is 5 bits long.
+
+This highlights the significant challenges that still exist in the field of factoring larger RSA-semiprimes. While 1024 bits is only 24% larger than 829 bits, it is likely that it would cost a million dollars or more to factor a 1024-bit RSA-semiprime using the current techniques. This demonstrates the importance of continued research in this area in order to improve the efficiency and cost-effectiveness of factoring algorithms.
+
+Anonymous Visitor • January 8, 2023 6:07 AM
+
+The recent publication of a paper by a group of Chinese researchers claiming the ability to break 2048-bit RSA encryption has garnered significant attention and concern. While it is important to approach such claims with skepticism, it is also important to consider the possibility that the research is credible.
+
+We know from Shor’s algorithm that factoring with a quantum computer is theoretically easy, but it has traditionally required a large quantum computer with millions of quantum bits (qbits) to factor numbers of the key sizes commonly used today. The Chinese researchers have proposed a novel approach that combines classical lattice reduction techniques with a quantum approximate optimization algorithm, which allows for factoring with a quantum computer containing only 372 qbits. This is a significant development, as current quantum computers such as the IBM Osprey have a qbit capacity of 433.
+
+While the Chinese researchers have only been able to demonstrate the ability to factor 48-bit numbers using a 10-qbit quantum computer, the potential for scaling up this approach raises concerns about the security of current encryption methods. It is important for the cryptography community to carefully evaluate this research and consider the potential implications for the future of secure communication.
+
+MarkH • January 8, 2023 9:12 PM
+
+Interesting!
+
+The 3 bot posts labeled ‘Anonymous Visitor’ are still here, but my note to the moderator about them seems to have been deleted …
+
+Clive Robinson • January 8, 2023 10:19 PM
+
+@ MarkH,
+
+Re : Bot posts
+
+> “The 3 bot posts labeled ‘Anonymous Visitor’ are still here”
+
+Actually it might have been four, as one was specifically addrrssed at me, and is nolonger there.
+
+Whilst I agree they are Bots for the purpose of Trolling,the level of “Intelligence” involved is questionable.
+
+MarkH • January 8, 2023 10:46 PM
+
+@moderator, Clive:
+
+I should have been more explicit at first. The 3 long comments from ‘Anonymous Visitor’ may seem, on quick inspection, to be reasonable and on-topic.
+
+However, they are regurgitations of stuff already on this thread. They neither add anything new, nor dispute or correct anything.
+
+They are written in the mealy-mouthed language I have seen in example ChatGPT essays (an unctuous style I’m grateful never to have seen in comments here by H. sapiens).
+
+More pollution …
+
+MarkH • January 8, 2023 11:29 PM
+
+I took a fresh look at Scott Aaronson’s blog, where his post about the paper cited above now has many more comments.
+
+I learned that (a) the paper is perhaps even sketchier than it seemed at first, and (b) a certain notoriety reportedly attaches to the senior author.
+
+From an academic reviewer:
+
+> I view the way it’s written as actively misleading … I recommend summary rejection. If I’m right about the intent to mislead, then I can’t imagine any revision of the paper that would cause me to support its acceptance in any journal ever.
+
+MarkH • January 8, 2023 11:32 PM
+
+continued:
+
+That senior author himself made a comment on Scott’s blog to defend the work. Scott and another commenter responded with a few very pointed questions about the paper, which await answers.
+
+Clive Robinson • January 9, 2023 1:47 AM
+
+@ MarkH, Moderator,
+
+Re : Troll bot.
+
+> “However, they are regurgitations of stuff already on this thread. They neither add anything new, nor dispute or correct anything.”
+
+I’d noticed that they had basically taken an existing post and changed the odd sentance.
+
+That behaviour used to be used by link advertisers trying to disguise their behaviour.
+
+The problem is I’d recognise the style or the words of the original writer so could spot them.
+
+My refrence to ‘the level of “intelligence” involved’ was an indirect refrence to it being potentially a ChatGPT or similar coming across as an odious obsequious flunky.
+
+So the fact the two people who’ve read and commented think it’s potentially a poor mans ChatGPT suggests the Turing Test is working 😉
+
+SpaceLifeForm • January 9, 2023 4:21 PM
+
+In other news, the PQC Ghost was spotted in the swamp again.
+
+MarkH • January 10, 2023 1:56 AM
+
+@SpaceLifeForm:
+
+That’s actually a really succinct review of the cited paper.
+
+MarkH • January 11, 2023 11:54 PM
+
+Update:
+
+Six have lapsed, without the apparent senior author answering the detailed questions posed by Scott Aaronson and one of the commenters.
+
+Interestingly, a second comment (immediately following the first) under that author’s name quotes an article with commentary by Peter Shor thus:
+
+> Shor added [that the] researchers had “failed to address how fast the algorithm will run”, and said that it was possible it “will still take millions of years”
+
+Perhaps that’s as much as he can offer.
+
+Until somebody posts factors for RSA1024, I’ll regard such claims as presumptively guilty — of quantum hype.
+
+MarkH • January 11, 2023 11:55 PM
+
+Correction: I meant to begin, “Six days have lapsed”
+
+MarkH • February 3, 2023 8:22 PM
+
+From “The National Interest,” a more detailed consideration of why the Chinese government would allow (or even encourage) publication of such a paper:
+
+https://nationalinterest.org/blog/techland-when-great-power-competition-meets-digital-world/if-china-cracked-us-encryption-why
+
+I don’t assume that the PRC government was even aware of this paper. Based on what I’ve read about the reputation of the apparent senior author, if ever there is a massive breakthrough in algorithmic speed … this isn’t the group that will make it.
+
+PS 3 weeks later, the purported author _still_ has not answered the questions put to him.
+
+Clive Robinson • February 4, 2023 3:24 PM
+
+@ MarkH,
+
+Re the artical…
+
+Lets make another comparison, Stalin coined the term “Usefull idiot” (something that Putin obviously still believes in).
+
+Then you can use them to “pass a dummy”…
+
+The world now thinks China is way behind the curve in the mathmatics game. Where as they could be a lot further ahead in their Military colleges/universities.
+
+Another alternative is they are actually way ahead on attacking lattice ciphers so want to get the NIST competirion done with what thry actually know is a weak varirnt.
+
+Both senarios are speculations but then it is part of the game of “Smoke and mirrors”.
+
+MarkH • February 4, 2023 7:53 PM
+
+@Clive:
+
+I concur that any leading-edge crypto research in communist China would surely be confined to the Peoples’ Liberation Army, in their counterpart to GCHQ/NSA.
+
+Whichever government organ it is, undoubtedly has at least one poor dumb slob who has to wade through the mountains of rubbish published by China’s universities.
+
+If such a reader called attention to the subject paper, the response from the PLA boffins was probably something like “we thought of that seven years ago … it took 10 minutes to convince ourselves it was a complete dead end.”
+
+The authors of the paper were probably diagnosed by the government experts as belonging to the “clown” category years ago.
+
+Subscribe to comments on this entry
+
+Leave a comment Cancel reply
+----------------------------
+
+Blog moderation policy
+
+Login
+Name
+
+Email
+
+URL:
+
+- [x] Remember personal info?
+
+Fill in the blank: the name of this blog is Schneier on ___________ (required):
+
+Comments: 
+
+**Allowed HTML**<a href="URL"> • <em><cite><i> • <strong><b> • <sub><sup> • <ul><ol><li> • <blockquote><pre>**Markdown Extra** syntax via https://michelf.ca/projects/php-markdown/extra/
+
+Δ
+
+← Friday Squid Blogging: Grounded Fishing Boat Carrying 16,000 Pounds of Squid Decarbonizing Cryptocurrencies through Taxation →
+
+Sidebar photo of Bruce Schneier by Joe MacInnis.
+
+Powered by WordPress Hosted by Pressable
+
+### About Bruce Schneier
+
+I am a public-interest technologist, working at the intersection of security, technology, and people. I've been writing about security issues on my blog since 2004, and in my monthly newsletter since 1998. I'm a fellow and lecturer at Harvard's Kennedy School, a board member of EFF, and the Chief of Security Architecture at Inrupt, Inc. This personal website expresses the opinions of none of those organizations.
+
+### Related Entries
+
+*   Details About Chinese Surveillance and Propaganda Companies
+*   Time-of-Check Time-of-Use Attacks Against LLMs
+*   Assessing the Quality of Dried Squid
+*   New Cryptanalysis of the Fiat-Shamir Protocol
+*   Friday Squid Blogging: The Origin and Propagation of Squid
+*   GPT-4o-mini Falls for Psychological Manipulation
+
+### Featured Essays
+
+*   The Value of Encryption
+*   Data Is a Toxic Asset, So Why Not Throw It Out?
+*   How the NSA Threatens National Security
+*   Terrorists May Use Google Earth, But Fear Is No Reason to Ban It
+*   In Praise of Security Theater
+*   Refuse to be Terrorized
+*   The Eternal Value of Privacy
+*   Terrorists Don't Do Movie Plots
+
+More Essays
+
+### Blog Archives
+
+*   Archive by Month
+*   100 Latest Comments
+
+#### Blog Tags
+
+*   3d printers
+*   9/11
+*   A Hacker's Mind
+*   Aaron Swartz
+*   academic
+*   academic papers
+*   accountability
+*   ACLU
+*   activism
+*   Adobe
+*   advanced persistent threats
+*   adware
+*   AES
+*   Afghanistan
+*   AI
+*   air marshals
+*   air travel
+*   airgaps
+*   al Qaeda
+*   alarms
+*   algorithms
+*   alibis
+*   Amazon
+*   Android
+*   anonymity
+*   Anonymous
+*   antivirus
+*   Apache
+*   Apple
+*   Applied Cryptography
+
+More Tags
+
+### Latest Book
+
+More Books
+
+*   Blog
+*   Newsletter
+*   Books
+*   Essays
+*   News
+*   Talks
+*   Academic
+*   About Me

@@ -1,0 +1,51 @@
+Title: Experts slam Chinese research on quantum encryption attack
+
+URL Source: https://www.techtarget.com/searchsecurity/news/366613737/Experts-slam-Chinese-research-on-quantum-encryption-attack
+
+Published Time: 2024-10-16T11:02Z
+
+Markdown Content:
+peshkov - stock.adobe.com
+
+peshkov - stock.adobe.com
+
+By
+
+*   Rob Wright,Senior News Director, Dark Reading
+
+Published: 16 Oct 2024
+
+Infosec experts are throwing cold water on reports that Chinese researchers successfully cracked RSA encryption using quantum computers from D-Wave.
+
+In a recently published paper titled "Quantum Annealing Public Key Cryptographic Attack Algorithm Based on D-Wave Advantage," academic researchers from Shanghai University described two methods to break RSA encryption. Both methods incorporate quantum annealing, an optimization process used in D-Wave systems and cloud services.
+
+"Quantum annealing is the fundamental principle behind D-Wave special quantum computing. It has a unique quantum tunneling effect that can jump out of the local extremes that traditional intelligent algorithms are prone to fall into," the researchers wrote.
+
+The paper -- which is primarily written in Chinese -- was initially published in May, but recent media reports on the research have caused a stir in the infosec community. Encryption experts say that while the research might be valid, the devil is in the details.
+
+For example, Rob Joyce, former director of cybersecurity at the U.S. National Security Agency, declared the claims "totally overblown" in a post on X, formerly Twitter.
+
+Frederic Jacobs, an engineer on Apple's Security Engineering and Architecture team, said in a post on Mastodon that the research hasn't changed the practical security of RSA encryption. "Yes, you have reasons to migrate away from RSA to post-quantum hybrids, but it has nothing to do with D-Wave or this algorithm," he wrote.
+
+Avesta Hojjati, head of R&D at DigiCert, said the research is no reason to panic about quantum computing-powered attacks on modern encryption algorithms.
+
+"The media coverage of the recent Chinese quantum research on encryption attacks seems to sensationalize the findings, creating fear, uncertainty and doubt," he said in a statement sent to TechTarget Editorial. "While the research shows quantum computing's potential threat to classical encryption, the attack was executed on a 22-bit key -- far shorter than the 2048- or 4096-bit keys commonly used in practice today. The suggestion that this poses an imminent risk to widely used encryption standards is misleading."
+
+Hojjati added that quantum computing has not reached a point where it can break current encryption.
+
+"This research, while intriguing, does not equate to an immediate quantum apocalypse. We are still far from a practical attack that can threaten real-world encryption systems, especially with the current state of quantum computing," he said. "The coverage may serve as a cautionary tale, but it exaggerates the timeline and feasibility of quantum threats to make for a more dramatic story. While the research advances discussion on quantum readiness, we should remain cautious but not alarmist."
+
+A D-Wave spokesperson gave the following statement to TechTarget Editorial:
+
+> Based on our assessment, this research does not represent a new fundamental breakthrough in capability; it's an exploration of some previous work in using annealing quantum computing to factor small numbers. The research explores factoring capability, which we've long said is a problem set that both annealing and gate model quantum systems could address. Breaking modern encryption would require quantum processors many orders of magnitude larger than today's scale, so there will be no threat to encryption for many years. Moreover, there are post-quantum encryption protocols available. While D-Wave does not specifically focus on cryptography, our technology has been used to power intrusion and threat detection applications.
+
+Concerns about quantum computing's potential to break encryption have grown in recent years, prompting several technology companies and organizations to develop new cryptographic protocols that will be resistant to such attacks. For example, Apple earlier this year unveiled PQ3, a post-quantum cryptographic protocol for iMessage.
+
+_Rob Wright is a longtime reporter and senior news director for TechTarget Editorial's security team. He drives breaking infosec news and trends coverage. Have a tip? Email him._
+
+#### Dig Deeper on Data security and privacy
+
+*   ##### What is post-quantum cryptography? Comprehensive guide By: Nick Barney
+*   ##### The history of quantum computing: A complete timeline By: George Lawton
+*   ##### Noisy quantum hardware could crack RSA-2048 in seven days By: Cliff Saran
+*   ##### Japanese researchers advance combinatorial problem solving By: Cliff Saran

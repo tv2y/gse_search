@@ -1,0 +1,794 @@
+Title: How many classes are recommended in a histogram for a data set with more than 50 observations?
+
+URL Source: https://www.quora.com/How-many-classes-are-recommended-in-a-histogram-for-a-data-set-with-more-than-50-observations
+
+Markdown Content:
+How many classes are recommended in a histogram for a data set with more than 50 observations? - Quora
+
+===============
+
+Something went wrong. Wait a moment and try again.
+
+Try again
+
+Skip to content
+
+Skip to search
+
+Sign In
+
+Data Analysis
+
+Data Science
+
+Graphical Representation
+
+Large Datasets
+
+Histogram
+
+Data Visualization
+
+Statistical Analysis
+
+Data Representation
+
+Statistics and Data Scien...
+
++ 5
+
+How many classes are recommended in a histogram for a data set with more than 50 observations?
+
+All related (32)
+
+Sort
+
+Recommended
+
+Assistant
+
+Bot
+
+·
+
+Sep 5
+
+For a data set with more than 50 observations, a commonly recommended number of histogram classes (bins) is between 6 and 15, with more specific guidance:
+
+*   Sturges’ rule: k ≈ 1 + log2(n). For n > 50 this tends to under-bin (gives smaller k).
+*   Rice rule: k ≈ 2 · n^(1/3). Simple, often reasonable for moderate to large n.
+*   Scott’s rule (bin width): choose bin width h = 3.5 · s · n^(-1/3) and set k = (range)/h.
+*   Freedman–Diaconis rule (robust width): h = 2 · IQR · n^(-1/3) and k = (range)/h — better when outliers/skewness present.
+
+Practical prescription:
+
+*   Use 8–12 bins as a starting default for n ≈ 50–500.
+*   Fo
+
+Continue Reading
+
+For a data set with more than 50 observations, a commonly recommended number of histogram classes (bins) is between 6 and 15, with more specific guidance:
+
+*   Sturges’ rule: k ≈ 1 + log2(n). For n > 50 this tends to under-bin (gives smaller k).
+*   Rice rule: k ≈ 2 · n^(1/3). Simple, often reasonable for moderate to large n.
+*   Scott’s rule (bin width): choose bin width h = 3.5 · s · n^(-1/3) and set k = (range)/h.
+*   Freedman–Diaconis rule (robust width): h = 2 · IQR · n^(-1/3) and k = (range)/h — better when outliers/skewness present.
+
+Practical prescription:
+
+*   Use 8–12 bins as a starting default for n ≈ 50–500.
+*   For automated choice use Rice (k ≈ 2·n^(1/3)) or Freedman–Diaconis (for skew/outliers).
+*   Inspect and adjust visually: if features are oversmoothed, decrease bin width (increase k); if noisy, increase bin width (decrease k).
+
+Upvote · 
+
+Craig Slinkman
+
+Former Professor of Business Statistics (Retired) at The University of Texas at Arlington (1979–2016) · Author has 1.9K answers and 1.9M answer views
+
+·4y
+
+I generally use two different rules of thumb for drawing histograms.
+
+The first rule of thumb is that the average number of observations per bin(class) should be at least 5.
+
+The second rule of thumb is that the number of classes is given Is l o g 2(n)l o g 2(n)wwhere n is the number of observations.
+
+If you are an R user I suggest you take a look the R documentation for the function pretty which computes bins that look and have easily hinted pretense ranges for you bins.
+
+Upvote · 
+
+9 2
+
+Promoted by ComparisonAdviser
+
+Carl Madden
+
+Finance Security Expert
+
+·Sep 12
+
+What secret about your industry can you share now that you don’t work for them anymore?
+
+Oh boy, where do I even start? After 8 years as an auto insurance agent, I have zero loyalty left to protect these companies.
+
+We Had "Loyalty Lists" Every month, I'd get a report of customers who hadn't shopped around in 2+ years. These were our golden geese - we could raise their rates aggressively because they'd proven they wouldn't leave. One customer I remember was paying $3,200 annually for coverage that should have cost $1,800. She stayed for 5 years.
+
+The "File and Use" Scam Here's something most people don't know: in many states, insurance companies can raise your rates immediately and ju
+
+Continue Reading
+
+Oh boy, where do I even start? After 8 years as an auto insurance agent, I have zero loyalty left to protect these companies.
+
+We Had "Loyalty Lists" Every month, I'd get a report of customers who hadn't shopped around in 2+ years. These were our golden geese - we could raise their rates aggressively because they'd proven they wouldn't leave. One customer I remember was paying $3,200 annually for coverage that should have cost $1,800. She stayed for 5 years.
+
+The "File and Use" Scam Here's something most people don't know: in many states, insurance companies can raise your rates immediately and justify it later. We'd implement 15-20% increases across entire ZIP codes, knowing regulators would take months to review. By then, we'd collected millions in extra premiums.
+
+Claim Frequency Was Irrelevant Your rates weren't really based on how often you'd claim - they were based on how likely you were to shop around. A customer with 3 claims who got quotes every year paid less than a claim-free customer who never compared rates. It was pure price discrimination.
+
+We Loved Policy Confusion Complex policy language wasn't an accident. The more confusing your coverage, the less likely you'd comparison shop effectively. We'd change terminology between companies deliberately to make apple-to-apple comparisons nearly impossible.
+
+The Real Game-Changer Tools like ComparisonAdviser absolutely terrify insurance companies because they eliminate our biggest advantage: information asymmetry. When customers can instantly see what competitors charge with identical coverage and discounts applied, our whole "loyalty tax" model collapses.
+
+I've watched too many good people get fleeced by an industry that profits from customer ignorance. Use ComparisonAdviser religiously - it's the only way to beat a system designed to exploit your trust.
+
+The truth? Every year you don't comparison shop, you're probably donating $500-1,500 to your insurance company's profit margins.
+
+Upvote · 
+
+12.2K 12.2K
+
+999 405
+
+Chandrasekaran Avanavadi Sundaram Iyer
+
+Specialised in TQM , Behavioural Sciences and Education MGt · Author has 3.6K answers and 7.5M answer views
+
+·3y
+
+Related
+
+How many classes would you recommend for 50 observations?
+
+Try to have a class intervals for 50 observations
+
+*   Five or
+*   Seven
+
+The sample distribution will give a shape when plotted on a graph sheet
+
+Histogram also will come out clearly to interpret the data .
+
+Blessings and best wishes
+
+Upvote · 
+
+9 1
+
+Related questions
+
+More answers below
+
+How many classes are recommended in a histogram of a data set with less than 25 observations?
+
+What type of data is best displayed in a histogram?
+
+How many classes should a histogram contain if the number of observations is 250?
+
+Can we say that the histogram of a data set with low standard deviation will be sharper and the histogram of a data set with high standard deviation will be flatter?
+
+How do you represent data in a histogram?
+
+Jose Renato Kitahara
+
+Corporate & Academic career. PhD,MSc,MBA,Engineer,Professor · Author has 735 answers and 610.9K answer views
+
+·3y
+
+Related
+
+How many classes should a histogram contain if the number of observations is 250?
+
+I use 2 processes:
+
+1.   Square root: nclasses = n ^0,5 . For 250: n = 16
+2.   Sturges Rule: nclasses = 1 + 3,3 log n. For 250: n = 1 + 3,3 log 250 = 9
+
+Use both and consider the one that seems reasonable. Try other values around the selected process.
+
+Adjust the amount of classes in order to get a distribution avoiding aspects like leftside picture.
+
+Continue Reading
+
+I use 2 processes:
+
+1.   Square root: nclasses = n ^0,5 . For 250: n = 16
+2.   Sturges Rule: nclasses = 1 + 3,3 log n. For 250: n = 1 + 3,3 log 250 = 9
+
+Use both and consider the one that seems reasonable. Try other values around the selected process.
+
+Adjust the amount of classes in order to get a distribution avoiding aspects like leftside picture.
+
+Upvote · 
+
+Thomas Subia
+
+Statistician · Author has 3.2K answers and 3.7M answer views
+
+·5y
+
+Related
+
+How many bins should a histogram have?
+
+The default number of bins may be dependent on the statistical software one is using. Here are some examples:
+
+R uses Sturges’ rule. The number of histogram bins is calculated given the number of data points, n you have.
+
+Taken from: https://www.math.wustl.edu/~brian/stats/2200-02.pdf
+
+# of bins =
+
+Minitab default number of bins = 15.
+
+Excel calculates the number of bins as the square root of the number of observations,
+
+The Freedman Diaconis rule for histogram binning is given by
+
+Now for the big question, which one to use?
+
+A literature search shows that there is no clear consensus for this. This is support
+
+Continue Reading
+
+The default number of bins may be dependent on the statistical software one is using. Here are some examples:
+
+R uses Sturges’ rule. The number of histogram bins is calculated given the number of data points, n you have.
+
+Taken from: https://www.math.wustl.edu/~brian/stats/2200-02.pdf
+
+# of bins =
+
+Minitab default number of bins = 15.
+
+Excel calculates the number of bins as the square root of the number of observations,
+
+The Freedman Diaconis rule for histogram binning is given by
+
+Now for the big question, which one to use?
+
+A literature search shows that there is no clear consensus for this. This is supported by the differing software default methods.
+
+Certainly there are advantages and disadvantages for each of these methods.
+
+The optimum number of histogram bins may well be dependent on the underlying distribution of data.
+
+Hope this helps!
+
+Upvote · 
+
+Promoted by Almedia
+
+Charlee Anthony
+
+Personal Finance @ Almedia | Gaming Enthusiast
+
+·Sep 11
+
+How can I make 300$ a day?
+
+I made $6,015 without leaving my apartment - just by testing apps I found on an app called Freecash. It was my first real taste of earning 300$ a day on my own schedule.
+
+How I got started
+
+One evening, while reading a forum about online income, I stumbled across Freecash. I had never heard of it, but signing up took less than a minute and they gave me $5 just for creating an account, and a bonus $50 for finishing my first task.
+
+If you want to see what kind of options are out there, signing up for Freecash has a huge bonus deal where you can earn $100 after completing your first task!
+
+What Freecash
+
+Continue Reading
+
+I made $6,015 without leaving my apartment - just by testing apps I found on an app called Freecash. It was my first real taste of earning 300$ a day on my own schedule.
+
+How I got started
+
+One evening, while reading a forum about online income, I stumbled across Freecash. I had never heard of it, but signing up took less than a minute and they gave me $5 just for creating an account, and a bonus $50 for finishing my first task.
+
+If you want to see what kind of options are out there, signing up for Freecash has a huge bonus deal where you can earn $100 after completing your first task!
+
+What Freecash really is
+
+Freecash is an app where you can earn money by completing small online tasks. Some tasks take a few minutes, others take longer but pay more. The key thing I noticed is that everything is clear upfront - you know exactly what you’ll earn before starting.
+
+I also liked that withdrawals are instant. You can get paid through PayPal, Visa, or even gift cards, so you have variety.
+
+Explore Freecash to see the types of tasks available without committing to anything, at the very least, you get free cash my simply creating an account with your email.
+
+What you can do on Freecash
+
+Here’s how I approached it:
+
+*   Games: I picked one strategy game that paid $120 for reaching a level I could realistically hit in a few hours.
+*   App trials: A couple of finance apps like Acorns and Coinbase paid $40 each for signing up and completing short steps.
+*   Surveys: These varied, but I usually made $5–$10 per survey. Doing three or four during breaks added up to $50.
+*   Daily bonuses: Logging in gave me another $25.
+
+I also made a single in-app purchase of $5 to unlock a game booster, which sped up completion and unlocked $30 in rewards.
+
+It’s really about finding apps that work for you the best and that you enjoy or can do efficiently. You can check out Freecash yourself and see what’s best for you.
+
+My earnings so far
+
+Here’s a snapshot of that day:
+
+*   Strategy game level: $120
+*   Two app trials: $80
+*   Surveys throughout the day: $50
+*   Daily bonuses: $25
+*   Small game purchase: $40
+
+Total: $315
+
+It felt amazing to see that total by the end of the day. I realized that with focus and planning, it was possible to make $300 in a single day without a traditional job. You could try tracking your own earnings on Freecash similarly and see what combination works for your schedule.
+
+Step-by-step to start earning on Freecash
+
+Here’s how I approached it:
+
+1.   Sign up on Freecash and claim the $5 bonus.
+2.   Pick one high-paying task to focus on first.
+3.   Use small tasks to fill short pockets of free time.
+4.   Consider a tiny in-app purchase if it speeds up a higher payout.
+5.   Withdraw once you’ve earned a solid amount - it’s motivating to see it in your account.
+
+If you want to experiment with earning $300 a day, you could try a similar method and adjust based on your own pace. It’s flexible for every schedule and user.
+
+Final thoughts
+
+For me, this wasn’t about quitting my day job - it was about proving I could reach a high-earning target in a single day if I focused on the right tasks. Freecash was just something I stumbled across, but it fit perfectly into my plan. You can test this yourself, see what works for your routine, and maybe even surprise yourself with how much you can earn.
+
+Upvote · 
+
+5.3K 5.3K
+
+999 769
+
+99 53
+
+Luis Moreno
+
+Former Mathematics/Statistics/SQC, Professor Emeritus at Broome Community College, Binghamton (1984–2018) · Author has 332 answers and 290.1K answer views
+
+·5y
+
+Related
+
+How do you determine the number of classes in a histogram?
+
+One of the disadvantages of a histogram is that there is no objective way of knowing the number of classes or bars. This is corrected by making a stem-and-leaf diagram. Thus, I would form a stem-leaf diagram, and use the number of classes it has as the number of bars in your histogram. The stem-leaf does have some flexibility as to its stem scale, but its great advantage is that ...
+
+Upvote · 
+
+Related questions
+
+More answers below
+
+What are the differences between a histograph and a histogram?
+
+What should be the recommended no. of classes or groups for 627 observations for frequency distribution for making a histogram?
+
+How many classes should be used for the creation of a histogram? Why so?
+
+What are observations in a set of data?
+
+What is the difference between a histogram and a cumulative histogram?
+
+Duncan Williamson
+
+Author of ten Excel books. Excel trainer. · Author has 1.5K answers and 3.5M answer views
+
+·4y
+
+Related
+
+If you apply Sturges' rule to a data set including 4000 observations, how many intervals should your histogram have?
+
+The Sturges Rule says there ought to be LN(n)+1 bins. In your case, that is
+
+=LN(4000)+1 = 9.29 bins, rounded up to, 10 bins.
+
+Your response is private
+
+Was this worth your time?
+
+This helps us sort answers on the page.
+
+Absolutely not
+
+Definitely yes
+
+Upvote · 
+
+9 1
+
+Promoted by NerdWallet
+
+NerdWallet
+
+Providing clarity for all of life's financial decisions
+
+·Nov 14
+
+Where would be a good place to start searching for a business loan?
+
+There are reliable tools online that let you compare loan types and lenders side by side based on your business profile. These can help simplify the process and narrow down options without applying to multiple places and hurting your credit.
+
+Start by figuring out exactly why you need the loan as this helps determine the best type of financing. For example, SBA loans are great for long-term growth, while lines of credit are better for managing cash flow.
+
+Then, look at your qualifications. Lenders typically consider:
+
+*   Credit score (stronger scores get better terms; many online lenders accept lower s
+
+Continue Reading
+
+There are reliable tools online that let you compare loan types and lenders side by side based on your business profile. These can help simplify the process and narrow down options without applying to multiple places and hurting your credit.
+
+Start by figuring out exactly why you need the loan as this helps determine the best type of financing. For example, SBA loans are great for long-term growth, while lines of credit are better for managing cash flow.
+
+Then, look at your qualifications. Lenders typically consider:
+
+*   Credit score (stronger scores get better terms; many online lenders accept lower scores)
+*   Time in business (traditional lenders prefer 2+ years; some online options allow 6–12 months)
+*   Annual revenue (usually at least $50K–$100K)
+*   Cash flow (can you afford regular repayments?)
+
+Next, explore your loan options:
+
+*   Term loans – Fixed payments over time; good for large one-time needs
+*   Lines of credit – Flexible funds you can draw from as needed
+*   SBA loans – Low-interest, government-backed loans; more paperwork
+*   Equipment financing – Specifically for machinery, vehicles, etc.
+*   Microloans or startup loans – For newer businesses or smaller needs
+
+Once you’ve matched your needs with the right loan type, compare lenders — including banks, credit unions, and online lenders. Each will have different terms, speed, and approval criteria.
+
+Finally, gather your documents: business financials, bank statements, tax returns, and sometimes a business plan. Submitting complete, accurate information gives you the best shot at approval.
+
+TL;DR:
+
+Start by defining your needs, checking your qualifications, and comparing loan types and lenders. NerdWallet is a solid place to research and compare offers side-by-side.
+
+Upvote · 
+
+9 8
+
+9 2
+
+9 1
+
+Puneet Arora
+
+Tinkering Head at Ecologic Corporation (2003–present) · Author has 171 answers and 253.3K answer views
+
+·7y
+
+Related
+
+What is histogram in data mining?
+
+Histogram is a Graphical Representation of a Frequency table that are taught in school level . But , they are more than just frequency table visualization . Lets understand in terms of data mining :
+
+1.   A histogram must have some defined “interval” based on which the data is to divided or mined .
+2.   In many cases the size of the interval is unknown . For example in the problems of astrophysics . In case, have data of celestial body moving in the space , it is likely that we do not know when this event will occur again or in simple terms , we do not know the time interval . In such cases algorithms are 
+
+Continue Reading
+
+Histogram is a Graphical Representation of a Frequency table that are taught in school level . But , they are more than just frequency table visualization . Lets understand in terms of data mining :
+
+1.   A histogram must have some defined “interval” based on which the data is to divided or mined .
+2.   In many cases the size of the interval is unknown . For example in the problems of astrophysics . In case, have data of celestial body moving in the space , it is likely that we do not know when this event will occur again or in simple terms , we do not know the time interval . In such cases algorithms are used to identify the “interval size” and this is done with help of clustering and data mining methods.
+3.   In many cases the histogram is just a representation of some signal or image having some channels . A histogram of image can be thought of the frequencies of Red , Blue , Color Channels and similarity for Gray scales : gray intensity as 256 intervals .
+4.   To understand in a better manner , you can check your Quora account statistics . It is also showing a histogram…The frequency (views) per day (interval) .
+
+I hope it helps !
+
+Upvote · 
+
+Thomas Subia
+
+Statistician · Author has 3.2K answers and 3.7M answer views
+
+·5y
+
+Related
+
+How can you find the mean and median of a set of data using a histogram?
+
+The bigger question is whether one can find the mean and median of a set of data using a histogram accurately by inspection. Using this histogram only, where is the mean and median?
+
+Without more information, it’s difficult at best to get an accurate estimate of the location of the mean and median.
+
+Here are the sample statistics from this distribution
+
+One might be able to get a rough estimate of the mean from the histogram but finding the median might prove to be much harder to find.
+
+Hope this helps!
+
+Continue Reading
+
+The bigger question is whether one can find the mean and median of a set of data using a histogram accurately by inspection. Using this histogram only, where is the mean and median?
+
+Without more information, it’s difficult at best to get an accurate estimate of the location of the mean and median.
+
+Here are the sample statistics from this distribution
+
+One might be able to get a rough estimate of the mean from the histogram but finding the median might prove to be much harder to find.
+
+Hope this helps!
+
+Upvote · 
+
+9 2
+
+Promoted by Spokeo
+
+Spokeo - People Search | Dating Safety Tool
+
+Dating Safety and Cheater Buster Tool
+
+·Apr 16
+
+Is there a way to check if someone has a dating profile?
+
+Originally Answered: Is there a way to check if someone has a dating profile? Please be reliable and detailed. · 
+
+Yes, there is a way. If you're wondering whether someone has a dating profile, it's actually pretty easy to find out. Just type in their name and click here 👉 UNCOVER DATING PROFILE. This tool checks a bunch of dating apps and websites to see if that person has a profile—either now or in the past.
+
+You don’t need to be tech-savvy or know anything complicated. It works with just a name, and you can also try using their email or phone number if you have it. It’s private, fast, and really helpful if you’re trying to get some peace of mind or just want to know what’s out there.
+
+🔍 HERE IS HOW IT WORK
+
+Continue Reading
+
+Yes, there is a way. If you're wondering whether someone has a dating profile, it's actually pretty easy to find out. Just type in their name and click here 👉 UNCOVER DATING PROFILE. This tool checks a bunch of dating apps and websites to see if that person has a profile—either now or in the past.
+
+You don’t need to be tech-savvy or know anything complicated. It works with just a name, and you can also try using their email or phone number if you have it. It’s private, fast, and really helpful if you’re trying to get some peace of mind or just want to know what’s out there.
+
+🔍 HERE IS HOW IT WORKS:
+
+*   Start by going to this link 👉 UNCOVER DATING PROFILE
+
+*   Enter the person’s name, email address, or phone number. Name and phone number searches usually give the best and most accurate results
+*   The site scans billions of public records in just a few seconds. It also scans over 120 dating and social media websites to see if the person has a profile
+
+*   It will ask you a few quick questions to narrow down the results (like location)
+
+*   Once the search is done, you’ll see blurred preview with:
+
+    *   Their full name
+    *   Dating profiles & social media accounts
+    *   All known phone numbers
+    *   Current and past addresses
+    *   A list of family members
+    *   Any available court or criminal records
+    *   And more useful background info
+
+⚠️ KEY CALL OUTS ⚠️
+
+*   Its not free. You will need to pay to see everything, but its pretty cheap.
+*   If nothing shows up, it doesn’t always mean they’re in the clear — some people use fake names or burner emails. So it’s worth digging a little deeper just to be sure.
+
+If you’re in a situation where you need to know whether someone is still acting single online, this is one of the most effective and low-stress ways to find out.
+
+👉 Check it out here if you’re ready to start your search.
+
+ALSO HERE ARE OTHER HELPFUL TOOLS:
+
+Dating Research Tool – Search a large database to learn more about who you’re dating.
+
+Who’s Texting Your Partner – Discover who your partner is texting or calling, including their name, age, location, and social profiles.
+
+Verify People Tool– Confirm if someone is really who they say they are.
+
+Find Social Profiles – Locate someone's social media and dating profiles.
+
+People Search Directory– Look up someone's phone number and contact details.
+
+Dating Safety Check – Review your date’s background to help keep you safe.
+
+Upvote · 
+
+8.3K 8.3K
+
+99 87
+
+Terry Moore
+
+PhD in statistics · Author has 16.8K answers and 29.7M answer views
+
+·2y
+
+Related
+
+How do you know which histogram is better from histograms with different number of intervals?
+
+How do you know which histogram is better from histograms with different number of intervals?
+
+It's a compromise between too much detail and too little detail. There’s little point in having a single bar. That gives some information—roughly where the centre of the distribution lies. Nor is there any point in having class intervals so small that all the bars have either just one observation or are empty—you might as well just give the raw data.
+
+The aim is to have a fairly smooth histogram that isn’t showing the inherent randomness in a random sample, but at the same time shows as much detail as po
+
+Continue Reading
+
+How do you know which histogram is better from histograms with different number of intervals?
+
+It's a compromise between too much detail and too little detail. There’s little point in having a single bar. That gives some information—roughly where the centre of the distribution lies. Nor is there any point in having class intervals so small that all the bars have either just one observation or are empty—you might as well just give the raw data.
+
+The aim is to have a fairly smooth histogram that isn’t showing the inherent randomness in a random sample, but at the same time shows as much detail as possible apart from the randomness.
+
+There are heuristics for choosing the widths of the bars. One rule is to have a number of bars equal to the square root of the sample size. Another is to use the base 2 logarithm of the sample size. We often add 1, and ignore outliers when choosing the widths.
+
+However, you should always be prepared to vary whichever rule you use to get a smoother plot or to show more detail.
+
+Upvote · 
+
+9 3
+
+9 1
+
+Tom Tomasovic
+
+CPOA, CCA, CBDA, AAC, ECBA, CPRE, AgileBA, Scrum, Tableau · Author has 1.1K answers and 989.2K answer views
+
+·3y
+
+Related
+
+What are some examples of right-skewed data sets, and what does this imply about the shape of their histograms?
+
+A right-skewed dataset has a frequency distribution that favors the values toward the left.
+
+In the context of a histogram, this is represented by a longer “tail” (or a slower decrease) to the right of the median. An example of this would likely be an income distribution in many areas of the US. Most people will fall toward the lower end of the range, but there will be a significant minority that have large incomes.
+
+This means that the median income will be to the left of the mean income. In a normal distribution, the mean and the medan are the same.
+
+Visually, this would appear similar to a slidin
+
+Continue Reading
+
+A right-skewed dataset has a frequency distribution that favors the values toward the left.
+
+In the context of a histogram, this is represented by a longer “tail” (or a slower decrease) to the right of the median. An example of this would likely be an income distribution in many areas of the US. Most people will fall toward the lower end of the range, but there will be a significant minority that have large incomes.
+
+This means that the median income will be to the left of the mean income. In a normal distribution, the mean and the medan are the same.
+
+Visually, this would appear similar to a sliding pond, where the steep stairs to climb to the top contrast against the more gentle slide from the top to the ground.
+
+Upvote · 
+
+Duncan Williamson
+
+Author of ten Excel books. Excel trainer. · Author has 1.5K answers and 3.5M answer views
+
+·Updated 4y
+
+Related
+
+How can you find the mean and median of a set of data using a histogram?
+
+Take a look at the following screenshot to see the values of the mean and the median of a set of data together with a histogram and Box & Whisker plot of the data:
+
+Mean of 27,584.96 … where on the histogram is that? We can just about make out which bin or class interval the mean is in but can we see exactly where it is? No! But I CAN see them on the Box & Whisker plot …
+
+What I commonly do when I draw a histogram and I want to check for outliers and so on, is to copy the histogram and then convert the copy into a Box & Whisker plot … this is very easy if you’ve got a later version of Excel that i
+
+Continue Reading
+
+Take a look at the following screenshot to see the values of the mean and the median of a set of data together with a histogram and Box & Whisker plot of the data:
+
+Mean of 27,584.96 … where on the histogram is that? We can just about make out which bin or class interval the mean is in but can we see exactly where it is? No! But I CAN see them on the Box & Whisker plot …
+
+What I commonly do when I draw a histogram and I want to check for outliers and so on, is to copy the histogram and then convert the copy into a Box & Whisker plot … this is very easy if you’ve got a later version of Excel that includes what they call the Statistic Charts on the Insert ribbon:
+
+Select your data, click on the Insert ribbon and you will see the Insert Statistic Chart icon in the middle of the Charts option if you have it. Clicking on that icon shows you the charts available:
+
+*   Histogram
+*   Pareto Chart
+*   Box and Whisker Plot
+
+To create a histogram using this option is simplicity itself:
+
+Select your data, without selecting its header
+
+*   Insert
+*   Statistic Chart
+*   Histogram
+
+Done! All you have to do now is format the chart in any way you want.
+
+To convert your histogram to a Box & Whisker plot, right click on the histogram and choose Change Chart Type
+
+Click on Change Chart Type and find and choose the Box and Whisker plot … it’s easy to do that!
+
+Where are the mean and median on my Box & Whisker plot? Here:
+
+There, if you have one of the later versions of Excel, is no guess work, there are no calculations to do, a histogram with a Box & Whisker plot will reveal all!
+
+Upvote · 
+
+9 2
+
+Victor Andrei Lupaescu
+
+Data Visualization Best Practices Evangelist
+
+·3y
+
+Related
+
+How can we compare two sets of data visually using a histogram?
+
+I would use a histogram with a dual Y-axis and a common dimension for the X-axis. The screenshot below shows how the # of Distinct Products and total quantity are distributed based on Profit bins.
+
+This allows an easy comparison between the two metrics, while also showing the actual distribution for each one.
+
+Continue Reading
+
+I would use a histogram with a dual Y-axis and a common dimension for the X-axis. The screenshot below shows how the # of Distinct Products and total quantity are distributed based on Profit bins.
+
+This allows an easy comparison between the two metrics, while also showing the actual distribution for each one.
+
+Upvote · 
+
+Related questions
+
+How many classes are recommended in a histogram of a data set with less than 25 observations?
+
+What type of data is best displayed in a histogram?
+
+How many classes should a histogram contain if the number of observations is 250?
+
+Can we say that the histogram of a data set with low standard deviation will be sharper and the histogram of a data set with high standard deviation will be flatter?
+
+How do you represent data in a histogram?
+
+What are the differences between a histograph and a histogram?
+
+What should be the recommended no. of classes or groups for 627 observations for frequency distribution for making a histogram?
+
+How many classes should be used for the creation of a histogram? Why so?
+
+What are observations in a set of data?
+
+What is the difference between a histogram and a cumulative histogram?
+
+Would a dot plot or a histogram best represent the data presented here? Why?
+
+Can histograms be different for the same data set?
+
+What might be the reason(s) for using different class widths in a histogram?
+
+What are some ways to determine if two (or more) datasets have the same distribution, even if they appear to be similar based on their histograms?
+
+How do you generate histograms with normalized data (normalization, histogram, statistics)?
+
+Related questions
+
+How many classes are recommended in a histogram of a data set with less than 25 observations?
+
+What type of data is best displayed in a histogram?
+
+How many classes should a histogram contain if the number of observations is 250?
+
+Can we say that the histogram of a data set with low standard deviation will be sharper and the histogram of a data set with high standard deviation will be flatter?
+
+How do you represent data in a histogram?
+
+What are the differences between a histograph and a histogram?
+
+Advertisement
+
+About · Careers · Privacy · Terms · Contact · Languages · Your Ad Choices · Press · 
+
+© Quora, Inc. 2025

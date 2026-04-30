@@ -1,0 +1,2960 @@
+Title: 
+
+URL Source: https://maritimesafetyinnovationlab.org/wp-content/uploads/2021/12/Academic-A-review-of-battery-fires-in-electric-vehicles-2020.pdf
+
+Published Time: 2021-12-10T05:59:44.000Z
+
+Markdown Content:
+P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+1
+
+# A Review of Battery Fire s in Electric Veh icles 
+
+## Peiyi Sun 1, Roeland Bisschop 2, Huichang Niu 3, Xinyan Huang 1, **
+
+> 1
+
+## Research Centre for Fire Engineering, Hong Kong Polytechnic University, Kowloon, Hong Kong 
+
+> 2
+
+## Department of Fire Research, RISE Research Institutes of Sweden, Borås, Sweden 
+
+> 3
+
+## Guangzhou Industrial Technology Research Institute, Chinese Academy of Sciences, Guangzhou, 
+
+## Guangdong, China 
+
+Abstract: Over the last decade, the electric vehicle (EV) has significantly changed t he car industry globally, 
+
+driven b y the fast development of Li -ion battery technology. However, the fire risk and hazard associated with 
+
+th is type of high -energy battery has become a major safety concern for EV s. This review focuses on the latest 
+
+fire -safe ty issues of EV s related to therma l runaway and fire in Li -ion batter ies . Thermal runaway or fire can 
+
+occur as a result of extreme abuse conditions that may be the result of the faulty operation or traffic accidents. 
+
+Failure of the battery may then be accompanied by the release of toxic ga s, fire, jet flames , and explosion. This 
+
+paper is devoted to review ing the battery fire in battery EVs, hybrid EVs, and electric buses to provide a 
+
+qualitative understanding of the fire risk and hazard s associated with battery powered EV s. In addition, 
+
+imp ortant battery fire characteristics invo lved in various EV fire scenario s, obtained through testing, are 
+
+analy sed . The tested peak heat release rate (PHHR in kW) varies with the energy capacity of LIBs ( 𝐸 𝐵 in Wh )
+
+crossing different scales as 𝑷𝑯𝑹𝑹 = 𝟐 𝑬 𝑩 
+
+> 𝟎 .𝟔
+
+. For the full -scale EV fire test, limited data have reveal ed that the 
+
+heat release and hazard of an EV fire are comparable to that of a fossil -fuelled vehicle fire . Once the onboard 
+
+batter y involved in fire, there is a greater difficulty in suppress ing EV fire s, because the burning battery pack 
+
+inside is inaccessible to externally applied suppressant and can re -ignite without sufficient cooling . As a result, 
+
+an excessive amount of suppress ion agent is needed to cool the battery, extinguish the fire , and prevent reignition .
+
+By addressing t hese concerns , this review aims to aid researchers and industries working with batteries, EVs 
+
+and fire safety engineering , to encourage active research coll aborations, and attract future research and 
+
+development on improving the overall safety of future EVs. Only then will society achieve the same comfort 
+
+level for EVs as they have for conventional vehicles. 
+
+Keywords: Li -ion battery; Electric vehicle ; Fire in cidents ; Fire tests ; Heat release rate; Fire suppression 
+
+1. Introduction 
+
+The electric vehicle (EV) uses an electric motor and relies on electric power for propulsion. The term EV 
+
+usually refers to road vehicles , but more generally it may also include rail vehicles, surface and underwater 
+
+vessels, and aerospace applications . In this review, this term is restricted the road EV s that are fully or partially 
+
+powered by a Li -ion battery (LIB) . Battery electric vehicles (BEVs) rely solely on electric energy wherea s plug -
+
+in hybrid electric vehicles (PHEVs) , and hybrid electric vehicles (HEVs) can also be powered by an internal 
+
+combustion engine. 
+
+The EV was invented in the 1800s as a consequence of a series of breakthroughs concerning the battery and 
+
+the electric mot or [1] . In the 190 0s, th ere was a brief period in which EVs were in demand due to fuel sho rtages 
+
+and environmental crises [2] . However , the interest for EV s dropped af ter the 1930s , when oil and gasoline 
+
+bec ame cheap and easily available , enabling petrol -driven vehicles to travel faster and further [3] . Today, 
+
+billions of internal combustion engine vehicles (ICEVs) vehicles are being driven , consuming about 87% of    
+
+> *Corresponding author: Xinyan Huang Email: xy.huang@polyu.edu.hk
+
+P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,
+
+Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+2
+
+petroleum or about 33% of our global energy [4] . However, l imited natural energy resources , the increas ing 
+
+world population , and global warming exacerbate people’s perception of energy vulnerability and th e need for 
+
+more sustainable transport solutions .
+
+Along with the rapid development of the LIB since the 1990s , EVs returned to the global stage in the 21 st 
+
+century. Today, EV s are not only a symbol of green transportation , but they also present extraordina ry driving 
+
+performance [1,2] . However, compared to the ICEVs which has seen continuous use and development over the 
+
+last century , EVs are still far from mature , especially whe n it comes to their perceived fire safety . This safety 
+
+concern stands in the way of the EV becoming the dominating transportation system [5,6] .
+
+The introduction of EVs and fire incidents involving them have attracted considerable media attention. 
+
+Table 1 lists a selection of EV fire incidents that happened in 2018 , and  Figure 1 shows some photos of such 
+
+incidents . In general, most of the EV fire accidents are caused b y the thermal runaway of LIB. The common 
+
+causes of EV fires include the self -ignition (or spontaneous/auto ignition) in parked vehicle s due to arson or 
+
+sustained abuse , for example , fire during the charging process, self -ignition while in driv ing , and fire after the 
+
+traffic accident such as the high -speed collision [7] . Therefore, the propensity of self -ignition during the normal 
+
+charging, parking and driving conditions, due to the thermal runaway of LIB, makes the EV fire unique and 
+
+very different from fires in ICEVs. 
+
+Table 1. The list o f selective EV fire accidents occurred in 2018 
+
+Date  Location  Vehicle  Incident  Comments 
+
+Jan 
+
+[8] 
+
+Chongqing, 
+
+China  Tesla, BEV  Fire in the 
+
+parked vehicle  Spontaneous ignition 
+
+15 Mar 
+
+[9] 
+
+Bangkok, 
+
+Thailand 
+
+Porsche Panamera, 
+
+PHEV 
+
+Fire while 
+
+being charged 
+
+Car’s charging c able plugged to socket in 
+
+the living room without built -in safety 
+
+systems, and fire spread to the house 
+
+18 Mar 
+
+[10] 
+
+Catalonia, 
+
+Spain 
+
+BMW i3 REx, 
+
+PHEV 
+
+Fire in the 
+
+parked vehicle  Spontaneous ignition 
+
+23 Mar 
+
+[7]  California, USA  Tesla Model X, 
+
+BEV  Post -crash fire  Fire extinguished on the scene but 
+
+reignited twice at to w yard 5 days later 
+
+May 
+
+[11]  Anhui, China  Other, BEV  Fire while 
+
+being charged 
+
+May 
+
+[11]  Unknown  Yiema, BEV  Fire while 
+
+being charged 
+
+8 May 
+
+[12]  Florida, USA  Tesla Model S, 
+
+BEV  Post -crash fire 
+
+Fire initi ally extinguished quickly but 
+
+reignited during loading on tow truck a nd 
+
+once again at the tow yard. 
+
+15 May 
+
+[13] 
+
+Ticino, 
+
+Switzerland  Tesla, BEV  Post -crash fire  Vehicle hit a barrier, turned over and burst 
+
+into flames. 
+
+20 May 
+
+[11] 
+
+Hangzhou, 
+
+China  Jiangling, BEV  Fire while 
+
+being charged 
+
+21 May 
+
+[11]  Hubei, China  Zhong Tai, BEV  Fire while 
+
+being driven  Self -ignited without traffic accident 
+
+28 May 
+
+[11] 
+
+Shenzhen, 
+
+China  Other, BEV  Fire while 
+
+being charged 
+
+4 Jun 
+
+[11] 
+
+Shandong, 
+
+China  Other, BEV  Fire while 
+
+being driven  Self -ignited without traffic accident 
+
+5 Jun 
+
+[11]  Beijing, China  Other, BEV  Fire while 
+
+being charged 
+
+15 Jun 
+
+[14]  California, USA  Tesla Model S, 
+
+BEV 
+
+Fire while 
+
+being driven 
+
+Fire extinguished on the scene without 
+
+reignition 
+
+12 Dec 
+
+[15] 
+
+Gelderland, 
+
+Netherlands  Jaguar I -Pace, BEV  Fire in the 
+
+parked vehicle 
+
+The vehicle front was burned but no 
+
+invo lvement of the battery pack. 
+
+18 Dec 
+
+[16]  California, USA  Tesla Model S  Fire in the 
+
+parked vehicle 
+
+Fire started at workshop parking lot, and 
+
+the fire reignited twi ce. P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+3
+
+The bat tery is not only the fuel to power the EV but also the major fuel to feed the EV fire , similar to 
+
+gasoline or diesel being the major fuel to feed ICEV fires . The mechanism s of battery thermal runaway , as well 
+
+as , the battery fire phenomena, ris ks , and hazards have been reviewed in [17 –20] . These reviews emphasized 
+
+the safety characteristics of battery material and chemistry and summarized recent scientific understanding s of 
+
+battery fire dynamics. However, th e overall fire risk and hazards of EV are sti ll poorly understood . Fire tests on 
+
+large -scale EV battery packs and full -scale EV s are expensive and rarely published . With the expansion of the 
+
+EV market, EV ownership is constantly increasing . Meanwhile, the energy density of LIBs continue s to increase 
+
+[21] , despite unsolved fire -safety issues. As a result, the probability of EVs fire accidents will increase . This 
+
+paper review s the se fire risks as well as accidents involving EVs , that are powered by the battery , espe cially the 
+
+LIB . The limited large -scale fire tests of EV and the corresponding fire -protectio n strategies are also reviewed 
+
+in detail. 
+
+Figure 1. Typical EV fire accidents in recent years : (a) a Renault -Samsung electric vehicle m odel ‘SM3.Z.E’ 
+
+caught fire while driving on 15 January 2016 in Korea [22] ; (b) a pure battery electric bus caught fire in a 
+
+charging station on 26 April 2015, Shenzhen, China , and this electric bus was not in charging when it caught 
+
+on fire [23] ; (c) a Tesla Model S rele ased smokes while being driven on 15 June 2018 in California, USA , and 
+
+the fire was extinguished by inject ing 1135 -L water and foam [14] ; and (d) the EV fire accident happened in a 
+
+parking lot on 20 May 2018, Hangzhou, China [24] .
+
+1.1. The Growing Demand for Electric Vehicles 
+
+According to McKinsey’s Electric Vehicle Index, EV sales have been growing dramatically every year 
+
+since 2010 (Figure 2) [25] . The market scale of EV s has also expand ed from negligible before 2010 to 1.3% of 
+
+all new ly sold vehicles in 2017. Today t he volume of new EVs sold surpa sses one million units. BEVs make up 
+
+66 % of th is total. The grow th rate of BEV sales has mostly been faster than that for PHEV s. Therefore, BEV s
+
+are more likely to further strengthen their position of being the dominant EV in t he future [26] . Note however P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+4
+
+that o ther trends may occur in markets other than that for road EVs. 
+
+The EV market has excellent performance in many countr ies and regions around the world . In 2018, China 
+
+le d the market with a 48 % market share followed by the Europe an Union with 26% [27] . Although consumers 
+
+tend to be resistant to new tec hnolog ies (“social” barriers ) [28] and EV s are still less mature and reliable 
+
+(“te chnical” barriers ) in terms of their lifespan, range, availability of charging stations, than petrol -driven 
+
+vehicles . Government subsidies , however, prove to be a great propell ant in the EV market. In fact, government 
+
+policy plays an important role in EV sale s and its trajectory in every major market. In addition , the continuous 
+
+reduction in the cost of the battery , as well as increas ing battery performance and growing production volume s,
+
+further promote s the EV market. As a result, EV battery pack costs are expected to decrease to US $ 150 per 
+
+kWh within 2020 -2023 [29] .
+
+Figure 2. Sales percentage of EV in the global vehicle market, and a worldwide number for two types of 
+
+battery electric vehicle s from 2012 to 2017 by McKinsey [25] .
+
+With the stimulation of positive government policies , Europe Union lead s the way in promoting the EV 
+
+market. In Norway , EVs count for 34.7% market share of new car sales in 2017 and 52% if hybrid vehicles are 
+
+included [30] . The incentives offered by Norway’s government include (1) BEV s are exempted from vehicle 
+
+registration tax; (2) BEVs are exempted from value -added tax; and (3) BEVs pay the lowest rate of the vehicle 
+
+license fee. Finally, BEVs have access to bus lanes and are exempted from road tolls [31] . France is second 
+
+behind Norway in the Europe an continent in the registration of hybri d and electric passenger vehicles [32] .
+
+Based on an Electric Car Index prepared by OSV Ltd, France managed to overtake Norway, the leader position 
+
+in Europe EVs market. The government projected a €400 -million R&D program for EVs. I n 2017, 11,987 EV 
+
+charging points had been installed , and EVs sale accounts for 1.5% of the French personal vehicle market. 
+
+Germany has set itself the goal of becoming the lead market and provider for electric mobility by 2020 as part 
+
+of its long -term zero -emissi on mobility vision [33] . The German government launched several plans for EV 
+
+research and development (R&D). For example, $240M will be used on the batteries that power electric cars, 
+
+making domestic production a priority and ensure that German experts are trained in the technolo gy. 
+
+In the USA , the domestic scale of EVs increases from 9,750 in 2011 to 762,000 in 201 7 [29] . This 
+
+improvement is partly due to state policies and the decreasing battery cost [34] . The U.S. federal government 
+
+has initiated a tax credit for PEVs purch ased since 2010 . The tax credit ranges from $2,500 to $7,500 for each 
+
+vehicle based on its battery capacity and gross vehicle weight rating. Apart from financial incentives, other 
+
+priority, like high occupancy vehicle (HOV) lane exemptions and expedited li cense plate acquisitions, ha s been 
+
+offered. Extending electric vehicle policy incentiv es through 2020 enable s sustain ed market growth [35] .P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+5
+
+In Chin a, the govern ment ha s been providing generous subsidies for EV purchasing since 2009 [36] . Th ese 
+
+subsidies, which are part of the Electric Vehicle Subsidy Scheme of China , were updated in 2013 to scale with 
+
+the EV’s electric driving range rather than its battery capacity to promote both the quality and safety of EV s.
+
+The target of China’s subsidy program is to boost the popularity of EV s and build national champions and e -
+
+mobility ecosystems for the coming decades. It is predicted that Chin a will have 200 million EVs on the road 
+
+by 2040 and cover 60% market share of total local passenger vehicle sa les [29] .
+
+Japan had a long his tory with EVs due to its limited natural resources. The first Japan -manufactured EV, 
+
+the Nissan Tama , hit the road as early as 1947 [37] . Japan has been investing heavily in battery research and 
+
+was among the first countries to introduce PHEVs to the global market [38] . As a result, s everal of the most 
+
+popular EV s that are ava ilable today , such as the Nissan LEAF and Toyota Prius, are Japanese. Apart from 
+
+th ose above , many other countries around the globe provide substantial tax rebates for EV purchas ing and 
+
+ownership . E xamples of th ese are Singapore, the Netherlands , and Irela nd [29] .
+
+1.2. EV Batter ies and th eir Fire Risk 
+
+Fire incidents are one of the risks that surround vehicles. With the number of EVs increasing, they have started 
+
+to become more visible in EVs. For most of the BEV and PHEV fire accidents, especially for self -ignition, the 
+
+fire starts in the battery power system (Figure 1). In terms of propulsion, t he battery capacity can be analogized 
+
+to the gasoline capacity in a n ICEV’ s fuel tank. Therefore, the E V fire is connected with the fire risk and hazard 
+
+asso ciated with the battery cell and power system , as well as , the size and capacity of the battery pack . In general ,
+
+the greater the number of batteries and the greater the amount of energy they may contain, the greater the fire 
+
+risk for EV [18,39,40] .
+
+Figure 3. Typical EV battery cells: (a) the pouch cell ; (b) the prismatic cell ; (c) the cylindrical cell ; (d) 
+
+approximate battery cell size of popular EVs (e) the 60 kWh battery pack is fully assembled by LG Chem in 
+
+Korea , which employs 288 prismatic pouch cell ; (f) Te sla’ s battery module , which consist s of hundreds of 
+
+cylindrical cells; (g) Nissan LEAF battery pack [41 –45] .P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+6
+
+The number of batteries employed by EV s may be very large. This is necessary as the power consumed by 
+
+a regular EV is thousands of times greater and faster than that of an ordinary smartphone. EV batteries must 
+
+offer a lot of power (up to a hundred kW) and hig h energy capacity (up to tens of k Wh). Simultaneously, they 
+
+meet significant challenges related to space limitations and weight restrictions while maintaining an affordable 
+
+price [46] . Generally, EV batteries are composed of cells, modules and a pack [47] . Batte ry cells, the basic unit 
+
+of a LIB, are connected in series or parallel to form a battery module. A frame is used to fix the cells together 
+
+and protect them from external shocks, heat, and vibration. The battery pack is the assembly that integrates the 
+
+modu les within the pack infrastructure . This infrastructure includes structural components, wiring, cooling 
+
+loops, and power electronics [48] . Furthermore, several modules are installed with systems that manage power, 
+
+charg ing/discharging, and temperature [49] . These are typically referred to as the Battery Management System 
+
+(BMS). This condensed assembly enables the EV to store a lot of energy. However, this also makes it 
+
+challenging to manage temperatures inside the pack [50] .
+
+The properties of individual battery cells determine the driving performance of an EV. Conventional bat tery 
+
+technologies, such as the lead -acid, nickel -cadmium (NiCd), and nickel -metal hydride (NiMH) have all been 
+
+used in EVs. Despite posing a lower fire risk than LIBs, their energy density and capacity, as well as the rate of 
+
+charging and discharging, are much more limited. This makes them unsuitable for modern EVs. Since Dr 
+
+Goodenough invented the LIB in 1980 , and Sony commerciali zed it in 1991, the LIB has been widely used in 
+
+all kinds of electrical devices, including EVs. Today, the LIB dominates the EV market and is expected to do 
+
+so in the next few decades [21,29] . The popularity of LIBs is primarily due to their high energy density and long 
+
+cycle lives compared with conventional battery technologies [51] . Additionally, a lower weight ma kes the LIB 
+
+most suitable for vehicles as it can promote transp ortation efficiency. 
+
+Based on the configuration and manufacturing process , there are three types: cylindrical cells, prismatic 
+
+cells , and pouch cells, as illustrated in  Figure 3. All these three types of cells are used in real vehicles, and 
+
+Table 2 lists the basic parameters of three common battery cells. Typically, t he capacity of LIB cell s used in 
+
+EV s can var y from 3 to 300 Ah for different types and manufacturers. On the vehicle level, the typical energy 
+
+density is above 100 Wh /kg , as shown in  Table 3. This energy is related to the chemistry and construction of 
+
+the LIB ce ll. For example, Tesla uses NCA (nickel, cobalt, and aluminium oxide ) in the cylindrical 18650 cell 
+
+that delivers impressive specific energy of 3.4 Ah per cell or 248 Wh/kg. The highest energy capacity found in 
+
+passenger EVs is the Tesla Model S, which pro vides about 100 kWh. This energy capacity can offer a driving 
+
+range above 380 km on a single charge [52] . However, the hazard of an EV fire also increases with the grea ter 
+
+number and capacity of batteries (or fuel) , as the potential fuel load also increases [18,39,53] .                                                          
+
+> Table 2.Basic par ameters of three typical battery cells [54] .
+> Manufacturer Co nfiguration Geometry
+> [mm]
+> Voltage
+> [V]
+> Capacity
+> [Ah]
+> Specif ic
+> Power [W/kg]
+> Weight
+> [g]
+> Panasonic Cylindrical 18.5×65.3 3.6 3.2 120 48.5
+> Hitachi Prismatic 148×91×26.5 3.6 28 2300 720
+> Kokam Pouch 462×327×15.8 3.6 240 360 4780
+> Table 3.Battery pack information for selected BEV with aspecific model and range test [26]
+> Brand Capacity
+> [kWh]
+> Cell density
+> [Wh/kg] Cell type Range
+> [km]
+> Nissan Leaf S (2017) [55] 40 229 Pouch 243 (EPA)
+> Renault Zoe 40 (2017) [56] 41 22 8Pouch 400 (NEDC)
+> BMW i3(2016) [57] 42. 2230 Prismatic 246 (EPA)
+> Tesla Model S (2017) [58] 90 ~250 Cylindrical
+> 18650 509 (NEDC) P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+7
+
+Since the Li -ion battery became the dominant power s ource for EVs a decade ago, the fire risk and LIB has 
+
+become a significant safety issue. This is related to the increasing scale of deployment and energy density of 
+
+the battery pack. The word Lithium (as a chemical element) itself has questions of safety t agged to it [18,59,60] .
+
+When a Li -ion battery is exposed to an external impact and experienced extreme operating conditions, it ca n
+
+break, eject sparks, flammable gases and toxic smokes which can be further ignited and lead to steady 
+
+combustion, jet flames or a gas explosion [21,61,62] .
+
+Although a regular battery system has a l ow probability of self -ignition [63,64] , it is vulnerable to external 
+
+thermal, mechanical, and electrical impacts that may materiali ze during extreme operating conditions or 
+
+incidents . Comparatively , electrical impacts and extreme operating conditions are rare for most portable 
+
+electronic devices , such as the laptop and smartphone, but they are considered as the normal operati ng 
+
+conditions . In contrast, the operation condition is more severe for an EV  battery  considering the frequen t
+
+acceleration and deceleration in complex road and traffic conditions . Moreover, the battery capacity (or fuel 
+
+load) of EV is thousands of times greater than that of portable electronic devices , which mean s a more severe 
+
+fire hazard in the case of thermal runaway and ignition . On the oth er hand, however, the safety measures that 
+
+are included in the EV and battery pack design are more advanced, reducing the likeliness of (spontaneous) 
+
+failure. Therefore, it is inappropriate to assess the battery fire risk in EV s, based on the impression of battery 
+
+fire risk in portable electronic devices. 
+
+Thermal Impact: Users expect to be able to operate their EV just like a convention internal -combustion 
+
+vehicle, i.e. , even in extreme cold and hot environments. For example, EVs are ex pected to be useable in 
+
+California , where summer temperature s above 45°C may occur, or in the street of Norway and Canada with a
+
+daily winter temperature below -5°C and occasionally below -15°C . Like humans, the battery performs best at 
+
+room temperature s (2 0~30 °C). Extreme ho t and cold temperature s are negative for the battery ’s performance 
+
+and will shorten their lifespan (Figure 4). In high -temperature conditions, some unwanted chemical reactions 
+
+can occur and result in overheated batt eries [18,60] . With a poor thermal dispassion ability, it is then possible 
+
+to t ri gger a thermal runaway [1 8,63] , which can lead to an EV fire in the end. In cold temperature s, the battery’s 
+
+internal resistance increases. This resistance can promote the grow th of metallic dendrites [1] and also cause 
+
+additional heating ef fects to take place within the battery, which increases the chance for a battery fire to be 
+
+triggered [18,50,65] .
+
+Figure 4. LIBs should operate within a limited temperature and charge range to warrant optimal life and 
+
+safety [5] . Reprinted with permission. 
+
+Mechanical Impact: Most commercial LIB cells are relatively fragile without the protection of an EV 
+
+structure and /or battery module and pack enclosure . Like any other conventional vehicle , the tra ffic accident is 
+
+an occurrence that may happen in the lifetime of an EV . Nevertheless, with the modern design of LIBs and EV ,
+
+the large majority of crashes will not cause harm to the battery [66,67] . LIB packs are usually integrated in to 
+
+highly reinforced areas of the vehicle (see  Figure 5), with the aim of eliminating the risk of being penetrated 
+
+during cra sh conditions. At high speeds , however, which some EVs are capable of reaching in a very short time 
+
+[52] , even the high est level of protection is not enough to consistently prevent fire (see  Table 1). P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+8      
+
+> Figure 5. (a) LIBs are typically located inside the ‘safe -zone ’[66] , and (b) battery layout for a Nissan Leaf [68] .
+
+Electrical Abuse : The pursuit of fast charging and discharging combined with the high driving performance 
+
+for EV s ha ve a negative effect on their fire risk [69,70] . LIBs are made to receive and store a pre -defined amount 
+
+of energy in a set amount of time. Exceeding these limits, which can be the result of charging too quickly or 
+
+overcharging, may degrade their performance , or resul t in premature failure . Usually, elect rical abuse is 
+
+accompanied by Joule heating and internal chemical reactions. The former generates heat whereas the latter 
+
+may, in time, lead to an internal short circuit. Some EV fires may result from inappropriate op erating conditions 
+
+and internal faults , such as the short circuit in the high voltage circuit, overcharging and overheating 
+
+environment , as shown in  Table 1. However, for many EVs , most types of electrical abuse are not possible if 
+
+their BMS is designed properly and functions correctly [71] . Besides the failure of the battery cell , it is likel y
+
+that a large p ortion of the cases where “self -ignition ” or “spontaneous ignition ” incidents that have occurred are 
+
+related to poor manufacturing and design procedures and/or inadequate electronic control system s, BMS, and 
+
+power transmission control syste ms.
+
+1.3. Hazards of EV fire s
+
+Concerns associated with EV fires are mostly related to t he utili zation of a LIB . As EV manufacture rs
+
+pursue greater electric driving ranges and implement more LIBs , they also increase the potential heat released 
+
+from an EV when a fire occurs . Th is increase in fire risk is proportiona l to the incre ase in the mass and capacity 
+
+of the battery (or the fuel) . During the burning of LIBs , the generation of flammable /explosive gases and toxic 
+
+smokes , such as hydrogen (H 2), methane (CH 4), carbon monoxide (CO) , and hydrogen fluoride (HF ), can pose 
+
+a threat to those involved [72,73] . The fire -safety problems relating to EV s are complicated and complex, which 
+
+need a comprehensive consideration. Nevertheless, a better understand ing of these key fire parameters help s
+
+provide a systematic evaluation of EV fire. 
+
+Thermal Runaway and Battery Fire: EV fires can be caused by battery failure , and the most common 
+
+failure of LIB is the thermal runaway. Thermal runaway is a widely observed phenomenon in chimerical and 
+
+combusti on processes, refer ring to an overheating event in which exothermic chain reaction s take place and 
+
+overcome the co oling [53,74,75] . For the LIB , thermal runaway usually means a dra matically increasing battery 
+
+temperature (greater than 10°C/min [76] ) or the activation of safety vent, which indicates that exothermic 
+
+thermochemical and electrochemical reactions have been triggered . The battery thermal runaway is usually 
+
+accompanied by the ejection of a large amount of dark smoke , hot spark s, and powerful jet -flames [72] . As this 
+
+proce ss takes place within the individual cells, its risk potential increases when allowed the propagat ion of 
+
+thermal runaway or fire throughout a battery [18,77] .
+
+After thermal runaway has initiated , smoke is released from the sa fety valve or through cracks in the battery 
+
+shell . This smoke consists of a mixture of flammable and toxic gases. The flammable gases could be ignited by 
+
+nearby ignition sources such as fire , sparks , and electrical a rcs or may even be self -ignited due to a poor cooling 
+
+condition . The resulting flame may then further heat the battery. If the gas -release rate out of the battery shell 
+
+is low er than the internal gas -generation rate, the battery cell may also burst . The sa fety valve can rele ase some 
+
+of the accumulated gas that are typically generated during the pre -ignition thermal runaway process , but it may 
+
+not be able to prevent the cell from external heating, such as flame radiation or a burning battery nearby . In 
+
+addit ion, if the release d gas is allowed to accumulate in an enclosed area and mix with surrounding oxygen, a 
+
+gas explosion may occur once a pilot source like a spark and flame is present [18,53] .P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+9
+
+En ergy release from EV battery fire : Both ICEV and EV contain a large quantity of flammable materials, 
+
+including the power system or fuel (liquid petroleum fuel or battery) and flammable plastic components [78,79] .
+
+For modern vehicles, the mass of plastics used in vehicle ranges from 100 to 200 kg [78] , which is larger than 
+
+that of gasolin e (less than 50 kg) [80] . As the heat of combustion for common plastics without fire retardants 
+
+(e.g. 38.4 MJ/kg for polyethylene and 27 MJ/kg for PS) is not very different from the gasoline (47 MJ/kg) , the 
+
+total heat release from burning plastic components may have a major contribut ion to the vehicle fire , especially 
+
+if the gasoline tank is not full . Nevertheless, there is no major difference between ICEV and EV in terms of 
+
+plastic components , so that the major difference is their power system and the fuel (gaso line v s. battery). 
+
+As LIB includes many different combustible components, its heat of co mbustion depends on the chemistry, 
+
+packing , capacity, and state of charge (SOC) . For example, for a 2.9 Ah (11 Wh) commercial pouch -type LIB, 
+
+the heat of combustion i s found to be about 4 MJ/kg [81] , while it is about 2 MJ/kg for a 18650 cylindrical 
+
+battery [18,39,40] . In general, the heat of combustion for LIB is one order of magnitude sma ller than gasoline. 
+
+Nevertheless, because of the small (chemical or elect rical) energy density of the battery, the weight of the EV 
+
+battery pack is at least one order of magnitude larger than gasoline for ICEV . Based on limited data of the 
+
+commercial LIBs of different scales, the ratio of energy ( 𝐸 𝐵 in Wh) to weight ( 𝑀 𝐵 in g) may be fit to 𝐸 𝐵 =
+
+0.14 𝑀 𝐵 , as summarized in  Figure 6(a) .
+
+Compared to the electrical energy stored in the battery, the thermoc hemical energy released from the battery 
+
+fire, including both the thermal runaway heat inside the battery (i.e., the internal heat) and flame sustained by 
+
+the flammable gases injected from the battery (i.e., the flame heat) , is much higher [18,39,40] . As summarized 
+
+in  Figure 6(b) , the battery fire can release 5~10 times more energy of the stored electrical energy (or the kinetic 
+
+en ergy), depending on SOC .
+
+Figure 6. (a) Stored energy and mass of common commercial LIBs of different scales, compared with gasoline, 
+
+where detailed data and references are listed in  Table 4, (b) the comparison of flame heat from battery fire, interna l
+
+heat of thermal runaway, and the stored electrical energy of a 18650 NMC battery vs . SOC [40] , and (c) fire heat 
+
+release of burning vehicle fu el vs . range .P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+10 
+
+According to US Department of Energy data fo r 2018 model vehicles [82] , the light EV ranges from 100 to 
+
+550 km with a med ian of about 200 km, while the light gasoline ICEV has a minimum range of 400 km and a 
+
+median range of about 700 km, as shown in  Figure 6(c). Assuming the heat of flaming combustion is seven 
+
+times its stored electri cal energy, the total heat release from burning an EV battery pack of 90 kWh is 
+
+𝑄 𝐿𝐼𝐵 = 90 kWh × 7 = 2.3 GJ (1𝑎 )
+
+The battery pack of 90 kWh may support a driving range of 400 km for a li ght EV. 
+
+For a better comparison, we choose a typical gasoline vehicle with a fuel economy of 7.3 L/100 km [80] .
+
+Then, with the same range of 400 km, the volume of gasoline is about 30 L, and the total heat release of burning 
+
+the gasoline can be estimated is 
+
+𝑄 𝐺 = 400 km × 7.3 L/100 km × 47 MJ /kg × 0.75 kg /L = 1 GJ (1𝑏 )
+
+which is about half of the EV battery pack. In other words, under the same range, the fuel load or the fir e heat 
+
+release of the LIB pack is about twice that of a gasoline tank, indicating a larger fire hazard and requiring more 
+
+stringent risk -mitigating efforts. 
+
+It is worth n ot ing that a gasoline vehicle can have a larger range (e.g. above 800 km) with a typi cal fuel 
+
+tank size of 45 -65 L (i.e., 35 -50 kg gasoline) , while the amount of gasoline decreases with the driving distance .
+
+In contrast, the total mass of EV fuel (LIB s) does not decrease along with the driving of EV, and the potential 
+
+heat rele ase of burni ng LIB does not var y significantly in the SOC range of 20~100% (see  Figure 6a-b) [39,40] .
+
+Moreover , compared to the tot al heat release, the heat release rate (HRR) of fire is a better indicator of the 
+
+intensity and hazard of fire.                                                                                                 
+
+> Table 4The energy capacity, PHRR, and mass for batteries of different scales and applications.
+> Battery & Fire Energy, Eb[Wh] PHRR [kW] Mass [g] Configuration
+> Single Battery
+> Cell
+> 11 20.9 [81] 95 [81] pouch
+> 10 9.1 [83] cylinder
+> 10 -45 [84] Cylinder 18650
+> 81.9 [85] cylinder
+> 10 5.6 [86] 44.3 [86] Cylinder 18650
+> 58.3 [86] 40.2 [86] Cylinder 18650
+> Portable Battery
+> Module
+> 112 54.8 [87] 1,228 [87] pouch
+> 124 -639 [87] -
+> 107 -734.8 [87] -
+> 92 28.5 [87] -pouch
+> 124 57 [87] -pouch
+> 185 49.4 [88] 1,6 75 [88] prismatic
+> 26 21 [89] -pouch
+> 259 145 [89] -pouch
+> 800 70 [85] -cylinder
+> 288 39 [85] -cylinder
+> 72 14.3 [85] -cylinder
+> 32 6.6 [85] -cylinder
+> 16 3[85] -cylinder
+> 962 442.6 [84] 4,560 [84] cylinder P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+11                                                                              
+
+> 185 37.8 [90] 900 [90] prismatic
+> EV Battery
+> 16,000 300 [65] -prismatic
+> 12,000 1,515 [91] --
+> 18,000 1,651 [91] --
+> 40,000 -174,672 [55] -
+> 41,000 -179,825 [56] -
+> 42,200 -183,478 [57] -
+> 90,000 -360,000 [57] -
+> 24,200 -318,000 [92] -
+> 64,000 -457,200 [93] -
+> EV Fire (battery
+> + plastics)
+> 24,000 6,300 [94] --
+> 16,500 4,200 [94] --
+> 23,500 4,700 [95] --
+> battery power
+> station fire
+> 500,000 2,5 55 [96] --
+> 1,000,000 5,070 [96] --
+> 2,000,000 10,150 [96] --
+> 3,000,000 15,220 [96] --
+> 4,000,000 20,290 [96] --
+> 5,000,000 25,370 [96] --
+
+Heat Release Rate (HRR) : The HRR (or the power of fire ) is the most important parameter to characterize 
+
+a fire † [53] . Compared t o t he heat of combustion or the total heat release from fire , HRR is a better indicator of 
+
+fire intensity and hazard . HRR may be expressed as 
+
+𝐻𝑅𝑅 [𝑀𝑊 ] = 𝑚 ̇ ∆𝐻 𝑒 = 𝐴 𝑓 𝑚 ̇ ′′ 𝜂 ∆𝐻 𝑐 (2)
+
+where 𝑚 ̇ is the burni ng rate [kg/s] that could be measured by the mass -loss rate during the experiment [95] ;
+
+∆𝐻 𝑒 is the effective heat of combustion [MJ/kg]; 𝐴 𝑓 is the floor/surface area of fuel or fire [m 2] which is t he 
+
+floor of EV; 𝑚 ̇ ′′ is the burning flux [kg/m 2-s]; 𝜂 is the combustion efficiency which depends on the oxygen 
+
+supply; and ∆𝐻 𝑐 is the heat of combustion for EV batteries which varies with the type and SOC of LIB .
+
+The fire HRR depends significantly on the arrangement of fuel and the scale of fire [53] . For exampl e, 
+
+burning a 7.9 Wh (42 g) cylindrical LIB could produce a PHHR of 2 kW [40] , while burning a small 11Wh (95 
+
+g) pouch -type LIB could produce a PHHR of 20 kW [81] . A lthough the energy and size of both LIBs are 
+
+comparable, the difference in PHHR could be ten times. On the other hand , for a 16,000 Wh EV battery that is 
+
+10 3 times more powerful than portable cells, its fire PHRR could be only 300 kW , that is, only 10 1~10 2 times 
+
+larger [65] . Thus , it is i nappropriate to assume the HHR of burning a battery pack of 100 LIBs is 100 times that 
+
+of burning one LIB , because it is unlikely that all available battery cells are ignited and burning simultaneously. 
+
+Based on the test data in the literature, t he PHRRs o f different LIBs crossing scales are summarized in  
+
+> Figure 7
+
+, whi ch approximately follows 
+
+𝑷𝑯𝑹𝑹 = 𝟐 𝑬 𝑩  
+
+> 𝟎 .𝟔
+
+(𝟑 )
+
+where the units for PHRR and the battery energy ( 𝐸 𝐵 ) are [kW] and [Wh ], respectively. For a battery fire , its 
+
+HRR, total heat release, and toxic gases rele ase are not only related to the chemical energy stored in the battery         
+
+> †Other important parameters for fire hazard include toxicity, sm oke production, risk of explosion, etc. P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+12 
+
+[97] , i.e., SOC of battery and size of the pack, but they als o strongly depends on the arrangement of LIB cells 
+
+(fuel) , the supply of air (oxygen) , and (internal and external) cooling conditions .
+
+Figure 7. The peak heat release rate (PHHR) of burning Li -ion batteries of different scales, as well as, the 
+
+comparison between full -scale EV and ICEV fires, where detailed data and references are listed in  Table 4.
+
+For the full -scale EV fire tests, the PHRR for EVs will be reached , once the LIB also gets i nvolved in the 
+
+fire (i.e., ignition) [95,98] , similar to other fire phenomena . Key fire chara cteristics related to burning ICEVs 
+
+and EVs are summari zed in  Table 5. These results can vary a lot depending on the amount of fuel in the fuel 
+
+tank, capacity of the battery pack , and the amount of polymer material on -board. Generally, data suggest s that 
+
+EVs, wh ich normally have battery packs of 20 -40 kWh for BEVs and 1 -20 kWh for PHEVs [5] , will pose a fire 
+
+threat comparable to that for conventional vehicles. The stand ard full -scale EV and ICEV fire tests and the time 
+
+evolution of HRR are discussed more in Section  3.1 . Nevertheless, w hether this is true for high -performance 
+
+EVs and heavy EVs, which may have a b attery capacity of up to 100 kWh and 660 kWh, respectively, with 
+
+respect to their ICEV counterparts, remains to be investigated.                                                                                          
+
+> Table 5.List of the heat release rate (HRR) of EV in recent full -scale fire tests , where tPHRR and THRR are the time to
+> reach PHRR and total HRR, respectively.
+> Type Vehicle Weight before
+> test [kg] Battery or fuel capacity PHRR
+> [MW]
+> tPHRR
+> [min.] THRR[GJ]
+> BEV
+> 2011 Nissan Leaf [94] 1520 24 kWh 6.3 40 6.4
+> Unknown [95] 1122 16. 5 kWh 4.2 ~25 6.3
+> Unknown [95] 1501 23.5 kWh 4.7 ~20 8.5
+> Vehicle 1A [91] unknown 100% SOC 67
+> Vehicle 1B [91] unknown 85% SOC 66
+> Vehicle 2 [91] unknown 100% SOC 710
+> 2014 Vehicle A [99] 1448 ‘Large’ LIB 100 % SOC 6.0 7
+> 2013 Vehicle A [99] 1475 ‘Large’ LIB 80 % SOC 5.9 5.8 4.9
+> 2013 Vehicle B [99] 1659 ‘Large’ LIB 100 % SOC 6.9 10.2 4.7
+> PHEV
+> Small PHEV [91] unknown unknown 6~7
+> Large PHEV [91] unknown unknown 87.5
+> 2013 Vehicle C [99] 1466 ‘Small’ LIB 85% SOC &
+> full tank of gasoline
+> 67.5 4.6
+> 2014 Vehicle D [99] 1711 ‘Medium’ LIB 100% SOC
+> & full tank of gasoline
+> 7.9 8.3 5.9 P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+13 
+
+Smoke and Toxicity: When the battery temperature exceeds about 150°C there i s a large risk for thermal 
+
+runaway . Once thermal runaway has been initiated, either the cell or its safety valve will burst and release toxic 
+
+gas . As thermal runaway propagates, more battery cells will fail to generate more smoke and toxic gas es. These 
+
+tox ic gases are, for example, hydrogen fluoride (HF) , hydrogen cyanide (HCN) , carbon monoxide (CO) , etc 
+
+[72,81] . Inhalation of these gasses can result in dizziness, headache, coma, loss of consciousness or even death 
+
+[98] . The fluorine content insi de the LIB cell may also form phosphorous oxyfluoride (POF 3), which may be 
+
+more toxic than HF. The reaction formulas for HF and POF 3 production is demonstrated in the following 
+
+equations: 
+
+LiPF 6 → LiF +PF 5 (4-1) 
+
+PF 5 + H 2O =POF 3 + 2HF (4-2) 
+
+LiPF 6 + H 2O→LiF + POF 3 + 2HF (4-3) 
+
+Ribière et al. [81] found that for burning a 95 -g pouch LIB, the maximum emission s of CO, NO, SO 2, HCl, and 
+
+HF were 1.77 g, 195 mg, 220 mg, 25 mg, and 7 57 mg, respectively. These gas emissions differ among EV 
+
+make rs and types , where the chemistry and size of the LIB plays a role in potential gas emissions. Sturk et al. 
+
+found t he rate of gas emissions was slow and in low quantities for LiFePO 4 (L FP ) cell s [100] . T he concentration 
+
+of HF in the released species was however higher for LF P than for the NMC/ LMO cells that emitted a larger 
+
+gas volume in a shorter time, whereas the total amount of HF released was similar . This indicates the emission 
+
+behavior of an electric bus, which employ s LFP more frequently than passenger vehicles do, can be expected 
+
+to be different from that of a burning passenger EV. 
+
+Information on the amount of toxic gasses released in both ICEV and EV fires is very limited. The tests 
+
+performed by Lecocq et al. [61,95] give some insight into this matter, as shown in  Table 6. The total amount of 
+
+HF released by EVs is found to be roughly double that measured for the considered ICEVs [95] . The detected 
+
+quantities of HF increase when the LIB starts to burn , which did not happen until 30 minutes after the fire was 
+
+started in another part of the vehicle . If the fire did initia te in the LIB, this contribution m ight be spotted sooner. 
+
+The risk of th is emission , however, depends very much on the scenario of the incident. For outside scenarios, 
+
+HF will likely rise and quickly dissipate, whereas in enclosed spaces this may be proble matic if gasses are not 
+
+evacuated . More full -scale tests are however nee ded to fully establish this. It is also recommended to apply a 
+
+water spray jet for the removal of the toxic vapours and gases from EV fire . Acid gases such as HF, which are 
+
+released in ICEV, EV , and LIB fires, can be reduced in their concentrations by spraying water on them to wash 
+
+them out [1] [101,102] . Although th e effectiveness of water spray has not been quantified, it is argued that this 
+
+method is used already when mitigating the effects of chemical fires, and thus may provide firefighters with a 
+
+useful tool to reduce th e challenges of EV fire incidents in the field .    
+
+> Table 6.List of toxic gas emission sfrom full -scale EV fire tests [95] .
+
+Vehicle  Weight  Battery or fuel capacity  Total CO (kg)  Total HF (kg)                                                        
+
+> Unknown BEV 1122 16.5 kWh 10.4 1.5
+> Unknown ICE V1128 Full tank of Diesel 12.0 0.6
+> Unknown BEV 1501 23.5 kWh 11.7 1.5
+> Unknown ICEV 1404 Full tank of Diesel 15.7 0.8
+> ICEV
+> Unknown [95] 1128 Full tank of Diesel 4.8 ~20 6.9
+> 2003 Honda Fit [94] 1275 10 L of gasoline 2.1 35 4.3
+> Unknown [95] 1404 Ful l tank o f Diesel 6.1 ~30 10
+> 2015 Vehicle A [99] 1096 Full tank of gasoline 7.1 63.3
+> 2013 Vehicle B [99] 1344 Full tank of gasoline 10.8 85.0
+> Unknown [91] unknown 40 -50 L gasoline 7-9~7 P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+14 
+
+Compared to the fire test on single battery cells and battery packs (e.g. [18,39,81,103] ), there is still 
+
+relatively little information on the actual behaviour of an EV in a fire. Full -scale fi re tests are high in cost and 
+
+often restr icted by trade secrets. Nevertheless, with the scientific understanding of small -scale LIB tests and the 
+
+accumulated database of EV fire accidents, reasonable forecasts c ould be made for their fire behaviour .
+
+2. Les sons from past EV fire accidents involvin g battery 
+
+So far, EV fire accidents have been widely reported and subject to a large number of discussions throughout 
+
+various media . Although the total number of EV fire s is still much smaller than that ICEV fires [5,104] , this 
+
+could be mainly because the glo bal market share of EV is still a few orders of magnitude smaller than ICEVs .
+
+Based on the statistics, almost half of the ICE vehicle fires are caused by arson, and many other s are ignited by 
+
+other existing fire s [105] . In 2010, more than 26 cars were destroyed in an underground car park without a
+
+sprinkler syste m in Haarlem, Netherlands. In 2018 , at least 1,400 vehicles in a multi -storey car park were 
+
+destroyed in massive chain reaction fire at Liverpool, UK, which could be effectively stopped by a sprinkler 
+
+system [106] . In other words, the fire -safety and flammability of vehicle is only part of the reason for fire 
+
+accidents. 
+
+EV fire accidents are expected to follow a similar trend like those for ICEVs . Unfortunately , there is so far 
+
+no clear statistics for the distribution of different causes for EVs accidents, e.g. arson, ignited by other existing 
+
+fire, traffic accidents, a nd self -ignition. Note that there are a lo t of self -ignited fire accidents for ICEVs, but the 
+
+majority happen to the aged vehicles . For both ICEV and EV, most self -ignited fire accidents start in their 
+
+power systems, that is, engine and battery, respective ly. Because the majority of EVs in the wor ld is still 
+
+relatively new, and the number of EVs still rapidly grows, it is not statistically possible to make a fair 
+
+comparison of fire risk between ICEV and EV. 
+
+When a fire event involves EVs, the battery is of ten referred to as the primary reason to start and prompt 
+
+the EV fire. There are, however, many other factors that can lead to this, e.g. failure of the charging system, 
+
+cable overload [107] , ignition of other flammable materials, and ars on [105] . The se fire events that do occur in 
+
+EVs are relat ively new and often com plex. They can , however, be divided into several categories: 
+
+I. The EV catches fire while stationary (often referred to as spontaneous or self -ignition) . This may be related 
+
+to extreme weather conditions , e.g. low/high temperatures or h igh humi dity . It may even be related to 
+
+‘spontaneous’ internal cell failure . These failures can often be linked to abuse sustained by the LIB that 
+
+exceeded its safety window at some point in its life .
+
+II. The EV catches fire while being charge d. This failure m ay be relate d to the failure of the LIB due to 
+
+overcharging but is more commonly related to faulty or insecure charging station s and/or cables . This is 
+
+also the major cause of LIB fire accidents of other electrical devices, e.g. hoverboards and smartphones ,
+
+where battery management was found to be lacking. 
+
+III. The LIB of an EV is damaged as a result of a traffic accident , or other type s of abuse . The damage done to 
+
+the battery pack is so severe that the LIB ignites during or directly after the crash. Th e likeli ness of an EV 
+
+being involved in th is kind of accidents will likely increase with the rising number of EVs in the street. 
+
+IV. The LIB of an EV has been subjected to thermal abuse and reignites after the initial fire had been dealt with. 
+
+V. The LIB and EV are ignit ed by external factors which may include , arson, wildland fires or a burning 
+
+structure in the vicinity of the vehicle .
+
+2.1. Typical Fire Accidents involving BEV s
+
+Spontaneous Ignition : Th is fire accident occurred to a BEV (Lifan 650) in Guangzhou , China on 31 August 
+
+2018 [108] , as shown in  Figure 8. The EV ignited spontaneously and was a complete loss as the fire could not 
+
+be extinguished in time. The Lifan 650 EV is a new model and , at the time of the incident, ha d only been on the 
+
+mark et for two months. The fire initiated at the bottom of the car . This is also where the battery pack was located .P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+15 
+
+During the burning process, t he fire was accompanied by a popping sound. This sound may have been resulting 
+
+from bursting safety discs. In addi tion, there were several sm all explosions and the ejection of toxic black smoke .
+
+Figure 8. The fire scene of a Lifan 650 EV , where the fire started at the battery pack installed in the 
+
+vehicle chassis , and EV was completed destroyed by fire without effec tive fire suppression [108] .
+
+The following investigation revealed the possible reason of this EV fire. Investigation showed that the EV 
+
+had soaked in water for more than 2 hours after a heavy rainstorm which caused water to leak into the battery 
+
+pack. Afterward, when the owner drove t he vehicle, th is leakage may have caused short -circuit inside the battery 
+
+pack and thus causing thermal runaway and fire. There have been several other recorded cases where EVs 
+
+caught fire spontaneously without warning while being driven, after extreme wea ther or when p arked (see  Table 
+
+1). Unfortunately, follow -up reports stating the probable cause of these events are not published frequently. 
+
+On 14 Decemb er 2015, a brand -new electric bus was destroyed in a spontaneously ignited fire ( Figure 9)
+
+[109] . It was Hong Kong’s first locally designed electric bus which had a high energy efficiency of 0.78kWh/km 
+
+and a long range of 380 km after four hours charging. This electric bus had just passed a road test and was ready 
+
+for commercialization. The first witness notified to the police that thick black smoke was coming from the 
+
+parking site where the new electric bus was parked. After half an hour, firefighters managed to extinguish the 
+
+fire. The bus itself, however, was determined a complete loss. It was suspected that some technical support staff 
+
+compromised the water sealing of the battery casings during performance tuning and inspection. Subsequent 
+
+seepage of water into the compro mised bat tery casings eventually led to short -circuiting and self -ignition. 
+
+Figure 9. Photos of (a) Hong Kong’s first locally designed electric bus, and (b) the fire scene of this electric 
+
+bus on 14 December 2015 [109] .
+
+Chargin g: On 1 January 2016, a Tesla Model S caught fire during the charging process . The outcome of 
+
+this event is shown in  Figure 10 . According to new s report s, the main cause of this incident was related to an 
+
+error in t he vehicle ’s onboard charging equipment. After t he fire began in the c harging equipment it then grew 
+
+and spread to th e rest of the car , including the battery pack [110] . Once the battery pack was ignited , however ,P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+16 
+
+it started to eject sparks and jet flame s. Finally , any control of the fire was lost once breached into the passenger 
+
+compartment. To limit the EV fire hazard, it is important to contain the battery fire if it does get involved or 
+
+prevent it from being involved in any fire. 
+
+Figure 10 . The f ire on a Tesla Model S while being charged at the superchar ging station in Norway on 1
+
+January 2016 , where the fire also spread to th e passenger compartment [110] .
+
+High -Spee d Collision : A Tesla Model S caught fire after colliding with road debris in the form of a large 
+
+metallic object [111] . The object penetrated the battery pack from underneath and induced t he fire shown in  
+
+> Figure 11
+
+(a) . Fortunately, the EV alert system discovered the problem and instructed the driver to pull over to a 
+
+safe place . This gave the driver enough time to get out of the vehicle before the oc curr ence of fire . After this 
+
+event, Tesla reinforced their EVs with ballistic shields and deflectors to prevent road debris from causing any 
+
+damage to the contents of the battery pack. 
+
+Another Tesla Model S cr ashed on a concrete barrier at a high speed on the Arlberg Expressway, Austria 
+
+on 18 Oct ober 2017 , as shown in  Figure 11 (b) . The fire was initiated in the battery at the front of the vehicle 
+
+where it had hit the concrete wall [112] . The battery fire was reported to be ex tremely severe and produced a
+
+lot of toxic gas es . In total, 35 firefighters were involved in the fire extinguishing activity and used large amounts 
+
+of water to cool the battery down . The vehicle was then placed in quarantine for 48 hours to monitor it for 
+
+reignition . Note that a battery fire is not necessarily the outcome of extreme crash conditions. In South Jordan, 
+
+USA, an EV crashed into a heavy truck at 60 mph (97 km/h). There were no reports of fire despite the significant 
+
+damage resulting from the frontal impact [113] .
+
+Figure 11 . Fire in Tesla Model S (a) Tesla Model S cau ght fire after a collision near Seattle, USA [111] ; and 
+
+(b) Tesla Model S crashed on a concrete construction barrier in Austria at high speed a nd started a fire [112] .
+
+Reignition: Incidents involving EVs may also lead to secondary thermal events resulting from the overall 
+
+amount of damage don e to the LIB [12] . As mentioned earlier, the crash and fire in Austria w ere followed by a 
+
+period in which the risk for this event was monitored. There are , namely cases in which reignition did occur 
+
+once or multiple times. An example of this is a Tesla Model S that crashed in Florida, USA , by impact ing a wall 
+
+at 140 km/h. The impact led to the vehicle being engulfed in flames. After the fire had been subdued and the P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+17 
+
+vehicle was removed from the scene, it reignited. When the destroyed vehicle final ly arrived at the tow yard, it 
+
+reignited once more. Ot her cases where EVs reignited after a crash were presented in  Table 1. This is of concern 
+
+for post -crash handlers, who normally do not have the tools or training to handle such events safe ly.
+
+External Factors: Ther e are not many reported cases of EVs catching fire due to external factors. They do 
+
+occur , however, as statisti cs provided by Tesla have show n. Their data estimates that approximately 15 % of 
+
+Tesla’s involved in fire incidents between 2012 -2018, were cause d by things unrelated to the vehicle , such as 
+
+structure fires, arson , etc [104] .
+
+Figure 12 . A firefighter was suppressing the fire of the faulted battery on the top of the electric bus [114] .
+
+In September 2016 at the USA, an improperly crimped wi re on the roof of the bus resulted in a faulty 
+
+electrical connection , which started to heat up nearby battery cells (Figure 12 ). Normally, the BMS would have 
+
+shut -down the battery when this happens [114] . In this case , however, the temperature mo nitoring function of 
+
+the BMS had already stopped working five days before the bus caught fire. Thus, it continued to heat the battery 
+
+until it failed. The investigation concluded that this electric bus had a flaw in the fire -safety design and further 
+
+sugge sted that there should be backup temperature sensors installed to supervise the battery conditions. 
+
+Figure 13 . A chain fire on electric buses in Beijing, China in 2017, where firefighters used an extra amount of 
+
+water to cool do wn buses to prevent the battery reignition, and piles of catkins was considered as the initial 
+
+fire source [115] .
+
+On 1 May 2017, a severe chain fire disaster happened in the parking l ot of Crab Island Resort, Beijing, 
+
+China [116] . Nearly 80 electric buses and several private vehicles nearby were destroyed in this fire a ccident P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+18 
+
+(Figure 13 ). The following fire investigation revealed that fireworks used in a wedding celebration set fire to a 
+
+catkin pile located next to the electric busses. In the parking lot, there were poplar an d wi llow catkins (or seeds) 
+
+pile up on the ground every spring without being properly disposed of . These catkins contain much bio -oil 
+
+which makes them easy to ignite and generates enough fuel to cause severe chain fire. 
+
+The electric buses involved in the even t above used LFP battery cells. These have a relativity low energy 
+
+density, compared to other chemistries, and are often said to achieve a relatively higher fire safety [117] .
+
+Typically, the LFP battery cell needs an ignition temperature of 350~500 °C. That is much higher than ~200 °C 
+
+for other LIBs [118] . However, such a high ignition temperature is still much lower than flame temperatures 
+
+(>1200 °C) and fire plume temperatures (>600 °C). If an existing fire is bu rning near the vehicle, internal 
+
+batteries could be heated up to the critical conditions of thermal runaway and start the chain fire considering the 
+
+fire spread is fundamentally a continuous ignition process [119] . Alternatively, and perhaps mor e likely, it first 
+
+ignited other combustible materials on the bus. The initial fire on catkin pile may have been easy to extinguish. 
+
+However, once other combustible materials and the battery pack became involved in the situation further 
+
+exacerbated, all owi ng the fire to become beyond control as it continued to spread. 
+
+2.2. Fire Incidents in volving HEVs and PHEVs 
+
+Hybrid electric vehicles use a combination of electricity and gasoline as the power source . There are two 
+
+types of hybrid vehicles. T he original on e could transfer the surplus chemical energy from fossil fuel via 
+
+combustion engine into the electric energy and storage them into the batter y pack [120] . The plu g-in hybrid 
+
+vehicle (PHEV) can also charge the electric power directly from the grid . Thus, consumers have the choice of 
+
+using either as a charging source at any time, as long as there is gas in the tank or a charg ing station [121] . In 
+
+other words , there are two types of the energy system and fuel in the hybrid vehicle, that is, the electric energy 
+
+system with battery and conventional combustion engine with fossil fuel . The exhaust system of these vehicles 
+
+may result in high temperatures, high enough to ignite the flammable fuels tha t are on -board. 
+
+Spontaneous Ignition : On June 7, 2008, a Toyota Prius was destroyed as a result of being driven on the 
+
+freeway ( Figure 14 ). This particular Toyota Prius was converted to a PHEV. Based on a report by fire 
+
+investigators re port, the main reason could be attributed to the improper assembly of bolted joints with elect rical 
+
+lugs inside the battery pack . The loose joints caused a high -resistance connection resulted in the overload which 
+
+triggered the overhe ating and thermal runaway of the battery cell, and ultimately started the fire [122] .
+
+Figure 14 . A Toyota Prius converted to a plug -in hybrid electric vehicle by the owner and was damaged by 
+
+the battery fire. This fire accident resulted from the thermal runaway of the battery [122] .
+
+There was a hybrid electric bus fire accident on 16 March 2016 in Shenzhen, China ( Fi gure 15 ). This public 
+
+transport bus self -ignited during operating in the street. The fire started at the rear of the bus, and most of the 
+
+bus was destroyed in the fire. Investigation showed that the s elf -ignition was initiated at the back of the carriage 
+
+near the combustion engine [123] . The battery pack installed on both side of the bus was intact. Thus, the official P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+19 
+
+report pointed out that the fire accident was not related to the battery or the battery management system. It is 
+
+worth noting from this fire accident that for a hybrid vehicle, the battery system is not the only reason caused a 
+
+fire. About 1% of all buses with internal combustion engines end up being involved in a fire. These fir es most 
+
+commonly originate in the engine compartment as this is where flammable fuels and hot surfaces are within 
+
+close vicinity of each other. In warm climates, fires are also likely to occur in the wheel well area [3] .
+
+Fi gure 15 . The hybrid -electric bus fire accident on 16 March 2016 in Shenzhen, China , where the battery box 
+
+is intact after fire [124] .
+
+A Kia 2013 Optima Hybrid caught fire while driving [125] . The driver successfully escaped from the car, 
+
+despite the whole car being covered in flames 30 seconds after it started (Figure 16 ). Based on the inspection, 
+
+Kia company said the car did not experience engine failure, and the causes may be electrical in nature . However, 
+
+the exact cause of the fire could not be determined. Far from the isolated, as ment ioned in the news article, many 
+
+other Kia vehicles are reported spontaneously erupted in flames for an unknown reason [125] .
+
+Figure 16 . An HEV fire accident are January 2018:(a) the Kia2013 Optima Hybrid was covered by flames ;
+
+(b) the ruined car after this fire incident [125] .
+
+Charging : A Porsche Panamera caught fire while its battery was being charged at home [126] . This fire 
+
+accident happened on 16 March 2018 in Bangkok’s Taling Chan distric t. The owner recalled she drove the car 
+
+back home at around 10 pm, and she plugged the car in the home battery -recharging kit as per her routine. At 6 
+
+am an explosion shocked them. They found the car bl azed . The fire damaged the owner’s luxury home as well 
+
+(Figure 17 ). The reason c aused this fire is blamed to the improper installation and operation of the charging 
+
+system. According to the authori zed distributor of Porsche in Thailand, t he damaged car had b een purchased P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+20 
+
+from an independent importer. Thus, the electrical cords, socket s and other equipment of the charging system 
+
+of vehicles imported by independent firms may not have match ed the safety requirements for use in Thailand. 
+
+Figure 17 . The PHEV Porsche Panamera got on fire during charging on 16 Ma rch 2018 Thailand :(a) the fire 
+
+was intense and damaged the owner’s house ; (b) firefighters tried to extinguish the fire using water [126] .
+
+3. Tests and Protection strategies for EV Fire s
+
+3.1. Standard Tests for EV Fires 
+
+LIBs are required to pass numerous compulsory test standards (e.g. ISO 12405 -3, ISO 6469 -1, UN 38.3, 
+
+UN R10 0, SAE J2464, SAE J2929, IE C 62133, IEC 62660 -2, IEC 62660 -3, GB/T 31485) before they can be 
+
+used for EVs. This is however related to different requirements in different countries [127,128] . Generally, EV 
+
+batter y tests can be catego rized into the performance test and safety test [129] . The s afety test provid es insight 
+
+into their failure response, either internal or external causations, which will be discussed in this section. 
+
+Figure 18 . (a) Thermal abused test of an EV battery pack where the battery heated by the gasoline pool fi re, 
+
+and (b -c) mechanical abuse test (Crush test) of the battery pack with a battery cell capacity of 40 Ah, 16.8 V, 
+
+and SOC=100% (unpublished tests by authors) ; and full -scale EV tests (d) drop t est, and (e) ignited by an 
+
+external fire sour ce [130] .
+
+A complete body of abuse test s was defined in the abuse test manual for EV and HEV applications [131] .
+
+There are three typical incentives for triggering thermal runaway of battery, that is, mechanical, thermal, and 
+
+electrical abuses . Thus, the abuse test manual, intended to simulate the actual use as well as these three abuse P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+21 
+
+con ditions are usually far beyond normal safe operating limits.  Figure 18  shows a group of typical abuse tests 
+
+for EV battery packs and full -scale EVs . The test regulations cover four levels , that is, cell level, modul e level, 
+
+pack lever , and vehicle level. Ruiz et al. [132] and Tidblad [128] provide d a comprehensive review of various 
+
+international standard and regulations and summarized the safety test s of Li -ion batteries in automotive 
+
+applications under various abusive environm ents. 
+
+Mechanical abused tests include a series of test methods such as the drop test, the vibration test, the 
+
+mechanical shock test, and the crush test. According to the international standards SAE J2464 [133] and SAE 
+
+J2929 [134] , th e scal e for the drop test is only at the pack level. While the test level is wider for some national 
+
+regulations, such as UL 2580 [135] , Freedom CAR [131] and QC/T 743 [131] , which covers cell level, module 
+
+level, and pack level. Recently, in collaboration with Skien Fire Department, Greenland Energy and the 
+
+University College of Southeast Norway and RISE, a full -scale EV drop test was con ducted , and a personal EV 
+
+with a 26 kWh Li -ion battery pack was dropped from a height of 20 m. As illustrated in  Figure 18 (d) ,
+
+approximately 6 minutes after the impact, the temperature of the battery increased quick ly and started to burn. 
+
+After 9 minutes, the car was engulfed in the flames [130] . Vibration test is to verify the safety performance 
+
+under a mechanical load due to vibration, which a battery system will likely experience during the normal 
+
+operation of a vehicle. The vibration profile is given by the customer and verified to the vehicle applicatio n
+
+[136] . In the crush te st, the crush bar which used to generate the crushing force has different requirements based 
+
+on the test battery. 
+
+The thermal abuse test also consists of several test methods . For example, in SEA J2464 [137] , the thermal 
+
+abuse test include s high temperature hazard test for Pack module level and above , thermal stability test for cell 
+
+leve l, c ycling without thermal management for module and pack level and thermal shock cycling for cell level 
+
+or above and p assive propagation resistance test for module or pack level. The complete battery pack is exposed 
+
+to an external fire in testing accordin g to R100 Annex 8E [138] . Here the battery is exp osed to external flames 
+
+for 2 minutes and then observed until the test object ’s surface reaches ambient temperatures or has been 
+
+decreasing for at least 3 hours . If there is no evidence of explosion during this time, the test is successful. This 
+
+test is ve ry similar to that normally performed on fuel tanks for conventional vehicles except for the long 
+
+observation period . Note however that for EVs the decision can be made to perform the test in full -scale level 
+
+(EV) or component level (LIB pack). Some publis hed tests have shown that this test is not a major challenge 
+
+when performed on EV level as it usually takes 25 -40 minutes before the LIB pack starts to burn. If the LIB 
+
+pack is considered by itself, this may drop to between 2 -11 minutes [5] .
+
+Figure 19 . Examples of temperature measurement plan for battery cells [136] .
+
+Th ere are several main parameters that should be measured during test s. These are normally comprised of 
+
+vol tage, current, and temperature. According to IEC 62660 -2 [136] , the resistance of the voltmeters used shall P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+22 
+
+be at least 1 𝑀 Ω/V. The cell temperature shall be measured by u se of the s urface te mperature measuring device. 
+
+The temperature should be mea sured at a location which most closely reflects the cell temperature. The 
+
+temperature may be measured at a n a dditional appropriate location.  Figure 19  illustr ate s an example of 
+
+temperature measurement for different battery cell s.
+
+The failure of battery may have several different outcomes, e.g. venting, fire or even explosion. These 
+
+different hazards are classifi ed by the European Council for Automotive Researc h and Development (EUCAR), 
+
+see  Table 7. The responses of the battery to abusive conditions can be class ified based on the hazard severity 
+
+level. An explosion is classified as the most severe event. 
+
+Except for abuse tests, the evaluation of chemical hazards is also considered by some standards. The 
+
+chemical -hazard test focuses on the emissions and flammability of toxic gases or smoke generated in the thermal 
+
+runaway process. Some standards, such as SAE J2464:2009 [137] , SAE J2929:2013 [139] , and UL 2580:2013 
+
+[135] , provide detailed information on quantifying and determining t oxicity and flammability of Li -ion battery 
+
+emissions. The measured emission composition should fall below certain degrees of concentrations.    
+
+> Table 7.Hazard severity level and descriptions
+
+[137]                     
+
+> Hazard level Description Classification criteria and effect
+> 0No effect No effect. No loss of functionality
+> 1
+> Passive
+> protection
+> activated
+> No damage or hazard; reversible loss of function. Replacement or re -setting of
+> the protection device is sufficient to restore normal functionality.
+> 2Defect/ Damage No hazard but damage to RESS (rechargeable energy storage system);
+> irreversible loss of fun ction. Replac ement or repair.
+> 3Minor
+> leakage/venting
+> Evidence of cell leakage or venting with RESS weight loss <50% of electrolyte
+> weight.
+> 4Major
+> leakage/venting
+> Evidence of cell leakage or venting with RESS weight loss >50% of electrolyte
+> weight.
+> 5Rupture
+> Loss o f mechanical integrity of the RESS container, resulting in the release of
+> contents. The kinetic energy of released material is not sufficient to cause
+> physical damage external to the RESS,
+> 6Fire or flame Ignition and sustained combustion of flammable gas or liquid (approximately
+> more than one second) , excluding s parks.
+> 7Explosion
+> Very fast release of energy sufficient to cause pressure waves and/or projectiles
+> that may cause considerable structural and/or bodily damage, depend ing on the
+> size of the RESS . The kinetic energy of flying debris from the RESS may be
+> sufficient to cause damage as well.
+
+3.2. Fire Risk Assessment 
+
+The battery fire always initiates from the thermal runaway. So far, most fundamental research ha s studied 
+
+the electrochemical reactions wi thin batteries that are responsible for the thermal runaway [17,140,141] .
+
+Typically, these reactions represent the decomposition of the active material, the reaction between the anode 
+
+material and electrolyte, the collapse of the separator, and the decomposition of the cathode. Much applied 
+
+research from the industry and academia have investigated the thermal runaway of different batteries under 
+
+different operational conditions and various external impacts [81,142,143] . Wang et.al [18] gave a detail ed 
+
+review of risk assessment of Lithium ion battery . Basically, these risks are assessed based on various battery 
+
+abused test s.
+
+Although t hese past studies [144 –146] have provided some basic understanding on battery fire risk and 
+
+supported the design of the thermal safety of Li -ion battery [147 –150] , there are still many unknowns about the 
+
+fire dynamics of large -scale EV batter ies and behaviours of full -scale EV fire . On the other hand, it is also easy 
+
+to misinterpret the data of small -scale battery fire to evaluate the hazard o f large -scale EV fire. For example, P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+23 
+
+the weight of EV (e.g. 2,250 kg for the Tesla Model S) is five orders of magnitude greater than that of a battery 
+
+cell (e.g. 45 g for a 18650 cell ). C omparatively, the HRR of fire can only increase three orders of magnitude 
+
+from several kW for a battery cell [39] , to several hundred kW for a single EV battery pack [73] , and several 
+
+MW s for a full -scale EV fire [91] . So far, there is still a lack of research to scale up the risk and hazard of the 
+
+sma ll -scale battery fire to full -scale EV fire . More importantly, because of the rapid development in bat tery and 
+
+EV, fire tests and R&D of fire -protection system s for EV still fall far behind. 
+
+As discussed above, the h eat release rate (HRR) is the most impo rtant parameter to assess the fire hazard 
+
+[53] . As seen fr om Eq. ( 3), the power of EV fire can be estimated by using the HRR of the battery pack, given 
+
+the area of EV. According to the Interim Guidance for Electric and Hybrid -Electric Vehicles Equipped with 
+
+High Vol tage Batteries offered by U.S. D epartment of T ransportation [151] , “ In the event of fire involv ing an 
+
+electric vehicle (EV) or hybrid -electric vehicle ( HEV), we always assume the high voltage (HV) battery and 
+
+associated components are ene rgized and full y charged .” In other words, the SOC should be assumed as 100% ,
+
+which represents the worst fire scenario, for battery in risk assessment. Tak ing the EV powered by Lithium 
+
+Titanate (LTO) batter ies as an example, the average heat flux ( 𝑞 ̇ ′′ ) of LTO is approximately 2.3 MW/m 2 in a
+
+full y charged stage [152] . This is comparable to 2~ 3 MW /m 2 for gasoline and other hydrocarbon liquid fuel s of 
+
+the same burning area [53] . Considering the floor area of a regular EV is 𝐴 𝐸𝑉 ≈ 3 m2, the average fire HRR of 
+
+this kind of EV can be estimated as 
+
+𝐻𝑅𝑅 = 𝐴 𝐸𝑉 𝑞 ̇ ′′ = 3 m2 × 2.3 MW/m 2 ≈ 7 MW (5)
+
+which generally agree with data summarized in  Table 5. Therefore , for the hybrid vehicle with an LTO battery, 
+
+the HRR can be calculated in the same way, given the capacity of batte ry [152] . Th is calculated HRR could use 
+
+to esti mate the required volume of water or other fire -suppression agents to extinguish the EV fire. 
+
+Mac neil [91] conducted several full -scale test s of BEVs and PHEV s to measure the HRR and temperature 
+
+in EV fire. To start a fire, the EV was suspended above a propane gas burne r, which had a fixed HRR of 2 MW. 
+
+Then, the HRR of EV fire was computed based on O 2 consumption calorimeter with the correct ion for CO and 
+
+soot p roduction.  Figure 20 (a) shows the measured HRR for three EV fire test s: (1) Type -A EV with battery SOC 
+
+of 100%, (2) Type -A EV with battery SOC of 85 %, and (3) Type B EV with battery SOC of 100%.  Figure 20 (b) 
+
+shows the measured HRR of a small and a large PHEV. For a better comparison, the HRR s of EVs are compared 
+
+with baseline HRRs of internal combustion engine (ICE) vehicles that have different fuel tank capacit ies 
+
+between 40 L and 50 L. 
+
+Figure 20 . Evolution of HRR versus time for test vehicles which were s uspended over a propane burner of 2 
+
+MW: (a) three different pure battery EVs, and (b) a small PHEV and a large PHEV compared with the gas 
+
+tank and internal combustion engine (ICE) vehicles [91] .
+
+These t ests show the HRR of an average value of 5~6 MW and a peak value of 8~9 MW, which is close to 
+
+the estimation of Eq. (3). In addition, the results also suggest that a fire in EV and PHEV h as a similar HRR 
+
+that of the ICE vehicl e fire as well as the gasoline pool fire . This was also observed in tests by Lecocq et al. P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+24 
+
+[95] . In other words, the thermal hazard of EV fire is comparable to that of conventional vehicle fire accidents .
+
+Both electric and gasoline -powered vehicles have the same risk of fire after a severe crash [151] . In fact , the 
+
+PHRR of EV is even lower than an ICE vehicle, which supports one opinion that pure BEV is safer than 
+
+conventional vehicles or hybrid vehicles [117] . However, more full -scale tests with different types of BEV and 
+
+PHEV are required to fully evaluate the EV fire hazards. 
+
+Another full -scale fire test was conducted on an electric -diesel hybrid bus by the SP Technical Research 
+
+Institute of S weden in November 2014 (Figure 21 ) [153] . The fire was set to start in the engine compartment 
+
+and consumed the entire bus in the end. As the fire spread, the temperature increas es of battery occurred 7
+
+minutes after the temperature increase in the passenger compartment . Once the battery start ed to burn , the 
+
+already intense fire becomes more disastrous . Finally, the burning of battery slows down but remains robust for 
+
+a very long time , which is typical for a LFP batter y fire .
+
+Batteries typically need a certain period to accumulate enough energy to trigger the thermal runaway . Thi s
+
+makes EVs different from the gasoline of conventional vehicle that more easily reaches the fuel flammability 
+
+limit or flashpoint and can be ignited by a spark or flame . However, once the flame i s attached to the battery or 
+
+explosion occurs, it is difficu lt to extinguish the battery fire. In the case of battery failure, there may not be an 
+
+apparent sign of the fire phenomenon at the beginning. The battery pack is namely enclosed and may be under 
+
+the hood or inside the EV body . Hence the fire will likely not be noticed when it is in a n early developed stage, 
+
+while there is still plenty of time for occupants to leave the vehicle [154] . In order to offer more rescue time for 
+
+occupants, it is imperative to have early detection of battery failure and suppress the fire as early as possible. 
+
+Early de tection and cooling may namely delay thermal propagation between battery cells as well as battery 
+
+modules . If successful, this reduces the risk for a fire spreading from a battery pack to its surroundings. One 
+
+sensible solution is to develop a reliable fir e detection system for its powering system and an effective 
+
+extinguishing system for EV fire. 
+
+Figure 21 . A full -scale fire test of the electric -diesel hybrid bus (a) battery pack with thermocouples, and (b) 
+
+bus in fire at 32.5 mi n [153] .
+
+With the dramatically i ncreased number of EV s, concerns are also rising that relate to deal ing with LIBs and 
+
+EVs ready to be scrapped [155] . In Europe , only as few as 5% of Li -ion batteries are recycled [156] . The battery 
+
+wastes could contaminate our ecology and thus need to be treated c arefully . Additionally, t here are no doubt 
+
+potential fire risks during the col lection, recycling, treatment and disposal of batteries and EVs . This risk is 
+
+linked to the SOC and capacity of the considered LIB . Cumulated battery bulk s and EVs have a lower s elf -
+
+ignition temperature or a higher self -ignition risk . Thus , the fire risk is likely to increase during the collection 
+
+of batteries and the disposal of EVs [63,64] .
+
+Environmental concern s also relate to fire -water run -off. Analysis of dissolved species in fire -water run -off 
+
+has been may contain elevated levels of fluoride and chloride [157] . These obtained values were found to be 
+
+above the allowable limits in Germany. As a result, the considered fire -water run -off had to be sent for 
+
+destruction at a wastewater treatment plant. One alternative is to lift the EV into a container befo re applying P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+25 
+
+suppressant [158] . One of the benefits of this approach is that fire -water run -off and toxic media are contained 
+
+in the enclosure, such that they do not spread to the surrounding environment and can more easily be sent for 
+
+destruction. 
+
+3.3. Fire -Suppression and Firefighting Strategies for EVs 
+
+Compared to the abundant stud ies on the thermal runa way of battery and its protection strategies, there are much 
+
+fewer studies on the suppression of battery fire and fire -extinguishing technologies . Despite this, they have 
+
+identified that LIB fires are difficult to exting uish, requiring large quantities of suppressant, and may re -ignite 
+
+[159] . These re -igniting fires are difficult to deal with as they can occur at rando m and even after a significant 
+
+amount of time has passed since the primary thermal event. One way of ensuring there is no reignition is by 
+
+letting the vehicle or LIB pack burn out completely. When all the active material in the LIB pack is consumed, 
+
+the ri sk for reignition becomes much lower. In practice , however, this may not always be possible or the 
+
+appropriate approach, and suppression or extinguishment is needed. 
+
+NFPA 10 -2018 categori zes fires into five different cla sses [160] . An EV does not directly fall into any of 
+
+these categories, yet its individual components do. They may be divided as follows: 
+
+A. Solid flammable material s in EV , e.g. seat foam and plastic interior decoration; 
+
+B. Flammable gases ejected from the battery after the thermal runaway, coolant, brake fluid, windshield 
+
+washer fluid, transmission fluid and liquid fuels stored in hybrid EVs; 
+
+C. El ectrical devices and BMS ;
+
+D. Li metal particle s released from charged Li -ion batteries. 
+
+Therefore, if only carbon dioxide or other chemicals is used to suppress the battery fire, although the fire can 
+
+be controlled, it cannot cool down the battery pack or pre vent the re -ignition . On the other hand, if water spray 
+
+is applied , it can both suppress the fire and cool down the EV, but it may trigger m ore electrical faults over time 
+
+and react with Li to release hydrogen gas [161] .
+
+Relatively little is known about the extinction mechanism of LIB fires , and most of fire s uppression tests in 
+
+the literature focused on the small -scale portable LIB fires, as reviewed in [20] .H ence the effectiveness of 
+
+suppression agents and the reliability of existing fire suppression strat egies for EV fire are often questioned .
+
+Carbon -dioxide or dry chemicals can extinguish the flames of a burning LIB. However, extinguishment of 
+
+flames should be balanced against the possibility of a build -up of flammable gas a nd a delayed ignition leading 
+
+to a gas explosion [162] . Cooling of the LIB, or inhib iting heat transfer between its cells, appears to be most ly 
+
+positive. Water, which is a very common firefighting agent, offers excellent cooling capacity making it a good 
+
+candidate for gaining control over LIB fires despite potential negative effects such as short circuits or toxic run -
+
+off water. 
+
+Colella [73] performed large -scale fire t est on two different EV LIB packs (Figure 22 ). The parameters for 
+
+the considered battery packs are listed in  Table 8. The fire tests co nsidered both the LIB packs by themselves 
+
+and while mounted inside the vehicle. The pack or vehicle was ignited by a 400 -kW propane burner . For both 
+
+battery packs, poppin g was heard, arcing and re -ignition was observed. Once it was clear the LIB pack was o n
+
+fire, an attempt was made to suppress it.                       
+
+> Table 8.Fire suppression test for two Li -ion EV battery pack in a vehicle model where * means a bat tery with interior
+> components [65,73] .
+> Battery
+> Pack
+> Type and configuration Dimension
+> [mm]
+> Weight
+> [kg]
+> Energy
+> [kWh]
+> Suppression time
+> [min]
+> Water quantity
+> [m3]
+> AAssembled from 288
+> 3.6 -V cells 822×968 ×378 151.1 -2.2/3.5/9.8* 1.25 /2.01 /4.80 *
+> BT-shape with multiple
+> linked modules 1650 (length) 198.1 16 14.0/21.4/9.3* 7.97/12.00/5.30* P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+26 
+
+For Battery A, re -ignition occurred 22 hours after the test had been te rminated. The suppression effects 
+
+included the use of water flow of 125 gallons per minute and four firefighters (two on hose line and two in 
+
+suppo rt).  Table 8 also lists the suppression time and the quantity of fir e-suppression water. The comparison 
+
+show ed that interior components of battery modules strongly contribute d to the fire hazard and difficulties in 
+
+suppressing Battery A, whereas the opposite trend was found for Battery B. These results show ed although the 
+
+LIB pack plays a role in EV fire , other flammable materials (mainly plastics) also have a significant effect ,
+
+which is similar to conventional vehicles, as discussed in Section  1.3 .
+
+Figure 22 . Full -scale fire -suppression test of EV battery pack s inside a vehicle model: (a) Type A battery 
+
+pack ; (b)Type B battery pack with interior components; (c) fire behaviours of Battery A; and (d) fire 
+
+suppression efforts [65,73] .
+
+More recently, RISE conducted a fire suppression test for several EV batter ies with diff erent extinguishing 
+
+technologies , such as water spray and mist ( Figure 23 ), and the locations of nozzles were varied [163] . The 
+
+thermal runaway was initiated in one battery module by directly exposing it to a gas burner. Without the fire 
+
+suppression, the continuous ignition of battery cells was observed with external visible flame. The test results 
+
+showed that the water -based fire s uppression system inside a battery pack has good po tential to have a lasting 
+
+cooling effect on the battery and to increase the chance of mitigating and preventing thermal runaway 
+
+propagation. External activation had limited cooling effect or impact on the thermal runaway propagation, 
+
+except for extinguishi ng flames outside the battery pack to prevent batter fire spread to the surroundings. 
+
+Many heavy -duty ICEVs today have a built -in fire suppression system. These systems are installed to 
+
+protect the compart ment spaces that have internal combustion engines and/or auxiliary heaters. These are 
+
+namely often most the primary area in which a thermal event or fire arises. Systems such as these are either 
+
+manually activated or automatically detect the fire before ac tivating. Today, the use of said systems in busses 
+
+is mandated in 63 countries [164] through UNECE Reg. No. 107 [164] . Thi s regulation will come in force for 
+
+coaches as well starting 2021. Insurance authorities have set their own standards for machines and heavy 
+
+vehicles in SBF127 [165] and SBF128 [166] , respectively. Both these standards, an d regulations relate d to a 
+
+test standard , SP Method 4912 [167] , developed by RISE. This standard examines the system performance when P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+27 
+
+exposed to low and high fire loads with or without ventilation, hidden fires, class -A fires as well as reigniting 
+
+fires inside a mock -up of an internal combustion engine compartment space. 
+
+Figure 23 . (a) A photo of the suppression test for EV batt ery fire, and (b) the temperature measurement of a 
+
+battery near ignition location under different fire -suppression techniques [163] .
+
+Fire -suppression systems may also be found in HEVs or even PHEVs, to protect their internal combustion 
+
+engine and/or auxiliary heater compartment space. They are normally not considered for protecting LIBs (e.g.  
+
+> Figure 24
+
+). Tests have namely shown tha t large quantities of suppressant are needed to sufficiently cool a 
+
+burning LIB. These fixed -fire suppression systems may not be available to EV , because on a vehicle any system 
+
+need s to remain mobile and efficient. Conside ring the limited capacity of fire extinguisher onboard and the 
+
+difficulty in EV fire suppression, the premier purpose for the most present fire -protection system of EV is to 
+
+alert the driver about the fire in the vehicle and proceed with immediate preventi ve action. Experiences on 
+
+battery fire suggest that the primary effort of suppressing the EV fire is to cool down the temperature of the 
+
+battery which is already in the thermal runaway state. The difficulty is the poor accessibility of batteries since 
+
+most of the EV batteries are sealed o ff to prevent it from being penetrated by water and dust , and to ensure 
+
+protection against external impact [168] . External application of water thus only affects visible flames, the 
+
+external surface of the battery pack, and any materials surrounding it. Achieving this however still requires a 
+
+large amount of water. Tests have shown that over 10 ,000 L (2,600 gallons) of water should be applied for EV 
+
+fire depending on the size and location of the battery [169] . In addition, t he suggested flow rate is very high at 
+
+200 L/min for e xtinguishing and cooling [101] . This may lead to large quantities of fire -water run -off. The 
+
+larger quantity of suppressant will also dilute any toxic media, hence further analysis on the trade -off on using 
+
+more , or less , suppressant is neede d. 
+
+Figure 24 . Typical fire -suppression system for a commercial bus with a combustion engine and auxiliary 
+
+heater [170] .P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+28 
+
+A large amount of suppressant needed is linked to the poor inaccessibility of the battery pack. This has been 
+
+shown in tests performed by RISE [6] . Here they tested external and internal application of suppressant to a fire 
+
+inside a LIB pack for heavy vehicles using limited quantities of suppressant. The commercially available 
+
+systems tested comprised of 3 -4 nozzles supplied by 13 L of water -based suppressant in total. They found that 
+
+applying suppressant to the external surface of the burning LIB pack did not reduce internal temperatur es or 
+
+limit the risk for thermal propagati on. However, applying suppressant directly into the pack gave positive results 
+
+in terms of cooling and reducing the fire hazard. The risk for the module to module propagation and cell to cell 
+
+propagation could be l owered using only a limited amount of supp ressant. This shows the importance of direct 
+
+access to the battery pack when there is a need to extinguish or cool it. 
+
+If an EV has been exposed to severe abuse, which may lead to a fire, it should be handled wi th special care. 
+
+There is namely the risk that some of the energy which remains in damaged LIBs reacts exothermally and 
+
+reignites a battery fire. Some guidelines are available which give information on how to handle when this risk 
+
+exists . Examples of these are those developed by NFPA , SAE , and EDU CAM. After the fire is extinguished , or 
+
+if there is a risk for fire , EVs that have been involved in accidents should be handled with care . These EVs 
+
+should be parked in a restricted -access section of an open -air pa rking area a sufficient distance away from other 
+
+vehicles, buildings, flammable objects and flammable surfaces [151] . It is never recommended to park a n EVs 
+
+with a damaged high -voltage system in an enclosed hall. Alternatively, the fire risk of an EV can be mitigated 
+
+with the use of fire protection systems such as water sprinklers and/or fire detection systems . Battery packs of 
+
+the damaged EV should not be directly exposed to the environment if there exists the possib ility that water and 
+
+moisture may s eep into it. This can be mitigated by covering the EV with a weatherproof tarpaulin , for example ,
+
+if needed . Last but not least, vehicle s that pose a fire risk should be marked accordingly as to warn nearby 
+
+personnel so that they can follow the appropriate routines and take any necessary preca utions .   
+
+> Figure 25 .NFPA emergency field guide for (a) FIAT 500e BEV, and (b) BMWi3 hybrid EV [169] .
+
+Every EV manufacturer is supposed to inform their consumers the accidence guidance for specific models, 
+
+including the fire emergency response. NFPA provides an emergency field guide to disabl e different b atteries 
+
+for different brand and model vehicles ( Figure 25 ) [169] . The vehi cle operators should be familiar with the 
+
+guidance of safety information and practices. Manual service disconnects could disable the high -voltage battery 
+
+without directly cut or touc h components, but poor conduct could result in serious injury or death. Wh en facing 
+
+an EV fire accident, the emergency procedures are suggested as follows . As with any vehicle, if sparks, smoke, 
+
+or flames coming from the vehicle are observed, customers sho uld pull over, shut off the vehicle, exit the vehicle 
+
+and move away from i t before calling emergency service s. In addition, c ustomers should provide the emergency P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+29 
+
+service with information on the type of vehicle the issue concerns, e.g. BEV or HEV. As with any vehicle fire, 
+
+people should be informed not to inhale smoke, vapours , or gas, released by the burning vehicle as they may be 
+
+hazardous . This could be best avoided by keeping a safe dista nce upwind , and uphill if possible, from the vehicle 
+
+fire. Finally, customers should stay out of the roadway and stay out of the way of any oncoming traffic while 
+
+awaiting the arrival of emergency responders. 
+
+The latest NFPA Electric vehicle emergency field guide [171] provides a more detailed instruction to handle 
+
+vehicle fire accidents incidents involving mainstream hybrid and electric vehicles of different brands . The 
+
+instruction is divided into two parts. The first part, the initial procedures, includes the methods to identify, 
+
+immo bilize and disable the vehicle. The second part is fire suppression strategy. Firefighting personnel should 
+
+extinguish hybrid and electric vehicle fires using proper vehicle firefighting practi ces as recommended by the 
+
+NFPA and in accordance with the depar tment SOPs (standard operating procedures). 
+
+By summarizing different code of practices in different countries, the recommended EV firefighting process 
+
+is described as follow 
+
+(1) Identify the vehic le. In some European countries, the fire rescue centres can req uest information based on 
+
+a vehicle’s license plates. This can help firefighters unequivocally identify the correct rescue datasheet ;
+
+(2) Determine the firefighting plan based on the situation ;
+
+(3) Protect the people first 
+
+(4) Control or extinguish the fire , and if t he car is charging, switch off the charging infrastructure if possible. 
+
+(5) Vehicle should not be moved immediately , a fter the fire is extinguished; 
+
+(6) The final step is on -site cleaning. After fire a ccident, certain disposal procedures are also recommended, 
+
+that is, the EV should be parked in an outdoor place after the accident because of the re -ignition ability of 
+
+the battery. 
+
+As the total number of EVs increases every year, many public parking lot s start to provide EV charging 
+
+stations to attract EV drivers and demonstrate their sustainability commitment. There are some concerns 
+
+associated with this, with several cities banning charging in parking lot structures. Parking lot structures have a 
+
+large fire risk , considering the number and density of vehicles they may house (Figure 26 ). Their low ceilings 
+
+contribute to the fire spread as they radiate heat down towards the fuel load whereas limited ventilation 
+
+con tributes to the accumulation of toxic gas. Parking lot structures are designed to be able to handle a few 
+
+vehicles burning at the same time . As long as the fire is not allowed to spread beyond 3 -4 vehicles , there will 
+
+be no structural collapse [172] . The fire hazard may be further reduced by fire suppression systems, as it may 
+
+help to prevent fire spread. Fire suppression systems such as conventional sprinklers may reduce the fire ri sk. 
+
+The chemical hazard which burning vehicles, including EVs, may pose when parked inside buildings, should 
+
+however be carefully considered. 
+
+Figure 26 . (a) Houston's Tranquility Park Garage with GRIDbot charging stations [173] , and (b) hundre ds of 
+
+new EVs parked in a public area in Wuhan, China, showing a high fire risk [155] .P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+30 
+
+NFPA 70 (Nat ional Electrical Code) ha s developed standards to address the growth in EV charging stations 
+
+[174] . UL 2594 is one o f the main standards and covers the different voltages available as well as safety and 
+
+weather conc erns. SAE J2293 and J1772 provide key design requirements to ensure interoperability with EVs 
+
+[175] . Neverthe less, t here is still a lack of data to prove the effectiveness or reliability of fire hydrant and 
+
+sprinkler system for the parking lots with a large portion of EVs and many charging facilitates .
+
+4. Concluding remarks 
+
+This paper reviews recent battery fire s i n electric vehicle (EV) as well as the related fire -safety issues and 
+
+the fire -protection strategies . The fire risk and hazard of Li -ion battery (LIB) are particularly serious in EV ,
+
+because of high demands in driving performance and charging speed , inevit able traffic accidents, and the 
+
+increasing scale and energy densi ty of battery packs . Several typical fire accidents in battery EVs, hybrid EVs, 
+
+and electric buses are reviewed in order to provide a qualitative understanding of the risk and hazard of EV fi re. 
+
+An increased number of EV fire accidents will be expected as the market share of EV continuously increases in 
+
+the next few decades. So far, t here are a very l imited number of full -scale EV fire tests because of the high cost 
+
+and the restriction of trad e secrets . Nevertheless, existing test results have revealed that the heat release rate of 
+
+EV fire is comparable to that of the fossil -fuelled vehicle fire, while EV fire may release more toxic gasses like 
+
+HF from burning Li -ion batter ies . The tested peak heat release rate (PHHR i n kW) varies with the energy 
+
+capacity of LIBs ( 𝐸 𝐵 in Wh ) crossing different scales as 𝑷𝑯𝑹𝑹 = 𝟐 𝑬 𝑩 
+
+> 𝟎 .𝟔
+
+.
+
+EV fire is harder to suppress because of the potential re -ignition of battery and the difficulty in cooling the 
+
+battery pack inside . For the suppression of EV fire, water is still considered as most effective , and a significant 
+
+amount of water is required to extinguish and cool the battery . However, less suppressant can be used if it is 
+
+directly applied to the batter y pack . Moreover, t he re is very little knowledge o f the fire risk of the disposed EV s
+
+and wasted battery pack s. In the future, fire -protection system s with a better design should also be required for 
+
+buildings and parking space s that contain a greater numb er of EVs and charging stations. This review aims to 
+
+aid researchers and industries working with batteries, EVs and/or fire safety engineering, to encourage active 
+
+research collaborations, and attract future research and development on impro ving the overal l safety of future 
+
+EVs. Only then will society achieve the same comfort level for EVs as they have for conventional vehicles. 
+
+Acknowledgements 
+
+PS and XH receive the support from HK Research Grant Council through the Early Career Scheme (25205519) 
+
+and HK P olyU through the Central Research Grant (G -YBZ1). RB is funded by the Strategic vehicle research 
+
+and innovation program FFI through the Swedish Energy Agency (No. 2017 -014026). HN is supported by the 
+
+Guangdong Technology Fund (201 5B010118001). The authors would like to thank reviewers for valuable 
+
+comments. 
+
+Nomenclature                                          
+
+> Symbols Abbreviations
+> 𝐴 𝐸𝑉 EV floor area (m 2)BEV battery electric vehicle
+> 𝐴 𝑓 area of fuel or fire (m 2)EV electric vehicle
+> ∆𝐻 𝑐 heat of combustion (MJ/kg) HRR heat release rate (W)
+> 𝑚 ̇burning rate (kg/s) ICEV internal combustion engine vehicle
+> 𝑚 ̇′′ burn ing flux (kg/m 2s) LIB Lithium -ion battery
+> 𝑞 ̇′′ heat flux (kW/m 2)NCA nickel, cobalt, and aluminium oxide
+> Qheat release from fire (J) NEDC new European driving cycle
+> Ttemperature ( ℃)NMC nickel, manganese, and cobalt
+> Vvoltage (V) PHRR peak heat release rate (W)
+> 𝜂 combustion efficiency (%) PHEV plug -in hybrid electric vehicle
+> SOC state of charge (%) P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+31 
+
+References 
+
+[1] Matulka R. The History of the Electric Car. Department of Energy 2014. 
+
+https://www .energy.gov/articles/history -electric -car. 
+
+[2] Anderson CD, Anderson J. Electric and Hybrid Cars. second. McFarland & Company; 2010. 
+
+[3] Grauers A, Sarasini S, Karlstr öm M, Industriteknik C. Why electromobility and what is it? In: Sand én B, 
+
+editor. Systems Perspectives on Electromobility, Chalmers Univ ersity of Technology, G öteborg; 2013. 
+
+[4] BP. Statistical Review of World Energy 2018 2018:1 –53. 
+
+[5] Bisschop R, Willstrand O, Amon F, Rosengren M. Fire Safety of Lithium -Ion Batteries in Road Vehicles. 
+
+Bor ås: 2019. 
+
+[6] Bisschop R, Willstrand O, Rosengren M. Handling Lithium -Ion Batteries in Electric Vehicles - Preventing 
+
+and Recovering from Hazardous Events. 1st International Symposium on Lithium Battery Fire Safety, Hefei, 
+
+China: 2019. 
+
+[7] National Transporta tion Safety Board. Preliminary Report: Crash an d Post -crash Fire of Electric -powered 
+
+Passenger Vehicle 2018. 
+
+[8] CGTN. Tesla car catches fire in China, investigation underway 2019. 
+
+https://news.cgtn.com/news/3d3d514d7a416a4d34457a6333566d54/index.html. 
+
+[9] Bangkok Post. Porsche catches fire while charg ing 2018. 
+
+https://www.bangkokpost.com/thailand/general/1429518/porsche -catches -fire -while -charging. 
+
+[10] Loveday S. BMW i3 REx Burns After Catching Fire While Parked In Spain. INSIDEEVs 2018. 
+
+[11] Zhou X. Freq uent Fire Accidents on Electric Vehicle. Operat ors 2018;10:65 –6. 
+
+[12] National Transportation Safety Board. Preliminary Report: Highway HWY18FH013. National Transportation 
+
+Safety Board 2018. 
+
+[13] Revill J. Tesla crash may have triggered battery fire: Swiss firefighters 2018. 
+
+[14] National transportatio n safety board. Preliminary Report - Battery Fire in Electric -powered Passenger Car. 
+
+National Transportation Safety Board 2018. 
+
+https://www.ntsb.gov/investigations/accidentreports/pages/hwy18fh014 -preliminary. aspx. 
+
+[15] Deick M Van. Facebook 2018. https:// www.facebook.com/Marco.vandeick/posts/344761026325031. 
+
+[16] Gutman M, S. Yuon. Firefighters work 16 hours to put out fires in Tesla Model S. ABC News 2018. 
+
+https://abcnews.go.com/Technology/tesla -opens -investi gation -car -burst -flames -times/story?id=59930420 .
+
+[17] Wang Q, Ping P, Zhao X, Chu G, Sun J, Chen C. Thermal runaway caused fire and explosion of lithium ion 
+
+battery. Journal of Power Sources 2012;208:210 –24. doi:10.1016/j.jpowsour.2012.02.038. 
+
+[18] Wang Q, Mao B, Stoliarov SI, Sun J. A review of lithiu m ion battery failure mechanisms and fire prevention 
+
+strategies. Progress in Energy and Combustion Science 2019;73:95 –131. doi:10.1016/j.pecs.2019.03.002. 
+
+[19] Feng X, Ouyang M, Liu X, Lu L, Xia Y, He X. Therm al runaway mechanism of lithium ion battery for 
+
+electric vehicles: A review. Energy Storage Materials 2018;10:246 –67. doi:10.1016/j.ensm.2017.05.013. 
+
+[20] Ouyang D, Chen M, Huang Q, Weng J, Wang Z, Wang J. A Review on the thermal hazards of the lithium -ion 
+
+battery and the corresponding countermeasures. Applied Sciences 2019;9:2483. doi:10.3390/app9122483. 
+
+[21] Evarts EC. Lithium batteries: To the limits of lithium. Nature 2015;526:S93 –5. doi:10.1038/526S93a. 
+
+[22] Moon G. Renault -Samsung ’s Electric Vehicle C atches Fire Due to Ignition from Bonnet. ETRC ·KGTLAB 
+
+2016. http://www.ipnomics.net/?p=14858. 
+
+[23] Pecht M. Safety. CALCE Battery Research Group 2015. https://web.calce.umd.edu/batteries/safety.html. 
+
+[24] Home of EV. What should we do during the EV fire? SO HU 2018. 
+
+https://www.sohu.com/a/233521985_52625 5. 
+
+[25] Hertzke P, M üller N, Schenk S, Wu T. The global electric -vehicle market is amped upand on the rise. 
+
+McKinsey Center for Future Mobility 2018. 
+
+[26] Offer GJ. Automated vehicles a nd electrification of tr ansport. Energy & Environmental Science 2015;8:26 –
+
+30. doi:10.1039/C4EE02229G. 
+
+[27] Frost & Sullivan. Global Electric Vehicle Market Outlook, 2018. 2018. 
+
+[28] Egbue O, Long S. Barriers to widespread adoption of electric vehicles: An analysis of consumer att itudes and 
+
+perceptions. Energy Policy 2012;48:717 –29. doi:10.1016/j.enpol.2012.06.009. 
+
+[29] International Energy Agency. Global EV Outlook 2018: Towards cross -modal electrification. IEA 
+
+Publications 2018. doi:10.1787/9789264302365 -en. 
+
+[30] The Economist In telligence Unit. France ranked top for EV adoption in 2017. The Economist 2018. 
+
+[31] Bjerkan KY, N ørbech TE, Nordt ømme ME. Incentives for promoting Battery Electric Vehicle (BEV) 
+
+adoption in Norway. Transportation Research Part D 20 16;43:169 –80. doi:10.101 6/j.trd.2015.12.002. 
+
+[32] U.S. Commercial Service. The Electric Vehicle Market - France 2017. https://www.export.gov/article?id=E -
+
+Mobility -in -France. 
+
+[33] Germany Trade & Invest. Electromobility in Germany: Vision 2020 and Beyond 20 15. 
+
+[34] Lu J. Comparing U.S. and Chinese Electric Vehicle Policies. Environmental and Energy Study Institute 2018. 
+
+https://www.eesi.org/articles/view/comparing -u.s. -and -chinese -electric -vehicle -policies. P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+32 
+
+[35] Council on Clean Transportation I. Supporting the electric vehicle mar ket in U.S. cities. 2015. 
+
+[36] Howell S, Lee H, Heal A. Leapfrogging or Stalling Out? Electric Vehicles in China. HKS Working Paper No 
+
+RWP14 -035 2014. doi:10.2139/ssrn.2493131. 
+
+[37] Gibson R. What can we learn from Japan about EV ad option? FleetCarma, Augu st 22 2018. 
+
+https://www.fleetcarma.com/can -learn -japan -ev -adoption/. 
+
+[38] Industry Steering Committee. Electric vehicle technology roadmap for Canada : a strategic vision for 
+
+highway -capable battery -electric, plug -in and other hybri d-electric vehicles. Nat ural Resources Canada 2009. 
+
+[39] Liu X, Wu Z, Stoliarov SI, Denlinger M, Masias A, Snyder K. Heat release during thermally -induced failure 
+
+of a lithium ion battery: Impact of cathode composition. Fire Safety Journal 2016;85:10 –22. 
+
+doi:10.1016/j.firesaf.201 6.08.001. 
+
+[40] Liu X, Stoliarov SI, Denlinger M, Masias A, Snyder K. Comprehensive calorimetry of the thermally -induced 
+
+failure of a lithium ion battery. Journal of Power Sources 2015;280:516 –25. 
+
+doi:10.1016/j.jpowsour.2015.01.125. 
+
+[41] JOEY DAVIDSON. Musk frustrated that Koch brothers spending millions to kill electric cars 2016. 
+
+[42] Markus F. 2017 Chevrolet Bolt EV Drivetrain First Look (w/Video). Motortrend Apr 6 2016 2016. 
+
+https://www.motortrend.com/cars/chevrolet/volt/2016/2017 -chevrolet -bolt -ev -drive train -first -look -review/. 
+
+[43] Arman Ahmad. EV power -up may lie with prismatic tech. New Straits Times 2017. 
+
+https://www.nst.com.my/cbt/2017/12/315288/ev -power -may -lie -prismatic -tech. 
+
+[44] Types of Battery Cells; Cylindrical Cell, B utton Cell, Pouch Cell. Battery University, 24 April, 2019 2019. 
+
+https://batteryuniversity.com/index.php/learn/article/types_of_battery_cells. 
+
+[45] Miles A. The Secret Life Of An EV Battery. Sustainable Enterprises Media, Inc 2018. 
+
+https://cleantechnica.co m/2018/08/26/the -secret -life -of -an -ev -battery/. 
+
+[46] Garcia -Valle R, Lopes JAP. Electric vehicle integration into modern power networks. Springer -Verlag New 
+
+York; 2013. doi:10.1007/978 -1-4614 -0134 -6. 
+
+[47] SAMSUNG SDI. The Composition of EV Batteries: Cells ? Modules? Packs? Let ’s Understand Properly! n.d. 
+
+http://www.samsungsdi.com/column/all/detail/54344.html. 
+
+[48] Timofeeva E. Comparing Electric Cars and Their Batteries. Inlfluit Energy 2017. 
+
+http://www.influitenergy.com/comparing -electric -cars -and -their -ba tteries/. 
+
+[49] Dinger, A ndreas; Martin, Ripley; Mosquet, Xavier; Rabl, Maximilian; Rizoulis, Dimitrios; Russo, Massimo 
+
+S. Batteries for Electric Cars: Challenges, Opportunities, and the Outlook to 2020. The Boston Consulting 
+
+Group 2010. 
+
+[50] Hao M, Li J, P ark S, Moura S, Dames C. Efficient thermal management of Li -ion batteries with a passive 
+
+interfacial thermal regulator based on a shape memory alloy. Nature Energy 2018;3:899 –906. 
+
+doi:10.1038/s41560 -018 -0243 -8. 
+
+[51] Kolly JM, Panagiotou J, Czech BA. Failur e Analysis Techniques fo r a Lithium -Ion Battery Fire Investigation. 
+
+Fire in Vehicles 2014. 
+
+[52] Tesla. Tesla Model S 2019. https://www.tesla.com/models. 
+
+[53] Drysdale D. An Introduction to Fire Dynamics. 3rd ed. Chichester, UK: John Wiley & Sons, Ltd; 2011. 
+
+doi:10.1002/9781119975 465. 
+
+[54] Andrea D. A list of Li -Ion cells available today. Li -Ion BMS 2018. http://liionbms.com/php/cells.php. 
+
+[55] Le Houx J. Develo pments in Composite Energy Storage. Energy Technology, Environment and Sustainability 
+
+Reviews 2017:24832413. 
+
+[56] Berjoza D, Jurgena I. Effects of change in the weight of electric vehicles on their performance characteristics. 
+
+Agronomy Research 2017;15:952 –63. 
+
+[57] Idaho National Laboratory. 2014 BMW i3 review -Advanced Vehicle Testing – Baseline Vehicle Testing 
+
+Result. INL/MI S-15 -34211 2016. 
+
+[58] Compare Side -by -Side. US Department of Energy n.d. 
+
+https://www.fueleconomy.gov/feg/Find.do?action=sbs&id=38524&i d=38569&id=38525&id=38640. 
+
+[59] Balakrishnan PG, Ramesh R, Prem Kumar T. Safety mechanisms in lithium -ion batteries. Journ al of Power 
+
+Sources 2006;155:401 –14. doi:10.1016/j.jpowsour.2005.12.002. 
+
+[60] Tobishima SI, Yamaki JI. A consideration of lithium cell safety. Journal of Power Sources 1999;81 –82:882 –
+
+6. doi:10.1016/S0378 -7753(98)00240 -7. 
+
+[61] Lecocq A, Eshetu GG, Grugeon S , Martin N, Laruelle S, Marlair G. Scenario -based prediction of Li -ion 
+
+batteries fire -induced toxicity. Journal of Power Sources 2016; 316:197 –206. 
+
+doi:10.1016/j.jpowsour.2016.02.090. 
+
+[62] Gough N. Sony Warns Some New Laptop Batteries May Catch Fire. The Ne w York Times 2014. 
+
+https://www.nytimes.com/2014/04/12/technology/sony -warns -some -new -laptop -batteries -may -catch -
+
+fire.html. 
+
+[63] Liu Y, Sun P, Niu H, Huang X. Propensity to self -heating ignition of open -circuit pouch Lithium -ion battery 
+
+pile on a hot bounda ry. Fire Safety Journal 2020. doi:10.1016/j.firesaf.2020.103081. P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+33 
+
+[64] He X, Restuccia F, Zhang Y, Hu Z, Huang X, Fang J. Experimental study of self -heating ignition of lithium -
+
+ion batteries during storage and transport : effect of the number of cells. Fire Technology (under Review) 
+
+2019. 
+
+[65] Blum A, Long RT. Full -scale Fire Tests of Electric Drive Vehicle Batteries. SAE International Jo urnal of 
+
+Passenger Cars - Mechanical Systems 2015;8:565 –72. doi:10.4271/2015 -01 -1383. 
+
+[66] Justen R, Sch öneburg R. Crash S afety of Hybrid and Battery Electric Vehicles. 22nd Enhanced Safety of 
+
+Vehicles Conference, Washington: 2011. 
+
+[67] Wisch M, J. Ott RT, Léost Y, Abert M, Yao J. Recommendations and Guidelines for Battery Crash Safety 
+
+and Post -Crash Handling. EVERSAFE 2014. 
+
+[68] Uwai H, Isoda A, Ichikawa H, Takahashi N. Development of Body Structure for Crash Safety of the Newly 
+
+Developed Electric Vehicle. 22nd Enhanced Safety of Vehicles Conference, Washington: 2011. 
+
+[69] Fairley P. Speed bumps ahead for electric -vehicle cha rging. IEEE Spectrum 2010;47:13 –4. 
+
+doi:10.1109/MSPEC.2010.5372476. 
+
+[70] Zheng J, Engelhard MH, Mei D, Jiao S, Polzin BJ, Zhang JG, et al. Electrolyte additive enabled fast charging 
+
+and stable cycling lithium metal batteries. Nature Energy 2017;2. doi:10.10 38/nenergy.2017.12. 
+
+[71] Larsson F, Mellander B -E. Lithium -ion Batteries used in Electrified Vehicles - General Risk Assessment and 
+
+Co nstruction Guidelines from a Fire and Gas Release Perspective. RISE Research Institutes of Sweden 2017. 
+
+[72] Larsson F. Li thium -ion Battery Safety -Assessment by Abuse Testing, Fluoride Gas Emissions and Fire 
+
+Propagation. Chalmers University of Technology, 2017. 
+
+[73] Colella F. Understanding electric vehicle fires. Fire Protection and Safety in Tunnels, Stavanger: 2016. 
+
+[74] Glassman I, Yetter RA. Combustion. 4th ed. New York: Academic Press; 2008. 
+
+[75] Babrauskas V. Ignition Handbook. Issaquah, WA: Fire Sci ence Publishers/Society of Fire Protection 
+
+Engineers; 2003. doi:10.1023/B:FIRE.0000026981.83829.a5. 
+
+[76] Doughty DH, Pesar an AA. Vehicle Battery Safety Roadmap Guidance. Denver: Renewable Energy 
+
+Laboratory 2012. 
+
+[77] Said AO, Lee C, Stoliarov SI, Marshall AW. Comprehensive analysis of dynamics and hazards associated 
+
+with cascading failure in 18650 lithium ion cell arrays. App lied Energy 2019;248:415 –28. 
+
+doi:10.1016/j.apenergy.2019.04.141. 
+
+[78] Kumar K. Flammability of Plastics in Today ’s Automobiles. SAE Te chnical Papers 2015;4. 
+
+doi:10.4271/2015 -01 -1380. 
+
+[79] Tewarson A. A study of the flammability of plastics in vehicle compo nents and parts. Technical Report 
+
+FMRC JI 0B1R7RC, Factory Mutual Research Corporation, Norwood, MA 1997. 
+
+[80] Iguchi M. Divergence and Convergence of Automobile Fuel Economy Regulations: A Comparative Analysis 
+
+of EU, Japan and the US. Springer Internation al Publishing; 2015. 
+
+[81] Ribi ère P, Grugeon S, Morcrette M, Boyanov S, Laruelle SS, Marlair G, et al. Investig ation on the fire -
+
+induced hazards of Li -ion battery cells by fire calorimetry. Energy & Environmental Science 2012;5:5271 –
+
+80. doi:10.1039/C1EE022 18K. 
+
+[82] U. S. Department of Energy. FOTW #1010, January 1, 2018: All -Electric Light Vehicle Ranges Can Exceed 
+
+Those of Some Gasoline Light Vehicles JANUARY 1, 2018 2018. 
+
+https://www.energy.gov/eere/vehicles/articles/fotw -1010 -january -1-2018 -all -electric -light -vehicle -ranges -
+
+can -exceed -those. 
+
+[83] Fu Y, Lu S, Li K, Liu C, Cheng X, Zhang H. An experimental study on burning behaviors of 18650 lithium 
+
+ion batteries using a cone calorimeter. Journal of Power Sources 2015;273:216 –22. 
+
+doi:10.1016/j.jpowsour.2014 .09.039. 
+
+[84] Chen M, Dongxu O, Liu J, Wang J. Investigation on thermal and fire propagation behaviors of multi ple 
+
+lithium -ion batteries within the package. Applied Thermal Engineering 2019;157:113750. 
+
+doi:10.1016/j.applthermaleng.2019.113750. 
+
+[85] Chen M, He Y, De Zhou C, Richard Y, Wang J, DeZhou C, et al. Experimental Study on the Combustion 
+
+Characteristics of P rimary Lithium Batteries Fire. Fire Technology 2016;52:365 –85. doi:10.1007/s10694 -
+
+014 -0450 -1. 
+
+[86] Chen M, Zhou D, Chen X, Zhang W, L iu J, Yuen R, et al. Investigation on the thermal hazards of 18650 
+
+lithium ion batteries by fire calorimeter. Journal of Th ermal Analysis and Calorimetry 2015;122:755 –63. 
+
+doi:10.1007/s10973 -015 -4751 -5. 
+
+[87] Larsson F, Andersson P, Blomqvist P, Lor én A, Mel lander BE. Characteristics of Lithium -Ion Batteries 
+
+during Fire Tests. Journal of Power Sources 2014;271:414 –20. doi:10.101 6/j.jpowsour.2014.08.027. 
+
+[88] Ping P, Wang QS, Huang PF, Li K, Sun JH, Kong DP, et al. Study of the fire behavior of high -energy 
+
+lit hium -ion batteries with full -scale burning test. Journal of Power Sources 2015;285:80 –9. 
+
+doi:10.1016/j.jpowsour.2015.03.035 .
+
+[89] Sturk D, Hoffmann L, Ahlberg Tidblad A. Fire Tests on E -vehicle Battery Cells and Packs. Traffic Injury 
+
+Prevention 2015;16:159 –64. doi:10.1080/15389588.2015.1015117. P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+34 
+
+[90] Wang Z, Yang H, Li Y, Wang G, Wang J. Thermal runaway and fire behaviors of la rge -scale lithium ion 
+
+batteries with different heating methods. Journal of Hazardous Materials 2019;379:120730. 
+
+doi:10.1016/j.jhazmat .2019.06.007. 
+
+[91] Macneil DD, Lougheed G, Lam C, Carbonneau G, Kroeker R, Edwards D, et al. Electric Vehicle Fire 
+
+Testing. 8th EVS -GTR Meeting, Washington, USA June 1 -5, 2015, 2015. 
+
+[92] Iclodean C, Varga B, Burnete N, Cimerdean D, Jurchi ș B. Comparison of Different Battery Types for Electric 
+
+Vehicles Related content Comparison of Different Battery Types for Electric Vehicles n.d. doi:10.1088/1757 -
+
+899X/252/1/012058. 
+
+[93] 2019 Kia Niro EV Specifications n.d. 
+
+[94] Watanabe N, Sugawa O, Suwa T, Ogawa Y, Hiramatsu M, Tomonori H, et al. Comparison of fire behaviours 
+
+of an electric -battery -powered behicle and gasoline -powered vehicl e in a real -scale fire test. Second 
+
+International Conference on Fires in Vehicles, Chicago: 2012. 
+
+[95] Lecocq A, Ber tana M, Truchot B, Marlair G. Comparison of the fire consequences of an electric vehicle and 
+
+an internal combustion engine vehicle. Internat ional Conference on Fires In Vehicles - FIVE 2012, vol. 2, 
+
+Chicago, United States: 2012, p. 183 –94. 
+
+[96] WPI VH. li -ion battery energy stroage systems: Effect of separation deistances based on a radiation heat 
+
+transfer analysis. 2017. doi:10.2460/javma.234 .6.731. 
+
+[97] Sturk D, Hoffmann L, Tidblad AA. Traffic Injury Prevention Fire Tests on E -vehicle Battery Cells and Pa cks 
+
+Fire Tests on E -vehicle Battery Cells and Packs. Traffic Injury Prevention 2015;16:159 –64. 
+
+doi:10.1080/15389588.2015.1015117. 
+
+[98] Larss on F, Andersson P, Mellander B -E. Lithium -Ion Battery Aspects on Fires in Electrified Vehicles on the 
+
+Basis of Exper imental Abuse Tests. Batteries 2016;2:9. doi:10.3390/batteries2020009. 
+
+[99] Lam C, MacNeil D, Kroeker R, Lougheed G, Lalime G. Full -Scale Fi re Testing of Electric and Internal 
+
+Combustion Engine Vehicles. Fourth International Conference on Fire in Vehicle, Baltimore: 2016. 
+
+[100] Stephens D, Stout P, Sullivan G, Saunders E, Risser J, J. Sayre. Lithium -ion Battery Safety Issues for Electric 
+
+and P lug -in Hybrid Vehicles. National Highway Traffic Safety Administration (Report No DOT HS 812 
+
+418), Washington, DC 20 19. 
+
+[101] Verband der Automobilindustrie (VDA). Accident Assistance and Recovery of Vehicles with High -Voltage 
+
+Systems. Verband Der Automobi lindustrie EV 2017:1 –30. 
+
+[102] Thermal A, Chamber T. Analysis of Li -Ion Battery Gases Vented in an Inert Atmosphere Thermal Test 
+
+Chamber 2019:1 –17. 
+
+[103] Guo F, Ozaki Y, Nishimura K, Hashimoto N, Fujita O. Experimental study on flame stability limits of li thium 
+
+ion battery electrolyte solvents with organophosphorus compounds addition using a candle -like wick 
+
+combustion system. Combustion and Flame 2019;207:63 –70. doi:10.1016/j.combustflame.2019.05.019. 
+
+[104] Tesla Vehicle Safety Report. Tesla 2019. 
+
+[105] Th e Home Office, Road vehicle fires dataset, August 2019, UK 2019. 
+
+https://www.gov.uk/government/statistical -data -sets /fire -statistics -incident -level -datasets. 
+
+[106] “Ferocious ” fire ripped through Liverpool Echo Arena car park. BBC News 2018. 
+
+https://www.bb c.com/news/uk -england -merseyside -42533830. 
+
+[107] Huang X, Nakamura Y. A Review of Fundamental Combustion Phenomena i n Wire Fires. Fire Technology 
+
+2020;56:315 –360. doi:10.1007/s10694 -019 -00918 -5. 
+
+[108] EV century. Lifan 650EV spontaneously ignited. GaoGong EV Web 2018. http://www.gg -ev.com/asdisp2 -
+
+65b095f b-26641 -.html. 
+
+[109] Christy Leung, 297SHARE, Christy Leung. First Hong Kong -designed electric bus rolls out for a month of 
+
+test -drives on city ’s roads | South China Morning Post 2015. 
+
+[110] Herron D. Model S catches fire in Norway at Supercharger, chargin g system seemingly at fault. The Long 
+
+Tail Pipe 2016. https://longt ailpipe.com/2016/01/01/model -s-catches -fire -in -norway -at -supercharger -
+
+charging -system -seemingly -at -fault/. 
+
+[111] Blanco S. Tesla Model S catches fire near Seattle, no injuries reported. Aut oblog 2013. 
+
+https://www.autoblog.com/2013/10/02/tesla -model -s-fire/ .
+
+[112] Lambert F. Tesla Model S fire vs 35 firefighters – watch impressive operation after a high -speed crash. 
+
+Electrek, 18 October 2017 2017. https://electrek.co/2017/10/18/tesla -model -s-fire -high -speed -crash -video -
+
+impressive -operation/. 
+
+[113] Winkler S. Final Report - Crash Involving Tesla Model S - 10400 South Bangerter Highway. South Jordan 
+
+Police Department 2018. 
+
+[114] Marshall R. Report confirms sensor failure caused electric bus fire . The Frederick News Post, Nov 3, 2016 
+
+n.d. 
+
+https://www.frederickne wspost.com/news/politics_and_government/levels_of_government/county/report -
+
+confirms -sensor -failure -caused -electric -bus -fire/article_7689d9d5 -7ded -5586 -b6d9 -b2b2519ca568.html. 
+
+[115] Shiming Y. Hundreds of electric buses ruined in fire. 21cnevcom 2017. P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+35 
+
+http: //www.21cnev.com/html/201705/775455_1.html. 
+
+[116] Mengjie. Tourist buses catch fire in Beijing, no casualties. XINHUANET 2017. 
+
+http://www.xinhuanet.com/english/2017 -05/01/c_136248785.htm. 
+
+[117] Herron D. Electric cars are safer than gasoline cars. Green Tr ansportation 2015. 
+
+https://greentransportation.info/ev -ownership/safer/index.html. 
+
+[118] Lu L, Han X, Li J, Hua J, Ouyang M. A review on the key issues for lithium -ion battery management in 
+
+electric vehicles. Journal of Power Sources 2013;226:272 –88. doi:1 0.1016/j.jpowsour.2012.10.060. 
+
+[119] Williams FA. Mechanisms of fire spread. Symposium (International) on Combustion 1977;16:1281 –94. 
+
+doi:10.1016/S0082 -0784(77)80415 -3. 
+
+[120] Batenburg C Va n. Introduction to HEV, PHEV and EVs: For Technicians and Students New to High -Voltage 
+
+Systems. 1st ed. Automotive Career Development Center; 2014. 
+
+[121] Warner JT. The Handbook of Lithium -Ion Battery Pack Design: Chemistry, Components, Types and 
+
+Terminolo gy. Elsevier Science; 2015. 
+
+[122] Beauregard GP, Phoenix AZ. Report of investigation: Hybrids plus plug in hybrid electric vehicle. National 
+
+Rural Electric Cooperative Association, Inc and US Department of Energy, Idaho National Laboratory by 
+
+Etec 2008. 
+
+[1 23] He X. A mixed energy public bus caught on fire in Shenzhen. Ine wenergy 2016. 
+
+http://www.inewenergy.com/news/guonei/031GO162016.html. 
+
+[124] China battery enterprise alliance. Wuzhoulong hybrid bus fire 2016. 
+
+http://www.cbea.com/hydt/201603/16778.html. 
+
+[125] Chatman S. Denton Woman Says Kia Won ’t Reimburse Her After Car Catches Fire. NBC 5 Dallas -Fort 
+
+Worth 2018. https://www.nbcdfw.com/news/local/Denton -Woman -Says -Kia -Wont -Reimburse -Her -After -
+
+Car -Catches -Fire --491908751.html. 
+
+[126] Bt10m Porsche up in fla mes as battery charging goes wrong. THE NATION, 16 Mar 2018 2018. 
+
+https://www.nationthailand.com/news/30341102. 
+
+[127] Garche J, Brandt K. Li -battery safety. Elsevier; 2019. 
+
+[128] Tidblad AA. Regulatory Outlook on Electric Vehicle Safety. Fifth Internationa l Conference on Fires in 
+
+Vehicles, Bor ås: 2018. 
+
+[129] Cabrera Casti llo E. Advances in Battery Technologies for Electric Vehicles. Elsevier Ltd; 2015. 
+
+doi:10.1016/B978 -1-78242 -377 -5.00018 -2. 
+
+[130] Andreas Sater Boe. Full Scale Electric Vehicle Fire Test. Fi re Product Search 2017. 
+
+https://www.fireproductsearch.com/full -scal e-electric -vehicle -fire -test/. 
+
+[131] Doughty DH, Crafts CC. FreedomCAR Electrical Energy Storage System Abuse Test Manual for Electric 
+
+and Hybrid Electric Vehicle Applications. SAND2005 -312 3 2006. 
+
+[132] Ruiz V, Pfrang A, Kriston A, Omar N, Van den Bossche P, Boon -Brett L. A review of international abuse 
+
+testing standards and regulations for lithium ion batteries in electric and hybrid electric vehicles. Renewable 
+
+and Sustainable Energy Revie ws 2018;81:1427 –52. doi:10.1016/j.rser.2017.05.195. 
+
+[133] SAE. Elec tric and Hybrid Electric Vehicle Rechargeable Energy Storage System (RESS) Safety and Abuse 
+
+Testing. SAE J2464_200911 2009:2. 
+
+[134] SAE Ground Vehicle Technical Committees. Electric and Hybrid Vehicle Propulsion Battery System Safety 
+
+Standard. 2011. 
+
+[135] UL. Batteries for Use In Electric Vehicles. UL 2580 2013. 
+
+[136] IEC. Secondary lithium -ion cells for the propulsion of electric road vehicles – Part 2: Reliability and abuse 
+
+testing. 2010. 
+
+[137] SAE. Electric and Hybrid Electric Vehicle Rechargeable Energy Storage S. SAE J2464 2011:2. 
+
+[138] UNCECE. Uniform Provisions Concerning the Approval of Vehicles with Regard to Specific Requireme nts 
+
+for the Electric Power Train [2015/05]. Regulation No 100 of the Economic Commission for Europe of the 
+
+United Nations (U NECE) 2015. 
+
+[139] SAE. Safety Standard for Electric and Hybrid Vehicle Propulsion Battery System Utilizing Lithium -bsed 
+
+Rechargeabel Cell J2929 -201302. 2013. 
+
+[140] Spotnitz R, Franklin J. Abuse behavior of high -power, lithium -ion cells. Journal of Power So urces 
+
+2003;113:81 –100. doi:10.1016/S0378 -7753(02)00488 -3. 
+
+[141] Zhang X. Thermal analysis of a cylindrical lithium -ion battery. Elec trochimica Acta 2011;56:1246 –55. 
+
+doi:10.1016/j.electacta.2010.10.054. 
+
+[142] Eshetu GG, Jeong S, Pandard P, Lecocq A, Marlair G, Passerini S. Comprehensive Insights into the Thermal 
+
+Stability, Biodegradability, and Combustion Chemistry of Pyrrolidinium -Base d Ionic Liquids. 
+
+ChemSusChem 2017;10:3146 –59. doi:10.1002/cssc.201701006. 
+
+[143] Spinner NS, Field CR, Hammond MH, Williams B A, Myers KM, Lubrano AL, et al. Physical and chemical 
+
+analysis of lithium -ion battery cell -to -cell failure events inside custom fire chamber. Journal of Power 
+
+Sources 2015;279:713 –21. doi:10.1016/j.jpowsour.2015.01.068. P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,   
+
+> Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+36 
+
+[144] Chen S -C, Wang Y -Y, Wan C -C. T hermal Analysis of Spirally Wound Lithium Batteries. Journal of The 
+
+Electrochemical Society 2006;153:A637 –A637. doi:10.1149/1.216805 1. 
+
+[145] Santhanagopalan S, Ramadass P, Zhang J (Zhengming). Analysis of internal short -circuit in a lithium ion cell. 
+
+Journ al of Power Sources 2009;194:550 –7. doi:10.1016/j.jpowsour.2009.05.002. 
+
+[146] Finegan D, Scheel M, Robinson JB, Tjaden B, Hunt I, Ma son TJ, et al. In -operando high -speed tomography 
+
+of lithium -ion batteries during thermal runaway. Nature Communications 2015 ;6:6924. 
+
+doi:10.1038/ncomms7924. 
+
+[147] Cai L, White RE. Mathematical modeling of a lithium ion battery with thermal effects in COMSO L Inc. 
+
+Multiphysics (MP) software. Journal of Power Sources 2011;196:5985 –9. 
+
+doi:10.1016/j.jpowsour.2011.03.017. 
+
+[148] Chen SC, Wan CC, Wang YY. Thermal analysis of lithium -ion batteries. Journal of Power Sources 
+
+2005;140:111 –24. doi:10.1016/j.jpowsour.200 4.05.064. 
+
+[149] Kim G -H, Pesaran A, Spotnitz R. A three -dimensional thermal abuse model for lithium -ion cells. Journal of 
+
+Po wer Sources 2007;170:476 –89. doi:10.1016/j.jpowsour.2007.04.018. 
+
+[150] Mahamud R, Park C. Reciprocating air flow for Li -ion battery thermal management to improve temperature 
+
+uniformity. Journal of Power Sources 2011;196:5685 –96. doi:10.1016/j.jpowsour.2011 .02.076. 
+
+[151] US Department of Transportation. Interim Guidance for Electric and Hybrid -Electric Vehicles Equipped With 
+
+High -Voltag e Batteries. DOT HS 811 575 2014. 
+
+[152] Wang Q. Study on Fire and Fire Spread Characteristics of Lithium Ion Batteries. 2018 China National 
+
+Symposium on Combustion, 2018. 
+
+[153] Andersson P, Brandt J, Willstrand O. Full scale fire -test of an electric hybrid bus. SP Report 2016. 
+
+[154] Łebkowski A. Electric Vehicle Fire Extinguishing System 2017;93:329 –32. doi:10.15199/48.2017.01. 77. 
+
+[155] Gardiner J. The rise of electric cars could leave us with a big battery waste problem. The Guardian,10 Aug 
+
+2017 2017. http s://www.theguardian.com/sustainable -business/2017/aug/10/electric -cars -big -battery -waste -
+
+problem -lithium -recycling. 
+
+[156] Po linares. Fact Sheet: Lithium. GLOBAL 2000 VerlagsgesmbH 2012. 
+
+[157] Egelhaaf M, Kress D, Wolpert D, Lange T. Fire Fighting of Li -ion Traction Batteries. SAE International 
+
+Journal of Alternative Power 2013;2:37 –48. doi:https://doi.org/10.4271/2013 -01 -0213. 
+
+[158] Brandweer Midden - en West -Brabant. Fire accident report. Facebook 2019. 
+
+https://www.facebook.com/BrandweerMWB/posts/2902012643 145806. 
+
+[159] Kong L, Li C, Jiang J, Pecht MG. Li -ion battery fire hazards and safety strategies. Energies 2018;11:1 –11. 
+
+doi :10.3390/en11092191. 
+
+[160] NFPA. Standard for Porable Fire Extinguishers. NFPA 10 2018. 
+
+[161] Schiemann M, Bergthorson J, Fischer P, Scherer V, Taroata D, Schmid G. A review on lithium combustion. 
+
+Applied Energy 2016;162:948 –65. doi:10.1016/j.apenergy.2015 .10.172. 
+
+[162] Andersson P, Wikman J, Arvidson M, Larsson F, Willstrand O. Safe introduction o f battery propulsion at sea. 
+
+RISE Research Institutes of Sweden 2017. 
+
+[163] Willstrand O. To manage fire risks related to Li -ion batteries in vehicles Universitet /h ögskola/f öretag. RISE 
+
+Research Institutes of Sweden 2019;8P03983 -03. 
+
+[164] United Nations Ec onomic and Social Council (UNECE). Agreement concerning the Adoption of Harmonized 
+
+Technical United Nations Regulations for Wheeled Vehicles, Equipment and Parts which can be Fitted and/or 
+
+be Used on Wheeled Vehicles and the Conditions for Reciprocal Recog nition of Approvals Granted on the. 
+
+Unitied Nations Treaty, Geneva: United Nations; 1958. 
+
+[165] The Swedish Fire Protection Association. SBF 127:16 Regler f ör bra ndskydd p å arbetsfordon och -maskiner 
+
+2016. 
+
+[166] The Swedish Fire Protection Association. SBF 128:3 Regler f ör fast automatiskt sl äcksystem p å bussar 2017. 
+
+[167] RISE Research Institutes of Sweden. SP Method 4912Method for testing the suppression performa nce of fire 
+
+suppression systems intended forengine compartments of buses, coachesand other hea vy vehicles 2018. 
+
+[168] Andersson P, Sundstr öm B. Proceedings from 3rd International Conference on Fires in Vehicles. FIVE –
+
+Fires in Vehicles, 2014, p. 274. 
+
+[169 ] NFPA. Emergency Field Guide. NFPA; 2015. 
+
+[170] SafeQuip. Fire Suppression Systems n.d. http: //www.safequip.co.za/product/ceodeux -suppression -system/. 
+
+[171] NFPA. Hybrid and Electric Vehicle Emergency Field Guide 2014:1 –38. 
+
+[172] Joyeux D, Kruppa J, Cajot L-G, Schleich J -B, van de Leur P, Twilt L. Demonstration of real fire tests in car 
+
+parks and high rise buildings. 2001. 
+
+[173] Richard Read. Largest Electric -Car Charging Site: Would You Believe Houston? 2011. 
+
+https://www.greencarreports.com/news/1066818_l argest -electric -car -charging -site -would -you -believe -
+
+houston (accessed December 19, 2018). 
+
+[174 ] NFPA. National Electrical Code. NFPA 70 2020. 
+
+[175] Curtland C. Parking Lot EV Chargers. Buildings 2013. https://www.buildings.com/article -P. Sun, R. Bisschop, H. Niu, X. Huang* (2020) A Review of Battery Fires in Electric Vehicles ,
+
+Fire Technology , 56 Invited Review https://doi.org/10.1007/s10694 -019 -00944 -3
+
+37 
+
+details/articleid/154 85/title/parking -lot -ev -chargers/viewall/true (accessed December 19, 2018).

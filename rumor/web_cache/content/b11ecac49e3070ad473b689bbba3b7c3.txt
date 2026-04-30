@@ -1,0 +1,1812 @@
+Title: Difference between 'new operator' and 'operator new'?
+
+URL Source: https://stackoverflow.com/questions/1885849/difference-between-new-operator-and-operator-new
+
+Markdown Content:
+c++ - Difference between 'new operator' and 'operator new'? - Stack Overflow
+
+===============
+
+By clicking “Sign up”, you agree to our terms of service and acknowledge you have read our privacy policy.
+
+ Sign up with Google
+
+ Sign up with GitHub
+
+OR
+==
+
+Email 
+
+Password 
+
+Sign up
+
+Already have an account? Log in
+
+Skip to main content
+
+Stack Overflow
+1.   About
+2.   Products
+3.   For Teams
+
+1.   Stack Overflow for Teams Where developers & technologists share private knowledge with coworkers
+2.   Advertising Reach devs & technologists worldwide about your product, service or employer brand
+3.   Knowledge Solutions Data licensing offering for businesses to build and improve AI tools and models
+4.   Labs The future of collective knowledge sharing
+5.   About the company Visit the blog
+
+Loading…
+
+1.   
+### current community
+
+   
+
+    *   Stack Overflow help chat 
+    *    Meta Stack Overflow
+
+### your communities
+
+Sign up or log in to customize your list. 
+
+### more stack exchange communities
+
+company blog
+
+3.   Log in
+4.   Sign up
+
+Let's set up your homepage Select a few topics you're interested in:
+====================================================================
+
+python javascript c#reactjs java android html flutter c++node.js typescript css r php angular next.js spring-boot machine-learning sql excel ios azure docker
+
+Or search from our full list:
+
+*   javascript
+*   python
+*   java
+*   c#
+*   php
+*   android
+*   html
+*   jquery
+*   c++
+*   css
+*   ios
+*   sql
+*   mysql
+*   r
+*   reactjs
+*   node.js
+*   arrays
+*   c
+*   asp.net
+*   json
+*   python-3.x
+*   .net
+*   ruby-on-rails
+*   sql-server
+*   swift
+*   django
+*   angular
+*   objective-c
+*   excel
+*   pandas
+*   angularjs
+*   regex
+*   typescript
+*   ruby
+*   linux
+*   ajax
+*   iphone
+*   vba
+*   xml
+*   laravel
+*   spring
+*   asp.net-mvc
+*   database
+*   wordpress
+*   string
+*   flutter
+*   postgresql
+*   mongodb
+*   wpf
+*   windows
+*   xcode
+*   amazon-web-services
+*   bash
+*   git
+*   oracle-database
+*   spring-boot
+*   dataframe
+*   azure
+*   firebase
+*   list
+*   multithreading
+*   docker
+*   vb.net
+*   react-native
+*   eclipse
+*   algorithm
+*   powershell
+*   macos
+*   visual-studio
+*   numpy
+*   image
+*   forms
+*   scala
+*   function
+*   vue.js
+*   performance
+*   twitter-bootstrap
+*   selenium
+*   winforms
+*   kotlin
+*   loops
+*   express
+*   dart
+*   hibernate
+*   sqlite
+*   matlab
+*   python-2.7
+*   shell
+*   rest
+*   apache
+*   entity-framework
+*   android-studio
+*   csv
+*   maven
+*   linq
+*   qt
+*   dictionary
+*   unit-testing
+*   asp.net-core
+*   facebook
+*   apache-spark
+*   tensorflow
+*   file
+*   swing
+*   class
+*   unity-game-engine
+*   sorting
+*   date
+*   authentication
+*   go
+*   symfony
+*   t-sql
+*   opencv
+*   matplotlib
+*   .htaccess
+*   google-chrome
+*   for-loop
+*   datetime
+*   codeigniter
+*   perl
+*   http
+*   validation
+*   sockets
+*   google-maps
+*   object
+*   uitableview
+*   xaml
+*   oop
+*   visual-studio-code
+*   if-statement
+*   cordova
+*   ubuntu
+*   web-services
+*   email
+*   android-layout
+*   github
+*   spring-mvc
+*   elasticsearch
+*   kubernetes
+*   selenium-webdriver
+*   ms-access
+*   ggplot2
+*   user-interface
+*   parsing
+*   pointers
+*   google-sheets
+*   c++11
+*   security
+*   machine-learning
+*   google-apps-script
+*   ruby-on-rails-3
+*   templates
+*   flask
+*   nginx
+*   variables
+*   exception
+*   sql-server-2008
+*   gradle
+*   debugging
+*   tkinter
+*   delphi
+*   listview
+*   jpa
+*   asynchronous
+*   web-scraping
+*   haskell
+*   pdf
+*   jsp
+*   ssl
+*   amazon-s3
+*   google-cloud-platform
+*   jenkins
+*   testing
+*   xamarin
+*   wcf
+*   batch-file
+*   generics
+*   npm
+*   ionic-framework
+*   network-programming
+*   unix
+*   recursion
+*   google-app-engine
+*   mongoose
+*   visual-studio-2010
+*   .net-core
+*   android-fragments
+*   assembly
+*   animation
+*   math
+*   svg
+*   session
+*   rust
+*   intellij-idea
+*   hadoop
+*   curl
+*   join
+*   winapi
+*   next.js
+*   django-models
+*   laravel-5
+*   url
+*   heroku
+*   http-redirect
+*   tomcat
+*   google-cloud-firestore
+*   inheritance
+*   webpack
+*   image-processing
+*   gcc
+*   keras
+*   swiftui
+*   asp.net-mvc-4
+*   logging
+*   dom
+*   matrix
+*   pyspark
+*   actionscript-3
+*   button
+*   post
+*   optimization
+*   firebase-realtime-database
+*   web
+*   jquery-ui
+*   cocoa
+*   xpath
+*   iis
+*   d3.js
+*   javafx
+*   firefox
+*   xslt
+*   internet-explorer
+*   caching
+*   select
+*   asp.net-mvc-3
+*   opengl
+*   events
+*   asp.net-web-api
+*   plot
+*   dplyr
+*   encryption
+*   magento
+*   stored-procedures
+*   search
+*   amazon-ec2
+*   ruby-on-rails-4
+*   memory
+*   canvas
+*   audio
+*   multidimensional-array
+*   random
+*   jsf
+*   vector
+*   redux
+*   cookies
+*   input
+*   facebook-graph-api
+*   flash
+*   indexing
+*   xamarin.forms
+*   arraylist
+*   ipad
+*   cocoa-touch
+*   data-structures
+*   video
+*   azure-devops
+*   model-view-controller
+*   serialization
+*   apache-kafka
+*   jdbc
+*   woocommerce
+*   razor
+*   routes
+*   awk
+*   mod-rewrite
+*   servlets
+*   excel-formula
+*   beautifulsoup
+*   filter
+*   docker-compose
+*   iframe
+*   aws-lambda
+*   design-patterns
+*   text
+*   visual-c++
+*   django-rest-framework
+*   cakephp
+*   mobile
+*   android-intent
+*   struct
+*   react-hooks
+*   methods
+*   groovy
+*   mvvm
+*   lambda
+*   ssh
+*   checkbox
+*   time
+*   ecmascript-6
+*   grails
+*   google-chrome-extension
+*   installation
+*   cmake
+*   sharepoint
+*   shiny
+*   spring-security
+*   jakarta-ee
+*   plsql
+*   android-recyclerview
+*   core-data
+*   types
+*   sed
+*   meteor
+*   android-activity
+*   activerecord
+*   bootstrap-4
+*   websocket
+*   graph
+*   replace
+*   group-by
+*   scikit-learn
+*   vim
+*   file-upload
+*   junit
+*   boost
+*   memory-management
+*   sass
+*   async-await
+*   import
+*   deep-learning
+*   error-handling
+*   eloquent
+*   dynamic
+*   soap
+*   dependency-injection
+*   silverlight
+*   layout
+*   apache-spark-sql
+*   charts
+*   deployment
+*   browser
+*   gridview
+*   svn
+*   while-loop
+*   google-bigquery
+*   vuejs2
+*   highcharts
+*   dll
+*   ffmpeg
+*   view
+*   foreach
+*   makefile
+*   plugins
+*   redis
+*   c#-4.0
+*   reporting-services
+*   jupyter-notebook
+*   unicode
+*   merge
+*   reflection
+*   https
+*   server
+*   google-maps-api-3
+*   twitter
+*   oauth-2.0
+*   extjs
+*   terminal
+*   axios
+*   pip
+*   split
+*   cmd
+*   pytorch
+*   encoding
+*   django-views
+*   collections
+*   database-design
+*   hash
+*   netbeans
+*   automation
+*   data-binding
+*   ember.js
+*   build
+*   tcp
+*   pdo
+*   sqlalchemy
+*   apache-flex
+*   entity-framework-core
+*   concurrency
+*   mysqli
+*   command-line
+*   spring-data-jpa
+*   printing
+*   react-redux
+*   java-8
+*   lua
+*   html-table
+*   ansible
+*   neo4j
+*   service
+*   jestjs
+*   parameters
+*   enums
+*   material-ui
+*   flexbox
+*   module
+*   promise
+*   visual-studio-2012
+*   outlook
+*   web-applications
+*   firebase-authentication
+*   webview
+*   uwp
+*   jquery-mobile
+*   utf-8
+*   datatable
+*   python-requests
+*   parallel-processing
+*   colors
+*   drop-down-menu
+*   scipy
+*   scroll
+*   tfs
+*   hive
+*   count
+*   syntax
+*   ms-word
+*   twitter-bootstrap-3
+*   ssis
+*   fonts
+*   rxjs
+*   constructor
+*   google-analytics
+*   file-io
+*   three.js
+*   paypal
+*   powerbi
+*   graphql
+*   cassandra
+*   discord
+*   graphics
+*   compiler-errors
+*   gwt
+*   socket.io
+*   react-router
+*   backbone.js
+*   solr
+*   memory-leaks
+*   url-rewriting
+*   datatables
+*   nlp
+*   oauth
+*   terraform
+*   datagridview
+*   drupal
+*   zend-framework
+*   oracle11g
+*   knockout.js
+*   triggers
+*   neural-network
+*   interface
+*   django-forms
+*   angular-material
+*   casting
+*   jmeter
+*   google-api
+*   linked-list
+*   path
+*   timer
+*   arduino
+*   django-templates
+*   proxy
+*   orm
+*   directory
+*   windows-phone-7
+*   parse-platform
+*   visual-studio-2015
+*   cron
+*   conditional-statements
+*   push-notification
+*   functional-programming
+*   primefaces
+*   pagination
+*   model
+*   jar
+*   xamarin.android
+*   hyperlink
+*   uiview
+*   vbscript
+*   visual-studio-2013
+*   google-cloud-functions
+*   gitlab
+*   azure-active-directory
+*   jwt
+*   download
+*   swift3
+*   sql-server-2005
+*   process
+*   configuration
+*   rspec
+*   pygame
+*   properties
+*   combobox
+*   callback
+*   windows-phone-8
+*   linux-kernel
+*   safari
+*   scrapy
+*   permissions
+*   emacs
+*   x86
+*   clojure
+*   scripting
+*   raspberry-pi
+*   scope
+*   io
+*   azure-functions
+*   expo
+*   compilation
+*   responsive-design
+*   mongodb-query
+*   nhibernate
+*   angularjs-directive
+*   request
+*   bluetooth
+*   binding
+*   reference
+*   dns
+*   architecture
+*   3d
+*   playframework
+*   pyqt
+*   version-control
+*   discord.js
+*   doctrine-orm
+*   package
+*   f#
+*   rubygems
+*   get
+*   sql-server-2012
+*   autocomplete
+*   tree
+*   openssl
+*   datepicker
+*   kendo-ui
+*   jackson
+*   yii
+*   controller
+*   grep
+*   nested
+*   xamarin.ios
+*   static
+*   null
+*   statistics
+*   transactions
+*   active-directory
+*   datagrid
+*   dockerfile
+*   uiviewcontroller
+*   webforms
+*   discord.py
+*   sas
+*   computer-vision
+*   phpmyadmin
+*   notifications
+*   duplicates
+*   mocking
+*   pycharm
+*   youtube
+*   yaml
+*   nullpointerexception
+*   menu
+*   blazor
+*   sum
+*   plotly
+*   bitmap
+*   asp.net-mvc-5
+*   visual-studio-2008
+*   yii2
+*   floating-point
+*   css-selectors
+*   stl
+*   electron
+*   android-listview
+*   jsf-2
+*   time-series
+*   cryptography
+*   ant
+*   hashmap
+*   character-encoding
+*   stream
+*   msbuild
+*   asp.net-core-mvc
+*   sdk
+*   google-drive-api
+*   jboss
+*   selenium-chromedriver
+*   joomla
+*   devise
+*   cors
+*   navigation
+*   cuda
+*   anaconda
+*   background
+*   frontend
+*   multiprocessing
+*   binary
+*   pyqt5
+*   camera
+*   iterator
+*   linq-to-sql
+*   mariadb
+*   onclick
+*   android-jetpack-compose
+*   ios7
+*   microsoft-graph-api
+*   rabbitmq
+*   android-asynctask
+*   tabs
+*   amazon-dynamodb
+*   laravel-4
+*   environment-variables
+*   uicollectionview
+*   insert
+*   linker
+*   xsd
+*   coldfusion
+*   console
+*   continuous-integration
+*   upload
+*   textview
+*   ftp
+*   opengl-es
+*   macros
+*   operating-system
+*   mockito
+*   localization
+*   formatting
+*   xml-parsing
+*   vuejs3
+*   json.net
+*   type-conversion
+*   data.table
+*   kivy
+*   timestamp
+*   integer
+*   calendar
+*   segmentation-fault
+*   android-ndk
+*   prolog
+*   drag-and-drop
+*   char
+*   crash
+*   jasmine
+*   automated-tests
+*   geometry
+*   dependencies
+*   azure-pipelines
+*   android-gradle-plugin
+*   fortran
+*   itext
+*   sprite-kit
+*   mfc
+*   header
+*   attributes
+*   firebase-cloud-messaging
+*   nosql
+*   format
+*   nuxt.js
+*   odoo
+*   db2
+*   jquery-plugins
+*   event-handling
+*   jenkins-pipeline
+*   julia
+*   leaflet
+*   nestjs
+*   annotations
+*   flutter-layout
+*   keyboard
+*   postman
+*   textbox
+*   arm
+*   visual-studio-2017
+*   stripe-payments
+*   gulp
+*   libgdx
+*   synchronization
+*   timezone
+*   uikit
+*   azure-web-app-service
+*   dom-events
+*   xampp
+*   wso2
+*   crystal-reports
+*   namespaces
+*   aggregation-framework
+*   android-emulator
+*   swagger
+*   uiscrollview
+*   google-sheets-formula
+*   jvm
+*   sequelize.js
+*   chart.js
+*   com
+*   snowflake-cloud-data-platform
+*   subprocess
+*   geolocation
+*   webdriver
+*   html5-canvas
+*   garbage-collection
+*   centos
+*   dialog
+*   sql-update
+*   numbers
+*   concatenation
+*   widget
+*   qml
+*   tuples
+*   set
+*   java-stream
+*   mapreduce
+*   ionic2
+*   smtp
+*   windows-10
+*   android-edittext
+*   rotation
+*   modal-dialog
+*   spring-data
+*   nuget
+*   radio-button
+*   doctrine
+*   http-headers
+*   grid
+*   sonarqube
+*   lucene
+*   xmlhttprequest
+*   listbox
+*   switch-statement
+*   initialization
+*   internationalization
+*   components
+*   boolean
+*   apache-camel
+*   google-play
+*   serial-port
+*   gdb
+*   ios5
+*   ldap
+*   return
+*   youtube-api
+*   pivot
+*   eclipse-plugin
+*   latex
+*   frameworks
+*   tags
+*   containers
+*   github-actions
+*   c++17
+*   subquery
+*   dataset
+*   asp-classic
+*   foreign-keys
+*   label
+*   embedded
+*   uinavigationcontroller
+*   copy
+*   delegates
+*   struts2
+*   google-cloud-storage
+*   migration
+*   protractor
+*   base64
+*   queue
+*   find
+*   uibutton
+*   sql-server-2008-r2
+*   arguments
+*   composer-php
+*   append
+*   jaxb
+*   stack
+*   zip
+*   tailwind-css
+*   cucumber
+*   autolayout
+*   ide
+*   entity-framework-6
+*   iteration
+*   popup
+*   r-markdown
+*   windows-7
+*   airflow
+*   vb6
+*   g++
+*   ssl-certificate
+*   hover
+*   clang
+*   jqgrid
+*   range
+*   gmail
+
+Next You’ll be prompted to create an account to view your personalized homepage.
+
+1.       1.   Home
+    2.   Questions
+    3.   AI Assist Labs
+    4.   Tags
+
+    6.   Challenges
+    7.   Chat
+    8.   Articles
+    9.   Users
+
+    11.   Jobs
+    12.   Companies
+    13.   Collectives 
+    14.   Communities for your favorite technologies. Explore all Collectives
+
+2.   Teams Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+
+Try Teams for free Explore Teams 
+3.   Teams
+4.   Ask questions, find answers and collaborate at work with Stack Overflow for Teams. Explore Teams
+
+##### Collectives™ on Stack Overflow
+
+Find centralized, trusted content and collaborate around the technologies you use most.
+
+Learn more about Collectives
+
+**Teams**
+
+Q&A for work
+
+Connect and share knowledge within a single location that is structured and easy to search.
+
+Learn more about Teams
+
+Hang on, you can't upvote just yet.
+===================================
+
+You'll need to complete a few actions and gain 15 reputation points before being able to upvote. **Upvoting** indicates when questions and answers are useful. What's reputation and how do I get it?
+
+Instead, you can save this post to reference later.
+
+ Save this post for later Not now
+
+Thanks for your vote! 
+
+ You now have 5 free votes weekly.
+==========================================================
+
+Free votes
+*   count toward the total vote score
+*   does not give reputation to the author
+
+Continue to help good content that is interesting, well-researched, and useful, rise to the top! To gain full voting privileges, earn reputation.
+
+Got it!Go to help center to learn more
+
+Difference between 'new operator' and 'operator new'?
+=====================================================
+
+Ask Question
+
+Asked 15 years, 10 months ago
+
+Modified 1 year, 1 month ago
+
+Viewed 49k times 
+
+This question shows research effort; it is useful and clear
+
+ 157 
+
+Save this question.
+
+Show activity on this post.
+
+What is difference between "new operator" and "operator new"?
+
+*   c++
+*   dynamic-memory-allocation
+*   new-operator
+
+Share
+
+Share a link to this question 
+
+Copy link CC BY-SA 3.0
+
+Improve this question
+
+ Follow 
+
+Follow this question to receive notifications
+
+edited Sep 8, 2024 at 11:05
+
+einpoklum
+
+137k 85 85 gold badges 441 441 silver badges 909 909 bronze badges
+
+ asked Dec 11, 2009 at 4:51
+
+Sandeep Sandeep
+
+3,317 5 5 gold badges 26 26 silver badges 18 18 bronze badges
+
+3
+
+*   3  Hi, can you please clarify the question? Looks like there is typo somewhere.Dima Malenko  –Dima Malenko 2009-12-11 04:54:03 +00:00 Commented Dec 11, 2009 at 4:54  
+*   23  The question is worded correctly, see answers below. The method for dynamically allocating memory is to use the `new` operator. This operator can be overloaded. To distinguish between the default operator and an overloaded version, the default is called "new operator" and the overloaded version is called "operator new".Thomas Matthews  –Thomas Matthews 2009-12-11 18:55:37 +00:00 Commented Dec 11, 2009 at 18:55  
+*   2  How to do that. I am new and unaware.Sandeep  –Sandeep 2009-12-23 08:48:13 +00:00 Commented Dec 23, 2009 at 8:48  
+
+Add a comment|
+
+8 Answers 8
+-----------
+
+ Sorted by:  Reset to default
+
+This answer is useful
+
+ 158 
+
+Save this answer.
+
+Show activity on this post.
+
+I usually try to phrase things differently to differentiate between the two a bit better, but it's a good question in any case.
+
+Operator new is a function that allocates raw memory -- at least conceptually, it's not much different from `malloc()`. Though it's fairly unusual unless you're writing something like your own container, you can call operator new directly, like:
+
+```cpp
+char *x = static_cast<char *>(operator new(100));
+```
+
+It's also possible to overload operator new either globally, or for a specific class. IIRC, the signature is:
+
+```cpp
+void *operator new(size_t);
+```
+
+Of course, if you overload an operator new (either global or for a class), you'll also want/need to overload the matching operator delete as well. For what it's worth, there's also a separate operator new[] that's used to allocate memory for arrays -- but you're almost certainly better off ignoring that whole mess completely.
+
+The new operator is what you normally use to create an object from the free store:
+
+```cpp
+my_class *x = new my_class(0);
+```
+
+The difference between the two is that operator new _just_ allocates raw memory, nothing else. The new operator starts by using operator new to allocate memory, but then it invokes the constructor for the right type of object, so the result is a real live object created in that memory. If that object contains any other objects (either embedded or as base classes) those constructors as invoked as well.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 2.5
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Dec 11, 2009 at 5:08
+
+Jerry Coffin Jerry Coffin
+
+494k 83 83 gold badges 654 654 silver badges 1.1k 1.1k bronze badges
+
+ Sign up to request clarification or add additional context in comments. 
+
+11 Comments
+-----------
+
+Add a comment
+
+David Rodríguez - dribeas
+
+David Rodríguez - dribeas Over a year ago
+
++1, as to a different phrasing, the standard uses _new expression_ all around, and only once it uses _new operator_ to refer to the place of call. I tend to do the same: _operator new_ for the _allocator_ and _new expression_ for the use.
+
+2011-03-16T19:19:40.063Z+00:00
+
+26
+
+Reply
+
+*   Copy link
+
+Kaz
+
+Kaz Over a year ago
+
+A new expression is the whole phrase that begins with new. So what do you call just the "new" part of it? If it's wrong to call that the new operator, then we should not call "sizeof" the sizeof operator, or & the address-of operator (when it behaves like one).
+
+2012-03-07T08:44:23.23Z+00:00
+
+4
+
+Reply
+
+*   Copy link
+
+C S
+
+C S Over a year ago
+
+Following up on Kaz's remark, perhaps the question should be rephrased as, What's the difference between the new operator and the operator new operator? :)
+
+2012-12-24T00:09:01.083Z+00:00
+
+1
+
+Reply
+
+*   Copy link
+
+user997112
+
+user997112 Over a year ago
+
+"operator new" vs "new keyword"
+
+2014-08-08T12:27:44.077Z+00:00
+
+3
+
+Reply
+
+*   Copy link
+
+Jerry Coffin
+
+Jerry Coffin Over a year ago
+
+@antred: You'd release that with something like `operator delete(x);`.
+
+2014-10-30T13:25:32.207Z+00:00
+
+2
+
+Reply
+
+*   Copy link
+
+Add a comment|Show 6 more comments
+
+This answer is useful
+
+ 42 
+
+Save this answer.
+
+Show activity on this post.
+
+"operator new"
+
+```cpp
+class Foo
+{
+public:
+        void* operator new( size_t );
+}
+```
+
+"new operator":
+
+```cpp
+Foo* foo = new Foo();
+```
+
+In this example, `new Foo()` calls `Foo::operator new()`
+
+In other words, "new operator" calls "`operator new()`" just like the + operator calls `operator +()`
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 2.5
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Nov 5, 2010 at 8:43
+
+Ashwin Nanjappa
+
+78.9k 90 90 gold badges 223 223 silver badges 298 298 bronze badges
+
+ answered Dec 11, 2009 at 5:03
+
+Austin Hyde Austin Hyde
+
+27.6k 29 29 gold badges 100 100 silver badges 132 132 bronze badges
+
+11 Comments
+-----------
+
+Add a comment
+
+AnT stands with Russia
+
+AnT stands with Russia Over a year ago
+
+`new` is not an operator in C++. `sizeof`, for example, is an operator, but `new` and `delete` are not. `new` and `delete` are keywords and the syntactical constructs that these keywords form are called _new-expression_ and _delete-expression_.
+
+2009-12-11T05:16:22.56Z+00:00
+
+16
+
+Reply
+
+*   Copy link
+
+Austin Hyde
+
+Austin Hyde Over a year ago
+
+Uh, if anything, `sizeof` is the syntactic construct, and `new` and `delete` are both valid, legal, overload-able operators. From everything I've ever seen, `new` and `delete` are both operators. See [cplusplus.com][cplusplus.com/doc/tutorial/classes2/]
+
+2009-12-11T05:28:07.027Z+00:00
+
+3
+
+Reply
+
+*   Copy link
+
+AnT stands with Russia
+
+AnT stands with Russia Over a year ago
+
+Incorrect. The official C++ terminology is the terminology defined by the language specification, not by some web site. In the language specification there's no such therm as "new operator", but there's such term as "`operator new` function". Again, `sizeof` is explicilty referred to as an "operator", while `new` and `delete` are _never_ referred to as operators.
+
+2009-12-11T06:14:38.363Z+00:00
+
+8
+
+Reply
+
+*   Copy link
+
+Roger Pate
+
+Roger Pate Over a year ago
+
+AndreyT: Incorrect. The C++ standard does call 'new' an operator, see 13.5/1.
+
+2009-12-11T07:35:20.127Z+00:00
+
+7
+
+Reply
+
+*   Copy link
+
+AnT stands with Russia
+
+AnT stands with Russia Over a year ago
+
+Well, I agree. But when I look at the original question, that is what I see: a purely _terminological_ question. Terminological questions are supposed to be pedantic, in my opinion.
+
+2009-12-11T23:21:19.133Z+00:00
+
+3
+
+Reply
+
+*   Copy link
+
+Add a comment|Show 6 more comments
+
+This answer is useful
+
+ 26 
+
+Save this answer.
+
+Show activity on this post.
+
+Following is the quote from More Effective C++ book from Scott Meyers:
+
+> The new operator calls a function to perform the requisite memory allocation, and you can rewrite or overload that function to change its behavior. The name of the function the new operator calls to allocate memory is operator new.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 2.5
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Dec 11, 2009 at 4:59
+
+Naveen Naveen
+
+73.8k 47 47 gold badges 181 181 silver badges 237 237 bronze badges
+
+2 Comments
+----------
+
+Add a comment
+
+AnT stands with Russia
+
+AnT stands with Russia Over a year ago
+
+The term is obviously invented by the author of the book (or,maybe, borrowed from some obsolete source). In formal C++ nomenclature there's no such term as "new operator".
+
+2009-12-11T05:18:06.163Z+00:00
+
+7
+
+Reply
+
+*   Copy link
+
+Mooing Duck
+
+Mooing Duck Over a year ago
+
+@AndreyT: I did a search of the C++11 for "new operator" and found it referenced in four places. Specifically, two references to the "placement new operator"
+
+2015-02-11T18:56:35.033Z+00:00
+
+3
+
+Reply
+
+*   Copy link
+
+This answer is useful
+
+ 12 
+
+Save this answer.
+
+Show activity on this post.
+
+The OP's question is not phrased properly. It's better to phase as 'Difference between 'operator new' and 'new expression'?' Note 'operator new' often refers to 'operator new function' as well.
+
+And there are plenty correct answer around, below is mine:
+
+1> 'new expression' call 'operator new' to allocate raw memory,then call constructor
+
+```cpp
+apple * p = new apple(); //new expression
+```
+
+2> 'operator new' only allocate raw memory, not much difference than malloc
+
+```cpp
+void* mem = operator new(sizeof(apple)); //just like calling malloc()
+apple* p2 = new(mem) apple(1); //call construct here using placement new.
+```
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Oct 16, 2012 at 15:52
+
+ answered Oct 16, 2012 at 15:44
+
+RoundPi RoundPi
+
+5,977 9 9 gold badges 51 51 silver badges 76 76 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+This answer is useful
+
+ 11 
+
+Save this answer.
+
+Show activity on this post.
+
+When you create a new object the memory is _allocated_ using **operator new** then the constructor is invoked to _initialise_ the memory. The **new operator** does both the allocation and the initialisation, where as the operator new only does the allocation.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 2.5
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Dec 11, 2009 at 4:56
+
+Chris Fulstow Chris Fulstow
+
+42k 10 10 gold badges 90 90 silver badges 113 113 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+This answer is useful
+
+ 7 
+
+Save this answer.
+
+Show activity on this post.
+
+There's no difference between "new operator" and "operator new". Both refer to the same thing: the overloadable/replaceable `operator new` function that typically performs raw memory allocation for objects created by _new-expressions_.
+
+Note also that _neither_ term is present in the language specification (which is the defining source of the official terminology).
+
+When you use `new` in your program to create an object, it is called _new-expression_. _New-expression_ consists of keyword `new` and additional syntactic parts defined by the grammar. No part of this expression's syntax is ever referred to as an "operator".
+
+The raw memory allocation function `operator new` is officially referred to as just "`operator new` function". Note that the words `operator` and `new` in this sequence are just two separate C++ language keywords. They don't form an English term "operator new". Nowhere in the language specification you'll find any references to "operator new" as an English term. Every time this is just a combination of two independent keywords that produce declaration syntax for a memory allocation function.
+
+Again, in resume: formally in C++ there's no such English language terms as "operator new" or "new operator". The former sequence is present in the language specification as a mere combination of keywords, not as an English term. The latter is not present at all.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 2.5
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Dec 11, 2009 at 6:58
+
+ answered Dec 11, 2009 at 5:08
+
+AnT stands with Russia AnT stands with Russia
+
+322k 44 44 gold badges 548 548 silver badges 792 792 bronze badges
+
+1 Comment
+---------
+
+Add a comment
+
+Roger Pate
+
+Roger Pate Over a year ago
+
+You seem lost in some pedantic mental-masturbation. The standard is vague in spots, and this is one of them. It makes just as much sense to "discuss the new operator" as it does to "discuss the plus operator" or "discuss the + operator".
+
+2009-12-11T07:39:59.04Z+00:00
+
+16
+
+Reply
+
+*   Copy link
+
+This answer is useful
+
+ 4 
+
+Save this answer.
+
+Show activity on this post.
+
+1.   _new_ is an operator as well as a keyword.
+
+see [1] In 2.13 && In 2.12.
+
+2.   _new_ does two things: T* t = new T(arg);
+
+1)allocate memory for the object: void* ptr = _operator new_(sizeof(T));
+
+//_operator new_ is a function(just like malloc in c), not an operator.(see [1] In 3.7.4 ). But Item 7 [2] said it is an operator too. In my opinion, the difference between operator and function is small, and you can see it when you recall that overloading operator is implemented by functions.
+
+//we can overload this operator/function(operator new) doing what we want just here.
+
+2)initialize the object in the allocated memory: call T::T(arg) on ptr
+
+//**only** compiler can do this. Neither me nor you can.
+
+//also compiler will invoke member objects' constructors and base class's constructor if T has them. And this invocation is recursive. Only compiler can do that.
+
+3.   So, operator new does part of the missions of new, and only in this part we can do something.
+
+[1]: ISO/IEC, N3690. http://ww.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3690.pdf
+
+[2]: Meyers, Scott. Effective C++, 3rd.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Jan 15, 2014 at 7:02
+
+ answered Jan 15, 2014 at 6:16
+
+njuhgn njuhgn
+
+41 3 3 bronze badges
+
+Comments
+--------
+
+Add a comment
+
+This answer is useful
+
+ 2 
+
+Save this answer.
+
+Show activity on this post.
+
+**The new operator**: C++ supports dynamic allocation of objects using the new operator. The new operator allocate memory for objects from a pool called the free store. The new operator calls the special function operator new.
+
+**operator new**: If the request is for zero bytes of storage, operator new returns a pointer to a distinct object (that is, repeated calls to operator new return different pointers). If there is insufficient memory for the allocation request, operator new returns NULL or throws an exception. The first argument to operator new must be of type size_t (a type defined in STDDEF.H), and the return type is always void *.
+
+Here is a MSDN links for more details:
+
+The operator new Function
+
+The new Operator
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 2.5
+
+Improve this answer
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Dec 11, 2009 at 5:10
+
+aJ.aJ.
+
+35.7k 22 22 gold badges 89 89 silver badges 132 132 bronze badges
+
+1 Comment
+---------
+
+Add a comment
+
+Roger Pate
+
+Roger Pate Over a year ago
+
+Slight clarification: the non-placement operator new must always throw on allocation failure (according to the standard); and placement forms, such as `::new(std::nothrow)`, can do either (that specific example returns a null pointer).
+
+2009-12-21T21:49:30.363Z+00:00
+
+1
+
+Reply
+
+*   Copy link
+
+Your Answer
+-----------
+
+Thanks for contributing an answer to Stack Overflow!
+
+*   Please be sure to _answer the question_. Provide details and share your research!
+
+But _avoid_ …
+
+*   Asking for help, clarification, or responding to other answers.
+*   Making statements based on opinion; back them up with references or personal experience.
+
+To learn more, see our tips on writing great answers.
+
+Draft saved
+
+Draft discarded
+
+### Sign up or log in
+
+ Sign up using Google 
+
+ Sign up using Email and Password 
+
+Submit
+
+### Post as a guest
+
+Name 
+
+Email 
+Required, but never shown
+
+ Post Your Answer  Discard 
+By clicking “Post Your Answer”, you agree to our terms of service and acknowledge you have read our privacy policy.
+
+Start asking to get answers
+
+Find the answer to your question by asking.
+
+Ask question
+
+Explore related questions
+
+*   c++
+*   dynamic-memory-allocation
+*   new-operator
+
+See similar questions with these tags.
+
+*    The Overflow Blog 
+*    Your runbooks are obsolete in the age of agents 
+*    Featured on Meta 
+*     A First Look: Stack Overflow Redesign 
+*     Community Asks Sprint Announcement - October/November 2025 
+*     Upcoming opinion-based questions alpha experiment on Stack Overflow 
+
+Report this ad
+
+Report this ad
+
+Community activity
+
+Last 1 hr
+
+*   Users online activity  8330 users online 
+*    18 questions 
+*    15 answers 
+*    45 comments 
+*    162 upvotes 
+
+Popular tags
+
+java python c#c android javascript
+
+Popular unanswered question
+
+Wrong result when adding up to result in my number conversion program
+
+c math
+
+Brentspine
+*   911
+
+2 days ago
+
+#### Linked
+
+10 Difference between "new" operator and "new" function
+
+8 How come a new-expression can correctly produce the pointer type, even though it should return void*?
+
+2 What is the difference between applying of `operator new(std::size_t);` and `new-expression`?
+
+-1 Difference between new and operator new in C++
+
+0 How to understand overload of new?
+
+0 Deallocation in presence of a throwing constructor
+
+96 Determine size of dynamically allocated memory in C
+
+86 Is `new` in `new int;` considered an operator?
+
+27 How would I use the sized operators delete/delete[] and why are they better?
+
+13 Why doesn't new require a cast to the pointer even though malloc requires it?
+
+See more linked questions
+
+#### Related
+
+366 When should I use the new keyword in C++?
+
+3 when should I use the new operator in C++
+
+4 C++ 'new' operator - Modes of use?
+
+4 new operator in c++
+
+2 difference between new(size) and new[size]
+
+2 Difference in creating an object in C++ using new keyword and not
+
+3 What's the difference between these two new syntaxes?
+
+5 Clarification: What makes 'new' an operator in C++
+
+1 Difference between two different declarations with new operator and pointer
+
+3 Difference between new int () and new int { } in C++
+
+#### Hot Network Questions
+
+*    Do routers rate-limit TimeExceeded packets generated by other routers?
+*    Enolizability of different enolizable sites
+*    Why does Jesus seem to misquote Isaiah 61 in Luke 4, by adding to the text?
+*    How would you say something like "(the) first _____ of the year", the blank being a vegetable/fruit, etc.?
+*    Sort output using "--key" and "--field-separator"
+*    Question about Dragon Ferocity and Feral Combat Training
+*    \ref theorem hyperlink jumps to the wrong theorem
+*    What railway "ticket strategy" should I use for this Japan itinerary?
+*    Why is there negative voltage in this preamp circuit
+*    Can we exchange the order of ultrapowers?
+*    Calculating standard errors in least squares and the normality assumption
+*    Identify Redundant Regex
+*    A replacement for alcohol in bars
+*    What is the best way to assess audio quality in an embedded or Android system?
+*    CSV handling class
+*    What are the requirements for God's word such that it will "not return void"?
+*    Xubuntu Linux 25.10 - not available automatically
+*    How do I find what's causing a task to be slow, when CPU, memory, disk and network are not used at 100%?
+*    Can every Sidon set of size 3 be extended to a finite perfect difference set?
+*    PC game - Criminal Investigation First-Person with trippy amnesia device?
+*    What's the purpose of this panel on the exterior of my home?
+*    How to convert a TEX file to a DVI file
+*    Where to install bidet valve?
+*    Could lightning occur in fog or mist?
+
+Question feed
+
+Subscribe to RSS
+================
+
+ Question feed 
+To subscribe to this RSS feed, copy and paste this URL into your RSS reader.
+
+ 
+
+lang-cpp
+
+Why are you flagging this comment?
+==================================
+
+Probable spam. 
+This comment promotes a product, service or website while failing to disclose the author's affiliation.
+
+ 
+
+Unfriendly or contains harassment/bigotry/abuse. 
+This comment is unkind, insulting or attacks another person or group. Learn more in our Abusive behavior policy.
+
+ 
+
+Not needed. 
+This comment is not relevant to the post.
+
+ 
+
+Enter at least 6 characters
+
+Something else. 
+A problem not listed above. Try to be as specific as possible.
+
+ 
+
+Enter at least 6 characters
+
+Flag comment Cancel
+
+You have 0 flags left today
+
+##### Stack Overflow
+
+*   Questions
+*   Help
+*   Chat
+
+##### Products
+
+*   Teams
+*   Advertising
+*   Talent
+
+##### Company
+
+*   About
+*   Press
+*   Work Here
+*   Legal
+*   Privacy Policy
+*   Terms of Service
+*   Contact Us
+*    Your Privacy Choices 
+*   Cookie Policy
+
+##### Stack Exchange Network
+
+*   Technology
+*   Culture & recreation
+*   Life & arts
+*   Science
+*   Professional
+*   Business
+*   API
+*   Data
+
+*   Blog
+*   Facebook
+*   Twitter
+*   LinkedIn
+*   Instagram
+
+Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under CC BY-SA. rev 2025.10.21.35661
+
+By continuing to use this website, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our Cookie Policy. By exiting this window, default cookies will be accepted. To reject cookies, select an option from below.
+
+Necessary cookies only
+
+Customize settings

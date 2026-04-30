@@ -1,0 +1,911 @@
+Title: Molecular basis of positional memory in limb regeneration
+
+URL Source: https://www.nature.com/articles/s41586-025-09036-5
+
+Markdown Content:
+Main
+----
+
+Many adult cells retain positional information from embryogenesis in the form of spatially organized differences in gene expression and chromatin 3,4, a property that could potentially be used to engineer regenerating tissues. A valuable system to dissect the mechanism of positional information and its contribution to regeneration is the salamander limb 2, in which positional information is functionally encoded in connective tissue cells 5,6. These cells display differential gene expression and chromatin modification along the limb axes: proximal–distal, dorsal–ventral and anterior–posterior 7,8,9,10,11. After limb amputation, cells migrate and converge at the amputation surface to form the regenerative blastema. Interactions between cells originating from different limb regions are required for regenerative growth 12,13. Such positional memories allow cells to create patterning that seamlessly integrates the regenerated part with the remaining stump tissue 2. Here we present the molecular analysis of a positional memory system that fuels regeneration.
+
+The anterior–posterior axis is central to launching and sustaining limb regeneration. After amputation, Fgf8 secreted from anterior blastema cells interacts with Shh secreted from posterior blastema cells to induce outgrowth in an evolutionarily conserved positive-feedback loop 1,14,15. Manipulating anterior–posterior interactions generates predictable outcomes. Surgically assembled anterior-only or posterior-only limbs fail to regenerate 16,17. Conversely, an accessory limb (extra limb) is induced when transplanting posterior-limb skin to an innervated anterior wound (or vice versa) in an assay that generates anterior–posterior discontinuity 18. Interestingly, Fgf ligands are expressed in the distal, apical ectodermal ridge in most vertebrates, instead of anteriorly as in salamanders 1,19,20,21. Thus, the crucial role of anterior–posterior interactions in limb regeneration arose with the spatial rewiring of Fgf and Shh. Nevertheless, downstream mechanisms seem to be similar, because _Shh_ inhibition or misexpression during limb regeneration in axolotls yields digit reduction or expansion phenotypes similar to those in chick (_Gallus gallus_) and mouse (_Mus musculus_) limb development 22,23. Importantly, _Fgf8_ and _Shh_ are not expressed in uninjured salamander limbs. How cells retain anterior–posterior positional memory to appropriately launch _Fgf8_ and _Shh_ expression is not known.
+
+To investigate anterior–posterior positional information, we studied living axolotls by using fluorescent reporters, lineage tracing and genetic or pharmacological perturbations. We discovered a Hand2–Shh positive-feedback loop that was responsible for posterior identity. By forcing this loop in regenerating anterior cells, we posteriorized their positional memory, enabling them to express _Shh_ after subsequent amputation. We have leveraged positional memory mechanisms to change the signalling outputs from regenerative cells.
+
+Non-_Shh_ lineage cells can express _Shh_
+-----------------------------------------
+
+We investigated the origin of posterior, _Shh_-expressing cells during regeneration 1,24 (Fig. 1a,b). To explore whether cells that had expressed _Shh_ during development persist in the limb and serve as the source of _Shh_-expressing cells after injury, we performed genetic fate mapping of embryonic _Shh_ cells during regeneration in a _Shh_ transgenic reporter animal. Using the conserved _Shh_ limb enhancer ZRS (zone of polarizing activity regulatory sequence, also known as MFCS1)25,26 from the axolotl genome, we co-expressed TFP (teal fluorescent protein) and the tamoxifen-inducible Cre recombinase in transgenic axolotls that we refer to as ZRS>TFP (Fig. 1c); the transgenics are summarized in Extended Data Fig. 1a–f. As predicted, ZRS>TFP labelled _Shh_-expressing cells during limb development and regeneration (Extended Data Fig. 2a–f). To persistently label embryonic _Shh_ cells, we crossed the ZRS>TFP axolotl with a _loxP_–mCherry fate-mapping axolotl 9 (Fig. 1c) and treated stage-42 progeny with 4-hydroxytamoxifen (4-OHT), yielding a labelling efficiency of 72.7 ± 18.3% (_n_ = 9 limbs; Extended Data Fig. 2g), whereas untreated controls expressed negligible mCherry (Extended Data Fig. 2h).
+
+**Fig. 1: _Shh_ cells can arise from outside the embryonic _Shh_ lineage.**
+
+**a**,**b**, Schematics of axolotl limb development (**a**) and regeneration (**b**). Anterior Fgf8 and posterior Shh interact to fuel limb outgrowth. **c**, Schematic of ZRS>TFP axolotls using a _Shh_ limb enhancer (ZRS) to express nuclear-localized TFP (TFP nls) and ER T2-Cre-ER T2, with the aim of lineage-tracing embryonic _Shh_ cells through limb regeneration. When crossed to a fate-mapping axolotl and treated with 4-OHT, embryonic _Shh_ cells can be permanently labelled with mCherry for lineage tracing. **d**,**e**, Spatial contributions of active _Shh_-expressing cells (blue) and embryonic _Shh_ cell lineage (red) to the stage-42 limb bud (**d**, left), mature limb (**d**, right), regenerating blastema (**e**, left) and regenerated limb (**e**, right). The asterisk indicates the regenerated part of the limb. **f**, Transcriptional profiling of dermal connective tissue (CT) cells purified from anterior or posterior limb. **g**, Volcano plot depicting differentially expressed genes in anterior and posterior cells, with the most statistically significant genes labelled. Differential expression analysis was done using DESeq2 (two-tailed Wald test with Benjamini–Hochberg adjustment for multiple testing), with a false-discovery rate cut-off of _P_< 0.01. **h**, Expression of _Hand2_:EGFP reporter in posterior limb bud, mature limb and blastema. **i**, Lineage tracing of _Hand2_ cells using a similar strategy to that in **c**. **j**,**k**, Spatial contributions of embryonic _Hand2_ cells (red) to the mature limb (**j**) and regenerated limb (**k**). **l**, 3D reconstruction of a _Hand2_ lineage (lin.)-traced blastema stained for _Shh_ mRNA (yellow) and DAPI (white). Data are representative of ten limbs (**d**, **e**, **h**, **j** and **k**) or four blastemas (**l**). Scale bars: 100 μm (limb buds), 500 μm (blastemas) or 1 mm (limbs).
+
+Full size image
+
+Embryonic _Shh_ cells contributed to the posterior 20% (approximately) of the upper and lower arm, and the posterior 1.5 digits of the hand (Fig. 1d and Extended Data Fig. 3a). Pulsing with 4-OHT after stage 42 labelled the distal subset of the lower arm and hand (Extended Data Fig. 3b). We amputated labelled forelimbs and tracked regeneration. Most regenerated _Shh_ cells (TFP-positive) were mCherry-negative (23.1 ± 22.1% of TFP signal overlapped with mCherry, _n_ = 10; Fig. 1e), indicating that cells outside the embryonic _Shh_ lineage switch on _Shh_ during regeneration. Indeed, embryonic _Shh_ cells were depleted from the regenerated limb (Fig. 1e and Extended Data Fig. 3c). To test the requirement for embryonic _Shh_ cells, we surgically removed them before amputation (88.7 ± 6.1% depletion; _n_ = 6 limbs from the 9 days after amputation (d.p.a.) of blastema) (Extended Data Fig. 3d,e). Depleted limbs expressed ZRS>TFP in the blastema and regenerated with similar timing to controls (Extended Data Fig. 3f,g). Although we cannot exclude the possibility that the residual 10% of embryonic _Shh_ cells compensated for the depleted cells by inducing _Shh_ non-autonomously, this result indicates that embryonic _Shh_ cells are dispensable for expressing _Shh_ during regeneration. We infer that the posterior information necessary to express _Shh_ is not limited to embryonic _Shh_ cells.
+
+Spatial priming by transcription factors
+----------------------------------------
+
+To identify genes that prime posterior cells to express _Shh_, we transcriptionally compared anterior and posterior limb cells (Fig. 1f). We purified transgenically labelled _Prrx1_+ dermal connective tissue cells, which are strong carriers of positional memory 18,27,28. We expected to detect molecular differences, because anterior and posterior cells behave differently when transplanted. Anterior skin transplanted posteriorly induces normal-looking or mildly hypomorphic regenerated limbs, whereas posterior skin transplanted anteriorly induces ectopic anterior Shh and extra digits (polydactyly)28,29,30.
+
+Anterior and posterior cells differentially expressed around 300 genes (DESeq2, _α_< 0.01) (Fig. 1g). Of these, _Hand2_ dominated the posterior cell signature as ordered by statistical significance (Fig. 1g and Supplementary Table 1). _Hand2_ encodes a bHLH transcription factor that in limb buds is expressed posteriorly and induces _Shh_ in mouse, chick and zebrafish (_Danio rerio_)31,32,33,34. Hand2 has not been implicated in post-embryonic positional memory, but its intracellular function would be consistent with the persistence of positional information following the enzymatic removal of cell-surface molecules 29. Several other transcription factors with anterior–posterior-stratified expression in developing mouse limbs were expressed in corresponding domains of the axolotl limb (Supplementary Tables 1 and 2). For example, posterior cells expressed _Hoxd13_ and _Tbx2_, whereas anterior cells expressed _Alx1_, _Lhx2_ and _Lhx9_ (Extended Data Fig. 4a–c). The general forelimb genes _Tbx5_ and _Prrx1_ were found in both anterior and posterior cells (Extended Data Fig. 4d). Thus, axolotl limb cells continuously express a subset of transcription factors in development-like spatial domains, and this was also reported in zebrafish pectoral fins 35. To assess whether, and if so, how, anterior and posterior domains can communicate, we analysed Gene Ontology terms, which showed differentially expressed genes enriched in the ‘extracellular matrix’ and ‘cell adhesion’ categories (Extended Data Fig. 4e–h and Supplementary Tables 3 and 4). These molecules, including collagens, might generate distinct signalling environments in the anterior and posterior limb.
+
+_Hand2_ cells express _Shh_ after injury
+----------------------------------------
+
+We proposed that Hand2 primes posterior cells to express _Shh_ after injury, given that Hand2 is necessary for _Shh_ expression in mouse limb buds and directly binds the ZRS enhancer 34,36. To track Hand2, we generated a _Hand2_:EGFP knock-in axolotl co-expressing endogenous _Hand2_ with EGFP (enhanced green fluorescent protein) (Extended Data Fig. 5a). _Hand2_:EGFP was expressed continuously in posterior cells: in limb bud, uninjured limb and, as described previously, blastema 1 (Fig. 1h). We expect _Hand2_ to be translated, because EGFP expression requires _Hand2_ translation and ribosome skipping at the T2A sequence 37,38. In uninjured limbs, dermal and interstitial connective tissue cells weakly expressed _Hand2_:EGFP (Extended Data Fig. 5b; further characterization can be found in Extended Data Fig. 8a–f). _Hand2_:EGFP fluorescence increased 5.9 ± 0.4-fold during regeneration before returning to baseline (Extended Data Fig. 5c). Flow cytometry revealed a similar fivefold increase in _Hand2_:EGFP fluorescence per cell (Extended Data Fig. 5d). _Hand2_:EGFP increased 2.3 ± 0.2-fold before ZRS > TFP onset at 7 d.p.a. (Extended Data Fig. 5c,e). Note that these measurements are semi-quantitative because we used a non-labile EGFP.
+
+We next wondered whether _Hand2_ cells express _Shh_ during regeneration. _Hand2_ cells had not been lineage-traced in the limb in any organism. We generated a _Hand2_ knock-in axolotl for lineage tracing (Fig. 1i and Extended Data Fig. 5f). We found that embryonic _Hand2_ cells contribute to the posterior half of the axolotl forelimb and the posterior 2.5 digits of the hand, resembling active _Hand2_ expression (Fig. 1h,j). Nonspecific mCherry labelling was negligible (Extended Data Fig. 5g). After amputation, _Hand2_-lineage cells regenerated a comparable domain (Fig. 1k and Extended Data Fig. 5h, i). Thus, embryonic _Hand2_ cells are retained during adulthood and in regeneration. We also converted the lineage reporter in 7-cm axolotls with fully formed limbs, and this yielded a similar expression pattern to that in animals that had been converted at embryonic stage. However, a higher 4-OHT dose and multiple treatments were required to convert 7-cm axolotls, and this is probably due to weaker _Hand2_ and Cre expression than during development (Extended Data Fig. 5j,k). Importantly, 3D imaging confirmed that _Hand2_ cells give rise to _Shh_ cells during regeneration (Fig. 1l and Extended Data Fig. 5l,m).
+
+_Hand2_ is required for posterior identity
+------------------------------------------
+
+In mouse and zebrafish limb and fin buds, respectively, _Hand2_ is necessary for _Shh_ expression 31,33,34. We tested whether this function is conserved in axolotls. We mutated _Hand2_ by co-injecting axolotl eggs with Cas9 protein and two efficient single guide RNAs (sgRNAs) targeting the _Hand2_ translational start codon (Fig. 2a and Extended Data Fig. 6a,b). Knowing that homozygous _Hand2_−/− mutant mice die embryonically as the result of heart defects 39, we analysed mosaically mutated F 0 axolotls (CRISPants). _Hand2_ CRISPants had higher lethality than controls, probably reflecting widespread gene deletion: 52% lethal before digit patterning (_n_ = 60 of 116 injected eggs) versus 14% (_n_ = 4 of 28) (Fig. 2b). When analysing ‘escaper’ CRISPants that were hypomorphic for _Hand2_, we found that 45% had digit-number or outgrowth defects (_n_ = 50 of 112 limbs). The range in severity was consistent with mosaic _Hand2_ inactivation (Extended Data Fig. 6c,d). The most severely affected hypomorphs had no limb outgrowth beyond the shoulder girdle (_n_ = 9; Fig. 2c), similar to _Shh_ CRISPants 40. When amputated, almost all _Hand2_ CRISPants regenerated fewer digits, including those that originally had the correct digit number (Fig. 2d and Extended Data Fig. 6e,f). During this work, we attempted to derive homozygous F 2 mutants with a 64-bp deletion encompassing the _Hand2_ translational start (_Hand2_ _Δ64_; Extended Data Fig. 6g–i). However, these axolotls had 96.7% lethality before the end of limb development (_n_ = 29 of 30 animals), supporting our use of CRISPants. Conditional deletion of endogenous genes is not readily feasible in axolotls.
+
+**Fig. 2: _Hand2_ is necessary for _Shh_ expression and posterior limb identity.**
+
+**a**, CRISPR-Cas9 strategy to mutate _Hand2_. **b**, Defects in _Hand2_ CRISPants (top) compared with controls (bottom). **c**, Severe _Hand2_ CRISPant phenotype in which no limb skeleton (blue) formed beyond the shoulder girdle (arrowed; phenotype observed in 9 of 112 limbs). A control limb is shown for comparison. **d**, Dot plot comparing the number of digits at the end of development (_x_ axis) with the number of digits regenerated after amputation (_y_ axis) in _Hand2_ CRISPants and controls. Dot size corresponds to the number of limbs. The diagonal line indicates the occasion in which the number of limbs regenerated was the same number of original digits; _n_ = 96 (CRISPant) or _n_ = 48 (control) limbs. **e**, Strategy to assess whether _Hand2_ is necessary for _Shh_ expression by mutating _Hand2_ in ZRS>TFP animals. **f**, ZRS>TFP reporter expression in limb buds of control and _Hand2_ CRISPant axolotls at stage 42. **g**, Quantification of **f**, normalized to the mean of the control cohort. Boxplots depict median, interquartile range and 1.5× interquartile range. Each dot represents one limb bud; _n_ = 68 (CRISPant) or _n_ = 18 (control) limb buds. We used a two-tailed Kolmogorov–Smirnov test. **h**, The anterior ALM. **i**, The ALM using control grafts (3 of 6, arrowed; left) or _Hand2_ CRISPant grafts (0 of 6, asterisk; right). The difference was statistically significant (assessed by the number of digits formed; two-tailed Wilcoxon signed rank test; _P_ = 0.03, _W_ = −4.00, _n_ = 6 per group). Limbs were stained using Alcian blue (cartilage) and Alizarin red (bone) for contrast. Scale bars: 100 μm (limb buds) or 5 mm (ALMs).
+
+Source data
+
+Full size image
+
+We validated that _Hand2_ was responsible for these phenotypes in two ways. First, we generated _Hand2_ CRISPants in a _Hand2_:EGFP background. _Hand2_ mutant cells should not express EGFP. We injected _Hand2_ sgRNAs into one side of cleaved _Hand2_:EGFP eggs, waited for development then compared EGFP fluorescence in the two limb buds (Extended Data Fig. 6j); 46% of sgRNA-injected axolotls displayed a mutant phenotype (_n_ = 13 of 28), as before (Fig. 2b). The defective limb bud had notably less EGFP than the other, consistent with _Hand2_ deletion (Extended Data Fig. 6k,l). Second, we targeted _Hand2_ with further sgRNAs. Hand2 has a second methionine (M146). We individually injected three sgRNAs targeting sequences at, or downstream of, M146 to generate _Hand2_ _M146_ CRISPants (Extended Data Fig. 6m). The _Hand2_ _M146_ CRISPants had similar phenotypes to the original _Hand2_ CRISPants, at similar frequencies (Extended Data Fig. 6n). We conclude that _Hand2_ is required for axolotl limb development.
+
+Next, we investigated whether _Hand2_ is necessary to express _Shh_. We mutated _Hand2_ in the ZRS>TFP background (Fig. 2e). Live imaging showed that _Hand2_ CRISPants had fewer ZRS>TFP+ cells and/or expressed weaker TFP than did controls, indicating that _Hand2_ is necessary to express _Shh_ (Fig. 2f,g). Limb buds with the weakest TFP developed into limbs with 0–3 digits (Extended Data Fig. 6o). TFP intensity during development and regeneration was directly correlated (Spearman’s rank test; _r_ = 0.74, _P_ = 2.40 × 10−3, _n_ = 14 limbs) (Extended Data Fig. 6p). Thus, _Hand2_ is necessary for _Shh_ expression during axolotl limb outgrowth.
+
+We then explored whether mutation of _Hand2_ resulted in loss of positional information by doing a functional transplantation assay. _Hand2_ CRISPants lost _Shh_ expression, so we could address this question in axolotls using the accessory limb model (ALM). In the ALM, an ectopic limb grows out from an innervated anterior wound if grafted with posterior skin (or vice versa), because this generates anterior–posterior discontinuity 18 (_n_ = 3 limbs from six surgeries; Fig. 2h,i). If _Hand2_ specifies posterior identity, _Hand2_-mutant posterior skin should not induce accessory limbs when transplanted anteriorly. This was the case (_n_ = 0 limbs from 6 surgeries with _Hand2_ CRISPant skin, Fig. 2i). _Hand2_ _M146_ CRISPant posterior skin gave the same result (_n_ = 0 limbs from 6 surgeries using _Hand2_ _M146_ CRISPant skin, and _n_ = 5 limbs from 6 surgeries using control skin) (Extended Data Fig. 6q). Next, we tested whether _Hand2_ mutant cells acquire anterior identity. Unlike anterior skin, _Hand2_ CRISPant posterior skin did not induce limbs at innervated posterior wounds (_n_ = 0 limbs from 6 surgeries) (Extended Data Fig. 6r,s). Thus, _Hand2_ is necessary for posterior identity, at least insofar as inducing _Shh_, but mutant cells do not default to anterior.
+
+_Hand2_ expression posteriorizes identity
+-----------------------------------------
+
+We investigated whether _Hand2_ misexpression is sufficient for _Shh_ expression in axolotls, as was found for mouse limb buds and chick wing buds 32,33. We generated transgenic axolotls in which the mouse _Prrx1_ limb enhancer controlled an mCherry-tagged axolotl _Hand2_ sequence, resulting in expression throughout the limb bud and blastema mesenchyme 41 (Fig. 3a and Extended Data Fig. 7a). Each F 0 axolotl expressed mCherry–Hand2 at different levels and in different spatial domains, presumably depending on copy number, genomic insertion site and extent of mosaicism. _Hand2_ misexpression induced ectopic ZRS>TFP (_n_ = 7 of 9 limb buds carrying TFP) and polydactyly (_n_ = 7 of 16 limbs) (Fig. 3b and Extended Data Fig. 7b–d). The polydactyly was similar to that induced by _Shh_ misexpression 23. In two cases, anterior _Hand2_ induced an ectopic limb, a phenotype that has not been reported in other species but is consistent with the ability of the axolotl to generate limbs at sites of anterior–posterior discontinuity (Fig. 3c). These phenotypes occurred in animals with stronger mCherry–Hand2 expression (Extended Data Fig. 7e). Misexpression of axolotl _Hand2_ is therefore sufficient to trigger _Shh_, polydactyly and, in extreme cases, ectopic limbs.
+
+**Fig. 3: _Hand2_ is sufficient for _Shh_ expression and posterior limb identity.**
+
+**a**, Strategy to misexpress mCherry–Hand2 fusion protein, with ZRS>TFP reporter in the genetic background. **b**, Stage-42 limb bud mosaically misexpressing mCherry–Hand2 (left) or mCherry alone (right); mCherry–Hand2 induced ectopic anterior ZRS>TFP (arrowed; _n_ = 7 of 9 limbs) and polydactyly (_n_ = 7 of 16 limbs), whereas mCherry alone did not (_n_ = 17 limbs). Asterisks indicate autofluorescence in the blue channel. **c**, An ectopic limb induced by mosaic mCherry–Hand2 expression (dotted outline; 2 of 16 cases). **d**, Predicted experimental outcome when mCherry–Hand2 is expressed uniformly in CT cells; A–P, anterior–posterior. **e**, ZRS>TFP expression and digit number after uniform misexpression of mCherry–Hand2 (top) or mCherry alone (bottom). BG, background. **f**, The mCherry–Hand2 expression level (_x_ axis) and the resulting limb phenotype (_y_ axis). Boxplots depict median (red line), interquartile range and 1.5× interquartile range. Each dot represents one limb. Summary of two experiments: one in ZRS>TFP axolotls (top, _n_ = 48 limbs) and one in _Hand2_:EGFP axolotls (bottom, _n_ = 68 limbs). We used two-tailed Kruskal–Wallis tests with Dunn’s multiple comparisons testing; a.u., arbitrary units. **g**, ZRS>TFP expression (blue) in axolotls misexpressing strong mCherry–Hand2 (top) or weak mCherry–Hand2 (bottom). LB, limb bud; HL, hypomorphic limb. **h**, Anterior ALM to assess the positional identity of cells misexpressing strong or weak mCherry–Hand2. **i**, All 8 strong mCherry–Hand2 grafts induced an accessory limb (left), whereas none of the 8 weak mCherry–Hand2 grafts did (right) at 34 days after grafting. The asterisk indicates the lack of an accessory limb. Scale bars: 100 μm (limb buds) or 1 mm (limbs and ALMs).
+
+Source data
+
+Full size image
+
+We predicted that uniform _Hand2_ expression might eliminate the anterior–posterior differences required for limb outgrowth (Fig. 3d). Conceptually, this would be similar to double-posterior salamander limbs that do not regenerate 16,17. To test this prediction, we used F 1 _Prrx1_>mCherry–Hand2 animals that uniformly misexpress mCherry–Hand2 in connective tissue cells. These animals also had a reporter for posterior gene expression (ZRS>TFP reporting _Shh_ or _Hand2_:EGFP reporting endogenous _Hand2_). F 1 siblings expressed different levels of mCherry–_Hand2_. Axolotls strongly misexpressing mCherry–Hand2 expressed ZRS>TFP and _Hand2_:EGFP throughout the anterior–posterior axis and generated hypomorphic spikes or no limbs (Fig. 3e–g and Extended Data Fig. 7f–j). Thus, _Hand2_ impeded outgrowth, apparently by posteriorizing the entire limb field. By contrast, siblings with weak mCherry–Hand2 exhibited normal-looking ZRS>TFP,_Hand2_:EGFP and limb patterning (Fig. 3f,g and Extended Data Fig. 7j). Interestingly, the two-fold expression difference between ‘strong’ and ‘weak’ mCherry–Hand2 (Fig. 3f) is similar to the 2.39-fold rise in _Hand2_ that precedes _Shh_ expression during regeneration (Extended Data Fig. 5c). This finding hints at a role for _Hand2_ levels in inducing _Shh_.
+
+To characterize _Hand2_-induced posteriorization, we performed RNA sequencing. We amputated _Prrx1_>mCherry–Hand2 limbs and _Prrx1_>mCherry controls, collected anterior blastemas at 14 d.p.a. and purified mCherry+ cells to identify _Hand2_-induced genes. We also compared bona fide anterior blastema cells labelled with _Alx4_:mCherry (we will discuss this further later). Because the _Hand2_ misexpression cassette is codon altered, we could quantify endogenous _Hand2_ transcripts. _Hand2_-misexpressing cells upregulated posterior transcription factors (Hand2, Hoxd13 and Klf8) and downregulated anterior factors (Lhx2, Lhx9, Barx1, Zfhx4 and Hoxc10) (Supplementary Tables 5 and 6). Therefore, _Hand2_ induces expression changes that are consistent with posteriorization (Supplementary Tables 7–10).
+
+To test for functional posteriorization, we used the ALM. Anterior skin from double-transgenic limbs expressing ZRS>TFP, together with either ‘weak’ _Hand2_ or ‘strong’ _Hand2_, was grafted to innervated anterior wounds. Strong-_Hand2_ skin grafts upregulated the ZRS>TFP reporter and induced accessory limbs, whereas weak-_Hand2_ skin did neither (_n_ = 8 grafts per condition) (Fig. 3h,i and Extended Data Fig. 7k). We conclude that strong _Hand2_ misexpression in anterior skin is sufficient to induce its posteriorization.
+
+Plasticity of memory during regeneration
+----------------------------------------
+
+Whether anterior–posterior identity is irreversibly fixed after embryonic development remains an open question. We tested whether cells change identity following transplantation of anterior or posterior cells to the opposite side of an unlabelled host limb and subsequent limb amputation. To visualize anterior versus posterior identity, we generated _Alx4_:mCherry_ _Hand2_:EGFP double-reporter axolotls 35,42 (Fig. 4a,b and Extended Data Fig. 8a,b)._Alx4_:mCherry and _Hand2_:EGFP in uninjured limbs were predominantly expressed in loose connective tissue, joints, skeletal and peri-skeletal elements (Extended Data Fig. 8c–e). Each reporter labelled similar cell populations (Extended Data Fig. 8f), so we could purify equivalent anterior or posterior cells for transplantation.
+
+**Fig. 4: Anterior–posterior positional memory is reprogrammable during regeneration.**
+
+**a**, Schematic of anterior–posterior double-reporter constructs. **b**, Mature limb of an _Alx4_:mCherry_ _Hand2_:EGFP double-transgenic axolotl. **c**, Experimental design to explore whether positional identity is fixed or plastic. **d**, Anterior-to-posterior transplantations of _Alx4_:mCherry_ _Hand2_:EGFP double-transgenic cells into an unlabelled host (colours as in **b**). **e**, Assay to test whether newly arising EGFP+ cells can express _Shh_ (white) (_n_ = 3 of 3 blastemas). **f**, Schematized result of the anterior (A) to posterior (P) transplantations. **g**, Posterior-to-anterior transplantations of _Alx4_:mCherry_ _Hand2_:EGFP double-transgenic cells into an unlabelled host (colours as in **b**). The asterisk indicates autofluorescence. **h**, Assay to show that EGFP+ cells can still express _Shh_ (white) (_n_ = 3 of 3 blastemas). **i**, Schematized result of the posterior to anterior transplantations. Data are representative of three transplantations each (**d**, **e**, **g** and **h**). Scale bars: 1 mm (**b**, **d** and **g**) or 100 μm (**e** and **h**).
+
+Full size image
+
+Anterior cells purified by fluorescence-activated cell sorting (mCherry+/EGFP−) were injected into the posterior side of an unlabelled host limb (Fig. 4c). Two weeks later, the cells remained mCherry+, which is consistent with sustained anterior identity (Fig. 4d). After limb amputation, however, transplanted cells that had entered the blastema expressed EGFP from 8 d.p.a., indicating a posteriorized identity (Fig. 4d and Extended Data Fig. 9a), whereas stump cells remained mCherry+. These divergent behaviours (mCherry+ in the stump and EGFP+ in the regenerated limb) indicate that anterior–posterior identity is stable at steady state but flexible during regeneration.
+
+If transplanted anterior cells were stably posteriorized, they should express _Shh_ following regeneration and a subsequent amputation. Indeed, a second amputation triggered some of the transplanted cells to express _Shh_ (Fig. 4e,f). In this successive amputation experiment, posterior identity persisted through a regeneration cycle, indicating that positional memory was stably posteriorized.
+
+In the reciprocal experiment, purified EGFP+ posterior cells were injected anteriorly. Transplanted posterior cells stably retained EGFP expression, not only in the uninjured limb (Fig. 4g), but also during regeneration, resulting in ectopically patterned regenerates (_n_ = 3 of 3 limbs; Fig. 4g and Extended Data Fig. 9b). After a second amputation, marked cells expressed _Shh_, further reflecting the maintenance of a posterior memory state (Fig. 4h,i and Extended Data Fig. 9c). We did not detect any anteriorized (mCherry+ only) cells (Extended Data Fig. 9b), although we cannot exclude the possibility that some transplanted cells became untraceable by losing both EGFP and mCherry expression. Taken together, transplanted anterior cells switch to a posterior memory state during regeneration, whereas transplanted posterior blastema cells retain their original posterior memory.
+
+To characterize the anterior-to-posterior memory switch, we compared anterior cells transplanted posteriorly (A→P) or anteriorly (A→A) with non-transplanted controls (A or P) at the transcriptional level. Principal component analysis (PCA) revealed that the first principal component, PC1, discriminated samples on the basis of presence or absence of transplantation (Extended Data Fig. 9d). PC2 discriminated A and A→A cells from P and A→P cells, explaining 25% of the total variance. PC2 was driven heavily by Hand2 and EGFP, which is expected given that P and A→P cells were purified by _Hand2_:EGFP expression (Extended Data Fig. 9e and Supplementary Table 11). However, other anterior–posterior factors also contributed to PC2, including Hoxd13 and Lhx9 (Extended Data Fig. 9e and Supplementary Table 11). Crucially, A→P cells were more similar to P cells than to A cells or A→A cells in the PCA (Extended Data Fig. 9d). This finding supports a global shift of A→P transplanted cells towards a posterior transcriptional state.
+
+We also analysed the expression status of anterior factors during this identity change (Extended Data Fig. 4a,b). A→P cells downregulated anterior transcription factors (Alx1, Lhx9, Dmrt2, Pbx3, Hoxc10, Tbx22 and Zfhx4) (Extended Data Fig. 9f,g and Supplementary Table 12). Overall, A→P transplants downregulated 60.1% (578 of 961) of anterior blastema-specific genes and upregulated 22.5% (78 of 346) of posterior blastema-specific genes (Supplementary Table 13). Thus, transplanted cells lost their original anterior identity and gained posterior identity (Extended Data Fig. 9f,g and Supplementary Table 12). Importantly, the loss of anterior markers was not a transplantation artefact. Anterior genes (_Pbx3_, _Dmrt2_ and _Hoxc10_) were lost specifically in A→P transplantations and not in A→A controls (Supplementary Table 14). For differentially expressed genes in A→P cells, see Supplementary Tables 15–18.
+
+Anterior-to-posterior transplantation caused substantial shifts in mRNA towards a posteriorized signature. The data support a reprogramming event with lasting changes to positional memory and signalling potential.
+
+_Shh_ requirement for posteriorization
+--------------------------------------
+
+We proposed that _Shh_ posteriorized the A→P transplants because transplanted anterior cells would be exposed to Shh secreted by endogenous posterior cells. We transplanted _Prrx1_>mCherry_ _Hand2_:EGFP transgenic cells and exposed animals during regeneration to an inhibitor of Shh signalling (Fig. 5a,b). Strikingly, BMS-833923 (a Shh pathway inhibitor 40) prevented posteriorization (Fig. 5c and Extended Data Fig. 9h). Thus, endogenous Shh was responsible for transplant posteriorization.
+
+**Fig. 5: _Shh_ signalling posteriorizes anterior cell positional memory.**
+
+**a**, Double reporter in which _Prrx1_>mCherry (magenta) labels connective tissue (CT) cells and _Hand2_:EGFP(green) labels posterior cells. **b**, Strategy to test whether _Shh_ signalling is necessary to posteriorize anterior cells (colours as in **a**). **c**, Anterior to posterior transplantations of _Prrx1_>mCherry_ _Hand2_:EGFP double-reporter skin to unlabelled hosts, treated with ethanol or BMS-833923 six days after amputation. Asterisks indicate autofluorescence. Images are representative of _n_ = 4 of 4 limbs per assay. **d**, Strategy to test whether _Shh_ signalling is sufficient to posteriorize anterior cell memory at steady state and/or during regeneration. **e,**_Hand2_:EGFP expression (blue) in blastemas during the positional memory assay in **d**. Top row, experiments in which mature cells were treated with water (control) or SAG, then amputated to form a blastema. Bottom row, experiments in which blastema cells were treated with water or SAG, allowed to regenerate fully and then re-amputated to form a blastema. Embryonic _Hand2_ cells are lineage-traced in red. Asterisks indicate _Hand2_:EGFP expression outside the embryonic _Hand2_ lineage. Representative of _n_ = 5 of 5 limbs (SAG) or 4 of 4 limbs (control) per condition. **f**, Model for transmitting anterior–posterior positional memory through regeneration. Positional memory is stable at steady state but is transiently flexible and vulnerable to posteriorization in the blastema. A, anterior; P, posterior; TF, transcription factor. Scale bars, 1 mm.
+
+Full size image
+
+Considering these findings, we investigated whether Shh signalling would be sufficient to rewrite positional memory in anterior cells. When we delivered a Shh-encoding baculovirus anteriorly, infected cells induced _Hand2_:EGFP locally (Extended Data Fig. 10a,b). Thus, anterior blastema cells are responsive to Shh. During regeneration, the strongest Hand2 expression occurs next to the Shh signalling centre, indicating that posterior blastema cells also upregulate Hand2 in response to Shh (Fig. 1h,l). Indeed, continuously blocking Shh signalling prevented posterior blastema cells from fully upregulating Hand2 during regeneration, resulting in hypomorphic limbs (Extended Data Fig. 10c). Thus, both anterior and posterior blastema cells are responsive to Shh.
+
+Next, we performed a lineage-tracing experiment to test whether transient Shh signalling can convert anterior cells into posterior memory cells in vivo (Fig. 5d). To distinguish anteriorly and posteriorly specified cells, we converted the _Hand2_ lineage-tracing axolotls (Fig. 1i) with tamoxifen at the limb-bud stage, resulting in stable expression of mCherry in posterior cells. After unilateral limb amputation, we injected SAG intraperitoneally at the cone stage of regeneration. This approach allowed us to compare mature cells (left limb) and blastema cells (right limb) in one experiment. We found that mCherry− cells in the anterior blastema acquired _Hand2_:EGFP expression after SAG injection, but those in the unamputated limb did not (Extended Data Fig. 10d,e). The blastema descendants continued to express _Hand2_:EGFP when we allowed the limb to fully regenerate and then re-amputated it (Fig. 5e and Extended Data Fig. 10f). In a second set of experiments, SAG treatment of blastema cells in the second round of amputation resulted in ectopic _Shh_ expression (Extended Data Fig. 10g). In all, we conclude that transient Shh signalling is sufficient to posteriorize positional memory in anterior blastema cells.
+
+Discussion
+----------
+
+How cells recall positional information to regenerate missing tissue is a long-standing question. Few studies have investigated changes to positional memory, in which positional information is rewritten in a way that that affects successive rounds of regeneration 43. Here, we identified a genetic circuit that maintains posterior identity in the axolotl limb and alters positional memory when triggered in anterior blastema cells. Positive feedback between Hand2 and Shh, which sustains itself after a trigger, provides a molecular explanation for stable positional memory. It also explains why it is easy to posteriorize anterior cells but difficult to anteriorize posterior cells: anterior cells readily activate the loop following a Shh trigger, whereas posterior cells cannot disengage. This posterior dominance bears parallels with the posterior prevalence of Hox genes during limb development, in which posterior Hox proteins exert more-dominant effects than do anterior Hox proteins. The 5′ Hox genes probably interact with _Hand2_ to regulate _Shh_ during regeneration, similar to during development. Indeed, Hox genes are differentially expressed in our RNA-seq data, and we found that _Hand2_ induces _Hoxd13_ (Extended Data Fig. 4a,b and Supplementary Table 5). _Shh_ activation during limb development involves multiple transcriptional inputs. Genetic analyses in mouse and chick uncovered numerous transcription factors (including PBX1/PBX2, GLI3 and TBX3) acting with _Hand2_ and 5′ _Hox_ required for posterior _Shh_ expression 42,44,45,46, although precisely how such factors place the SHH domain remains elusive 47. Moreover, the BMP inhibitor Grem1 acts as a relay to balance posterior SHH and BMP activity with FGF expression, outgrowth and termination of limb development 48,49,50,51. Understanding how robust positional memory is achieved will require analysis of anterior–posterior chromatin accessibility, transcription factor binding and modelling of multiple feedback loops between signalling pathways beyond Hand2 and Shh.
+
+We showed that _Shh_ can posteriorize positional memory in blastema cells, but not in uninjured cells. Similar conclusions have been drawn for proximalization using retinoic acid 52. Explaining why blastema cells can alter their positional memory, whereas uninjured cells are fixed, is an important next step. Our conclusion that _Shh_ can change positional memory differs from that of a previous study that used iterative ALM and morphogenetic read-outs 1. That study lacked transgenic axolotls for tracking anterior–posterior identity, making it difficult to locate reprogrammed cells. It has been suggested that ventral cells can dorsalize during regeneration, although specific lineage tracing is lacking 10. It will be interesting to test whether dorsal dominance exists in the dorsal–ventral axis.
+
+Our results provide evolutionary insights into limb ontogenesis. We found that the _Shh_ lineage is more widespread in axolotl limbs than in mouse 53 (Extended Data Fig. 3a). This probably stems from the more-proximal location of _Shh_ cells during axolotl development and could explain why the mutant limb phenotype is more severe in axolotls than in mice 24,40,54,55. We showed that uniformly expressing _Hand2_ ablated positional discontinuity and prevented limb outgrowth, possibly owing to the unique configuration of anterior–posterior discontinuity in salamanders. Interestingly, _Hand2_ was previously implicated in posterior identity in the zebrafish pectoral fin, although _Hand2_ was not coupled to _Shh_ in this system and memory effects were not assayed 35. If _Hand2_ memory cells exist in humans, it would be exciting to trigger these to express _Shh_. A _Hox_ memory code has been described in the mouse limb 56,57,58 and in adult human body tissues 4,59.
+
+We propose a model for propagating positional memory through limb regeneration (Fig. 5f). At steady state, anterior and posterior cells have fixed positional memories primed by low-level expression of spatial transcription factors including Hand2. Hand2 levels rise after amputation and induce Shh in a subset of posterior cells. Shh signalling stimulates nearby blastema cells, which have flexible positional identity, to acquire a posterior memory (including _Hand2_). Anterior blastema cells experiencing Shh are reprogrammed into posterior memory cells (Extended Data Fig. 10h–j). As regeneration finishes, _Hand2_ expression declines but is retained posteriorly, whereas _Shh_ is extinguished. An unexpected outcome of this model is posterior dominance. It will be important to determine how excessive posteriorization is avoided during regeneration.
+
+Methods
+-------
+
+### Ethics oversight
+
+All animal experiments were approved by the Magistrate of Vienna (Genetically Modified Organism Office and MA58, City of Vienna, Austria), under licences GZ: 51072/2019/16, GZ: MA58-1432587-2022-12 and GZ: MA58-1516101-2023-21.
+
+### Axolotl husbandry
+
+Axolotls (_A. mexicanum_) were raised in individual aquaria in Vienna tap water. Axolotl matings were performed by the animal-care team at the IMP. Axolotl surgery, live imaging and tissue collection were performed under anaesthesia in 0.015% benzocaine (Merck, E-1501) diluted with Vienna tap water, using the benzocaine preparation described previously 60. All limb amputations were performed through the middle of the lower arm (zeugopod), unless indicated otherwise. Axolotl sizes are reported in centimetres, measured from snout to tail. Axolotls up to 16 cm in length were used in experiments (an age of approximately 8 months). Axolotls were randomly allocated into experimental or control groups and housed under identical conditions, except in experiments in which the control assay was performed on one limb and the experimental perturbation on the other limb of the same axolotl.Experiments were not blinded, except to the sex of the animals.
+
+### Axolotl genome and transcriptome reference
+
+We used genome assembly AmexG_v6.0-DD and transcriptome assembly AmexT_v47 (ref. 61).
+
+### Isolation of anterior and posterior dermal cells
+
+Axolotl embryos of genotype tgSceI(Mmu._Prrx1:TFPnls-T2A-ERT2-Cre-ERT2; Caggs:loxP-GFP-loxP-mCherry_)Etnka were treated with 4-OHT (Merck, H7904) as described 62 to permanently label connective tissue cells with mCherry, then raised individually until 12 cm long. Skin (containing dermal connective tissue cells) was removed from the lower arms (zeugopods) and then dissected into anterior and posterior halves, leaving a gap between them. We prepared two replicates for anterior and three for posterior, with each replicate deriving from eight axolotls (16 lower arms). Anterior and posterior samples were dissociated into single-cell suspensions using Liberase TM enzyme (Merck, 5401119001) as described 63, with the following modifications: enzymatic digestion was done for 50 min and the cells were filtered through a 50-μm Filcon filter (BD Biosciences, 340630). The mCherry-positive cells were purified from each replicate by FACS (FACSAria III Cell Sorter, BD Biosciences) using a 100-μm low-pressure nozzle and collected into separate tubes of cold amphibian culture medium 64. Each replicate was pelleted at 300×_g_ for 4 min at 4 °C, then resuspended in 500 μl TRIzol reagent (Thermo Fisher Scientific, 15596026). RNA was extracted according to the manufacturer’s protocol and stored at −70 °C until required.
+
+### QuantSeq library preparation and RNA sequencing
+
+Libraries for dermal-cell RNA sequencing were prepared using QuantSeq 3′ mRNA-Seq Library Prep Kit FWD (Lexogen) with 20.25 ng of input RNA per sample. Input was 4.5 μl of input RNA plus 0.5 μl of ERCC RNA Spike-In Mix (Thermo Fisher Scientific, 4456740) pre-diluted 1:10,000 in water. Samples were multiplexed for sequencing, using i7 indices 7023 (CACACT, anterior replicate 1), 7025 (TTTATG, anterior replicate 2), 7022 (GGAGGT, posterior replicate 1), 7024 (CCGCAA, posterior replicate 2) and 7026 (AACGCC, posterior replicate 3). Each replicate was sequenced to a depth of 120 M reads, in SE 100 mode, distributed over 3 lanes of a HiSeq 2500 with v4 chemistry (Illumina). Sequencing was performed by the Next Generation Sequencing Facility at the Vienna BioCenter Core Facilities (VBCF), a member of the Vienna BioCenter (VBC), Austria. Dermal-cell RNA sequencing data have been deposited with the Gene Expression Omnibus (GEO) with accession number GSE243137.
+
+### Gene expression analysis
+
+Adaptor sequences were trimmed from the raw sequencing reads using Trimmomatic (v.0.39)65, with parameters ILLUMINACLIP:Adapters.fa:2:30:7 SLIDINGWINDOW:4:20 MINLEN:40 in single-end mode. Trimmed sequenced reads were mapped to axolotl genome AmexG_v6.0-DD with HISAT2 (ref. 66), with parameters –no-unal –summary-file Output.log -k 5 –very-sensitive -x DBGenome -U Reads.fq.gz > Alignment.sam. We used featureCounts 67 to generate a read counts table. Differential expression analysis was performed on two anterior replicates and three posterior replicates using R v.4.1.2 and DESeq2 (ref. 68) v.1.34.0 with an FDR cutoff of _P_< 0.01. Volcano plots were generated using ggplot2 v.3.3.6 (ref. 69). Heatmaps were generated using the pheatmap package v.1.0.12 (R. Kolde). Gene Ontology analysis was done using the topGO package v.2.46.0 (Alexa A, Rahnenfuhrer J) using parameters ontology = “BP”, geneSelectionFun = topDiffGenes, annot = annFUN.org, mapping = “org.Hs.eg.db”. To calculate significant Gene Ontology terms, Fisher’s exact test was used with the “elim” algorithm. To enable interpretation of the differential expression results, we generated a custom gene nomenclature derived from the AmexT_v47 transcriptome. We concatenated each axolotl gene identifier with the gene symbol for the direct human homologue where available or, if not available, the closest homologue from the NCBI non-redundant database.
+
+### Axolotl transgenesis
+
+Plasmids for axolotl transgenesis were assembled by Gibson Assembly, amplified using Plasmid Maxi Kits (Qiagen, 12163) and verified by Sanger sequencing before egg injection. One-cell-stage axolotl eggs were surface sterilized twice for 5 min with about 0.004% sodium hypochlorite solution (Honeywell, 71696) diluted with Vienna tap water, then washed well with fresh tap water. The following steps were performed as described in ref. 60. Eggs were de-jellied using sharp forceps in 20% Ficoll (Merck, GE17-300-05)/1X MMR/Pen-Strep (Merck, P0781) solution, then held in 10% Ficoll/1X MMR/Pen-Strep solution until microinjection. For microinjections, borosilicate glass capillary needles with filament (Harvard Apparatus, GC100F-15) were pulled using a Flaming/Brown Micropipette Puller P-97 (Sutter Instrument) with settings _P_ = 500, heat = 530 (Ramp test + 30), pull = 100, velocity = 120, time = 150. Then 5 nl of the appropriate injection mix was injected into each de-jellied egg, delivered in two 2.5-nl shots. Egg injections were performed using an Olympus SZX10 microscope using a PV830 pneumatic Picopump (World Precision Instruments) with settings vacuum eject, regulator 25, range 100 ms, timed, duration 10-0. Injected eggs were transferred to 5% Ficoll/0.1× MMR/Pen-Strep solution overnight. The next morning, healthy eggs were transferred to individual wells of a 24-well multiwell plate (Thermo Fisher Scientific, 142475) filled with 0.1× MMR/Pen-Strep solution. Embryos were screened for fluorescent transgene expression at embryo stage 42 using an AXIOzoom V16 widefield microscope (Zeiss). Axolotl lines are named according to the convention established in ref. 70.
+
+The following axolotl lines were generated by random insertion I-SceI meganuclease-mediated transgenesis: ZRS>TFP (tgSceI(_ZRS:TFPnls-T2A-ERT2-Cre-ERT2_)Etnka); _Prrx1_>mCherry (tgSceI(_Mmu.Prrx1:mCherry_)Etnka); and _Prrx1_>mCherry–Hand2 (tgSceI(_Mmu.Prrx1:mCherry-Hand2_)Etnka), which expresses an mCherry–Hand2 fusion protein. The injection mix was prepared according to ref. 71: transgene plasmid 1 μg, I-SceI enzyme (NEB R0694) 5 units, CutSmart buffer (NEB) 1×, water to 10 μl. In _Prrx1_>mCherry–Hand2, we fused mCherry to the amino terminus of Hand2, connected by a glycine–serine-rich linker of the sequence SGGGGSGGGGS. In ZRS>TFP, the following CMV minimal promoter was used:
+
+>CMV minimal promoter (56 bp)
+
+GGCGTGTACGGTGGGAGGTCTATATAAGCAGAGCTGGTTTAGTGAACCGTCAGATC
+
+The following axolotl lines were generated by NHEJ-mediated CRISPR/Cas9 knock-in: _Hand2_:EGFP (tm(_Hand2_ _t_/_+_ _:Hand2-T2A-EGFP_)Etnka); _Hand2_ lineage tracer (tm(_Hand2_ _t_/_+_ _:Hand2-P2A-EGFP-T2A-ERT2-Cre-ERT2_)Etnka); and _Alx4_:mCherry (tm(_Alx4_ _t_/_+_ _:Alx4-T2A-mCherry_)Etnka). We followed the protocol in ref. 72, using the following injection mix: Cas9-NLS protein, 5 μg; gRNA, 4 μg; targeting construct, 0.5 μg; Cas9 buffer 1×; water to 10 μl. Cas9-NLS protein and buffer were synthesized by the Vienna Biocenter Core Facilities.
+
+The following transgenic axolotls were published previously: tgSceI(_Caggs:loxP-GFP-dead(Stop)-loxP-mCherry_)Etnka (ref. 9), tgSceI(_Caggs:loxP-GFP-loxP-mCherry_)Etnka (ref. 62), tgSceI(Mmu._Prrx1:TFPnls-T2A-ERT2-Cre-ERT2_)Etnka (ref. 62).
+
+### Further details on generating 3′ knock-in axolotls
+
+We generated and characterized efficient sgRNAs targeting the last intron of _Hand2_ or _Alx4_ following the protocol in (ref. 72). The sgRNAs were produced by assembly and in vitro transcription of a synthesized DNA template. The following forward oligos, harbouring the sgRNA target sequence in the _Hand2/Alx4_ intron (lower case) plus T7 promoter (underlined), were at 100 μM concentration (Merck). They were PCR amplified with the universal oligo_reverse, also at 100 μM, then purified to generate DNA templates for in vitro transcription:
+
+>_Hand2_ sgRNA oligo_forward
+
+GAAAT TAATACGACTCACTATAGG atgctgtcctctaaaccgGTTTTAGAGCTAGAAATAGC
+
+>_Alx4_ sgRNA oligo_forward
+
+GAAAT TAATACGACTCACTATAGG ttcactactggtaaatacGTTTTAGAGCTAGAAATAGC
+
+>Universal oligo_reverse
+
+AAAAGCACCGACTCGGTGCCACTTTTTCAAGTTGATAACGGACTAGCCTTATTTTAACTTGCTATTTCTAGCTCTA AAAC
+
+In vitro transcription was performed using a MEGAscript T7 transcription kit (Thermo Fisher Scientific, AM1334) and 500 ng of purified template in a 20-μl reaction. The transcription reaction was done overnight at 37 °C. The DNA template was removed by adding 1 μl TURBO DNase (Thermo Fisher Scientific, AM2238) for 15 min. RNA was purified by LiCl precipitation. Purified sgRNA was re-suspended in water at a concentration of 1 μg μl−1 and stored at −70 °C.
+
+Knock-in constructs were generated by PCR amplification and Gibson assembly of the following components: around 400 bp of the last intron (harbouring the sgRNA target sequence) plus the complete last exon of _Hand2/Alx4_ minus the stop codon; the transgenes to be knocked in (for example, T2A-EGFP) plus a stop codon; and poly(A) sequence from SV40 (_Hand2_ knock-ins) or rabbit β-globin (_Alx4_ knock-in).
+
+>_Hand2_ last intron plus last exon minus stop codon (650 bp)
+
+GGCCGCGGACATTAGGCGACGTAAAGAAAGGCCCATCGCAGCCGCGGCCTGTATTtTCGCGGATAATGCCTGCGCCGCGTCTGGAGGGGCAGATATAATCCCCAGCTCCACGGCAGCCCTTCAGATGTGGCGATTGCCTCGGTTTAGAGGACAGCATTTACATAGCTTTCAGGTGAACTTGAGTATGAATCGCAATCACTCGTGTTGTCTTTCTCTCTCTCTGTGTATCCCCCTCCCCCTCTCTCTTTTTATATATATATATATATATATATTGCaGTTTCGCCTACAACTGTGGCCCTGTCTGTCTGCTAAAAAGGGGGGAATTGGCAAGTGCGTGTTGCTGAAGGCTGTAGTGCGGTGTGTGTGCGTGTATATATGTTACGTAGAGATACATAGATACATATCCGTGTTACGTGTTACGAATTCGTGCGTGTGTGTGTGCGCGATTATCCGCGTTGGTTGTGAACACATGTTTGGGTCTGCAGCAAATCAACATTCAATTGTGAGATATTGAGTTCTCTTTGCTTTTGTCTCCCTTCCCGCTCTCTTGCCAG AATGAACTCTTGAAAAGTACCGTCGGCAGCAACGACAAGAAGAGCAAGGGCAGGACTGGCTGGCCTCAGCACGTCTGGGCCTTGGAGCTCAAGCAG
+
+>_Alx4_ last intron plus last exon minus stop codon (679 bp)
+
+GACATGTAGGGGCAATCTGAAGTCCCACTCAAAGCCCACCTAGAACCGTCCCTGCTCAGCTGGGGGAAGGCAGAATCAAATTTTGTGGAAGGCAGTCCTGTAACTCGCACCCAGAACTCTACAGCCTGTACACTGAAATATAATCAAATGGTGTTGATAATTCACAATGTGATTCACTACTGGTAAATACCGGTAACACTGAACCGCTGAGCGACATCATACAACATATTTCAAATTGGTATTAATTGTATAATGTTCCTATACTCGTCTCTTGCTGTAAATCTTATTTATTGCCTCCAGCCCTCCAAATAGTGCCACTTTCTCATTCCTTGTCTACTTTTGTCTTCTCCTGTTACAG ATCCAGAACCCAACATGGATTGGAAACAACAGCGGGGGCTCTCCGGTGGCAGCCTGTGTGGTCCCCTGTGACACCGTCCCATCCTGCATGTCTCCTCATGGCCACCCCCATGCAAGTGGAGGTGTTTCTGAATTCCTGAGCGTGCCTAGCTCAGGAAGCCACATGGGTCAGGCACACATGGGTAACCTCTTTGGCACTGCTGGGCTCAGCACAGGCATCAATGGCTACGACCTCAACGTGGAGCCAGACCGCAAGACCTCCAGCATCGCAGCCCTGCGGATGAAGGCCAAGGAGCACAGTGCCGCCATCTCCTGGGCCACA
+
+### Codon alteration
+
+The following sequences were codon-altered to enable them to be distinguished from endogenously expressed mRNA: axolotl _Hand2_ in _Prrx1_>mCherry–Hand2 and axolotl _Shh_ in BV-_Shh_ baculovirus. An axolotl codon usage table was generated using the first transcript isoform from each gene annotated in axolotl transcriptome assembly AmexT_v47. Optimizer (http://genomes.urv.es/OPTIMIZER/)73 was used with the method ‘guided random’ to alter codons while still reflecting axolotl codon usage.
+
+>Codon-altered axolotl _Hand2_ ORF (645 bp)
+
+ATGAGCCTGGTGGGCGGTTTCCCACACCACCATCCTGGCGTGCATCACCACCATGAGGGCTACCCCTTTTCGGCCGCCGCAGCAACGGGGAGATGCCACGAAGACTCGCCATACTTTCATGGTTGGCTTATCGGTCATCCGGAGCTCTCGCCTCCCGATTATGGTCCAGGAGCACCCTACAGTCCTGAATATGGAGGGGGGGGCGGCCTTGAACTATGCGGGCCTGGGGGCGCGCCAGGGGGAGGAGCCGGAGCGCTTCTCTCAACTAGACCTGTGAAGCGGCGAGGCACCGCTAATAGGAAGGAGCGGCGGAGAACCCAAAGCATCAACAGTGCTTTCGCTGAGCTCCGGGAATGTATCCCGAATGTGCCAGCCGACACGAAGTTGTCAAAGATCAAAACTTTGCGTCTAGCCACTTCTTATATCGCCTACCTGATGGATTTGCTTGCCAAGGATGAGCAGTCTGAAGCCGAAGCTTTCCGGGCAGATCTGAAACAGAGGGGAGGGGGTGGGGCTGAGTGTAAGGAAGATAAAAGAAAGAAGGAGTTGAATGAATTGCTGAAGTCCACAGTCGGGAGTAACGACAAGAAATCCAAGGGTCGCACCGGTTGGCCACAGCATGTGTGGGCGCTAGAGCTCAAGCAG
+
+>Codon-altered axolotl _Shh_ ORF (1,269 bp)
+
+ATGCGTCTCCTCCTTCGCCGGCTACTGCTGGGTACCTTGGTTTGGGCACTGCTAGTGCCCAGCGGCCTGACTTGCGGCCCGGGGCGTGGTATCGGTAAAAGGAGACAGCCTAAAAAACTGACACCCCTCGCGTACAAGCAGTTTATCCCCAACGTCGCGGAGAAGACACTGGGAGCATCTGGACGTTATGAGGGGAAGATCACTAGGAACTCTGACCGTTTCAAGGAGCTCACTCCTAATTACAACCCCGACATCATTTTTAAGGACGAGGAGAATACAGGAGCTGACCGACTGATGACTCAGAGGTGCAAAGACAAACTGAATGCCCTGGCTATTAGCGTAATGAATCAGTGGCCGGGCGTGAAACTGCGGGTGACGGAAGGCTGGGATGAAGATGGTCATCACAGTGAGGAGAGTCTGCATTACGAGGGCCGAGCCGTGGATATCACAACCTCTGACCGTGACAGGTCTAAGTATGGAATGCTGGCACGTCTGGCCGTGGAGGCAGGCTTTGATTGGGTCTACTTCGAGTCCAAGGCCCACATACATTGCAGCGTGAAGGCGGAGAACAGTGTGGCAGCCAAGTCGGGAGGATGTTTTCCGGCCAGTGCTAAGGTTACACTGGAACATGGCGTTACGAGACCAGTGAAGGATCTGCGACCCGGAGACCGTGTGCTAGCAGCAGATGGACAAGGTCGACTGGTTTATAGCGACTTTCTTATGTTTCTCGACAAAGAAGAGGCAGTGACAAAGGTCTTTTACGTCATTGAGACGGAGAGACCAAGGCAGAGGCTAAGGTTGACAGCAGCCCACCTCCTGTTCGCCGCAAGGCATCCCGCAAACTCATCTAGCTCCACCGGGTTCCAAAGTATCTTCGCATCAAGGGTTCGACCTGGGCACCGGGTGCTTACTGTCGACCAGGAAGGACGGGGGCTTCAGGAGGCTACTGTCACTCGCGTGTACCTGGAGGAGGGTGCCGGAGCCTACGCCCCCGTTACCAGTCATGGAACCGTTGTGATTGACAAGGTACTCGCCAGTTGCTACGCAGTGATCGAGGAGCATTCCTGGGCCCACTGGGCTTTTGCCCCTCTGCGACTTGGCTACGGCATACTGAGCATCTTTTCCCCTCAAGATTACAGCCCACATAGTCCCCCCGCGCCTAGCCAGAAAGAAGGCGTGCATTGGTACTCAGAAATCCTGTATCATATAGGGACATGGGTGCTGCATAGCGACACTATTCACCCCTGGGGCATGGCCGCCAAGTCGAGT
+
+### Generation of _Hand2_ CRISPant axolotls
+
+To generate _Hand2_ CRISPants lacking a translational start, the following mix was microinjected into fertilized one-cell-stage eggs, following the protocol in ref. 72: Cas9-NLS protein, 5 μg; sgRNA1, 2 μg; sgRNA2, 2 μg; Cas9 buffer 1×; water to 10 μl. The target sequences for sgRNA1 and sgRNA2 flank the _Hand2_ translational start. The control mix contained all these components except the sgRNAs. The sgRNA1 and sgRNA2 were produced by in vitro transcription using the PCR-based strategy described above.
+
+>_Hand2_ CRISPant sgRNA1 target
+
+GCGGCCCCTGGGAGGCCC
+
+>_Hand2_ CRISPant sgRNA 2 target
+
+ACCCCAGGGTGGTGGTGA
+
+To assess whether _Hand2_ CRISPants lose _Hand2_ expression, an sgRNA1/sgRNA2 mix was injected into the left or right blastomeres of four-cell-stage _Hand2_:EGFP eggs. In this manner, half of the animal acts as an internal control (EGFP is not affected) and the other half acts as the test (to test whether EGFP is reduced). We chose to inject four-cell-stage eggs rather than two-cell-stage eggs because the latter have incomplete cell cleavage, which leads to the risk of sgRNAs leaking into the opposite half of the egg. Each injected blastomere received half the dose of the regular egg injection. EGFP fluorescence was measured when the larger of the two limb buds reached stage 46/47. Control animals were injected with the control mix lacking the sgRNAs. _Hand2_:EGFP intensity in the brighter limb bud was divided by the intensity in the dimmer limb bud to yield a fluorescence ratio.
+
+To generate _Hand2_ M146 CRISPants targeting sequences close to M146, the following sgRNAs were injected individually instead. M146 sgRNAs were produced by in vitro transcription using the PCR-based strategy described above.
+
+>_Hand2_ M146 sgRNA1 target
+
+CCTACCTCATGGACCTGC
+
+>_Hand2_ M146 sgRNA2 target
+
+TCATGGACCTGCTGGCCA
+
+>_Hand2_ M146 sgRNA3 target
+
+CCAAGGACGAGCAGAGCG
+
+### Estimation of indel frequency in _Hand2_ CRISPants
+
+Genomic DNA was individually extracted from _Hand2_ CRISPant or control sibling limbs. Amputations were performed through the middle of the lower arm and each off-cut was placed in 50 μl of 50 mM NaOH. Collected tissue was heated to 95 °C for 12 min, then cooled to 4 °C in a thermocycler. Next, 5 μl of 1 M Tris, pH8 was added, then the extracted DNA was stored at 4 °C until genotyping. For genotyping, 1 μl of extracted DNA was PCR amplified using KAPA HiFi HotStart ReadyMix (Roche 07958927001) and primers that generate a roughly 750 bp amplicon surrounding the _Hand2_ translational start. Then 30 ng of PCR-amplified and purified DNA was Sanger sequenced using _Hand2_ _sequencing primer at the IMP/IMBA Molecular Biology Service. The indel frequency was estimated from the Sanger-sequencing results using the ICE Analysis Tool (Synthego, https://ice.synthego.com/).
+
+>_Hand2_ _genotyping_F
+
+GAAGTAGCAGGGATGGACGAG
+
+>_Hand2_ _genotyping_R
+
+AAGGCGCTGTTGATGCTCT
+
+>_Hand2_ _sequencing
+
+CACAGGCCAGGACTTCAAGAA
+
+### 3-Primer genotyping strategy to identify _Hand2_ _Δ64_ mutants
+
+Genomic DNA was extracted individually from tail clips as described above in the section above. PCR amplification was performed with the following 3-primer mix and KAPA2G Fast HotStart Genotyping mix (Roche 2GFHSGKB). The PCR reaction produces a roughly 752 bp amplicon as a positive control and also a 431 bp amplicon if the _Hand_ translational start is intact. Homozygous _Hand2_ _Δ64_ mutants fail to amplify a 431 bp amplicon but amplify the larger amplicon.
+
+>_Hand2_ _genotyping_F
+
+GAAGTAGCAGGGATGGACGAG
+
+>_Hand2_ _genotyping_R
+
+AAGGCGCTGTTGATGCTCT
+
+>_Hand2_ _genotyping_R2
+
+CCCCCCACCAAGCTCATG
+
+### Determination of axolotl ZRS enhancer
+
+The axolotl ZRS enhancer was determined by multiple species alignment of the following genome sequences using mVISTA 74 and PipMaker 75:
+
+axolotl (_A. mexicanum_) assembly, AmexG_v6.0-DD chr2p:694366863-694689506;
+
+human (_Homo sapiens_) assembly, hg38 chr7:156769228-156790956;
+
+mouse (_M. musculus_) assembly, mm10 chr5:29292950-29323801;
+
+chick (_G. gallus_) assembly, Gal6 chr2:8538956-8559114;
+
+fugu (_Takifugu rubripes_) assembly, fr3 chr10:5739579-5747090.
+
+>Axolotl ZRS enhancer, AmexG_v6.0-DD chr2p:694613160-694613980 (821 bp)
+
+ACCTTAATATCCATCTTTGCATTTGAAGTTGTTGCATAAAATGTACCACGAGCGACAGCAACATCCTGACTAATTAGCCAAATTACCCAGACATCCCTCCAAAAAAGCCGCGAAACAGAGAGCATGTCTGTCGGATTAAAAGGTTGTAACTCCTAAAACATCAAACGGAGCGCCAGATAATAAAAGCCAATCGTACAGAAATTTGAGGTAACTTCCTTGCTTAATTAATTAGCTAGGCCAGTTGGAGCGAGGAGGCCAACGCGGGCGCGTAGAACGCCCATAAAGCTGAACAACTCGACAGCACAAAAGTGGAGAAACAAAGATTTTTTAATATGCGTCTATCCTGTGTCACAGTTTGAAATTGTCCTGGTTTATGTCCCTTTTGGCAAAGTTACAATAAAAGTGACCCTGTACTGTATTTTATGGCCAGACGACTTTTCGTTTTGTTCCCGGTGACTAATTTGACTCAGGCCCCCATCTTGAATAGACACAGAAAGGGGCCGGGGGAATGAGGCTGTCTGTCTCGCTTGGGTTTCATTGCATTTTTTCATTATTCGGGCTCGTTTTTCGCCACAGATCATCCATAAATTGTTGGAAATGAGTGATTAAGGAAGTGCTGCTTAATGTTAGTAGCACACATTCTTTGTGCGTTTCACCCTCCCGCCCCCTCCATTTTGTGGGTGAGAGGAAATCAAGTAATGCAGAAACAATAAGGAAGCCTCCTGCTGGGAACCTTTCAAGGAAATGTAACCTGCATACTGTTTTGATCTCGGTGTTCCTTTCAGAGTATGCCGCGATGTTTCAACAGCTATTTTCATGTG
+
+### Genetic lineage tracing (ZRS/_Hand2_)
+
+For lineage tracing, either ZRS>TFP axolotls or _Hand2_ lineage-tracing axolotls were mated with _loxP_–mCherry fate-mapping axolotl of genotype tgSceI(_Caggs:loxP-GFP-dead(Stop)-loxP-mCherry_)Etnka (ref. 9). To induce Cre–_loxP_ recombination during development, stage-42 ZRS or _Hand2_ lineage-tracing embryos were bathed overnight in the dark in 500 ml of 2 μM 4-OHT, as described in the water-based method of ref. 60. We calculated the overlap between embryonic _Shh_ cells (mCherry+) and regeneration _Shh_ expression (TFP+) using wide-field microscopy. To induce Cre–_loxP_ recombination in _Hand2_ cells of the mature limb, 7-cm axolotls were bathed individually and overnight in the dark in 100 ml of 5 μM 4-OHT. After treatment, the axolotls were transferred to tap water and allowed to recover for one week. The same 5 μM 4-OHT treatment and one week recovery was repeated twice more, for a total of three treatments. Animals were screened for Cre–_loxP_ recombination and mCherry expression using an AXIOzoom V16 wide-field microscope (Zeiss). Regeneration experiments on ZRS>TFP lineage tracings were performed on 11-cm axolotls. Regeneration experiments on _Hand2_ lineage tracings were performed on 6-cm axolotls.
+
+### Quantification of ZRS>TFP fluorescence
+
+An integrated fluorescence score was calculated for each _Hand2_ CRISPant limb bud (mean TFP intensity × area), then normalized to the mean of the control cohort (set to 1). Quantifications were performed on stage-42 limb buds imaged using wide-field microscopy.
+
+### Assessment of leaky mCherry expression
+
+ZRS/_Hand2_ lineage tracing animals were generated as described above and genotyped individually to ensure that they carried both Cre and _loxP_-_Stop_-_loxP_-mCherry genetic cassettes. Primers used for genotyping were:
+
+>Cre_Fw
+
+ATCCGAAAAGAAAACGTTGA
+
+>Cre_Rv
+
+ATCCAGGTTACGGATATAGT
+
+>Cherry_Fw
+
+GGATAACATGGCCATCATCAAGGAGTTC
+
+>Cherry_Rv
+
+GTCTTGACCTCAGCGTCGTAGTG
+
+Half of the animals were treated at limb-bud stage 42 with 2 μM 4-OHT overnight to induce recombination and mCherry labelling. The other half were left untreated, to assess for nonspecific mCherry expression (leakiness). When the animals reached 6 cm, their limbs were removed, dissociated with Liberase TM enzyme (see the section ‘Quantifying _Hand2_:EGFP expression during regeneration’ below) and analysed for mCherry fluorescence using a flow cytometer, a 100-μm low-pressure nozzle and FLOWJO software (BD Biosciences). Untreated and treated samples were analysed in the same session. At least 130,000 events were recorded for each sample.
+
+### Surgical depletion of embryonic _Shh_ cells
+
+ZRS lineage-traced axolotls were prepared by treating stage-42 embryos with 2 μM 4-OHT, as described in the section ‘Genetic lineage tracing (ZRS/_Hand2_)’, above. At an axolotl size of 6 cm, the left arm of each axolotl was depleted for ZRS-lineage cells by using microscissors to excise tissue posterior to the ulna in the lower arm. Successful depletion was confirmed by imaging loss of mCherry fluorescence using an AXIOzoom V16 wide-field microscope (Zeiss). The right arm of each animal was treated as a control and depleted for an equivalent amount of tissue anterior to the radius instead. Two days after surgery, each arm was amputated through the distal part of the lower arm, distal to the depleted region. Images were acquired every few days after amputation to assess the onset of ZRS>TFP expression in depleted versus control limbs. The mCherry depletion efficiency was estimated by comparing the area of mCherry-positive tissue in the blastema in wide-field images acquired from control and depleted animals.
+
+### Tissue preparation, staining and imaging
+
+Samples were fixed overnight in 4% paraformaldehyde, pH 7.4, at 6 °C. The next morning, samples were washed well with cold PBS then equilibrated with the following solutions at 6 °C for one overnight each: 20% sucrose/PBS; 30% sucrose/PBS; and a 1:1 mix of 30% sucrose/PBS and Tissue-Tek O.C.T. compound (Sakura). Samples were mounted in Tissue-Tek O.C.T. compound, frozen on dry ice and stored at −70 C until sectioning. Cryosections of 16 μm thickness were prepared using a Cryostar NX70 (Thermo Fisher Scientific) and collected on Superfrost Plus adhesion microscope slides (Epredia, J1800AMNZ). Slides were stored at −20 °C until required. For staining, slides were brought to room temperature then washed well with PBS to remove O.C.T. compound before proceeding to the following steps. For DAPI staining only, slides were incubated with DAPI 1:1,000 in PBS + 0.2% Triton X-100 for 1 h at room temperature, then washed well with PBS + 0.2% Triton X-100 before mounting. For staining with anti-Prrx1 or anti-Col1A1 antibody, slides were blocked for 30 min at room temperature with PBS + 0.2% Triton X-100 + 1% normal goat serum (NGS), then incubated overnight at 6 °C with rabbit anti-Prrx1 antibody 62 diluted 1:500 in PBS + 0.2% Triton X-100 + 0.1% NGS or mouse anti-Col1A1 antibody (SP1.D8, DSHB) diluted 1:50 in PBS + 0.2% Triton X-100 + 0.1% NGS. The following day, slides were washed well with PBS + 0.2% Triton X-100 then incubated for 2 h at room temperature with Alexa 647-conjugated anti-rabbit (Invitrogen, A-21244) or anti-mouse (Invitrogen, A-21240) secondary antibody diluted 1:500 in PBS + 0.2% Triton X-100. Slides were washed well with PBS + 0.2% Triton X-100 before mounting. For HCR(hybridization chain reaction) in situ hybridization, slides were stained according to the HCR RNA-FISH protocol for fixed frozen tissue sections (Molecular Instruments), omitting post-fixation and Proteinase K treatment. Probe hybridization buffer, wash buffer and amplification buffer were from Molecular Instruments. Samples were mounted in Abberior Mount liquid antifade mounting media (Abberior) for imaging. Images were acquired with an LSM980 AxioObserver inverted confocal microscope with ZEN software (Zeiss), plus AiryScan 2 for HCR experiments only.
+
+### Whole-mount sample preparation, staining and imaging
+
+Samples were fixed overnight in 4% paraformaldehyde, pH 7.4, at 6 °C. The next morning, samples were washed well with cold PBS then dehydrated progressively through ice-cold 25% methanol/PBS, 50% methanol/PBS, 75% methanol/PBS and 100% methanol (30 min each). Samples were kept for one night in 100% methanol at −20 °C. The next day, samples were rehydrated progressively through ice-cold 75% methanol/PBS, 50% methanol/PBS, 25% methanol/PBS and PBS (30 min each). Samples were washed twice more with cold PBS then stained for _Shh_ transcripts using the HCR RNA-FISH protocol for whole-mount zebrafish embryos and larvae (Molecular Instruments), starting at the section ‘Detection stage’. After completion of the HCR protocol, samples were stained overnight at 6 °C in DAPI 5 mg ml−1 (Sigma) diluted 1:1,000 in 5× SSC + 0.1% Tween 20. The next day, samples were washed well with 5× SSC + 0.1% Tween 20 then optically cleared overnight at room temperature on an aerial rotator in clearing-enhanced 3D (Ce3D) solution, refractive index 1.50, prepared as described previously 76. Images were acquired in Ce3D solution using a LightSheet.Z1 microscope with ZEN software (Zeiss) and custom imaging chamber, as described 77.
+
+### HCR probe design and detection
+
+HCR probes targeting axolotl _Shh_ mRNA, probe hybridization buffer, wash buffer, detection hairpins and amplification buffer were from Molecular Instruments. Sequences unique to _Shh_ mRNA were identified by BLAST alignment against axolotl transcriptome assembly Amex.T_v47 (ref. 61). Sequences were considered not unique if they exhibited homology to non-target transcripts at more than 36 of 50 nucleotides. _Shh_ HCR signal was detected using B5 hairpins conjugated to Alexa-647 fluorophore. HCR probes targeting TFP mRNA were purchased at the 50-pmol scale from IDT (Integrated DNA Technologies, oPools), suspended in water and stored at −20 °C. TFP HCR signal was detected using B1 hairpins conjugated to Alexa-546 fluorophore.
+
+### Quantifying _Hand2_:EGFP expression during regeneration
+
+#### For whole-tissue measurements
+
+Axolotls (4.5 cm) harbouring _Hand2_:EGFP were amputated through the middle of the lower arm and imaged throughout regeneration with identical acquisition settings using an AXIOzoom V16 wide-field microscope (Zeiss). Longitudinal imaging of 6 limbs was done on days 0, 2, 4, 7, 10, 15, 21, 28 and 39 after amputation. Mean EGFP fluorescence intensity was measured in Fiji software 78 by manually drawing a region of interest in the EGFP-positive region of the blastema. At 0, 2 and 4 d.p.a., no or little blastema had formed, so measurements were instead taken at 500 μm behind the amputation plane. The 500-μm source zone for lower-arm regeneration was established in ref. 79.
+
+#### For single-cell measurements
+
+The _Hand2_:EGFP intensity of mature arm cells, 7 d.p.a. blastema cells and 14 d.p.a. blastema cells were compared by flow cytometry. Lower-arm tissue was removed from 6-cm _Hand2_:EGFP axolotls. The entire lower arm was removed for mature measurements. Blastemas were generated by amputating through the middle of the lower arm 7 or 14 days before flow cytometry. Tissues removed were then dissociated into single-cell suspensions using Liberase TM enzyme (Merck, 05401127001) as described previously 63, with the following modifications: dissociation was done for 55 min (mature sample) or 45 min (blastema samples), and the cells were filtered through a 70-μm MACS SmartStrainer (Miltenyi Biotec, 130-098-462). Cells were analysed by FACS (using a FACSAria III Cell Sorter, BD Biosciences) with a 100-μm low-pressure nozzle. Mean fluorescence intensities were quantified using FLOWJO software (BD Biosciences).
+
+### ALM
+
+ALM experiments were performed on the upper arm of the axolotl, as described 80. For _Hand2_ CRISPant ALMs, donor axolotls (F 0 _Hand2_ CRISPant) were 9–10 cm in size and host axolotls (GFP-expressing controls) were 13–14 cm. Donor skin grafts (1 mm × 1 mm) were transplanted distal to the deviated nerve on host animals. Donor grafts were removed from _Hand2_ CRISPants deemed to have a high mutation rate, as judged by regeneration of a hypomorphic spike after a previous lower-arm amputation. As controls, skin grafts were removed from sibling axolotls injected with Cas9 but no sgRNA. _Hand2_ CRISPant ALM and control grafts were done on opposite arms of each host axolotl. Then, 58 days after surgery, ALMs were removed and fixed for skeletal staining using Alcian blue and Alizarin red. For _Hand2_ M146 CRISPant ALMs, the procedures were similar, except that donor axolotls (F 0 _Hand2_ M146 CRISPants generated using sgRNAs 1–3, or sibling controls injected with control mix) were 7 cm in size and host axolotls (d/d) were also 7 cm. ALMs were analysed 27 days after grafting. _Hand2_ misexpression ALMs were performed similarly. Donor axolotls (strong _Prrx1_>_Hand2_) were 5 cm and host axolotls (unlabelled controls) were 8 cm. As controls, skin grafts were removed from weak _Prrx1_>_Hand2_ siblings. ALM formation was deemed to have been completed by 34 days after surgery.
+
+### Alcian blue and Alizarin red staining
+
+Skeletal staining of fixed accessory limbs was performed as described previously 81. Stained limbs were imaged in 70% ethanol/water using an AxioCam ERc 5s colour camera (Carl Zeiss Microimaging) mounted on an Olympus SZX10 microscope. Alcian blue (A3157), Alizarin red (A5533) and Trypsin (85450C) were from Merck.
+
+### Cell transplantation by injection of FACS-sorted cells
+
+Upper and lower arms were removed from 4-cm double-reporter axolotls (_Alx4_:mCherry_ _Hand2_:EGFP) and dissociated into single-cell suspensions using Liberase TM enzyme (Merck, 05401127001) as described 63, with the following modifications: dissociation was done for 55 min and the cells were filtered through a 70-μm MACS SmartStrainer (Miltenyi Biotec, 130-098-462). Anterior cells (mCherry-positive plus EGFP-negative) or posterior cells (EGFP-positive) were purified by FACS (FACSAria III Cell Sorter, BD Biosciences) using a 100-μm low-pressure nozzle and collected into separate tubes of amphibian culture medium 64. Pelleting and injection of FACS-sorted cells into the arms of 4-cm unlabelled sibling axolotls was done as described 63, using a Nanoject II injector (Drummond Scientific Company). Anterior cells were injected into the posterior lower arm, whereas posterior cells were injected into the anterior lower arm. We injected 9,000 cells per experiment. Host arms were imaged 2 days after injection to confirm successful transplantation using an AXIOzoom V16 wide-field microscope (Zeiss). At 15 days, host arms were amputated distal to the transplant. Regenerating blastemas were imaged at 6, 8, 10, 15 and 26 d.p.a. until the limb was considered fully regenerated. At 26 d.p.a., a second amputation was done through the regenerated part of the limb to generate a second blastema and test whether cells had altered their positional memory. This second blastema was removed at 8 d.p.a. and fixed and processed for whole-mount HCR staining against _Shh_ transcripts.
+
+### Isolation of cells for RNA sequencing
+
+#### For _Hand2_-misexpression experiments
+
+We amputated 16-cm _Prrx1_>mCherry–Hand2 (test) or _Prrx1_>mCherry (control) axolotls through the mid-zeugopod. The animals also had ZRS>TFP in the genetic background, but this was not used in this experiment. We analysed _Prrx1_>mCherry–Hand2 limbs with weaker phenotypes, because strong misexpression resulted in no limb. At 14 d.p.a., the anterior part of each blastema was removed and dissociated into single cells using Liberase TM enzyme, as described above. We FACS-purified mCherry-positive cells into amphibian culture medium 64 using one animal (two blastemas) per replicate. There were three replicates for _Hand2_ misexpression blastemas and two replicates for mCherry controls.
+
+#### For A→A and A→P cells
+
+We took upper and lower arms from uninjured 7.5-cm double-reporter axolotls (_Alx4_:mCherry_ _Hand2_:EGFP) and dissociated them into single cells using Liberase TM enzyme, as described above. We purified mCherry-positive, EGFP-negative anterior cells for injection. We did cell injections as described above. About 25,000 sorted events were injected into the anterior or posterior zeugopod of unlabelled, uninjured sibling animals. Two days after injection, limbs were amputated through the distal part of the graft to induce regeneration. After 47 days, the regenerated limb was re-amputated through the distal part of the graft to induce a second blastema. This second blastema was removed at 12 d.p.a. Blastemas were dissociated into single cells as described above and prepared for FACS. In A→A experiments, we purified mCherry-positive anterior cells regardless of EGFP expression. In A→P experiments, we purified EGFP-positive posterior cells regardless of mCherry expression. Cells were sorted into amphibian culture medium 64. One injected arm was used per replicate. By the time of removal, animals were approximately the same size as those used for anterior and posterior cell isolation (below).
+
+#### For anterior and posterior cells
+
+We amputated 11-cm double-reporter axolotls (_Alx4_:mCherry_ _Hand2_:EGFP) at the mid-zeugopod. At 15 d.p.a., whole blastemas were removed and dissociated into single cells using Liberase TM enzyme, as described above, and prepared for FACS. To isolate anterior blastema cells, we purified mCherry-positive, EGFP-negative cells. To isolate posterior blastema cells, we purified EGFP-positive cells, regardless of mCherry expression. Anterior and posterior blastema cells in the same replicate were isolated from the same blastema preparation (paired samples). We used seven animals to generate four replicates each of anterior and posterior blastema cells. Cells were sorted into amphibian culture medium 64.
+
+### RNA library preparation, sequencing and analysis
+
+We proceeded immediately to RNA isolation after cell sorting. RNA was purified into 20 μl nuclease-free water using an in-house magnetic bead-based isolation kit. The following RNA inputs were used to construct libraries: _Hand2_ overexpression and mCherry control (0.7 ng each); anterior/posterior high input (45 ng each); anterior/posterior low input (4.5 ng each); and A→A and A→P (4.5 ng each). Sequencing libraries were constructed using QuantSeq 3′ mRNA-Seq V2 REV kit with unique dual indices (Lexogen). The low-input protocol was used for samples with less than 10 ng input, and RNA removal was reduced to 5 min for the 0.7 ng libraries, as suggested by the manufacturer. Sequencing libraries were purified into 18 μl nuclease-free water. Each replicate was sequenced to a depth of around 50 M reads, in PE 150 mode (read 2 + CSP-read1), distributed over two lanes of a NovaSeq X 1.5 B flowcell. Sequencing was done by the Next Generation Sequencing Facility at Vienna BioCenter Core Facilities (VBCF), part of the Vienna BioCenter (VBC), Austria. These sequencing data have been deposited at the Gene Expression Omnibus (GEO) with accession number GSE284768.
+
+Gene expression analysis was done using DESeq2, similarly to the dermal cell samples (see the ‘Gene expression analysis’ section, above). A threshold of 100 counts was used. PCA was performed using anterior/posterior low-input libraries (to match the inputs of the A→A and A→P samples), and the other gene expression comparisons were done against the anterior/posterior high-input libraries. We used a threshold of _padj_< 0.05 for significant differential expression.
+
+### Dilution and storage of BMS-833923 and SAG
+
+BMS-833923 (Cayman Chemical, 16240) was dissolved to 10 mM in ethanol and stored as single-use aliquots at −70 °C. InSolution Smoothened Agonist (SAG, Merck 566661) for intraperitoneal injections was obtained at 10 mM in water and stored as single-use aliquots at −20 °C. SAG for bathing experiments was purchased from Merck (566660), diluted to 40 μM and stored as single-use aliquots at −20 °C.
+
+### Skin transplantation plus intraperitoneal delivery of BMS-833923
+
+Several modifications were made to the assay relative to the anterior-to-posterior and posterior-to-anterior transplantations by cell injection. One limitation of the _Alx4_:mCherry_ _Hand2_:EGFP double reporter was that cells would lose fluorescence if they lost anterior and posterior identity. To avoid this, we substituted _Alx4_:mCherry for _Prrx1_>mCherry, which expresses mCherry regardless of positional identity. This enabled continuous monitoring of the transplant, and _Hand2_:EGFP labelled posterior identity. Owing to limited animal availability, we used hindlimbs as donors instead of forelimbs (positional memory in forelimb and hindlimb are compatible 82). To reduce the number of donors required, we transplanted cells by skin grafting instead of cell injection.
+
+Skin areas (about 1 mm × 1 mm) were transplanted from the anterior lower leg of 7-cm double-reporter axolotls (_Prrx1_>mCherry_ _Hand2_:EGFP) to the posterior lower arm of 8-cm unlabelled _d/d_ hosts, maintaining dorsal–ventral and proximal–distal directionality. Four days after transplantation, the host arm was amputated through the distal third of the transplant, and blastema outgrowth was monitored every 1–2 days using an AXIOzoom V16 wide-field microscope (Zeiss). At 6 d.p.a. (the conical blastema stage), test axolotls were injected intraperitoneally with 25 μl of BMS-833923 diluted to 1 mM in water. Control axolotls instead received the appropriate dilution of ethanol in water injection. Injection mix contained Fast Green dye (Thermo Fisher Scientific) for visual contrast. Blastemas were further imaged 4 and 15 days after injection to assess for changes in positional identity.
+
+### Assessing blocking _Shh_ signalling on _Hand2_:EGFP expression
+
+_Hand2_:EGFP axolotls (7 cm) were amputated at the top of the lower arm. Every 3 days from 0 d.p.a. until 21 d.p.a., test axolotls were injected intraperitoneally with 20 μl of BMS-833923 diluted to 1 mM in water, whereas control axolotls were instead injected with 20 μl of water. Injection mix contained Fast Green dye (Thermo Fisher Scientific) for visual contrast. Blastemas were imaged every three days using an AXIOzoom V16 wide-field microscope (Zeiss). Mean _Hand2_:EGFP fluorescence was quantified from manually defined regions of interest in the posterior blastema.
+
+### SAG positional-memory experiment
+
+_Hand2_ lineage-traced axolotls were prepared by treating stage-42 embryos with 2 μM 4-OHT, as described in the section ‘Genetic lineage tracing (ZRS/_Hand2_)’, above. At a size of 8 cm, each axolotl had the right arm amputated through the middle of the lower arm (blastema assay). The left arm was left intact (mature assay). At 8 d.p.a., test axolotls were injected intraperitoneally with 20 μl of SAG diluted to 1.5 mM in water. Control axolotls instead received a water injection. Injection mix contained Fast Green dye (Merck F7258) for visual contrast. Both the blastema limb and the mature limb were imaged every few days until 25 days after injection using an AXIOzoom V16 wide-field microscope (Zeiss). On day 25, both limbs were amputated through the hand-plate region to assay for effects on positional memory from the expression of _Hand2_:EGFP.
+
+### SAG positional-memory experiment (_Shh_ HCR assay)
+
+_Hand2_:EGFP axolotls (5 cm) were amputated through both lower limbs, then bathed in water (control) or 10 nM SAG (test) for the first 21 days of regeneration. Bathing volume was 40 ml, and solution was prepared and exchanged daily, following the protocol of ref. 1. Regeneration was deemed to be complete at 30 d.p.a. Axolotls were raised for a further 30 days in water, to ensure complete washout of SAG from test animals. Subsequently, axolotls were re-amputated through the hand-plate region to generate a new blastema in the reprogrammed part of the limb. At 9 d.p.a., the new blastemas were removed and fixed for whole-mount HCR staining against _Shh_ mRNA, tissue clearing and light sheet imaging.
+
+### Baculovirus production and injection
+
+Pseudotyped baculovirus was produced as described in ref. 83. BV-mCherry, a control baculovirus to misexpress mCherry, was published previously as _ch_ BV 83. The cytomegalovirus immediate-early promoter (pCMV) drives expression of mCherry in infected cells. BV-_Shh_, to misexpress axolotl _Shh_, was generated for this study. pCMV drives the expression of nuclear-localized mCherry T2A axolotl _Shh_. Co-translational cleavage in the T2A sequence releases full-length axolotl _Shh_ protein. Axolotl _Shh_ was codon-altered to enable the distinction of virally expressed mRNA from endogenous axolotl _Shh_ mRNA.
+
+Either BV-mCherry or BV-_Shh_ was injected into the anterior lower arm of 4-cm _Hand2_:EGFP axolotls. The injection mix contained Fast Green dye (Merck, F7258) for visual contrast. Then, 18 days after infection, limbs were amputated through the middle of the lower arm. The regenerating blastema was imaged every few days using an AXIOzoom V16 wide-field microscope (Zeiss). At 11 d.p.a., blastemas were removed for fixation, whole-mount tissue clearing and imaging using a LightSheet.Z1 microscope (Zeiss).
+
+### Image analysis
+
+Microscope images were analysed using ZEN software (Zeiss) or Fiji software 78.
+
+### Statistical analysis and data representation
+
+Statistical analyses and graph plotting were done using Prism software (GraphPad). Data were tested for assumptions of normality and equality of variance to determine the appropriate statistical tests to perform. Measurements were taken from distinct samples unless indicated otherwise. No data were excluded. Mean values are reported ± s.d. Statistical significance was defined as _P_< 0.05. All figures were made using Adobe Illustrator.
+
+### Reporting summary
+
+Further information on research design is available in the Nature Portfolio Reporting Summary linked to this article.
+
+Data availability
+-----------------
+
+Genome assembly AmexG_v6.0-DD (https://genome.axolotl-omics.org/index.html) and transcriptome assembly AmexT_v47 (https://www.axolotl-omics.org/assemblies) were used 61. All RNA-sequencing data have been deposited at the Gene Expression Omnibus (GEO) under accessions GSE243137 (dermal cell data) and GSE284768 (all other data).Source data are provided with this paper.
+
+Code availability
+-----------------
+
+The analyses were performed using previously described computational tools, as described in the section ‘Gene expression analysis’.
+
+References
+----------
+
+1.   Nacu, E., Gromberg, E., Oliveira, C. R., Drechsel, D. & Tanaka, E. M. FGF8 and SHH substitute for anterior–posterior tissue interactions to induce limb regeneration. _Nature_**533**, 407–410 (2016).
+
+Article ADS CAS PubMed Google Scholar
+
+2.   Otsuki, L. & Tanaka, E. M. Positional memory in vertebrate regeneration: a century’s insights from the salamander limb. _Cold Spring Harb. Perspect. Biol._**14**, a040899 (2022).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+3.   Rinn, J. L. et al. A dermal HOX transcriptional program regulates site-specific epidermal fate. _Genes Dev._**22**, 303–307 (2008).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+4.   Chang, H. Y. et al. Diversity, topographic differentiation, and positional memory in human fibroblasts. _Proc. Natl Acad. Sci. USA_**99**, 12877–12882 (2002).
+
+Article ADS CAS PubMed PubMed Central Google Scholar
+
+5.   Kragl, M. et al. Cells keep a memory of their tissue origin during axolotl limb regeneration. _Nature_**460**, 60–65 (2009).
+
+Article ADS CAS PubMed Google Scholar
+
+6.   Nacu, E. et al. Connective tissue cells, but not muscle cells, are involved in establishing the proximo-distal outcome of limb regeneration in the axolotl. _Development_**140**, 513–518 (2013).
+
+Article CAS PubMed Google Scholar
+
+7.   da Silva, S. M., Gates, P. B. & Brockes, J. P. The newt ortholog of CD59 is implicated in proximodistal identity during amphibian limb regeneration. _Dev. Cell_**3**, 547–555 (2002).
+
+Article PubMed Google Scholar
+
+8.   Oliveira, C. R. et al. Tig1 regulates proximo-distal identity during salamander limb regeneration. _Nat. Commun._**13**, 1141 (2022).
+
+Article ADS CAS PubMed PubMed Central Google Scholar
+
+9.   Kawaguchi, A. et al. A chromatin code for limb segment identity in axolotl limb regeneration. _Dev. Cell_ https://doi.org/10.1016/j.devcel.2024.05.002 (2024).
+
+Article PubMed Google Scholar
+
+10.   Satoh, A. & Makanae, A. Conservation of position-specific gene expression in axolotl limb skin. _Zool. Sci._**31**, 6–13 (2014).
+
+Article Google Scholar
+
+11.   Yamamoto, S., Kashimoto, R., Furukawa, S., Ohashi, A. & Satoh, A. _Lmx1b_ activation in axolotl limb regeneration. _Dev. Dyn._**251**, 1509–1523 (2022).
+
+Article CAS PubMed Google Scholar
+
+12.   Bryant, S. V. & Baca, B. A. Regenerative ability of double-half and half upper arms in the newt, _Notophthalmus viridescens_. _J. Exp. Zool._**204**, 307–323 (1978).
+
+Article CAS PubMed Google Scholar
+
+13.   Bryant, S. V. Regenerative failure of double half limbs in _Notophthalmus viridescens_. _Nature_**263**, 676–679 (1976).
+
+Article ADS CAS PubMed Google Scholar
+
+14.   Laufer, E., Nelson, C. E., Johnson, R. L., Morgan, B. A. & Tabin, C. Sonic hedgehog and Fgf-4 act through a signaling cascade and feedback loop to integrate growth and patterning of the developing limb bud. _Cell_**79**, 993–1003 (1994).
+
+Article CAS PubMed Google Scholar
+
+15.   Niswander, L., Jeffrey, S., Martin, G. R. & Tickle, C. A positive feedback loop coordinates growth and patterning in the vertebrate limb. _Nature_**371**, 609–612 (1994).
+
+Article ADS CAS PubMed Google Scholar
+
+16.   Tank, P. W. & Holder, N. The effect of healing time on the proximodistal organization of double-half forelimb regenerates in the axolotl, _Ambystoma mexicanum_. _Dev. Biol._**66**, 72–85 (1978).
+
+Article CAS PubMed Google Scholar
+
+17.   Tank, P. W. The failure of double‐half forelimbs to undergo distal transformation following amputation in the axolotl, _Ambystoma mexicanum_. _J. Exp. Zool._**204**, 325–336 (1978).
+
+Article CAS PubMed Google Scholar
+
+18.   Endo, T., Bryant, S. V. & Gardiner, D. M. A stepwise model system for limb regeneration. _Dev. Biol._**270**, 135–145 (2004).
+
+Article CAS PubMed Google Scholar
+
+19.   Purushothaman, S., Elewa, A. & Seifert, A. W. Fgf-signaling is compartmentalized within the mesenchyme and controls proliferation during salamander limb development. _eLife_**8**, e48507 (2019).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+20.   Christensen, R. N., Weinstein, M. & Tassava, R. A. Expression of fibroblast growth factors 4, 8, and 10 in limbs, flanks, and blastemas of _Ambystoma_. _Dev. Dyn._**223**, 193–203 (2002).
+
+Article CAS PubMed Google Scholar
+
+21.   Han, M. J., An, J. Y. & Kim, W. S. Expression patterns of _Fgf-8_ during development and limb regeneration of the axolotl. _Dev. Dyn._**220**, 40–48 (2001).
+
+Article CAS PubMed Google Scholar
+
+22.   Roy, S. & Gardiner, D. M. Cyclopamine induces digit loss in regenerating axolotl limbs. _J. Exp. Zool._**293**, 186–190 (2002).
+
+Article CAS PubMed Google Scholar
+
+23.   Roy, S., Gardiner, D. M. & Bryant, S. V. Vaccinia as a tool for functional analysis in regenerating limbs: ectopic expression of _Shh_. _Dev. Biol._**218**, 199–205 (2000).
+
+Article CAS PubMed Google Scholar
+
+24.   Torok, M. A., Gardiner, D. M., Izpisúa-Belmonte, J.-C. & Bryant, S. V. _Sonic Hedgehog_ (_shh_) expression in developing and regenerating axolotl limbs. _J. Exp. Zool._**284**, 197–206 (1999).
+
+Article CAS PubMed Google Scholar
+
+25.   Sagai, T., Hosoya, M., Mizushina, Y., Tamura, M. & Shiroishi, T. Elimination of a long-range cis-regulatory module causes complete loss of limb-specific _Shh_ expression and truncation of the mouse limb. _Development_**132**, 797–803 (2005).
+
+Article CAS PubMed Google Scholar
+
+26.   Lettice, L. A. et al. A long-range _Shh_ enhancer regulates expression in the developing limb and fin and is associated with preaxial polydactyly. _Hum. Mol. Genet._**12**, 1725–1735 (2003).
+
+Article CAS PubMed Google Scholar
+
+27.   Carlson, B. M. Morphogenetic interactions between rotated skin cuffs and underlying stump tissues in regenerating axolotl forelimbs. _Dev. Biol._**39**, 263–285 (1974).
+
+Article CAS PubMed Google Scholar
+
+28.   Iwata, R., Makanae, A. & Satoh, A. Stability and plasticity of positional memory during limb regeneration in _Ambystoma mexicanum_. _Dev. Dyn._**249**, 342–353 (2020).
+
+Article CAS PubMed Google Scholar
+
+29.   Slack, J. M. W. Morphogenetic properties of the skin in axolotl limb regeneration. _J. Embryol. Exp. Morphol._**58**, 265–288 (1980).
+
+CAS PubMed Google Scholar
+
+30.   Maden, M. & Mustafa, K. Axial organization of the regenerating limb: asymmetrical behaviour following skin transplantation. _Development_**70**, 197–213 (1982).
+
+Article CAS Google Scholar
+
+31.   Yelon, D. et al. The bHLH transcription factor hand2 plays parallel roles in zebrafish heart and pectoral fin development. _Development_**127**, 2573–2582 (2000).
+
+Article CAS PubMed Google Scholar
+
+32.   Fernandez-Teran, M. et al. Role of dHAND in the anterior–posterior polarization of the limb bud: implications for the Sonic hedgehog pathway. _Development_**127**, 2133–2142 (2000).
+
+Article CAS PubMed Google Scholar
+
+33.   Charité, J., McFadden, D. G. & Olson, E. N. The bHLH transcription factor dHAND controls _Sonic hedgehog_ expression and establishment of the zone of polarizing activity during limb development. _Development_**127**, 2461–2470 (2000).
+
+Article PubMed Google Scholar
+
+34.   Galli, A. et al. Distinct roles of Hand2 in initiating polarity and posterior Shh expression during the onset of mouse limb bud development. _PLoS Genet._**6**, e1000901 (2010).
+
+Article PubMed PubMed Central Google Scholar
+
+35.   Nachtrab, G., Kikuchi, K., Tornini, V. A. & Poss, K. D. Transcriptional components of anteroposterior positional information during zebrafish fin regeneration. _Development_**140**, 3754–3764 (2013).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+36.   Osterwalder, M. et al. HAND2 targets define a network of transcriptional regulators that compartmentalize the early limb bud mesenchyme. _Dev. Cell_**31**, 345–357 (2014).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+37.   Donnelly, M. L. L. et al. Analysis of the aphthovirus 2A/2B polyprotein ‘cleavage’ mechanism indicates not a proteolytic reaction, but a novel translational effect: a putative ribosomal ‘skip’. _J. Gen. Virol._**82**, 1013–1025 (2001).
+
+Article CAS PubMed Google Scholar
+
+38.   de Felipe, P., Hughes, L. E., Ryan, M. D. & Brown, J. D. Co-translational, intraribosomal cleavage of polypeptides by the foot-and-mouth disease virus 2A peptide. _J. Biol. Chem._**278**, 11441–11448 (2003).
+
+Article PubMed Google Scholar
+
+39.   Srivastava, D. et al. Regulation of cardiac mesodermal and neural crest development by the bHLH transcription factor, dHAND. _Nat. Genet._**16**, 154–160 (1997).
+
+Article CAS PubMed Google Scholar
+
+40.   Purushothaman, S., Aviña, B. B. L. & Seifert, A. W. Sonic hedgehog is essential for proximal-distal outgrowth of the limb bud in salamanders. _Front. Cell Dev. Biol._**10**, https://doi.org/10.3389/fcell.2022.797352 (2022).
+
+41.   Logan, M. et al. Expression of Cre recombinase in the developing mouse limb bud driven by a _Prxl_ enhancer. _Genesis_**33**, 77–80 (2002).
+
+Article CAS PubMed Google Scholar
+
+42.   te Welscher, P., Fernandez-Teran, M., Ros, M. A. & Zeller, R. Mutual genetic antagonism involving GLI3 and dHAND prepatterns the vertebrate limb bud mesenchyme prior to SHH signaling. _Genes Dev._**16**, 421–426 (2002).
+
+Article Google Scholar
+
+43.   Wang, Y.-T. et al. Genetic reprogramming of positional memory in a regenerating appendage. _Curr. Biol._**29**, 4193–4207 (2019).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+44.   Capellini, T. D. et al. _Pbx1_/_Pbx2_ requirement for distal limb patterning is mediated by the hierarchical control of Hox gene spatial distribution and _Shh_ expression. _Development_**133**, 2263–2273 (2006).
+
+Article CAS PubMed Google Scholar
+
+45.   Soussi, G. et al. TBX3 is essential for establishment of the posterior boundary of anterior genes and upregulation of posterior genes together with HAND2 during the onset of limb bud development. _Development_**151**, dev202722 (2024).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+46.   te Welscher, P. et al. Progression of vertebrate limb development through SHH-mediated counteraction of GLI3. _Science_**298**, 827–830 (2002).
+
+Article ADS Google Scholar
+
+47.   Matsubara, H. et al. Upstream regulation for initiation of restricted _Shh_ expression in the chick limb bud. _Dev. Dyn._**246**, 417–430 (2017).
+
+Article CAS PubMed Google Scholar
+
+48.   Bénazet, J.-D. et al. A self-regulatory system of interlinked signaling feedback loops controls mouse limb patterning. _Science_**323**, 1050–1053 (2009).
+
+Article ADS PubMed Google Scholar
+
+49.   Malkmus, J. et al. Spatial regulation by multiple _Gremlin1_ enhancers provides digit development with _cis_-regulatory robustness and evolutionary plasticity. _Nat. Commun._**12**, 5557 (2021).
+
+Article ADS PubMed PubMed Central Google Scholar
+
+50.   Gamart, J. et al. SMAD4 target genes are part of a transcriptional network that integrates the response to BMP and SHH signaling during early limb bud patterning. _Development_**148**, dev200182 (2021).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+51.   Zúñiga, A., Haramis, A.-P. G., McMahon, A. P. & Zeller, R. Signal relay by BMP antagonism controls the SHH/FGF4 feedback loop in vertebrate limb buds. _Nature_**401**, 598–602 (1999).
+
+Article ADS PubMed Google Scholar
+
+52.   Maden, M. The effect of vitamin A on the regenerating axolotl limb. _J. Embryol. Exp. Morphol._**77**, 273–295 (1983).
+
+CAS PubMed Google Scholar
+
+53.   Harfe, B. D. et al. Evidence for an expansion-based temporal Shh gradient in specifying vertebrate digit identities. _Cell_**118**, 517–528 (2004).
+
+Article CAS PubMed Google Scholar
+
+54.   Kraus, P., Fraidenraich, D. & Loomis, C. A. Some distal limb structures develop in mice lacking Sonic hedgehog signaling. _Mech. Dev._**100**, 45–58 (2001).
+
+Article CAS PubMed Google Scholar
+
+55.   Chiang, C. et al. Manifestation of the limb prepattern: limb development in the absence of Sonic hedgehog function. _Dev. Biol._**236**, 421–435 (2001).
+
+Article CAS PubMed Google Scholar
+
+56.   Rux, D. R. et al. Hox11 function Is required for region-specific fracture repair. _J. Bone Miner. Res._**32**, 1750–1760 (2017).
+
+Article CAS PubMed Google Scholar
+
+57.   Rux, D. R. et al. Regionally restricted _Hox_ function in adult bone marrow multipotent mesenchymal stem/stromal cells. _Dev. Cell_**39**, 653–666 (2016).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+58.   Pineault, K. M., Song, J. Y., Kozloff, K. M., Lucas, D. & Wellik, D. M. Hox11 expressing regional skeletal stem cells are progenitors for osteoblasts, chondrocytes and adipocytes throughout life. _Nat. Commun._**10**, 3168 (2019).
+
+Article ADS PubMed PubMed Central Google Scholar
+
+59.   Rinn, J. L., Bondre, C., Gladstone, H. B., Brown, P. O. & Chang, H. Y. Anatomic demarcation by positional variation in fibroblast gene expression programs. _PLoS Genet._**2**, e119 (2006).
+
+Article PubMed PubMed Central Google Scholar
+
+60.   Khattak, S. et al. Optimized axolotl (_Ambystoma mexicanum_) husbandry, breeding, metamorphosis, transgenesis and tamoxifen-mediated recombination. _Nat. Protoc._**9**, 529–540 (2014).
+
+Article CAS PubMed Google Scholar
+
+61.   Schloissnig, S. et al. The giant axolotl genome uncovers the evolution, scaling, and transcriptional control of complex gene loci. _Proc. Natl Acad. Sci. USA_**118**, e2017176118 (2021).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+62.   Gerber, T. et al. Single-cell analysis uncovers convergence of cell identities during axolotl limb regeneration. _Science_**362**, eaaq0681 (2018).
+
+Article ADS PubMed PubMed Central Google Scholar
+
+63.   Lin, T.-Y. et al. Fibroblast dedifferentiation as a determinant of successful regeneration. _Dev. Cell_**56**, 1541–1551 (2021).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+64.   Denis, J.-F., Sader, F., Ferretti, P. & Roy, S. Culture and transfection of axolotl cells. _Methods Mol. Biol._**1290**, 187–196 (2015).
+
+Article PubMed Google Scholar
+
+65.   Bolger, A. M., Lohse, M. & Usadel, B. Trimmomatic: a flexible trimmer for Illumina sequence data. _Bioinformatics_**30**, 2114–2120 (2014).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+66.   Kim, D., Paggi, J. M., Park, C., Bennett, C. & Salzberg, S. L. Graph-based genome alignment and genotyping with HISAT2 and HISAT-genotype. _Nat. Biotechnol._**37**, 907–915 (2019).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+67.   Liao, Y., Smyth, G. K. & Shi, W. featureCounts: an efficient general purpose program for assigning sequence reads to genomic features. _Bioinformatics_**30**, 923–930 (2014).
+
+Article CAS PubMed Google Scholar
+
+68.   Love, M. I., Huber, W. & Anders, S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2. _Genome Biol._**15**, 550 (2014).
+
+Article PubMed PubMed Central Google Scholar
+
+69.   Wickham, H. _ggplot2. Elegant Graphics for Data Analysis_ https://doi.org/10.1007/978-3-319-24277-4 (Springer, 2016).
+
+70.   Nowoshilow, S., Fei, J.-F., Voss, R. S., Tanaka, E. M. & Murawala, P. Gene and transgenics nomenclature for the laboratory axolotl −_Ambystoma mexicanum_. _Dev. Dyn._ https://doi.org/10.1002/dvdy.351 (2021).
+
+Article PubMed PubMed Central Google Scholar
+
+71.   Sobkow, L., Epperlein, H.-H., Herklotz, S., Straube, W. L. & Tanaka, E. M. A germline GFP transgenic axolotl and its use to track cell fate: dual origin of the fin mesenchyme during development and the fate of blood cells during regeneration. _Dev. Biol._**290**, 386–397 (2006).
+
+Article CAS PubMed Google Scholar
+
+72.   Fei, J.-F. et al. Application and optimization of CRISPR-Cas9-mediated genome engineering in axolotl (_Ambystoma mexicanum_). _Nat. Protoc._**13**, 2908–2943 (2018).
+
+Article CAS PubMed Google Scholar
+
+73.   Puigbò, P., Guzmán, E., Romeu, A. & Garcia-Vallvé, S. OPTIMIZER: a web server for optimizing the codon usage of DNA sequences. _Nucleic Acids Res._**35**, W126–W131 (2007).
+
+Article PubMed PubMed Central Google Scholar
+
+74.   Frazer, K. A., Pachter, L., Poliakov, A., Rubin, E. M. & Dubchak, I. VISTA: computational tools for comparative genomics. _Nucleic Acids Res._**32**, W273–W279 (2004).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+75.   Schwartz, S. et al. PipMaker—a web server for aligning two genomic DNA sequences. _Genome Res._**10**, 577–586 (2000).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+76.   Li, W., Germain, R. N. & Gerner, M. Y. High-dimensional cell-level analysis of tissues with Ce3D multiplex volume imaging. _Nat. Protoc._**14**, 1708–1733 (2019).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+77.   Glotzer, G. L., Tardivo, P. & Tanaka, E. M. Canonical Wnt signaling and the regulation of divergent mesenchymal Fgf8 expression in axolotl limb development and regeneration. _eLife_**11**, e79762 (2022).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+78.   Schindelin, J. et al. Fiji: an open-source platform for biological-image analysis. _Nat. Methods_**9**, 676–682 (2012).
+
+Article CAS PubMed Google Scholar
+
+79.   Currie, J. D. et al. Live imaging of axolotl digit regeneration reveals spatiotemporal choreography of diverse connective tissue progenitor pools. _Dev. Cell_**39**, 411–423 (2016).
+
+Article CAS PubMed PubMed Central Google Scholar
+
+80.   Endo, T., Gardiner, D. M., Makanae, A. & Satoh, A. The accessory limb model: an alternative experimental system of limb regeneration. _Methods Mol. Biol._**1290**, 101–113 (2015).
+
+Article PubMed Google Scholar
+
+81.   Taniguchi, Y. et al. The posterior neural plate in axolotl gives rise to neural tube or turns anteriorly to form somites of the tail and posterior trunk. _Dev. Biol._**422**, 155–170 (2017).
+
+Article CAS PubMed Google Scholar
+
+82.   Rollman-Dinsmore, C. & Bryant, S. V. Pattern regulation between hind- and forelimbs after blastema exchanges and skin grafts in _Notophthalmus viridescens_. _J. Exp. Zool._**223**, 51–56 (1982).
+
+Article CAS PubMed Google Scholar
+
+83.   Oliveira, C. R. et al. Pseudotyped baculovirus is an effective gene expression tool for studying molecular function during axolotl limb regeneration. _Dev. Biol._**433**, 262–275 (2018).
+
+Article CAS PubMed Google Scholar
+
+Download references
+
+Acknowledgements
+----------------
+
+We thank members of the Tanaka laboratory for discussions (P. Tardivo and A. Polikarpova), assistance with RNA-seq library preparation (F. Becerril Perez and M. Leyva), bioinformatics (S. Nowoshilow) and baculovirus production (H. Okulski). We thank C. Lilliehook, O. Chara, K. Lust, E. Bassat and W. Masselink for comments on the manuscript; the animal care team (M. Blaschek, E. Silic, V. Szilagyi, A. Lentz-Koblenc, J. König, V. Vojnicsek, D. Bastian, E. Kiligan, E. Zöllner, T. Torrecilla Lobos, S. Faltin and W. Auer) for axolotl care; staff at the BioOptics facility and the Molecular Biology Service at the IMP/IMBA Core Facilities for support; and staff at the Next Generation Sequencing facility at the Vienna Biocenter Core Facilities for RNA sequencing. This work was funded by Human Frontier Science Program (HFSP) fellowship LT000785/2019-L to L.O.; an Österreichische Forschungsförderungsgesellschaft (FFG) FEMtech Praktika studentship to S.A.P.; and a European Research Council (ERC) advanced grant 742046 (RegGeneMems) to E.M.T. For the purpose of open access, the author has applied a CC BY public copyright licence to any Author Accepted Manuscript version arising from this submission.
+
+Funding
+-------
+
+Open access funding provided by Research Institute of Molecular Pathology (IMP) / Institute of Molecular Biotechnology (IMBA)/ Gregor Mendel Institute of Molecular Plant Biology (GMI).
+
+Author information
+------------------
+
+### Authors and Affiliations
+
+1.   Institute of Molecular Biotechnology of the Austrian Academy of Sciences (IMBA), Vienna BioCenter (VBC), Vienna, Austria
+
+L. Otsuki,S. A. Plattner,Y. Taniguchi-Sugiura,F. Falcon&E. M. Tanaka
+
+2.   Research Institute of Molecular Pathology (IMP), Vienna BioCenter (VBC), Vienna, Austria
+
+L. Otsuki,S. A. Plattner,Y. Taniguchi-Sugiura,F. Falcon&E. M. Tanaka
+
+Authors
+
+1.   L. Otsuki
+2.   S. A. Plattner
+3.   Y. Taniguchi-Sugiura
+4.   F. Falcon
+5.   E. M. Tanaka
+
+### Contributions
+
+L.O. and E.M.T conceived the project and secured funding. L.O. performed and analysed all experiments, with support from S.A.P. for Extended Data Fig. 5c–e. L.O. and Y.T.-S. microinjected axolotl eggs to generate transgenic axolotls. F.F. aligned RNA sequencing data to the axolotl genome and generated gene-count matrices. L.O. and E.M.T. wrote and revised the manuscript. All authors approved the manuscript.
+
+### Corresponding authors
+
+Correspondence to L. Otsuki or E. M. Tanaka.
+
+Ethics declarations
+-------------------
+
+### Competing interests
+
+The authors declare no competing interests.
+
+Peer review
+-----------
+
+### Peer review information
+
+_Nature_ thanks Miguel Torres, Rolf Zeller and the other, anonymous, reviewer(s) for their contribution to the peer review of this work. Peer reviewer reports are available.
+
+Additional information
+----------------------
+
+**Publisher’s note** Springer Nature remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.
+
+Extended data figures and tables
+--------------------------------
+
+### Extended Data Fig. 1 Summary of the transgenic axolotls generated in this study.
+
+**a**, Transgenic axolotls generated in this study, and the figures that they appear in. **b-f**, The genetic constructs used to generate axolotls for this study (_left_), their expression domains in the limb bud/blastema (_centre_) and official nomenclature (_right_). In the expression domain schematics, only mesenchyme is depicted and anterior is up, posterior is down.
+
+### Extended Data Fig. 2 Characterisation of the ZRS > TFP transgenic axolotl.
+
+**a,b**, ZRS > TFP expression (cyan) during limb development (**a**) and regeneration (**b**). TFP perdures beyond the _Shh_ expression window. Asterisks indicate autofluorescence in the cyan channel. **c**, Orthogonal views of a limb bud stained for _Shh_ mRNA (white) and DAPI (blue), then 3D imaged to show specificity of the _Shh_ probe. **d**, Confocal section of a ZRS > TFP limb bud, stained for TFP mRNA (red) and _Shh_ mRNA (white). Endogenous TFP fluorescence (cyan) was preserved poorly. Arrowhead indicates zoomed area. Asterisk indicates autofluorescence. **e**, Confocal cross-section of a ZRS > TFP blastema (4 cm animal), stained for TFP mRNA (red) and _Shh_ mRNA (white). **f**, Quantification of ZRS > TFP reporter efficiency and specificity. Data are mean ± SD. Development data (**d**): _n_ = 8 limb buds, 182 TFP+ cells and 154 _Shh_+ cells quantified. Regeneration data (**e**): _n_ = 17 blastemas, 1,318 TFP+ cells and 1,199 _Shh_+ cells quantified. **g**, Estimation of Cre/loxP recombination efficiency. Confocal cross-section of a lower forelimb depicting lineage traced cells in red and nuclei in white. The boxed region is magnified to the right. Prrx1 antibody (yellow) stains connective tissue cells. Recombination efficiency was defined as the percentage of Prrx1+ cells posterior to the ulna bone that were mCherry+. r: radius. u: ulna. **h**, Estimation of mCherry leakiness in ZRS lineage tracing experiments using flow cytometry. _n_ = 12 4-OHT-treated animals and _n_ = 12 untreated animals. Images are representative of 8 (**a,b,d**), 6 (**c**), 12 (**e**) or 9 (**g**) specimens. Scale bars: 100 μm (**a,c,d,e,g**) or 500 μm (**b**).
+
+### Extended Data Fig. 3 Characterisation of the axolotl ZRS lineage.
+
+**a**, Schematic summarising the lineage tracing of embryonic _Shh_ cells into the forelimb in axolotls (_left_, this study) or in mice (_right_, Harfe et al. 53). **b**, Lineage tracing of embryonic _Shh_ cells converted at limb bud stage 47 with 4-OHT (_n_ = 8 limbs). **c**, Contribution of embryonic _Shh_ cells to the hand area following development (“Original”) or after amputation and regeneration (“Regen.”). Boxplots depict median, interquartile range and 1.5x interquartile range. Each dot is a measurement from 1 limb. Data from the same limb are connected by a dotted line. Paired two-tailed _t_-test, _n_ = 10 limbs per condition. **d**, Strategy to deplete embryonic _Shh_ cells prior to amputation. For control animals, anterior tissue was removed instead. **e**, Control and _Shh_ cell-depleted limbs immediately prior to amputation. Asterisks indicate surgery sites. _n_ = 6 limbs per condition. **f**, Regeneration of control limbs. _Top row_: overview. _Bottom row_: blastema zoom. Dotted line indicates amputation plane. 6/6 limbs expressed ZRS > TFP (cyan) at 7 dpa. **g**, Regeneration of _Shh_ lineage-depleted limbs. Dotted line indicates amputation plane. 6/6 limbs expressed TFP (cyan) at 7 dpa. Scale bars: 1 mm.
+
+Source data
+
+### Extended Data Fig. 4 Gene expression in anterior and posterior dermal cells.
+
+**a-b**, Heatmaps depicting the relative expression of transcription factors enriched in anterior cells (**a**) or posterior cells (**b**). Genes are ordered by decreasing statistical significance. Heatmap scores are normalised by row. cpm: counts per million. ant and pos: anterior and posterior samples. An asterisk and dark grey box in the DE? column indicates statistically significant differential expression. **c**, Volcano plot highlighting the transcription factors differentially expressed in anterior cells (magenta) or in posterior cells (green). The most statistically significant transcription factor in each population is labelled. Differential expression analysis was performed with DESeq2 (two-tailed Wald test with Benjamini-Hochberg adjustment for multiple testing), with a FDR cutoff of _p_< 0.01. **d**, Heatmap of general connective tissue and forelimb identity genes. **e**, Top 5 Gene Ontology (GO) terms describing the differentially expressed genes. **f,g**, Heatmaps depicting the relative expression of differentially expressed genes belonging to the GO term categories ‘extracellular matrix’ or ‘cell adhesion’ in anterior cells (**f**) or posterior cells (**g**). **h**, Volcano plot highlighting differentially expressed genes belonging to the GO term categories ‘extracellular matrix’ or ‘cell adhesion’. Differential expression was determined statistically using DESeq2 (two-tailed Wald test with Benjamini-Hochberg adjustment for multiple testing), with a FDR cutoff of _p_< 0.01. Gene nomenclature: we concatenated AMEX[….], the axolotl gene identifier, with the gene symbol of the human homologue.
+
+### Extended Data Fig. 5 _Hand2_ lineage tracing in limb bud and mature limb.
+
+**a**, Schematic of the _Hand2_:EGFP knock-in reporter construct. **b**, Cross-section through the lower forelimb of a _Hand2_:EGFP axolotl. Boxed region is magnified to the right. Dotted line indicates border between epidermis (epi) and dermis (der). Int: interstitial cells. **c**, _Hand2_:EGFP expression after amputation. Each line connects data from 1 limb. _n_ = 6 limbs. **d**, _Hand2_:EGFP levels in mature limb and blastema, measured using flow cytometry. Only EGFP+ events are displayed. **e**, Comparison of ZRS > TFP expression at 7 dpa (positive signal in 1/7 axolotls) and 10 dpa (positive signal in 7/7 axolotls). _Prrx1_>mCherry (red) labels connective tissue cells. **f**, Lineage tracing strategy to label embryonic _Hand2_ cells. **g**, Estimation of mCherry leakiness in _Hand2_ lineage tracing experiments. _n_ = 12 4-OHT-treated animals and _n_ = 12 untreated animals. **h**, A blastema lineage traced for embryonic _Hand2_ cells (red). Current _Hand2_ expression is in cyan. **i**, Contribution of embryonic _Hand2_ cells to the hand area following development (“Original limb”) or after amputation and regeneration (“Regenerated”). Boxplots depict median, interquartile range and 1.5x interquartile range. Each dot is a measurement from 1 limb. Paired data are connected by a dotted line. Paired two-tailed _t_-test, _n_ = 8 limbs. _ns_: not significant. **j**, Lineage tracing strategy to label steady state _Hand2_ cells. **k**, _Hand2_ cells labelled following the treatment in (**j**). **l**, Split channel images of the _Hand2_ lineage-traced blastema in main Fig. 1l. **m**, Schematic illustrating the contributions of embyonic _Hand2_ cells to the limb and to _Shh_ cells during regeneration. Images are representative of 6 (**b,k**), 7 (**e,h**) or 4 (**l**) specimens. Scale bars: 100 μm (**b,e,h,l**) or 1 mm (**k**).
+
+Source data
+
+### Extended Data Fig. 6 Characterisation of _Hand2_ CRISPants during development, regeneration and ALM.
+
+**a**, Strategy to generate _Hand2_ CRISPants. **b**, Indel frequency in control (_n_ = 46) or _Hand2_ CRISPant (_n_ = 47) axolotls. Two-tailed Kolmogorov-Smirnov test. **c,d**, Developmental phenotypes (**c**) and quantifications (**d**). **e,f**, Regeneration phenotypes (**e**) and quantifications (**f**). **g,h,i**, Breeding (**g**) and genotyping (**h,i**) strategies to isolate _Hand2_ _Δ64_ homozygotes. Lethality: 96.7% (29/30, homozygotes) vs 19.4% (12/62, background rate including trans-heterozygotes undetectable with this strategy). **j,k**, Injection of _Hand2_ sgRNAs into one side of _Hand2:_ EGFP eggs (**j**) and resulting phenotype in 13/28 axolotls (**k**). **l**, Comparison of _Hand2:_ EGFP intensity in left and right limb buds. Ratios: 1.34 ± 0.30 (controls, _n_ = 11), 13.31 ± 16.50 (_Hand2_ CRISPants with defects, _n_ = 13), 1.61 ± 0.51 (_Hand2_ CRISPants without defects, _n_ = 15). Ratios are mean ± SD. Two-tailed Kruskal-Wallis test with Dunn’s multiple comparisons. Plots depict medians. **m**, Target sequences for _Hand2_ M146 sgRNAs. **n**, Digit phenotypes in _Hand2_ _M146_ CRISPants, controls and _Hand2_ CRISPants. **o**, Comparison between limb bud ZRS > TFP expression (normalised to controls) and final digit number. Two-tailed Kruskal-Wallis test with Dunn’s multiple comparison testing, _n_ = 68 axolotls. **p**, Paired comparison between ZRS > TFP intensity in limb bud and blastema (two-tailed Spearman’s rank test, _p_ = 2.4e-3, _n_ = 14 axolotls). **q**, Anterior ALM using control or _Hand2_ _M146_ CRISPant grafts (_n_ = 6 each). There was a significant difference (number of digits formed, two-tailed Wilcoxon signed rank test, _p_ = 0.03, W = −21.00). **r**, Schematic depicting the posterior ALM. **s**, Posterior ALM induction by control or _Hand2_ _M146_ CRISPant grafts (_n_ = 6 each). There was a significant difference (number of digits formed, two-tailed Wilcoxon signed rank test, _p_ = 0.03, W = −4.00). Boxplots (**b,o**) depict median, interquartile range and 1.5x interquartile range. ns: not significant, _p_> 0.05. Scale bars: 100 μm (**k**) or 5 mm (**q,s**).
+
+Source data
+
+### Extended Data Fig. 7 Characterisation of limbs misexpressing _Hand2._
+
+**a**, Schematic of a control axolotl misexpressing mCherry in a ZRS > TFP background. **b**, Limb phenotypes arising from mosaic _Hand2_ misexpression (ME) in the ZRS > TFP genetic background (BG). **c**, Effects of mosaic _Hand2_ misexpression on ZRS > TFP expression. **d**, Boxplot comparing the number of digits in limbs mosaically misexpressing _Hand2_ compared to controls. Two-tailed Kolmogorov-Smirnov test, _n_ = 17 (controls) or 13 (_Hand2_) limbs. **e**, Comparison of mCherry-_Hand2_ intensity in mosaic experiments with resulting limb phenotypes. _n_ = 16 limbs total. The trend seen was not significant, likely due to low _n_ numbers in some categories (**b**, two-tailed Kruskal-Wallis test, _p_> 0.05). **f**, Effects of uniform _Hand2_ misexpression (ME) on digit number in the ZRS > TFP genetic background (BG). **g**, Examples of “spike” and “2 digits, fused radius-ulna” phenotypes quantified in (**f**). **h**, Effects of uniform _Hand2_ misexpression (ME) on digit number in the _Hand2_:EGFP genetic background (BG). **i**, Effects of uniform _Hand2_ misexpression on _Hand2_:EGFP expression. **j**, Comparison of _Hand2_:EGFP expression (green) in axolotls uniformly misexpressing strong mCherry-_Hand2_ (_top_) or weak mCherry-_Hand2_ (_bottom_). Images are representative of 40 and 28 limbs respectively. **k**, Anterior ALM performed with anterior skin grafts misexpressing strong _Hand2_ (_top_) or weak _Hand2_ (_bottom_). 8/8 strong _Hand2_ ALMs induced ZRS > TFP at 21dpg, compared to 0/8 weak _Hand2_ grafts. Boxplots (**d,e**) depict median, interquartile range and 1.5x interquartile range. Each dot is a measurement from one limb. Scale bars: 1 mm (**g,k**) or 100 μm (**j**).
+
+Source data
+
+### Extended Data Fig. 8 Characterisation of _Alx4_:mCherry_ _Hand2_:EGFP double reporter expression.
+
+**a**, Schematic of an _Alx4_:mCherry (magenta)_ _Hand2_:EGFP (green) double knock-in axolotl to distinguish anterior and posterior cells. **b**, Cross-section through the lower arm of an _Alx4_:mCherry_ _Hand2_:EGFP axolotl, with nuclei stained by DAPI (blue). Insets show magnifications of anterior and posterior tissue. **c**, Schematic of the limb sectioned and imaged in (**e**). **d**, Expression domains of _Alx4_:mCherry and _Hand2_:EGFP reporters in loose connective tissue, joints, skeletal elements and peri-skeletal elements, assessed from (**e**). **e**, Longitudinal confocal sections of a limb from a 15 cm double reporter axolotl. Magenta is endogenous _Alx4_:mCherry fluorescence, Green is endogenous _Hand2:_ EGFP fluorescence and Blue is nuclear staining (DAPI). See (**c**) for anatomy. **f**, Confocal cross-section of a limb from a 15 cm double reporter animal. f 1-f 6 are magnifications of the boxed regions in the overview panel, and highlight different connective tissue populations. f 1-3 are anterior regions (predominantly _Alx4_:mCherry-positive) and f 4-6 are posterior regions (_Hand2_:EGFP-positive). Colours are as in (**e**). White signal is antibody staining against COL1A1, which highlights peri-skeletal and dermal cell niches. Images are representative of 6 (**b**) or 3 (**e,f**) limbs. Scale bars: 100 μm (**b,f****1****-f****6**) or 500 μm (**e,f**).
+
+### Extended Data Fig. 9 Characterisation of the anterior-posterior positional memory switch.
+
+**a,b**, Quantification of _Alx4_:mCherry and _Hand2_:EGFP fluorescence intensities in anterior-to-posterior transplantations (**a**) or posterior-to-anterior transplantations (**b**), normalised to 0 dpa values. Each line connects data from 1 limb. _n_ = 3 limbs per transplantation type. **c**, Low magnification image of the posterior-to-anterior transplanted blastema depicted in main Fig. 4h, representative of 3 transplantations. **d**, Principal component analysis (PCA) of RNA-seq datasets. **e**, Selected gene loadings for principal component 2 (PC2). The top 1000 variable genes were used as an input. **f**, Expression of selected posterior genes in anterior blastema cells (A) or anterior cells transplanted posteriorly (A→P), normalised to sequencing depth. All genes are differentially expressed as assessed by DESeq2, _padj_< 0.05. **g**, Expression of selected anterior genes in anterior blastema cells (A) or anterior cells transplanted posteriorly (A→P), normalised to sequencing depth. All genes are differentially expressed as assessed by DESeq2, _padj_< 0.05. **h**, _Hand2_:EGFP or _Prrx1_>mCherry expression in anterior-to-posterior transplantations treated with BMS-833923 (_Shh_ pathway inhibitor) or ethanol (control), normalised to 5 dpa values. Dotted vertical line indicates time of injection. Each line connects data from 1 limb. _n_ = 4 limbs per condition. Scale bars: 500 μm.
+
+Source data
+
+### Extended Data Fig. 10 _Shh_ signalling can induce a posterior memory in anterior blastema cells.
+
+**a**, _Hand2_:EGFP limbs infected with baculoviruses encoding _Prrx1_>mCherry (BV-mCherry) or _Prrx1_>mCherry-T2A-_Shh_ (BV-SHH). 7/10 BV-SHH-injected blastemas expressed anterior _Hand2_:EGFP after amputation (arrowhead), compared to 0/10 controls. Asterisk indicates autofluorescence. **b**, The BV-SHH blastema in (**a**), imaged with lightsheet microscopy. The boxed region is magnified to the right. **c**, Mean _Hand2_:EGFP expression in axolotls injected with BMS-833923 or water (control). Two-way ANOVA with Šídák multiple comparisons, F(7, 98) = 178.0. _n_ = 8 blastemas per condition. *** from left to right: _p_ = 3.0e-6, 3.1e−11, 7.5e-11, 2.1e-7. **d**, _Hand2_ lineage-traced axolotls treated with SAG or water. Red labels embryonic _Hand2_ cells (posterior cells). Cyan labels active _Hand2_ expression. Representative of _n_ = 4 (control) or 5 (SAG) blastemas. **e**, Quantification of (**d**). The anterior extent of mCherry (_Hand2_ lineage) and _Hand2:_ EGFP (regeneration _Hand2_) were measured from the posterior edge in 25 dpi blastemas. Two-way ANOVA with Šídák multiple comparisons, F(1, 7) = 458.4. _n_ = 4 blastemas (control) or 5 blastemas (SAG). Data are presented as mean values ± SD. **f**, Same quantification as in (**e**), but for the positional memory assay (see main Fig. 5d). Two-tailed paired _t_-tests, _n_ = 4 blastemas (control) or 5 blastemas (SAG). Mean values ± SD. _ns_: not significant, _p_> 0.05. **g**, Control and SAG-treated blastemas stained for _Shh_ mRNA (white). Ectopic _Shh_ signalling centres were seen in 4/6 cases (SAG) and 0/6 cases (controls). **h**, Original and regenerated anterior-posterior memory are broadly concordant during normal limb regeneration. **i**, In anterior-to-posterior transplantations, anterior cells come into proximity of _Shh_-expressing posterior cells, which posteriorize cell memory (red arrow). **j**, SAG treatment activates _Shh_ signalling in anterior blastema cells, posteriorizing their positional memory (red arrow). Scale bars: 1 mm (**a,d**) or 100 μm (**b,g**).
+
+Source data
+
+Supplementary information
+-------------------------
+
+### Supplementary Fig. 1
+
+Gating strategy for the flow cytometry of _Hand2_:EGFP cells. **a**, Representative plots depicting gates defined for all cells (left), single cells (centre) and GFP-positive cells (right). Depicted are plots from the 14 d.p.a. blastema sample, which harbours _Hand2_:EGFP+ cells. **b**, Representative plots depicting gates defined for all cells (left), single cells (centre) and GFP+ cells (right). Depicted are plots from the 0 d.p.a. negative control sample, which does not harbour _Hand2_:EGFP+ cells. Plots were assembled in FLOWJO (BD Biosciences)
+
+### Reporting Summary
+
+### Peer Review file
+
+### Supplementary Tables
+
+Supplementary Tables 1–18
+
+Rights and permissions
+----------------------
+
+**Open Access** This article is licensed under a Creative Commons Attribution 4.0 International License, which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as you give appropriate credit to the original author(s) and the source, provide a link to the Creative Commons licence, and indicate if changes were made. The images or other third party material in this article are included in the article's Creative Commons licence, unless indicated otherwise in a credit line to the material. If material is not included in the article’s Creative Commons licence and your intended use is not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission directly from the copyright holder. To view a copy of this licence, visit http://creativecommons.org/licenses/by/4.0/.
+
+Reprints and permissions
+
+About this article
+------------------
+
+### Cite this article
+
+Otsuki, L., Plattner, S.A., Taniguchi-Sugiura, Y. _et al._ Molecular basis of positional memory in limb regeneration. _Nature_**642**, 730–738 (2025). https://doi.org/10.1038/s41586-025-09036-5
+
+Download citation
+
+*   Received: 23 September 2023
+
+*   Accepted: 16 April 2025
+
+*   Published: 21 May 2025
+
+*   Issue date: 19 June 2025
+
+*   DOI: https://doi.org/10.1038/s41586-025-09036-5

@@ -1,0 +1,1343 @@
+Title: How do I modify a specific commit?
+
+URL Source: https://stackoverflow.com/questions/1186535/how-do-i-modify-a-specific-commit
+
+Markdown Content:
+Asked 16 years, 3 months ago
+
+Viewed 1.8m times
+
+This question shows research effort; it is useful and clear
+
+3358
+
+Save this question.
+
+Show activity on this post.
+
+I have the following commit history:
+
+1.   `HEAD`
+2.   `HEAD~`
+3.   `HEAD~2`
+4.   `HEAD~3`
+
+`git commit --amend` modifies the current `HEAD` commit. But how do I modify `HEAD~3`?
+
+Mateen Ulhaq
+
+27.8k 21 gold badges 121 silver badges 155 bronze badges
+
+asked Jul 27, 2009 at 5:19
+
+4
+
+This answer is useful
+
+4628
+
+Save this answer.
+
+Show activity on this post.
+
+Use `git rebase`. For example, to modify commit `bbc643cd`, run:
+
+```
+git rebase --interactive bbc643cd~
+```
+
+Please note the tilde `~` at the end of the command, because you need to reapply commits on top of the previous commit of `bbc643cd` (i.e. `bbc643cd~`).
+
+In the default editor, modify `pick` to `edit` in the line mentioning `bbc643cd`.
+
+Save the file and exit. git will interpret and automatically execute the commands in the file. You will find yourself in the previous situation in which you just had created commit `bbc643cd`.
+
+At this point, `bbc643cd` is your last commit and you can easily amend it. Make your changes and then commit them with the command:
+
+```
+git commit --all --amend --no-edit
+```
+
+After that, return back to the previous HEAD commit using:
+
+```
+git rebase --continue
+```
+
+**WARNING**: Note that this will change the SHA-1 of that commit **as well as all children** -- in other words, this rewrites the history from that point forward. You can break repos doing this if you push using the command `git push --force`.
+
+Wenfang Du
+
+11.9k 13 gold badges 78 silver badges 116 bronze badges
+
+answered Jul 27, 2009 at 5:28
+
+ZelluX ZelluX
+
+73.5k 20 gold badges 76 silver badges 106 bronze badges
+
+32 Comments
+-----------
+
+Another interesting option within this flow is once you have moved to the commit you want to modify, instead of modifying files and ammed over the commit on top (the one you're editing), you may want to split that commit into two different commits (or even more). In that case, move back to the commit to edit, and run "git reset HEAD^". that will put the modified files of that commit into the stage. Now pick and commit any files as you wish. This flow is quite well explained in "git-rebase" man page. See section "Splitting commits". bit.ly/d50w1M
+
+2010-03-15T19:18:49.747Z+00:00
+
+In Git 1.6.6 and newer you can use the `reword` action in `git rebase -i` instead of `edit` (it automatically opens the editor and continues with the rest of the rebase steps; this obviates the use of `git commit --ammend` and `git rebase --continue` when you only need to change the commit message and not the content).
+
+2010-11-29T03:35:40.913Z+00:00
+
+It's worth noting that you may need to run `git stash` before `git rebase` and `git stash pop` afterwards, if you have pending changes.
+
+2013-09-18T08:42:55.307Z+00:00
+
+Is there a shortucut command to edit a specific commit in the interactive rebase without opening the editor, finding the commit, marking it edit, then dropping back to the command line?
+
+2014-11-21T18:50:45.823Z+00:00
+
+Note that with newer git, it would be wiser to follow prompt instructions instead of blindly using `git commit --all --amend --no-edit` here. All I had to do after `git rebase -i ...` was to `git commit --amend` normally then `git rebase --continue`.
+
+2017-03-02T09:04:50.707Z+00:00
+
+|
+
+This answer is useful
+
+803
+
+Save this answer.
+
+Show activity on this post.
+
+Use the awesome interactive rebase:
+-----------------------------------
+
+```
+git rebase -i    # Show your commits in a text editor
+```
+
+Find the commit you want, change `pick` to `e` (`edit`), and save and close the file. Git will rewind to that commit, allowing you to either:
+
+*   use `git commit --amend` to make changes, or
+*   use `git reset @~` to discard the last commit, but not the changes to the files (i.e. take you to the point you were at when you'd edited the files, but hadn't committed yet).
+
+The latter is useful for doing more complex stuff like splitting into multiple commits.
+
+Then, run `git rebase --continue`, and Git will replay the subsequent changes on top of your modified commit. You may be asked to fix some merge conflicts.
+
+_Note: `@` is shorthand for `HEAD`, and `~` is the commit before the specified commit._
+
+_Read more about rewriting history in the Git docs._
+
+Don't be afraid to rebase
+-------------------------
+
+ProTip™:  Don't be afraid to experiment with "dangerous" commands that rewrite history* — Git doesn't delete your commits for 90 days by default; you can find them in the reflog:
+
+```
+$ git reset @~3   # go back 3 commits
+$ git reflog
+c4f708b HEAD@{0}: reset: moving to @~3
+2c52489 HEAD@{1}: commit: more changes
+4a5246d HEAD@{2}: commit: make important changes
+e8571e4 HEAD@{3}: commit: make some changes
+... earlier commits ...
+$ git reset 2c52489
+... and you're back where you started
+```
+
+* _Watch out for options like `--hard` and `--force` though — they can discard data._
+
+ * _Also, don't rewrite history on any branches you're collaborating on._
+
+* * *
+
+On many systems, `git rebase -i` will open up Vim by default. Vim doesn't work like most modern text editors, so take a look at how to rebase using Vim. If you'd rather use a different editor, change it with `git config --global core.editor your-favorite-text-editor`.
+
+answered Apr 29, 2015 at 17:50
+
+Zaz Zaz
+
+49.1k 15 gold badges 89 silver badges 106 bronze badges
+
+10 Comments
+-----------
+
+Should this be used on commits that have already been push to a remote branch?
+
+2016-09-29T22:58:05.417Z+00:00
+
+`git reset @~` exactly what I wanted to do after choosing commit with `git rebase ...`. You're my hero)
+
+2017-07-03T09:01:06.663Z+00:00
+
+For people wanting to edit the first commit: `git rebase -i --root`.
+
+2017-10-12T10:06:38.127Z+00:00
+
+This is awesome! In my JetBrains IDE I can right click on the commit I want to edit and choose "iteractively rebase from here" and get a nice gui window that lets me choose which of the commit(s) to pause on for editing.
+
+2020-07-22T01:54:32.277Z+00:00
+
+Just use `git rebase -i` instead of `git rebase -i @~9` to see all commits of your branch. If you use `git rebase -i @~9` and have less commits in your branch, the rebase will make the last 9 commits part of your branch.
+
+2023-10-12T16:13:18.047Z+00:00
+
+|
+
+This answer is useful
+
+146
+
+Save this answer.
+
+Show activity on this post.
+
+Interactive rebase with `--autosquash` is something I frequently use when I need to fixup previous commits deeper in the history. It essentially speeds up the process that ZelluX's answer illustrates, and is especially handy when you have more than one commit you need to edit.
+
+From the documentation:
+
+> `--autosquash`
+> 
+> 
+> When the commit log message begins with "squash! …​" (or "fixup! …​"), and there is a commit whose title begins with the same …​, automatically modify the todo list of rebase -i so that the commit marked for squashing comes right after the commit to be modified
+
+Assume you have a history that looks like this:
+
+```
+$ git log --graph --oneline
+* b42d293 Commit3
+* e8adec4 Commit2
+* faaf19f Commit1
+```
+
+and you have changes that you want to amend to Commit2 then commit your changes using
+
+```
+$ git commit -m "fixup! Commit2"
+```
+
+alternatively you can use the commit-sha instead of the commit message, so `"fixup! e8adec4` or even just a prefix of the commit message.
+
+Then initiate an interactive rebase on the commit before
+
+```
+$ git rebase e8adec4^ -i --autosquash
+```
+
+your editor will open with the commits already correctly ordered
+
+```
+pick e8adec4 Commit2
+fixup 54e1a99 fixup! Commit2
+pick b42d293 Commit3
+```
+
+all you need to do is save and exit
+
+answered Sep 29, 2015 at 17:59
+
+thrau thrau
+
+3,240 3 gold badges 27 silver badges 37 bronze badges
+
+5 Comments
+----------
+
+You can also use `git commit --fixup=@~` instead of `git commit -m "fixup! Commit2"`. This is especially useful when your commit messages are longer and it would be a pain to type out the whole thing.
+
+2015-10-19T20:57:50.993Z+00:00
+
+i wrote an alias for my .gitconfig to streamline this `fixup = "!fn() { git commit --fixup ${1} && GIT_EDITOR=true git rebase --autosquash -i ${1}^; }; fn` ->`git fixup <commitId>` amends all staged changes to the given commit
+
+2020-07-07T11:36:51.607Z+00:00
+
+Thraus alias doesn't seem to work with short commit hashes. This one works: `fixup = "!fn() { git commit -m \"fixup! ${1}\" && GIT_EDITOR=true git rebase --autosquash -i ${1}^; }; fn"`
+
+2022-03-04T10:42:07.137Z+00:00
+
+Now works with `HEAD`, `HEAD^`, `HEAD~7` etc: `fixup = "!fn() { _FIXUP_COMMIT=`git rev-parse ${1}` && git commit -m \"fixup! ${_FIXUP_COMMIT}\" && GIT_EDITOR=true git rebase --autosquash -i ${_FIXUP_COMMIT}^; }; fn"`
+
+2022-07-22T10:07:22.627Z+00:00
+
+This works with unstaged changes: `fixup = "!fn() { _FIXUP_COMMIT=`git rev-parse ${1}` && git commit -m \"fixup! ${_FIXUP_COMMIT}\" && git diff --quiet || STASHED=true && git stash push -m \"fixup-temp-stash\" && GIT_EDITOR=true git rebase --autosquash -i ${_FIXUP_COMMIT}^ && [ \"$STASHED\" = true ] && git stash pop; }; fn"`
+
+2024-12-18T18:15:39.27Z+00:00
+
+This answer is useful
+
+78
+
+Save this answer.
+
+Show activity on this post.
+
+Based on Documentation
+
+**Amending the message of older or multiple commit messages**
+
+```
+git rebase -i HEAD~3
+```
+
+The above displays a list of the last 3 commits on the current branch, change 3 to something else if you want more. The list will look similar to the following:
+
+```
+pick e499d89 Delete CNAME
+pick 0c39034 Better README
+pick f7fde4a Change the commit message but push the same commit.
+```
+
+Replace **pick** with **reword** before each commit message you want to change. Let say you change the second commit in the list, your file will look like the following:
+
+```
+pick e499d89 Delete CNAME
+reword 0c39034 Better README
+pick f7fde4a Change the commit message but push the same commit.
+```
+
+Save and close the commit list file, this will pop up a new editor for you to change your commit message, change the commit message and save.
+
+Finally, force-push the amended commits.
+
+```
+git push --force
+```
+
+sikander
+
+2,286 16 silver badges 23 bronze badges
+
+answered May 17, 2018 at 8:38
+
+justMe justMe
+
+2,468 18 silver badges 21 bronze badges
+
+3 Comments
+----------
+
+I get the following error: error: There was a problem with the editor 'vi'. Please supply the message using either -m or -F option.
+
+2018-09-27T17:18:52.027Z+00:00
+
+The "reword" option is a good tool, however "git push --force" is dangerous. If the commits for which we want to change the commit message were not submitted yet, then --force is not necessary. The --force option rewrites the history at the remote rep, and requires more permissions. If you want to modify a commit that is only located on your computer, you do not need --force; if the commit was already pushed you shall not change it unless strictly necessary.
+
+2020-09-03T17:09:02.02Z+00:00
+
+Thanks for this answer. I always consider as something dangerous, but this was very clean.
+
+2024-03-15T06:34:19.653Z+00:00
+
+This answer is useful
+
+62
+
+Save this answer.
+
+Show activity on this post.
+
+Run:
+
+`$ git rebase --interactive commit_hash^`
+
+each `^` indicates how many commits back you want to edit, if it's only one (the commit hash that you specified), then you just add one `^`.
+
+Using Vim you change the words `pick` to `reword` for the commits you want to change, save and quit(`:wq`). Then git will prompt you with each commit that you marked as reword so you can change the commit message.
+
+Each commit message you have to save and quit(`:wq`) to go to the next commit message
+
+If you want to exit without applying the changes, press `:q!`
+
+**EDIT**: to navigate in `vim` you use `j` to go up, `k` to go down, `h` to go left, and `l` to go right( all this in `NORMAL` mode, press `ESC` to go to `NORMAL` mode ). To edit a text, press `i` so that you enter the `INSERT` mode, where you insert text. Press `ESC` to go back to `NORMAL` mode :)
+
+**UPDATE**: Here's a great link from github listing How to undo (almost) anything with git
+
+answered Jul 2, 2015 at 19:11
+
+betoharres betoharres
+
+1,843 2 gold badges 22 silver badges 26 bronze badges
+
+7 Comments
+----------
+
+Worked perfectly for me. Worth mentioning `git push --force`?
+
+2016-07-12T20:55:51.363Z+00:00
+
+What `git push --force` does is overwrite the remotes commits with your local commits. That's not the case of this topic :)
+
+2016-07-14T17:12:00.577Z+00:00
+
+@BetuUuUu of course if your commits are pushed to remote and you have modified commit message locally, you would want to force push to remote, isn't it?
+
+2017-07-05T09:03:04.35Z+00:00
+
+@SudipBhandari That's the feeling I get. I didn't force, and now I have an extra branch, mirroring all the commits back to the one whose message I changed, which is super-ugly.
+
+2018-02-05T16:35:15.167Z+00:00
+
+@greenhouse if you modify and force-push, then other team members most probably will encounter merging conflicts. So you should be generally super-cautious about it. But if you modify something which nobody else fetched yet, it should be fine (the will not notice it). So I would consider --force as last resort and always consult the state of the repo with other members.
+
+2019-06-21T15:52:16.417Z+00:00
+
+|
+
+This answer is useful
+
+48
+
+Save this answer.
+
+Show activity on this post.
+
+### Completely non-interactive command(1)
+
+I just thought I'd share an alias that I'm using for this. It's based on _non-interactive_ interactive rebase. To add it to your git, run this command (explanation given below):
+
+```
+git config --global alias.amend-to '!f() { SHA=`git rev-parse "$1"`; git commit --fixup "$SHA" && GIT_SEQUENCE_EDITOR=true git rebase --interactive --autosquash "$SHA^"; }; f'
+```
+
+Or, a version that can also handle unstaged files (by stashing and then un-stashing them):
+
+```
+git config --global alias.amend-to '!f() { SHA=`git rev-parse "$1"`; git stash -k && git commit --fixup "$SHA" && GIT_SEQUENCE_EDITOR=true git rebase --interactive --autosquash "$SHA^" && git stash pop; }; f'
+```
+
+The biggest advantage of this command is the fact that it's **no-vim**.
+
+* * *
+
+(1)given that there are no conflicts during rebase, of course
+
+### Usage
+
+```
+git amend-to <REV> # e.g.
+git amend-to HEAD~1
+git amend-to aaaa1111
+```
+
+The name `amend-to` seems appropriate IMHO. Compare the flow with `--amend`:
+
+```
+git add . && git commit --amend --no-edit
+# vs
+git add . && git amend-to <REV>
+```
+
+### Explanation
+
+*   `git config --global alias.<NAME> '!<COMMAND>'` - creates a global git alias named `<NAME>` that will execute non-git command `<COMMAND>`
+*   `f() { <BODY> }; f` - an "anonymous" bash function.
+*   `SHA=`git rev-parse "$1"`;` - converts the argument to git revision, and assigns the result to variable `SHA`
+*   `git commit --fixup "$SHA"` - fixup-commit for `SHA`. See `git-commit` docs
+*   `GIT_SEQUENCE_EDITOR=true git rebase --interactive --autosquash "$SHA^"`
+    *   `git rebase --interactive "$SHA^"` part has been covered by other answers.
+    *   `--autosquash` is what's used in conjunction with `git commit --fixup`, see `git-rebase` docs for more info
+    *   `GIT_SEQUENCE_EDITOR=true` is what makes the whole thing non-interactive. This hack I learned from this blog post.
+
+answered Feb 27, 2018 at 1:47
+
+Dethariel Dethariel
+
+3,644 5 gold badges 36 silver badges 50 bronze badges
+
+10 Comments
+-----------
+
+One can also make `amend-to` handle unstaged files: `git config --global alias.amend-to '!f() { SHA=`git rev-parse "$1"`; git stash -k && git commit --fixup "$SHA" && GIT_SEQUENCE_EDITOR=true git rebase --interactive --autosquash "$SHA^" && git stash pop; }; f'`
+
+2018-03-06T22:16:58.927Z+00:00
+
+One concern with this method is that it could apply unrelated fixups.
+
+2018-12-03T16:05:18.497Z+00:00
+
+Isn't the point of the question to change the commit message? Because this answer doesn't address that, or at least not directly.
+
+2018-12-05T18:10:19.503Z+00:00
+
+@wytten the question doesn't ask about changing the commit message, it is about modifying the commit the is not HEAD. So an answer to your question would be "no, it's not the point of the question"
+
+2018-12-05T19:50:28.607Z+00:00
+
+I'm confused, so how do we change the commit message?
+
+2019-06-01T18:14:41.883Z+00:00
+
+|
+
+This answer is useful
+
+28
+
+Save this answer.
+
+Show activity on this post.
+
+If for some reason you don't like interactive editors, you can use `git rebase --onto`.
+
+Say you want to modify `Commit1`. First, branch from _before_`Commit1`:
+
+```
+git checkout -b amending [commit before Commit1]
+```
+
+Second, grab `Commit1` with `cherry-pick`:
+
+```
+git cherry-pick Commit1
+```
+
+Now, amend your changes, creating `Commit1'`:
+
+```
+git add ...
+git commit --amend -m "new message for Commit1"
+```
+
+And finally, after having stashed any other changes, transplant the rest of your commits up to `master` on top of your new commit:
+
+```
+git rebase --onto amending Commit1 master
+```
+
+Read: "rebase, onto the branch `amending`, all commits between `Commit1` (non-inclusive) and `master` (inclusive)". That is, Commit2 and Commit3, cutting the old Commit1 out entirely. You could just cherry-pick them, but this way is easier.
+
+Remember to clean up your branches!
+
+```
+git branch -d amending
+```
+
+answered Oct 22, 2016 at 12:19
+
+FeepingCreature FeepingCreature
+
+3,848 2 gold badges 28 silver badges 26 bronze badges
+
+3 Comments
+----------
+
+you can use `git checkout -b amending Commit1~1` to get the prior commit
+
+2017-07-12T21:13:35.08Z+00:00
+
+Are the first two steps equivalent to `git checkout -b amending Commit1`?
+
+2020-01-24T02:08:19.877Z+00:00
+
+This is great answer for people scared with interactive rebase. My only gripe is that it's unnecessary to start from earlier commit and cherry-pick the actual commit you want to amend. You can just branch off the given commit and amend it as shown, skipping the cherrypick step. In fact, cherrypicking will just fastforward your branch one commit ahead, just as if you would branch directly off this commit.
+
+2021-09-17T11:19:07.327Z+00:00
+
+This answer is useful
+
+21
+
+Save this answer.
+
+Show activity on this post.
+
+**`git stash` + `rebase` automation**
+
+For when I need to modify an old commit a lot of times for Gerrit reviews, I've been doing:
+
+```
+git-amend-old() (
+  # Stash, apply to past commit, and rebase the current branch on to of the result.
+  current_branch="$(git rev-parse --abbrev-ref HEAD)"
+  apply_to="$1"
+  git stash
+  git checkout "$apply_to"
+  git stash apply
+  git add -u
+  git commit --amend --no-edit
+  new_sha="$(git log --format="%H" -n 1)"
+  git checkout "$current_branch"
+  git rebase --onto "$new_sha" "$apply_to"
+)
+```
+
+GitHub upstream.
+
+Usage:
+
+*   modify source file, no need to `git add` if already in repo
+*   `git-amend-old $old_sha`
+
+I like this over `--autosquash` as it does not squash other unrelated fixups.
+
+answered Dec 3, 2018 at 16:02
+
+1 Comment
+---------
+
+Very nice workaround, this should be a default option to `git amend` to apply changes to a specific commit with the using the current stash, very clever!
+
+2020-02-12T03:57:59.257Z+00:00
+
+This answer is useful
+
+13
+
+Save this answer.
+
+Show activity on this post.
+
+### Automated interactive rebase edit followed by commit revert ready for a do-over
+
+I found myself fixing a past commit frequently enough that I wrote a script for it.
+
+Here's the workflow:
+
+1.   ```
+git commit-edit <commit-hash>
+```
+
+This will drop you at the commit you want to edit.
+
+2.   Fix and stage the commit as you wish it had been in the first place.
+
+(You may want to use `git stash save` to keep any files you're not committing)
+
+3.   Redo the commit with `--amend`, eg:
+
+```
+git commit --amend
+```
+4.   Complete the rebase:
+
+```
+git rebase --continue
+```
+
+For the above to work, put the below script into an executable file called `git-commit-edit` somewhere in your `$PATH`:
+
+```
+#!/bin/bash
+
+set -euo pipefail
+
+script_name=${0##*/}
+
+warn () { printf '%s: %s\n' "$script_name" "$*" >&2; }
+die () { warn "$@"; exit 1; }
+
+[[ $# -ge 2 ]] && die "Expected single commit to edit. Defaults to HEAD~"
+
+# Default to editing the parent of the most recent commit
+# The most recent commit can be edited with `git commit --amend`
+commit=$(git rev-parse --short "${1:-HEAD~}")
+message=$(git log -1 --format='%h %s' "$commit")
+
+if [[ $OSTYPE =~ ^darwin ]]; then
+  sed_inplace=(sed -Ei "")
+else
+  sed_inplace=(sed -Ei)
+fi
+
+export GIT_SEQUENCE_EDITOR="${sed_inplace[*]} "' "s/^pick ('"$commit"' .*)/edit \\1/"'
+git rebase --quiet --interactive --autostash --autosquash "$commit"~
+git reset --quiet @~ "$(git rev-parse --show-toplevel)"  # Reset the cache of the toplevel directory to the previous commit
+git commit --quiet --amend --no-edit --allow-empty  #  Commit an empty commit so that that cache diffs are un-reversed
+
+echo
+echo "Editing commit: $message" >&2
+echo
+```
+
+answered Sep 14, 2018 at 3:32
+
+Tom Hale Tom Hale
+
+48k 42 gold badges 207 silver badges 275 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+13
+
+Save this answer.
+
+Show activity on this post.
+
+The best option is to use **"Interactive rebase command"**.
+
+> The `git rebase` command is incredibly powerful. It allows you to edit _commit messages_, combine commits, reorder them ...etc.
+> 
+> 
+> Every time you rebase a commit a new SHA will be created for each commit regardless of the content will be changed or not! You should be careful when to use this command cause it may have drastic implications especially if you work in collaboration with other developers. They may start working with your commit while you're rebasing some. After you force to push the commits they will be out of sync and you may find out later in a messy situation. So be careful!
+> 
+> 
+> It's recommended to create a `backup` branch before rebasing so whenever you find things out of control you can return back to the previous state.
+
+### Now how to use this command?
+
+```
+git rebase -i <base>
+```
+
+`-i` stand for **"interactive"**. Note that you can perform a rebase in non-interactive mode. ex:
+
+```
+#interactivly rebase the n commits from the current position, n is a given number(2,3 ...etc)
+git rebase -i HEAD~n
+```
+
+`HEAD` indicates your current location(can be also branch name or commit SHA). The `~n` means "n beforeé, so `HEAD~n` will be the list of "n" commits before the one you are currently on.
+
+`git rebase` has different command like:
+
+*   `p` or `pick` to keep commit as it is.
+*   `r` or `reword`: to keep the commit's content but alter the commit message. 
+*   `s` or `squash`: to combine this commit's changes into the previous commit(the commit above it in the list).
+*   ... etc.
+
+Note: It's better to get Git working with your code editor to make things simpler. Like for example if you use visual code you can add like this `git config --global core.editor "code --wait"`. Or you can search in Google how to associate you preferred your code editor with GIT.
+
+### Example of `git rebase`
+
+I wanted to change the last 2 commits I did so I process like this:
+
+1.   Display the current commits: 
+```
+#This to show all the commits on one line
+$git log --oneline
+4f3d0c8 (HEAD -> documentation) docs: Add project description and included files"
+4d95e08 docs: Add created date and project title"
+eaf7978 (origin/master , origin/HEAD, master) Inital commit
+46a5819 Create README.md
+```
+2.   Now I use `git rebase` to change the 2 last commits messages: `$git rebase -i HEAD~2` It opens the code editor and show this:
+
+```
+pick 4d95e08 docs: Add created date and project title
+pick 4f3d0c8 docs: Add project description and included files
+
+# Rebase eaf7978..4f3d0c8 onto eaf7978 (2 commands)
+#
+# Commands:
+# p, pick <commit> = use commit
+# r, reword <commit> = use commit, but edit the commit message
+...
+```
+
+Since I want to change the commit message for this 2 commits. So I will type `r` or `reword` in place of `pick`. Then Save the file and close the tab. Note that `rebase` is executed in a multi-step process so the next step is to update the messages. Note also that the commits are displayed in reverse chronological order so the last commit is displayed in that one and the first commit in the first line and so forth.
+
+3.   Update the messages: Update the first message:
+
+```
+docs: Add created date and project title to the documentation "README.md"
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+...
+```
+
+save and close Edit the second message
+
+```
+docs: Add project description and included files to the documentation "README.md"
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+...
+```
+
+save and close.
+
+4.   You will get a message like this by the end of the rebase: `Successfully rebased and updated refs/heads/documentation` which means that you succeed. You can display the changes:
+
+```
+5dff827 (HEAD -> documentation) docs: Add project description and included files to the documentation "README.md"
+4585c68 docs: Add created date and project title to the documentation "README.md"
+eaf7978 (origin/master, origin/HEAD, master) Inital commit
+46a5819 Create README.md
+```
+
+I wish that may help the new users :).
+
+answered Nov 15, 2019 at 17:59
+
+DINA TAKLIT DINA TAKLIT
+
+8,520 10 gold badges 84 silver badges 92 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+10
+
+Save this answer.
+
+Show activity on this post.
+
+Changing the Last Commit:
+
+```
+git commit --amend
+// or
+git commit --amend -m "an updated commit message"
+```
+
+Don’t amend public commits Amended commits are actually entirely new commits and the previous commit will no longer be on your current branch.
+
+For example, if you want to change the last three commit messages, or any of the commit messages in that group, you supply as an argument to git rebase -i the parent of the last commit you want to edit, which is HEAD~2^ or HEAD~3. It may be easier to remember the ~3 because you’re trying to edit the last three commits, but keep in mind that you’re actually designating four commits ago, the parent of the last commit you want to edit:
+
+```
+$ git rebase -i HEAD~3
+```
+
+know more
+
+answered Dec 5, 2021 at 21:00
+
+anon anon
+
+Comments
+--------
+
+This answer is useful
+
+9
+
+Save this answer.
+
+Show activity on this post.
+
+To get a non-interactive command, put a script with this content in your PATH:
+
+```
+#!/bin/sh
+#
+# git-fixup
+# Use staged changes to modify a specified commit
+set -e
+cmt=$(git rev-parse $1)
+git commit --fixup="$cmt"
+GIT_EDITOR=true git rebase -i --autosquash "$cmt~1"
+```
+
+Use it by staging your changes (with `git add`) and then run `git fixup <commit-to-modify>`. Of course, it will still be interactive if you get conflicts.
+
+answered Jan 16, 2018 at 15:27
+
+1 Comment
+---------
+
+This works well. I added some extra functionality to do piecemeal fixups of a dirty tree for perfecting a commit set. `dirtydiff=$(git diff); if [ "${dirtydiff}" != "" ]; then echo "Stashing dirty tree" >&2; git stash; fi;
+
+2018-03-04T22:08:26.587Z+00:00
+
+This answer is useful
+
+8
+
+Save this answer.
+
+Show activity on this post.
+
+Came to this approach (and it is probably exactly the same as using interactive rebase) but for me it's kind of straightforward.
+
+Note: I present this approach for the sake of illustration of what you can do rather than an everyday alternative. Since it has many steps (and possibly some caveats.)
+
+Say you want to change commit `0` and you are currently on `feature-branch`
+
+```
+some-commit---0---1---2---(feature-branch)HEAD
+```
+
+Checkout to this commit and create a `quick-branch`. You can also clone your feature branch as a recovery point (before starting).
+
+```
+?(git checkout -b feature-branch-backup)
+git checkout 0
+git checkout -b quick-branch
+```
+
+You will now have something like this:
+
+```
+0(quick-branch)HEAD---1---2---(feature-branch)
+```
+
+Stage changes, stash everything else.
+
+```
+git add ./example.txt
+git stash
+```
+
+Commit changes and checkout back to `feature-branch`
+
+```
+git commit --amend
+git checkout feature-branch
+```
+
+You will now have something like this:
+
+```
+some-commit---0---1---2---(feature-branch)HEAD
+           \
+             ---0'(quick-branch)
+```
+
+Rebase `feature-branch` onto `quick-branch` (resolve any conflicts along the way). Apply stash and remove `quick-branch`.
+
+```
+git rebase quick-branch
+git stash pop
+git branch -D quick-branch
+```
+
+And you end up with:
+
+```
+some-commit---0'---1'---2'---HEAD(feature-branch)
+```
+
+Git will not duplicate (although I can't really say to what extent) the 0 commit when rebasing.
+
+Note: all commit hashes are changed starting from the commit we originally intended to change.
+
+answered Jun 1, 2016 at 11:57
+
+Olga Olga
+
+1,700 1 gold badge 22 silver badges 34 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+7
+
+Save this answer.
+
+Show activity on this post.
+
+I do the following, including changing the date and time of local commits:
+
+```
+git rebase -i HEAD~6
+```
+
+`~6` is the amount of commit history to display.
+
+*   Change from `pick` to `edit` the commits to be edited.
+*   Then I save and exit (In ubuntu: `Ctrl+O` to save and `Ctrl+X` to exit)
+*       1.   Then I run: `git commit --amend --date="2022-09-02T19:10:04" -m "NEW_MSG"`
+
+*       1.   If the edit is opened, just save and exit.
+
+*       1.   Then to confirm and go to the next commit or finish if it is the last one, I execute: `git rebase --continue`
+
+> If there are more commits to edit, it is repeated from point 1
+
+Finally I validate the changes and if everything is ok, I do the `push`
+
+answered Sep 3, 2022 at 0:53
+
+JxDarkAngel JxDarkAngel
+
+1,087 13 silver badges 6 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+6
+
+Save this answer.
+
+Show activity on this post.
+
+I solved this:
+
+1.   By creating a new commit with changes that I want:
+
+```
+r8gs4r commit 0
+```
+2.   I know which commit I need to merge with it. which is commit 3.
+
+ so, `git rebase -i HEAD~4` # 4 represents recent 4 commit (here commit 3 is in 4th place)
+
+3.   In interactive rebase recent commit will locate at bottom. It will look alike:
+
+```
+pick q6ade6 commit 3
+pick vr43de commit 2
+pick ac123d commit 1
+pick r8gs4r commit 0
+```
+4.   Here we need to rearrange commit if you want to merge with specific one. It should be like:
+
+```
+parent
+|_child
+```
+
+```
+pick q6ade6 commit 3
+f r8gs4r commit 0
+pick vr43de commit 2
+pick ac123d commit 1
+```
+
+After rearranging you need to replace `p``pick` with `f` (**fixup** will merge without commit message) or `s` (**squash** merge with commit message can change in run time)
+
+and then save your tree.
+
+now merge done with existing commit.
+
+> Note: It's not preferable method unless you're maintain on your own. if you have big team size it's not an acceptable method to rewrite git tree will end up in conflicts which you know other wont. if you want to maintain you tree clean with less commits can try this and if its small team otherwise it's not preferable....
+
+shA.t
+
+17k 5 gold badges 59 silver badges 121 bronze badges
+
+answered Jan 5, 2018 at 18:35
+
+1 Comment
+---------
+
+This is a nice solution if you do not want to make live-modification during an interactive rebase.
+
+2018-05-29T19:14:50.013Z+00:00
+
+This answer is useful
+
+5
+
+Save this answer.
+
+Show activity on this post.
+
+If you only want to reword an old commit message without changing the hashes on the branch, you can use:
+
+```
+git replace --edit <commit>
+```
+
+This opens the editor and displays something like this:
+
+```
+tree 430db025986d2bf8791be16b370ec37a00f6924b
+parent 77efdb98a6e021ca81cd96f7c8c05d25c09e0ad4
+author John Doe <johndoe@example.org> 1698219601 +0200
+committer John Doe <johndoe@example.org> 1698219601 +0200
+
+<initial commit message>
+```
+
+Modify the message and save.
+
+The modified references will then have to be pushed and fetched explicitly with:
+
+```
+git push origin 'refs/replace/*'
+git fetch origin 'refs/replace/*:refs/replace/*'
+```
+
+answered Oct 25, 2023 at 8:46
+
+Emmanuel Bourg Emmanuel Bourg
+
+11.3k 3 gold badges 62 silver badges 90 bronze badges
+
+2 Comments
+----------
+
+Although I would love this option to be valid, I tried it and it's not as magical as it sounds. There's limit to compatibility. From what I found, Github doesn't support it _at all_ and newly cloned repos do not fetches these `replace` refs automatically so they still see the old message. So, not really a solution, in my opinion. Or at least not yet. Thanks for posting though!
+
+2023-10-30T18:14:11.743Z+00:00
+
+If you’ve already done it and want to undo it, run: git replace -d <commit>.
+
+2024-10-16T04:49:53.877Z+00:00
+
+This answer is useful
+
+2
+
+Save this answer.
+
+Show activity on this post.
+
+For me it was for removing some credentials from a repo.
+
+ I tried rebasing and ran into a ton of seemingly unrelated conflicts along the way when trying to `rebase --continue`.
+
+ Don't bother attempting to rebase yourself, use the tool called **BFG** (brew install bfg) on mac.
+
+shA.t
+
+17k 5 gold badges 59 silver badges 121 bronze badges
+
+answered Nov 7, 2017 at 7:24
+
+Pellet Pellet
+
+2,477 1 gold badge 31 silver badges 23 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+1
+
+Save this answer.
+
+Show activity on this post.
+
+Well, this solution might sound very silly, but can save you in certain conditions.
+
+A friend of mine just ran into **accidentally committing very some huge files** (four auto-generated files ranging between 3GB to 5GB each) and then made some additional code commits on top of that before realizing the problem that `git push` wasn't working any longer!
+
+The files had been listed in `.gitignore` but after renaming the container folder, they got exposed and committed! And now there were a few more commits of the code on top of that, but `push` was running forever (trying to upload GB of data!) and finally would fail due to Github's file size limits.
+
+The problem with interactive rebase or anything similar was that they would deal with poking around these huge files and would take forever to do anything. Nevertheless, after spending almost an hour in the CLI, we weren't sure if the files (and deltas) are actually removed from the history or simply not included in the current commits. The push wasn't working either and my friend was really stuck.
+
+So, the solution I came up with was:
+
+1.   Rename current git folder to `~/Project-old`.
+2.   Clone the git folder again from github (to `~/Project`). 
+3.   Checkout to the same branch.
+4.   Manually `cp -r` the files from `~/Project-old` folder to `~/Project`. 
+5.   Make sure the massive files, that are not needed to be checked in are `mv`ed, and included in `.gitignore` properly. 
+6.   Also make sure you don't overwrite `.git` folder in the recently-cloned `~/Project` by the old one. That's where the logs of the problematic history lives!
+7.   Now review the changes. It should be the union of all the recent commits, excluding the problematic files.
+8.   Finally commit the changes, and it's good to be `push`'ed.
+
+The biggest problem with this solution is, it deals with manual copying some files, and also it merges all the recent commits into one (obviously with a new commit-hash.) B
+
+The big benefits are that, it is very clear in every step, **it works great for huge files (as well as sensitive ones)**, and it doesn't leave any trace in history behind!
+
+answered Jun 12, 2019 at 9:47
+
+Aidin Aidin
+
+30.8k 10 gold badges 84 silver badges 81 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+1
+
+Save this answer.
+
+Show activity on this post.
+
+**Following steps help us to modify existing commit message.**
+
+Step 1. Type git rebase -i HEAD~N, where N is the number of commits to perform a rebase on. For example, if you want to change the 4th and the 5th latest commits, you would type:
+
+```
+git rebase -i HEAD~5
+```
+
+Step 2.The command will display the latest X commits in your default text editor :
+
+```
+pick 43f8707f9 fix: update dependency json5 to ^2.1.1
+pick cea1fb88a fix: update dependency verdaccio to ^4.3.3
+pick aa540c364 fix: update dependency webpack-dev-server to ^3.8.2
+pick c5e078656 chore: update dependency flow-bin to ^0.109.0
+pick 11ce0ab34 fix: Fix spelling.
+
+#Rebase 7e59e8ead..11ce0ab34 onto 7e59e8ead (5 commands)
+```
+
+Step 3. Move to the lines of the commit message you want to change and replace pick with reword:
+
+```
+reword 43f8707f9 fix: update dependency json5 to ^2.1.1
+reword cea1fb88a fix: update dependency verdaccio to ^4.3.3
+pick aa540c364 fix: update dependency webpack-dev-server to ^3.8.2
+pick c5e078656 chore: update dependency flow-bin to ^0.109.0
+pick 11ce0ab34 fix: Fix spelling.
+
+# Rebase 7e59e8ead..11ce0ab34 onto 7e59e8ead (5 commands)
+```
+
+Step 4: Save the changes and close the editor.
+
+Step 5: For each chosen commit, a new text editor window will open. Change the commit message, save the file, and close the editor.
+
+```
+fix: update dependency json5 to ^2.1.1
+```
+
+Step 6: Force push the changes to the remote repository:
+
+```
+git push --force <remoteName> <branchName>
+```
+
+answered Mar 19, 2024 at 9:16
+
+Jigar Bhatt Jigar Bhatt
+
+4,710 3 gold badges 38 silver badges 45 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+1
+
+Save this answer.
+
+Show activity on this post.
+
+As of 2024, to edit let's say files in 2nd commit, you can simply do:
+
+```
+git commit --fixup @~1
+git rebase --autosquash
+```
+
+The 1st command creates a `fixup!` commit that marks which commit you want to edit, in this case the 2nd - `@~1` is equivalent to `HEAD~1` and means one commit placed before the current commit in history.
+
+If you also want to rename the commit, you'd do:
+
+```
+git commit --fixup amend:@~1
+git rebase --autosquash
+```
+
+Unfortunately, the message has to be typed interactively in `EDITOR` as far as I know, `-m` is for some reason forbidden with `--fixup amend:`, I assume because it's not been programmed to be supported yet. **You shouldn't touch the message in the 1st line of the amend commit**, you only edit the next occurence.
+
+You can also construct this kind of amend commit manually, git won't have issues reading it as long as it follows the same syntax, but it's more clunky to fully type it than just to open `EDITOR`, unless you'll script/alias it.
+
+answered Oct 11, 2024 at 0:36
+
+Destroy666 Destroy666
+
+1,600 2 gold badges 19 silver badges 26 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+1
+
+Save this answer.
+
+Show activity on this post.
+
+If you haven't already pushed the commits then you can go back to a previous commit using `git reset HEAD^[1,2,3,4...]`
+
+For example
+
+```
+git commit <file1> -m "Updated files 1 and 2"
+git commit <file3> -m "Updated file 3"
+```
+
+Oops, forgot to add file2 to the first commit...
+
+```
+git reset HEAD^1 // because I only need to go back 1 commit
+
+git add <file2>
+```
+
+This will add file2 to the first commit.
+
+answered May 8, 2019 at 13:30
+
+rharvey rharvey
+
+2,005 1 gold badge 29 silver badges 23 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+0
+
+Save this answer.
+
+Show activity on this post.
+
+I had same problem and this this:
+
+1.   First duplicated the branch as `x`,
+2.   Then hard rest to where you want to go back to
+3.   Then amend new changes
+4.   After that cherry pick all other changes from the original branch
+5.   Checkout the original branch
+6.   Reset the original branch before the amended reversion
+7.   rebase into x branch
+
+My rider git log:
+
+```
+git checkout -b x 77164a510f1c17ed650b87c2ebf0f7762ac6b2a2 --
+git reset --hard 0d038b5e3e3e2adef4bd6aab7653f922c3fdc63f
+git add --ignore-errors -A -f -- src/Mores.Warehouse.Core.Api.ClientSdk/Mores.Warehouse.Core.Api.ClientSdk.csproj
+git commit -F C:\Users\Hassan\AppData\Local\Temp\git-commit-msg-.txt --amend --
+git cherry-pick 77164a510f1c17ed650b87c2ebf0f7762ac6b2a2
+git checkout feature/MOR-2947 --
+git reset --hard 0d038b5e3e3e2adef4bd6aab7653f922c3fdc63f
+git rebase x
+```
+
+answered Nov 29, 2022 at 8:40
+
+Hassan Faghihi Hassan Faghihi
+
+2,069 2 gold badges 42 silver badges 59 bronze badges
+
+Comments
+--------
+
+This answer is useful
+
+0
+
+Save this answer.
+
+Show activity on this post.
+
+This is a super old question, but it still comes up when searching for this issue, so I think it's worth updating. My answer is GitHub Desktop (which obvs only works for github repo's).
+
+I was able to successfully update two commits today by going to the commit history for the repo/branch I'm in, and then doing them one by one. I had to also reorder the second one, but this was simple as well. Highly recommended if you don't want to risk screwing up one of the steps in the other procedures and just want a clean UI.
+
+answered Dec 13, 2023 at 23:27
+
+Bradley Bradley
+
+101 1 silver badge 4 bronze badges
+
+Comments
+--------
+
+Start asking to get answers
+
+Find the answer to your question by asking.
+
+Ask question
+
+Explore related questions
+
+See similar questions with these tags.

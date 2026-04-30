@@ -1,0 +1,148 @@
+Title: Industry News 2025 Post Quantum Cryptography A Call to Action
+
+URL Source: https://www.isaca.org/resources/news-and-trends/industry-news/2025/post-quantum-cryptography-a-call-to-action
+
+Markdown Content:
+While the world has been laser-focused on artificial intelligence (AI), major advancements are occurring in quantum computing.1 Experts in the field have sounded the alarm, warning enterprises that they must prepare for the era of post-quantum cryptography (PQC) to protect sensitive data from future attacks—particularly “store now, decrypt later” attacks.2 Unfortunately, most enterprises have not taken any preparatory actions.3
+
+Recent claims, such as Microsoft’s announcement of a quantum breakthrough with its Majorana 1 computing chip,4 have generated speculation within the quantum physics community.5 While Microsoft is advertising a major leap in progress, experts are leery, given the lack of peer-reviewed research along with transparency on the breakthrough. The skepticism is warranted as researchers have spent more than 2 decades attempting to solve the problem of stable quantum computing. The industry remains divided on the timeline for true quantum supremacy, however, the need for quantum-resistant encryption remains undisputed.
+
+Although the transition to post-quantum cryptography is urgent, it remains largely theoretical. There are currently no practical tests being performed with readily available quantum computers to validate new encryption methods. This uncertainty leaves enterprises unsure of when—and how—to prepare. The question is not if quantum computing will render traditional encryption obsolete, but when.
+
+Encryption Algorithms Will Be Broken
+------------------------------------
+
+As it stands, many of the cryptographic algorithms that keep the digital world protected today will become obsolete once quantum computers have successfully achieved a sufficient level of computational power. The US National Institute of Standards and Technology (NIST) has been leading the effort to identify existing cryptographic algorithms vulnerable to quantum attacks through a PQC standardization project.6
+
+The most notable algorithms that have been identified as vulnerable to quantum attacks are Rivest–Shamir–Adleman (RSA),7 Digital Signature Algorithm (DSA),8 Elliptic Curve Digital Signature Algorithm (ECDSA)9 and Diffie–Hellman Key Exchange.10 Their vulnerability arises from the mathematical principles they rely on—RSA relies on factoring large prime numbers, while DSA, ECDSA, and Diffie-Hellman depend on solving discrete logarithms. A quantum algorithm, known as Shor’s algorithm, can effectively solve these mathematical problems, which makes these cryptographic methods easily breakable by a stable quantum computer with sufficient quantum bits, or qubits.
+
+Current Quantum-Resistant Algorithms
+------------------------------------
+
+In addition to identifying algorithms that can easily be broken, NIST is standardizing cryptographic algorithms designed to withstand quantum computing threats. Quantum-resistant algorithms are generally categorized based on the mathematical problems they utilize to ensure security.
+
+**Lattice-based cryptography** relies on the hardness of lattice problems, meaning that these types of algorithms are secure because solving their mathematical problems is so complex that even the power of a quantum computer is unable to break them efficiently.11
+
+A lattice is a grid-like structure that consists of equally spaced points in multiple dimensions. The cryptographic security of this category of algorithms is based on finding specific points or structures within the multidimensional lattices. Even with quantum computers, this remains an exceptionally complex task. Lattice problems remain resistant to Shor’s algorithm, unlike classical cryptographic systems such as RSA, which is based on factorization, and Elliptic-curve cryptography (ECC), which is based on discrete logarithms.12
+
+Examples of lattice-based cryptographic algorithms include Module-Lattice–Based Key-Encapsulation Mechanism (ML-KEM),13 formerly known as CRYSTALS-Kyber,14 and Module-Lattice–Based Digital Signature Algorithm (ML-DSA),15 formerly known as CRYSTALS-Dilithium.16 At the time of writing, no known quantum algorithm can efficiently solve lattice problems, making lattice-based cryptography one of the most promising approaches for securing digital communications.
+
+**Hash-based cryptography** utilizes the mathematical properties of cryptographic hash functions to ensure security, meaning that these types of algorithms remain resistant to quantum attacks because, currently, no known effective quantum algorithm can invert a secure hash function or find collisions efficiently.17 Recall that a cryptographic hash function is a one-way function that takes any input and produces a fixed-size output (creating a hash or digest). This output cannot efficiently be reconstructed to create the original input and is also resistant to collisions, meaning that 2 different inputs should never produce the same hash value.18
+
+Hash functions do not have a mathematical structure that quantum algorithms can exploit. However, Grover’s algorithm 19 provides a mechanism for speeding up brute force attacks, which slightly weakens hash-based cryptography. This is easily mitigated by doubling the hash size for example, upgrading SHA3-256 to SHA3-512 would restore the original security level.20
+
+An example of a hash-based post-quantum cryptographic algorithm is the Stateless Hash-Based Digital Signature Algorithm (SLH-DSA),21 formerly known as SPHINCS+.22 At the time of writing, no known quantum algorithm can efficiently solve hash-based problems, making hash-based cryptography one of the most promising approaches for cryptography.
+
+**Code-based cryptography** relies on the hardness of decoding random linear codes and is built upon a Syndrome Decoding problem (SDP). This problem belongs to a class known as NP-hard (nondeterministic polynomial-time hard), meaning that solving it efficiently—especially at scale—is computationally infeasible, even for quantum computers.23 Instead of relying on the factorization of discrete logarithms as with classical cryptography, it leverages error-correcting codes to create schemes that are resistant to quantum attacks.24
+
+These error-correcting codes were originally developed to detect and correct transmission errors in data and form the foundation of code-based cryptography.25 The security of these types of algorithms exists because decoding a randomly-generated linear error-correcting code without knowledge of a secret structure is extremely difficult.26 Even with quantum computing, there is no known quantum algorithm capable of solving this problem to break modern cryptographic implementations.
+
+An example of a code-based post-quantum cryptographic algorithm is the newest NIST PQC standardization algorithm, Hamming Quasi-Cyclic (HQC).27 HQC is a type of key encapsulation mechanism (KEM) that provides strong security assurances against quantum threats while maintaining efficient performance in secure communications. It is a strong alternative to lattice-based encryption, ensuring a diverse cryptographic landscape that is resilient against future quantum computing advancements.28
+
+In addition to these categories of PQC algorithms, NIST also identified the use of hybrid techniques of cryptographic implementations for a phased approach while transitioning to a post-quantum era. There are some existing cryptographic algorithms, such as AES-256 and SHA-3 hashing algorithms, that are still secure; however, increasing key sizes is crucial as they have the potential to become easier to break as quantum computing advances in the next decade.29 Furthermore, the use of classical cryptographic algorithms other than AES-256 and SHA-3, in addition to the use of NIST-standardized algorithms, is another approach that will ensure a safer transition to the full use of PQC algorithms for securing communications.
+
+Challenges With Adopting Next-Generation Encryption
+---------------------------------------------------
+
+Transitioning to PQC algorithms is not without its challenges. Key considerations include:
+
+1.   PQC algorithms generally require larger key sizes and more complex computations compared to traditional cryptographic methods. This can lead to higher processing power and memory requirements, affecting performance, especially in resource-constrained environments such as Internet of Things (IoT) devices and real-time systems.30
+2.   Many enterprises lack the necessary knowledge and expertise to implement PQC solutions effectively. The complexity of these new cryptographic methods requires security professionals to obtain specialized training and increase their ability to adapt.31
+3.   Unlike traditional encryption algorithms that have been standardized and widely adopted for decades, PQC is still evolving, and many existing systems are not designed to handle post-quantum cryptographic primitives. Implementing PQC requires rewriting cryptographic libraries, updating protocols, and ensuring backward compatibility, all of which introduce potential vulnerabilities and security risk.32
+4.   Embedded devices, which are integral to modern technology, face unique challenges in migrating to PQC. These challenges include hardware limitations, real-time processing requirements, and the need for long-term security assurances.33
+5.   Despite the threat of quantum computing quickly approaching, many organizations are occupied with other priorities, such as adapting to AI and other new technologies, which inevitably will lead to limited engagement with quantum computing and its security implications.34
+6.   While NIST has made significant progress, the landscape is still evolving. There is still a lack of comprehensive guidance and uncertainty regarding the appropriate algorithms to choose.
+
+Addressing each of these challenges requires enterprises to stay informed about the latest developments in PQC standardization and guidance. Organizations should regularly monitor authoritative resources such as the NIST PQC website 35, Cybersecurity and Infrastructure Security Agency (CISA) bulletins 36, and industry groups like the Quantum Economic Development Consortium (QED-C).37 Engaging with reputable research and technology providers (e.g., IBM Quantum, Google Quantum AI, Microsoft Azure Quantum) and attending specialized industry conferences or workshops can also demystify quantum computing's benefits and risk, facilitating a smoother transition to quantum-resistant encryption.
+
+Conclusion
+----------
+
+The quantum era, once a distant theoretical concept, is becoming an impending reality that requires attention. As quantum computing advances, the cryptographic systems that protect sensitive data, secure communications, and enable trust on the internet will only become increasingly vulnerable. Enterprises that fail to prepare for this transition risk exposing their critical assets to future quantum-enabled attacks, including the store now, decrypt later attack strategy that adversaries may already be leveraging.
+
+While NIST has made significant progress in standardizing PQC algorithms, the transition toward quantum resilience is still evolving. The finalized algorithms provide a strong foundation for securing digital assets against quantum threats. However, challenges such as performance trade-offs, integration complexities, lack of expertise, and evolving standards must be considered to ensure a seamless migration to quantum-safe encryption methods.
+
+To address these challenges, enterprises should conduct comprehensive cryptographic inventory assessments, adopt crypto-agile frameworks, and collaborate with stakeholders to integrate PQC solutions. Cryptographic agility refers to the ability of a system, platform, application, or enterprise to rapidly adapt its cryptographic mechanisms and algorithms in response to changing threats, technological advances, or vulnerabilities.38 Hybrid cryptographic techniques that combine classical encryption with PQC algorithms serve as a transitional approach while the industry refines implementation strategies.
+
+Ultimately, the time for enterprise preparation is now. Enterprises that wait until quantum computers reach their full potential to begin planning their transition to quantum-resistant encryption will be too late. Stakeholders must work together to accelerate adoption and ensure a resilient digital future. The future of cybersecurity depends on the actions taken today.
+
+Endnotes
+--------
+
+1 Nayak, C.; “Microsoft Unveils Majorana 1, the World’s First Quantum Processor Powered by Topological Qubits,” Microsoft, 19 February 2025; Conover, E.; “The New Light-Based Quantum Computer Jiuzhang has Achieved Quantum Supremacy,” _Science News_, 3 December 2020; Lee, J.; “IBM Launches its Most Powerful Quantum Computer With 433 Qubits,” Reuters, 9 November 2022; Newman, M.; Satzinger, K.; et al.; “Making Quantum Error Correction Work,” Google Research, 9 December 2024
+
+2 Keyfactor, “Harvest Now, Decrypt Later: A New Form of Attack,” 29 April 2024
+
+3 ISACA® Pulse Poll on Quantum Computing, 2025
+
+4 Bolgar, C.; “Microsoft’s Majorana 1 Chip Carves New Path for Quantum Computing,” Microsoft, 19 February 2025
+
+5 Farlini, E.; “Scientists Question Microsoft's Quantum Computing 'Breakthrough,'” _PC Mag_, 10 March 2025
+
+6 National Institute of Standards and Technology (NIST), _NIST Internal Report NIST IR 8545 Status Report on the Fourth Round of the NIST Post-Quantum Cryptography_ _Standardization Process_, USA, March 2025
+
+7 Wickramasinghe, S.; “RSA Algorithm in Cryptography: Rivest Shamir Adleman Explained,” Splunk Blogs, 26 November 2024
+
+8 GeeksforGeeks, “Digital Signature Algorithm (DSA),” 13 February 2025
+
+9 GeeksforGeeks, “Blockchain – Elliptic Curve Digital Signature Algorithm (ECDSA),” 29 November 2022
+
+10 Gillis, A.; “Diffie-Hellman Key Exchange (Exponential Key Exchange),” TechTarget
+
+11 Relyea, R.; “Post-Quantum Cryptography: Lattice-Based Cryptography,” Red Hat Blog, 30 October 2023
+
+12 Relyea; “Post-Quantum Cryptography: Lattice-Based Cryptography”
+
+13 NIST, “FIPS 203 Module-Lattice-Based Key-Encapsulation Mechanism Standard,” 13 August 2024
+
+14 Cryptographic Suite for Algebraic Lattices, “CRYSTALS”
+
+15 NIST, “FIPS 204 Module-Lattice-Based Digital Signature Standard,” 13 August 2024
+
+16 Cryptographic Suite for Algebraic Lattices, “CRYSTALS”
+
+17 Relyea, R.; “Post-Quantum Cryptography: Hash-Based Signatures,” 27 October 2022
+
+18 NIST, “FIPS 205 Stateless Hash-Based Digital Signature Standard,” 13 August 2024
+
+19 Yevchenko, A.; “What Exactly is Grover’s Algorithm?,” Medium, 9 December 2021
+
+20 NIST, “FIPS 205 Stateless Hash-Based Digital Signature Standard”
+
+21 NIST, “FIPS 205 Stateless Hash-Based Digital Signature Standard”
+
+22 Stateless Hash-based Signatures, “SPHINCS+”
+
+23 Anglen, J.; “Future-Proofing Blockchain: Embracing Quantum-Resistant Cybersecurity in 2024,” Rapid Innovation
+
+24 Anglen; “Future-Proofing Blockchain: Embracing Quantum-Resistant Cybersecurity in 2024”
+
+25 Anglen; “Future-Proofing Blockchain: Embracing Quantum-Resistant Cybersecurity in 2024”
+
+26 Anglen; “Future-Proofing Blockchain: Embracing Quantum-Resistant Cybersecurity in 2024”
+
+27 Gaborit, P.; Deneuville, J.C.; _Hamming Quasi-Cyclic (HQC)_, 19 February 2025
+
+28 Boutin, C.; “NIST Selects HQC as Fifth Algorithm for Post-Quantum Encryption,” NIST News, 11 March 2025
+
+29 Lokhande, B.; “Post-Quantum Cryptography for Internet and WebPKI: Where are We Now and How Do You Prepare?,” Redshift Blog, 20 February 2025
+
+30 Ivezic, M.; “Post-Quantum Cryptography PQC Challenges,” Post Quantum, 1 June 2023
+
+31 IDEMIA, “Key Obstacles to Post-Quantum Cryptography (PQC) Adoption,” 26 February 2025
+
+32 Celi, S.; Sullivan, N.; “The Post-Quantum Future: Challenges and Opportunities,” The Cloudfare Blog, 25 February 2025
+
+33 Bos, J.; Cloostermans, C.; et al.; _Post-Quantum Cryptographic Migration Challenges for Embedded Devices_, NXP
+
+34 Bousquette, I.; “Quantum Computing Is Closer Than Ever. Everybody’s Too Busy to Pay Attention,” _The Wall Street Journal,_ 13 February 2025 35 NIST, “Post-Quantum Cryptography (PQC)” 27 March 2025
+
+36 CISA, “CISA, NSA and NIST Publish New Resource for Migrating to Post-Quantum Cryptography,” CISA, 21 August 2023
+
+37 QED-C, “The Quantum Consortium” 2025
+
+38 Harishankar, R.; Osborne, M.; et al.; “Crypto-Agility and Quantum-Safe Readiness,” IBM, 19 June 2024
+
+### Collin Beder, CSX-P, CET, Security+
+
+Is an emerging technology practices principal at ISACA. In this role, he focuses on the development of ISACA’s emerging technology-related resources, including books, white papers, and review manuals, as well as performance-based exam development. Beder has worked at ISACA for 4 years, authored the book _Artificial Intelligence: A Primer on Machine Learning, Deep Learning and Neural Networks_, and developed hands-on performance-based labs and exams.

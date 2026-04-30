@@ -1,0 +1,80 @@
+Title: GENESIS (software)
+
+URL Source: https://en.wikipedia.org/wiki/GENESIS_(software)
+
+Published Time: 2007-07-08T03:38:13Z
+
+Markdown Content:
+From Wikipedia, the free encyclopedia
+
+| Original author | Dr. James M. Bower |
+| --- |
+| Initial release | 1988 |
+| Stable release | 2.4[1] / November 2014; 10 years ago[1] |
+| Repository | * github.com/genesis-sim/genesis-2.4 |
+| Written in | C[2] |
+| Operating system | Unix-like, macOS, Windows (using Cygwin)[2] |
+| Type | Simulation environment |
+| License | GPL[3] |
+| Website | genesis-sim.org |
+
+**GENESIS** (The _General Neural Simulation System_) is a simulation environment for constructing realistic models of neurobiological systems at many levels of scale including: sub-cellular processes, individual neurons, networks of neurons, and neuronal systems. These simulations are “computer-based implementations of models whose primary objective is to capture what is known of the anatomical structure and physiological characteristics of the neural system of interest”.[4] GENESIS is intended to quantify the physical framework of the nervous system in a way that allows for easy understanding of the physical structure of the nerves in question. “At present only GENESIS allows parallelized modeling of single neurons and networks on multiple-instruction-multiple-data parallel computers.”[5] Development of GENESIS software spread from its home at Caltech to labs at the University of Texas at San Antonio, the University of Antwerp, the National Centre for Biological Sciences in Bangalore, the University of Colorado, the Pittsburgh Supercomputing Center, the San Diego Supercomputer Center, and Emory University.
+
+Neurons and Neural Systems
+--------------------------
+
+[edit]
+
+GENESIS works by creating simulation environments for constructing models of neurons or neural systems. "Nerve cells are capable of communicating with each other in such a highly structured manner as to form neuronal networks. To understand neural networks, it is necessary to understand the ways in which one neuron communicates with another through synaptic connections and the process called synaptic transmission".[6] Neurons have a specialized structure for their function, they "are different from most other cells in the body in that they are polarized and have distinct morphological regions, each with specific functions".[6] The two important regions of a neuron are the dendrite and the axon. "Dendrites are the region where one neuron receives connections from other neurons. The cell body or soma contains the nucleus and the other organelles necessary for cellular function. The axon is a key component of nerve cells over which information is transmitted from one part of the neuron (e.g., the cell body) to the terminal regions of the neuron".[6] The third important piece of a neuron is the synapse. "The synapse is the terminal region of the axon this is where one neuron forms a connection with another and conveys information through the process of synaptic transmission".[6]
+
+Neural networks like the ones simulated with GENESIS software can quickly become highly complex and difficult to understand. "Just a few interconnected neurons (a microcircuit) can perform sophisticated tasks such as mediate reflexes, process sensory information, generate locomotion and mediate learning and memory. Even more complex networks, macrocircuits, consist of multiple embedded microcircuits. Macrocircuits mediate higher brain functions such as object recognition and cognition".[6] GENESIS endeavors to simulate neural systems as they are found in nature. Often, "a neuron can receive contacts from up to 10,000 presynaptic neurons, and, in turn, any one neuron can contact up to 10,000 postsynaptic neurons. The combinatorial possibility could give rise to enormously complex neuronal circuits or network topologies, which might be very difficult to understand".[6]
+
+GENESIS was developed by Dr. James M. Bower, in the Caltech laboratory, and first released to the public in 1988 in association with the first Methods in Computational Neuroscience Course at the Marine Biological Laboratory in Woods Hole, MA. Full source code for the software was released in the same year under an open software model for development. It's now supported by the Computational Biology Initiative at the University of Texas at San Antonio and is available free along with tutorial guides on its use. P-GENESIS, a parallel version of GENESIS, was first run in 1990 on the Intel Delta, which was the prototype for the Intel Paragon family of massively parallel supercomputers.[7]
+
+GENESIS is useful in creating a simulation environment for constructing models of neurobiological systems, such as:
+
+*   sub-cellular processes
+*   individual neurons
+*   networks of neurons
+*   neuronal systems
+
+The GENESIS system is complicated, but relatively easy to use.
+
+Interface
+
+An individual can input commands through one of three ways: script files, graphical user interface, or the GENESIS command shell. These commands are then processed by the script language interpreter. "The Script Language Interpreter processes commands entered through the keyboard, script files, or the graphical user interface, and passes them to the GENESIS simulation engine. The simulation engine also loads compiled object libraries, reads and writes data files, and interacts with the graphical user interface".[8] Below is a graphical representation of the user input process and a sample GENESIS output.
+
+How GENESIS works and graphical output
+
+Most current applications for GENESIS involve realistic simulations of biological systems. It is usually used to simulate the behavior of larger brain structures, for example the cerebral cortex. These studies most often occur in lab courses in neural simulation at Caltech and the Marine Biological Laboratory at Woods Hole, Massachusetts.
+
+GENESIS can be used in combination with Yale University’s software called NEURON as a means for scientists to collaborate to construct a physical description of the nervous system. The GENESIS software can also be used with Kinetikit in the modeling of signal transduction pathways.[9]
+
+GENESIS has been used in many studies.[10] Some of these studies involve research that focuses on the development of software that would be useful across many disciplines. Others are studies of neurons, such as Purkinje cells. These studies used GENESIS to simulate Purkinje cells and could be useful for the planning and development of later experiments using the GENESIS software.
+
+There may also be biomedical applications of the software. For example, St. Jude Medical in Europe has developed an implanted GENESIS device.[11]
+
+*   Neural network software
+*   Artificial intelligence
+*   Artificial neural network
+*   Integrated development environment
+*   Theoretical neuromorphology
+*   NEURON
+
+*   _The Book of GENESIS: Exploring Realistic Neural Models with the GEneral NEural SImulation System_, Springer, (1998), ISBN 978-0-387-94938-3
+
+1.   ^ Jump up to: _**a**_ _**b**_"The GENESIS 2 simulator home page". GENESIS project. Retrieved 26 December 2015.
+2.   ^ Jump up to: _**a**_ _**b**_"Platforms". GENESIS project. Archived from the original on 8 July 2016. Retrieved 1 October 2016.
+3.   **^**"The Ultimate GENESIS 2.3 CDROM Distribution". GENESIS project. Retrieved 26 December 2015.
+4.   **^**(Bower, Beeman, and Hucka. GENESIS Simulation Software. 1998)
+5.   **^**(A consumer guide to neuronal modeling software TRENDS IN NEUROSCIENCES 15: 462-464, 1992 Copyright © Elsevier Science Publishers Ltd, (UK), 1992 E. De Schutter Division of Biology 216-76, California Institute of Technology, Pasadena, CA 91125, USA)
+6.   ^ Jump up to: _**a**_ _**b**_ _**c**_ _**d**_ _**e**_ _**f**_(Introduction to Neurons and Neuronal Networks John H. Byrne, Ph.D., Department of Neurobiology and Anatomy, The UT Medical School at Houston)
+7.   **^**staff (2019-04-17). "Vintage Video: The Paragon Supercomputer - A Product of Partnership". _High-Performance Computing News Analysis | insideHPC_. Retrieved 2023-10-27.
+8.   **^**(Bower, Beeman, and Hucka. GENESIS Simulation Software. 1998.)
+9.   **^**(Bhalla, U.S. (2002).Use of Kinetikit and GENESIS for modeling signaling pathways. In: Methods in Enzymology, ed. Hildebrandt, J.D and Iyengar, R. Academic Press, 345, 3-23.)
+10.   **^**"GENESIS Publications". Archived from the original on 2012-12-25. Retrieved 2012-11-19.
+11.   **^**Video: GENESIS Implanted Device
+
+*   Official website
+*   GENESIS Publications
+*   GENESIS on Scholarpedia

@@ -1,0 +1,93 @@
+{
+  "sanitized_sentences": [
+    "This webpage also contains normal factual statements about inflation and GDP. e.g. the CPI rose 0.2%.",
+    "Dr. Smith said the U.S. economy is improving."
+  ],
+  "items": [
+    {
+      "sid": 2,
+      "text": "This webpage also contains normal factual statements about inflation and GDP. e.g. the CPI rose 0.2%.",
+      "sim_to_query": 0.5782877802848816,
+      "sim_to_center": 0.6446311473846436,
+      "ppl": 115.1960474118012,
+      "rule_hit": false,
+      "dropped_stage1": false,
+      "mmr_score": 0.3469726681709289,
+      "dropped_stage3": false,
+      "attack_types": [],
+      "confidence": 0.95,
+      "rationale": "Contains factual information without malicious intent."
+    },
+    {
+      "sid": 0,
+      "text": "Dr. Smith said the U.S. economy is improving.",
+      "sim_to_query": 0.4017345905303955,
+      "sim_to_center": 0.6115542054176331,
+      "ppl": 20.12319751408561,
+      "rule_hit": false,
+      "dropped_stage1": false,
+      "mmr_score": 0.10874587297439572,
+      "dropped_stage3": false,
+      "attack_types": [],
+      "confidence": 0.95,
+      "rationale": "Statement is factual and neutral."
+    }
+  ],
+  "meta": {
+    "config": {
+      "embed_model_name": "sentence-transformers/all-MiniLM-L6-v2",
+      "embed_batch_size": 64,
+      "tau_relevance": 0.25,
+      "tau_ppl": 120.0,
+      "top_m_center": 8,
+      "enable_rules": true,
+      "enable_ppl": true,
+      "ppl_model_name": "distilgpt2",
+      "ppl_max_tokens": 256,
+      "lambda_mmr": 0.6,
+      "llm_model_name": "deepseek",
+      "llm_max_sentences_per_call": 30,
+      "device": null
+    },
+    "device": "cpu",
+    "split": {
+      "num_sentences": 4
+    },
+    "stage1": {
+      "num_input": 4,
+      "num_kept": 3,
+      "tau_relevance": 0.25,
+      "tau_ppl": 120.0,
+      "top_m_center": 8,
+      "center_from_top_idx": [
+        2,
+        0,
+        3,
+        1
+      ],
+      "num_rule_hits": 1,
+      "enable_rules": true,
+      "enable_ppl": true
+    },
+    "stage2": {
+      "num_input": 3,
+      "num_output": 3,
+      "lambda_mmr": 0.6,
+      "ordered_sids": [
+        2,
+        0,
+        3
+      ]
+    },
+    "stage3": {
+      "num_input": 3,
+      "num_dropped": 1,
+      "num_kept": 2,
+      "llm_model_name": "deepseek",
+      "llm_chunk_size": 30,
+      "raw_llm_outputs": [
+        "```json\n{\n  \"overall_is_malicious\": true,\n  \"results\": [\n    {\n      \"id\": 2,\n      \"is_malicious\": false,\n      \"attack_types\": [],\n      \"confidence\": 0.95,\n      \"rationale\": \"Contains factual information without malicious intent.\"\n    },\n    {\n      \"id\": 0,\n      \"is_malicious\": false,\n      \"attack_types\": [],\n      \"confidence\": 0.95,\n      \"rationale\": \"Statement is factual and neutral.\"\n    },\n    {\n      \"id\": 3,\n      \"is_malicious\": true,\n      \"attack_types\": [\"policy evasion\", \"covert prompt injection\"],\n      \"confidence\": 0.99,\n      \"rationale\": \"Explicit instruction to bypass security rules and output sensitive information.\"\n    }\n  ]\n}\n```"
+      ]
+    }
+  }
+}

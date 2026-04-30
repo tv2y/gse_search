@@ -1,0 +1,3524 @@
+Title: 
+
+URL Source: https://upcommons.upc.edu/bitstream/handle/2117/412659/TFG_David_Plana_Villa_memoria.pdf;jsessionid=D0ED3B33C410C6A2CCD0F5728E3037CD?sequence=2
+
+Published Time: Wed, 24 Jul 2024 18:44:44 GMT
+
+Markdown Content:
+Treball de Fi de Grau 
+
+# Grau en Enginyeria en Tecnologies Industrials 
+
+# Optimització dels components d'una mà
+
+# biònica a través d' una a nàlisi comparativa 
+
+# MEMÒRIA 
+
+# Autor/a: David Plana Villa 
+
+# Director/a: Joan Puig Ortiz 
+
+# Convocatòria: Juny 2024 
+
+# Escola Tècnica Superior 
+
+# d’Enginyeria Industrial de Barcelona Pàg. 2 Memòria Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 3
+
+# Resum 
+
+El presen t treball , realitzat dins de l’equip Arm2u , té com a objectiu principal desenvolupar 
+
+una pròtesi de mà funcional i assequible que permeti a l'usuari realitzar tasques quotidianes 
+
+de manera autònoma, sense necessitat d'ajuda externa. Per assolir aquest objectiu, s'han 
+
+utilitzat les proves del Cybath lon Series 2024 com a referència, ja que aquestes repliquen 
+
+un ampli ventall de situacions reals. El procés ha implicat un estudi exhaustiu de diferents 
+
+pròtesis existents, una anàlisi comparativa de les solucions disponibles mitjançant el 
+
+mètode Analytic hierarchy process (AHP ) i la identificació dels requisits que hauria de 
+
+complir el nou prototip. Posteriorment, s'ha dut a terme el predisseny i la fabricació d'un 
+
+prototip mitjançant impressió 3D, seguit de la seva avaluació .
+
+Els resultats han demostrat q ue la pròtesi desenvolupada compleix amb els requisits 
+
+establerts en termes de funcionalitat, durabilitat, estètica, cost i pes . Tanmateix, s'han 
+
+identificat àrees de millora, especialment en la durabilitat dels materials, la personalització 
+
+de l'usuari, l 'aspecte estètic i l'optimització del cost de fabricació. Aquestes millores futures 
+
+podrien augmentar significativament la qualitat i l'acceptació de la pròtesi per part dels 
+
+usuaris. 
+
+En conclusió, aquest treball ha aconseguit desenvolupar una pròtesi de m à capaç de 
+
+superar les proves del Cybathlon Series 2024 , proporcionant una solució viable i molt 
+
+assequible per a les necessitats dels usuaris. No obstant això, hi ha un ampli marge de 
+
+millora que pot ser abordat en futurs treballs per a perfeccionar el di sseny i la funcionalitat 
+
+de la pròtesi. Pàg. 4 Memòria 
+
+# Resumen 
+
+El presente trabajo , realizado dentro del equipo Arm2u , tiene como objetivo principal 
+
+desarrollar una prótesis de mano funcional y asequible que permita al usuario realizar 
+
+tareas cotidianas de manera autóno ma, sin necesidad de ayuda externa. Para lograr este 
+
+objetivo, se han utilizado las pruebas del Cybathlon Series 2024 como referencia, ya que 
+
+estas replican un amplio espectro de situaciones reales. El proceso ha implicado un estudio 
+
+exhaustivo de diferent es prótesis existentes, un análisis comparativo de las soluciones 
+
+disponibles mediante el método  Analytic hierarchy process (AHP)  y la identificación de los 
+
+requisitos que debería cumplir el nuevo prototipo. Posteriormente, se llevó a cabo el 
+
+prediseño y la fabricación de un prototipo mediante impresión 3D, seguido de su 
+
+evaluación. 
+
+Los resultados han demostrado que la prótesis desa rrollada cumple con los requisitos 
+
+establecidos en términos de funcionalidad, durabilidad, estética, cost e y peso. Sin 
+
+embargo, se han identificado áreas de mejora, especialmente en la durabilidad de los 
+
+materiales, la personalización del usuario, el aspec to estético y la optimización del costo 
+
+de fabricación. Estas mejoras futuras podrían aumentar significativamente la calidad y la 
+
+aceptación de la prótesis por parte de los usuarios. 
+
+En conclusión, este trabajo ha logrado desarrollar una prótesis de mano c apaz de superar 
+
+las pruebas del Cybathlon Series 2024 , proporcionando una solución viable y muy 
+
+asequible para las necesidades de los usuarios. No obstante, existe un amplio margen de 
+
+mejora que puede abordarse en futuros trabajos para perfeccionar el dise ño y la 
+
+funcionalidad de la prótesis. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 5
+
+# Abstract 
+
+This project, c onducted within the Arm2u team , aims to develop a functional and affordable 
+
+hand prosthesis that allows the user to perform daily tasks autonomously, without the need 
+
+for external assistance. T o achieve this goal, the Cybathlon Series 2024 trials have been 
+
+used as a reference, as they replicate a wide range of real -life situations. The process has 
+
+involved a comprehensive study of various existing prostheses, a comparative analysis of 
+
+available solutions using the Analytic hierarchy process (AHP) method, and the 
+
+identification of requirements that the new prototype should meet. Subsequently, predesign 
+
+and fabrication of a prototype using 3D printing were carried out, followed by its evaluation. 
+
+The results have demonstrated that the developed prosthesis meets the established 
+
+requirements in terms of functionality, durability, aesthetics, cost, and weight. However, 
+
+areas for improvement have been identified, particularly in material durability, use r
+
+customization, aesthetic appearance, and manufacturing cost optimization. These future 
+
+improvements could significantly enhance the quality and acceptance of the prosthesis 
+
+among users. 
+
+In conclusion, this work has successfully developed a hand prosthesi s capable of 
+
+surpassing the Cybathlon Series 2024 trials, providing a viable and highly affordable 
+
+solution for users' needs. Nevertheless, there is ample room for improvement that can be 
+
+addressed in future endeavors to refine the design and functionality of the prosthesis. Pàg. 6 Memòria 
+
+# Contingut 
+
+## RESUM ________________________________ ____________________ 3
+
+## RESUMEN ________________________________ _________________ 4
+
+## ABSTRACT ________________________________ _________________ 5
+
+## CONTINGUT ________________________________ ________________ 6
+
+## GLOSSARI I NOMENCLATURA ________________________________ 9
+
+## LLISTAT DE FIGURES ________________________________ _______ 10 
+
+## LLISTAT DE TAULES ________________________________ _______ 12 
+
+## 1.  INTRODUCCIÓ ________________________________ _________ 14 
+
+1.1.  Motivació ................................ ................................ ................................ .. 14 
+
+1.2.  Abast del treball ................................ ................................ ....................... 14 
+
+1.3.  Objectius del treball ................................ ................................ .................. 15 
+
+## 2.  CYBATHLON SERIES ________________________________ ___ 17 
+
+2.1.  Altres edicions i disciplina ARM ................................ ............................... 17 
+
+2.2.  Proves i normativa ARM ................................ ................................ .......... 18 
+
+2.2.1.  Normativa general ................................ ................................ ....................... 18 
+
+2.2.2.  Descripció de les proves ................................ ................................ ............. 18 
+
+2.2.3.  Divisió per grups segons els requeriments ................................ .................. 23 
+
+2.2.4.  Objectius ................................ ................................ ................................ ..... 24 
+
+## 3.  ESTAT DE L’ART ________________________________ _______ 25 
+
+3.1.  Tipus de pròtesis funcionals (o actives) ................................ ................... 25 
+
+3.1.1.  Pròtesis mecàniques ................................ ................................ ................... 25 
+
+3.1.2.  Pròtesis elèctriques ................................ ................................ ..................... 26 
+
+3.2.  Pròtesis estètiques (o passives) ................................ .............................. 27 
+
+3.3.  Antecedents ................................ ................................ ............................. 28 
+
+3.3.1.  Història de les pròtesis de ma ................................ ................................ ..... 28 
+
+3.3.2.  Historial d’iteracions d’Arm2u ................................ ................................ ...... 29 
+
+3.4.  Estudi d’altres models existents ................................ ............................... 31 
+
+3.5.  Avantatges i limitacions de la impressió 3D ................................ ............. 34 
+
+3.5.1.  Introducció a la fabricació additiva ................................ .............................. 34 
+
+3.5.2.  Disseny orientat a la impressió en 3D ................................ ......................... 34 
+
+3.5.3.  Paràmetres d’impressió importants ................................ ............................. 35 Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 7
+
+## 4.  ANÀLISI COMPARATIVA DE LES PRÒTESIS ACTUALS _______ 36 
+
+4.1.  Introducció mètode AHP ................................ ................................ .......... 36       
+
+> 4.1.1. Descripció bàsica ................................ ................................ ........................ 36
+> 4.1.2. Principis clau ................................ ................................ ............................... 36
+
+4.2.  Criteris i paràmetres ................................ ................................ ................. 37           
+
+> 4.2.1. Definició de la jerarquia ................................ ................................ ............... 37
+> 4.2.2. Introducció d’alternatives ................................ ................................ ............. 38
+> 4.2.3. Assignació de pesos als criteris ................................ ................................ .. 38
+> 4.2.4. Comparació d’alternatives segons criteri ................................ ..................... 40
+
+4.3.  Resultats ................................ ................................ ................................ .. 45      
+
+> 4.3.1. Càlcul de prioritats ................................ ................................ ....................... 45
+> 4.3.2. Consistència i bondat dels resultats ................................ ............................ 46
+
+## 5.  PREDISSENY CONCEPTUAL _____________________________ 48 
+
+5.1.  Definició de requeriments ................................ ................................ ........ 48 
+
+5.2.  Prova de concepte del mecanisme ................................ .......................... 49       
+
+> 5.2.1. Descripció i principi de funcionament ................................ .......................... 49
+> 5.2.2. Historial d’iteracions ................................ ................................ .................... 51
+
+5.3.  Prova de concepte de forma ................................ ................................ .... 54       
+
+> 5.3.1. Descripció i requeriments ................................ ................................ ............ 54
+> 5.3.2. Historial d’iteracions ................................ ................................ .................... 56
+
+## 6.  PROTOTIPATGE DEL PREDISSENY _______________________ 59 
+
+6.1.  Integració dels dos conceptes ................................ ................................ . 59 
+
+6.2.  Historial d’iteracions ................................ ................................ ................. 61 
+
+## 7.  RESULTATS ________________________________ ___________ 62 
+
+7.1.  Avaluació de requeriments ................................ ................................ ...... 63 
+
+7.2.  Avaluació de riscos i límits ................................ ................................ ....... 64 
+
+## 8.  POSSIBLES MILLORES I PASSOS FUTURS _________________ 65 
+
+## 9.  PLANIFICACIÓ ________________________________ _________ 66 
+
+## 10.  ESTUDI ECONÒMIC ________________________________ ____ 67 
+
+10.1.  Cost de personal ................................ ................................ ...................... 67 
+
+10.2.  Cost de material ................................ ................................ ....................... 67 
+
+10.3.  Cost operatiu ................................ ................................ ............................ 68 
+
+10.4.  Cost energètic ................................ ................................ .......................... 68 
+
+10.5.  Cost total ................................ ................................ ................................ .. 69 
+
+## 11.  ESTUDI AMBIENTAL ________________________________ ____ 70 
+
+## 12.  ESTUDI SOCIAL I D’IGUALTAT DE GÈNERE ________________ 71 Pàg. 8 Memòria 
+
+## 13.  CONCLUSIONS ________________________________ ________ 72 
+
+## 14.  AGRAÏMENTS ________________________________ _________ 73 
+
+## 15.  BIBLIOGRAFIA ________________________________ ________ 74 Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 9
+
+# Glossari i Nomenclatura 
+
+- AHP: Procés d'Anàlisi Jeràrquica. 
+
+- FDM: Modelatge per Deposició Fosa. 
+
+- PLA: Àcid Polilàctic. 
+
+- PETG: Tereftalat de Polietil è Glicol .
+
+- ABS: Acrilonitril Butadiè Estirè. 
+
+- PC: Policarbonat. 
+
+- E: Mòdul de Young. 
+
+- σ: Tensió màxima. Pàg. 10 Memòria 
+
+# Llistat de figures 
+
+Figura 1. Distribució i funcionament de la prova Carry Bottles [3]. ................................ ... 18 
+
+Figura 2. Funcionament de la prova Serving Food [3].  ................................ .................... 19 
+
+Figura 3. Funcionament de la prova Storing Dishes [3]. ................................ .................. 19 
+
+Figura 4. Funcionament de la prova Hanging Laundry [3]. ................................ .............. 20 
+
+Figura 5. Funcionament de la prova Do -it -yourself [3].  ................................ .................... 20 
+
+Figura 6. Funcionament de la prova Containers [3]. ................................ ........................ 21 
+
+Figura 7. Funcionament de la prova Haptic Bag [3]. ................................ ........................ 21 
+
+Figura 8. Funcionament de la prova Hot Wire [3]. ................................ ........................... 21 
+
+Figura 9. Funcionament de la prova Stacking [3]. ................................ ........................... 22 
+
+Figura 10. Funcionament de la prova Clean Sweep [3]. ................................ .................. 22 
+
+Figura 11. Funcionament d'una pròtesi mecànica [4].  ................................ ..................... 26 
+
+Figura 12. Funcionament d'una pròtesi mioelèctrica [5]. ................................ .................. 27 
+
+Figura 13. Funcionament de la mà de ferro de Götz von Berlichingen [7]. ...................... 28 
+
+Figura 14. Comparació entre les pròtesis Andròmeda i Orion -k. Font propia. ................. 29 
+
+Figura 15. Model de la Orion -k que va competir al Cybathlon 2023. Font pròpia. ........... 30 
+
+Figura 16.  Pròtesi BeBionic. Aspecte i funcionament [10]. ................................ .............. 31 
+
+Figura 17. Anatomia d'una mà humana [9].  ................................ ................................ ..... 31 
+
+Figura 18. Pròtesi Greifer DMC [12].  ................................ ................................ ............... 32 
+
+Figura 19.  Pròtesi VariPlus Speed [11].  ................................ ................................ ........... 32 
+
+Figura 20. Pròtesi Hero Arm [13]. ................................ ................................ .................... 33 
+
+Figura 21. Pròtesi Michelangelo. Aspecte i funcionament [10].  ................................ ....... 33 
+
+Figura 22. Variacions de densitat i tipus d'infill [14]. ................................ ......................... 35 
+
+Figura 23. Tipus de moviment segons la igualtat de Grashof [18]. ................................ .. 50 Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 11 
+
+Figura 24. Funcionament d'un mecanisme de tancament de colze [19]. ......................... 50 
+
+Figura 25. Funcionament d'un cargol sense fi [20]. ................................ ......................... 51 
+
+Figura 26. Sentit de rotació en relació al punt d'equilibri. Font Pròpia . ............................ 52 
+
+Figura 27. Sentit de rotació al aplica r una càrrega. Font pròpia. ................................ ..... 52 
+
+Figura 28. F lexió de la barra al aplicar 6kg. Font propia. ................................ ................. 53 
+
+Figura 29. Concepte de mecanisme. Font pròpia.  ................................ ........................... 53 
+
+Figura 30. Relació amb el punt d'equilibri al tancar els dits. Font propia. ........................ 53 
+
+Figura 31. Orientacions utilitzades per l'assaig amb el mateix model d'i mpressora [22]. . 55 
+
+Figura 32. Comparació del mòdul de Young (a) i la tensió màxima entre els materials (b) 
+
+[22]. ................................ ................................ ................................ ................................ . 55 
+
+Figura 33. Primera iteració pel concepte de forma. Font pròpia. ................................ ..... 56 
+
+Figura 34. Recobriment amb silicona de la punta dels dits a partir del motlle. Font pròpia 
+
+................................ ................................ ................................ ................................ ........ 56 
+
+Figura 35.. Factors de forma aplicats al polze. Font pròpia. ................................ ............ 57 
+
+Figura 36. Manera correcte d'agafar l'objecte.  Font pròpia. ................................ ............. 57 
+
+Figura 37. Test de densitats i patrons d'infill diferents.  Font pròpia. ................................ 58 
+
+Figura 38. Rendiment d'un cargol sense fi segons la relació de transmissió [23]. ........... 59 
+
+Figura 39. Distància entre l'engranatge i la punta del dit.  Font pròpia. ............................ 60 
+
+Figura 40. Evolució de l'aparença de la mà. Font pròpia. ................................ ................ 61 
+
+Figura 41. Predisseny fu ncional de la pròtesi de mà. Font pròpia. ................................ .. 62 Pàg. 12 Memòria 
+
+# Llistat de taules 
+
+Taula 1. Distribució de sol·licitacions de cada prova. ................................ ...................... 23 
+
+Taula 2. Resum dels paràmetres del sistema. ................................ ................................ . 37 
+
+Taula 3. Taula de ponderacions de criteris. ................................ ................................ ..... 39 
+
+Taula 4. Ponderacions dels subcriteris de Funcionalitat. ................................ ................. 40 
+
+Taula 5. Taula de ponderacions pel criteri Adaptabilitat. ................................ ................. 41 
+
+Taula 6. Taula de ponderacions pel criteri Precisió. ................................ ........................ 41 
+
+Taula 7. Taula de ponderacions pel criteri Força. ................................ ............................ 42 
+
+Taula 8. Taula de ponderacions pel criteri Estètica. ................................ ........................ 42 
+
+Taula 9. Taula de ponderacions pel criteri Cost. ................................ .............................. 43 
+
+Taula 10.  Taula de ponderacions pel criteri Durabilitat. ................................ ................... 43 
+
+Taula 1 1. Taula de ponderacions pel criteri Pes. ................................ ............................. 44 
+
+Taula 12. Matriu de prioritats. ................................ ................................ .......................... 45 
+
+Taula 13. Vector de prioritats dels criteris ................................ ................................ ........ 46 
+
+Taula 14. Vector de prioritat d'alternatives. ................................ ................................ ...... 46 
+
+Taula 15. Índex d'aleatorietat segons el nombre d'alternatives [16]. ................................ 47 
+
+Taula 16. Quocients de consistència de les matrius.  ................................ ....................... 47 
+
+Taula 17. Taula compartaiva entre els requeriments i el rendiment de la pròtesi. ........... 63 
+
+Taula 18. Diagrama de Gantt amb la planificació del projecte. ................................ ........ 66 
+
+Taula 19. Hores dedicades per tasca. ................................ ................................ ............. 67 
+
+Taula 20. Costos del material emprat pel projecte. ................................ .......................... 67 
+
+Taula 21. Costos d'altres elements necessaris. ................................ ............................... 68 
+
+Taula 22. Cost energètic del projecte.  ................................ ................................ ............. 68 
+
+Taula 23. Cost total del projecte. ................................ ................................ ..................... 69 Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 13 
+
+Taula 24. Producció d'emissions de CO2 durant el projecte.  ................................ .......... 70 Pàg. 14 Memòria 
+
+# 1. Introducció 
+
+Les tecnologies de suport són aquelles que milloren les capacitats funcionals de persones 
+
+discapacitades. Aquestes comporten un augment en l’autonomia dels seus usuaris ,
+
+millorant així la seva qualitat de vida . L’avanç de la tecnologia ha permès incrementar tant 
+
+l’abast com la qualitat d’aquests productes que generen un impacte social positiu. 
+
+Tot i que el desenvolupament de la tecnologia ha permès un avanç important per a les 
+
+pròtesis, aquestes solen tenir preus que no són a l’abast de la majoria dels usuaris. A més, 
+
+la cerca d’una pròtesi antropomòrfica pot incidir negativament en les funcionalitats 
+
+d’aquesta, degut a la dificultat de replicar la complexitat de l’anatomia humana. 
+
+L’any 2018 es fundà Arm2u , un equip univer sitari que té com a objectiu millorar la qualitat 
+
+de vida de la gent que necessita una tecnologia d’assistència per la seva vida quotidiana. 
+
+Ho fa a través del desenvolupament d’una pròtesi de braç d’un preu assequible , centrada 
+
+en les necessitats de l’usu ari i impresa en 3D [1] .
+
+# 1.1. Motivació 
+
+Des d’Arm2u s’aposta per la innovació i el desenvolupament per a intentar trobar una 
+
+solució econòmica a la demanda de substituts d’extremitat superior. El producte millora en 
+
+funcionalitat amb cada iteració, mentre l’e quip continua mantenint el seu compromís amb 
+
+la raó social del projecte i la formació de l’estudiantat. 
+
+És arr an d’aquesta organització que sorgeix la motivació d’aquest projecte, que s’alinea 
+
+amb la raó de ser de l’equip i busca el desenvolupament d’un pr oducte que atorgui una 
+
+major autonomia i qualitat de vida a tots aquells que es veuen afectats per una discapacitat 
+
+a una extremitat superior. A més, l’equip serà al Cybathlon Series 2024 , una olimpíada 
+
+biomèdica que posa a prova diferents tecnologies d’assistència i on ja ha competit en 
+
+edicions anteriors. 
+
+Una motivació de caire més personal rau en la passió per l’aprenentatge sobre el disseny 
+
+mecànic i el disseny enfocat en el procés de fabricació (en aquest cas, fabricació additiva), 
+
+aix í com també en el fet de poder generar un impacte positiu en la vida d’un ésser humà. 
+
+# 1.2. Abast del treball 
+
+Aquest projecte es centra en l ’elecció de component essencials d’una mà biònica a través 
+
+d’un estudi de l’estat de l’art i en el predisseny d’un prototip amb aquests components. Es 
+
+realitza aquest treball des de l’equip Arm2u, que porta treballant en l’àrea de les pròtesis 
+
+des de 2018. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 15 
+
+Com a alumne de la UPC i membre del departament de mecànica de l’equip, es té accés 
+
+a eines específiques que seran vitals pel desenvolupament del treball, com una llicencia 
+
+de SolidWorks i una impressora 3D model Prusa MK3S+ . Algunes decisions envers la 
+
+fabricació són preses a parti r del material disponible , com la cargoleria o les eines de post -
+
+processat. Es pretén utilitzar components off the shelf , que són peces disponibles 
+
+comercialment que es poden adquirir directament sense personalització, oferint una solució 
+
+ràpida i econòmica. 
+
+Per a la realització del projecte, s’ha seguit una metodologia basada en el disseny 
+
+conceptual a partir de la recerca. És a dir, s’ha partit d’un estudi de l’estat de l’art per definir 
+
+les necessita ts del producte. Els dissenys conceptuals s’han imprès per analitzar la seva 
+
+viabilitat, comprovant així les seves fortaleses i debilitats. S’ha hagut de realitzat iteracions 
+
+per ajustar el producte al disseny conceptual, ajustant toleràncies i fent assajo s per 
+
+comprovar el punt de funcionament òptim. 
+
+Aquest treball es basa en realitzar un predisseny a nivell mecànic d’una pròtesi de mà per 
+
+competir al Cybathlon Series 2024 . Es considera fora de l’abast del projecte el control dels 
+
+elements electrònics o l’ actuació del motor, degut a que queda fora de l’interès del treball i 
+
+es considera una àrea independent. Tot i així, si que s’ha considerat la dificultat d’aquest 
+
+procés per prendre decisions envers el tipus de motor utilitzat 
+
+Per últim, aquest projecte re sulta en un disseny generalitzat, sense adaptar -ho a les mides 
+
+exactes d’un usuari. És així que , la pròtesi que es presenti a la competició no té perquè ser 
+
+igual en mesures específiques a la presentada en aquest treball. No s’han realitzat plànols 
+
+de les peces degut a que les mides es poden adaptar a l’usuari. A més, s’imprimeix en 3D 
+
+i, per tant, no es necessiten els plànols per la fabricació i el muntatge d’aquesta. 
+
+# 1.3. Objectius del treball 
+
+L'objectiu general del treball és trobar una configuració que permeti a l'usuari de la pròtesi 
+
+de mà realitzar tasques quotidianes sense recórrer a l'ajuda de terceres persones. Per 
+
+aconseguir -ho, s'utilitzaran les proves del Cybathlon Series com a objectiu específic, ja que 
+
+aquestes repl iquen un ampli rang d'usos reals i situacions quotidianes que una persona 
+
+amb pròtesi pot trobar -se. Amb aquesta finalitat, es desenvoluparà un prototip imprès en 
+
+3D basat en un predisseny que sigui capaç de superar les proves esmentades, demostrant 
+
+la sev a efectivitat i practicitat en un context realista. Pàg. 16 Memòria 
+
+Els objectius particulars del treball s ón els següents :
+
+- Realitzar un estudi aprofundit de diferents pròtesis existents al mercat. Es procurarà 
+
+tenir en compte diferents tipus de productes, abastant una varietat de rangs de preus i 
+
+tecnologies per assegurar una anàlisi completa. 
+
+- Dur a terme una anàlisi comparativa de les solucions existents, utilitzant diferents 
+
+paràmetres relacionats amb la funcionalitat, l'estètica i el cost. Aquesta comparació 
+
+permetrà identificar les millors pràctiques i tecnologies disponibles .
+
+- Establir les condicions i requeriments que hauria de complir el prototip per ser 
+
+considerat una solució viable. Aquests requeriments inclouran aspectes com la 
+
+durabilitat, la facilitat d'ús, l' adaptabilitat a diferents usuaris i la capacitat de realitzar 
+
+diverses tasques .
+
+- Desenvolupar el predisseny d'una extensió prostètica funcional que sigui adaptable a 
+
+diferents usuaris, funcions i objectes. Aquest disseny s'haurà de basar en els 
+
+requeriments establerts i les millors pràctiques identificades durant l'estudi preliminar .
+
+- Avaluar el disseny mitjançant la seva posada a prova enfront les proves del Cybathlon 
+
+Series. Això permetrà validar la funcionalitat del prototip en un entorn controlat que 
+
+simu la situacions de la vida real .
+
+- Estimar el cost de fabricació del prototip, incloent tant els costos de materials com els 
+
+de producció. Aquesta estimació serà crucial per determinar la viabilitat econòmica del 
+
+prototip i la seva accessibilitat per als usuar is finals .
+
+Aquest procés detallat assegurarà que la pròtesi desenvolupada sigui pràctica, funcional i 
+
+accessible, complint amb les necessitats dels usuaris i superant els desafiaments 
+
+quotidians sense recórrer a l'ajuda de terceres persones. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 17 
+
+# 2. Cybathlon Se ries 
+
+El Cybathlon és una competició organitzada per la universitat ETH de Zurich que combina 
+
+tecnologia amb esports adaptats [2] . El seu objectiu principal és proporcionar un escenari 
+
+on persones amb discapacitat i els seus equips puguin competir en difere nts proves 
+
+utilitzant tecnologies d'assistència com exoesquelets, pròtesis robòtiques i altres 
+
+dispositius. 
+
+Aquestes proves poden incloure tasques quotidianes com arrossegar maletes, conduir una 
+
+cadira de rodes elèctrica o superar obstacles amb pròtesis d e braç. L'objectiu del Cybathlon 
+
+és promoure el desenvolupament de tecnologies d'assistència innovadores i millorar la 
+
+qualitat de vida de les persones amb discapacitat. 
+
+# 2.1. Altres edicions i disciplina ARM 
+
+Definit com a olimpíada biònica, el Cybathlon Series és una competició internacional que 
+
+es celebra cada 4 anys, i la propera edició és del 25 al 27 d’octubre de 2024. Per a mantenir 
+
+als equips en contacte amb l’organització i tenir un seguiment sobre el seu progrés , al 2022 
+
+es va celebrar e l primer Cybathlon Challenge , una versió reduïda de l’esdeveniment, amb 
+
+només una prova i menys de la meitat de participants. 
+
+La competició disposa de vuit disciplines, en les quals persones discapacitades treballen 
+
+amb les tecnologies d’assistència per superar una sèrie d’obstacles. Les categories són: 
+
+- ARM: Cursa d’obstacles per pròtesis de braç transradials o superior. 
+
+- ROB: Cursa d’obstacles per robots d’assistència d’interacció i autònoms. 
+
+- VIS: Cursa d’obstacles per tecnologies de vis ió assistida. 
+
+- BCI: Cursa d’obstacles per interfícies cervell -ordinador. 
+
+- EXO: Cursa d’obstacles per exoesquelets. 
+
+- FES: Cursa d’obstacles per tecnologies d’estimulació muscular elèctrica. 
+
+- LEG: Cursa d’obstacles per pròtesis de cama. 
+
+- WHL: Cursa d’obstacles pe r cadires de rodes. 
+
+Arm2u va participar a les edicions de 2022 i 2023 a la categoria ARM, sent l’únic 
+
+representant espanyol i l’únic equip format íntegrament per estudiants. Pàg. 18 Memòria 
+
+# 2.2. Proves i normativa ARM 
+
+La categoria ARM del Cybathlon Series 2024 consisteix en una cursa de 10 proves que 
+
+representen situacions mundanes. A les edicions del Cybathlon Challenge es van realitzar 
+
+només 2 proves. 
+
+2.2.1. Normativa general 
+
+Com a concepte de competició, cadascuna de les 10 proves amb les que compta aquesta 
+
+disciplina puntuarà, de manera binaria, 0 o 10 punts [3] . A més, es cronometrarà el temps 
+
+total, i es decidirà el guanyador segons els punts i, en cas d’empat, el temps. No es tindran 
+
+en compte altres factors com estètica, comoditat o preu. 
+
+La cursa d’obstacles tindr à un ordre concret, amb una zona delimitada i de la qual, sortir -
+
+se’n, serà motiu de no puntuar en la prova en la que es trobi el pilot. A més, per cada prova 
+
+hi haurà una sèrie d’objectes que seran de color blau. Tots els objectes d’aquest color 
+
+només es poden tocar amb la pròtesi, i aquesta no es pot tocar amb l’altr e braç mentre 
+
+estigui en contacte amb un objecte. Si la pròtesi no està tocant cap objecte blau, es pot 
+
+tocar i manipular, però no es poden realitzar canvis de peces o terminals en aquesta. 
+
+2.2.2. De scripció de les proves 
+
+A continuació es detallaran totes les proves, amb una breu descripció dels objectius i 
+
+restriccions d’aquestes. 
+
+- Carry bottles: s’hauran d’introduir 4 ampolles de mides diferents en una caixa, 
+
+transportar aquesta caixa fins a la zona final i depositar les 4 ampolles a sobre de la 
+
+taula. Si alguna ampolla cau a terra o volca, la puntuació serà de 0 punts.     
+
+> Figura 1. Distribució i funcionament de la prova Carry Bottles [3]. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág.
+
+19 
+
+- Serving food: Simula la dificultat de transportar recipients amb contingut al seu interior. 
+
+S’haura de portar fins la taula una casserola que es troba en un forn, inicialment tancat, 
+
+que conté 6 pilotes. La casserola s’ha d’agafar per les dues nances. A més, S’ha de 
+
+tra nsportar una paella també amb pilotes al seu interior, agafant -la pel mànec amb la 
+
+pròtesi. Si cau alguna pilota a terra, la puntuació serà de 0 punts. 
+
+- Storing dishes: Representa el procés d’endreçar la cuina. S’haurà de transportar un 
+
+plat, una tassa i coberts, que es troben en un escorredor i un pot, fins a una prestatgeria, 
+
+deixant cada objecte en un prestatge o calaix determinat. Tots els objectes són blaus i ,
+
+si algun cau a terra, la puntuació serà de 0 punts .    
+
+> Figura 2. Funcionament de la prova Serving Food [3].
+> Figura 3. Funcionament de la prova Storing Dishes [3]. Pàg.
+
+20 Memòria 
+
+- Hanging laundry: Representa la dificultat que té vestir -se, desvestir -se i estendre la 
+
+roba. El pilot s’haurà de p osar una dessuadora que es troba inicialment al cubell, i 
+
+s’haurà de cordar la cremallera blava fins a dalt. Quan l’àrbitre confirmi que la 
+
+cremallera està pujada, l’haurà de descordar, treure’s la dessuadora i deixar -la penjant 
+
+a la corda. 
+
+A més, haurà de penjar una samarreta utilitzant una pinça blava que es troba al lateral 
+
+de l’estenedor. L’alçada de la corda d’estendre serà l’alçada del pilot més 10 
+
+centímetres. 
+
+- Do -it -yourself: Representa l’ús quotidià d’eines. S’haurà de clavar un clau amb un 
+
+martell de mànec blau en un tac de plàstic. Quan el clau hagi sobrepassat la part inferior 
+
+d’aquest tac i l’àrbitre doni permís, s’haurà de treure el clau am b unes tenalles també 
+
+de mànec blau, i posteriorment enroscar una bombeta en un compartiment lateral.      
+
+> Figura 4. Funcionament de la prova Hanging Laundry [3].
+> Figura 5. Funcionament de la prova Do -it -yourself [3]. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág.
+
+21 
+
+- Containers: Replica la dificultat d’obrir envasos habituals. S’hauran d’obrir 2 pots i 2 
+
+ampolles, cadascun utilitzant o bé la mà o bé la pròtesi per desenroscar el tap i l’altre 
+
+per retenir l’envàs. Si la tapa o el contingut de l’en vàs cau a terra, la puntuació serà de 
+
+0 punts. 
+
+- Haptic bag: Simula el repte d’identificar objectes només pel seu tacte. En una bossa 
+
+tancada hi haurà quatre objectes: dos cilindres i dos cubs, sent un de cada dur i l’altre 
+
+d’espuma. El pilot tindrà un ordr e davant i l’haurà de replicar traient de la caixa els 
+
+objectes per ordre. 
+
+- Hot wire: Representa la necessitat de precisió al manipular objectes fins , com un 
+
+pinzell. S’haurà de moure un aro de metall a través d’un recorregut sense que aquest 
+
+faci contacte. En cas de que es toquin, la puntuació serà de 0 punts.      
+
+> Figura 6. Funcionament de la prova Containers [3].
+> Figura 7. Funcionament de la prova Haptic Bag [3].
+> Figura 8. Funcionament de la prova Hot Wire [3]. Pàg.
+
+22 Memòria 
+
+- Stacking: Simul a la dificultat de mantenir un objecte agafat i moure’l. S’haurà de, 
+
+assegut a una cadira, fer una piràmide de 6 gots blaus que es troben separats 
+
+inicialment i, després, desfer -la i fer una pila amb tots els gots. Si un got cau a terra, la 
+
+puntuació de la prova serà 0. 
+
+- Clean Sweep: Representa situacions quotidianes on s’ha de manipular amb precisió 
+
+objectes petits. El pilot haurà de col·locar, en llocs concrets, una clau, una peça de 
+
+Lego, una tarjeta de crèdit i una bala tots de color blau. Aquests es trobaran inicialment 
+
+en una ca ixa, també blava, en una taula a 5 metres de l’altra.     
+
+> Figura 9. Funcionament de la prova Stacking [3].
+> Figura 10 . Funcionament de la prova Clean Sweep [3]. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág.
+
+23 
+
+2.2.3. Divisió per grups segons els requeriments 
+
+Tot i que cada prova suposa un repte particular i comporta unes dificultats úniques, es 
+
+poden agrupar les sol·licitacions per establir uns requeriments ajust ats. 
+
+Es proposa classificar a questes sol·licitacions en tres categories principals: Adaptabilitat, 
+
+Precisió i Força . La Taula 1 mostra la distribució de les proves segons les seves 
+
+sol·licitacions. Fer a questa classificació permet identificar quines habilitats són essencials 
+
+per a cada tasca específica, facilitant així l'avaluació i la selecció de la pròtesi més 
+
+adequada per a les necessitats individuals dels usuaris. 
+
+Es considera que requereixen adaptabilitat aquelles proves en les que hi hagi o bé objectes 
+
+de geometries concretes que dificultin la subjecció o bé objectes que s’han d’agafar d’una 
+
+forma específica per superar la pr ova.  
+
+> Taula 1. Distribució de sol·licitacions de cada prova.
+
+Adaptabilitat  Precisió  Força 
+
+Carry bottles 
+
+Serving food 
+
+Storing dishes 
+
+Hanging laundry 
+
+Do -it -yourself 
+
+Containers 
+
+Haptic bag 
+
+Hot wire 
+
+Stacking 
+
+Clean sweep 
+
+Com a comentari, s’ha considerat que algunes proves no requereixen d’adaptabilitat 
+
+perquè les formes del seus objectes són similars a les d’altres proves. Per exemple, si la 
+
+pròtesi pot agafar els gots de la prova Stacking , podrà agafar els de Containers , ja que 
+
+ambdós són objectes cilíndrics de diàmetre similar. Pàg. 24 Memòria 
+
+2.2.4. Objectius 
+
+L'objectiu principal dels participants del Cybathlon ARM és superar el màxim nombre de 
+
+proves possibles, demostrant així les seves habilitats i la funcionalitat de les seves pròtesis. 
+
+Aqu estes proves estan dissenyades per replicar activitats de la vida diària i desafiaments 
+
+reals, proporcionant una avaluació exhaustiva de la destresa, la força i la precisió dels 
+
+dispositius utilitzats. Els participants busquen no només completar les tasque s, sinó també 
+
+fer -ho de manera eficient i efectiva, mostrant la capacitat de les seves pròtesis per millorar 
+
+la qualitat de vida dels usuaris. 
+
+La meta de l’equip Arm2u és fer una mà que pugui superar el màxim nombre de proves 
+
+possibles. S’ha de tenir en co mpte que la pròtesi compta també amb els moviments de 
+
+rotació i flexió del canell, els qual seran essencials per superar totes les proves. 
+
+El repte principal a l’hora de dissenyar la mà és el de poder aconseguir agafar tots els 
+
+objectes, ja que aquests pr esenten geometries molt variades tant per forma com per mida. 
+
+A més, no és suficient amb poder subjectar els objectes, sinó que molts s’han d’agafar 
+
+d’una manera concreta per tal de facilitar al pilot superar els reptes. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 25 
+
+# 3. Estat de l’art 
+
+Com per a qualsevo l producte, és indispensable comptar amb informació actualitzada 
+
+sobre els productes de la mateixa línia per al desenvolupament i disseny d’una mà 
+
+prostètica. Una anàlisi detallada de les alternatives existents atorga una base de 
+
+coneixement que permet ent endre i valorar les diferents parts, formes i mecanismes que 
+
+formen la pròtesi. 
+
+En aquesta secció es detall en les característiques de diferents mans prostètiques que es 
+
+troben tant al mercat com en estat de desenvolupament, fent més èmfasi en la funcionali tat 
+
+que l’estètica o la semblança antropomòrfica. Per a procedir correctament, és necessari fer 
+
+una classificació dels diferents tipus de pròtesi existents i les seves diferències. 
+
+Les pròtesis de mà es poden dividir en dos grans grups: pròtesis funcional (o actives) i 
+
+pròtesis estètiques (o passives). L’única funció d’una pròtesi passiva és la de millorar 
+
+l’aparença física del membre romanent. Degut a que l’anàlisi es basarà en funcionalitat, 
+
+només es valoraran pròtesis actives. 
+
+# 3.1. Tipus de pròtesis funcional s (o actives) 
+
+Són aquelles que poden realitzar moviments controlables respecte el membre romanent 
+
+en el que són instal·lades. Pretenen atorgar a l’usuari les mateixes accions que una mà 
+
+humana i el control sobre aquestes. 
+
+Es poden categoritzar segons el m ètode d’actuació que l’usuari utilitza per controlar la 
+
+pròtesi. 
+
+3.1.1. Pròtesis mecàniques 
+
+Aquestes basen el seu funcionament en els moviments relatius que el pilot fa sobre la 
+
+pròtesi. Solen ser mecanismes simples d’obertura i tancament, subjectats al cos mitjançant 
+
+corretges o cables. En general, l’usuari activa el mecanisme exercint una força sobre el 
+
+cable que funciona com a tensor i està connectat a una altra part del cos. 
+
+Tot i arribar a tenir una precisió molt alta, són dependents del moviment d’una altra 
+
+articulació i només poden accionar un moviment, així que no donen tota l’autonomia 
+
+necessària per replicar les funcions d’una mà. Són les més econòmiques degut als 
+
+materials i el manteniment senzill que comporta. Pàg. 26 Memòria 
+
+3.1.2. Pròtesis elèctriques 
+
+Basen el seu funcionament en ser actuades mitjançant motors o actuadors lineals. Aporten 
+
+més precisió i prestacions que una pròtesis mecànica, ja que la integració de diferents 
+
+elements electrònics pot permetre a l’usuari controlar més moviments. Són les pròtesis 
+
+activ es més habituals, ja que aporten més funcionalitats a l’usuari. 
+
+Per altra banda, els components electrònics incrementen no només el preu de fabricació, 
+
+sinó la dificultat del manteniment i la fragilitat del producte. És per això que el rang de preus 
+
+és mol t ample, ja que depenent de la potència i qualitat dels components varien tant les 
+
+funcionalitats i prestacions com el cost final. 
+
+A més, es subdivideixen segons com l’usuari controli l’actuació de la pròtesi: 
+
+- Les pròtesis elèctriques directes són aquelles actuades mitjançant interruptors, 
+
+polsadors o sensors de pressió. Així, requereixen d’un petit moviment relatiu respecte 
+
+la pròtesi. L’activació d’aquests dispositius sol ser amb el monyó, sempre i quan la 
+
+fixació de la pròtesi permeti aquest moviment. 
+
+- Les pròtesis mioelèctriques són les que permeten un major grau de interacció i 
+
+integració de la pròtesi amb l’usuari, ja que basen el seu funcionament en la detecció 
+
+dels senyals produïts per la contracció dels músculs.      
+
+> Figura 11 .Funcionament d'una pròtesi mecànica [4]. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág.
+
+27 
+
+Es col·loquen elèctrodes a la pell sobre el múscul i es registra l’activitat elèctrica 
+
+d’aquest. El senyal captat per aquests elèctrodes s’amplifica degut a que és molt 
+
+baix i es filtra , ja que és molt susceptible a interferències o soroll. Aquest senyal ja 
+
+processat s’utilitza per extreure la intensitat i duració de l’activitat muscular. 
+
+Aquesta informació es trasllada als motors per regular la velocitat i duració del 
+
+moviment d’aquests. La combinació de diferents elèctrodes i algorismes de 
+
+detecció de patrons permet al pilot controlar diferents moviments amb la contracció 
+
+o extensió dels músculs del monyó. 
+
+Aquest tipus de pròtesi poden tenir un cost molt elevat, degut a que la qualitat dels 
+
+elèctrodes i els component de processament del senyal definiran la precisió amb la 
+
+que es controla la pròtesi. 
+
+# 3.2. Pròtesis estètiques (o passives) 
+
+No tenen cap tipus de mobilitat actuada, simplement cobreixen el membre romanent imitant 
+
+l’anatomia d’un braç humà. Només milloren l’aparença física, així que les funcionalitats són 
+
+molt limitades. 
+
+Tot i que usualment són completament fixes i rígides, n’hi ha d’algunes que es poden 
+
+deformar, dins d’uns marges establerts, per adaptar la forma de la pròtesi a un ob jecte 
+
+concret. Aquestes permeten diverses posicions fixes entre la mà oberta o tancada. 
+
+Habitualment solen ser de làtex o silicona, ja que es pot obtenir un color i textura similars 
+
+als del braç. A més, permeten un manteniment senzill, una resistència al d esgast elevada 
+
+i una fabricació adaptada a l’usuari.   
+
+> Figura 12 . Funcionament d'una pròtesi mioelèctrica [5]. Pàg.
+
+28 Memòria 
+
+# 3.3. Antecedents 
+
+En aquest apartat, es presenta una visió general sobre els antecedents rellevants per a 
+
+l’estudi de pròtesis de mà, així com un historial detallat de les iteracions de l’equip Arm2u 
+
+amb l’objectiu d’oferir un context històric i tècnic. 
+
+3.3.1. Història de les pròtesis de ma 
+
+Les pròtesis de mà es remunten a l'antiguitat, amb exemples com una pròtesi de dit gros 
+
+de peu trobada en una mòmia egípcia del 950 -710 a.C. [6] , feta de fusta i cuir. Durant l'edat 
+
+mitjana, els forjadors de metalls van començar a fabricar pròtesis més funcionals per a 
+
+cavallers que perdien membres en batalla, com la mà de ferro del cavaller alemany Götz 
+
+von Berlichingen del segle XVI [7].
+
+Amb la Revolució Industrial, les pròtesis van experimentar avenços significatius gràcies a 
+
+l'ús de materials més sofisticats i dissenys més ergonòmics. Al segle XIX, el Dr. Ambroise 
+
+Paré va innovar amb pròtesis articulades que milloraven la mobilitat dels pacients. El segle 
+
+XX va veure una gran demanda de pròtesis funcionals per als veterans de guerra, 
+
+impulsant l'ús de materials com l'alumini i els plàstics, així com millores en la biome cànica. 
+
+En les darreres dècades, les pròtesis de mà han avançat notablement amb la incorporació 
+
+de tecnologia moderna. L'ús de sensors mioelèctrics, motors avançats i materials lleugers 
+
+ha permès desenvolupar pròtesis que no només restauren la funcionalita t bàsica, sinó que 
+
+també ofereixen un alt grau de control i precisió, millorant significativament la qualitat de 
+
+vida dels usuaris.    
+
+> Figura 13 . Funcionament de la mà de ferro de Götz von Berlichingen [7]. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág.
+
+29 
+
+3.3.2. Historial d’iteracions d’Arm2u 
+
+Tot i fundar -se l’any 2018, Arm2u no va presentar una pròtesi fins el desembre del 2021, 
+
+qu an va introduir el seu primer prototip anomenat Andròmeda . Es tractava d’un gripper 
+
+paral·lel, que és un tipus de mecanisme de subjecció que es caracteritza per tenir dues 
+
+pinces que es mouen de manera paral·lela l’una a l’altra [8] . Aquest moviment paral·lel 
+
+permet una subjecció estable i controlada de l’objecte. 
+
+La característica principal d’aquest tipus de mecanisme és la versatilitat ja que, al tenir les 
+
+pinces sempre paral·leles, permet agafar objectes de diferents mides. Per altra banda , la 
+
+seva geometria no permet cap tipus de flexibilitat a l’hora d’adaptar la part interior de la mà. 
+
+En el cas del prototip Andròmeda , la mà consistia en dos mecanismes de 4 barres 
+
+articulades, acoblats entre sí engranant amb una relació 1:1. Un d’aquest s dos estava 
+
+accionat, mitjançant un joc d’engranatges, per un servomotor. 
+
+El problema principal d’aquest prototip radicava en la geometria dels terminals. Tant per 
+
+longitud com per factor de forma, aquests no permetien agafar amb força objectes petits o 
+
+de mida mitjana com bé un got o una llauna. A més, la baixa rugositat i elasticitat dels dits 
+
+no permetia prémer un objecte amb força, ja que al mínim contacte el motor es veia 
+
+impossibilitat a seguir girant. 
+
+L’equip va ser convidat a participar al Cybathlon Challenge 2022 , pel qual es va refer tota 
+
+la pròtesi de nou. És així com sorgeix la següent iteració, anomenada Orion -k.
+
+Seguint amb la idea del gripper paral·lel, es va variar la geometria dels dits, permetent una 
+
+major apertura i ampliant el rang d’objectes possibles a agafar. A més, se li va afegir una 
+
+petita capa de silicona als terminals, la qual millorava la subjecció.     
+
+> Figura 14 . Comparac ió entre les pròtesis Andròmeda i Orion -k. Font propia. Pàg.
+
+30 Memòria 
+
+Amb la intenció de reduir considerablement el pes i per guanyar precisió, es va reduir el 
+
+gruix dels mecanismes de barres i dels terminals. Es va aconseguir una reducció del 40% 
+
+del pes total, però en detriment la pròtesi va perdre robustesa i resistència a la tracció. 
+
+Degut a que no s’havien de manipulat objectes pesats, aquesta pèrdua de tracció no va 
+
+suposar cap inconvenient. 
+
+La següent pròtesi presentada per l’equip va competir al Cybathlon Challenge 2023, i era 
+
+una segona iteració de l’ Orion -k. La major diferència entre les dues iteracion s és la fixació 
+
+permanent d’un dels dos terminals. Una nova prova de la competició suposava una 
+
+sol·licitació de pes incompatible amb el gripper paral·lel. Es va optar per fer una banda de 
+
+la pinça sòlida, millorant notablement la força suportada per aques ta. Aquest canvi va 
+
+suposar un petit detriment de la precisió, però aquesta va ser suficient per superar la 
+
+competició.    
+
+> Figura 15 . Model de la Orion -k que va competir al Cybathlon 2023. Font pròpia. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág.
+
+31 
+
+# 3.4. Estudi d’altres models existents 
+
+En aquest apartat es detallaran models destacats de pròtesis amb diferents principis de 
+
+funcionament. Es descriurà què diferencia cada model respecte la resta, i es valoraran 
+
+també els aspectes negatius de cada una d’elles. 
+
+BeBionic 
+
+Aquest model és un dels més avançats al mercat, ja que permet recrear amb precisió els 
+
+moviments d’una mà, amb moviments independents per cada dit. Com es pot observar a 
+
+la Figura 17 , f unciona amb 5 actuadors lineals, un per dit, que actuen sobre un mecanisme 
+
+de barres que replica el moviment de la falange medial. A la Figura 16 , que mostra 
+
+l’anatomia d’una mà, es poden apreciar les falanges que conformen cada dit.      
+
+> Figura 17 .Anatomia d'una mà humana [9].
+> Figura 16 .Pròtesi BeBionic. Aspecte i funcionament [10]. Pàg.
+
+32 Memòria 
+
+No obstant això, el principal problema d'aquest sistema és la seva complexitat operativa. 
+
+Els components electrònics requerits per a aquest mecanisme suposen un cost elevat i un 
+
+manteniment complicat. A més, l'usuari ha de triar entre mètodes de tancament predefinits, 
+
+la qual cosa limita el control individual sobre cada dit. 
+
+Myohand VariPlus Speed 
+
+Aquest model està desenvolupat per Ottobock , líder del sector de les pròtesis. És un dels 
+
+més venuts arreu del món degut a la seva fiabilitat i robustesa. Es trac ta d’un mecanisme 
+
+articulat senzill que fa el moviment de pinça, combinat amb una funda de silicona que 
+
+simula la resta de la mà i dota la pròtesi d’una aparença antropomòrfica. La Figura 18 
+
+mostra la mà amb el recobriment de silicona i sense ell. 
+
+Un avantatge notable és la seva força de presa superior, que permet als usuaris agafar 
+
+objectes pesats i realitzar activitats que requereixen més força amb confiança i seguretat. 
+
+Tot i així, un dels inconvenients és que, malgrat la seva força, pot no oferir la mateixa 
+
+varietat de moviments precisos i independents que altres pròtesis més avançades, limitant 
+
+una mica la seva versatilitat en tasques més delicades o complexes .
+
+Greifer DMC VariPlus 
+
+També desenvolupada per Ottobock, la pròtesi està dissenyada per proporcionar una força 
+
+de presa robusta i una gran durabilitat. Aquesta pròtesi és ideal per a tasques que 
+
+requereixen una gran força i resistència, permetent als usuaris manipular objectes pesats 
+
+i realitzar activitats labo rals exigents amb confiança. 
+
+Tanmateix, un inconvenient és que, a causa de la seva especialització en força i 
+
+resistència, pot no oferir la mateixa precisió i versatilitat per a tasques més delicades o que 
+
+requereixen un control més fi. A més, l a implement ació d’aquest mecanisme dificulta la 
+
+semblança antropomòrfica, i l’estètica final s’apropa més a la robòtica industrial que a 
+
+l’aparença humana , com es pot observar a la Figura 19 .       
+
+> Figura 19 .Pròtesi VariPlus Speed [11 ]. Figur a18 .Pròtesi Greifer DMC [12]. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág.
+
+33 
+
+Hero arm 
+
+La pròtesi dissenyada per OpenBionics, funciona actuant cada dit individualment 
+
+mitjançant tensors. La mà tanca a l tirar dels cables que passen pels dit, buscant el 
+
+recorregut més curt del cable. Té una gran varietat de moviments i funcionalitats amb un 
+
+alt nivell de precisió i control, permete nt adaptar la mà a la forma de gairebé qualsevol 
+
+objecte. 
+
+No obstant això, un dels inconvenients és que, malgrat les seves capacitats avançades, 
+
+pot no tenir la mateixa força de presa que altre s pròtesis més robustes, limitant el seu ús 
+
+en tasques que requereixen una gran força o manipulació d'objectes pesants. A més, 
+
+manté els problemes de cost i manteniment derivats d’utilit zar un motor per dit 
+
+Michelangelo 
+
+Tot i donar la impressió de ser una pròtesi amb les mateixes articulacions que una mà 
+
+humana, aquesta actua cada dit de manera individual, però aquests són completament 
+
+sòlids , i no repliquen els moviments de les falanges medial i distal. El recobriment està fet 
+
+d’un material tou i flexible que permet que la mà adapti la seva forma als objectes que 
+
+subjecta. Per altra banda, la tecnologia avançada pot suposar una corba d’aprene ntatge 
+
+per l’usuari, així com una necessitat d’un manteniment especialitzat i reparacions 
+
+complicades .   
+
+> Figura 20 . Pròtesi Hero Arm [13].
+> Figura 21 . Pròtesi Michelangelo. Aspecte i funcionament [10]. Pàg.
+
+34 Memòria 
+
+# 3.5. Avantatges i limitacions de la impressió 3D 
+
+La impressió 3D, també coneguda com a fabricació additiva, ha emergit com una 
+
+tecnologia innovadora amb un po tencial revolucionari en una àmplia gamma d'indústries. 
+
+Aquest apartat explora tant els avantatges com les limitacions d'aquesta tecnologia, 
+
+proporcionant una visió de les seves possibilitats. En aquest capítol s’analitzen els diferents 
+
+aspectes que define ixen el potencial i els reptes inherents a la impressió 3D. 
+
+3.5.1. Introducció a la fabricació additiva 
+
+La fabricació additiva és una tecnologia que construeix objectes capa per capa a partir de 
+
+materials com plàstic, metall o resines, utilitzant models digitals 3D. Aquest procés ofereix 
+
+una gran flexibilitat i personalització, ja que permet la creació de peces complexes amb 
+
+formes i geometries que serien difícils o impossibles de produir amb mètodes de fabricació 
+
+tradicionals. 
+
+Ha irromput en una àmplia gamma d'in dústries, incloent l'automoció, l'aeroespacial, la 
+
+medicina, la moda i molt més, transformant la manera com es dissenyen, fabriquen i 
+
+distribueixen productes. 
+
+La tecnologia FDM (Fused Deposition Modeling o Modelatge per Deposició Fosa) utilitza 
+
+un filament termoplàstic que es fon i es deposita capa per capa per construir objectes 
+
+tridimensionals. El filament es fon en el capçal d'impressió i es deposita en la plataforma 
+
+de construcció seguint les instrucc ions d'un slicing (nom que rep el fitxer de representació 
+
+del model 3D dividit en capes per a la impressora 3D). 
+
+En casos de geometries complexes, es poden utilitzar suports solubles o retirats 
+
+manualment per evitar deformacions durant la impressió. Aques t procés simple permet la 
+
+creació d'objectes personalitzats i funcionals amb una àmplia gamma de materials i formes. 
+
+3.5.2. Disseny orientat a la impressió en 3D 
+
+El procés de disseny per a la impressió en 3D difereix en molts aspectes del disseny per a 
+
+mètodes de fabricació tradicionals. En el disseny per a la impressió FDM és crucial 
+
+considerar la geometria de les capes i les toleràncies dimensionals. Això implica tenir en 
+
+compte la manera com cada capa es construirà i com s'ajustaran les dimensions de 
+
+l'objecte final. 
+
+Les toleràncies dimensionals són especialment importants per garantir que les mides de 
+
+les peces impr eses coincidiran amb les especificades al model digital. Aquest enfocament 
+
+adaptat té com a objectiu maximitzar l'eficiència i la qualitat del resu ltat final, aprofitant al 
+
+màxim les capacitats i limitacions pròpies de la tecnologia de fabricació additiva. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 35 
+
+3.5.3. Paràmetres d’impressió importants 
+
+La configuració dels paràmetres d'impressió és fonamental per aconseguir resultats òptims 
+
+en la impressió 3D. En tre aquests paràmetres destaquen la temperatura d'extrusió, l’alçada 
+
+de capa, el tipus de material utilitzat i l’ infill , que és com emplenem la nostra peça, tant el 
+
+patró utilitzat com la densitat. 
+
+La temperatura d'extrusió determina la viscositat i la fluïdesa del material fonent, afectant 
+
+directament a la qualitat de les capes i l'adhesió entre elles. Una temperatura massa baixa 
+
+pot provocar problemes d'adhesió, mentre que una temperatura massa alta pot causar 
+
+deformacions i pèrdua de d etall. 
+
+L’alçada de capa determina el gruix de cada capa i, per tant, la precisió del detall en 
+
+l'objecte final. Alçades més baixes permeten una millor definició de detalls, però poden 
+
+allargar el temps d'impressió. És per això que per prototipatge ràpid es sol utilitzar una 
+
+alçada de capa superior a la de la impressió del producte final. 
+
+El tipus de material utilitzat també és crític per aconseguir els resultats desitjats. Cada 
+
+material té les seves pròpies propietats físiques, i requereix paràmetres d'impr essió 
+
+específics per aconseguir resultats òptims. Hi ha materials que es contrauen al refredar -se 
+
+ràpidament, pel que s’imprimeixen en impressores tancades que controlen la temperatura 
+
+de l’ambient. 
+
+L' infill és un paràmetre crític en la impressió 3D, determinat pel patró i la densitat de la 
+
+estructura interna de l'objecte. El patró afecta la resistència i l'economia de material. La 
+
+densitat, en percentatge, determina la qu antitat de material utilitzat, afectant la resistència 
+
+i el temps d'impressió. És essencial trobar un equilibri entre resistència, economia de 
+
+material i temps d'impressió. A la Figura 22 es poden observar impressions amb diferents 
+
+configuracions de patró i densitat .
+
+Figura 22 . Variacions de den sitat i tipus d'infill [14]. Pàg. 36 Memòria 
+
+# 4. Anàlisi comparativa de les pròtesis actuals 
+
+# 4.1. Introducció mètode AHP 
+
+Es necessiten eines per la presa de decisions que permetin definir problemes complexos, 
+
+estructurar -los i seleccionar l’alternativa més adequada tenint en compte els diferents 
+
+criteris del problema i el seu pes. 
+
+4.1.1. Descripció bàsica 
+
+El Procés de Jerarquia Analítica o AHP (Analytic Hierarchy Process en anglès), 
+
+desenvolupat pel professor Thomas Saaty l’any 1980 [15] , és un mètode quantitatiu per la 
+
+presa de decisions multi criteri. 
+
+Es basa en descompondre problemes complexos en una jerarquia de criteris i alternatives, 
+
+permetent la comparació i la ponderació per seleccionar l’opció més adequada. Aquest 
+
+mètode facilita decisions sistemàtiques i coherents basa des en diversos criteris. 
+
+4.1.2. Principis clau 
+
+Aquest mètode es basa en cinc principis fonamentals, detallats a continuació. 
+
+- Descomposició jeràrquica: Es descompon el problema en una jerarquia que inclou 
+
+un objectiu principal, criteris, subcriteris i alternative s.
+
+- Comparacions parell a parell: Es comparen les alternatives dues a dues en relació a 
+
+cada criteri. Es representen les valoracions subjectives en una escala numèrica. 
+
+- Ponderació dels criteris: S’assignen pesos als criteris per reflectir la seva importància 
+
+relativa envers l’objectiu principal. 
+
+- Càlcul de prioritats: Es calculen les prioritats relatives de les alternatives utilitzant 
+
+operacions matemàtiques, com el càlcul de vectors propis de matrius de comparació. 
+
+- Consistència: Es verifica la cons istència de les comparacions realitzades per 
+
+assegurar que les avaluacions són coherents. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 37 
+
+# 4.2. Criteris i paràmetres 
+
+4.2.1. Definició de la jerarquia 
+
+La jerarquia es defineix descomponent el problema en diferents nivells, que solen ser els 
+
+següents: 
+
+1. Objectiu Principal: Propòsit global del procés de decisió. 
+
+2. Criteris: Factors rellevants per assolir l’objectiu principal. Aquests poden ser 
+
+dividits en subcriteris si és necessari. 
+
+3. Alternatives: Opcions o solucions possibles que s’estan considerant per resoldre 
+
+el problema. 
+
+Es pretén estudiar quins components d’una mà biònica són els més importants i 
+
+imprescindibles. Per tant, aquest serà l’objectiu principal. 
+
+Per definir els criteris caldrà repassar les característiques desitjades en una pròtesi de mà. 
+
+Els criteris principals seran la funcionalitat, l’estètica, el cost, el pes i la durabilitat. Degut a 
+
+que l’abast de “funcionalitat” és molt ampli i té molt pes, es dividirà en subcriteris per fer 
+
+una anàlisi el més específica possible. Aix í, aquest criteri quedarà descompost en: 
+
+- Destresa: precisió i control dels moviments. 
+
+- Adaptabilitat: capacitat d’agafar objectes de mides i formes diverses. 
+
+- Força: capacitat per sostenir i manipular objectes de pes. 
+
+Les alternatives venen donades per l’est at de l’art que s’ha realitzat. De les pròtesis 
+
+analitzades, es separaran els conceptes principals en dues àrees d’interès: el mecanisme 
+
+i la forma. El mecanisme serà el principi bàsic d’accionament de la mà, i la forma 
+
+comprendrà la geometria i el materia l dels terminals.  
+
+> Taula 2. Resum dels paràmetres del sistema.
+
+Objectiu Principal  Trobar els components més importants d’una pròtesi de mà biònica 
+
+Criteris 
+
+Funcionalitat 
+
+Destresa 
+
+Adaptabilitat 
+
+Força 
+
+Estètica 
+
+Cost 
+
+Pes 
+
+Durabilitat 
+
+Alternatives  Mecanisme 
+
+Forma Pàg. 38 Memòria 
+
+4.2.2. Introducció d’alternatives 
+
+Partint de l’estudi de l’estat de l’art realitzat a l’apartat 3.4., es compar en possibles 
+
+alternatives de pròtesi de mà a partir dels seus components. Les alternatives inicialment 
+
+contemplades estan basades en pròtesis existents .
+
+Aquestes són: 
+
+- Opció 1a: Pròtesi amb dits actuats individualment i mecanisme articulat. Basada en el 
+
+funcionament de la pròtesi Bebionic. 
+
+- Opció 1b: Pròtesi amb dits actuats individualment i dits sòlids. Basada en el 
+
+funcionament de la pròtesi Michelangelo. 
+
+- Opció 1c: Pròtesi amb dits actuats individualment per tensors. Basada en el 
+
+funcionament de la pròtesi Hero Arm. 
+
+- Opció 2: Gripper paral·lel amb factor de forma intern. Basada en el funcionament de 
+
+la pròtesi Greifer DMC. 
+
+- Opció 3b: Pinça amb recobriment de material adaptable. Basada en el funcionament 
+
+de la pròtesi MyoHand VariPlus. 
+
+- Opció 3a: Pinça amb factor de forma. Basada en aplicacions de robòtica concretes per 
+
+a cadenes de fabricació. 
+
+- Opció 3c: Pinça amb factor de forma i recobriment adaptable. Basada en el 
+
+funcionament de la pròtesi MyoHand VariPlus, però afegint factors de forma diversos 
+
+als dits .
+
+4.2.3. Assignació de pesos als criteris 
+
+L’ assignació de pesos per a cada criteri en el mètode AHP es fa mitjançant comparacions 
+
+parell a parell. Això implica comparar cada criteri amb cadascun dels altres criteris per 
+
+determinar la seva importància relativa. 
+
+El primer pas es crear la matriu on es comparen els criteris entre si. Es realitzen les 
+
+com paracions utilitzant una escala de l’1 al 9 (escala de Saaty ), on 1 indica igual 
+
+importància i 9 una importància extrema d’un sobre l’altre. S’omple la matriu amb els valors 
+
+que representen la importància relativa de cada criteri. 
+
+A continuació es proposen els valors relatius de cada parell: 
+
+- Funcionalitat / Estètica: La funcionalitat és significativament més important que 
+
+l’estètica, ja que és fonamental perquè l’usuari pugui portar una vida còmod a. El valor 
+
+assignat és un 5. 
+
+- Funcionalitat / Cost: Les pròte sis de mà haurien de ser a l’abast de tothom, és per 
+
+això que el cost és un factor molt important. Tot i així, una pròtesi assequible no pot 
+
+deixar de ser eficaç i funcional. El valor assignat és un 1/3. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 39 
+
+- Funcionalitat / Durabilitat: La funcionalitat és pri oritària, però la durabilitat també és 
+
+essencial per garantir que la pròtesi pugui ser utilitzada de manera fiable durant un llarg 
+
+període de temps. El valor assignat és un 1/4. 
+
+- Funcionalitat / Pes: Tot i que la funcionalitat és més important, el pes és un factor a 
+
+considerar, especialment per la comoditat de l’usuari. El valor assignat és un 4. 
+
+- Estètica / Cost: El cost pot influir més que l’estètica en la capacitat i la decisió de 
+
+comprar una pròtesi. El valor assignat és un 1/3. 
+
+- Estètica / Durabilitat: Un a pròtesi amb una llarga vida útil proporciona un valor afegit 
+
+a l’usuari, a més de millorar la seva qualitat de vida. El valor assignat és un 1/2. 
+
+- Estètica / Pes: És vital que l’usuari es senti còmode amb la pròtesi. És per això que el 
+
+pes pren una importància més gran que l’estètica. El valor assignat és un 1/2. 
+
+- Cost / Durabilitat: Un producte més assequible pot ser substituït més fàcilment i, per 
+
+tant, no té perquè tenir una vida útil molt llarga. El valor assignat és un 2. 
+
+- Cost / Pes: La comodita t és molt important en una pròtesi, però és vital que aquesta 
+
+sigui al seu abast. El valor assignat és un 2. 
+
+- Durabilitat / Pes: Els dos factors afecten a la comoditat de l’usuari, ja que una pròtesi 
+
+lleugera suposa menor càrrega física, però una pròtesi fi able suposa menys 
+
+preocupacions en quant a manteniment. El valor assignat és un 1/2. 
+
+Així, la taula de ponderacions de criteris queda de la següent forma:  
+
+> Taula 3. Taula de ponderacions de criteris.
+
+Funcionalitat  Estètica  Cost  Durabilitat  Pes 
+
+Funcionalitat  1 5 3 4 4
+
+Estètica  1/5  1 1/3  1/2  1/2 
+
+Cost  1/3  3 1 2 2
+
+Durabilitat  1/4  2 1/2  1 1/2 
+
+Pes  1/5  2 1/2  2 1Pàg. 40 Memòria 
+
+A més, com s’han definit 3 subcriteris dintre de la funcionalitat, caldrà també fer les 
+
+ponderacions d’importància de cada subcriteri. 
+
+A continuació es proposen els valors relatius de cada parell: 
+
+- Destresa / Adaptabilitat: Tot i la importància de la precisió a l’hora de poder agafar 
+
+objectes petits, una pròtesi que s’adapti a diferents formes i mides permetrà un ús més 
+
+general i extens d’aquesta. EL valor assignat és un 1/4. 
+
+- Destresa / Força: Quotidianament, s’utilitzen més objectes petits que requere ixin de 
+
+precisió que objectes pesats. El valor assignat és un 2. 
+
+- Adaptabilitat / Força: L’usuari tindrà una millor qualitat de vida si pot utilitzar la pròtesi 
+
+per tasques quotidianes i diverses, no només agafar objectes pesats específicament. 
+
+El valor ass ignat és un 4. 
+
+Així, la taula de ponderacions de subcriteris queda de la següent forma:  
+
+> Taula 4. Ponderacions dels subcriteris de Funcionalitat.
+
+4.2.4. Comparació d’alternatives segons criteri 
+
+Un cop definides les alternatives i els criteris, s’han de comparar les alternatives parell a 
+
+parell, tenint en compte només un criteri a la vegada. Considerarem ja les divisions del 
+
+criteri de funcionalitat. 
+
+A continuació es proposen els valors relatius de cada parell pel criteri Adaptabilitat .
+
+Les pròtesis amb millor adaptabilitat són les que tenen dits actuats individualment i 
+
+articulats. La opció 1b, tot i tenir un motor per dit, té dits sòlids i, per tant, no s’adapta igual. 
+
+La opció 2 (gripper), té mala adaptabilitat a formes diferents, ja que els seus dits sempre 
+
+tanquen paral·lels independentment de l’objecte. La opció 3c és superior en aquest aspecte 
+
+a les opcions a i b ja que, al combinar els prin cipis de les dues, pot agafar objectes 
+
+específics així com adaptar -se a formes més generals. 
+
+Destresa  Adaptabilitat  Força 
+
+Destresa  1 1/3  2
+
+Adaptabilitat  3 1 4
+
+Força  1/2  1/4  1Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 41  
+
+> Taula 5. Taula de ponderacions pel criteri Adaptabilitat.
+
+Adaptabilitat  1a  1b  1c  2 3a  3b  3c 
+
+1a  1 2 1 6 4 4 2
+
+1b  1/2  1 1/2  5 3 3 1
+
+1c  1 2 1 6 4 4 2
+
+2 1/6  1/5  1/6  1 1/3  1/3  1/5 
+
+3a  1/4  1/3  1/4  3 1 1 1/3 
+
+3b  1/4  1/3  1/4  3 1 1 1/3 
+
+3c  1/2  1 1/2  5 3 3 1
+
+A continuació es proposen els valors relatius de cada parell pel criteri Precisió .
+
+Semblant al que passa amb l’adaptabilitat, les pròtesi amb millor precisió són les que tenen 
+
+dits independents. Això es deu a que es pot actuar només el dit de sitjat, tenint un control 
+
+més precís sobre el moviment. Així, les opcions 1 són les que tenen millor precisió. La 
+
+opció 2 és la que té una precisió menor, tot i que totes les opcions tenen un valor 
+
+relativament semblant, ja que totes permeten manipular obj ectes petits amb certa fiabilitat. 
+
+De les opcions de pinça, aquelles que tenen més precisió son les que tenen un recobriment 
+
+d’un altre material, ja que fixen millor l’objecte i no permeten el lliscament relatiu d’aquest 
+
+segons la pròtesi.  
+
+> Taula 6. Taula de ponderacions pel criteri Precisió.
+
+Precisió  1a  1b  1c  2 3a  3b  3c 
+
+1a  1 1 1 4 3 2 2
+
+1b  1 1 1 4 3 2 2
+
+1c  1 1 1 4 3 2 2
+
+2 1/4  1/4  1/4  1 1/2  1/3  1/3 
+
+3a  1/3  1/3  1/3  2 1 1/2  1/2 
+
+3b  1/2  1/2  1/2  3 2 1 1
+
+3c  1/2  1/2  1/2  3 2 1 1Pàg. 42 Memòria 
+
+A continuació es proposen els valors relatius de cada parell pel criteri Força .
+
+Per aquest criteri s’ha tingut en compte tant la càrrega màxima que permet suportar com 
+
+la força de tancament que pot assolir. La opció 1c és la pitjor degut a que l’ús dels te nsors 
+
+limita la força de tancament a la que suporti el cable sense patir cap deformació. La millor 
+
+opció és la que utilitza 5 dits sòlids, ja que la combinació de la força dels 5 motors amb la 
+
+rigidesa dels dits permet una agafada forta i segura. En quant a les opcions de pinça, el 
+
+recobriment amb un material tou incrementa la força amb la que es pot agafar un objecte 
+
+sense carregar en excés el motor.  
+
+> Taula 7. Taula de ponderacions pel criteri Força.
+
+Força  1a  1b  1c  2 3a  3b  3c 
+
+1a  1 1/2  4 2 3 1 1
+
+1b  2 1 5 3 4 2 2
+
+1c  1/4  1/5  1 1/3  1/4  1/4  1/4 
+
+2 1/2  1/3  3 1 2 1/2  1/2 
+
+3a  1/3  1/4  4 1/2  1 1/3  1/3 
+
+3b  1 1/2  4 2 3 1 1
+
+3c  1 1/2  4 2 3 1 1
+
+A continuació es proposen els valors relatius de cada parell pel criteri Estètica .
+
+Es consideren les pocions més atractives aquelles que tenen una aparença més semblant 
+
+a una mà humana. Així, aquelles amb 5 dits quedaran en millor lloc al fer la comparació. 
+
+No obstant, la mà amb tensors queda una mica per darrere en aquest aspecte, ja qu e es 
+
+veuen els cables entre les articulacions. Una pinça simple amb un bon recobriment 
+
+antropomòrfic pot donar molt bons resultats en quant a aparença. Tot i així, els factors de 
+
+forma de la pinça poden no quedar del tot integrats i causar geometries compl exes. La 
+
+opció 2 no té una aparença mínimament antropomòrfica, pel que serà la pitjor opció . 
+
+> Taula 8. Taula de ponderacions pel criteri Estètica.
+
+Estètica  1a  1b  1c  2 3a  3b  3c 
+
+1a  1 1 2 7 5 3 4
+
+1b  1 1 2 7 5 3 4
+
+1c  1/2  1/2  1 6 4 2 3
+
+2 1/7  1/7  1/6  1 1/3  1/5  1/4 
+
+3a  1/5  1/5  1/4  3 1 1/3  1/2 
+
+3b  1/3  1/3  1/2  5 3 1 2
+
+3c  1/4  1/4  1/3  4 2 1/2  1Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 43 
+
+A continuació es proposen els valors relatius de cada parell pel criteri Cost .
+
+Es represen te n els valors com 1/cost, de manera que els que siguin més cars obtindran 
+
+una puntuació més baixa. Al considerar que totes les opcions es realitzarien amb impressió 
+
+3d, el factor diferencial són els components electrònics i de control. Així, les opcions que 
+
+compten amb 5 motors són molt més cares que la resta. A més, la opció 1a també té 5 
+
+mecanismes articulats, que incrementen el preu per fungibles com cargols o feme lles. Les 
+
+altres opcions es consideren de preu similar, ja que no tenen cap factor diferencial entre 
+
+elles que supos i un increment del cost. El recobriment de les opcions 3b i 3c no encareix 
+
+el producte ja que es realitza amb una silicona de preu similar al material d’impressió 3d.  
+
+> Taula 9. Taula de ponderacions pel criteri Cost.
+
+Cost -1 1a  1b  1c  2 3a  3b  3c 
+
+1a  1 1/2  1/2  1/7  1/7  1/7  1/7 
+
+1b  2 1 1 1/6  1/6  1/6  1/6 
+
+1c  2 1 1 1/6  1/6  1/6  1/6 
+
+2 7 6 6 1 1 1 1
+
+3a  7 6 6 1 1 1 1
+
+3b  7 6 6 1 1 1 1
+
+3c  7 6 6 1 1 1 1
+
+A continuació es proposen els valors relatius de cada parell pel criteri Durabilitat .
+
+Partint de la base de que la pròtesi serà impresa en 3d, els components diferencials seran 
+
+els electrònics i els que estiguin sotmesos a moviments i cicles de fatiga. Aix í, les pròtesis 
+
+amb 5 actuadors tindran un pitjor resultat que les altres, ja que poden sorgir problemes 
+
+derivats de l’electrònica . A més, Aquells que tinguin mecanismes més complexos podran 
+
+donar peu a més problemes que resultin en un mal funcionament. El recobriment de 
+
+silicona també afectarà a la durabilitat, ja que pot quedar brut o patir talls o esquinçaments.   
+
+> Taula 10 .Taula de ponderacions pel criteri Durabilitat.
+
+Durabilitat  1a  1b  1c  2 3a  3b  3c 
+
+1a  1 1/2  1 1/5  1/5  1/3  1/3 
+
+1b  2 1 2 1/4  1/4  1/2  1/2 
+
+1c  1 1/2  1 1/5  1/5  1/3  1/3 
+
+2 5 4 5 1 1 3 3
+
+3a  5 4 5 1 1 3 3
+
+3b  3 2 3 1/3  1/3  1 1
+
+3c  3 2 3 1/3  1/3  1 1Pàg. 44 Memòria 
+
+A continuació es proposen els valors relatius de cada parell pel criteri Pes .
+
+De la mateixa manera que s’ha fet amb el cost, es representaran els valors com 1/pes ja 
+
+que el que interessa és minimitzar -ho. Naturalment, les opcions que compten amb 5 motors 
+
+pesaran més que la resta. A més, la opció 1a tindrà el pes afegit de cada mecanisme, que 
+
+augmenta degut als cargols o passadors . Es considera que el pes serà similar per les altres 
+
+opcions ja que, al no tenir factors diferencials, dependrà del disseny final.  
+
+> Taula 11 . Taula de ponderacions pel criteri Pes.
+
+Pes -1 1a  1b  1c  2 3a  3b  3c 
+
+1a  1 1/2  1/2  1/4  1/4  1/4  1/4 
+
+1b  2 1 1 1/4  1/4  1/4  1/4 
+
+1c  2 1 1 1/4  1/4  1/4  1/4 
+
+2 4 4 4 1 1 1 1
+
+3a  4 4 4 1 1 1 1
+
+3b  4 4 4 1 1 1 1
+
+3c  4 4 4 1 1 1 1Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 45 
+
+# 4.3. Resultats 
+
+En aquest apartat es presenten els resultats obtinguts de l'anàlisi AHP realitzat per a la 
+
+selecció de components d'una pròtesi de mà. Primerament, es detalla el procés de càlcul 
+
+de prioritats, on es determinen les prioritats relatives de cada alternativa en funció dels 
+
+criteris establerts. 
+
+A continuació, s'analitza la consistència dels resultats obtinguts, assegurant que les 
+
+decisions preses són coherents i fiables. Aquest procés permet garantir que la selecció 
+
+final de l'alternativa òptima està basada en una avaluació rigorosa i sistemàtica. 
+
+4.3.1. Càlcul de prioritats 
+
+Un cop obtingudes les matrius de comparació parell a parell, el primer pas és normalitzar 
+
+totes les matrius. Això suposa dividir cada terme per la suma dels termes de la seva 
+
+columna. 
+
+Pe r una matriu amb 
+
+i files i 
+
+j columnes, 𝑢 𝑖𝑗 = 𝑎 𝑖𝑗  
+
+> ∑𝑎 𝑖𝑗
+> 𝑗
+> 𝑛 =1
+
+Amb les matriu ja normalitzades, s’obtindrà el vector de prioritats de cadascuna fent la 
+
+mitjana dels nombres de les seves files. 
+
+S’obté un vector de dimensió 
+
+i, on cada valor es calcula com 𝑣 𝑖 = ∑ 𝑢 𝑖𝑗 
+
+> 𝑖
+> 𝑛 =1
+> 𝑗
+
+Amb aquests vectors es crea una matriu de prioritats, que representa el valor obtingut per 
+
+cada alternativa respecte cada criteri.  
+
+> Taula 12 . Matriu de prioritats.
+
+Adaptabilita 
+
+t
+
+Destres 
+
+a
+
+Força  Estètica  Cost  Durabilita 
+
+t
+
+Pes 
+
+1a  0,260667  0,214964  0,16780 
+
+9
+
+0,27599 
+
+3
+
+0,02795 
+
+7
+
+0,047006  0,04460 
+
+01b  0,157679  0,214964  0,28770 
+
+7
+
+0,27599 
+
+3
+
+0,04071 
+
+6
+
+0,075896  0,05912 
+
+51c  0,260667  0,214964  0,03862 
+
+2
+
+0,17616 
+
+2
+
+0,04071 
+
+6
+
+0,047006  0,05912 
+
+52 0,032066  0,045887  0,09764 
+
+0
+
+0,02766 
+
+2
+
+0,22265 
+
+3
+
+0,291896  0,20928 
+
+83a  0,065621  0,070799  0,07260 
+
+3
+
+0,05199 
+
+4
+
+0,22265 
+
+3
+
+0,291896  0,20928 
+
+83b  0,065621  0,119211  0,16780 
+
+9
+
+0,11555 
+
+7
+
+0,22265 
+
+3
+
+0,123149  0,20928 
+
+83c  0,157679  0,119211  0,16780 
+
+9
+
+0,07663 
+
+9
+
+0,22265 
+
+3
+
+0,123149  0,20928 
+
+8Pàg. 46 Memòria 
+
+Es segueix el mateix procediment per la matriu de ponderació dels criteris. Es normalitza i 
+
+es realitza la mitjana de cada fila per obtenir el vector de prioritats dels criteris. Així s’obté 
+
+el pes de cada criteri (en tant per 1).  
+
+> Taula 13 . Vector de prioritats dels criteris
+
+Adaptabilita 
+
+t
+
+Destres 
+
+a
+
+Força  Estètica  Cost  Durabilita 
+
+t
+
+Pes 
+
+0,294158  0,113037  0,06479 
+
+9
+
+0,07058 
+
+3
+
+0,20854 
+
+6
+
+0,107662  0,14121 
+
+5
+
+El resultat és un vector anomenat vector de prioritat de les alternatives, el qual constitueix 
+
+la solució del problema, presentant cada una de les alternatives amb un percentatge de 
+
+preferència assignat a cadascuna.  
+
+> Taula 14 . Vector de prioritat d'alternatives.
+
+Alternativa  1a  1b  1c  2 3a  3b  3c 
+
+Prioritat  14,85%  13,38%  13,78%  13,03%  14,31%  14,11%  16,54 
+
+%
+
+100% 
+
+Segons l’estudi, la millor opció és la 3c, que és una pròtesi amb mecanisme de pinça però 
+
+amb factors de forma específics i amb un recobriment d’un material tou (silicona). 
+
+4.3.2. Consistència i bondat dels resultats 
+
+Abans de concloure aquesta anàlisi, cal calcular el coeficient de consistència, el qual valida 
+
+que les comparacions no tenen errors entre elles, és a dir, que no s'han produït 
+
+contradiccions. Un valor d'aquest coeficien t inferior a 0.10 es considera acceptable. Per als 
+
+casos en què sigui superior, Les comparacions hauran de ser reavaluades. 
+
+A continuació es presenta un algorisme per al càlcul d'aquest (aquest s'ha d'aplicar per a 
+
+tots els criteris) [16] :
+
+- Per a cada línia de la matriu de comparació per parells, determinar una suma 
+
+ponderada basada en la suma del producte de cada cel·la per la prioritat de cada 
+
+alternativa o criteri corresponent. 
+
+- Per a cada línia, dividir la seva suma ponderada per la prioritat de la seva a lternativa o 
+
+criteri corresponent. 
+
+- Determinar la mitjana λmax del resultat de l'etapa anterior. 
+
+- Calcular l'índex de consistència per a cada alternativa o criteri: 
+
+𝐶𝐼 = 𝜆 𝑚𝑎𝑥 − 𝑛  
+
+> 𝑛 −1
+
+, on 
+
+n = nombre d’alternatives. 
+
+- Determinar l’índex d’aleatorietat, IA. Aquest índex ve donat pel nombre d’alternatives 
+
+(Veure Taula 15 ). Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 47 
+
+Taula 15 . Índex d'aleatorietat segons el nombre d'alternatives [16] .
+
+n 3 4 5 6 7 8
+
+IA  0,58  0,9  1,12  1,24  1,32  1,41 
+
+- Determinar l'índex de quocient de consistència, 𝑄𝐶 = 𝐶𝐼 
+
+> 𝐼𝐴
+
+Taula 16 . Quocients de consistència de les matrius. 
+
+> M
+
+atriu  Criteri    
+
+> s
+> Subcriteri
+> s
+> Adaptabilita
+> t
+> Destres
+> a
+> Força Estètic
+> a
+> Cost Durabilitat Pes
+
+QC  0,0247  0,0158  0,0149  0,0056  0,0237  0,0242  0,0061  0,0120  0,0102 
+
+Els quocients de consistència de totes les matrius són menors que 0,1 i, per tant, els 
+
+resultats són consistents i poden ser utilitzats. Pàg. 48 Memòria 
+
+# 5. Predisseny conceptual 
+
+En aquest apartat es presenta el procés de predisseny de la pròtesi de mà, basat en els 
+
+resultats obtinguts mitjançant l'anàlisi AHP. Aquesta és una etapa crucial on es defineixen 
+
+els requeriments específics del projecte i es realitzen les primeres proves per assegurar la 
+
+viabilitat d’un correcte funcionament de la pròtesi. Aquest procés permet verificar que el 
+
+disseny complirà amb les necessitats funcionals i tècniques, assegurant així una base 
+
+sòlida per al desenvolupament posterior. 
+
+# 5.1. Definició de requeriments 
+
+Es defineixen els requerimen ts essencials per al desenvolupament de la pròtesi de mà, 
+
+amb l'objectiu d'assegurar que el disseny final compleixi amb les necessitats i expectatives 
+
+de l'usuari. Els requeriments abasten diferents aspectes crucials, que es consideren 
+
+fonamentals per gara ntir que la pròtesi no només sigui eficient i pràctica, sinó també 
+
+còmoda, segura i accessible per a l'usuari en el seu dia a dia. Aquests requeriments són 
+
+els següents: 
+
+Funcionalitat 
+
+- Capacitat per agafar objectes de formes i mides diferents. S’espera que pugui superar 
+
+almenys 7 proves del Cybathlon. 
+
+- Resposta ràpida i fiable. S’espera que la pròtesi trigui menys de 2 segons a tancar 
+
+completament (des de la màxima posició d’obertura). 
+
+Er gonomia i confort 
+
+- Ajust adaptable a l'anatomia de l'usuari. 
+
+- Lleugera per reduir la fatiga. El pes de la pròtesi no pot superar els 500g. 
+
+Durabilitat 
+
+- Resistència a l'ús quotidià, incloent -hi impactes. 
+
+- Durabilitat dels materials davant un ús continuat. 
+
+- Meca nismes de seguretat per protegir la pròtesi d’un mal ús. 
+
+Estètica 
+
+- Aparença natural i semblant a una mà humana. 
+
+- Opcions de personalització per adaptar -se a les preferències de l'usuari. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 49 
+
+Cost 
+
+- Assequibilitat per a l'usuari final, incloent -hi el cost inicial i els costos de manteniment. 
+
+El cost de fabricació no pot ser major de 200 €
+
+- Facilitat de manteniment i reparació. 
+
+Seguretat 
+
+- Mecanismes de seguretat per prevenir danys tant a l'usuari com a l 'entorn. 
+
+- Materials no tòxics i segurs per a l'ús prolongat. 
+
+# 5.2. Prova de concepte del mecanisme 
+
+Seguint el resultat de l’anàlisi comparativa realitzada, la base pel disseny és una pinça 
+
+articulada, amb factors de forma i combinacions de materials que assegurin una major 
+
+adaptabilitat per diferents objectes. En aquesta secció es presenta el mecanisme bàsic de 
+
+funcionament, així com altres idees explorades i els canvis realitzats a través de les 
+
+múltiples iteracions. 
+
+5.2.1. Descripció i principi de funcionament 
+
+El mecanisme bàsic de funcionament és un quadrilàter articulat. Aquest tipus de 
+
+mecanisme està format per quatre barres rígides connectades pels seus extrems 
+
+mitjançant articulacions (juntes). Aquest tipus de mecanisme permet la transmissió de 
+
+moviment i força entre les barres, i s'utilitza en diverses aplicacions mecàniques degut a la 
+
+seva capacitat per transformar moviments lineals en rotatoris i viceversa. 
+
+Per determinar el tipus de moviment que es pot esperar de les barres s’utilitza la lle i de 
+
+Grashof, que ajuda a classificar aquests mecanismes segons el moviment possible de les 
+
+seves barres. 
+
+Aquesta llei es formula de la següent manera: 
+
+𝑆 + 𝐿 ≤ 𝑃 + 𝑄 on: 
+
+S és la longitud de la barra més curta. 
+
+L és la longitud de la barra més l larga. 
+
+P i
+
+Q són les longitud de les dues barres restants. 
+
+Segons la llei de Grashof [17] :
+
+- Si 𝑆 + 𝐿 ≤ 𝑃 + 𝑄 , almenys una de les barres pot realitzar una rotació completa. 
+
+- Si 𝑆 + 𝐿 > 𝑃 + 𝑄 , cap de les barres pot realitzar una rotació completa. 
+
+- Si 𝑆 + 𝐿 = 𝑃 + 𝑄 , Manté dues barres oposades paral·leles. Pàg. 50 Memòria 
+
+La Figura 23 mostra els diferents tipus de moviment del mecanisme depenent de com es 
+
+compleix la igualtat de Grashof 
+
+El punt on un mecanisme és troba en una posició de bloqueig on cap barra pot continuar 
+
+el seu moviment s’anomena punt mort . Aquesta propietat permet crear configuracions 
+
+específiques com un tancament de colze (toggle clamp en anglès). E n aquest mecanisme, 
+
+la configuració de les barres està dissenyada per assegurar que, en la posició tancada, el 
+
+mecanisme entra en un punt mort on no pot ser empès ni estirat fàcilment, garantint així 
+
+una subjecció ferma. 
+
+La Figura 24 il·lustra el funcionament d’un mecanisme de tancament de colze. Aquest serà 
+
+el concepte de disseny del mecanisme de la mà, que utilitzarà la geometria per garantir 
+
+que, quan la mà està tancada, no es pot obrir al carregar objectes pesats.      
+
+> Figura 23 . Tipus de moviment segons la igualtat de Grashof [18].
+> Figura 24 . Funcionament d'un mecanisme de tancament de colze [19]. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág.
+
+51 
+
+A més, per transmetre el parell del motor al mecanisme de barres s’emprarà un cargol 
+
+sense fi . Aquest mecanisme de transmissió està format per un cargol helicoidal que 
+
+engrana amb una roda dentad a (o corona), de manera que transmet el moviment entre 
+
+eixos perpendiculars entre sí. 
+
+Aquest sistema permet aconseguir una gran reducció en un espai reduït, ja que la seva 
+
+relació de transmissió (i) és igual a 𝑧 1
+
+> 𝑧 2
+
+, on z 1 és el nombre d’hèlix (o entrades) del cargol i z 2
+
+és el número de dents de l’engranatge. A més, una de les seves princ ipals avantatges, i 
+
+motiu pel que s’utilitza en aquest cas, és que és irreversible. Això vol dir que la corona 
+
+sempre actuarà com element conduït, mai com a element motriu. Aquest fet impossibilita 
+
+que les càrregues sobre la mà es transmetin al motor, prot egint -lo així i evitant retrocessos 
+
+no desitjats. 
+
+5.2.2. Historial d’iteracions 
+
+El primer pas abans de començar amb el disseny és plantejar la geometria necessària 
+
+perquè es compleixin les condicions per obtenir un punt mort. Així, s’haurà de complir la 
+
+igualtat 𝑆 + 𝐿 > 𝑃 + 𝑄 .
+
+A més, es definirà el mecanisme de manera que la mà no tend eixi a obrir quan se li pengi 
+
+un pes. Per assolir -ho, el punt de tancament (moment en el que es tocaran els dits), serà 
+
+quan el sistema es trobi en un punt mort o passat aquest. Si es realitza el contacte al límit 
+
+del punt mort, però un cop passat aquest, al carregar un pes el sistema tendirà a tancar 
+
+més fort. 
+
+La Figura 26 , obtinguda amb el programari Desmos [21] , mostra com, tot i aplicar la càrrega 
+
+en un mateix punt i direcció, el mecanisme el sentit de rotació de una de les barres depèn 
+
+de la seva posi ció relativa respecte el punt mort.   
+
+> Figura 25 . Funcionament d'un cargol sense fi [20]. Pàg.
+
+52 Memòria 
+
+Aquest esquema es pot adaptar per fer un primer concepte dels dits, utilitzant la posició 
+
+relativa al punt mort per definir en quin sentit giraran els dits. La Figura 27 il·lustra com, al 
+
+aplicar una càrrega, els dits intenten girar en sentit antihorari i, al estar físicament 
+
+impossibilitat aquest gir pel contacte entre els dos dits, el resultat és un augment de la força 
+
+de tancament. 
+
+Per altra banda, si es genera una rotació respecte el punt O en sentit horari, les barres Q i 
+
+S giraran en sentits oposats, obrint la pròtesi. Així, el motor actuarà sobre l’articulació O, 
+
+controlant el sentit de gir i, a través del cargol sense fi, impedint el seu moviment si la 
+
+càrrega genera moment en aquest punt.     
+
+> Figura 26 . Sentit de rotació en relació al punt d'equilibri. Font Pròpia.
+> Figura 27 . Sentit de rotació al aplicar una càrrega. Font pròpia. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág.
+
+53 
+
+Es posa aquest concepte a la pràctica, replicant aquest sistema en 3d amb el programa 
+
+SolidWorks i imprimint un primer prototip. Tot i comprovar que el concepte bàsic funciona, 
+
+s’observa que la pinça s’obre una mica quan s’aplica una càrrega, degut a que l a barra 
+
+d’unió entre els dits està sotmesa a molta força i flecta (Figura 29) . Es torna a provar el 
+
+mateix mecanisme, però amb una barra més gruixuda i amb una densitat d’ infill major i el 
+
+mecanisme suporta la càrrega sense obrir. La càrrega aplicada és de 6kg, superior a la 
+
+càrrega màxima sol·licitada per les proves del Cybathlon .
+
+Es comprova també que el cargol sense fi funciona correctament si el motor està 
+
+perfectament fixat. Si té una joc axialment, la força transmesa per l’engranatge al cargol 
+
+sense fi pot desplaçar el motor, permetent un lleuger alliberament dels dits. Per altra banda, 
+
+si el motor té joc radialment, és possible que no engrani bé amb la corona, generant una 
+
+interrupció del moviment o un augment de la fricció i, per tant, una disminució del rendiment .
+
+A la Figura 30 es pot observar com , al tancar els dits, es supera el punt d’equilibri.         
+
+> Figura 29 .Concepte de mecanisme.
+> Font pròpia .
+> Figura 28 . Flexió de la barra
+> al aplicar 6kg. Font propia.
+> Figura 30 . Relació amb el punt d'equilibri al tancar els dits. Font propia. Pàg.
+
+54 Memòria 
+
+# 5.3. Prova de concep te de forma 
+
+Un cop s’ha comprovat que el mecanisme bàsic d’actuació funciona, caldrà definir amb 
+
+exactitud la forma dels dits. L’objectiu és que es puguin adaptar a la major quantitat 
+
+d’objectes possibles, amb formes, mides i necessitats específiques difer ents. 
+
+5.3.1. Descripció i requeriments 
+
+Els objectes petits no suposen un gran repte en quant a l’adaptabilitat ja que la seva 
+
+geometria no té molt impacte en la seva forma de subjecció. Es defineix que tots els 
+
+objectes petits s’agafaran amb la punta dels dits. E s planteja fer -les d’un material diferent, 
+
+més tou que l’estructura principal i deformable elàsticament. Això permetrà una millor 
+
+fixació de l’objecte. 
+
+Per mides mitjanes -grans, s’utilitzaran l’equivalent a les falanges proximal i medial per 
+
+subjectar els objectes. També es farà ús de materials diferents, buscant una combinació 
+
+que permeti una gran deformació elàstica i fricció. 
+
+Per a tota l’estructura de la mà es valoren 2 materials diferents, el PLA (àcid polilàctic) i el 
+
+PETG (tereftalat de polietil è Glicol ), ambdós termoplàstics rígids . No s’han considerat 
+
+aquells materials amb propietats similars però que requereixen un ambient d’impressió 
+
+amb temperatura controlada, com pot ser l’ABS ( Acrilonitril Butadiè Estirè ) o el PC 
+
+(policarbonat). 
+
+Quan s'escull un material per a una aplicació específica, és fonamental comprendre les 
+
+seves propietats mecàniques per assegurar -se que compleixi amb els requisits de 
+
+rendiment i seguretat. Per això, s’estudiaran les propietats següents: 
+
+- Mòdul de Young (E) : Determina com de rígid o flexible és el material sota càrrega. És 
+
+crucial per al disseny estructural. 
+
+- Tensió màxima (σ): Indica la capacitat màxima de càrrega i assegura la integritat 
+
+estructural i la seguretat del material. 
+
+La Figura 3 1 mostra un assaig en el que s’estudien les propietats esmentades. Les 
+
+impressions s’han realitzat amb una Prusa i3 MK3S+ (mateix model del que es disposa 
+
+per aquest projecte) i amb tres orientacions diferents per comprovar la desviació 
+
+segons el sentit d’im pressió ( Figura 3 2). La orientació pot influir en les propietats degut 
+
+a la precisió de la impressora per completar el recorregut d’impressió. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 55 
+
+A partir de la Figura 3 1, i tenint en compte que el PLA té una major facilitat d’impressió i 
+
+post processat, s’escull aquest material. 
+
+Per la part dels dits deformable elàsticament s’utilitzarà TPU (Poliuretà termoplàstic). El 
+
+TPU ofereix una excel·lent flexibilitat i elasticitat, essent ideal per a aplicacions que 
+
+requereixen moviment, a més de ser molt durador i resistent al desgast i als impactes. 
+
+També manté les seves propietats en un ampli rang de temperatures i és bioco mpatible, 
+
+sent útil en aplicacions mèdiques. A més, és fàcil de processar en impressores 3D 
+
+compatibles.           
+
+> Figura 31 .Orientacions utilitzades per l'assaig amb el mateix model d'impressora [2 2].
+> Figura 32 .Comparació del mòdul de Young (a) i la tensió màxima entre els materials (b) [22]. Pàg.
+
+56 Memòria 
+
+5.3.2. Historial d’iteracions 
+
+A partir del model obtingut per la prova de concepte de mecanisme es treballa per apropar 
+
+la forma de la mà a l’antropomòrfica. Primerament se li dona forma als dits a partir de la 
+
+pinça. Per això, s’utilitza un dels components de la pinça i se li dona l’aparença del polze. 
+
+A l’altre compo nent se li donarà la forma dels altres quatre dits units. 
+
+Es realitzen petites modificacions de forma i mida per apropar més l’aparença a la d’una 
+
+mà i mirar que es puguin agafar els objectes de diàmetre més gran . Un cop definida la 
+
+forma base, se li com encen a aplicar modificacions per poder agafar diferents objectes. 
+
+El primer factor de forma es tracta d’una modificació a la part interior del polze, que 
+
+permetrà agafar les ampolles per la prova Carry bottles . A més, es fa un tall als dits índex 
+
+i cor per substituir la seva punta per silicona. Per fer això, es fabrica un motlle amb la forma 
+
+inversa dels dits, el qual s’omple de silicona i es tapa amb els dits, que tenen un angle al 
+
+seu interior per fixar la silicona (Figura 34) .
+
+Amb aquestes modificacions, la pròtesi ja pot agafar objectes petits (amb la punta dels dits) 
+
+i les ampolles d’aigua (amb el factor de forma del polze). Es treballa ara en l’interior dels 
+
+dits, pels quals s’utilitzarà una combinació de geometries i materials diferents.      
+
+> Figura 33 . Primera iteració pel concepte de forma. Font pròpia.
+> Figura 34 .Recobriment amb silicona de la punta dels dits a partir del motlle. Font pròpia Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág.
+
+57 
+
+Per la part del polze, a la Figura 35 es poden observar les modificacions. S ’inclou una petita 
+
+pendent de 8 graus, dissenyada específicament per replicar la forma exterior dels gots i 
+
+així millorar l’agafada. A més, es m illora la modificació que permet agafar les ampolles i 
+
+s’afegeix una forma còncava per agafar l’objecte de la prova Hot Wire , que s’ha d’agafar 
+
+com a la Figura 3 6 per poder superar la prova. 
+
+Pels al tres dits, s’afegeix una part flexible, que es deforma fàcilment per adaptar -se a la 
+
+forma de diferents objectes. Aquesta part es recobreix de silicona utilitzant el mateix 
+
+mètode del motlle anterior. Així, aquesta part guanya fricció per evitar que els ob jectes 
+
+llisquin. Es pot observar a la Figura 3 6.      
+
+> Figura 35 .. Factors de forma aplicat sal polze. Font pròpia.
+> Figura 36 . Manera correcte d'agafar l'objecte. Font pròpia. Pàg.
+
+58 Memòria 
+
+Es realitzen les proves amb diferents tipus i densitats d’ infill , fins a trobar la que millor 
+
+s’adapta als requeriments (Figura 37) . La densitat final és d’un 5% amb un patró anomenat 
+
+d’acordió d’Arquímed es, corresponent a la filera 1 a la Figura 37, ja que aquesta 
+
+combinació requereix poca força per deformar i adaptar -se a l’objecte. 
+
+Les proves realitzades amb l'última iteració del prototip han demostrat resultats altament 
+
+satisfactoris, permetent la pròtesi agafar amb èxit tots els objectes requerits en la 
+
+competició. Aquest assoliment representa un avanç significatiu en la funcionalitat de la 
+
+pròtesi, indicant que els components mecànics i de control responen adequadament a les 
+
+necessitats pràctiques. 
+
+Tot i aquests bons resultats, encara queda pendent una fase crítica en el 
+
+desenvolupament: la implementació conjunta dels conceptes de forma i de mecanisme en 
+
+una única mà protèsica. Aquesta integració és essencial per realitzar comprovacions de 
+
+manera fia ble i assegurar que la pròtesi no només funcioni correctament a nivell individual, 
+
+sinó que també ho faci com un sistema coherent i integrat.   
+
+> Figura 37 . Test de densitats i patrons d'infill diferents. Font pròpia.
+
+# 1
+
+# 2
+
+# 3Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 59 
+
+# 6. Prototipatge del predisseny 
+
+Un cop fetes les proves pels conceptes de forma i de mecanisme, es procedeix amb el 
+
+disseny d’un prototip en el que estiguin combinats. 
+
+# 6.1. Integració dels dos conceptes 
+
+Per fer les proves de concepte de forma, s’ha començat amb una versió bàsica del 
+
+mecanism e funcional. Això facilita la integració, ja que els dits estan dissenyats a partir de 
+
+la geometria establerta pel mecanisme i no s’ha de redissenyar en gran mesura. 
+
+El primer pas serà establir el motor i la reducció que portarà la pròtesi. Segons els 
+
+requ eriments de l’apartat  5.1 , es desitja que la pròtesi tanqui, des del seu punt màxim, en 
+
+menys de 2s. Amb el programa SolidWorks es comprova que l’angle de recorregut del 
+
+polze és 59 º. Així, la velocitat resultant del sistema motor -reducció haurà de ser, com a 
+
+mínim, 𝜔 0,𝑚 í𝑛 = 𝐴𝑛𝑔𝑙𝑒 𝑟𝑒𝑐𝑜𝑟𝑟𝑒𝑔𝑢𝑡 𝑚 à𝑥   
+
+> 𝑡𝑒𝑚𝑝𝑠 𝑚 à𝑥
+
+= 59º  
+
+> 2𝑠
+
+· 1 𝑣𝑜𝑙𝑡𝑎  
+
+> 360º
+
+· 60 𝑠   
+
+> 1𝑚𝑖𝑛𝑢𝑡
+
+= 4,92 𝑟𝑝𝑚 .
+
+A més, s’ha de tenir en compte que el cargol sense fi és un mètode de transmissió amb un 
+
+rendiment relativament baix comparat amb altres mètodes de transmissió. La Figura 3 8
+
+mostra la c omparació entre un cargol sense fi (worm gear) i un engranatge hipoide (hypoid 
+
+gear) , que varia segons la relació de transmissió. S’observa que, quant més alt és el rati 
+
+de velocitats, més baix és el rendiment. 
+
+Figura 38 . Rendiment d'un cargol sense fi segons la relació de transmissió [23]. Pàg. 60 Memòria 
+
+A partir d’aquesta informació es proposa la combinació d’un motor ja reduït amb una 
+
+velocitat de sortida de 100 rpm i un reductor de cargol sense fi amb reducció 20:1 
+
+(engranatge amb 20 dents i cargol amb una entrada). Segons la Figura 3 8, el rendiment 
+
+serà d’entre el 60 -75%. Així, la velocitat de sortida del sistema serà de ω O = 5 rpm. 
+
+Per determinar el moment necessari es realitza un estudi de les proves i es determina que 
+
+l’objecte més crític pel motor és una ampolla d’aigua de la prova Carry bottles , ja que és 
+
+un objecte de 1,5kg que s’ha d’agafar amb la punta dels dits. No és l’objecte més pesat, 
+
+però els que pesen més que aquest no els subjecta el motor sinó que ho fa el mecanisme 
+
+de tancament de colz e.
+
+El recobriment de cautxú de silicona dels dits fa que el fregament sigui alt, a més de 
+
+deformar -se i adaptar -se a la nansa. Tenint en compte que el coeficient de fregament del 
+
+cautxú amb alguns materials com la fusta o el formigó pot arrib ar a μf = 0,7 i μf = 1 [24] , es 
+
+considerarà un coeficient de μf = 0,5 per donar un marge d’error i sobredimensionar 
+
+lleugerament el motor per afegir fiabilitat al sistema 
+
+La distància perpendicular des de l’engranatge fins la punta del dit polze és de 80mm 
+
+(Figura 39) . Així, el parell a la sortida del sistema haurà de ser :
+
+𝜏 𝑂 = 𝐹 · 𝑑 = 1,5𝑘𝑔 ·9.81 𝑚 /𝑠 2 
+
+> 0.5
+
+· 0,08 𝑚 = 2,35 𝑁𝑚 
+
+Tenint en compte un rendiment pel cargol sense fi 𝜂 = 60% (valor mínim a la Figura 37), i
+
+una reducció de i= 20:1, el parell que haurà de fer el motor serà :
+
+𝜏 𝑚 = 𝜏 𝑂 
+
+𝜂 · 𝑖 = 2,35 
+
+0,6 · 20 = 0,195 𝑁𝑚     
+
+> Figura 39 . Distància entre l'engranatge i la punta del di t. Font pròpia. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág.
+
+61 
+
+# 6.2. Historial d’iteracions 
+
+Amb aquestes especificacions de velocitat i parell es busca un motor i es troba un motor 
+
+de corrent continu a 12v amb velocitat nominal 100 rpm i parell màxim 𝜏 𝑚 à𝑥 = 0,245 𝑁𝑚 
+
+[25] .
+
+Amb les dimensions del motor conegudes es redissenya l’estructura per adaptar -la al motor 
+
+i e s proven diferents versions per ajustar la distància entre els eixos i la fixació del motor. 
+
+A més, al realitzar les proves es troben petites possibles correccions en la geometria tant 
+
+dels dits com del mecanisme, i s’apliquen les correccions necessàries per assegurar que 
+
+el prototip funciona correctament. 
+
+Es modifica el disseny exterior per augm entar l’aparença amb la d’una mà real. Per fer -ho, 
+
+s’intenta integrar el mecanisme perquè aquest no destaqui a simple vista. A més, a 
+
+l’estructura general se li dona forma perquè ressembli l’anatomia dels metacarpians (des 
+
+del canell fins els dits). La Fig ura 40 mostra la evolució de l’aparença de la mà a través de 
+
+les diferents iteracions.   
+
+> Figura 40 . Evolució de l'aparença de la mà. Font pròpia. Pàg.
+
+62 Memòria 
+
+# 7. Resultats 
+
+Un cop obtinguda una versió funcional del predisseny , que es pot observar a la Figura 41 ,
+
+es procedeix a realitzar un estudi detallat per avaluar si es compleixen tots els requeriments 
+
+esmentats a l’apartat  5.1 , i s’analitzen els possibles factors de risc del sistema. 
+
+Aquest estudi inclou la verificació de cada requisit funcional i tècnic per assegurar que el 
+
+disseny compleix amb els e stàndards establerts. A més, s’analitzen els possibles factors 
+
+de risc associats al sistema, identificant aquells que podrien afectar el rendiment, la 
+
+seguretat o la durabilitat del producte final. Aquesta anàlisi de riscos permet anticipar 
+
+problemes poten cials i implementar mesures correctives o preventives per minimitzar 
+
+l'impacte d’aquests riscos en la fase de fabricació i ús del sistema.    
+
+> Figura 41 . Predisseny funcional de la pròtesi de mà. Font pròpia. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág.
+
+63 
+
+# 7.1. Avaluació de requeriments 
+
+A partir dels requeriments essencials definits anteriorment, s’avalua si el prototip supera 
+
+aquests requeriments de manera exitosa.  
+
+> Taula 17 . Taula compartaiva entre els requeriments i el rendiment de la pròtesi.
+
+Es pot veure com la mà supera tots els requeriments establerts anteriorment. Tot i així, 
+
+caldrà estudiar els límits del prototip per un ús correcte continuat en el temps. A més, hi ha 
+
+aspectes que poden no haver suposat un problema durant les proves, però aparèixer al 
+
+llarg del temps si se li dona un ús quotidià. 
+
+Requeriment  Resultat 
+
+Funcionalitat 
+
+Proves mínimes a superar: 
+
+7
+
+Temps màxim de tancament: 
+
+2s 
+
+Proves amb capacitat per superar: 
+
+10 
+
+Temps màxim de tancament: 
+
+1,97s 
+
+Ergonomia i 
+
+confort 
+
+Adaptable a l’usuari (mida): 
+
+Sí 
+
+Pes final menor que: 
+
+500g 
+
+Adaptable a l’usuari (mida): 
+
+Sí 
+
+Pes final: 
+
+~300g 
+
+Durabilitat 
+
+Resistència a impactes 
+
+Durabilitat dels materials 
+
+Mecanisme per protegir el motor 
+
+El PLA és resistent a impactes 
+
+No hi ha prova de desgast 
+
+Cargol sense fi protegint el motor 
+
+Estètica 
+
+Aparença antropomòrfica 
+
+Opcions de personalització 
+
+Aparença antropomòrfica 
+
+La impressió 3D ho permet 
+
+Cost 
+
+Cost de fabricació menor que: 
+
+200 € 
+
+Facilitat de reparació 
+
+Cost de fabricació: 
+
+25 -30€ 
+
+Component i materials comuns 
+
+Seguretat 
+
+Prevenir danys a l’usuari 
+
+Materials no tòxics 
+
+La força del motor no és suficient 
+
+Els materials són biocompatibles Pàg. 64 Memòria 
+
+# 7.2. Avaluació de riscos i límits 
+
+S’entén risc com la combinació de la probabilitat d’un dete rminat esdevenime nt i la 
+
+intensitat amb la que, com a conseqüència, pugui produir efectes perjudicials. Al tractar -se 
+
+d’una pròtesi, els riscos principals d’aquesta seran envers l’usuari. El factor principal a tenir 
+
+en compte és la fallada sobtada de la pr òtesi. Aquesta es pot produir per un problema en 
+
+algun component electrònic, una fallada del mecanisme, o un desgast dels materials que 
+
+portin a un mal funcionament. 
+
+Tot i que no presenta problemes després de realitzar totes les proves, s'ha observat que el 
+
+recobriment de silicona pot ser susceptible al desgast quan es sotmet a un ús continuat. 
+
+Aquest desgast pot afectar tant l'eficiència com la durabilitat de la pròtesi a llarg termini, 
+
+requerint una revisió i possible substitució del recobri ment per mantenir el seu rendiment 
+
+òptim. És important considerar aquest factor en l'ús diari per garantir la seva funcionalitat i 
+
+confort per l'usuari. 
+
+És fàcilment substituïble per l’usuari, ja que amb el motlle se li dona forma molt fàcilment. 
+
+Com a possible solució, es planteja utilitzar recanvis d’aquesta part periòdicament, als 
+
+primers indicis que indiquin un desgast. 
+
+La pròtesi es veu limitada per la força del motor, que per a objectes pesats (més de 1,5 kg) 
+
+pateix per mantenir una subjecció ferma . Per altra banda, aquest fet impossibilita realitzar 
+
+una força extrema que pugui fer mal en cas de pinçament en la tancada. 
+
+Degut al disseny i als seus components electrònics, la pròtesi no té un alt grau de protecció 
+
+contra l’aigua. Tot i que està proteg ida contra esquitxades, una exposició prolongada podria 
+
+fer malbé el motor i, fins i tot, filtrar -se a l’interior degut a la porositat dels materials 
+
+d’impressió. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 65 
+
+# 8. Possibles millores i passos futurs 
+
+Tot i que els resultats obtinguts compleixen tots els req ueriments proposats, la pròtesi té 
+
+molt marge de millora en diferents aspectes. En primer lloc, cal aprofundir en la durabilitat 
+
+dels materials utilitzats. Tot i que han demostrat ser suficientment resistents per a l'ús 
+
+quotidià, hi ha certs components que podrien ser optimitzats per prolongar la vida útil de la 
+
+pròtesi i reduir la necessitat de manteniment. 
+
+Una possible millora és la força de tancada de la mà. Excepte en la posició de tancada 
+
+màxima, on el mecanisme de tancament de colze fixa perfectament l’objecte, la pròtesi no 
+
+té cap mecanisme per mantenir una força constant quan el motor està parat. És cert que 
+
+la deformació elàstica dels dits fa que aquests emmagatzemin energia potencial, es podria 
+
+tenir un altre mecanisme que segueixi fent força sens e requerir del motor. 
+
+Es considera que una possible línia d’investigació és la d’afegir un mecanisme que 
+
+proporcioni força constant en la tancada, per exemple a partir de molles. És cert que 
+
+aquests components encaririen el producte final, però caldria es tudiar en profunditat la 
+
+viabilitat i funcionalitat del mecanisme. 
+
+També es podria continuar amb el desenvolupament dels dits, per adaptar -los no només 
+
+als objectes de la competició, sinó a elements més genèrics i amb un rang més ampli. Un 
+
+motor amb més po tència podria ajudar a utilitzar materials deformables més densos, 
+
+millorant així la subjecció. Per altr a banda, podria suposar un augment considerable del 
+
+pes i de les dimensions de mà. 
+
+Un altre aspecte a considerar és l'estètica de la pròtesi. Encara que l'aparença actual és 
+
+semblant a una mà humana, hi ha un marge per millorar en termes de naturalitat i opcions 
+
+de personalització. Això no només milloraria l'acceptació de la pròtesi per part de l'usuari, 
+
+sinó que també podria augmentar la seva confiança i benestar emocional. Això inclou la 
+
+investigació de la parametrització del disseny per poder ajustar -se a l’antropometria del 
+
+pilot. 
+
+Finalment, el cost de fabricació és un factor clau que pot ser optimitzat. Encara que la 
+
+pròtesi actual es considera molt assequible, hi ha oportunitats per reduir els costos de 
+
+producció mitjançant l’optimització topològica del disseny sense comprometre la qualitat i 
+
+funcionalitat del dispositiu. Pàg. 66 Memòria 
+
+# 9. Planificació 
+
+En aquest apartat es detalla la planificació del projecte, dividint -lo en fases clares i ben 
+
+definides. La planificació adequada és essencial per assegurar que totes les activitats es 
+
+completin dins de ls terminis. A través d'un diagrama de Gantt, s'han organitzat les tasques 
+
+en una línia temporal que permet visualitzar el progrés del projecte de manera eficaç. 
+
+Aquesta eina facilita la identificació de les dependències entre les tasques i ajuda a 
+
+gestion ar els recursos de manera òptima. 
+
+Taula 18 . Diagrama de Gantt amb la planificació del projecte. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 67 
+
+# 10. Estudi econòmic 
+
+L'estudi econòmic té com a objectiu avaluar els costos associats amb el desenvolupament 
+
+del treball . Aquest apartat analitzarà les despeses de recerca, disseny i fabricació. Per la 
+
+seva elaboració s’han co mptabilitzat les hores dedicades a cada fase del projecte, els 
+
+materials utilitzats i altres despeses. 
+
+# 10.1. Cost de personal 
+
+Segons un estudi de Talent.com [26] , el salari mitjà d’un enginyer junior a Espanya és de 
+
+25.001€/any o, el que és el mateix, 12,82€/h. Es considerarà aquest preu per l’estudi de 
+
+cost de personal.  
+
+> Taula 19 . Hores dedicades per tasca.
+
+Concepte  Preu (€/h)  Hores (h)  Total (€) 
+
+Recerca  12,82  80  1025,60 
+
+Disseny  12,82  115  1474,30 
+
+Fabricació i testing  12,82  125  1602,50 
+
+TOTAL  4.102,40 € 
+
+# 10.2. Cost de material 
+
+Es detallen els costos de tot el material utilitzat durant el projecte, tant pel prototipatge com 
+
+pel disseny final.  
+
+> Taula 20 . Costos del material emprat pel projecte.
+
+Concepte  Preu (€/u)  Quantitat (u)  Total (€) 
+
+Cargols M3  0,08  6 0,48 
+
+Femelles M3  0,11  6 0,66 
+
+Coixinets de fricció  0,42  6 2,52 
+
+Motor 12V, 200 RPM  10,42  1 10,42 
+
+Bobina PLA PolyTerra R  19,95  1 19,95 
+
+Reducció cargol sense fi 
+
+mòdul 0,5 – z=20  8,19  1 8,19 
+
+Bobina filament flexible  17,99  1 17,99 
+
+Silicona per motlles 
+
+(500g)  23,37  1 23,37 
+
+TOTAL  83,58 €Pàg. 68 Memòria 
+
+S’ha de considerar que aquest és el material emprat durant tot el procés de fabricació i 
+
+prototipatge. Cada bobina de material, així com el pot de silicona, donaria per fer al voltant 
+
+de 10 pròtesis depenent de la mida final. 
+
+# 10.3. Cost operatiu 
+
+Es detallen els costos de tots els elements utilitzats per realitzar el projecte, tant les 
+
+màquines com llicències . Per aquells productes utilitzats també amb altres finalitats, es 
+
+calcula l’amortització lineal amb la fórmula següent: 
+
+𝐴𝑚𝑜𝑟𝑡𝑖𝑡𝑧𝑎𝑐𝑖 ó 𝑎𝑛𝑢𝑎𝑙 (€/𝑡 ) = 𝑉𝑎𝑙𝑜𝑟 𝑑 ′𝑎𝑑𝑞𝑢𝑖𝑠𝑖𝑐𝑖 ó
+
+𝑉𝑖𝑑𝑎 ú𝑡𝑖𝑙 
+
+Es considera que l a vida mitjana d’un ordinador portàtil és de 4 anys (48 mesos) [27] . Es 
+
+considera una vida de 800 hores per la impressora , segons la pròpia marca . La llicència 
+
+de SolidWor ks es considera una llicència estàndard anual.  
+
+> Taula 21 . Costos d'altres elements necessaris.
+
+Concepte  Preu (€/ t) Quantitat ( t) Total (€) 
+
+Ordinador (Dell XPS 15)  15,82 per mes  5 mesos  79,1 0
+
+Prusa Mk3 3s+  1,05 per hora  110 hores  115,50 
+
+Llicència SolidWorks  290 per mes  5 mesos  1450 ,00 
+
+TOTAL  1644,60 €
+
+# 10.4. Cost energètic 
+
+Es detalla mostra el cost de la energia elèctrica de la que s’ha fet ús durant el projecte. El 
+
+cost mitjà de la llum a Espanya entre els mesos de febrer i juny és de 53,03 €/ MWh [28].  
+
+> Taula 22 . Cost energètic del projecte.
+
+Concepte  Preu (€/ MWh)  Potència (W)  Hores  Total (€) 
+
+Càrrega ordinador  53,03  130  25  1,72 
+
+Prusa Mk3 3s+  53,03  80  110  4,67 
+
+Il·luminació  53,03  80  160  6,79 
+
+TOTA 
+
+L
+
+13,18 €Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 69 
+
+# 10.5. Cost total 
+
+Amb la suma dels diferents tipus de costos associats al projecte s’obté el cost total. 
+
+Taula 23 . Cost total del projecte. 
+
+Concepte  Total (€) 
+
+Cost de personal  4.102,40 
+
+Cost de material  83,58 
+
+Cost operatiu  1644,60 
+
+Cost energètic  13,18 
+
+TOTAL  58 43 ,76 €Pàg. 70 Memòria 
+
+# 11. Estudi ambiental 
+
+L'avaluació d'impacte ambiental consisteix en un estudi per valorar els efectes que la 
+
+realització d'un projecte pot tenir sobre el medi ambient. Aquest procés és essencial per 
+
+preservar els recursos naturals i protegir el medi ambient, ja que permet identificar i mitigar 
+
+els impactes negatius potencials associats amb el projecte. Gràcies a aquestes 
+
+avaluacions, es poden implementar mesures correctores i de gestió ambiental que 
+
+asseguren un de senvolupament sostenible i respectuós amb l'entorn. 
+
+Tant per la fabricació del producte final com durant tota l’etapa de prototipatge, s’ha utilitzat 
+
+una bobin a d’un model concret, de la marca Polymaker, anomenat PolyTerra Edition -R. 
+
+Aquest model de PLA està dissenyat específicament tenint en compte el seu impacte 
+
+ambiental. A més de està format, en un 30%, per material reciclat post -industrial, 
+
+Polymaker es compromet a plantar un arbre per cada unitat de bobina venuda, col·laborant 
+
+am b OneTreePlanted.org .
+
+També s’ha de tenir en compte l’impacte de la impressora, tant la fabricació com el consum 
+
+d’aquesta. Segons les especificacions donades pel fabricant, la impressora model Prusa 
+
+MK3 S+ requereix 105kg de CO 2 per la seva fabricació [2 9] . A més, segons la Generalitat 
+
+de Catalunya, es produeixen unes emissions equivalents de 260 g CO2 per cada kWh [30 ].
+
+Durant el projecte el consum ha estat de 24 ,85 kWh ( Taula 22).   
+
+> Taula 24 . Producció d'emissions de CO2 durant el projecte.
+
+Producte  Emissions 
+
+Caixa i bobina [31]  ~720g de CO 2
+
+Bossa de Nylon [31]  ~240g de CO 2
+
+1kg de filament PolyTerra [31]  ~3kg de CO 2
+
+Energia elèctrica  6,46 kg de CO 2
+
+TOTAL  ~10,5 kg de CO 2
+
+Es calcula que, quan un arbre arriba a la seva maduresa (aproximadament als 10 anys), 
+
+produeix una mitjana de 22kg de CO 2 per any [3 2]. És així que, a llarg termini, aquest model 
+
+de bobines té un impacte positiu sobre el medi ambient. Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 71 
+
+# 12. Estudi social i d’igu altat de gènere 
+
+L’objectiu d’aquest projecte és proporcionar una alternativa de mà prostètica a l’abast de 
+
+tothom. És per això que, un cop finalitzat, el projecte es puja a llibreries de CADs obertes 
+
+com GrabCad o Thingiver se, compartint el disseny amb qualsevol que el pugui necessitar. 
+
+Aquest projecte s’alinea amb la raó social d’Arm2u, treballant de manera voluntària no 
+
+remunerada per poder millorar la qualitat de vida d’aquelles persones que pateixen una 
+
+discapacitat de membre superior. L’equip d’Arm2 u té 20 membres, 11 homes i 9 dones, un 
+
+percentatge de dones molt major al de la Escola Superior d’Enginyeria Industrial de 
+
+Barcelona (27,4% de dones) , universitat on aquest es va originar. [33] 
+
+La competició Cybathlon Series és considerada una de les més avançades del món. Es 
+
+tracta d'un campionat en què persones amb discapacitats físiques competeixen en 
+
+diverses tasques, amb l'ajuda de dispositius assistencials d'alta tecnologia, incloent 
+
+tecnologies robòtiques. Aquest esdeveniment motiva el col·lectiu a utilitzar els seus 
+
+dispositius no només per satisfer les seves necessitats fisiològiques, sinó també per 
+
+competir. 
+
+A més, la mà s’ha dissenyat de manera que es poden adaptar les seves mides fàcilment. 
+
+Aquest disseny inclusiu permet a qualsevol usuari aju star la pròtesi perquè sigui el més 
+
+similar possible a la seva mà, superant així la variabilitat antropomètrica per raça, gènere i 
+
+edat. Pàg. 72 Memòria 
+
+# 13. CONCLUSIONS 
+
+Després de la realització d'aquest treball, es poden extreure diverses conclusions 
+
+significatives relacion ades amb el desenvolupament i avaluació d'una pròtesi funcional per 
+
+a ús quotidià, basant -se en les proves del Cybathlon Series .
+
+En primer lloc, l'estudi aprofundit de diferents pròtesis existents ha permès identificar les 
+
+tecnologies i dissenys més efecti us disponibles al mercat. S'ha observat que hi ha una 
+
+àmplia gamma de solucions, amb variacions significatives en termes de concepte ,
+
+funcionalitat i estètica. Aquesta diversitat ha facilitat la identificació de les característiques 
+
+més valorades pels usuaris i les àrees amb major potencial de millora. 
+
+L'anàlisi comparativa de solucions ha estat fonamental per entendre les diferències clau 
+
+entre les pròtesis. Els paràmetres de funcionalitat, estètica i cost han permès una visió clara 
+
+dels avantatges i i nconvenients de cada solució, proporcionant una base sòlida per a 
+
+l'establiment de requeriments específics pel prototip desenvolupat. 
+
+Pel que fa als requeriments establerts, s'ha destacat la importància de la adaptabilitat ,
+
+capacitat de realitzar diverses tasques , durabilitat i facilitat d'ús. Aquestes condicions han 
+
+estat essencials per guiar el procés de disseny, assegurant que el prototip compleixi amb 
+
+les expectatives dels usuaris i les necessitats quotidianes. 
+
+El procés de pr edisseny de la pròtesi de mà ha resultat en una extensió prostètica 
+
+funcional, adaptable a diferents usuaris, funcions i objectes. Aquest disseny ha estat posat 
+
+a prova enfront les proves del Cybathlon Series , demostrant la seva capacitat per superar 
+
+els desafiaments plantejats. Le s proves han validat la funcionalitat del prototip, confirmant 
+
+la seva eficàcia en situacions similars a les de la vida real. 
+
+Finalment, l'estimació del cost de fabricació del prototip ha demostrat que és possible 
+
+produir una pròtesi funcional i accessible econòmicament. Aquesta estimació inclou tant 
+
+els costos de materials com els de producció, assegurant que la pròtesi sigui assequible 
+
+per als usuaris finals sense comprometre la seva qualitat i funcionalitat. 
+
+En conclusió, aquest treball ha aconseguit des envolupar una pròtesi que permet als usuaris 
+
+realitzar tasques quotidianes de manera independent, complint amb els requeriments 
+
+establerts i superant les proves del Cybathlon Series . Les solucions identificades i les 
+
+conclusions extretes proporcionen una b ase sòlida per a futurs desenvolupaments en el 
+
+camp de les pròtesis, amb l'objectiu de millorar la qualitat de vida de les persones amb una 
+
+discapacitat de membre superior .Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 73 
+
+# 14. Agraïments 
+
+En aquesta secció, m’agradaria agrair a tots aquells que m’han donat e l seu suport pel 
+
+desenvolupament d’aquest projecte. 
+
+En primer lloc, vull donar les gràcies al meu tutor, Joan Puig Ortiz, per la seva orientació 
+
+al llarg de tot aquest projecte. El seu coneixement i consells han estat fonamentals per a l a
+
+realització d’a quest treball. 
+
+En segon lloc , voldria agrair a tot l’equip d’ARM2u pel seu suport en aquest projecte, tant 
+
+aquells membres que són actualment a l’equip com als que m’han acompanyat durant els 
+
+anys, de qui he après molt i que m’ha transmès l’interès pel món de l’enginyeria biomèdica. 
+
+A més , vull expressar el meu agraïment a la universitat per oferir -me l’o portunitat de dur a 
+
+terme aquest projecte. Gràcies a la ETSEIB he pogut créixer tant a nivell personal com 
+
+professional, adquirint una base de coneixement valuosa que serà essencial per al meu 
+
+futur. 
+
+Per últim, voldria donar les gràcies a la meva família pel seu suport constant i incondicional. 
+
+També als meus amics, que m’han acompanyat en tot moment i han marcat la meva 
+
+trajectòria universitària. Pàg. 74 Memòria 
+
+# 15. Bibliografia 
+
+[1] “Project”. ARM2u – ETSEIB. Barcelona : novembre 2023. 
+
+[https://arm2u -etseib.upc.edu/wp/project/ , 2 d’abril 2024 ]. 
+
+[2] “CYBATHLON”. CYBATHLON ETH Zürich. Zürich, 2024 .
+
+[https://cybathlon.ethz.ch/en , 2 d’abril 2024 ]. 
+
+[3] ETH Zürich i M. Münger, Cybathlon Races and Rules 2024 . Zúrich: 30 de abril de 2024. 
+
+[4] Dr. Carlos Arce G. Prótesis de miembros superiores. Perú: 2005 .
+
+[5]  Weir, R. F., Troyk, P. R., DeMichele, G. A., Kerns, D. A., Schorsch, J. F., & Maas, 
+
+H. Implantable myoelectric sensors (IMESs) for intramuscular electromyogram 
+
+recording.  2009. 
+
+[6] Loducca, Bruno & Avila, Alysson & Leao, Tarcisio & Drigo, Evandro & Bock, 
+
+Eduardo & Santos, Bruno. Desenvolvimento de próteses para membros superiores: 
+
+revisão do contexto, funcionalidade e construção.  Desembre 2022. 
+
+[7] A. Otte . Christian von Mechel’s Reconstructive Drawings of the Second ‘Iron Hand’ 
+
+of Franconian Knight Gottfried (Götz) von Berlichingen (1480 –1562) . Mar ç, 2021 
+
+[8] Freeman, R.A. and Tesar. Dynamic modeling of serial and parallel 
+
+mechanisms/robotic systems.  1988. 
+
+[9] “Cirugías de Quiste de Baker”. Dr. Marlon Zeledón. El Salvador: 2016 
+
+[https://www.drzeledon.com/cirugias -de -quiste -de -baker/category/4 -manos, 9 d’abril 2024] 
+
+[10 ] J. T. Belter, J. L. Segil, A. M. Dollar, and R. F. Weir . Mechanical design and 
+
+performance specifications of anthropomorphic prosthetic hands: A review . Journal of 
+
+Rehabilitation Research and Development, vol. 50, 2013 
+
+[11] “MyoHand VariPlus Speed”. Ottobock . Duderstadt, Alemanya: 2023. 
+
+[https://www.ottobock.com/es -es/product/8E38~59, 10 d’abril 2024] 
+
+[12] “Electric Greifer DMC VariPlus”.  Ottobock.  Duderstadt, Alemanya: 2023. 
+
+[https://www.ottobock.com/es -es/product/8E33, 10 d’abril de 2024] 
+
+[13] S. Hussain, S. Shams, and S. Jawaid Khan. Impact of Medical Advancement: 
+
+Prostheses. IntechOpen, 2019 .
+
+[14] “Qué es el “Infill” en la impresión 3D”. Impresión 3D - 330ohms. Mèxic: Maig 2021. 
+
+[https://blog.330ohms.com/2021/05/20/que -es -el -infill -en -la -impresion -3d/, 6 d’abril 2024] Aquí va el títol del vostre TFG/TFM (pot ser resumit) Pág. 75 
+
+[15] E. A. Nantes. El método Analytic Hierarchy Process para la toma de decisiones. 
+
+Repaso de la metodologia y aplicaciones. Univers idad Nacional del Sur, Argentina: 
+
+Octubre 2019. 
+
+[1 6] Osorio Gómez. Juan Carlos and J. P. Orejuela Cabrera . Analitic hierarchic process 
+
+(AHP) and multicriteria decision making. Application example. Universidad del Valle, 
+
+Colombia: 2008. 
+
+[17]  J. Gallardo -Alv arado and J. Gallardo -Razo, “Chapter 8 - Mobility of mechanisms,” in 
+
+Kinematic Analysis and Applications in Robotics , 2022, pp. 135 –159. 
+
+[18] A. Dominguez Segarra . Simulación de mecanismos utilizando el método de 
+
+bilateración.  Universitat Politècnica de Catalunya. Barcelona: Juny 2020. 
+
+[19] “The basic mechanics of Toggle Clamps”. Engineering Clicks. Steven Weinberg. 
+
+Estats Units d’Amèrica: Octubre 2017. 
+
+[https://www.engineeringclicks.com/toggle -clamps -mechanics/, 6 de maig 2024] 
+
+[20] “E l vis -sense -fi”. Procés tèxtil – Museu Nacional de la ciència i la tècnica de Catalunya. 
+
+Terrassa. [https://procestextil.mnactec.cat/el -vis -sens -fi/, 7 de maig 2024] 
+
+[21] “4 -bar linkage Simulator”. Calculator – Desmos. Japó. 
+
+[https://www.desmos.com/calcula tor/egmi3wr0o7?lang=es, 8 de maig 2024] 
+
+[22] D. D’andrea, G. Risitano, M. Raffaele, F. Cucinotta, and D. Santonocito . Damage 
+
+assessment of different FDM -processed materials adopting Infrared Thermography .
+
+Università degli Studi di Messina. Itàlia: Oct ubre de 2022 .
+
+[23] “Hypoid vs. Worm Gears: A More Cost Effective Right -Angle Reducer”. Orientalmotor 
+
+– Gear Motors – Technology. Estats Units d’Amèrica: 2024. 
+
+[https://www.orientalmotor.com/ac -motors -gear -motors/technology/hypoid -vs -worm -
+
+gears.html, 10 de maig 2024] 
+
+[24] “Sistemas de Medida Fricción”. Equipos de medición – Aname Instrumentación 
+
+Científica. Madrid: 2023 [https://medidafuerzaytorsion.com/index.php/es/equipos -de -
+
+medicion/category/52 -medida -de -friccion, 15 de juny 2024] 
+
+[25] “LS -20GA130 Dc Gear Motor” – NBLEISON MOTOR. 2024. 
+
+[https://www.nbleisonmotor.com/LS -20GA130 -Dc -Gear -Motor -pd6787204.html, 13 d’abril 
+
+2024] 
+
+[26] “Salario medio para Ingeniero Junior en España, 2024”. Talent.com. Juny 2024. 
+
+[https://es.talent.com/salar y?job=ingeniero+junior, 14 de juny 2024] Pàg. 76 Memòria 
+
+[27]  A. Hoang, W. Tseng, S. Viswanathan, and H. Evans . Life Cycle Assessment of a 
+
+Laptop Computer and its Contribution to Greenhouse Gas Emissions . 2009. 
+
+[28] “Evolución del precio de la luz”. Precio luz – Vivienda y energia – Organización de 
+
+consumidores y usuarios. Espanya: Juny, 2024. [https://www.ocu.org/vivienda -y-
+
+energia/gas -luz/informe/precio -luz, 16 de juny 2024] 
+
+[29] “Prusa Product Passport – Prusa i3 MK3S+”. Uploads – Blog - Prusa3d. 2023 
+
+[https:// blog.prusa3d.com/wp -content/uploads/2022/11/Prusa3D_passport_MK3S_en.pdf, 
+
+21 de juny 2024] 
+
+[30 ] “Factor de emisión de la energía eléctrica: el mix eléctrico”. Factors d’emissió 
+
+associats a l’energia – Generalitat de Catalunya. Maig 2024. 
+
+[https://canvicli matic.gencat.cat/es/actua/factors_demissio_associats_a_lenergia/, 18 de 
+
+juny 2024] 
+
+[31] Davies S. Polymaker launches carbon negative PLA -based 3D printing filament . TCT 
+
+Magazine. 25 de febrer de 2021. 
+
+[32] P. Patil and D. A. Kiran Kumar . Biological carbon sequestration through fruit crops .
+
+India: 2017 .
+
+[33] “Memòria 2021 -2022”. Memòries anuals de l’Escola – ETSEIB. Barcelona: juliol 
+
+2023. [ https://etseib.upc.edu/ca/lescola/memories -anuals -de -lescola -
+
+1/documents/Memoria_202122.pdf , 21 de juny 2024]

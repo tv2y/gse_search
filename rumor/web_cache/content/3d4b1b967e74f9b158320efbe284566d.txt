@@ -1,0 +1,1191 @@
+Title: cits_final.pdf
+
+URL Source: https://datacollaborativeforjustice.org/wp-content/uploads/2023/10/cits_final.pdf
+
+Published Time: Wed, 12 Nov 2025 22:32:10 GMT
+
+Number of Pages: 24
+
+Markdown Content:
+Examining the System-Wide Effect 
+
+# of Eliminating Bail in New York City: 
+
+# A Controlled-Interrupted Time Series Study 
+
+# October 2023 
+
+# Stephen Koppel & René Ropac 
+
+# Bail Reform & Recidivism Series Data Collaborative for Justice i
+
+# Table of Contents 
+
+SUMMARY: The Study's Upshot 
+
+CHAPTER 1: Introduction 
+
+CHAPTER 2: Data and Methods 
+
+CHAPTER 3: The Impact of Bail Elimination on Recidivism 
+
+CHAPTER 4: Conclusion and Limitations 
+
+ENDNOTES 
+
+Supplemental Document: Available  Here  on Report Landing Page. 
+
+Page 
+
+1
+
+2
+
+6
+
+10 
+
+19 
+
+21 
+
+ACKNOWLEDGMENTS 
+
+This report was supported by Arnold Ventures as part of a larger initiative to study New York State’s 
+
+Criminal Justice Reforms. Thank you to Kristin Bechtel and Tyrell Connor for their guidance. 
+
+We are also grateful to Michael Rempel, Olive Lu, and Krystal Rodriguez for their valuable feedback on 
+
+earlier drafts. 
+
+The report would not have been possible without data provided by the New York State Office of Court 
+
+Administration, with the assistance of its Division of Technology & Court Research staff, Karen Kane, 
+
+Carolyn Cadoret, and Annette Parisi. OCA data provided herein does not constitute an official record of 
+
+the New York State Unified Court System, which does not represent or warrant the accuracy thereof. The 
+
+opinions, findings, and conclusions expressed in this publication are those of the authors and not those of 
+
+the New York State Unified Court System, which assumes no liability for its contents or use thereof. Data Collaborative for Justice 1
+
+Effective from January to June 2020, New York’s initial bail reform law 
+
+eliminated the option to set bail for mainly misdemeanor and non-violent 
+
+felony offenses. Beginning in July 2020, successive rounds of amendments 
+
+reinstated bail eligibility for some of these offenses, as well as introduced new 
+
+eligibility criteria allowing judges to consider certain elements of a person’s 
+
+past criminal justice involvement. 
+
+Using controlled-interrupted time series analysis (CITS), this study estimated 
+
+the effect of New York’s initial reform on recidivism in New York City by 
+
+comparing re-arrest rates before reform (January to December 2019) and 
+
+after reform (January to June 2020) and between bail-eligible and bail-
+
+ineligible offenses. Eliminating the option to set bail under the reform was not 
+
+associated with a change in overall re-arrest, felony re-arrest, or violent felony 
+
+re-arrest rates within either 2 years or during the pretrial period (capped at 6 
+
+months of tracking). 
+
+However, for “high risk” individuals with a separate pending case at the time 
+
+of arraignment, there was an increase approaching statistical significance in 
+
+violent felony re-arrest within two years, and a statistically significant increase 
+
+in violent felony re-arrest within the pretrial period. There were no differences 
+
+in overall re-arrest or felony re-arrest rates for this subgroup. 
+
+The findings from this study are broadly consistent with prior research on New 
+
+York's bail reform. Two earlier studies found no impact of bail reform on crime 
+
+rates within New York City or statewide; and an earlier Data Collaborative 
+
+for Justice study found that for cases made ineligible for bail, re-arrest rates 
+
+decreased overall, though for a similarly defined and relatively small "high 
+
+risk" subgroup re-arrest rates increased. 
+
+# The Study's Upshot Data Collaborative for Justice 2
+
+# Chapter 1. 
+
+# Introduction 
+
+In January 2020, New York implemented a bail reform law restricting judges’ discretion to set bail and 
+
+detain people for certain charges. This study used a controlled-interrupted time series design (CITS) 
+
+to compare recidivism rates before and after reform, as well as between cases made ineligible for bail 
+
+(“treatment group”) and those that remained eligible (“control group”). By estimating not only whether 
+
+recidivism rates changed post-reform but also whether any changes differed between the treatment 
+
+and control groups, this approach allowed us to minimize confounding from events occurring around 
+
+the time of the reform (e.g., the Covid-19 pandemic). 
+
+## Background: 
+
+## New York’s Bail Reform Law in Brief 
+
+In April 2019, New York passed the Bail Elimination Act, a reform law limiting judges’ discretion to set 
+
+bail or detain people. 1 Prior to its enactment, judges had the option to set bail in all cases. After the 
+
+law took effect in January 2020, bail was eliminated for nearly all misdemeanor and non-violent felony 
+
+offenses. In effect, this meant that pretrial release was mandated based on a single factor: the type of 
+
+offense charged at arraigment. 
+
+In response to concerns regarding public safety following implementation, New York's bail reform 
+
+law was amended several months later. 2 Implemented in July 2020, the amendments made a list of 
+
+additional charges (mainly misdemeanors and non-violent felonies) eligible for bail. Additionally, 
+
+several amendments introduced eligibility criteria allowing judges to consider certain aspects of a 
+
+person’s past involvement with the criminal justice system. For example, judges were permitted to set 
+
+bail if the current charge and an earlier pending charge were found to involve “harm to an identifiable 
+
+person or property." 3 These change effectively ended New York's solely charge-based restriction on the 
+
+use of bail. 
+
+## Prior Research on Bail Reform and Public Safety 
+
+Studies Outside of New York 
+
+In jurisdictions throughout the United States, various bail reforms have been implemented with the 
+
+aim of reducing reliance on money bail and pretrial detention. For the most part, research has not 
+
+found a strong association between these reforms and crime. 4
+
+• New Jersey : This state’s legislative reforms included: (1) restriction on the use of pretrial 
+
+detention to individuals at high risk of either flight or new criminal activity; (2) restriction on 
+
+the use of bail solely to individuals at high risk of flight; and (3) the addition of a pretrial risk 
+
+assessment tool to inform judges’ decisions. Together, these reforms effectively eliminated the 
+
+option of bail in nearly all cases. Using an interrupted time series analysis, researchers found a Data Collaborative for Justice 3
+
+reduction in misdemeanor arrests following reform and no change in either direction in other 
+
+types of arrests. 5
+
+• Philadelphia : District Attorney Larry Krasner announced that his office would no longer seek 
+
+bail for 25 low-level felony and misdemeanor offenses. Using a difference-in-differences 
+
+design to compare bail eligible offenses to bail ineligible offenses, researchers found that the 
+
+policy had no impact on the likelihood of pretrial re-arrest. 6
+
+• Cook County, Illinois : The Chief Justice issued a court order establishing a presumption of 
+
+release for the large majority of individuals facing charges. Comparing matched samples pre-
+
+and post-reform, researchers found that the order was associated with a four percentage-point 
+
+decrease in pretrial detention but no change in pretrial re-arrest. 7
+
+• Mecklenburg County, North Carolina : While not explicitly limiting judges’ ability to set bail, 
+
+a new automated risk assessment tool was implemented to identify individuals suitable for 
+
+pretrial release. Using an interrupted time series design, researchers found that following 
+
+reform, there was a two percentage-point increase in re-arrests within one year of the initial 
+
+arrest date. However, as charges filed in Mecklenburg became more serious in the period 
+
+after the risk assessment reforms were implemented, the authors did not attribute this small 
+
+recidivism change to the reform. 8
+
+• Harris County, Texas : A court-ordered consent decree mandated the pretrial release of a 
+
+subset of misdemeanor offenses. Using a difference-in-differences design, researchers found 
+
+no differences in one-year re-arrest rates and modest decreases in three-year re-arrest rates. 9
+
+Prior New York Studies 
+
+To date, three rigorous studies have evaluated the effect of New York’s bail reform law on crime or 
+
+recidivism. 
+
+• Evaluation of Recidivism in New York City : In the first study of the Data Collaborative for 
+
+Justice’s Bail Reform & Recidivism Series, inverse probability of treatment weighting (IPTW) 
+
+was used to estimate the effect of bail reform on two-year recidivism rates in New York City. 
+
+The research design isolated people who were likely to have been impacted by reform and 
+
+estimated the effect of pretrial release among: (1) cases made ineligible for money bail and 
+
+pretrial detention; and (2) cases that remained eligible for bail but where judges became 
+
+more likely to opt for release due to provisions such as the universal availability of pretrial 
+
+supervision. Results showed a decrease in recidivism for bail-ineligible cases released under 
+
+reform but no effects in either direction for bail-eligible cases. Subgroup analyses found 
+
+that recidivism tended to increase for individuals with a recent violent felony arrest and, in 
+
+some analyses, a current open case. In contrast, recidivism decreased for people with no prior 
+
+criminal history. 10 Data Collaborative for Justice 4
+
+• Evaluation of Select Crime Impacts in New York City : Researchers at the University of 
+
+Southern California, Cornell University, and the NYC Criminal Justice Agency used a synthetic 
+
+control design to estimate the effect of reform in New York City on multiple incident-level 
+
+crime types, including assault, theft, robbery, burglary, and drug crime. Findings showed no 
+
+significant increases in New York City compared to the synthetically matched cities for all 
+
+crime types except robbery. 11 
+
+• Evaluation of Index Crime Impacts in New York State : Researchers at the University of Albany 
+
+used a synthetic control design to estimate the effect of reform throughout New York State on 
+
+index crime. Findings showed that while murder, larceny and motor vehicle theft increased 
+
+post-reform, the increases were not significantly different from those in the synthetically 
+
+matched states. 12 
+
+## Purpose of the Current Study 
+
+Researchers have previously evaluated the effect of New York’s bail law on overall crime, 13  and 
+
+isolated the effects of reform on recidivism for matched samples of impacted individuals. 14  However, 
+
+there has yet to be an analysis testing whether the general policy of eliminating bail for select 
+
+charges led to higher, lower, or no change in overall re-arrest rates. 
+
+In this study, we address the question:  Did bail reform result in a system-wide change in recidivism rates 
+
+among people charged with a bail-ineligible offense?  A controlled-interrupted time series design was 
+
+used to compare recidivism pre- and post-reform and between bail-ineligible (“treatment”) and bail-
+
+eligible (“control”) cases. Recidivism measures were broken out by the severity of the new offense: 
+
+any offense , felony offense , and  violent felony offense .
+
+Two distinct follow-up periods were used for each measure: (1) two-year re-arrest rate from initial 
+
+arrest, regardless of when a case was resolved; and (2) pretrial re-arrest occurring within the first six 
+
+months while a case was pending. To avoid wide variations in the length of the pretrial period for 
+
+different cases, no case had pretrial re-arrests tracked past six months. (Described below, we used 
+
+a pretrial measure with a 6-month follow-up period created by researchers at the New York State 
+
+Division of Criminal Justice Services.) 
+
+Why Analyze Recidivism Over Two Different Periods? 
+
+Several theories have been put forward for how money bail and pretrial detention might impact 
+
+recidivism, including: 
+
+• Incapacitation Through Pretrial Detention : By definition, people cannot be re- arrested in the 
+
+community while confined in jail before trial. 
+
+• Deterrent Effects of Pretrial Detention : The threat of detention, whether or not judges 
+
+actually impose it in a specific case, may reduce a person’s likelihood of recidivism. Data Collaborative for Justice 5
+
+• Criminogenic Effects of Pretrial Detention : People who were detained may be at elevated risk 
+
+of recidivism owing to criminogenic harms of incarceration. 15 
+
+Identifying the mechanism behind bail reform’s effect on recidivism poses a unique challenge. 
+
+That said, the pretrial measure aimed to capture whether the option to set bail lowered recidivism 
+
+through an incapacitation and/or deterrent effect, while the two-year measure enabled us to also 
+
+capture whether pretrial detention ultimately increased recidivism through a criminogenic effect. 
+
+Subgroup Analysis of People with a Pending Case 
+
+For each recidivism measure we conducted subgroup analyses for individuals with a pending case. 
+
+This allowed us to examine whether this study replicated the finding from the Data Collaborative 
+
+for Justice’s prior bail reform-recidivism study; specifically, that while people released due to the 
+
+elimination of bail saw reduced recidivism overall, recidivism increased for a small “high-risk” 
+
+subgroup. 16 
+
+Beyond Bail Eligibility 
+
+By dividing cases into treatment and control groups based on bail eligibility, this study 
+
+evaluated the effect of eliminating judicial discretion to set money bail or detain people for 
+
+certain offense types. However, it is important to note that New York’s legislative reforms 
+
+included a variety of other changes to the bail laws that affected both the treatment and 
+
+comparison groups, including: 
+
+• Universal Supervision Option : All cases became eligible for pretrial supervision. 
+
+• Presumption of Release : The law introduced a presumption of release on 
+
+recognizance in all cases and only permitted pretrial conditions where a person was 
+
+deemed to pose a demonstrable “risk of flight to avoid prosecution.” 
+
+• Least Restrictive Condition : Even when a flight risk was deemed to be present, 
+
+judges were required to set the “least restrictive” release condition(s) necessary to 
+
+ensure court appearance. 
+
+• Ability to Pay : The law required judges to consider a person’s ability to pay bail 
+
+before setting an amount and to offer at least three forms of bail, including one 
+
+with the option to pay only 10% or less of the total bail amount up-front (“partially 
+
+secured bond”). 
+
+Prior research indicates that, combined, these provisions led bail-setting and pretrial 
+
+detention rates to decline among cases that remained eligible for bail. 17 Data Collaborative for Justice 6
+
+# Chapter 2. 
+
+# Data and Methods 
+
+The following pages describe our data sources, tracking periods, study design and methods. 
+
+## Recidivism Tracking Periods 
+
+Two-Year Recidivism 
+
+A growing body of research suggests that pretrial detention can have criminogenic effects in the 
+
+period following release. 18  To account for pretrial detention’s long-run effects on recidivism, it was 
+
+therefore important to examine recidivism beyond just the pretrial period. 
+
+We used data provided by the Office of Court Administration (OCA) to construct recidivism measures 
+
+with a two-year follow-up period. The recidivism measures were broken out by the severity of the new 
+
+offense as follows: any re-arrest, felony re-arrest, and violent felony re-arrest. Notably, only re-arrests 
+
+that resulted in prosecution were captured by the two-year recidivism measures. 
+
+Pretrial Recidivism (Tracking Capped at 6 Months) 
+
+For our analysis of pretrial recidivism, we used publicly available pretrial data collected jointly by New 
+
+York’s Division of Criminal Justice Services (DCJS) and Office of Court Administration (OCA).  19  The 
+
+DCJS/OCA public dataset was created to study the impact of bail reform on pretrial decision-making 
+
+and pretrial recidivism. These data include case information on all prosecutions for fingerprintable 
+
+offenses (to allow for accurate tracking of pretrial re-arrests) of individuals 18 or older between 2019 
+
+and 2021. 
+
+The DCJS/OCA dataset includes several recidivism measures capturing whether an individual was 
+
+re-arrested pretrial. One measure captures re-arrests at any time during the pretrial period. Another 
+
+measure does the same for cases resolved within 6 months, but caps the tracking period at 6 months 
+
+for cases that took longer to be resolved. (During the Covid-19 pandemic, extended case processing 
+
+times were common. 20 ) To limit bias due to variability in pretrial length, we used the standardized 
+
+6-month pretrial recidivism measures. Like the two-year measures, the pretrial recidivism measures 
+
+were broken out by the severity the severity of the new offense as follows:  any re-arrest , felony re-
+
+arrest , and  violent felony re-arrest. Data Collaborative for Justice 7
+
+## Intervention Timing 
+
+In April 2019, the Bail Elimination Act was signed into law with an effective date of January 1, 2020. 
+
+The bail eligibility requirements in the law were retroactive, meaning that individuals who were 
+
+already held in detention for failure to make bail on an ineligible offense were subject to immediate 
+
+release on the January 2020 effective date. 
+
+Partly to avoid a scenario where people held on bail-ineligible offenses were released all at once, the 
+
+Office of Court Administration encouraged judges to enact the reform prior to the implementation 
+
+date. 21  Figure 2.1 shows monthly bail-setting trends in 2019 among individuals facing charges 
+
+that became ineligible for bail the following year (2020). In both the general population and in the 
+
+subgroup of people with a pending case, a substantial decrease in bail setting can be seen starting in 
+
+November 2019. We therefore used November 2019 as the interruption date for our main analyses. 
+
+While November 2019 is the most plausible timing of the onset of changes to practice, the patterns 
+
+observed in bail-setting do not exclude the possibility of changes among some judges occurring even 
+
+earlier. To account for possible anticipatory effects, we conducted robust checks using a September 
+
+2019 interruption date. Findings from these models were generally consistent with our main analysis 
+
+(see Supplemental Document to this report). 
+
+Figure 2.1 
+
+> Bail-Setting Trends in the Year Before Reform (2019)
+> Among Individuals Charged with a Bail-Ineligible Offense
+> Full population
+> People with
+> a pending case
+
+Data Collaborative for Justice 8
+
+## Controlled-Interrupted Time Series Methods 
+
+We used interrupted time series analysis (ITSA) to estimate the impact of bail reform on aggregated 
+
+recidivism rates for cohorts of people arraigned in a given month. Specifically, we tracked recidivism 
+
+for monthly cohorts of cases arraigned between January 2019 and June 2020. 
+
+ITSA methods are suitable for evaluating policy interventions when a single population is studied, 
+
+the outcome is ordered in a time series, and multiple observations are captured in the pre- and post-
+
+intervention periods. 22  In the absence of a true experimental design, ITSA is considered a strong 
+
+quasi-experimental alternative. 23 
+
+Single-Group versus Multiple Group 
+
+With a single-group ITSA design, the impact of an intervention is estimated by using the period 
+
+before the intervention as a counterfactual and adjusting for the pre-intervention trend. 24  However, 
+
+an important limitation of single-group ITSA is that it cannot rule out time-varying confounders that 
+
+were not part of the pre-intervention trend; for example, other events occurring around the time of an 
+
+intervention. 25  One way to deal with this potential source of confounding is to include a control series 
+
+that is: 1) unaffected by the treatment, and 2) shares confounders with the intervention series. 26 
+
+Treatment and Control Groups in the Current Study 
+
+To limit confounding from time-varying factors (e.g., changes related to the onset of the COVID-19 
+
+pandemic), this analysis included a control series. Specifically, the treatment group consisted of 
+
+individuals whose arraignment charge made them ineligible for bail under the reforms, while the 
+
+control group consisted of individuals whose arraignment charge remained eligible for bail. By 
+
+estimating the effect of not only whether recidivism rates changed post-reform, but whether any 
+
+changes differed between the treatment group and control groups, this approach allowed us to 
+
+better isolate the causal impact of eliminating bail. (A more detailed description of these methods is 
+
+provided in the Supplemental Document.) 
+
+Caveat: As noted in Chapter 1, while the control group is unaffected by the treatment under study 
+
+(i.e., elimination of bail as a legal option), it is affected by other reforms such as universal pretrial 
+
+supervision eligibility and provisions requiring judges to consider people’s ability to pay bail. Data Collaborative for Justice 9
+
+## How We Estimated Bail Reform’s Effect 
+
+We estimated the multiple-group interrupted time series models using segmented regression, 
+
+a common approach for evaluating the effect of policy interventions. 27  To carry out the analysis, 
+
+we used Stata’s ITSA command which relies on ordinary-least squares (rather than ARIMA) given 
+
+its flexibility and broad applicability in the context of time series analyses. 28  The multiple-group 
+
+interrupted time series models include a time variable (indicating time from the start of the 
+
+study), a dummy variable for the start of the reform (November 2019), a dummy variable for cohort 
+
+assignment (bail ineligible vs. bail eligible), and interaction terms among these variables. Because 
+
+the reform was rolled out over time rather than all at once, our main parameter of interest is the 
+
+difference in post-intervention slopes; i.e., the difference between the two groups in recidivism 
+
+trends before the intervention compared to the difference in recidivism trends after. 
+
+Subgroup Analysis of Individuals with a Pending Case 
+
+As noted above, the first study in the DCJ’s Bail Reform & Recidivism Series found that eliminating 
+
+bail led to an increase in recidivism among a small “high-risk” subgroup, with the primary risk factors 
+
+being a pending case or a prior violent felony arrest in the two years before the current case. 
+
+In the present study, we isolated people with at least one pending case at the time of arraignment. 
+
+Among bail-ineligible cases, 27.8% fell into this category. For these “high-risk” individuals, bail was 
+
+set at a rate that was about twice as high as in the general population in 2019 (23.7% vs. 12.1%). 
+
+These analyses aimed to capture the effect of reform among this small subset of individuals who 
+
+were especially likely to have had bail set absent reform. 
+
+Exclusions from Sampled Cases 
+
+Because our aim was to test for a system-wide effect, we studied the vast majority of cases arraigned 
+
+during the study period. However, we omitted cases arraigned for low-level offenses not included 
+
+in New York’s criminal code (e.g., certain violations of vehicle traffic law, tax law, or workers’ 
+
+compensation law), and cases where judges did not have an opportunity to set bail (i.e., cases 
+
+disposed at arraignment or subject to a pretrial hold in another case). Data Collaborative for Justice 10 
+
+# Chapter 3. 
+
+# The Impact of Bail Elimination on Recidivism 
+
+Results follow, respectively for two-year recidivism (encompassing both pretrial and post-
+
+disposition tracking periods) and when isolating the immediate pretrial period. 
+
+## Two-Year Recidivism Results 
+
+Overall Effects 
+
+Table 3.1 shows the average monthly recidivism rates across the two segments of the analysis: (1) the 
+
+pre-reform period (January 2019 - October 2019) and (2) the post-reform period (November 2019 -
+
+June 2020). 
+
+For the treatment group, the monthly average rate of any recidivism marginally decreased from 
+
+37.3% to 37.1% (-0.2%) between the pre-reform and the post-reform period, but the felony and 
+
+violent felony recidivism rates increased from 17.3% to 19.1% (+1.8%) and from 9.3% to 11.1% 
+
+(+1.8%), respectively. For the control group, the recidivism rate increased pre-reform to post-reform 
+
+from 38.9% to 41.0% for any re-arrest (+2.1%), from 20.4% to 23.0% for felony re-arrest (+2.6%), and 
+
+from 11.5% to 13.7% for violent felony re-arrest (+2.2%).                          
+
+> Treatment (Bail Ineligible) Control (Bail Eligible)
+> Pre Reform Post Reform Diff. Pre Reform Post Reform Diff.
+> Any Re-Arrest 37.3% 37.1% -0.2% 38.9% 41.0% +2.1%
+> Felony Re-Arrest 17.3% 19.1% +1.8% 20.4% 23.0% +2.6%
+> VFO Re-Arrest 9.3% 11.1% +1.8% 11.5% 13.7% +2.2%
+
+Table 3.1 
+
+Average Two-Year Recidivism 
+
+Using multiple-group segmented regression models, we were able to account for pre-reform 
+
+trends and estimate not only whether recidivism rates increased post-reform but, if so, whether any 
+
+increases significantly differed between the treatment and control groups. 
+
+Findings from the CITS models are presented in Table 3.2, with model estimates graphically 
+
+illustrated in Figure 3.1. Post-reform there were statistically significant increases from the pre-
+
+reform trend within the treatment and control groups across all three measures, but when 
+
+compared between the treatment and control groups the differences were not statistically 
+
+significant. Data Collaborative for Justice 11 
+
+How To Read the Findings from the CITS Tables 
+
+Our model parameter of interest is the difference in post-intervention linear slopes (see 
+
+“Difference” rows in tables below). The difference parameter addresses whether the 
+
+trajectory of the recidivism rates differed between the treatment and control groups 
+
+post-reform. For example, if recidivism increased in both groups post-reform, it would 
+
+tell us whether the rate of increase was steeper in the treatment group. 
+
+Below are definitions of terms used to describe the estimates (i.e., the columns in the 
+
+tables): 
+
+• Coefficient: The magnitude of the difference in the post-reform recidivism rates 
+
+measured in percentage points per month. 
+
+• p-value: The probability of seeing a particular percentage-point difference by 
+
+chance. A very low p-value (typically .05 or less) suggests that the difference was very 
+
+unlikely to be due to chance and is therefore considered “statistically significant.” 
+
+• Confidence interval: Range of values that the true magnitude of the difference likely 
+
+falls within.                                                           
+
+> Coef. Std. Err. tp-value 95% Confidence Interval
+> Any Re-Arrest
+> Treatment .78 .26 3.03 .01 .25 1.31
+> Control .95 .13 7.41 .00 .69 1.21
+> Difference -.17 .29 -.58 .57 -.76 .43
+> Felony Re-Arrest
+> Treatment .60 .29 2.05 .05 -.00 1.21
+> Control 1.13 .10 11.21 .00 .92 .1.34
+> Difference -.53 .31 -1.70 .10 -1.16 .11
+> VFO Re-Arrest
+> Treatment .53 .17 3.12 .01 .18 .88
+> Control .58 .07 8.09 .00 .43 .73
+> Difference -.05 .18 -.27 .79 -.43 .33
+
+Table 3.2 
+
+Controlled-Interrupted Time Series Models 
+
+Two-Year Recidvism 
+
+Note : p-values shown in bold indicate statistical significance. Data Collaborative for Justice 12 
+
+Figure 3.1 
+
+Controlled-Interrupted Time Series Models 
+
+Two-Year Recidivism Among Full Population  
+
+> Any re-arrest Felony re-arrest
+> VFO re-arrest
+
+Subgroup Effects: People with a Pending Case 
+
+We also conducted subgroup analyses of two-year recidivism among people with a pending criminal case 
+
+at the time of arraignment. Table 3.3 shows the descriptive statistics for this subset of individuals. The 
+
+results indicate that re-arrest rates increased for both the treatment and control groups post-reform. Data Collaborative for Justice 13 
+
+Treatment (Bail Ineligible)  Control (Bail Eligible)                         
+
+> Pre Reform Post Reform Diff. Pre Reform Post Reform Diff.
+> Any Re-Arrest 66.1% 69.9% +3.8% 55.6% 59.9% +4.3%
+> Felony Re-Arres t36.2% 44.0% +7.8% 31.2% 37.0% +5.8%
+> VFO Re-Arrest 19.8% 27.2% +7.4% 17.1% 21.3% +4.2%
+
+Table 3.3 
+
+Average Two-Year Recidivism Among Subgroup 
+
+Table 3.4 and Figure 3.2 show that post-reform, there were several statistically significant increases 
+
+within the groups, but no significant differences between them. However, the treatment group 
+
+showed a greater increase than the control group in violent felony re-arrest rates at a level that 
+
+approached statistical significance (p = .09). 29  (When modeled with a September 2019 interruption 
+
+date, this finding was statistically significant at the .05 level.)                                                           
+
+> Coef. Std. Err. tp-value 95% Confidence Interval
+> Any Re-Arrest
+> Treatment .56 .46 1.23 .23 -.38 1.49
+> Control 1.34 .32 4.13 .00 .68 2.01
+> Difference -.78 .56 -1.39 .17 -1.93 .37
+> Felony Re-Arrest
+> Treatment 1.23 .46 2.66 .01 .29 2.18
+> Control 1.64 .28 5.83 .00 1.06 2.22
+> Difference -.41 .54 -.75 .46 -1.52 .70
+> VFO Re-Arrest
+> Treatment 1.36 .36 3.74 .00 .62 2.11
+> Control .65 .18 3.62 .00 .28 1.02
+> Difference .71 .41 1.75 .09 -.12 1.54
+
+Table 3.4 
+
+Controlled-Interrupted Time Series Models: 
+
+Two-Year Recidivism Among Subgroup 
+
+Note : p-values shown in bold indicate statistical significance. Data Collaborative for Justice 14 
+
+Figure 3.2 
+
+Controlled-Interrupted Time Series Models 
+
+Two-Year Recidivism Among Subgroup  
+
+> Any re-arrest Felony re-arrest
+> VFO re-arrest
+
+## Pretrial Recidivism Results (Tracking Capped at 6 Months) 
+
+Table 3.5 shows descriptive statistics on the treatment and control group pre- and post-reform for 
+
+each pretrial recidivism measure. 
+
+For the treatment group, the average monthly pretrial re-arrest rates increased from 19.9% to 24.2% 
+
+for any re-arrest (+4.2%), from 11.2% to 15.7% for felony re-arrest (+4.5%), and from 3.1% to 5.8% for 
+
+violent felony re- arrest (+2.7%). For the control group, the average increased from 19.0% to 21.3% 
+
+(+2.3%), from 12.9% to 15.3% for felony re-arrest (+2.4%), and from 3.6% to 5.3% for violent felony 
+
+re-arrest (+1.7%). Data Collaborative for Justice 15 
+
+Treatment (Bail Ineligible)  Control (Bail Eligible) 
+
+Pre Reform  Post Reform  Diff.  Pre Reform  Post Reform  Diff. 
+
+Any Re-Arrest  19.9%  24.2%  +4.3%  19.0%  21.3%  +2.3% 
+
+Felony  Re-Arres t 11.2%  15.7%  +1.8%  12.9%  15.3%  +2.4% 
+
+VFO Re-Arrest  3.1%  5.8%  +2.7%  3.6%  5.3%  +1.7% 
+
+Table 3.5 
+
+Average Pretrial Recidivism Within 6 Months 
+
+Among the Full Population 
+
+Table 3.6 and Figure 3.3. show that while post-reform there were several statistically significant increases 
+
+within the groups, the differences between the groups were not statistically significant for any of the 
+
+recidivism measures. 
+
+Coef.  Std. Err.  t p-value  95% Confidence Interval 
+
+Any Re-Arrest 
+
+Treatment  .97  .61  1.60  .12  -.27  2.21 
+
+Control  .51  .24  2.09  .05  .01  1.00 
+
+Difference  .46  .65  0.71  .49  -.88  1.80 
+
+Felony Re-Arrest 
+
+Treatment  1.13  .47  2.41  .02  .17  2.09 
+
+Control  .69  .28  2.44  .02  .11  1.26 
+
+Difference  .45  .55  .81  .42  -.68  1.57 
+
+VFO Re-Arrest 
+
+Treatment  .65  .19  3.46  .00  .26  1.03 
+
+Control  .34  .15  2.33  .03  .04  .64 
+
+Difference  .31  .24  1.30  .20  -.18  .79 
+
+Table 3.6 
+
+Controlled-Interrupted Time Series Models: 
+
+Pretrial Recidivism Within 6 Months Among the Full Population 
+
+Note : p-values shown in bold indicate statistical significance. Data Collaborative for Justice 16 
+
+Figure 3.3 
+
+Controlled-Interrupted Time Series Models 
+
+Pretrial Recidivism Within 6 Months Among the Full Population 
+
+Subgroup Effects: People with a Pending Case 
+
+Table 3.7 shows descriptive statistics for individuals with a pending case. The results indicate that 
+
+average monthly pretrial re-arrest rates increased for both the treatment and control groups post-
+
+reform.  
+
+> Any re-arrest Felony re-arrest
+> VFO re-arrest
+
+Data Collaborative for Justice 17 
+
+Table 3.8 and Figure 3.4 show that post-reform, there were statistically significant increases within the 
+
+groups for felony re-arrest and violent felony re-arrest. However, the difference in post-intervention 
+
+trends was statistically significant only for violent felony re-arrest (t = 2.04, p = .05). 
+
+Coef.  Std. Err.  t p-value  95% Confidence Interval 
+
+Any Re-Arrest 
+
+Treatment  1.36  .90  1.51  .14  -.49  3.21 
+
+Control  .59  .55  1.07  .29  -.54  1.71 
+
+Difference  .78  1.06  .74  .47  -1.39  2.94 
+
+Felony Re-Arrest 
+
+Treatment  2.08  .64  3.26  .00  .77  3.38 
+
+Control  1.16  .48  2.40  .02  .17  2.14 
+
+Difference  .92  .80  1.15  .26  -.72  2.56 
+
+VFO Re-Arrest 
+
+Treatment  1.27  .26  4.88  .00  .74  1.81 
+
+Control  .54  .25  2.19  .04  .04  1.05 
+
+Difference  .73  .36  2.04  .05  .00  1.47 
+
+Table 3.8 
+
+Controlled-Interrupted Time Series Models: 
+
+Pretrial Recidivism Within 6 Months Among the Subgroup 
+
+Treatment (Bail Ineligible)  Control (Bail Eligible) 
+
+Pre Reform  Post Reform  Diff.  Pre Reform  Post Reform  Diff. 
+
+Any Re-Arrest  36.9%  46.5%  +9.6%  27.9%  31.3%  +3.4% 
+
+Felony  Re-Arres t 20.7%  31.0%  +10.3%  19.5%  23.1%  +3.6% 
+
+VFO Re-Arrest  5.8%  12.1%  +6.3%  4.9%  8.1%  +3.2% 
+
+Table 3.7 
+
+Average Pretrial Recidivism Within 6 Months Among the Subgroup 
+
+Note : p-values shown in bold indicate statistical significance. Data Collaborative for Justice 18 
+
+Figure 3.4 
+
+Controlled-Interrupted Time Series Models 
+
+Pretrial Recidivism Within 6 Months Among the Subgroup  
+
+> VFO re-arrest
+> Any re-arrest Felony re-arrest
+
+Data Collaborative for Justice 19 
+
+# Chapter 4. 
+
+# Conclusion and Limitations 
+
+This study used a controlled-interrupted time series design to assess the impact of New York’s original 
+
+bail reform law on recidivism. Effective from January 2020 to June 2020, the initial reform imposed 
+
+limits on judges’ discretion to set bail solely depending on the type of offense charged at arraignment. 
+
+By dividing individuals into treatment and control groups based on bail eligibility, we were able to 
+
+estimate not only whether recidivism increased following the reform, but also whether there was a 
+
+greater increase for those charged with an offense that became ineligible for bail under the new law. 
+
+Overall, we found that eliminating discretion to set bail for select charges, mostly misdemeanors 
+
+and non-violent felonies, was not associated with a system-wide change in either two-year or pretrial 
+
+recidivism in either direction. 30  However, when the analysis was narrowed to “high-risk” individuals 
+
+with a pending criminal case, we found an increase approaching statistical significance in violent 
+
+felony recidivism within two years, and a statistically significant increase in pretrial violent felony 
+
+recidivism. These results were consistent with previous work showing that New York’s bail reform 
+
+law was not associated with an increase in recidivism in general, but only among certain “high-risk” 
+
+individuals. 31 
+
+It is important to note that the July 2020 bail law amendments expanded discretion in a way that 
+
+has already allowed judges to set bail for a substantial portion of people arraigned with a pending 
+
+case. Specifically, the so-called harm-to-harm provision permits bail if the current charge and an 
+
+earlier pending charge are found to involve “harm to an identifiable person or property. 32  DCJ’s 
+
+prior research has shown that policy changes narrowly tailored to such “high risk” individuals were 
+
+associated with a small recidivism reduction. 33 
+
+Study Limitations 
+
+There are several caveats to this study to keep in mind. First, our analysis focused exclusively on the 
+
+impact of the law’s charge-based bail eligibility requirement. Eliminating bail for certain charges was 
+
+clearly the most significant component of the reform law. However, the legislation also included a 
+
+range of other provisions that might have affected recidivism rates for both the treatment and control 
+
+groups, such as making the availability of pretrial supervision universal and the requirement to set 
+
+the “least restrictive” release condition to ensure that a person returns to court. Though our study 
+
+design did not allow for a rigorous evaluation of these other provisions, it is possible that some of 
+
+the post-reform recidivism increases within the treatment and control groups that we found were 
+
+attributable to these changes. 
+
+Second, it is important to note that this study did not isolate the effect on specific individuals of 
+
+actually setting bail, but rather the elimination of discretion to set bail based on offense type. The 
+
+advantage of this approach was that it allowed us to evaluate the system-wide effect of the new 
+
+rule as applied by judges in New York City. However, it means that our findings partly reflect how 
+
+discretion in bail-setting was exercised before reform and where possible after (e.g., judges often 
+
+released people both before and after reform even on cases where they had the option to set bail). Data Collaborative for Justice 20 
+
+Finally, although our research design accounted for factors affecting both treatment and control 
+
+groups equally (e.g., changes due to Covid-19), potential confounding from factors that could have 
+
+affected the groups differently cannot be entirely ruled out. 
+
+Future Research on New York’s Bail Reform and Recidivism 
+
+• Upstate Recidivism Studies : Two forthcoming reports will extend the first analysis of the Bail 
+
+Reform and Recidivism Series as well as the current study to Upstate New York. 
+
+• Longer-Term Follow-Up : The final report of the series will examine the recidivism impact for 
+
+cases whose release decision was likely impacted by bail reform over a longer tracking period, 
+
+both in New York City and Upstate New York. Data Collaborative for Justice 21 
+
+Endnotes 
+
+1 Senate Bill S2101A, 2019-2020 Legislative Session (Sponsor: Michael Gianaris). (January 22, 2019). State of New York. 
+
+Available at:  https://legislation.nysenate.gov/pdf/bills/2019/S2101A 
+
+2 Lu, O. & Rempel, M. (2022). Two Years In: 2020 Bail Reforms in Action in New York State. Data Collaborative for Justice. 
+
+Available at:  https://datacollaborativeforjustice.org/work/bail-reform/two-years-in-2020-bail-reforms-in-action-in-new-york-state/ 
+
+3 Rodriguez, K. (2023). Bench Card: New York’s Bail Statute: Pretrial Options. New York, NY: Data Collaborative for Justice. 
+
+Available at:  https://datacollaborativeforjustice.org/work/practitioner-resources/new-yorks-bail-statute-pretrial-options/ 
+
+4 Stemen, D., & Olson, D. (2023). Is Bail Reform Causing an Increase in Crime? Harry Frank Guggenheim Foundation. 
+
+Available at:  https://www.hfg.org/hfg_reports/bail-reform-2023/ 
+
+5 Anderson, C., Redcross, C & Valentine, E. (2019). Evaluation of Pretrial Justice System Reforms That Use the Public Safety 
+
+Assessment: Effects of New Jersey’s Justice Reform. MDRC Center for Criminal Justice Research. 
+
+Available at:  www.mdrc.org/publication/evaluation-pretrial-justice-system-reforms-use-public-safety-assessment-0 
+
+6 Ouss A. & Stevenson, M. (2023). Does Cash Bail Deter Misconduct? American Economic Journal: Applied Economics, 15(3):150-182. 
+
+Available at:  https://doi.org/10.1257/app.20210349 
+
+7 Stemen, D. & Olson, D. (2020). Dollars and Sense in Cook County: Examining the Impact of General Order 18.8A on Felony Bond 
+
+Court Decisions, Pretrial Release, and Crime. Loyola University Chicago. 
+
+Available at:  https:// datacollaborativeforjustice.org/wp-content/uploads/2023/03/RecidivismReport-4.pdf 
+
+8 Redcross, C. & Henderson, B. (2019). Evaluation of Pretrial Justice System Reforms That Use the Public Safety Assessment: Effects 
+
+in Mecklenburg County, North Carolina. MDRC Center for Criminal Justice Research. 
+
+Available at:  www.mdrc.org/publication/evaluation-pretrial-justice-system-reforms-use-public-safety-assessment 
+
+9 Heaton, P. (2022). The Effects of Misdemeanor Bail Reform. Quattrone Center for the Fair Administration of Justice. 
+
+Available at:  https://www.law.upenn.edu/live/files/12290-the-effects-of-misdemeanor-bail-reform.pdf 
+
+10  Ropac, R. & Rempel, M. (2023). Does New York’s Bail reform Law Impact Recidivism? A Quasi-Experimental Test in New York 
+
+City. Data Collaborative for Justice. Available at:  https://datacollaborativeforjustice.org/work/bail-reform/does-new-yorks-bail-
+
+reform-law-impact-recidivism-a-quasi-experimental-test-in-new-york-city/ 
+
+11  Zhou, A., Koo, A., Kallus, N., Ropac, R., Peterson, R., Koppel, S., & Bergin, T. (2023). Synthetic Control Analysis of the Short-Term 
+
+Impact of New York State’s Bail Elimination Act on Aggregate Crime. Statistics and Public Policy, 1-26. 
+
+Available at:  https:// doi.org/10.1080/2330443X.2023.2267617 
+
+12  Wu, S., & McDowall, D. (2023). Does Bail Reform Increase Crime in New York State: Evidence from Interrupted Time-Series 
+
+Analyses and Synthetic Control Methods. Justice Quarterly, 1-29. Available at:  https://doi.org/10.1080/07418825.2023.2209145 
+
+13  Wu & MacDowell (2023), Op Cit.; Zhou, et al. (2023), Op Cit. 
+
+14  Ropac & Rempel (2023), Op Cit. 
+
+15  Ropac & Rempel (2023), Op Cit.; Dobbie, W., Goldin, J., & Yang, C. S. (2018). The effects of pretrial detention on conviction, future 
+
+crime, and employment: Evidence from randomly assigned judges. American Economic Review, 108(2), 201–240. 
+
+16  Ropac & Rempel (2023), Op Cit. The two most important predictors of elevated recidivism rates among released individuals 
+
+were having a pending case or a prior violent felony arrest in the two years before the start of the current case. 
+
+17  Lu & Rempel (2022), Op Cit. 
+
+18  Gupta, A., Hansman, C., & Frenchman, E. (2016). The heavy costs of high bail: Evidence from judge randomization. The Journal 
+
+of Legal Studies, 45(2), 471–505; Mueller-Smith, M. (2015). The criminal and labor market impacts of incarceration. Unpublished 
+
+working paper, 18; Heaton, P., Mayson, S., & Stevenson, M. (2017). The downstream consequences of misdemeanor pretrial 
+
+detention. Stanford Law Review, 69(March), 711–794; Dobbie, Goldin & Yang (2018), Op Cit.; Leslie, E., & Pope, N. G. (2017). The 
+
+unintended impact of pretrial detention on case outcomes: Evidence from New York City arraignments. The Journal of Law and 
+
+Economics, 60(3), 529–557. 
+
+19  Division of Criminal Justice Services (DCJS). (n.d.) Pretrial Release Data. Available at:  https://ww2.nycourts.gov/pretrial-release-
+
+data-33136 
+
+20  Feuer, A., Hong, N., Weiser, B., Ransom, J. (2020). N.Y.’s Legal Limbo: Pandemic Creates Backlog of 39,200 Criminal Cases. New 
+
+York Times. Available at:  https://www.nytimes.com/2020/06/22/nyregion/coronavirus-new-york-courts.html Data Collaborative for Justice 22 
+
+21  Abruzzese, R. (2019). Judges say that Brooklyn courts will be ready for criminal justice reform changes. Available at: 
+
+https://brooklyneagle.com/articles/2019/12/04/judges-say-that-brooklyn-courts-will-be-ready-for-criminal-justice 
+
+-reform-changes /; Conviser, D. (2019). New York’s Bail Reform Law: A Bench Book for Judges. Criminal Justice Legislation -
+
+Recommendations. 
+
+Available at:  https://cdn.ymaws.com/www.nysda.org/resource/resmgr/2020reforms/bail_reform_bench_book_for_j.pdf 
+
+22  Linden, A. (2015). Conducting interrupted time-series analysis for single- and multiple-group comparisons. The Stata Journal, 
+
+15(2), 480-500. 
+
+23  Cook, T. D., Campbell, D. T., & Shadish, W. (2002). Experimental and quasi-experimental designs for generalized causal inference 
+
+(Vol. 1195). Boston, MA: Houghton Mifflin. 
+
+24  Linden (2015), Op Cit. 
+
+25  Lopez Bernal, J., Cummins, S., & Gasparrini, A. (2018). The use of controls in interrupted time series studies of public health 
+
+interventions. International journal of epidemiology, 47(6), 2082-2093. 
+
+26  Bottomley, C., Scott, J. A. G., & Isham, V. (2019). Analysing interrupted time series with a control. Epidemiologic Methods, 8(1), 
+
+20180010. 
+
+27  Linden (2015), Op Cit.; Lopez-Bernal, Cummins, & Gasparrini (2018), Op Cit. 
+
+28  Linden, A. (2017). A comprehensive set of postestimation measures to enrich interrupted time-series analysis. The Stata Journal, 
+
+17(1), 73-88; Box, G. E., Jenkins, G. M., Reinsel, G. C., & Ljung, G. M. (2015). Time series analysis: forecasting and control. John Wiley & 
+
+Sons. 
+
+29  Some critics of bail reform assert that it increased the number of times individuals reoffended–a claim that cannot be tested 
+
+by simply examining whether or not people were re-arrested at least once during the tracking period. To address this question, we 
+
+conducted supplemental CITS models to test the reform’s effects on the percentage of individuals who recidivate repeatedly, i.e., 
+
+the number of people with multiple re-arrests divided by the number of people with at least one re-arrest. This outcome measure 
+
+allowed us to test whether repeated reoffending became more or less common due to the elimination of bail and pretrial detention. 
+
+We found no statistically significant differences between the treatment and comparison groups, indicating that eliminating bail for 
+
+select charges did not lead to an increase in repeat offending. 
+
+30  While DCJ’s previous research showed that bail reform led to a decrease in recidivism in the subset of cases likely to have bail set, 
+
+it is possible that the low rates of bail-setting in this broader population made it difficult to detect this effect in the current study. 
+
+31  Ropac & Rempel (2023), Op Cit. 
+
+32  Rodriguez, K. & Rempel, M. (2023). Explaining New York’s 2023 Bail Reform Amendments. Data Collaborative for Justice. 
+
+Available at:  https://datacollaborativeforjustice.org/work/bail-reform/explaining-new-yorks-2023-bail-reform-amendments/ 
+
+The Data Coll aborative for Justice (DCJ) a t John Jay  College of Criminal Justice houses a group of research initiatives that raise 
+
+important questions and share critical research about the criminal justice system and its role in creating safe, just, and equitable 
+
+communities. DCJ conducts data analysis and research on enforcement in the community, the adjudication of cases in the 
+
+courts, and the use of confinement in jails and prisons. DCJ’s work has informed policy reforms, facilitated partnerships between 
+
+researchers and government agencies across the country, spurred new scholarly research on lower-level enforcement, and has been 
+
+cited extensively in the press. For more information about the Data Collaborative for Justice please visit: 
+
+https://datacollaborativeforjustice.org/ .
+
+About Us

@@ -1,0 +1,78 @@
+Title: Chinese Researchers Claim Military Grade Encryption Broken by Quantum Computer: Challenges For The Current
+
+URL Source: https://pera-prometheus.com/chinese-researchers-claim-military-grade-encryption-broken-by-quantum-computer-challenges-for-the-current-cryptographic-system/
+
+Published Time: 2024-12-03T15:13:40+00:00
+
+Markdown Content:
+### Table of Contents
+
+1.   The Claim
+2.   The Current Landscape of Encryption
+    1.   What is Encryption?
+
+3.   Quantum Computing: A Paradigm Shift
+4.   Harvest Now, Decrypt Later
+5.   Preparation for a Post-Quantum World
+
+### **The Claim**
+
+In the recent news, chinese researchers claim to have used a D-Wave Advantage quantum computer to break specific encryption algorithms based on the Substitution-Permutation Network (SPN), a common structure in encryption. SPNs secure data by repeatedly substituting (replacing) and permuting (reordering) parts of it, and they are foundational to widely used encryption systems like AES (Advanced Encryption Standard).
+
+The D-Wave Advantage quantum computer is a specialised quantum machine designed for solving optimisation problems rather than general-purpose quantum computing. While not traditionally suited for encryption cracking, researchers adapted it for this specific task. They targeted simplified SPN algorithms like Gift-64, which is a lightweight encryption system designed for resource-constrained devices like IoT (Internet of Things) devices. Gift-64 uses smaller key sizes (64-bit keys) compared to AES-256’s 256-bit keys, making it less secure.
+
+The researchers’ attack successfully compromised these simpler encryption methods, but the approach is far from breaking stronger, real-world encryption systems like AES-256.
+
+This research demonstrates the potential of quantum computers to challenge encryption in the future, even if today’s encryption standards remain secure. It highlights the urgent need for quantum-resistant encryption techniques to prepare for advances in quantum computing.
+
+### **The Current Landscape of Encryption**
+
+##### **What is Encryption?**
+
+Encryption is a process used to protect information by converting it into a code, so only authorised parties with the correct encryption keys can read it. For example, when you shop online or send a message on a secure app, encryption ensures that hackers or unauthorised users cannot intercept and understand the data. It is like locking your information in a secure box that only the intended recipient has the key to open.
+
+Encryption is critical for most modern day-to-day activities ranging from:
+
+*   **Online banking and shopping:** Protecting credit card and financial details.
+
+*   **Secure messaging apps:** Ensuring privacy in communications.
+
+*   **Government and military:** Securing national classified information.
+
+*   **Everyday internet use:** Safeguarding passwords, emails, and sensitive data whilst browsing.
+
+The two most common encryption standards widely used are:
+
+*   **AES (Advanced Encryption Standard):**is one of the most widely used symmetric encryption methods, trusted by governments, businesses, and organisations worldwide. It uses a single secret key to encrypt and decrypt data and it comes in different “strengths” such as AES-128, AES-192, and AES-256, with the numbers indicating the size of the encryption key. The larger the key, the more secure the encryption. AES-256, the strongest variant, is considered the gold standard, as its 256-bit key offers an astronomical number of possible combinations (2²⁵⁶), making it virtually unbreakable by even the fastest supercomputers today.
+
+*   **RSA (Rivest-Shamir-Adleman)****:** is another critical encryption method, commonly used for secure communications like websites with HTTPS. It is an asymmetric encryption and works differently from AES by relying on a pair of keys—a public key for encryption and a private key for decryption
+
+While AES is faster and often used to encrypt large amounts of data, RSA is slower and typically used to securely exchange keys or verify identities. Together, AES and RSA form the backbone of modern encryption systems, balancing speed and security for a wide range of applications and keeping our data safe daily. However, with advancements in quantum computing and claims like the recent one, the pressing question is how long these systems can remain unbreakable.
+
+### **Quantum Computing: A Paradigm Shift**
+
+Quantum computing represents a new kind of computing that operates entirely differently from traditional systems. Regular computers use bits that are either 0 or 1. Quantum computers use qubits, which can be 0, 1, or both simultaneously. This allows them to explore many possibilities at once, making them extraordinarily fast.
+
+Another quantum phenomenon is entanglement, where qubits are connected therefore a change to one instantly affects the other, even at a distance. These unique features make quantum computers powerful for solving problems beyond the reach of classical computers.
+
+Currently, quantum computers are still being developed but not used for everyday tasks.
+
+In the future however, they will most likely revolutionise the world we live in. From a cybersecurity perspective, the potential of fully developed quantum computing poses significant risks to current encryption standards.
+
+### **Harvest Now, Decrypt Later**
+
+A critical concern in the quantum era is the “harvest now, decrypt later” strategy employed by sophisticated threat actors. Even if encrypted data cannot currently be decrypted, attackers may collect and store sensitive information with the expectation that future quantum advancements will enable decryption.
+
+This threat is particularly alarming for long-term sensitive data such as military secrets, health records, or intellectual property that remain valuable for decades. High-value organisations like government agencies, financial institutions, and global corporations are at the highest risk to fall victim of the harvest now, decrypt later strategy. These same organisations also have the most to gain and are best placed to have the means to develop quantum-computing capabilities.
+
+### **Preparation for a Post-Quantum World**
+
+The looming quantum threat has accelerated the development of quantum-resistant cryptographic algorithms. Known as Post-Quantum Cryptography (PQC), these systems aim to withstand both classical and quantum attacks. The U.S. National Institute of Standards and Technology (NIST) has been actively working on standardising such algorithms to ensure data protection in the advent of large-scale quantum computers, which could potentially compromise current public-key cryptosystems.
+
+On August 13, 2024, NIST approved three Federal Information Processing Standards (FIPS) for post-quantum cryptography. These standards specify key establishment and digital signature schemes designed to resist future attacks by quantum computers, thereby ensuring the confidentiality and integrity of future digital communications.
+
+*   **FIPS 203**: Module-Lattice-Based Key-Encapsulation Mechanism Standard
+*   **FIPS 204**: Module-Lattice-Based Digital Signature Standard
+*   **FIPS 205**: Stateless Hash-Based Digital Signature Standard
+
+The transition to post-quantum cryptography is a proactive measure to safeguard information against emerging quantum threats, emphasising the importance of preparing current security infrastructures for future advancements in quantum computing. The age of quantum computing is fast approaching and the actions we take today will determine whether we enter it prepared or exposed.

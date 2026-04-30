@@ -1,0 +1,105 @@
+Title: Access to emergency medical services in Beijing: integrating web mapping application programming interfaces and empirical Bayesian Kriging interpolation analysis
+
+URL Source: https://pmc.ncbi.nlm.nih.gov/articles/PMC12093440/
+
+Markdown Content:
+* * *
+
+Emergency medical services (EMS) are a vital element of the public healthcare system in China,[1] providing an opportunity to respond to critical medical conditions and save people’s lives.[2] The accessibility of EMS has received considerable attention in health and transport geography studies.[3] One of the optimal gauges for evaluating the accessibility of EMS is the response time, which is defined as the time from receiving an emergency call to the arrival of an ambulance.[4] Beijing has already reduced the response time to approximately 12 min, and the next goal is to ensure that the response time across Beijing does not exceed 12 min (the information comes from the Beijing Emergency Medical Center).
+
+Previous studies on the accessibility of EMS have often used geographic information systems (GIS)-based network analysis[5] and the two-step floating catchment area (2SFCA) method.[6] However, these methods cannot effectively capture real-time traffic and the accurate response time of the EMS. Therefore, we attempt to involve web mapping application programming interfaces (APIs) provided by map service providers, offering hypertext transfer protocol (HTTP) interfaces for accessing real-time geographic data.[7]
+
+The aim of this study was to evaluate the accessibility of EMS in Beijing. We developed a new model that integrates web mapping APIs with empirical Bayesian Kriging (EBK) interpolation to evaluate the accessibility of EMS at different time and in different districts of Beijing.
+
+Beijing is the capital of China, with 16 districts and a total population of 21.85 million (by the end of 2023). There is a higher population density in the central districts (including six districts, such as Xicheng district) and a lower population density in the suburbs (including 10 districts, such as Tongzhou district).
+
+The EMS process typically includes the following stages: ambulance departure, driving to the scene, treatment onsite, and transfer to the hospital.[8] Based on the time sequence, the response time includes the ambulance departure time and the ambulance driving time. According to the regulations set by the National Health Commission of China, by 2025, the maximum ambulance departure time for 95% of EMS cases must not exceed 3 min[9] (http://www.nhc.gov.cn/yzygj/s3594q/202009/4b20d1ac72914b3997f76110ccc0103d.shtml).
+
+The coordinates of the 471 EMS stations were obtained from the Beijing Emergency Medical Center, and the Beijing population distribution data were obtained from the “LandScan HD China v1.0 2022” [dataset],[9] with a resolution of 100 meters.
+
+The ambulance driving time from the EMS stations to the emergency call points was determined via the Amap platform API (https://lbs.amap.com/api/webservice/guide/api/direction). The data sampling period spans from May 11 to May 15, 2024, July 1 to July 12, 2024, and January 20 to January 25, 2025, covering all working days within these periods. A total of 5.95 million valid data entries were collected.
+
+This study constructed a model that integrates web mapping APIs with the EBK method to evaluate the spatiotemporal variability in EMS accessibility in Beijing. We also developed effective evaluation metrics, including the average population-weighted response time (ART) and EMS accessibility isochrone (EAI) population coverage, to assess citywide EMS accessibility and the disparity in EMS service quality among urban districts.
+
+In this study, we used LandScan data to identify EMS demand areas. These areas were then divided into a 200 m × 200 m resolution matrix, with the center of each unit serving as the call point. We then identified the three nearest EMS stations to each call point, facilitating origin-destination (OD) matching.
+
+Owing to the clear patterns of traffic conditions in Beijing on weekdays, we aimed to sample four time periods to reflect the impact of different traffic situations on EMS accessibility. The sampled time periods included 00:00 (smooth traffic), 12:00 (regular traffic), 16:00 (secondary peak traffic), and 18:00 (peak traffic). The ambulance travel time of all call points was calculated via the Amap platform API, with an additional 3 min added to account for the ambulance departure time.
+
+Based on the time lattice data, we used the EBK method to predict EMS accessibility and applied the LandScan data (value>0) as a mask to generate the final multitemporal EMS accessibility layers for Beijing.
+
+The ART was calculated by summing the product of the EMS response time for each spatial unit and the population within that unit and then dividing by the total population of the city. The following formula was used for calculation:
+
+where _n_ is the total number of spatial units within the statistical area, _P i_ is the population within spatial unit _i_, and _T i_ is the EMS response time for spatial unit _i_.
+
+We converted the accessibility raster map into vector polygons at time intervals and generated EAIs at 3-minute intervals. Given that Beijing’s EMS response time is below the 12-minute target, we calculated the ratio of the population covered by the 9-, 12-, and 15-minute EAIs to the total population to assess the gap between the current EMS accessibility in Beijing and the established targets.
+
+Based on the multitemporal EMS accessibility layers for Beijing (supplementary Figure 1), the EMS quality at 00:00 was significantly better than that at 18:00. The ART was 11.62 min at 00:00 and increased to 12.38 min at 12:00, 12.55 min at 16:00, and 12.90 min at 18:00 (Table 1).
+
+Table 1.
+--------
+
+Multitemporal ART for each district in Beijing
+
+| Districts | 00:00 (min) | 12:00 (min) | 16:00 (min) | 18:00 (min) |
+| --- | --- | --- | --- | --- |
+| Xicheng* | 9.68 | 11.16 | 11.23 | 12.36 |
+| Chaoyang* | 10.32 | 10.79 | 11.52 | 12.04 |
+| Shijingshan* | 10.38 | 11.41 | 11.59 | 12.23 |
+| Dongcheng* | 10.44 | 11.62 | 11.97 | 12.50 |
+| Fengtai* | 10.67 | 11.20 | 11.76 | 12.18 |
+| Haidian* | 11.10 | 11.67 | 12.29 | 12.85 |
+| Pinggu | 11.15 | 11.39 | 11.86 | 11.89 |
+| Shunyi | 11.40 | 11.66 | 12.30 | 12.38 |
+| Changping | 11.83 | 12.09 | 12.77 | 13.21 |
+| Tongzhou | 11.84 | 12.17 | 12.64 | 13.13 |
+| Fangshan | 12.09 | 12.66 | 12.98 | 13.17 |
+| Miyun | 12.18 | 12.31 | 12.87 | 12.90 |
+| Yanqing | 12.36 | 12.77 | 13.16 | 13.31 |
+| Daxing | 12.72 | 12.84 | 13.28 | 13.62 |
+| Huairou | 12.83 | 13.11 | 13.69 | 13.92 |
+| Mentougou | 13.54 | 14.18 | 14.43 | 14.59 |
+| Beijing | 11.62 | 12.38 | 12.55 | 12.90 |
+
+* represents the central districts. ART: average population-weighted response time.
+
+At 00:00, the EAI population coverage rates for 9 min, 12 min, and 15 min were 24.33%, 65.78%, and 89.03%, respectively, and at 18:00, they decreased to 15.25%, 48.95%, and 78.89%, respectively. Overall, the population coverage rate of the 12-minute EAI decreased from 65.78% at 00:00 to 48.95% at 18:00.
+
+The shortest ART occurred in Xicheng district (9.68 min) at 00:00, followed by Chaoyang district (10.32 min). The longest ART was in Mentougou district, where the duration of ART was 14.59 min at 18:00 (Table 1).
+
+At 00:00, the highest 12-minute EAI population coverage rate was in Xicheng district (96.59%), and the lowest was in Daxing district (48.04%). By 18:00, the highest 12-minute EAI population coverage rate was in Shijingshan district (63.12%), and the lowest was in Daxing district (40.68%), with the 12-minute EAI population coverage rate in Xicheng dropping to 53.41%.
+
+This study introduced a model that integrates web mapping APIs and the EBK method to quantify city-wide EMS accessibility and disparities in EMS quality across each district of Beijing.
+
+We found that the accessibility of EMS in Beijing was clearly affected by traffic conditions. Only during the smooth-traffic period did the ART in Beijing last less than 12 min, with a 65.78% population coverage rate within the 12-minute EAI. However, during peak traffic periods, the ART increased to 12.90 min, and the 12-minute EAI population coverage rate decreased to 48.95%.
+
+Furthermore, the accessibility of the EMS varied significantly across districts, with the central districts having significantly better accessibility than the suburbs. At 00:00, the ART of Xicheng was only 9.68 min, much lower than that of the worst district, Mentougou (13.54 min). However, the accessibility of EMS in the central districts was significantly affected by traffic congestion. In Xicheng, the 12-minute EAI population coverage rate decreased from 96.59% at 00:00 to 53.41% by 18:00, placing it in the middle of the citywide ranking.
+
+Thus, the evolution of the EMS system in Beijing necessitates further advancement, with a primary focus on establishing EMS stations in suburban districts to mitigate regional disparities. In the central districts, it is imperative to consider the deployment of temporary EMS stations within high-traffic commuting zones, thereby mitigating the precipitous decrease in the accessibility of EMS during peak-traffic hours.
+
+There were several limitations to our study. First, the study sampled the EMS driving time data from 20 workdays, which might not represent typical conditions. Second, the LandScan population data represent the average annual spatial distribution of the population, omitting real-time mobility and local changes.
+
+In summary, this study introduced a model to precisely calculate the accessibility of EMS, revealing significant spatiotemporal variations. Our approach effectively assessed the quality of the current EMS system. The study also revealed that the accessibility of EMS in Beijing differed among the districts and in different time periods and that the EMS metrics obtained in Beijing did not reach the set targets. Additionally, the study demonstrated that the accessibility of EMS in the central districts was much better than that in the suburbs but was significantly affected by traffic conditions. Although this study was conducted in Beijing, the research method could be applied to other countries and regions. Furthermore, this approach can be extended beyond EMS studies to include fire services, public safety, and other urban public services.
+
+Figure 1. Multitemporal 12-minute EAI population coverage rate for each district in Beijing. * represents the central districts.
+--------------------------------------------------------------------------------------------------------------------------------
+
+**Funding:** The study was supported by National Key Research & Development Program of China (2022YFC3006201).
+
+**Ethical approval:** The study was approved by the Ethics Committee of the Beijing Emergency Medical Center (2024-09-003).
+
+**Conflicts of interests:** The authors declare that they have no competing interests.
+
+**Contributors:** JJZ and HLZ conceived the study idea for this article; HLZ wrote the first draft; HLZ and MX collected the data; HLZ and LYZ analyzed the data; JJZ suggested critical revisions. All authors have read and approved the final version of the manuscript and agreed with the order of presentation of the authors.
+
+REFERENCES
+----------
+
+*   1. Pan C, Pang JJ, Cheng K, Xu F, Chen YG. Trends and challenges of emergency and acute care in Chinese mainland: 2005-2017. World J Emerg Med. 2021; 12(1):5-11.  [DOI] [PMC free article] [PubMed] [Google Scholar]
+*   2. Pan C, Huang XR, Pang JJ, Cheng K, Xu F, Chen YG. Trends in mortality of emergency departments patients in China. World J Emerg Med. 2019; 10(3):152-5.  [DOI] [PMC free article] [PubMed] [Google Scholar]
+*   3. Hansen WG. How accessibility shapes land use. J Am Inst Plan. 1959; 25(2):73-6.  [Google Scholar]
+*   4. Al-Shaqsi SZK. Response time as a sole performance indicator in EMS: Pitfalls and solutions. Open Access Emerg Med. 2010; 2:1-6.  [PMC free article] [PubMed] [Google Scholar]
+*   5. Silalahi FES, Hidayat F, Dewi RS, Purwono N, Oktaviani N. GIS-based approaches on the accessibility of referral hospital using network analysis and the spatial distribution model of the spreading case of COVID-19 in Jakarta, Indonesia. BMC Health Serv Res. 2020; 20(1):1053.  [DOI] [PMC free article] [PubMed] [Google Scholar]
+*   6. Khashoggi BF, Murad A. Use of 2SFCA method to identify and analyze spatial access disparities to healthcare in Jeddah, Saudi Arabia. Appl Sci. 2021; 11(20): 9537.  [Google Scholar]
+*   7. Rong PJ, Zheng ZC, Kwan MP, Qin YC. Evaluation of the spatial equity of medical facilities based on improved potential model and map service API: a case study in Zhengzhou, China. Appl Geogr. 2020; 119:102192.  [Google Scholar]
+*   8. Moore L. Measuring quality and effectiveness of prehospital EMS. Prehosp Emerg Care. 1999; 3(4):325-31.  [DOI] [PubMed] [Google Scholar]
+*   9. Moehl J, Reith A, McKee J, Weber E, Laverdiere M, Swan B, et al. LandScan HD China v1.0. Oak Ridge, TN: Oak Ridge National Laboratory; 2023.  [Google Scholar]

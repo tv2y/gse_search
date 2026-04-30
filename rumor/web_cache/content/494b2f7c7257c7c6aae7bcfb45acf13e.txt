@@ -1,0 +1,2781 @@
+Title: The Short-Term Impacts of Bail Policy on Crime in Los Angeles
+
+URL Source: https://capolicylab.org/wp-content/uploads/2024/08/Short-Term-Impacts-of-Bail-Policy-on-Crime-in-Los-Angeles.pdf
+
+Published Time: Mon, 26 Aug 2024 23:01:00 GMT
+
+Markdown Content:
+AUGUST 2024 
+
+## THOMAS SLOAN, MOLLY PICKARD, JOHANNA LACOE, MIA BIRD, 
+
+## AND STEVEN RAPHAEL 
+
+# The Short-Term Impacts 
+
+# of Bail Policy on Crime 
+
+# in Los Angeles 
+
+# Committee on Revision 
+
+# of the Penal Code 2THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+The California Policy Lab generates research insights for government impact. We are an independent, nonpartisan research institute at 
+
+the University of California with sites at the Berkeley and Los Angeles campuses. 
+
+This research stems from a partnership between the California Policy Lab at the University of California and the Committee on 
+
+Revision of the Penal Code, a state agency that studies and makes recommendations to improve California’s criminal legal system. 
+
+This research publication reflects the views of the authors and not necessarily the views of our funders, our staff, the California Policy 
+
+Lab Advisory Board, the California Committee on the Revision of the Penal Code, or the Regents of the University of California. 
+
+# TABLE OF CONTENTS 
+
+Executive summary  3
+
+Introduction  5
+
+Policy context in Los Angeles  7
+
+Data  10 
+
+Los Angeles County Superior Court  10 
+
+Los Angeles County Sheriff’s Department  10 
+
+Data: LA County Jail populations  10 
+
+Los Angeles Police Department  11 
+
+Data: LAPD arrests  11 
+
+Data: LAPD crime reports  11 
+
+Trends in bookings, releases, and crime  12 
+
+Methods  16 
+
+Results  19 
+
+Impact of the retraction of the Emergency Bail Schedule in 
+
+Los Angeles County (July 2022)  19 
+
+Impact of the resumption of the Emergency Bail Schedule in the City of Los 
+
+Angeles (May 2023)  24 
+
+Impact of the implementation of the PARPs (October 2023)  29 
+
+Discussion and conclusion  34 
+
+Bibliography  38 
+
+Appendix  40 
+
+Policy implementation details  40 
+
+Interrupted time series design  41 
+
+Regression discontinuity design  42 
+
+Neighborhood level results  51 3THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+# Executive Summary 
+
+Since March 2020, Los Angeles County has experienced several distinct shifts 
+
+in bail policy, shaping how people experience the pretrial process and igniting a 
+
+dialogue about bail reform, equity, and safety. During the COVID-19 pandemic, 
+
+LA County implemented an emergency bail schedule for most misdemeanors and 
+
+low-level felonies (sometimes referred to as “zero bail”). In July 2022, LA County 
+
+returned to the normal bail schedule, where a person who is arrested could 
+
+pay the amount specified by the bail schedule and immediately be released from 
+
+custody before their first court date. In May 2023, a successful court challenge 
+
+to bail practice caused the Los Angeles Police and Sheriff's Departments to 
+
+return to the emergency bail schedule. This was followed shortly thereafter by 
+
+the countywide implementation of a new, more permanent approach to pretrial 
+
+release decisions — the Pre-Arraignment Release Protocols (PARPs) — in 
+
+October 2023. Under the PARPs, no monetary bail is set for people arrested for 
+
+certain lower-level offenses, and for some offenses judges are able to consider 
+
+additional information when making a release decision, such as criminal history, 
+
+previous failures to appear for court, and risk assessment recommendations. 
+
+# KEY FINDINGS 
+
+We leverage these three distinct policy shifts to estimate the short-run effects of 
+
+bail policy changes on jail populations, crime reports, and arrests. We find: 
+
+• Removing the emergency bail schedule and reverting back to 
+
+cash bail increased average daily jail populations with no short-
+
+term effect on citywide crime.  The retraction of the emergency bail 
+
+schedule in July 2022 resulted in a statistically significant increase in the average 
+
+daily jail population over the following two months, and no change in arrests 
+
+or crime reports. 
+
+• Reinstating the emergency bail schedule did not change the 
+
+average county daily jail population or total citywide crime in 
+
+the following two months, but some property crimes increased. 
+
+The resumption of the emergency bail schedule in May 2023 did not cause 
+
+the average daily jail population to vary from its pre-period decline, but did 
+
+cause a decline in pretrial jail population beyond the pre-period trend. At the 
+
+same time, there was no statistically significant change in total crime reports 
+
+or arrests, but reports of property crime increased relative to the pre-period 
+
+trend. 4THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+• The PARPs decreased daily overall and pretrial county jail 
+
+populations in the two months after implementation, with no 
+
+effect on citywide crime.  The daily pretrial jail population decreased by 
+
+over 200 people (or three percent) on average relative to the pre-period trend 
+
+following the implementation of the PARPs. Despite the decrease in people 
+
+held in jail, there was no change in any measure of reported crime during the 
+
+same period. Arrests for misdemeanor offenses declined, while overall arrest 
+
+trends did not change. 
+
+Despite concerns that these bail reforms would lead to increases in crime, we do 
+
+not observe consistent changes in total crime in the City of Los Angeles for the 
+
+two months following these bail policy shifts. In addition, a return to the standard 
+
+bail schedule increased daily jail populations but did not reduce crime. Early 
+
+evidence from the PARPs suggests that the approach can reduce jail populations 
+
+while maintaining public safety, particularly during the pretrial period. 5THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+# Introduction 
+
+Bail was originally intended as a mechanism to ensure that an individual who has 
+
+been arrested will appear at their future court appearances. A person is required 
+
+to pay a bail amount set by the judge, which is forfeited if they fail to appear for 
+
+court proceedings. If they cannot pay the bail amount, they remain in pretrial 
+
+detention. A central criticism of the traditional bail approach is that it leads to the 
+
+detention of individuals based on their inability to afford bail, and not on their risk 
+
+of failing to appear in court or the risk they pose to public safety. 
+
+In recent years, some states, including California, have actively pursued bail reform. 
+
+Illinois has opted for the complete elimination of cash bail, while other states 
+
+and cities have reduced their reliance on cash bail. In Los Angeles, the court-led 
+
+policies are focused on enhancing fairness, particularly for indigent people and 
+
+people of color. 
+
+Proponents of traditional bail assert that bail reforms, including policies that set 
+
+bail at zero dollars for certain offenses, will lead to higher pretrial release rates 
+
+and increased crime. Theoretically, bail reforms could affect crime through two 
+
+mechanisms: a weakening of the incapacitation effect of detention, whereby 
+
+individuals who are detained pretrial are unable to commit new crimes; and a 
+
+weakening of the deterrent effect, whereby people in the jurisdiction are less likely 
+
+to commit crimes when the likelihoods of a consequence (pretrial detention or 
+
+bail) are high. 
+
+A nascent body of research assesses the individual- and jurisdiction-level effects 
+
+of reforms that limit the use of cash bail. The first set of papers estimate the 
+
+effect of bail reform on release and pretrial misconduct outcomes for individuals 
+
+by comparing outcomes for cases processed before or after changes in bail 
+
+policy. Evidence on individual effects from Ouss and Stevenson (2023) suggests 
+
+that a “No-Cash-Bail” policy implemented in Philadelphia for misdemeanor and 
+
+nonviolent felonies resulted in no overall effect on pretrial release rates, and no 
+
+effect on pretrial misconduct. Lacoe, Skog, and Bird (2024) examined a policy 
+
+change in San Francisco that required bail to be set at levels affordable to the 
+
+individual, and found increases in pretrial release but no change in subsequent 
+
+arrest or conviction. 
+
+Other studies investigate the impact of bail reforms on crime in the affected 
+
+jurisdiction, beyond the behavior of individuals who were released under the 
+
+new policies. Cash bail could serve as a general deterrent against crime; if so, a 
+
+bail reform’s effects on crime may extend beyond the arrested individuals whose 
+
+detention outcomes are affected by the policy. Heflin and McCannon (2023) 
+
+provide evidence on the overall effect of reinstating cash bail after the expiration 6THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+of California’s COVID-19 emergency bail schedule on monthly jurisdictional crime 
+
+rates in California. They find that from 2020 through the end of 2021, jurisdictions 
+
+that maintained the emergency bail policy experienced small increases in violent 
+
+crime (specifically aggravated assaults) and inconsistent effects on property crime 
+
+relative to jurisdictions that returned to cash bail. 1 A study in Cook County, Illinois, 
+
+of a 2017 reform replacing monetary bail with release on own-recognizance or 
+
+affordable bail found no change in countywide crime in the six months following 
+
+the policy (Stemen and Olson, 2020). At the state level, Jahn and colleagues (2024) 
+
+examined New Jersey’s 2017 bail reform that eliminated pretrial detention due to 
+
+the inability to afford bail, which resulted in increased pretrial release rates. Using 
+
+a synthetic control approach, the authors found the bail reform had no effects on 
+
+firearm-related mortality or shootings in the three-year post-period relative to the 
+
+pre-period. Finally, Wu and McDowall (2024) apply both interrupted time series 
+
+and synthetic control approaches to study a 2020 bail reform in New York State, 
+
+and find negligible changes in monthly crime rates in the year following the reform. 
+
+Taken together, these studies find very little change in individual or aggregate crime 
+
+following bail reforms, even when pretrial releases increase. 
+
+Variation in bail policy over the past four years — in response to the COVID-19 
+
+pandemic, court cases challenging the practice, and policy reforms — provides 
+
+an opportunity to assess the impact of bail policy on crime. We examine this 
+
+relationship in the city of Los Angeles, where several changes in bail policy have 
+
+been enacted in recent years.  
+
+> 1However, aggravated assault (the only measure of assault in the data) was usually not subject to the emergency bail schedule given the seriousness of the
+> crime, and the study does little to explain why ending the emergency bail schedule would generate a change in those types of crimes
+
+7THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+# Policy Context in Los Angeles 
+
+Since 2020, Los Angeles County has used traditional bail and also implemented 
+
+bail reforms  (Figure 1 and Appendix Table A) . Prior to the COVID-19 pandemic, 
+
+Los Angeles County used a schedule of cash bail for each offense. Under this 
+
+approach — which is still used in most of the rest of the state — a person who 
+
+is arrested could pay the amount specified by the bail schedule and immediately 
+
+be released from custody before their first court date. Most people who were 
+
+released this way could not afford to pay the full amount and instead used a 
+
+bail bond company which requires paying around 10% of the amount in the bail 
+
+schedule. Someone who posts full bail on their own has their money returned 
+
+to them following case disposition and appearances at all required court dates. 
+
+For those who use a bail bond company, however, the 10% deposit is not 
+
+returned and essentially constitutes a fee paid to the company. For instance, if 
+
+bail is set at $30,000 (the amount in LA’s 2022 bail schedule for possession of 
+
+controlled substances up to 1 kg), then an individual would pay $3,000 to a bail 
+
+bond company, which in turn would post the full bail amount to the court on 
+
+the individual’s behalf. This approach has been heavily criticized for being unfair to 
+
+people who cannot afford to pay for their release and are detained despite posing 
+
+little threat to public safety and being at low risk of failing to appear in court. 
+
+Two California federal courts in Sacramento and San Francisco 2 have found the 
+
+use of pre-arraignment cash bail schedules without consideration of an individual’s 
+
+ability to pay to be unconstitutional. 3 California courts still retain the ability to 
+
+deny pre-trial release entirely to people presenting specified public safety risks. 
+
+In response to the pandemic, on March 17, 2020, Los Angeles County 
+
+implemented an emergency bail schedule. This was quickly followed by a 
+
+statewide COVID-19 emergency bail schedule in April 2020, which superseded 
+
+LA’s schedule and which aimed to reduce statewide jail populations by setting bail 
+
+at zero dollars for most misdemeanors and low level felonies. 4 During its lifespan, 
+
+the Los Angeles emergency bail schedule applied to an estimated 26% of Los 
+
+Angeles Police Department (LAPD) arrests resulting in a booking, while 74% of 
+
+booking arrests were for offenses that were not affected by the emergency bail 
+
+schedule (see Appendix Table B). While the statewide COVID-19 emergency bail 
+
+schedule expired on June 20, 2020, Los Angeles County maintained an emergency 
+
+bail schedule until July 1, 2022, when it returned to a standard cash bail system.              
+
+> 2Buffin v. City and County of San Francisco , Northern District of California, Case No 15-cv-04959, March 4, 2019; Welchen v. Bonta , Eastern District of California,
+> Case No 16-cv-00185, September 5, 2023
+> 3The California Supreme Court’s 2021 ruling in the Humphrey case addresses bail amounts set by judges after the first court appearance, while the policies in
+> question in this report focus on pre-arraignment bail In re Humphrey , 11 Cal 5th 135 (2021
+> 4“Judicial Council Adopts New Rules to Lower Jail Population, Suspend Evictions and Foreclosures ” 2020 California Judicial Council https://newsroom.courts.
+> ca.gov/news/judicial-council-adopts-new-rules-lower-jail-population-suspend-evictions-and-foreclosures
+
+8THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org  
+
+> FIGURE 1
+
+Timeline of changes to Los Angeles bail policies, beginning in March 2020 
+
+Urquidi v. City of Los Angeles  was filed in November 2022 as a class action in state 
+
+court against the County and City of Los Angeles, the Los Angeles Sheriff’s 
+
+Department (LASD), the LAPD, and the Chief of the LAPD, challenging the 
+
+policy of using a pre-arraignment cash bail schedule. On May 24th, 2023 the 
+
+court issued a preliminary injunction barring the LASD or LAPD from using the 
+
+pre-arraignment cash bail schedule and requiring the agencies to use the county’s 
+
+then-expired emergency bail schedule while the parties attempted to come up 
+
+with a new system. 
+
+While the proceedings in the  Urquidi  case were underway, the Los Angeles 
+
+Superior Court developed the Pre-Arraignment Release Protocols (PARPs) that 
+
+went into effect county-wide on October 1, 2023. Similar to the emergency bail 
+
+schedule, the PARPs set no monetary bail for people arrested for certain lower-
+
+level offenses and for other offenses — or at the request of law enforcement for 
+
+any offense — requires prompt review of release conditions by a magistrate. 
+
+For more serious offenses (including all domestic violence offenses), the traditional 
+
+cash bail schedule still applies and the PARPs has no impact. The PARPs only 
+
+apply for the time between arrest and a first court date. In some circumstances 
+
+the PARPs also allow magistrates to consider additional information, including 
+
+criminal history, previous failures to appear for court, and risk assessment 
+
+recommendations for some arrested people when making a release decision. 
+
+From its implementation date through November 25, 2023, the Los Angeles 
+
+Superior Court reports that 60% of bookings in Los Angeles County were for 
+
+offenses that qualified for the PARPs as opposed to traditional cash bail. 5    
+
+> 5“Data Report #2 — Eight Week Report: Pre-Arraignment Release Protocols ” Superior Court of California, County of Los Angeles 2023 https://
+> lascpubstorage.blob.core.windows.net/cpw/LIBOPSCriminal-75-PARPDataReport_DataReport%232.pdf
+
+March 2020 
+
+> LA Superior Court emergency bail schedule starts, followed by CA emergency bail schedule in April 2020
+
+May 2023  
+
+> Urquidi lawsuit barrs LAPD and LASD from requiring cash bail for indigent individuals, county emergency bail schedule reinstated
+
+July 2022 
+
+> Regular bail schedule resumes after local emergency bail schedule and CA emergency bail schedule expires
+
+October 2023 
+
+> The PARPs sets $0 bail for non-violent, non-serious felonies and misdemeanors in LA County
+
+Regular bail schedule Regular bail schedule The PARPs Emergency bail schedule Emergency bail schedule 9THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+This is roughly double the share of bookings affected by the emergency bail 
+
+policy. 6 For LAPD, which was using the emergency bail schedule until the start of 
+
+PARPs, this represents a substantial policy shift beyond the changes implemented 
+
+by the  Urquidi  ruling. This new protocol was developed under Penal Code § 
+
+1269b(c) by judges in Los Angeles County. 
+
+For the offenses where the PARPs apply, there are three possible actions following 
+
+arrest depending on the offense: 
+
+• Cite-and-release  — Police officers may temporarily detain someone at 
+
+the scene. The person is given a date to appear in court and is not arrested. 
+
+Officers also have the discretion to book individuals at a law enforcement 
+
+facility before release. 
+
+• Book-and-release  — Police officers take the arrested person to a booking 
+
+facility. After being processed, the arrested person is released with a date to 
+
+appear in court. 
+
+• Magistrate review  — Arrested people are detained until a magistrate 
+
+reviews the case and sets conditions for release under non-financial 
+
+restrictions (such as electronic monitoring, a type of supervised release that 
+
+requires an individual to wear a GPS tracking device, such as an ankle bracelet). 
+
+The magistrate uses a risk-assessment tool and all available information to 
+
+make this determination. It is not specified how quickly a magistrate review is 
+
+supposed to occur after an arrest, but magistrates are supposed to be available 
+
+24 hours a day, 7 days a week. 
+
+Even if an offense is designated for cite-and-release or book-and-release, law 
+
+enforcement can request an override and ask for magistrate review for any arrest. 
+
+The arrested person is held until the magistrate makes a determination. Critics 
+
+suggest that the PARPs will lead to an increase in pretrial releases from custody 
+
+and result in subsequent criminal activity. Compared to the previous reforms, 
+
+PARPs represent a more permanent shift in bail policy in Los Angeles, away from 
+
+money bail and toward risk-based release and supervision options.   
+
+> 6The percent of bookings affected is measured LAPD-wide for emergency bail and county-wide for PARPs We do not expect that the percent of bookings
+> affected by emergency bail would vary much by agency 10 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org
+
+# Data 
+
+This report analyzes policy changes implemented by different agencies with 
+
+varying geographic scopes. To conduct the analysis, we use three publicly available 
+
+data sources: LAPD arrest data for 2020–2023, LAPD crime report data for 
+
+2020–2024, and LA County daily jail data for 2020–2023 compiled by the Vera 
+
+Institute. Below we detail the alignment of the jurisdiction of the policy changes 
+
+and the available data to examine their effects. 
+
+# Los Angeles County Superior Court 
+
+The Los Angeles Superior Court has jurisdiction over criminal cases for the entire 
+
+county of Los Angeles. The judges of this court set the emergency bail policy 
+
+that expired on July 1, 2022 (which applied to all law enforcement agencies in the 
+
+county) and created the Pre-Arraignment Release Protocols that are currently in 
+
+effect for the entire county. 
+
+# Los Angeles County Sheriff’s Department 
+
+The elected sheriff runs the jail system, which intakes arrestees from the entire 
+
+county. The jail data used for this report therefore reflects jail bookings initiated 
+
+by all law enforcement agencies countywide, including both the LAPD and the LA 
+
+County Sheriff. 
+
+Data: LA County Jail Populations 
+
+The public jail dataset is compiled by the Vera Institute of Justice based on LA 
+
+County Sheriff’s Department reports and includes daily bookings, releases 
+
+(omitting court releases), and jail populations for the county from the years 
+
+2020 through 2023. While the dataset covers 2020, regular daily reporting 
+
+does not begin until late 2020, so our analyses using this data are restricted to 
+
+2021–2023. 11 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+# Los Angeles Police Department 
+
+The Los Angeles Police Department is the municipal police department for the 
+
+city of Los Angeles whose jurisdiction encompasses about 40% of the county’s 
+
+population. This report uses LAPD arrest and crime data, meaning that the crime 
+
+and arrest results are for the City of Los Angeles, not the entire county. Arrests 
+
+made by LAPD represent a large part, but not the entirety, of the county jail 
+
+population. In addition, bail policy effects that we observe in the LAPD data may also 
+
+be present in crimes and arrests that occur within the county but are not reported 
+
+by LAPD (e.g. crimes and arrests reported by the Sheriff or other agencies). 
+
+Data: LAPD Arrests 
+
+The public LAPD arrest dataset provides information about every LAPD arrest 
+
+for the years 2020 through 2023, including basic demographic information 
+
+of the individual arrested, date and time, which of the 21 areas within Los 
+
+Angeles (e.g., Central, Hollywood, West LA) the arrest occurred in, offense 
+
+type (e.g., felony, misdemeanor), offense description, and offense category (e.g., 
+
+homicide, burglary, larceny). The data also indicate whether an arrest resulted 
+
+in a jail booking or a cite and release. A variable categorizing criminal offenses 
+
+at a broad level (person, property, drug, sex, and other) was created based on 
+
+the available categorical information. Arrests that were not for misdemeanor 
+
+or felony offenses (infractions, non-criminal detentions, some “miscellaneous” 
+
+arrests, and pre-delinquency arrests) were not included in this analysis. 7 Non-
+
+felony and non-misdemeanor arrests are excluded in order to focus on typical 
+
+criminal offenses. Warrant arrests and fugitive arrests, federal offenses, and 
+
+moving traffic violations were also excluded from the main analysis. Complete 
+
+documentation for this dataset can be found on the  LAPD data portal .
+
+Data: LAPD Crime Reports 
+
+The public LAPD crime report dataset provides information about every 
+
+crime reported to LAPD from January 2010 through May 2024, including the 
+
+time and date of the crime, a crime code and description, where the crime 
+
+occurred (which of the 21 LAPD reporting areas within Los Angeles County), 
+
+and categorization as a Part I or Part II Uniform Crime Reporting (UCR) 
+
+offense. A variable categorizing criminal offenses (person, property, drug, sex, 
+
+or other) was merged to this dataset using the crime description. Additionally, 
+
+reports of identity theft were removed from the dataset due to inaccuracies 
+
+in the daily counts. Complete documentation for this dataset can be found on 
+
+the  LAPD data portal .   
+
+> 7Felonies and misdemeanors make up over 90% of total reported arrests Infractions represent 70% of excluded arrests Infractions for liquor law violations,
+> drunkenness, disorderly conduct, and gambling make up over 90% of all infraction arrests
+
+12 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+# Trends in Bookings, Releases, and Crime 
+
+To provide context for the study, we first describe trends in jail population 
+
+measures and crime in Los Angeles County from 2020 through 2023. The jail 
+
+population in LA County declined rapidly at the onset of the pandemic in response 
+
+to emergency releases and reduced bookings and has yet to return to pre-
+
+pandemic levels  (Figure 2) . The population of people who are detained awaiting 
+
+transfer to prison experienced the most fluctuation over time, potentially due to 
+
+the suspension and reinstatement of transfers to prison that occurred to manage 
+
+the prison population during the pandemic. Individuals held pretrial make up the 
+
+largest share of the jail population and remain relatively stable over this period. 
+
+Total population Pretrial Partially sentenced Fully sentenced Awaiting prison Parole revocation 05,000 10,000 15,000 20,000 2020 2021 2022 2023 2024 7/1/22 Emergency bail ends in LA County 3/17/20 Emergency bail starts in LA County 5/24/23 Emergency bail reinstated in City of LA 10/1/23 The PARPs take effect 
+
+FIGURE 2  LA County jail population, 2020–2024 by subgroup 
+
+Note: The figure depicts the daily jail population for LA County from 2020–2024  The red lines indicate March 17, 2020, when emergency bail began in Los 
+
+Angeles County; July 1, 2022, when emergency bail ended in Los Angeles County; May 24, 2023, when emergency bail began again in the City of Los Angeles; and 
+
+October 1, 2023, when the Pre-Arraignment Release Protocol took effect county wide  Partially sentenced individuals are those with multiple cases who have not 
+
+been sentenced on all cases  Fully sentenced individuals are those who have been sentenced to incarceration in jail  Individuals awaiting prison have been sentenced 
+
+to be incarcerated in state prison and are awaiting transfer  Individuals in pretrial are those awaiting arraignment, trial, or sentencing 
+
+Trends in jail bookings and releases are volatile, with a pronounced spike in 
+
+releases and dip in bookings in late 2021  (Figure 3) . For context, this coincides 
+
+with a late 2021 COVID surge, but it is beyond the scope of this report to 
+
+conclusively explain the trend. Additionally, bookings diverged from releases briefly 
+
+in the summer of 2022 before reconverging in the fall. 13 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+FIGURE 3  Weekly bookings and releases from LA County jails, 2021–2024 
+
+600 800 1,000 1,200 1,400 1,600 2021 2022 2023 2024 
+
+Bookings Releases 
+
+40 60 80 100 120 140 2020 2021 2023 2022 2024 
+
+Felony arrests Misdemeanor arrests 
+
+Note: The figure depicts the weekly total of bookings and releases in the LA County jail system from 2021–2024, the years for which reliable data are available in 
+
+the dataset  The three red lines indicate July 1, 2022, when emergency bail ended in Los Angeles County; May 24, 2023, when emergency bail began again in the 
+
+City of Los Angeles; and October 1, 2023, when the Pre-Arraignment Release Protocol took effect county wide 
+
+Felony and misdemeanor arrests exhibited extreme declines in early 2020, the 
+
+winter of 2020–2021, and the winter of 2021–2022, again presumably due in 
+
+large part to seasonal COVID surges  (Figure 4) . Following the sizable decline in 
+
+misdemeanor arrests at the start of the pandemic, there have been comparable 
+
+levels of felony and misdemeanor arrests over the past two years. 
+
+FIGURE 4  Seven-day average of daily felony and misdemeanor arrests, Los Angeles Police Department, 2020–2024 
+
+Note: The figure depicts the seven-day average number of felony and misdemeanor arrests for 2020–2024  The red lines indicate March 17, 2020, when emer -
+
+gency bail began in Los Angeles County; July 1, 2022, when emergency bail ended in Los Angeles County; May 24, 2023, when emergency bail began again in the 
+
+City of Los Angeles; and October 1, 2023, when the Pre-Arraignment Release Protocol took effect county wide 14 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+Average daily crime reports are less volatile than arrests, with the gap between 
+
+Part I and Part II crimes remaining fairly consistent and following clear seasonal 
+
+trends in the winter periods  (Figure 5) . Part I and Part II are categories used 
+
+by the FBI to classify crimes in the Uniform Crime Reporting Program, the 
+
+compilation of crime statistics from across the United States. While Part I offenses 
+
+include some of the most serious criminal offenses, they are also chosen for being 
+
+the most likely crimes to be reported, and are not necessarily an indicator of the 
+
+“most serious” crimes. From January 2020 to May 2024, 63% of crime reports 
+
+were categorized as Part I, and 37% were categorized as Part II. The individual 
+
+offenses included in the Part I and Part II categories are listed below Figure 5.     
+
+> Part I crimes Part II crimes
+> 100 200 300 400 500 2020 2021 2023 2022 2024
+> FIGURE 5
+
+Seven-day average daily Part I and Part II crime reports, Los Angeles Police Department, 2020–2024     
+
+> Note: The figure depicts seven-day average daily counts of Part I and Part II crime reports to LAPD from January 1, 2020 to March 1, 2024 The red lines indicate
+> March 17, 2020, when emergency bail began in Los Angeles County; July 1, 2022, when emergency bail ended in Los Angeles County; May 24, 2023, when emer -
+> gency bail began again in the City of Los Angeles; and October 1, 2023, when the Pre-Arraignment Release Protocol took effect county wide Part I crimes are
+> criminal homicide, aggravated assault, robbery, arson, forcible rape, burglary, larceny theft, grand theft auto Part II crimes are 22 different crimes, including forgery,
+> fraud, sex offenses, non-aggravated assaults, weapon laws, narcotics, disorderly conduct, and DUI See Table 1 for more details on the crime report measures
+
+15 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+0100 200 300 400 
+
+Property Person Sex Other 
+
+2020 2021 2023 2022 2024 
+
+While person and property crimes remain stable from 2020–2021, property 
+
+crime began increasing at the end of 2021  (Figure 6) .
+
+Notes  The figure depicts seven-day average daily counts of crime, broken out by category from January 1, 2020 to March 1, 2024  The red lines indicate March 
+
+17, 2020, when emergency bail began in Los Angeles County; July 1, 2022, when emergency bail ended in Los Angeles County; May 24, 2023, when emergency 
+
+bail began again in the City of Los Angeles; and October 1, 2023, when the Pre-Arraignment Release Protocol took effect county wide  The LAPD crime report 
+
+dataset contains only eleven drug crime reports  See Table 1 for definitions of each crime report measure 
+
+FIGURE 6  Seven-day average of daily crime reports by category, Los Angeles Police Department, 2020–2024 16 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+# Methods 
+
+We leverage the three discrete policy shifts in both the county and city to estimate 
+
+changes in jail population, crime reports, and arrests. There are two primary 
+
+mechanisms through which changes in bail practice might affect crime. The first 
+
+mechanism is the incapacitation effect. If changes in bail practice (such as the removal 
+
+of an emergency bail policy) increase pretrial detention, crime might decrease due 
+
+to the incapacitation effect (in other words, if people are detained, they are unable 
+
+to commit additional crime). Conversely, the implementation of a bail reform might 
+
+decrease pretrial detention, leading to increases in crime by people who aren’t 
+
+detained pretrial. The second potential mechanism is the deterrent effect. Widespread 
+
+knowledge of policy changes that reduce the likelihood of pretrial detention may lead 
+
+to an increase in crime because of the perception that consequences of crime are 
+
+lower. Likewise, removing such a policy might decrease crime, due to an increased 
+
+deterrence effect. 
+
+One way to understand the effect of the bail policy changes on crime is to explore 
+
+changes in the jail population. The following analysis examines changes in jail 
+
+population — both total average daily population and average daily pretrial population 
+
+— to provide insight into the incapacitation and deterrence mechanisms. If we 
+
+observe discrete changes in average daily jail populations, then it is more plausible 
+
+that bail reforms could have had an incapacitation effect on crime (measured by crime 
+
+reports and arrests). The total jail population is included in addition to the pretrial 
+
+subpopulation in order to understand how the pretrial subpopulation impacted 
+
+overall incapacitation. By appreciably decreasing jail detentions, emergency bail policies 
+
+could reduce the incapacitation effect of detention and lead to an increase in crime. 
+
+Moreover, to the extent that an increased likelihood of pretrial detention serves as 
+
+a deterrent, bail reforms may impact the behavior of those considering offending, an 
+
+effect that is beyond the pure incapacitation effect associated with pretrial detention. 
+
+By contrast, if bail reforms do not meaningfully affect average daily jail populations, 
+
+then any effect on crime may be due to deterrence alone. 
+
+It is possible that these effects are immediately observable following the policy change 
+
+or that they could take time to accrue. Because of this, we examine the policy effects 
+
+using two different analytical approaches — an interrupted time series (ITS) design 
+
+and a regression discontinuity (RD) design — at the time of three bail policy changes: 
+
+• July 1, 2022: The first day of use of the normal bail schedule in LA County following 
+
+the retraction of the emergency bail schedule that began on March 17, 2020. 
+
+• May 24, 2023: The first day of the resumption of the emergency bail schedule in the 
+
+City of Los Angeles by LAPD and LASD, mandated as a result of the  Urquidi  ruling. 
+
+• October 1, 2023: The first day of the implementation of the PARPs in LA County. 17 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+We estimate the effect of each bail policy change on daily jail populations in Los 
+
+Angeles County and several categories of daily crime and arrest counts in the City of 
+
+Los Angeles  (Table 1)  
+
+> TABLE 1
+
+Outcome measures 
+
+DATASET  MEASUREMENT 
+
+LA County jail data  Daily jail population*: total number of individuals detained in LASD facilities 
+
+Daily jail pretrial population*: number of pretrial or pre-sentencing individuals detained in 
+
+LASD facilities 
+
+Daily jail population awaiting transfer to prison: number of sentenced individuals held in jail 
+
+before transfer to state prison 
+
+LAPD arrest data  Daily total arrest*: total number of arrests 
+
+Daily felony arrests*: number of felony arrests 
+
+Daily misdemeanor arrests*: number of misdemeanor arrests 
+
+Daily arrests for person crimes: number of crimes against a person (aggravated assaults, 
+
+other assaults, assault against family/child, robbery, homicide, and rape) 
+
+Daily arrests for property crimes: number of property crime arrests (vehicle theft, larceny, 
+
+burglary, fraud and embezzlement, receiving stolen property, gambling, and forgery and 
+
+counterfeits) 
+
+Daily arrests for drug crimes: number of drug crime arrests (including possession, 
+
+transportation, sale, and purchase of controlled substances) 
+
+Daily arrests for “other” crimes: number of arrests for other types of crime (including 
+
+weapon carrying and possession, drunkenness, disorderly conduct, liquor law violations, 
+
+disturbing the peace, and “miscellaneous other violations”) 
+
+LAPD crime report data  Daily total crime reports* 
+
+Daily Part I crime reports*. As defined by the FBI, Part I crimes include: criminal homicide, forcible rape, 
+
+robbery, aggravated assault, burglary, larceny theft, grand theft auto, and arson. 
+
+Daily Part II crime reports*. As defined by the FBI, Part II crimes include: forgery, fraud, sex offenses 
+
+(felonies and misdemeanors), simple assault, weapons offenses, narcotics, etc. 
+
+Daily person crime reports. The following crimes make up 95% of all crimes against persons: battery/ 
+
+simple assault, assault with deadly weapon/aggravated assault, intimate partner simple assault, robbery, 
+
+brandishing a weapon, intimate partner aggravated assault, attempted robbery, other assaults, battery 
+
+with sexual contact, forcible rape, child abuse/simple assault. 
+
+Daily property crime reports. The following crimes make up 95% of all property crimes: burglary and 
+
+theft from motor vehicles, vehicle theft, burglary & attempted burglary, petty & grand theft, petty & 
+
+grand shoplifting, bike theft, bunco (scams), grand theft, theft from person, embezzlement. 
+
+Daily “other” crime reports. The following crimes make up 95% of all “other” crime reports: 
+
+vandalism, criminal threats, trespassing, violation of restraining order, lewd letters and telephone calls, 
+
+“miscellaneous crime,” court order violations, contempt of court.  
+
+> Note * indicates primary measure 18 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org
+
+The primary approach is an interrupted time series analysis, where we examine 
+
+whether pre-period trends in outcomes extend linearly in the post-period, or change 
+
+in slope or level. We do so by using the information from two months prior to each 
+
+policy change to estimate a linear prediction of the outcome in the two months 
+
+following the change. We selected two-month windows to distinguish between the 
+
+policy changes that are occurring in quick succession. Then, we calculate the average 
+
+of the daily difference between the predicted value and the observed value in the 
+
+post-period. To assess the statistical significance of these estimates, we generate a 
+
+distribution of placebo values by randomly sorting days within the four-month analysis 
+
+window and conducting the same analysis. We compare the point estimate from 
+
+the main regression to the distribution of estimates from the placebo regressions to 
+
+determine whether it appears in either tail of the distribution. This approach gives us a 
+
+sense of whether the effects of a policy change accrue over time. 
+
+In the second approach, we test whether there is a discrete change in outcomes at 
+
+the date of the policy change. We estimate a regression discontinuity in time model 
+
+(Hausman and Rapson, 2018) to estimate the effect of the three bail policy changes 
+
+on the same outcomes. The RD design estimates the difference in an outcome 
+
+variable immediately prior to, and immediately following, the policy change. If there 
+
+is a sharp change in the outcome variable immediately before and after the policy 
+
+change, the RD method models the “trajectory” of the variable on each side. Given 
+
+these trajectories, this model estimates the likelihood that this sharp difference 
+
+could have occurred randomly. If there is not a sharp change in the outcome variable 
+
+immediately before and after, or a change that does not significantly deviate from 
+
+existing variation in the trends, the RD method will fail to identify an effect from the 
+
+policy change  (see Appendix for more details) .19 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+# Results 
+
+# Impact of the Retraction of the Emergency Bail Schedule in 
+
+# Los Angeles County (July 2022) 
+
+Critics of the emergency bail schedule suggest that returning to LA’s pre-COVID 
+
+bail policies could decrease crime, either by decreasing the number of people 
+
+released awaiting trial who are therefore unable to commit new crimes, or by 
+
+strengthening the deterrent effect of pretrial detention to prevent new crimes. 
+
+Our ITS analysis demonstrates that the total average daily jail population in 
+
+Los Angeles County increased by four percent following the retraction of the 
+
+emergency bail schedule on July 1, 2022  (Figure 7) . The average difference 
+
+between the predicted (had the emergency bail schedule not been retracted) and 
+
+the observed population is 555 people (a 4.2% increase), and is significant at the 
+
+5% level  (Table 2) . The average daily pretrial population also increased by 4.8% 
+
+percent following the retraction, but this estimate is only marginally statistically 
+
+significant. It is worth noting that the total jail population increased by more than 
+
+the pretrial population did because the daily population awaiting transfer to prison 
+
+also increased, by an average of 105 people, at the same time. 8 In comparison, the 
+
+RD analysis of the July 2022 retraction shows no immediate changes in the total 
+
+daily jail population or the daily pretrial jail population in the days following the 
+
+policy change  (Table 3) , suggesting that the change in jail population took time to 
+
+accumulate.       
+
+> 8The LA Sheriff’s Department reported that the population awaiting transfer to CDCR custody increased by 19% as more individuals began receiving sentences
+> to state prison This sentencing increase occurred after CDCR resumed the intake of prisoners in 2022 See: “Custody Division Population Quarterly Report:
+> July–September 2022 ” Los Angeles County Sheriff’s Department 2022 https://lasd.org/wp-content/uploads/2022/12/Transparency_Custody-Division-
+> Population-2022-Third-Quarter-Report.pdf
+
+20 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org  
+
+> FIGURE 7
+
+Total average daily jail population in Los Angeles County, before and after retraction of emergency bail 
+
+schedule on July 1, 2022         
+
+> 6,000 8,000 10,000 12,000 14,000 Total population (pre period) Predicted total population Pretrial population (post period) Total population (post period) Pretrial population (pre period) Predicted pretrial population May 2022 Jun 2022 Aug 2022 Jul 2022 Sep 2022
+> Notes Dotted blue (predicted total pop ) and dotted orange (predicted pretrial pop ) represent linear trends, predicted by the pre-period values, (solid dark blue for total pop , and solid
+> orange for pretrial pop )
+
+Overall arrests and misdemeanor arrests in the City of Los Angeles were trending 
+
+downward before the retraction of the emergency bail schedule but this trend 
+
+flattened slightly after the retraction  (Figure 8) . Felony arrests in the City of Los 
+
+Angeles appear stable across the four-month period. In the post-period, we do 
+
+not observe a statistically significant difference between the observed daily arrests 
+
+and what we predicted would have happened based on pre-period trends. We 
+
+estimated models of arrests for crimes against persons, property crimes, other 
+
+crimes, and drug crimes, and found no statistically significant changes in trends. 
+
+When we test for sharp changes in arrest trends at the point of implementation 
+
+using the RD model, we find results consistent with the primary ITS analysis. We 
+
+find no statistically significant change for any of the arrest measures (Table 2). 21 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+FIGURE 8  Daily arrest counts in the City of Los Angeles before and after retraction of emergency bail schedule on 
+
+July 1, 2022 
+
+Misdemeanor arrests 40 60 80 100 120 May 2022 Jun 2022 Aug 2022 Jul 2022 Sep 2022 Felony arrests 40 60 80 100 120 May 2022 Jun 2022 Aug 2022 Jul 2022 Sep 2022 Arrests, all crimes 120 140 160 180 200 May 2022 Jun 2022 Aug 2022 Jul 2022 Sep 2022 
+
+Pre-period arrests Projected number of arrests Post-period arrests Pre-period felony arrests Projected number of arrests Post-period felony arrests Pre-period misdemeanor arrests Projected number of arrests Post-period misdemeanor arrests 
+
+TABLE 2  Los Angeles County average daily jail population and City of LA daily arrest results after the retraction of 
+
+the emergency bail schedule on July 1, 2022  ITS  RD 
+
+OUTCOME  ESTIMATE  PERCENTILE  ESTIMATE 
+
+Average daily jail pop.  555*  98  125.60 
+
+Pretrial  292  96  111.10 
+
+Awaiting prison  105*  99  26.51 
+
+All LAPD arrests  5 72  -0.32 
+
+Felony arrests  1 59  -0.04 
+
+Misdemeanor arrests  3 67  -0.28 
+
+Person  1 65  -0.02 
+
+Property  -1  34  0.00 
+
+Other  -2  30  -0.08 
+
+Drug  1 61  -0.01 
+
+Sex  -2  27  NA 
+
+Note  *= p <  05 (all estimates), † = second-order estimate p <  05 (RD estimate only)  RD results for arrests are presented for area-level models using 60-day 
+
+bandwidth and including covariates and controls for local area; RD results for jail population are at the county level and include covariates  Full results for all band -
+
+widths and geographic areas available in the Appendix 
+
+Note  The green line represents a linear trend as predicted by the pre-period arrest values 22 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+Arrests may not reflect actual crime rates, as they depend on policing practices 
+
+and other factors. We aim to get closer to crime rates by estimating models 
+
+evaluating the impact of the policy shift on reported crimes. In the ITS analysis, 
+
+we find that the end of the emergency bail schedule in July 2022 had no effect 
+
+on total daily crime reports in the City of Los Angeles, including multiple 
+
+subcategories of crime. We find no effect of the policy change on the total 
+
+number of reported crimes, reported Part I crimes, or reported Part II crimes 
+
+in the two months following the change  (Figure 9) . The result is robust to sub-
+
+analyses of reported crimes against persons, reported Part I crimes against 
+
+persons, or reported Part II crimes against persons, reported property crimes, 
+
+or other reported crimes (Table 3). These results are consistent with those 
+
+generated with the RD estimator (Table 3). Seasonality in crime patterns — such 
+
+as increases in crime during the summer months — may in part explain month to 
+
+month changes. As a robustness check, we estimate models for the same month 
+
+periods in 2019, when no policy changes took place. We find no statistically 
+
+significant change in crime reports over the same month period in 2019, and the 
+
+estimated change in total crime is zero (Table 3).  
+
+> TABLE 3
+
+Daily crimes reports in the City of Los Angeles after the retraction of 
+
+the emergency bail schedule on July 1, 2022                                                
+
+> ITS 2019 PLACEBO RD
+> OUTCOME ESTIMATE PERCENTILE ESTIMATE PERCENTILE ESTIMATE
+> Total Crime Reports -18 20 050 -1.13
+> Part I -14 18 -6 34 -1.03
+> Part II -4 34 668 -0.10
+> Person -11 13 -11 19 -0.28
+> Property -1 49 567 -0.72
+> Other -6 18 783 -0.12
+> Sex 035 -2 10 NA
+> Note *= p < 05 (all estimates), † = second-order estimate p < 05 (RD estimate only) RD results are presented
+> for area-level models using 60-day bandwidth and including covariates and controls for local area Full results for
+> all bandwidths and geographic areas available in the Appendix
+
+23 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org       
+
+> Reports of Part II crimes 150 200 250 300 May 2022 Jun 2022 Aug 2022 Jul 2022 Sep 2022
+> Pre-period Part II Projected number of reports Post-period Part II
+> Reports of Part I crimes 300 350 400 450 500 May 2022 Jun 2022 Aug 2022 Jul 2022 Sep 2022
+> Pre-period Part I Projected number of reports Post-period Part I
+
+Reports of all crime types 500 550 600 650 700 May 2022 Jun 2022 Aug 2022 Jul 2022 Sep 2022 
+
+Pre-period reports Projected number of reports Post-period reports 
+
+FIGURE 9  Crime reports, total and by type, in the City of Los Angeles before and after retraction of emergency bail 
+
+schedule on July 1, 2022 
+
+In summary, after the retraction of the emergency bail schedule, we observe 
+
+increases in the average daily jail population that accrue in the months following the 
+
+policy change, but no change in arrests or crime reports. Specifically, in the two 
+
+months following the retraction of the emergency bail schedule the average daily 
+
+jail population increased by more than 555 people relative to pre-existing trends. 
+
+Despite this growth in the jail population, arrests and total crime reports did not 
+
+change appreciably relative to the pre-period trends, suggesting that there was 
+
+little public safety benefit associated with removing the emergency bail schedule. 
+
+Note  The green line represents a linear trend as predicted by the pre-period report values 24 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org    
+
+> 6,000 8,000 10,000 12,000 14,000 Total population (pre period) Predicted total population Pretrial population (post period) Total population (post period) Pretrial population (pre period) Predicted pretrial population Apr 2023 May 2023 Jul 2023 Jun 2023 Aug 2023
+
+# Impact of the Resumption of the Emergency Bail Schedule in the City 
+
+# of Los Angeles (May 2023) 
+
+Following the  Urquidi  decision in May 2023, LAPD and LASD were ordered to 
+
+put the emergency bail schedule back in place. Our analysis shows that this shift 
+
+from the standard bail schedule to the emergency bail schedule — which specifies 
+
+no bail for many offenses — resulted in declines in the average daily pretrial 
+
+population. Further, while Part I property crime reports increased by around 28 
+
+offenses a day (a 10% change), changes in overall crime and arrest trends were not 
+
+statistically significant. 
+
+Specifically, the resumption of the emergency bail schedule did not affect the total 
+
+average daily jail population, but it did affect who was being held in jail  (Figure 
+
+10) . Overall, the observed trend in the total average daily jail population in the 
+
+post-period is not statistically distinguishable from what we would expect to 
+
+occur based on pre-period trends  (Table 4) . However, the average daily pretrial 
+
+population decreased by 306 people, or 4.5%, on average in the two months 
+
+following the policy change. The difference between the average daily population 
+
+and the pretrial population trends is explained by an increase in the number of 
+
+sentenced individuals held in jail and awaiting transfer to prison during the same 
+
+time. In other words, the population awaiting transfer to prison increased while 
+
+the pretrial population decreased relative to pre-period trends, and as a result, 
+
+the overall level of the total prison population relatively stable. The decline in the 
+
+average daily pretrial population accumulates over the two-month post period — 
+
+the RD analysis assessing sharp changes in the total daily population and pretrial 
+
+population finds no immediate effect in the few days following the policy change 
+
+(Table 4).  
+
+> FIGURE 10
+
+Average daily jail population before and after resumption of emergency bail schedule by Los Angeles 
+
+Police and Sheriff's Departments on May 24, 2023      
+
+> Notes Dotted blue (predicted total pop ) and dotted orange (predicted pretrial pop ) represent linear trends, predicted by the pre-period values, (solid dark blue for total pop , and solid orange for pretrial pop )
+
+25 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+Arrest trends in the City of Los Angeles did not change when the emergency bail 
+
+schedule was retracted, and they also did not change when it was reinstated. 
+
+The bail reform had no effect on the total number of daily arrests, or the number 
+
+of daily misdemeanor or felony arrests in the two months following the policy 
+
+change  (Figure 11) . Felony arrests were trending upward prior to and following 
+
+the policy change. We find no effect when estimating the models on daily arrest 
+
+totals for crimes against persons, property crimes, other crimes, or drug crimes 
+
+(Table 4). The results of the RD analysis are consistent with the ITS findings (Table 4). 
+
+FIGURE 11  Daily total, felony, and misdemeanor arrests in the City of Los Angeles before and after resumption of 
+
+emergency bail schedule, May 24, 2023       
+
+> Daily misdemeanor arrests 0100 200 300 Apr 2023 May 2023 Jul 2023 Jun 2023 Aug 2023
+> Pre-period misdemeanor arrests Projected number of arrests Post-period misdemeanor arrests
+> Daily felony arrests 50 60 70 80 90 100 Apr 2023 May 2023 Jul 2023 Jun 2023 Aug 2023
+> Pre-period felony arrests Projected number of arrests Post-period felony arrests
+
+Daily total arrests 100 200 300 400 Apr 2023 May 2023 Jul 2023 Jun 2023 Aug 2023 
+
+Pre-period arrests Projected number of arrests Post-period arrests 
+
+Note: LAPD arrested 194 people at a labor strike on July 22, 2023, which explains the large spike in misdemeanor arrests on that date 
+
+The green line represents a linear trend as predicted by the pre-period arrest values 26 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org  
+
+> TABLE 4
+
+Los Angeles County jail population and City of LA arrest results after 
+
+the resumption of the emergency bail schedule in May 2023     
+
+> ITS RD
+> OUTCOME ESTIMATE PERCENTILE ESTIMATE
+
+County jail population  139  75  -25.47 
+
+Pretrial  -306*  1 -45.88 
+
+Awaiting prison  382*  100  -29.07 
+
+All LAPD Arrests  -24  8 -0.29 
+
+Felony arrests  -6  12  -0.03 
+
+Misdemeanor arrests  -17  13  -0.25 
+
+Person  -3  25  -0.16 
+
+Property  -6  12  -0.13 
+
+Other  -2  31  -0.02 
+
+Drug  -4  9 0.14 
+
+Sex  -8*  2 NA      
+
+> Note: *= p < 05 (all estimates), † = second-order estimate p < 05 (RD estimate only) RD results for arrests
+> are presented for area-level models using 60-day bandwidth and including covariates and controls for local area;
+> RD results for jail population are at the county level and include covariates Full results for all bandwidths and
+> geographic areas are available in the Appendix
+
+There was a statistically significant increase in reports of Part I crimes in the two 
+
+months following reinstatement of the emergency bail schedule in May 2023, 
+
+and no change in Part II crime reports  (Figure 12 and Table 5) . The increase 
+
+in Part I crimes appears to be driven by an increase in property crimes, with 
+
+a statistically significant increase of 28 more daily reports, or a 10% increase. 
+
+Descriptively, we observe the largest increases in property crime counts across 
+
+this four-month period were for vehicle theft, burglary, and larceny theft, which 
+
+are three of the four Part I property crime categories. Arson, the fourth category, 
+
+exhibited virtually no change. The increase in property crimes was geographically 
+
+widespread, occurring in 15 of the 21 LAPD reporting areas, though the increase 
+
+was larger in some areas than others  (Appendix Table J) . The largest increase in 
+
+property crimes occurred in the Mission reporting area, where the two-month 
+
+total of property crimes increased by 27% after May 24, 2023, equivalent to two 
+
+more daily crimes than in the pre-period. The six LAPD reporting areas that did 
+
+not see property crime increases saw decreases from 1% to 9%. 27 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+The estimate on total crime is positive but only marginally significant at the 10% 
+
+level. In other words, there is not strong evidence that the change in total crime 
+
+is related to the resumption of the emergency bail schedule, and the change could 
+
+have occurred for other reasons. For example, the placebo test for the same date 
+
+in 2019, when there was no policy change, also shows an increase in total crime 
+
+reports of a very similar magnitude, although the placebo estimate does not reach 
+
+statistical significance. This suggests that overall crime tends to increase heading 
+
+into the summer months, even in years without a policy change. However, the 
+
+2019 placebo models do not show similar increases in Part I or property crime 
+
+reports during that period, suggesting that the changes observed in 2023 are a 
+
+departure from seasonal trends in those types of crimes. These placebo results 
+
+are similar when using 2018, 2017, and 2016 as years of comparison. We do not 
+
+observe an immediate effect of the reform on any of the crime report measures 
+
+using the RD approach (Table 5), suggesting that the increase in Part I crime 
+
+reports accumulated over time.  
+
+> TABLE 5
+
+Daily crimes reports in the City of Los Angeles after the resumption of 
+
+the emergency bail schedule in May 2023        
+
+> ITS 2019 PLACEBO RD
+> OUTCOME ESTIMATE PERCENTILE ESTIMATE PERCENTILE ESTIMATE
+
+Total crime Reports  33  96  31  90  0.39 
+
+Part I  35*  100  12  78  0.43 
+
+Part II  -2  42  19  93  -0.05 
+
+Person  2 53  23  97  -0.27 
+
+Property  28*  98  -5  36  0.56 
+
+Other  5 75  12  94  0.07 
+
+Sex  -1  15  1 73  NA      
+
+> Note: *= p < 05 (all estimates), † = second-order estimate p < 05 (RD estimate only) RD results are presented
+> for area-level models using 60-day bandwidth and including covariates and controls for local area Full results for
+> all bandwidths and geographic areas are available in the Appendix
+
+28 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+FIGURE 12  Daily total of crimes reported to LAPD before and after resumption of the emergency bail schedule on 
+
+May 24, 2023       
+
+> Reports of Part II crimes 150 200 250 300 Apr 2023 May 2023 Jul 2023 Jun 2023 Aug 2023 Reports of Part I crimes 300 350 400 450 500 Apr 2023 May 2023 Jul 2023 Jun 2023 Aug 2023
+> Pre-period Part II Projected number of reports Post-period Part II Pre-period Part I Projected number of reports Post-period Part I
+
+Pre-period reports Projected number of reports Post-period reports 
+
+Reports of all crime types 500 600 550 650 700 750 Apr 2023 May 2023 Jul 2023 Jun 2023 Aug 2023 
+
+In summary, after the emergency bail schedule was reinstated in May 2023, there 
+
+were significant declines in the pretrial jail population and an increase in reported 
+
+Part I property crimes in the City of Los Angeles, with no effect on arrests. 
+
+Specifically, reports of Part I crimes increased by an average of 35 per day above 
+
+the number we estimate would have occurred absent this policy change, driven 
+
+mostly by an increase of 28 property crimes per day. 9 This increase in Part I 
+
+crime reports following the policy change represents a 10% increase relative to 
+
+the average number of daily reported Part I crimes during the two months prior 
+
+to the change. The  Urquidi  decision that reinstated the emergency bail schedule 
+
+only applied to people arrested by the Los Angeles Sheriff’s Department and the 
+
+Los Angeles Police Department, and therefore may have had less of an effect 
+
+compared to county-wide policies. 
+
+9 Due to a lack of statistical significance for the estimates of crime categories outside property crime, we cannot attribute the remaining seven Part I crimes per 
+
+day to a specific category 
+
+Note  The green line represents a linear trend as predicted by the pre-period report values 29 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+# Impact of the Implementation of the PARPs (October 2023) 
+
+The implementation of the PARPs in October 2023 represents a more permanent 
+
+shift in Los Angeles County bail policy away from the temporary emergency 
+
+bail schedule. Unlike the emergency bail schedules in place before it, the PARPs 
+
+created more sophisticated methods for measuring the public safety risk of 
+
+releasing individuals prior to arraignment and ensuring they return for court dates. 
+
+Because of this change in the release decision making process, we would expect 
+
+potential changes in the jail population. In the two months after the PARPs went 
+
+into place, there was a 2.4% decrease in the average daily jail population and a 
+
+3.2% decrease in the pretrial subset of the average jail population  (Figure 13) . The 
+
+RD results show a consistent and immediate decline in the total and pretrial jail 
+
+daily populations following the PARPs implementation  (Table 6) . Together, these 
+
+results suggest that the decline was both immediate and sustained.  
+
+> FIGURE 13
+
+Average daily jail population before and after the start date of the PARPs on October 1, 2023         
+
+> 6,000 8,000 10,000 12,000 14,000 Total population (pre period) Predicted total population Pretrial population (post period) Total population (post period) Pretrial population (pre period) Predicted pretrial population Aug 2023 Sep 2023 Nov 2023 Oct 2023 Dec 2023
+> Notes Dotted blue (predicted total pop ) and dotted orange (predicted pretrial pop ) represent linear trends, predicted by the pre-period values, (solid dark blue for total pop , and
+> solid orange for pretrial pop )
+
+30 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org  
+
+> TABLE 6
+
+Los Angeles County daily jail population and City of LA daily arrest 
+
+results after the implementation of the PARPs in October 2023     
+
+> ITS RD
+> OUTCOME ESTIMATE PERCENTILE ESTIMATE
+
+Total jail population  -314*  1 -88.91*† 
+
+Pretrial  -206*  1 -138.7*† 
+
+Awaiting prison  -184*  1 -56.07* 
+
+All arrests  -21  5 -0.88 
+
+Felony arrests  1 56  -0.24 
+
+Misdemeanor arrests  -21*  1 -0.64 
+
+Person  -2  36  -0.12 
+
+Property  -3  24  -0.38 
+
+Other  -6  9 -0.02 
+
+Drug  -6  4 0.28 
+
+Sex  -2  20  NA      
+
+> Note: *= p < 05 (all estimates), † = second-order estimate p < 05 (RD estimate only) RD results for arrests
+> are presented for area-level models using 60-day bandwidth and including covariates and controls for local area;
+> RD results for jail population are at the county level and include covariates Full results for all bandwidths and
+> geographic areas are available in the Appendix
+
+Misdemeanor arrests in the City of Los Angeles declined in the two months 
+
+following the PARPs implementation by a statistically significant margin, and while 
+
+total arrests declined by a similar magnitude, the 21% decrease in total arrests 
+
+is only marginally statistically significant at the 10% level, meaning there is low 
+
+confidence that the implementation of PARPs caused this decrease  (Figure 14 
+
+and Table 6) . In the two months prior to the PARPs, misdemeanor arrests were 
+
+increasing, but this increase leveled off following the start of the PARPs. The 
+
+decrease in misdemeanor arrests accrues over time — we do not observe an 
+
+immediate decline in arrests at the point of implementation in the RD models. 
+
+We observe no change in felony arrests following the PARPs implementation, 
+
+which continued a downward trend over the four-month period (Figure 14). 
+
+When we examine daily arrests by arrest type, we find no effect of the PARPs on 
+
+daily arrest totals for crimes against persons, property crimes, drug crimes, sex 
+
+crimes, or other crimes. 31 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+FIGURE 14  Daily total, felony, and misdemeanor arrest counts in the City of Los Angeles before and after the start 
+
+of the PARPs on October 1, 2023 
+
+Daily misdemeanor arrests 40 80 60 100 120 140 Aug 2023 Sep 2023 Nov 2023 Oct 2023 Dec 2023 Daily felony arrests 50 60 80 100 120 Aug 2023 Sep 2023 Nov 2023 Oct 2023 Dec 2023 Daily total arrests 100 150 200 250 Aug 2023 Sep 2023 Nov 2023 Oct 2023 Dec 2023 
+
+> Pre-period misdemeanor arrests Projected number of arrests Post-period misdemeanor arrests Pre-period felony arrests Projected number of arrests Post-period felony arrests
+
+Pre-period arrests Projected number of arrests Post-period arrests 
+
+Consistent with the findings for arrests, we find that the implementation of the 
+
+PARPs did not shift the total daily crime report trend, or trends in Part I or Part 
+
+II crime reports  (Figure 15) . The new policy did not change the total number 
+
+of reported crimes against persons, reported property crimes, or reported 
+
+other crimes  (Table 7) . The placebo results from 2019 show no change in crime 
+
+during the same months that year, and the results are generally similar in sign and 
+
+magnitude. The results of the RD analysis are consistent with the finding of no 
+
+effect (Table 7). 
+
+Note  The green line represents a linear trend as predicted by the pre-period report values 32 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+FIGURE 15  Daily crimes reported in the City of Los Angeles before and after the start of the PARPs on 
+
+October 1, 2023 
+
+Reports of Part II crimes 150 200 250 300 Aug 2023 Sep 2023 Nov 2023 Oct 2023 Dec 2023 
+
+> Pre-period Part II Projected number of reports Post-period Part II Pre-period Part I Projected number of reports Post-period Part I
+
+Pre-period reports Projected number of reports Post-period reports 
+
+Reports of Part I crimes 300 350 400 450 500 Aug 2023 Sep 2023 Nov 2023 Oct 2023 Dec 2023 Reports of all crime types 500 600 700 800 Aug 2023 Sep 2023 Nov 2023 Oct 2023 Dec 2023 
+
+Note  The green line represents a linear trend as predicted by the pre-period report values 33 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org  
+
+> TABLE 7
+
+Daily crime reports in the City of Los Angeles after the implementation 
+
+of the PARPs in October 2023        
+
+> ITS 2019 PLACEBO RD
+> OUTCOME ESTIMATE PERCENTILE ESTIMATE PERCENTILE ESTIMATE
+
+Total crime Reports  8 66  -4  42  1.03 
+
+Part I  16  84  9 77  0.86 
+
+Part II  -8  24  -13  16  0.17 
+
+Person  -5  30  -1  49  0.51 
+
+Property  19  87  7 72  0.46 
+
+Other  -5  18  -10  10  -0.01 
+
+Sex  0 41  -1  23  NA      
+
+> Note: *= p < 05 (all estimates), † = second-order estimate p < 05 (RD estimate only) RD results are presented
+> for area-level models using 60-day bandwidth and including covariates and controls for local area Full results for
+> all bandwidths and geographic areas are available in the Appendix
+
+In the two months following the implementation of the PARPs, the average 
+
+daily jail population declined by around 300, or 2.5%, relative to the trend in the 
+
+previous two months. The daily pretrial population declined by over 200 people, 
+
+or 3.1%, on average, relative to the pre-period trend. At the same time, we 
+
+observe no changes in average daily arrests or average daily crime reports from 
+
+the pre-period trend. These results provide additional support for the conclusion 
+
+that changes in bail policy that directly affect jail populations can do so without 
+
+increasing (or decreasing) crime. 34 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+# Discussion and Conclusion 
+
+This study sheds light on how changes to bail policy — both the implementation 
+
+and retraction of bail reforms — affect jail populations and crime. Bail policy 
+
+affects jail populations, though these changes often take some time to accrue. 
+
+Specifically, the retraction of the emergency bail schedule (and return to the 
+
+status quo use of bail before the first court date) resulted in an increase in the 
+
+daily jail population in the two months following the policy change, while both of 
+
+the subsequent bail reforms resulted in declines in the daily pretrial jail population. 
+
+Early results from the implementation of the PARPs show an immediate decrease 
+
+in the daily jail population and the daily pretrial population. This may be because 
+
+the PARPs had greater geographic coverage than the  Urquidi  decision, which 
+
+covered only 50% of the county population. The PARPs were also more widely 
+
+publicized than  Urquidi  and signified a permanent shift in practice. 
+
+There are two primary theories of how the policy changes may affect crime: 
+
+deterrence and incapacitation. Critics have claimed that allowing individuals 
+
+arrested for certain offenses to be immediately released (instead of allowing 
+
+release only on cash bail) creates an impression of leniency for these offenses. 
+
+This increase in leniency could then result in individuals perceiving there to be 
+
+less risk in committing these offenses, potentially resulting in an increase in crime 
+
+(e.g., removing the deterrent effect). Alternatively, reinstating the status quo bail 
+
+schedule might increase the deterrent effect, leading people to perceive a greater 
+
+risk of committing certain crimes that would have previously resulted in release 
+
+without having to pay cash bail. 
+
+If people are unable to pay bail, they are detained during the pretrial period, and 
+
+this incapacitation effect can prevent subsequent crime from occurring during 
+
+the pretrial period. If people are released at higher rates because of bail policy 
+
+changes, we might expect crime to increase as the incapacitation effect weakens, 
+
+and vice versa when the status quo bail schedule is reinstated. 
+
+We find that the shifts in the average daily jail population following each policy 
+
+change, (regardless of reform implementation or reform retraction), had little 
+
+consistent effect on crime reports or arrests. If the traditional cash bail schedule 
+
+reduced crime (either because of incapacitation or deterrent effects), we would 
+
+expect to see  declines  in crime reports following the retraction of the emergency 
+
+bail schedule. Yet we do not see statistically significant changes in trends in 
+
+the two months following the retraction for any of the arrest or crime report 
+
+measures we examine. 35 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+Along the same line of reasoning, we would expect to see increases in crime 
+
+after the emergency bail schedule or the PARPs were implemented. But for both 
+
+policy changes, we observe no statistically significant change in overall arrest or 
+
+crime report trends in the City of Los Angeles. Following  Urquidi , while we do 
+
+not observe a change in overall crime, we do observe an increase in Part I crimes 
+
+reported to LAPD, averaging about 35 additional crimes per day, or 10% more 
+
+than the average number of daily reported Part I crimes during the two months 
+
+prior to its implementation. This increase occurs in the context of a generally 
+
+declining trend in all crime reports during this period. It appears that in the two 
+
+months following  Urquidi , average daily Part I crime reports did not decline, which 
+
+would have been expected if they continued following the pre-period trend. 
+
+Following the implementation of the PARPs, we observe no change in crime 
+
+report trends, but a statistically significant decline in average daily misdemeanor 
+
+arrests. The magnitude of the difference in the observed average and the 
+
+projected average was 21 fewer misdemeanor arrests per day. The pre-period 
+
+trend in misdemeanor arrests was increasing prior to the PARPs, suggesting that 
+
+misdemeanor arrests did not continue to increase at the same rate in the post-
+
+period. 
+
+If one expects deterrence to play a meaningful role in how bail reform affects 
+
+crime, then these results could be interpreted as a finding that bail reform did 
+
+not cause a change in individuals’ internal perception of the risk of committing 
+
+crime, and therefore did not cause a change in deterrence effects. Similarly, if 
+
+one expects that bail reform mostly affects crime through the mechanism of 
+
+incapacitation, then one could conclude that the changes in the jail population 
+
+we observe — in both directions — did not induce meaningful changes in crime. 
+
+There is evidence that the reinstatement of the emergency bail schedule following 
+
+Urquidi  changed the type of crime being reported — with an increase in Part I 
+
+crime reports — however the change in the overall volume of crime reported 
+
+was not statistically significant. In addition, misdemeanor arrests declined in 
+
+the months following the PARPs’ implementation, again with no effect on total 
+
+arrests. On the whole, it appears that the bail policy changes in Los Angeles over 
+
+the past few years — including those that reduced the pretrial jail population — 
+
+were achieved with little meaningful change in crime and safety in the short-run. 
+
+Still, there are limitations to the study that are worth noting. First, while we 
+
+measure impacts using two different approaches — the ITS and RD methods 
+
+— both rely on data from the City of Los Angeles alone, and do not compare 
+
+changes in these outcomes within the city to changes in the same outcomes 
+
+within other locations that were unaffected by the policy changes. It is possible 
+
+that we would have observed similar effects in other places during the same 
+
+time due to larger-scale factors, such as changes in the economy, that are not 
+
+related to the policy changes. As a robustness test, we conducted a difference-36 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+in-difference comparison with Riverside County, a nearby county that did not 
+
+experience the same policy changes. However, the pre-period outcome trends in 
+
+Riverside and Los Angeles were not parallel, violating a central requirement of the 
+
+method. Therefore, in the current analysis we cannot rule out that the changes 
+
+in trends we observe are entirely a result of the policy changes, and not other 
+
+factors. 
+
+Second, we measure outcomes in the two months following the policy changes 
+
+under the theory that some effects may take time to accrue. However, if changes 
+
+in crime or arrests take longer than two months to appear, we will not observe 
+
+them here. As a result, these findings should be interpreted as short-run effects of 
+
+the bail policy changes. 
+
+Third, one might be concerned that the policy changes affected field cite and 
+
+release arrests — in which officers release individuals from custody without 
+
+booking at a station or detention facility — differently than booking arrests. 
+
+If this was the case, then potential increases or decreases in overall arrests could 
+
+be unobservable if they occur mostly due to changes in field cite and release 
+
+arrests, or if a policy change leads to a substitution away from booking arrests 
+
+and towards cite-and-release arrests or vice-versa. Luckily, the LAPD includes 
+
+information on these types of arrests in the data. Eighty-four percent of arrests 
+
+from 2020–2023 were booking arrests and 16% were field cite and release 
+
+arrests. We do not observe a substitution between these two types of arrests 
+
+in the two months following any of the policy changes, and find no statistically 
+
+significant evidence that the policy changes affected the two types of arrest 
+
+in different ways. It is unclear whether or not all field cite and release arrests 
+
+are reported, but we do not have any reason to believe that there would be 
+
+a systematic change in underreporting following any of the policy changes in 
+
+question. This means that we would not expect any underreporting, if it occurs, 
+
+to bias these findings. 
+
+Finally, there were other factors that may have affected jail populations, policing 
+
+activity, and crime during this time. For example, following the July 2022 retraction 
+
+of the emergency bail schedule, the jail population increased not only due to an 
+
+increase in the pretrial population, but also due to an increase in the size of the 
+
+sentenced population awaiting transfer to prison. Similarly, the population awaiting 
+
+transfer to prison also decreased alongside the pretrial population following the 
+
+implementation of the PARPs. At the same time, Los Angeles jails were frequently 
+
+at or over capacity during this time period. As a result, one could imagine how 
+
+policies that decrease one part of the jail population (like the pretrial population) 
+
+might result in lower release rates for other groups in the jail population (like the 
+
+sentenced population). However, the Sheriff’s quarterly jail population reports 
+
+indicate that overcrowding-induced release criteria remained largely unchanged 37 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+during the period in question. Given this, we see little evidence to suggest that 
+
+drops in the pretrial jail population were “offset” by decreased release rates for 
+
+other populations. 10  It is also possible that policing practice and patterns may have 
+
+shifted in response to some of these policy changes, in ways that we are unable to 
+
+accurately observe in the data. Nevertheless, the change in the jail population that 
+
+is plausibly attributable to the bail policies did not appear to affect overall arrests 
+
+or crime in the short-run. 
+
+# ACKNOWLEDGMENTS 
+
+Support for this research was provided by the Committee on Revision of 
+
+the Penal Code. We also thank other supporters of the California Policy Lab, 
+
+including the University of California Office of the President Multicampus 
+
+Research Programs and Initiatives, M21PR3278, The James Irvine Foundation, and 
+
+the Woven Foundation for their generous support. CPL is also grateful to several 
+
+experts in the field who provided external review on this report. The views 
+
+expressed are those of the authors and do not necessarily reflect the views of our 
+
+funders. All errors should be attributed to the authors.       
+
+> 10 “Custody Division Population Quarterly Report: October–December 2023 ” Los Angeles County Sheriff’s Department 2023 https://lasd.org/transparency/
+> custodyreports (See also the custody division population quarterly reports for summer 2022 through fall 2023 )38 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org
+
+# Bibliography 
+
+Bullock, J., & Pellegrino, A. P. (2021). How do COVID-19 stay-at-home 
+
+restrictions affect crime? Evidence from Rio de Janeiro, Brazil.  EconomiA , 22 (3), 
+
+147–163. 
+
+Calonico, S., Cattaneo, M. D., & Farrell, M. H. (2020). Optimal bandwidth choice 
+
+for robust bias-corrected inference in regression discontinuity designs.  The 
+
+Econometrics Journal , 23 (2), 192–210. 
+
+Calonico, S., Cattaneo, M. D., & Titiunik, R. (2014). Robust nonparametric 
+
+confidence intervals for regression‐discontinuity designs.  Econometrica , 82 (6), 
+
+2295–2326. 
+
+Hausman, C., & Rapson, D. S. (2018). Regression discontinuity in time: 
+
+Considerations for empirical applications.  Annual Review of Resource Economics, 
+
+10 (1), 533–552. 
+
+Heflin, J. and McCannon, B. C. (2023). The impact of California’s zero dollar bail 
+
+policy on crime. Available at SSRN:  https://ssrn.com/abstract=4559338 .
+
+Jahn, J. L., Simes, J. T., & Jay, J. (2024). Evaluating firearm violence after New 
+
+Jersey’s cash bail reform.  JAMA network open , 7(5), e2412535-e2412535. 
+
+Lacoe, J., Skog, A., and Bird, M. (2024). Bail reform and pretrial release: Examining 
+
+the implementation of  In re Humphrey . Working paper: California Policy Lab, 
+
+Berkeley, CA. 
+
+McDowall, D., Loftin, C., & Pate, M. (2012). Seasonal cycles in crime, and their 
+
+variability.  Journal of quantitative criminology , 28 , 389–410. 39 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+Mummolo, J. (2018). Modern police tactics, police-citizen interactions, and the 
+
+prospects for reform.  The Journal of Politics , 80 (1), 1–15. 
+
+Nivette, A. E., Zahnow, R., Aguilar, R., Ahven, A., Amram, S., Ariel, B., ... & 
+
+Eisner, M. P. (2021). A global analysis of the impact of COVID-19 stay-at-home 
+
+restrictions on crime.  Nature Human Behaviour , 5(7), 868–877. 
+
+Ouss, A., & Stevenson, M. (2023). Does cash bail deter misconduct?.  American 
+
+Economic Journal: Applied Economics , 15 (3), 150–182. 
+
+Prieto Curiel, R. (2023). Weekly crime concentration.  Journal of quantitative 
+
+criminology , 39 (1), 97–124. 
+
+Premkumar, D., Sloan, T., Lofstrom, M., and Hayes, J. (2023). Assessing the 
+
+impact of COVID-19 on arrests in California. Public Policy Institute of California. 
+
+https://www.ppic.org/publication/assessing-the-impact-of-covid-19-on-arrests-in-
+
+california/ 
+
+Stemen, D. and D. Olson. (2020). Dollars and sense in Cook County: Examining 
+
+the impact of General Order 18.8A on felony bond court decisions, pretrial 
+
+release, and crime. Chicago: Loyola University Chicago. 
+
+Wu, S., & McDowall, D. (2024). Does bail reform increase crime in New York 
+
+State: Evidence from interrupted time-series analyses and synthetic control 
+
+methods.  Justice Quarterly , 41 (3), 371–399. 40 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+# Appendix 
+
+# Policy Implementation Details 
+
+TABLE A  List of dates on which bail policy in Los Angeles County changed 
+
+March 17, 2020  The LA County Superior Court emergency bail schedule takes effect. 
+
+April 13, 2020  The California Judicial Council emergency bail schedule takes effect at 5:00 pm, superseding the LA 
+
+County Superior Court emergency bail schedule. 
+
+June 20, 2020 (with an updated 
+
+schedule released June 23, 2020) 
+
+The California Judicial Council emergency bail schedule expires. The LA County Superior Court enacts 
+
+another emergency bail schedule to begin immediately after the expiration of the state order at 5:00 pm. 
+
+October 20, 2020  The LA County Superior Court modifies its June 20th, 2020 emergency bail schedule. 
+
+July 1, 2022  The LA County Superior Court’s normal cash bail schedule takes effect following the expiration of its 
+
+emergency bail schedule on June 30th. 
+
+May 24, 2023  Urquidi  affordable bail protocols take effect for LAPD and LASD, with May 23rd being the last day of the 
+
+use of normal cash bail schedule. 
+
+October 1, 2023  The Pre-Arraignment Release Protocols (PARPs) take effect county-wide, with September 30th being the 
+
+last day of the use of  Urquidi  bail protocols by LAPD and LASD. 
+
+TABLE B  Percentage of LAPD arrests eligible for emergency bail, 2020–2023 
+
+2020  2021 
+
+BOOKED  RELEASED FROM CUSTODY  TOTAL  BOOKED  RELEASED FROM CUSTODY  TOTAL 
+
+Likely eligible  39,228 
+
+27.38% 
+
+17,493 
+
+75.82% 
+
+56,721 
+
+34.10% 
+
+37,839 
+
+25.78% 
+
+16,005 
+
+81.07% 
+
+53,844 
+
+32.34% 
+
+Not eligible  104,031 
+
+72.62% 
+
+5,580 
+
+24.18% 
+
+109,611 
+
+65.90% 
+
+108,912 
+
+74.22% 
+
+3,738 
+
+18.93% 
+
+112,650 
+
+67.66% 
+
+Total  143,259  23,073  166,332  146,751  19,743  166,494 
+
+2022  2023 
+
+BOOKED  RELEASED FROM CUSTODY  TOTAL  BOOKED  RELEASED FROM CUSTODY  TOTAL 
+
+Likely eligible  35,919 
+
+26.11% 
+
+13,533 
+
+80.51% 
+
+49,452 
+
+32.03% 
+
+33,963 
+
+25.27% 
+
+14,739 
+
+80.21% 
+
+48,702 
+
+31.88% 
+
+Not eligible  101,649 
+
+73.89% 
+
+3,276 
+
+19.49% 
+
+104,925 
+
+67.97% 
+
+100,437 
+
+74.73% 
+
+3,636 
+
+19.79% 
+
+104,073 
+
+68.12% 
+
+Total  137,568  16,809  154,377  134,400  18,375  152,775 
+
+Note  Calculations are based on the October 2020 revised emergency bail schedule, which contained edits for clarity and did not substantively alter the June 2020 
+
+version  These estimates are based on the authors’ interpretation of how a given arrest charge would be handled based on the offenses listed in the emergency 
+
+bail schedule  However, we cannot see all information available to those who made the booking decisions for each case, and as such there could be additional 
+
+context on a case that changed the release outcome  These should not be treated as authoritative totals 41 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+# Interrupted Time Series Design 
+
+In the ITS approach, we leverage continuous observations of the outcome 
+
+measures over time to examine whether the existing trend is “interrupted” by 
+
+each of the three different policy shifts. First, we use the pre-period observations 
+
+to run the following model: 
+
+(1)  Yt = β0+ β1Tt + e t
+
+Then we use this linear prediction model to generate a counterfactual predicted 
+
+value in the post-period. Next, we calculate the residuals, or the difference 
+
+between the observed outcome and the predicted outcome for each day of the 
+
+post-period. 
+
+(2)  et = Y t – Ŷt
+
+We take the average of the daily residuals in the post-period,  ē, to generate our 
+
+estimate. To assess the statistical significance of the estimate, we generate a 
+
+distribution of placebo values by randomly ordering all of the daily observations in 
+
+the four-month window, and running the same model specified above. We repeat 
+
+that placebo test 1,000 times. We then assess where the true value of  ē lies in the 
+
+distribution of placebo estimates as a percentile. Results are deemed significant 
+
+with a two-tailed test where p < .05. 42 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+# Regression Discontinuity Design 
+
+The cutoff dates for the three countywide bail policy changes, 11  drawn from the 
+
+timeline illustrated in Figure 1, are: 
+
+• July 1, 2022 (The first day of use of the normal bail schedule in LA County 
+
+following the retraction of the emergency bail schedule that began on March 
+
+17, 2020) 
+
+• May 24, 2023 (The first day of the resumption of the emergency bail schedule 
+
+by LAPD and LASD, mandated as a result of the  Urquidi  ruling) 
+
+• October 1, 2023 (The first day of the implementation of the PARPs) 
+
+These data meet the criteria required for use of the regression discontinuity in 
+
+time (RDiT) method. Because the data is measured at the event level, we are able 
+
+to create continuously measured outcome variables for daily booking, release, 
+
+jail population, arrest, and crime report counts. For the arrest and crime report 
+
+data, these daily counts can be calculated at the reporting area and citywide level. 
+
+This satisfies one of the basic requirements of the regression discontinuity model, 
+
+which is a continuously measured variable around a policy threshold — in this 
+
+case a specific date. The bail policy changes on each of the dates in question also 
+
+represent sharp, deterministic shifts in arrest and booking practices at a single 
+
+date and time, which satisfies another requirement of the RDiT model. 
+
+If these bail policy shifts affect jail populations, arrests, or crime, then these effects 
+
+could occur immediately, but they could also take days, weeks, or months to 
+
+accrue. For this reason, the RDD method does not necessarily capture the full 
+
+effect of a policy change. Finally, one would not expect crime or arrest counts to 
+
+shift discontinuously on any of these dates. While crime data typically fluctuate 
+
+seasonally and from the weekend to weekdays, crime counts remain stable — if 
+
+noisy — from one day to the next (Macdowall, Loftin & Pate, 2011; Prieto Curiel, 
+
+2023). This work is patterned on similar uses of RDiT on crime outcomes by 
+
+Bullock and Pellegrino (2021) and Mummolo (2018).        
+
+> 11 Models were additionally estimated for March 17, 2020, LA County’s first date of zero bail implementation, but are not included in the main discussion of
+> results because any changes in outcomes estimated for this date cannot be attributed to the emergency bail policy change Concurrent events at this time
+> included myriad COVID policy responses at the state and local level The policy that most closely coincides with the implementation of emergency bail on
+> March 17 is imposition of countywide lockdown orders on March 16th and March 19th Previous research has demonstrated that such lockdowns caused
+> decreases in public movement, which in turn caused sharp decreases in arrests and crime (Nivette et al 2021, Premkumar et al 2023) Because we would
+> expect to see sharp decreases in crime at almost the exact point in time when emergency bail was implemented, this method — even when using control
+> variables for day of the week and month of the year — cannot properly identify potential changes in crime caused by zero bail alone 43 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org
+
+Below is the main specification of the model: 
+
+Count it  = α + β 1BailPolicy t + f(Days t) + β 2(Days t × BailPolicy t) + λ d + π m + δ i + μ it 
+
+In this specification,  Count it  is the count of arrests or crimes in a reporting area. 
+
+The coefficient of interest is  β1. BailPolicy t is equal to zero for dates before and 
+
+including the cutoff date and one for dates after the cutoff date. The cutoff date 
+
+is the first day of the new bail policy. The function  f(Days t) represents local linear 
+
+and second-order polynomial functions that model time trends on either side of 
+
+the treatment threshold in days, which is the running variable. To account for the 
+
+seasonality of crime, we include day of the week fixed effects ( λd) and fixed month 
+
+effects ( πm), as well as fixed effects by LAPD area ( δi). Month controls are omitted 
+
+for 30-day bandwidth models for July 1 2022 and October 1 2023 due to near-
+
+perfect covariance with treatment. Standard errors are clustered at the LAPD 
+
+reporting area. Some models are run at the city level instead of the reporting area 
+
+level; for this model we use a heteroskedasticity-robust three nearest-neighbor 
+
+variance covariance estimator. We employ a robust bias correction methodology 
+
+to adjust the confidence intervals of the point estimates using second-order and 
+
+third-order polynomials for the linear and second-order estimates respectively 
+
+(Calonico, Cattaneo, and Titiunik 2014; Calonico, Cattaneo, and Farrell 2019). 
+
+All results are reported with bias-corrected confidence intervals. 
+
+Unless noted otherwise, each model was run using 30-day, 60-day, and 
+
+automatically-set bandwidths at the area level for each of the three policy change 
+
+dates. Magnitudes of estimated effects at the area level are much smaller than 
+
+they would be at the citywide level; for a rough approximation of the city-wide 
+
+equivalent, multiply by 21 (the number of LAPD reporting areas). Jail estimates 
+
+were conducted at the county level. Data was not reported frequently enough in 
+
+2020 to produce estimates for March 17, 2020. 44 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org  
+
+> TABLE C
+
+ITS estimates after the retraction of the emergency bail schedule on 
+
+July 1, 2022  
+
+> OUTCOME
+> ESTIMATED
+> EFFECT PERCENTILE
+> PLACEBO
+> μˉx
+> PLACEBO
+> MEDIAN ˉx
+> PLACEBO
+> σˉx
+
+Total jail population  555*  98  -9  -15  290 
+
+Pretrial  292  96  7 13  166 
+
+Awaiting prison  105*  99  -5  -6  50 
+
+All arrests  5 72  0 0 9
+
+Felony arrests  1 59  0 0 5
+
+Misdemeanor 
+
+Arrests 
+
+3 67  0 1 7
+
+Person  1 65  0 0 4
+
+Property  -1  34  0 0 4
+
+Other  -2  30  0 0 3
+
+Drug  1 61  0 0 3
+
+Sex  -2  27  0 0 3
+
+Total crime reports  -18  20  -1  -1  19 
+
+Part I  -14  18  0 1 15 
+
+Part II  -4  34  0 1 10 
+
+Person  -11  13  1 1 10 
+
+Property  -1  49  0 -1  13 
+
+Other  -6  18  0 1 7
+
+Sex  0 35  0 0 1  
+
+> *= p < 05
+
+45 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org  
+
+> TABLE D
+
+RD estimates after the retraction of the emergency bail schedule on 
+
+July 1, 2022 
+
+> OUTCOME
+> ESTIMATED
+> EFFECT
+> LOWER 95%
+> CONFIDENCE
+> INTERVAL
+> UPPER 95%
+> CONFIDENCE
+> INTERVAL
+
+Jail population  125.6  -70  110.8 
+
+Pretrial population  111.1  -66.9  136.5 
+
+All arrests  -0.323  -2.365  0.723 
+
+Felony arrests  -0.0449  -1.066  0.793 
+
+Misdemeanor arrests  -0.278  -1.638  0.269 
+
+Crimes against person  -0.0187  -0.760  0.701 
+
+Property crimes  -0.00363  -0.276  0.405 
+
+Other crimes  -0.0785  -0.655  0.294 
+
+Drug crimes  -0.00648  -0.919  0.587 
+
+All crime reports  -1.130  -4.930  4.114 
+
+Part I  -1.030  -4.129  2.332 
+
+Part II  -0.1000  -1.086  2.066 
+
+Person crimes  -0.28  -2.145  2.182 
+
+Property crimes  -0.716  -3.262  1.999 
+
+Other crimes  -0.115  -0.617  1.135     
+
+> * = p < 05, † = second-order estimate p < 05 Results are presented for the models using 60 day bandwidth
+> and including covariates and controls for local area Full results for all bandwidths and geographic areas available
+> in the Appendix
+
+46 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org  
+
+> TABLE E
+
+ITS estimates after the resumption of the emergency bail schedule on 
+
+May 24, 2023  
+
+> OUTCOME
+> ESTIMATED
+> EFFECT PERCENTILE
+> PLACEBO
+> μˉx
+> PLACEBO
+> MEDIAN ˉx
+> PLACEBO
+> σˉx
+
+Jail population  139  75  14  10  193 
+
+Pretrial 
+
+population 
+
+-306*  1 3 -2  96 
+
+Awaiting prison 
+
+pop. 
+
+382*  100  -1  2 173 
+
+Total arrests  -24  8 1 2 16 
+
+Felony arrests  -6  12  0 0 5
+
+Misdemeanor 
+
+arrests 
+
+-17  13  0 2 14 
+
+Person arrests  -3  25  0 0 4
+
+Property arrests  -6  12  0 0 5
+
+Other arrests  -2  31  0 2 9
+
+Drug arrests  -4  9 0 0 3
+
+Sex arrests  -8*  2 0 0 4
+
+Total crime reports  33  96  0 0 21 
+
+Part I reports  35*  100  0 1 16 
+
+Part II reports  -2  42  0 1 11 
+
+Person reports  2 53  0 1 12 
+
+Property reports  28*  98  -1  -1  14 
+
+Other reports  5 75  0 0 7
+
+Sex reports  -1  15  0 0 1  
+
+> *= p < 05
+
+47 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org  
+
+> TABLE F
+
+RD estimates after the resumption of the emergency bail schedule on 
+
+May 24, 2023 
+
+> OUTCOME
+> ESTIMATED
+> EFFECT
+> LOWER 95%
+> CONFIDENCE
+> INTERVAL
+> UPPER 95%
+> CONFIDENCE
+> INTERVAL
+
+Jail population  -25.47  -135.8  38.40 
+
+Pretrial population  -45.88  -87.87  34.73 
+
+All arrests  -0.288  -2.205  0.967 
+
+Felony arrests  -0.0347  -0.736  1.078 
+
+Misdemeanor arrests  -0.254  -2.078  0.497 
+
+Crimes against person total  -0.161  -0.709  0.496 
+
+Property crimes total  -0.128  -0.660  0.271 
+
+Other crimes total  -0.0213  -1.256  0.563 
+
+Drug crimes total  0.142  -0.271  0.611 
+
+All crime reports  0.387  -2.960  4.204 
+
+Part I  0.433  -2.092  3.411 
+
+Part II  -0.0462  -1.283  1.208 
+
+Reports of person crimes  -0.273  -1.767  2.32 
+
+Reports of property crimes  0.556  -1.78  2.772 
+
+Reports of other crimes  0.0706  -0.972  0.619     
+
+> * = p < 05, † = second-order estimate p < 05 Results are presented for the models using 60 day bandwidth
+> and including covariates and controls for local area Full results for all bandwidths and geographic areas available
+> in the Appendix
+
+48 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org  
+
+> TABLE G
+
+ITS estimates after the implementation of the PARPs on October 1, 2023  
+
+> OUTCOME
+> ESTIMATED
+> EFFECT PERCENTILE
+> PLACEBO
+> μˉx
+> PLACEBO
+> MEDIAN ˉx
+> PLACEBO
+> σˉx
+
+Total jail population  -314*  1 3 4 117 
+
+Pretrial 
+
+population 
+
+-206*  1 0 1 46 
+
+Awaiting prison 
+
+pop. 
+
+-184*  1 -4  -3  47 
+
+Total arrests  -21  5 0 1 12 
+
+Felony  1 56  0 0 6
+
+Misdemeanor  -21*  1 1 1 8
+
+Person  -2  36  0 0 4
+
+Property  -3  24  0 0 4
+
+Other  -6  9 0 0 4
+
+Drug  -6  4 0 0 3
+
+Sex  -2  20  0 0 3
+
+Total crime reports  8 66  0 -1  22 
+
+Part I reports  16  84  -1  -1  17 
+
+Part II reports  -8  24  0 0 10 
+
+Person reports  -5  30  1 2 12 
+
+Property reports  19  87  1 1 16 
+
+Other reports  -5  18  0 0 6
+
+Sex reports  0 41  0 0 1  
+
+> *= p < 05
+
+49 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org  
+
+> TABLE H
+
+RD estimates after the implementation of the PARPs on 
+
+October 1, 2023 
+
+> OUTCOME
+> ESTIMATED
+> EFFECT
+> LOWER 95%
+> CONFIDENCE
+> INTERVAL
+> UPPER 95%
+> CONFIDENCE
+> INTERVAL
+
+Jail population  -88.91*†  -153.1  -24.51 
+
+Pretrial population  -138.7*†  -221.3  -98.51 
+
+All arrests  -0.884  -2.758  0.636 
+
+Felony arrests  -0.243  -1.004  0.236 
+
+Misdemeanor arrests  -0.641  -2.125  0.770 
+
+Crimes against person  -0.121  -0.603  0.488 
+
+Property crimes total  -0.381  -1.262  0.367 
+
+Other crimes  -0.0200  -0.607  0.401 
+
+Drug crimes  0.279  1.008  -0.619 
+
+All crime reports  1.031  -2.705  4.701 
+
+Part I  0.860  -2.089  3.456 
+
+Part II  0.171  -0.989  1.617 
+
+Reports of person crimes  0.509  -1.599  2.845 
+
+Reports of property crimes  0.457  -2.209  2.718 
+
+Reports of other crimes  -0.00787  -0.539  0.728     
+
+> * = p < 05, † = second-order estimate p < 05 Results are presented for the models using 60 day bandwidth
+> and including covariates and controls for local area Full results for all bandwidths and geographic areas available
+> in the Appendix
+
+We conducted a robustness test using moving violations as the outcome 
+
+variable, with the assumption that there is no plausible link between the behavior 
+
+represented by low-level driving offenses and pretrial detention policies. We ran 
+
+30-day, 60-day, and automatically generated bandwidth models at the city level for 
+
+each of the four dates. No results were robust across all specifications. Significant, 
+
+negative coefficients were reported for two March 2020 models, which is 
+
+plausible given the overall decreases in driving related to COVID lockdowns. Two 
+
+significant negative coefficients for June had magnitudes close to zero. This is a 
+
+reassuring robustness test because it does not indicate the occurrence of false 
+
+positives (inaccurately reporting effects for emergency bail where there are none). 
+
+Refer to  Table M  for estimate results. 50 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+TABLE I  RD estimates for moving violations 
+
+DATE  BANDWIDTH 
+
+ESTIMATED 
+
+EFFECT 
+
+ROBUST 
+
+LOWER CI 
+
+ROBUST 
+
+UPPER CI 
+
+March 17 2020  30  -2.444  -4.526  3.893 
+
+60  -4.43*  -6.360  -0.082 
+
+129.8  -4.64*  -6.396  -1.567 
+
+July 1 2022  30  -1.365*  -4.622  -1.079 
+
+60  -0.238*  -3.024  -1.750 
+
+201.3  0.116  -0.976  0.878 
+
+May 24 2023  30  1.086  -2.310  4.651 
+
+60  0.303  -1.471  3.885 
+
+80.55  -0.087  -2.038  1.887 
+
+October 1 
+
+2023 
+
+30  -0.644  -4.807  3.267 
+
+60  -0.234  -2.861  2.570 
+
+118.1  -0.201  2.025  1.843 
+
+* = p <  05, † = second-order estimate p <  05 
+
+Note  Data for 2018 is omitted due to counts being much higher, on average, than counts for 2019–2023  Counts are omitted for 2020 and 2021 due to volatili -
+
+ty associated with the COVID-19 pandemic 
+
+3,500 3,700 3,900 4,100 4,300 4,500 4,700 2019 2023 2022 Jan Feb Apr Mar May Jun Jul Aug Sep Oct Nov Dec 
+
+FIGURE A  Total crime reports to LAPD per week, by year 51 THE SHORT-TERM IMPACTS OF BAIL POLICY ON CRIME IN LOS ANGELES capolicylab.org 
+
+# Neighborhood Level Results 
+
+TABLE J  Change in property crimes around May 24, 2023 by LAPD area 
+
+TWO-MONTH TOTAL: PROPERTY CRIMES 
+
+AREA 
+
+NUMBER 
+
+PRE PERIOD 
+
+NUMBER 
+
+POST PERIOD 
+
+NUMBER 
+
+CHANGE 
+
+PERCENT 
+
+CHANGE 
+
+Mission  489  621  132  27% 
+
+Harbor  633  754  121  19% 
+
+Rampart  786  908  122  16% 
+
+West Valley  739  842  103  14% 
+
+West LA  995  1,127  132  13% 
+
+Pacific  1,372  1,521  149  11% 
+
+Hollywood  828  916  88  11% 
+
+Southeast  597  659  62  10% 
+
+Newton  841  925  84  10% 
+
+Topanga  797  873  76  10% 
+
+Foothill  454  488  34  7% 
+
+Wilshire  1,029  1,102  73  7% 
+
+Central  1,241  1,300  59  5% 
+
+Van Nuys  887  929  42  5% 
+
+N Hollywood  952  989  37  4% 
+
+77th Street  841  830  -11  -1% 
+
+Devonshire  853  829  -24  -3% 
+
+Northeast  797  770  -27  -3% 
+
+Southwest  931  883  -48  -5% 
+
+Olympic  914  850  -64  -7% 
+
+Hollenbeck  618  560  -58  -9%

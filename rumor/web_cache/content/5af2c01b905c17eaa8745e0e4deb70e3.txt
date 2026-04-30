@@ -1,0 +1,666 @@
+Title: A 50-Year Quest: My Personal Journey with the Second Law of Thermodynamics
+
+URL Source: https://writings.stephenwolfram.com/2023/02/a-50-year-quest-my-personal-journey-with-the-second-law-of-thermodynamics/
+
+Markdown Content:
+When I Was 12 Years Old…
+------------------------
+
+I’ve been trying to understand the Second Law now for a bit more than 50 years.
+
+It all started when I was 12 years old. Building on an earlier interest in space and spacecraft, I’d gotten very interested in physics, and was trying to read everything I could about it. There were several shelves of physics books at the local bookstore. But what I coveted most was the largest physics book collection there: a series of five plushly illustrated college textbooks. And as a kind of graduation gift when I finished (British) elementary school in June 1972 I arranged to get those books. And here they are, still on my bookshelf today, just a little faded, more than half a century later:
+
+For a while the first book in the series was my favorite. Then the third. The second. The fourth. The fifth one at first seemed quite mysterious—and somehow more abstract in its goals than the others:
+
+What story was the filmstrip on its cover telling? For a couple of months I didn’t look seriously at the book. And I spent much of the summer of 1972 writing my own (unseen by anyone else for 30+ years) _Concise Directory of Physics_
+
+that included a rather stiff page about energy, mentioning entropy—along with the heat death of the universe.
+
+But one afternoon late that summer I decided I should really find out what that mysterious fifth book was all about. Memory being what it is I remember that—very unusually for me—I took the book to read sitting on the grass under some trees. And, yes, my archives almost let me check my recollection: in the distance, there’s the spot, except in 1967 the trees are significantly smaller, and in 1985 they’re bigger:
+
+Of course, by 1972 I was a little bigger than in 1967—and here I am a little later, complete with a book called _Planets and Life_ on the ground, along with a tube of (British) Smarties, and, yes, a pocket protector (but, hey, those were actual ink pens):
+
+But back to the mysterious green book. It wasn’t like anything I’d seen before. It was full of pictures like the one on the cover. And it seemed to be saying that—just by looking at those pictures and thinking—one could figure out fundamental things about physics. The other books I’d read had all basically said “physics works like this”. But here was a book saying “you can figure out how physics has to work”. Back then I definitely hadn’t internalized it, but I think what was so exciting that day was that I got a first taste of the idea that one didn’t have to be told how the world works; one could just figure it out:
+
+I didn’t yet understand quite a bit of the math in the book. But it didn’t seem so relevant to the core phenomenon the book was apparently talking about: the tendency of things to become more random. I remember wondering how this related to stars being organized into galaxies. Why might that be different? The book didn’t seem to say, though I thought maybe somewhere it was buried in the math.
+
+But soon the summer was over, and I was at a new school, mostly away from my books, and doing things like diligently learning more Latin and Greek. But whenever I could I was learning more about physics—and particularly about the hot area of the time: particle physics. The pions. The kaons. The lambda hyperon. They all became my personal friends. During the school vacations I would excitedly bicycle the few miles to the nearby university library to check out the latest journals and the latest news about particle physics.
+
+The school I was at (Eton) had five centuries of history, and I think at first I assumed no particular bridge to the future. But it wasn’t long before I started hearing mentions that somewhere at the school there was a computer. I’d seen a computer in real life only once—when I was 10 years old, and from a distance. But now, tucked away at the edge of the school, above a bicycle repair shed, there was an island of modernity, a “computer room” with a glass partition separating off a loudly humming desk-sized piece of electronics that I could actually touch and use: an Elliott 903C computer with 8 kilowords of 18-bit ferrite core memory (acquired by the school in 1970 for £12,000, or about about $300k today):
+
+At first it was such an unfamiliar novelty that I was satisfied writing little programs to do things like compute primes, print curious patterns on the teleprinter, and play tunes with the built-in diagnostic tone generator. But it wasn’t long before I set my sights on the goal of using the computer to reproduce that interesting picture on the book cover.
+
+I programmed in assembler, with my programs on paper tape. The computer had just 16 machine instructions, which included arithmetic ones, but only for integers. So how was I going to simulate colliding “molecules” with that? Somewhat sheepishly, I decided to put everything on a grid, with everything represented by discrete elements. There was a convention for people to name their programs starting with their own first initial. So I called the program SPART, for “Stephen’s Particle Program”. (Thinking about it today, maybe that name reflected some aspiration of relating this to particle physics.)
+
+It was the most complicated program I had ever written. And it was hard to test, because, after all, I didn’t really know what to expect it to do. Over the course of several months, it went through many versions. Rather often the program would just mysteriously crash before producing any output (and, yes, there weren’t real debugging tools yet). But eventually I got it to systematically produce output. But to my disappointment the output never looked much like the book cover.
+
+I didn’t know why, but I assumed it was because I was simplifying things too much, putting everything on a grid, etc. A decade later I realized that in writing my program I’d actually ended up inventing a form of 2D cellular automaton. And I now rather suspect that this cellular automaton—like rule 30—was actually intrinsically generating randomness, and in some sense showing what I now understand to be the core phenomenon of the Second Law. But at the time I absolutely wasn’t ready for this, and instead I just assumed that what I was seeing was something wrong and irrelevant. (In past years, I had suspected that what went wrong had to do with details of particle behavior on square—as opposed to other—grids. But I now suspect it was instead that the system was in a sense generating too much randomness, making the intended “molecular dynamics” unrecognizable.)
+
+I’d love to “bring SPART back to life”, but I don’t seem to have a copy anymore, and I’m pretty sure the printouts I got as output back in 1973 seemed so “wrong” I didn’t keep them. I do still have quite a few paper tapes from around that time, but as of now I’m not sure what’s on them—not least because I wrote my own “advanced” paper-tape loader, which used what I later learned were error-correcting codes to try to avoid problems with pieces of “confetti” getting stuck in the holes that had been punched in the tape:
+
+Becoming a Physicist
+--------------------
+
+I don’t know what would have happened if I’d thought my program was more successful in reproducing “Second Law” behavior back in 1973 when I was 13 years old. But as it was, in the summer of 1973 I was away from “my” computer, and spending all my time on particle physics. And between that summer and early 1974 I wrote a book-length summary of what I called “The Physics of Subatomic Particles”:
+
+I don’t think I’d looked at this in any detail in 48 years. But reading it now I am a bit shocked to find history and explanations that I think are often better than I would immediately give today—even if they do bear definite signs of coming from a British early teenager writing “scientific prose”.
+
+Did I talk about statistical mechanics and the Second Law? Not directly, though there’s a curious passage where I speculate about the possibility of antimatter galaxies, and their (rather un-Second-Law-like) segregation from ordinary, matter galaxies:
+
+By the next summer I was writing the 230-page, much more technical “Introduction to the Weak Interaction”. Lots of quantum mechanics and quantum field theory. No statistical mechanics. The closest it gets is a chapter on CP violation (AKA time-reversal violation)—a longtime favorite topic of mine—but from a very particle-physics point of view. By the next year I was publishing papers about particle physics, with no statistical mechanics in sight—though in a picture of me (as a “lanky youth”) from that time, the _Statistical Physics_ book is right there on my shelf, albeit surrounded by particle physics books:
+
+But despite my focus on particle physics, I still kept thinking about statistical mechanics and the Second Law, and particularly its implications for the large-scale structure of the universe, and things like the possibility of matter-antimatter separation. And in early 1977, now 17 years old, and (briefly) a college student in Oxford, my archives record that I gave a talk to the newly formed (and short-lived) Oxford Natural Science Club entitled “Whither Physics” in which I talked about “large, small, many” as the main frontiers of physics, and presented the visual
+
+with a dash of “unsolved purple” impinging on statistical mechanics, particularly in connection with non-equilibrium situations. Meanwhile, looking at my archives today, I find some “back of the envelope” equilibrium statistical mechanics from that time (though I have no idea now what this was about):
+
+But then, in the fall of 1977 I ended up for the first time really needing to use statistical mechanics “in production”. I had gotten interested in what would later become a hot area: the intersection between particle physics and the early universe. One of my interests was neutrino background radiation (the neutrino analog of the cosmic microwave background); another was early-universe production of stable charged particles heavier than the proton. And it turned out that to study these I needed all three of cosmology, particle physics, and statistical mechanics:
+
+In the couple of years that followed, I worked on all sorts of topics in particle physics and in cosmology. Quite often ideas from statistical mechanics would show up, like when I worked on the hadronization of quarks and gluons, or when I worked on phase transitions in the early universe. But it wasn’t until 1979 that the Second Law made its first explicit appearance by name in my published work.
+
+I was studying how there could be a net excess of matter over antimatter throughout the universe (yes, I’d by then given up on the idea of matter-antimatter separation). It was a subtle story of quantum field theory, time reversal violation, General Relativity—and non-equilibrium statistical mechanics. And in the paper we wrote we included a detailed appendix about Boltzmann’s _H_ theorem and the Second Law—and the generalization we needed for relativistic quantum time-reversal-violating systems in an expanding universe:
+
+All this got me thinking again about the foundations of the Second Law. The physicists I was around mostly weren’t too interested in such topics—though Richard Feynman was something of an exception. And indeed when I did my PhD thesis defense in November 1979 it ended up devolving into a spirited multi-hour debate with Feynman about the Second Law. He maintained that the Second Law must ultimately cause everything to randomize, and that the order we see in the universe today must be some kind of temporary fluctuation. I took the point of view that there was something else going on, perhaps related to gravity. Today I would have more strongly made the rather Feynmanesque point that if you have a theory that says everything we observe today is an exception to your theory, then the theory you have isn’t terribly useful.
+
+Statistical Mechanics and Simple Programs
+-----------------------------------------
+
+Back in 1973 I never really managed to do much science on the very first computer I used. But by 1976 I had access to much bigger and faster computers (as well as to the ARPANET—forerunner of the internet). And soon I was routinely using computers as powerful tools for physics, and particularly for symbolic manipulation. But by late 1979 I had basically outgrown the software systems that existed, and within weeks of getting my PhD I embarked on the project of building my own computational system.
+
+It’s a story I’ve told elsewhere, but one of the important elements for our purposes here is that in designing the system I called SMP (for “Symbolic Manipulation Program”) I ended up digging deeply into the foundations of computation, and its connections to areas like mathematical logic. But even as I was developing the critical-to-Wolfram-Language-to-this-day paradigm of basing everything on transformations for symbolic expressions, as well as leading the software engineering to actually build SMP, I was also continuing to think about physics and its foundations.
+
+There was often something of a statistical mechanics orientation to what I did. I worked on cosmology where even the collection of possible particle species had to be treated statistically. I worked on the quantum field theory of the vacuum—or effectively the “bulk properties of quantized fields”. I worked on what amounts to the statistical mechanics of cosmological strings. And I started working on the quantum-field-theory-meets-statistical-mechanics problem of “relativistic matter” (where my unfinished notes contain questions like “Does causality forbid relativistic solids?”):
+
+But hovering around all of this was my old interest in the Second Law, and in the seemingly opposing phenomenon of the spontaneous emergence of complex structure.
+
+SMP Version 1.0 was ready in mid-1981. And that fall, as a way to focus my efforts, I taught a “Topics in Theoretical Physics” course at Caltech (supposedly for graduate students but actually almost as many professors came too) on what, for want of a better name, I called “non-equilibrium statistical mechanics”. My notes for the first lecture dived right in:
+
+Echoing what I’d seen on that book cover back in 1972 I talked about the example of the expansion of a gas, noting that even in this case “Many features [are] still far from understood”:
+
+I talked about the Boltzmann transport equation and its elaboration in the BBGKY hierarchy, and explored what might be needed to extend it to things like self-gravitating systems. And then—in what must have been a very overstuffed first lecture—I launched into a discussion of “Possible origins of irreversibility”. I began by talking about things like ergodicity, but soon made it clear that this didn’t go the distance, and there was much more to understand—saying that “with a bit of luck” the material in my later lectures might help:
+
+I continued by noting that some systems can “develop order and considerable organization”—which non-equilibrium statistical mechanics should be able to explain:
+
+I then went quite “cosmological”:
+
+The first candidate explanation I listed was the fluctuation argument Feynman had tried to use:
+
+I discussed the possibility of fundamental microscopic irreversibility—say associated with time-reversal violation in gravity—but largely dismissed this. I talked about the possibility that the universe could have started in a special state in which “the matter is in thermal equilibrium, but the gravitational field is not.” And finally I gave what the 22-year-old me thought at the time was the most plausible explanation:
+
+All of this was in a sense rooted in a traditional mathematical physics style of thinking. But the second lecture gave a hint of a quite different approach:
+
+In my first lecture, I had summarized my plans for subsequent lectures:
+
+But discovery intervened. People had discussed reaction-diffusion patterns as examples of structure being formed “away from equilibrium”. But I was interested in more dramatic examples, like galaxies, or snowflakes, or turbulent flow patterns, or forms of biological organisms. What kinds of models could realistically be made for these? I started from neural networks, self-gravitating gases and spin systems, and just kept on simplifying and simplifying. It was rather like language design, of the kind I’d done for SMP. What were the simplest primitives from which I could build up what I wanted?
+
+Before long I came up with what I’d soon learn could be called one-dimensional cellular automata. And immediately I started running them on a computer to see what they did:
+
+And, yes, they were “organizing themselves”—even from random initial conditions—to make all sorts of structures. By December I was beginning to frame how I would write about what was going on:
+
+And by May 1982 I had written my first long paper about cellular automata (published in 1983 under the title “Statistical Mechanics of Cellular Automata”):
+
+The Second Law featured prominently, even in the first sentence:
+
+I made quite a lot out of the fundamentally irreversible character of most cellular automaton rules, pretty much assuming that this was the fundamental origin of their ability to “generate complex structures”—as the opening transparencies of two talks I gave at the time suggested:
+
+It wasn’t that I didn’t know there could be reversible cellular automata. And a footnote in my paper even records the fact these can generate nested patterns with a certain fractal dimension—as computed in a charmingly manual way on a couple of pages I now find in my archives:
+
+But somehow I hadn’t quite freed myself from the assumption that microscopic irreversibility was what was “causing” structures to be formed. And this was related to another important—and ultimately incorrect—assumption: that all the structure I was seeing was somehow the result of the “filtering” random initial conditions. Right there in my paper is a picture of rule 30 starting from a single cell:
+
+And, yes, the printout from which that was made is still in my archives, if now a little worse for wear:
+
+Of course, it probably didn’t help that with my “display” consisting of an array of printed characters I couldn’t see too much of the pattern—though my archives do contain a long “imitation-high-resolution” printout of the conveniently narrow, and ultimately nested, pattern from rule 225:
+
+But I think the more important point was that I just didn’t have the necessary conceptual framework to absorb what I was seeing in rule 30—and I wasn’t ready for the intuitional shock that it takes only simple rules with simple initial conditions to produce highly complex behavior.
+
+My motivation for studying the behavior of cellular automata had come from statistical mechanics. But I soon realized that I could discuss cellular automata without any of the “baggage” of statistical mechanics, or the Second Law. And indeed even as I was finishing my long statistical-mechanics-themed paper on cellular automata, I was also writing a short paper that described cellular automata essentially as purely computational systems (even though I still used the term “mathematical models”) without talking about any kind of Second Law connections:
+
+Through much of 1982 I was alternating between science, technology and the startup of my first company. I left Caltech in October 1982, and after stops at Los Alamos and Bell Labs, started working at the Institute for Advanced Study in Princeton in January 1983, equipped with a newly obtained Sun workstation computer whose (“one megapixel”) bitmap display let me begin to see in more detail how cellular automata behave:
+
+It had very much the flavor of classic observational science—looking not at something like mollusc shells, but instead at images on a screen—and writing down what I saw in a “lab notebook”:
+
+What did all those rules do? Could I somehow find a way to classify their behavior?
+
+Mostly I was looking at random initial conditions. But in a near miss of the rule 30 phenomenon I wrote in my lab notebook: “In irregular cases, appears that patterns starting from small initial states are not self-similar (e.g. code 10)”. I even looked again at asymmetric “elementary” rules (of which rule 30 is an example)—but only from random initial conditions (though noting the presence of “class 4” rules, which would include rule 110):
+
+My technology stack at the time consisted of printing screen dumps of cellular automaton behavior
+
+then using repeated photocopying to shrink them—and finally cutting out the images and assembling arrays of them using Scotch tape:
+
+And looking at these arrays I was indeed able to make an empirical classification, identifying initially five—but in the end four—basic classes of behavior. And although I sometimes made analogies with solids, liquids and gases—and used the mathematical concept of entropy—I was now mostly moving away from thinking in terms of statistical mechanics, and was instead using methods from areas like dynamical systems theory, and computation theory:
+
+Even so, when I summarized the significance of investigating the computational characteristics of cellular automata, I reached back to statistical mechanics, suggesting that much as information theory provided a mathematical basis for equilibrium statistical mechanics, so similarly computation theory might provide a foundation for non-equilibrium statistical mechanics:
+
+Computational Irreducibility and Rule 30
+----------------------------------------
+
+My experiments had shown that cellular automata could “spontaneously produce structure” even from randomness. And I had been able to characterize and measure various features of this structure, notably using ideas like entropy. But could I get a more complete picture of what cellular automata could make? I turned to formal language theory, and started to work out the “grammar of possible states”. And, yes, a quarter century before Graph in Wolfram Language, laying out complicated finite state machines wasn’t easy:
+
+But by November 1983 I was writing about “self-organization as a computational process”:
+
+The introduction to my paper again led with the Second Law, though now talked about the idea that computation theory might be what could characterize non-equilibrium and self-organizing phenomena:
+
+The concept of equilibrium in statistical mechanics makes it natural to ask what will happen in a system after an infinite time. But computation theory tells one that the answer to that question can be non-computable or undecidable. I talked about this in my paper, but then ended by discussing the ultimately much richer finite case, and suggesting (with a reference to NP completeness) that it might be common for there to be no computational shortcut to cellular automaton evolution. And rather presciently, I made the statement that “One may speculate that [this phenomenon] is widespread in physical systems” so that “the consequences of their evolution could not be predicted, but could effectively be found only by direct simulation or observation.”:
+
+These were the beginnings of powerful ideas, but I was still tying them to somewhat technical things like ensembles of all possible states. But in early 1984, that began to change. In January I’d been asked to write an article for the then-top popular science magazine _Scientific American_ on the subject of “Computers in Science and Mathematics”. I wrote about the general idea of computer experiments and simulation. I wrote about SMP. I wrote about cellular automata. But then I wanted to bring it all together. And that was when I came up with the term “computational irreducibility”.
+
+By May 26, the concept was pretty clearly laid out in my draft text:
+
+But just a few days later something big happened. On June 1 I left Princeton for a trip to Europe. And in order to “have something interesting to look at on the plane” I decided to print out pictures of some cellular automata I hadn’t bothered to look at much before. The first one was rule 30:
+
+And it was then that it all clicked. The complexity I’d been seeing in cellular automata wasn’t the result of some kind of “self-organization” or “filtering” of random initial conditions. Instead, here was an example where it was very obviously being “generated intrinsically” just by the process of evolution of the cellular automaton. This was computational irreducibility up close. No need to think about ensembles of states or statistical mechanics. No need to think about elaborate programming of a universal computer. From just a single black cell rule 30 could produce immense complexity, and showed what seemed very likely to be clear computational irreducibility.
+
+Why hadn’t I figured out before that something like this could happen? After all, I’d even generated a small picture of rule 30 more than two years earlier. But at the time I didn’t have a conceptual framework that made me pay attention to it. And a small picture like that just didn’t have the same in-your-face “complexity from nothing” character as my larger picture of rule 30.
+
+Of course, as is typical in the history of ideas, there’s more to the story. One of the key things that had originally let me start “scientifically investigating” cellular automata is that out of all the infinite number of possible constructible rules, I’d picked a modest number on which I could do exhaustive experiments. I’d started by considering only “elementary” cellular automata, in one dimension, with _k_ = 2 colors, and with rules of range _r_ = 1. There are 256 such “elementary rules”. But many of them had what seemed to me “distracting” features—like backgrounds alternating between black and white on successive steps, or patterns that systematically shifted to the left or right. And to get rid of these “distractions” I decided to focus on what I (somewhat foolishly in retrospect) called “legal rules”: the 32 rules that leave blank states blank, and are left-right symmetric.
+
+When one uses random initial conditions, the legal rules do seem—at least in small pictures—to capture the most obvious behaviors one sees across all the elementary rules. But it turns out that’s not true when one looks at simple initial conditions. Among the “legal” rules, the most complicated behavior one sees with simple initial conditions is nesting.
+
+But even though I concentrated on “legal” rules, I still included in my first major paper on cellular automata pictures of a few “illegal” rules starting from simple initial conditions—including rule 30. And what’s more, in a section entitled “Extensions”, I discussed cellular automata with more than 2 colors, and showed—though without comment—the pictures:
+
+These were low-resolution pictures, and I think I imagined that if one ran them further, the behavior would somehow resolve into something simple. But by early 1983, I had some clues that this wouldn’t happen. Because by then I was generating fairly high-resolution pictures—including ones of the _k_ = 2, _r_ = 2 totalistic rule with code 10 starting from a simple initial condition:
+
+In early drafts of my 1983 paper on “Universality and Complexity in Cellular Automata” I noted the generation of “irregularity”, and speculated that it might be associated with class 4 behavior. But later I just stated as an observation without “cause” that some rules—like code 10—generate “irregular patterns”. I elaborated a little, but in a very “statistical mechanics” kind of way, not getting the main point:
+
+In September 1983 I did a little better:
+
+But in the end it wasn’t until June 1, 1984, that I really grokked what was going on. And a little over a week later I was in a scenic area of northern Sweden
+
+at a posh “Nobel Symposium” conference on “The Physics of Chaos and Related Problems”—talking for the first time about the phenomenon I’d seen in rule 30 and code 10. And from June 15 there’s a transcript of a discussion session where I bring up the never-before-mentioned-in-public concept of computational irreducibility—and, unsurprisingly, leave the other participants (who were basically all traditional mathematically oriented physicists) at best slightly bemused:
+
+I think I was still a bit prejudiced against rule 30 and code 10 as specific rules: I didn’t like the asymmetry of rule 30, and I didn’t like the rapid growth of code 10. (Rule 73—while symmetric—I also didn’t like because of its alternating background.) But having now grokked the rule 30 phenomenon I knew it also happened in “more aesthetic” “legal” rules with more than 2 colors. And while even 3 colors led to a rather large total space of rules, it was easy to generate examples of the phenomenon there.
+
+A few days later I was back in the US, working on finishing my article for _Scientific American_. A photographer came to help get pictures from the color display I now had:
+
+And, yes, those pictures included multicolor rules that showed the rule 30 phenomenon:
+
+The caption I wrote commented: “Even in this case the patterns generated can be complex, and they sometimes appear quite random. The complex patterns formed in such physical processes as the flow of a turbulent fluid may well arise from the same mechanism.”
+
+The article went on to describe computational irreducibility and its implications in quite a lot of detail— illustrating it rather nicely with a diagram, and commenting that “It seems likely that many physical and mathematical systems for which no simple description is now known are in fact computationally irreducible”:
+
+I also included an example—that would show up almost unchanged in _A New Kind of Science_ nearly 20 years later—indicating how computational irreducibility could lead to undecidability (back in 1984 the picture was made by stitching together many screen photographs, yes, with strange artifacts from long-exposure photography of CRTs):
+
+In a rather newspaper-production-like experience, I spent the evening of July 18 at the offices of _Scientific American_ in New York City putting finishing touches to the article, which at the end of the night—with minutes to spare—was dispatched for final layout and printing.
+
+But already by that time, I was talking about computational irreducibility and the rule 30 phenomenon all over the place. In July I finished “Twenty Problems in the Theory of Cellular Automata” for the proceedings of the Swedish conference, including what would become a rather standard kind of picture:
+
+Problem 15 talks specifically about rule 30, and already asks exactly what would—35 years later—become Problem #2 in my 2019 Rule 30 Prizes
+
+while Problem 18 asks the (still largely unresolved) question of what the ultimate frequency of computational irreducibility is:
+
+Very late in putting together the _Scientific American_ article I’d added to the caption of the picture showing rule-30-like behavior the statement “Complex patterns generated by cellular automata can also serve as a source of effectively random numbers, and they can be applied to encrypt messages by converting a text into an apparently random form.” I’d realized both that cellular automata could act as good random generators (we used rule 30 as the default in Wolfram Language for more than 25 years), and that their evolution could effectively encrypt things, much as I’d later describe the Second Law as being about “encrypting” initial conditions to produce effective irreversibility.
+
+Back in 1984 it was a surprising claim that something as simple and “science-oriented” as a cellular automaton could be useful for encryption. Because at the time practical encryption was basically always done by what at least seemed like arbitrary and complicated engineering solutions, whose security relied on details or explanations that were often considered military or commercial secrets.
+
+I’m not sure when I first became aware of cryptography. But back in 1973 when I first had access to a computer there were a couple of kids (as well as a teacher who’d been a friend of Alan Turing’s) who were programming Enigma-like encryption systems (perhaps fueled by what were then still officially just rumors of World War II goings-on at Bletchley Park). And by 1980 I knew enough about encryption that I made a point of encrypting the source code of SMP (using a modified version of the Unix crypt program). (As it happens, we lost the password, and it was only in 2015 that we got access to the source again.)
+
+My archives record a curious interaction about encryption in May 1982—right around when I’d first run (though didn’t appreciate) rule 30. A rather colorful physicist I knew named Brosl Hasslacher (who we’ll encounter again later) was trying to start a curiously modern-sounding company named Quantum Encryption Devices (or QED for short)—that was actually trying to market a quite hacky and definitively classical (multiple-shift-register-based) encryption system, ultimately to some rather shady customers (and, yes, the “expected” funding did not materialize):
+
+But it was 1984 before I made a connection between encryption and cellular automata. And the first thing I imagined was giving input as the initial condition of the cellular automaton, then running the cellular automaton rule to produce “encrypted output”. The most straightforward way to make encryption was then to have the cellular automaton rule be reversible, and to run the inverse rule to do the decryption. I’d already done a little bit of investigation of reversible rules, but this led to a big search for reversible rules—which would later come in handy for thinking about microscopically reversible processes and thermodynamics.
+
+Just down the hall from me at the Institute for Advanced Study was a distinguished mathematician named John Milnor, who got very interested in what I was doing with cellular automata. My archives contain all sorts of notes from Jack, like:
+
+There’s even a reversible (“one-to-one”) rule, with nice, minimal BASIC code, along with lots of “real math”:
+
+But by the spring of 1984 Jack and I were talking a lot about encryption in cellular automata—and we even began to draft a paper about it
+
+complete with outlines of how encryption schemes could work:
+
+The core of our approach involved reversible rules, and so we did all sorts of searches to find these (and by 1984 Jack was—like me—writing C code):
+
+I wondered how random the output from cellular automata was, and I asked people I knew at Bell Labs about randomness testing (and, yes, email headers haven’t changed much in four decades, though then I was swolf@ias.uucp; research!ken was Ken Thompson of Unix fame):
+
+But then came my internalization of the rule 30 phenomenon, which led to a rather different way of thinking about encryption with cellular automata. Before, we’d basically been assuming that the cellular automaton rule was the encryption key. But rule 30 suggested one could instead have a fixed rule, and have the initial condition define the key. And this is what led me to more physics-oriented thinking about cryptography—and to what I said in _Scientific American_.
+
+In July I was making “encryption-friendly” pictures of rule 30:
+
+But what Jack and I were most interested in was doing something more “cryptographically sophisticated”, and in particular inventing a practical public-key cryptosystem based on cellular automata. Pretty much the only public-key cryptosystems known then (or even now) are based on number theory. But we thought maybe one could use something like products of rules instead of products of numbers. Or maybe one didn’t need exact invertibility. Or something. But by the late summer of 1984, things weren’t looking good:
+
+And eventually we decided we just couldn’t figure it out. And it’s basically still not been figured out (and maybe it’s actually impossible). But even though we don’t know how to make a public-key cryptosystem with cellular automata, the whole idea of encrypting initial data and turning it into effective randomness is a crucial part of the whole story of the computational foundations of thermodynamics as I think I now understand them.
+
+Where Does Randomness Come From?
+--------------------------------
+
+Right from when I first formulated it, I thought computational irreducibility was an important idea. And in the late summer of 1984 I decided I’d better write a paper specifically about it. The result was:
+
+It was a pithy paper, arranged to fit in the 4-page limit of _Physical Review Letters_, with a rather clear description of computational irreducibility and its immediate implications (as well as the relation between physics and computation, which it footnoted as a “physical form of the Church–Turing thesis”). It illustrated computational reducibility and irreducibility in a single picture, here in its original Scotch-taped form:
+
+The paper contains all sorts of interesting tidbits, like this run of footnotes:
+
+In the paper itself I didn’t mention the Second Law, but in my archives I find some notes I made in preparing the paper, about candidate irreducible or undecidable problems (with many still unexplored)
+
+which include “Will a hard sphere gas started from a particular state ever exhibit some specific anti-thermodynamic behaviour?”
+
+In November 1984 the then-editor of _Physics Today_ asked if I’d write something for them. I never did, but my archives include a summary of a possible article—which among other things promises to use computational ideas to explain “why the Second Law of thermodynamics holds so widely”:
+
+So by November 1984 I was already aware of the connection between computational irreducibility and the Second Law (and also I didn’t believe that the Second Law would necessarily always hold). And my notes—perhaps from a little later—make it clear that actually I was thinking about the Second Law along pretty much the same lines as I do now, except that back then I didn’t yet understand the fundamental significance of the observer:
+
+And spelunking now in my old filesystem (retrieved from a 9-track backup tape) I find from November 17, 1984 (at 2:42am), troff source for a putative paper (which, yes, we even now can run through troff):
+
+This is all that’s in my filesystem. So, yes, in effect, I’m finally (more or less) finishing this 38 years later.
+
+But in 1984 one of the hot—if not new—ideas of the time was “chaos theory”, which talked about how “randomness” could “deterministically arise” from progressive “excavation” of higher and higher-order digits in the initial conditions for a system. But having seen rule 30 this whole phenomenon of what was often (misleadingly) called “deterministic chaos” seemed to me at best like a sideshow—and definitely not the main effect leading to most randomness seen in physical systems.
+
+I began to draft a paper about this
+
+including for the first time an anchor picture of rule 30 intrinsically generating randomness—to be contrasted with pictures of randomness being generated (still in cellular automata) from sensitive dependence on random initial conditions:
+
+It was a bit of a challenge to find an appropriate publishing venue for what amounted to a rather “interdisciplinary” piece of physics-meets-math-meets-computation. But _Physical Review Letters_ seemed like the best bet, so on November 19, 1984, I submitted a version of the paper there, shortened to fit in its 4-page limit.
+
+A couple of months later the journal said it was having trouble finding appropriate reviewers. I revised the paper a bit (in retrospect I think not improving it), then on February 1, 1985, sent it in again, with the new title “Origins of Randomness in Physical Systems”:
+
+On March 8 the journal responded, with two reports from reviewers. One of the reviewers completely missed the point (yes, a risk in writing shift-the-paradigm papers). The other sent a very constructive two-page report:
+
+I didn’t know it then, but later I found out that Bob Kraichnan had spent much of his life working on fluid turbulence (as well as that he was a very independent and think-for-oneself physicist who’d been one of Einstein’s last assistants at the Institute for Advanced Study). Looking at his report now it’s a little charming to see his statement that “no one who has looked much at turbulent flows can easily doubt [that they intrinsically generate randomness]” (as opposed to getting randomness from noise, initial conditions, etc.). Even decades later, very few people seem to understand this.
+
+There were several exchanges with the journal, leaving it controversial whether they would publish the paper. But then in May I visited Los Alamos, and Bob Kraichnan invited me to lunch. He’d also invited a then-young physicist from Los Alamos who I’d known fairly well a few years earlier—and who’d once paid me the unintended compliment that it wasn’t fair for me to work on science because I was “too efficient”. (He told me he’d “intended to work on cellular automata”, but before he’d gotten around to it, I’d basically figured everything out.) Now he was riding the chaos theory bandwagon hard, and insofar as my paper threatened that, he wanted to do anything he could to kill the paper.
+
+I hadn’t seen this kind of “paradigm attack” before. Back when I’d been doing particle physics, it had been a hot and cutthroat area, and I’d had papers plagiarized, sometimes even egregiously. But there wasn’t really any “paradigm divergence”. And cellular automata—being quite far from the fray—were something I could just peacefully work on, without anyone really paying much attention to whatever paradigm I might be developing.
+
+At lunch I was treated to a lecture about why what I was doing was nonsense, or even if it wasn’t, I shouldn’t talk about it, at least now. Eventually I got a chance to respond, I thought rather effectively—causing my “opponent” to leave in a huff, with the parting line “If you publish the paper, I’ll ruin your career”. It was a strange thing to say, given that in the pecking order of physics, he was quite junior to me. (A decade and half later there were nevertheless a couple of “incidents”.) Bob Kraichnan turned to me, cracked a wry smile and said “OK, I’ll go right now and tell [the journal] to publish your paper”:
+
+Kraichnan was quite right that the paper was much too short for what it was trying to say, and in the end it took a long book—namely _A New Kind of Science_—to explain things more clearly. But the paper was where a high-resolution picture of rule 30 first appeared in print. And it was the place where I first tried to explain the distinction between “randomness that’s just transcribed from elsewhere” and the fundamental phenomenon one sees in rule 30 where randomness is intrinsically generated by computational processes within a system.
+
+I wanted words to describe these two different cases. And reaching back to my years of learning ancient Greek in school I invented the terms “homoplectic” and “autoplectic”, with the noun “autoplectism” to describe what rule 30 does. In retrospect, I think these terms are perhaps “too Greek” (or too “medical sounding”), and I’ve tended to just talk about “intrinsic randomness generation” instead of autoplectism. (Originally, I’d wanted to avoid the term “intrinsic” to prevent confusion with randomness that’s baked into the rules of a system.)
+
+The paper (as Bob Kraichnan pointed out) talks about many things. And at the end, having talked about fluid turbulence, there’s a final sentence—about the Second Law:
+
+In my archives, I find other mentions of the Second Law too. Like an April 1985 proto-paper that was never completed
+
+but included the statement:
+
+My main reason for working on cellular automata was to use them as idealized models for systems in nature, and as a window into foundational issues. But being quite involved in the computer industry, I couldn’t help wondering whether they might be directly useful for practical computation. And I talked about the possibility of building a “metachip” in which—instead of having predefined “meaningful” opcodes like in an ordinary microprocessor—everything would be built up “purely in software” from an underlying universal cellular automaton rule. And various people and companies started sending me possible designs:
+
+But in 1984 I got involved in being a consultant to an MIT-spinoff startup called Thinking Machines Corporation that was trying to build a massively parallel “Connection Machine” computer with 65536 processors. The company had aspirations around AI (hence the name, which I’d actually been involved in suggesting), but their machine could also be put to work simulating cellular automata, like rule 30. In June 1985, hot off my work on the origins of randomness, I went to spend some of the summer at Thinking Machines, and decided it was time to do whatever analysis—or, as I would call it now, ruliology—I could on rule 30.
+
+My filesystem from 1985 records that it was fast work. On June 24 I printed a somewhat-higher-resolution image of rule 30 (my login was “swolf” back then, so that’s how my printer output was labeled):
+
+By July 2 a prototype Connection Machine had generated 2000 steps of rule 30 evolution:
+
+With a large-format printer normally used to print integrated circuit layouts I got an even larger “piece of rule 30”—that I laid out on the floor for analysis, for example trying to measure (with meter rules, etc.) the slope of the border between regularity and irregularity in the pattern.
+
+Richard Feynman was also a consultant at Thinking Machines, and we often timed our visits to coincide:
+
+Feynman and I had talked about randomness quite a bit over the years, most recently in connection with the challenges of making a “quantum randomness chip” as a minimal example of quantum computing. Feynman at first didn’t believe that rule 30 could really be “producing randomness”, and that there must be some way to “crack” it. He tried, both by hand and with a computer, particularly using statistical mechanics methods to try to compute the slope of the border between regularity and irregularity:
+
+But in the end, he gave up, telling me “OK, Wolfram, I think you’re on to something”.
+
+Meanwhile, I was throwing all the methods I knew at rule 30. Combinatorics. Dynamical systems theory. Logic minimization. Statistical analysis. Computational complexity theory. Number theory. And I was pulling in all sorts of hardware and software too. The Connection Machine. A Cray supercomputer. A now-long-extinct Celerity C1200 (which successfully computed a length-40,114,679,273 repetition period). A LISP machine for graph layout. A circuit-design logic minimization program. As well as my own SMP system. (The Wolfram Language was still a few years in the future.)
+
+But by July 21, there it was: a 50-page “ruliological profile” of rule 30, in a sense showing what one could of the “anatomy” of its randomness:
+
+A month later I attended in quick succession a conference in California about cryptography, and one in Japan about fluid turbulence—with these two fields now firmly connected through what I’d discovered.
+
+Hydrodynamics, and a Turbulent Tale
+-----------------------------------
+
+Back from when I first saw it at the age of 14 it was always my favorite page in _The Feynman Lectures on Physics_. But how did the phenomenon of turbulence that it showed happen, and what really was it?
+
+In late 1984, the first version of the Connection Machine was nearing completion, and there was a question of what could be done with it. I agreed to analyze its potential uses in scientific computation, and in my resulting (never ultimately completed) report
+
+the very first section was about fluid turbulence (others sections were about quantum field theory, _n_-body problems, number theory, etc.):
+
+The traditional computational approach to studying fluids was to start from known continuum fluid equations, then to try to construct approximations to these suitable for numerical computation. But that wasn’t going to work well for the Connection Machine. Because in optimizing for parallelism, its individual processors were quite simple, and weren’t set up to do fast (e.g. floating-point) numerical computation.
+
+I’d been saying for years that cellular automata should be relevant to fluid turbulence. And my recent study of the origins of randomness made me all the more convinced that they would for example be able to capture the fundamental randomness associated with turbulence (which I explained as being a bit like encryption):
+
+I sent a letter to Feynman expressing my enthusiasm:
+
+I had been invited to a conference in Japan that summer on “High Reynolds Number Flow Computation” (i.e. computing turbulent fluid flow), and on May 4 I sent an abstract which explained a little more of my approach:
+
+My basic idea was to start not from continuum equations, but instead from a cellular automaton idealization of molecular dynamics. It was the same kind of underlying model as I’d tried to set up in my SPART program in 1973. But now instead of using it to study thermodynamic phenomena and the microscopic motions associated with heat, my idea was to use it to study the kind of visible motion that occurs in fluid dynamics—and in particular to see whether it could explain the apparent randomness of fluid turbulence.
+
+I knew from the beginning that I needed to rely on “Second Law behavior” in the underlying cellular automaton—because that’s what would lead to the randomness necessary to “wash out” the simple idealizations I was using in the cellular automaton, and allow standard continuum fluid behavior to emerge. And so it was that I embarked on the project of understanding not only thermodynamics, but also hydrodynamics and fluid turbulence, with cellular automata—on the Connection Machine.
+
+I’ve had the experience many times in my life of entering a field and bringing in new tools and new ideas. Back in 1985 I’d already done that several times, and it had always been a pretty much uniformly positive experience. But, sadly, with fluid turbulence, it was to be, at best, a turbulent experience.
+
+The idea that cellular automata might be useful in studying fluid turbulence definitely wasn’t obvious. The year before, for example, at the Nobel Symposium conference in Sweden, a French physicist named Uriel Frisch had been summarizing the state of turbulence research. Fittingly for the topic of turbulence, he and I first met after a rather bumpy helicopter ride to a conference event—where Frisch told me in no uncertain terms that cellular automata would never be relevant to turbulence, and talked about how turbulence was better thought of as being associated (a bit like in the mathematical theory of phase transitions) with “singularities getting close to the real line”. (Strangely, I just now looked at Frisch’s paper in the proceedings of the conference: “Ou en est la Turbulence Developpée?” [roughly: “Fully Developed Turbulence: Where Do We Stand?”], and was surprised to discover that its last paragraph actually mentions cellular automata, and its acknowledgements thank me for conversations—even though the paper says it was received June 11, 1984, a couple of days before I had met Frisch. And, yes, this is the kind of thing that makes accurately reconstructing history hard.)
+
+Los Alamos had always been a hotbed of computational fluid dynamics (not least because of its importance in simulating nuclear explosions)—and in fact of computing in general—and, starting in the late fall of 1984, on my visits there I talked to many people about using cellular automata to do fluid dynamics on the Connection Machine. Meanwhile, Brosl Hasslacher (mentioned above in connection with his 1982 encryption startup) had—after a rather itinerant career as a physicist—landed at Los Alamos. And in fact I had been asked by the Los Alamos management for a letter about him in December 1984 (yes, even though he was 18 years older than me), and ended what I wrote with: “He has considerable ability in identifying promising areas of research. I think he would be a significant addition to the staff at Los Alamos.”
+
+Well, in early 1985 Brosl identified cellular automaton fluid dynamics as a promising area, and started energetically talking to me about it. Meanwhile, the Connection Machine was just starting to work, and a young software engineer named Jim Salem was assigned to help me get cellular automaton fluid dynamics running on it. I didn’t know it at the time, but Brosl—ever the opportunist—had also made contact with Uriel Frisch, and now I find the curious document in French dated May 10, 1985, with the translated title “A New Concept for Supercomputers: Cellular Automata”, laying out a grand international multiyear plan, and referencing the (so far as I know, nonexistent) B. Hasslacher and U. Frisch (1985), “The Cellular Automaton Turbulence Machine”, Los Alamos:
+
+I visited Los Alamos again in May, but for much of the summer I was at Thinking Machines, and on July 18 Uriel Frisch came to visit there, along with a French physicist named Yves Pomeau, who had done some nice work in the 1970s on applying methods of traditional statistical mechanics to “lattice gases”.
+
+But what about realistic fluid dynamics, and turbulence? I wasn’t sure how easy it would be to “build up from the (idealized) molecules” to get to pictures of recognizable fluid flows. But we were starting to have some success in generating at least basic results. It wasn’t clear how seriously anyone else was taking this (especially given that at the time I hadn’t seen the material Frisch had already written), but insofar as anything was “going on”, it seemed to be a perfectly collegial interaction—where perhaps Los Alamos or the French government or both would buy a Connection Machine computer. But meanwhile, on the technical side, it had become clear that the most obvious square-lattice model (that Pomeau had used in the 1970s, and that was basically what my SPART program from 1973 was supposed to implement) was fine for diffusion processes, but couldn’t really represent proper fluid flow.
+
+When I first started working on cellular automata in 1981 the minimal 1D case in which I was most interested had barely been studied, but there had been quite a bit of work done in previous decades on the 2D case. By the 1980s, however, it had mostly petered out—with the exception of a group at MIT led by Ed Fredkin, who had long had the belief that one might in effect be able to “construct all of physics” using cellular automata. Tom Toffoli and Norm Margolus, who were working with him, had built a hardware 2D cellular automaton simulator—that I happened to photograph in 1982 when visiting Fredkin’s island in the Caribbean:
+
+But while “all of physics” was elusive (and our Physics Project suggests that a cellular automaton with a rigid lattice is not the right place to start), there’d been success in making for example an idealized gas, using essentially a block cellular automaton on a square grid. But mostly the cellular automaton machine was used in a maddeningly “Look at this cool thing!” mode, often accompanied by rapid physical rewiring.
+
+In early 1984 I visited MIT to use the machine to try to do what amounted to natural science, systematically studying 2D cellular automata. The result was a paper (with Norman Packard) on 2D cellular automata. We restricted ourselves to square grids, though mentioned hexagonal ones, and my article in _Scientific American_ in late 1984 opened with a full-page hexagonal cellular automaton simulation of a snowflake made by Packard (and later in 1984 turned into one of a set of cellular automaton cards for sale):
+
+In any case, in the summer of 1985, with square lattices not doing what was needed, it was time to try hexagonal ones. I think Yves Pomeau already had a theoretical argument for this, but as far as I was concerned, it was (at least at first) just a “next thing to try”. Programming the Connection Machine was at that time a rather laborious process (which, almost unprecedentedly for me, I wasn’t doing myself), and mapping a hexagonal grid onto its basically square architecture was a little fiddly, as my notes record:
+
+Meanwhile, at Los Alamos, I’d introduced a young and very computer-savvy protege of mine named Tsutomu Shimomura (who had a habit of getting himself into computer security scrapes, though would later become famous for taking down a well-known hacker) to Brosl Hasslacher, and now Tsutomu jumped into writing optimized code to implement hexagonal cellular automata on a Cray supercomputer.
+
+In my archives I now find a draft paper from September 7 that starts with a nice (if not entirely correct) discussion of what amounts to computational irreducibility, and then continues by giving theoretical symmetry-based arguments that a hexagonal cellular automaton should be able to reproduce fluid mechanics:
+
+Near the end, the draft says (misspelling Tsutomu Shimomura’s name):
+
+Meanwhile, we (as well as everyone else) were starting to get results that looked at least suggestive:
+
+By November 15 I had drafted a paper
+
+that included some more detailed pictures
+
+and that at the end (I thought, graciously) thanked Frisch, Hasslacher, Pomeau and Shimomura for “discussions and for sharing their unpublished results with us”, which by that point included a bunch of suggestive, if not obviously correct, pictures of fluid-flow-like behavior.
+
+To me, what was important about our paper is that, after all these years, it filled in with more detail just how computational systems like cellular automata could lead to Second-Law-style thermodynamic behavior, and it “proved” the physicality of what was going on by showing easy-to-recognize fluid-dynamics-like behavior.
+
+Just four days later, though, there was a big surprise. _The Washington Post_ ran a front-page story—alongside the day’s characteristic-Cold-War-era geopolitical news—about the “Hasslacher–Frisch model”, and about how it might be judged so important that it “should be classified to keep it out of Soviet hands”:
+
+At that point, things went crazy. There was talk of Nobel Prizes (I wasn’t buying it). There were official complaints from the French embassy about French scientists not being adequately recognized. There was upset at Thinking Machines for not even being mentioned. And, yes, as the originator of the idea, I was miffed that nobody seemed to have even suggested contacting me—even if I did view the rather breathless and “geopolitical” tenor of the article as being pretty far from immediate reality.
+
+At the time, everyone involved denied having been responsible for the appearance of the article. But years later it emerged that the source was a certain John Gage, former political operative and longtime marketing operative at Sun Microsystems, who I’d known since 1982, and had at some point introduced to Brosl Hasslacher. Apparently he’d called around various government contacts to help encourage open (international) sharing of scientific code, quoting this as a test case.
+
+But as it was, the article had pretty much exactly the opposite effect, with everyone now out for themselves. In Princeton, I’d interacted with Steve Orszag, whose funding for his new (traditional) computational fluid dynamics company, Nektonics, now seemed at risk, and who pulled me into an emergency effort to prove that cellular automaton fluid dynamics couldn’t be competitive. (The paper he wrote about this seemed interesting, but I demurred on being a coauthor.) Meanwhile, Thinking Machines wanted to file a patent as quickly as possible. Any possibility of the French government getting a Connection Machine evaporated and soon Brosl Hasslacher was claiming that “the French are faking their data”.
+
+And then there was the matter of the various academic papers. I had been sent the Frisch–Hasslacher–Pomeau paper to review, and checking my 1985 calendar for my whereabouts I must have received it the very day I finished my paper. I told the journal they should publish the paper, suggesting some changes to avoid naivete about computing and computer technology, but not mentioning its very thin recognition of my work.
+
+Our paper, on the other hand, triggered a rather indecorous competitive response, with two “anonymous reviewers” claiming that the paper said nothing more than its “reference 5” (the Frisch–Hasslacher–Pomeau paper). I patiently pointed out that that wasn’t the case, not least because our paper had actual simulations, but also that actually I happened to have “been there first” with the overall idea. The journal solicited other opinions, which were mostly supportive. But in the end a certain Leo Kadanoff swooped in to block it, only to publish his own a few months later.
+
+It felt corrupt, and distasteful. I was at that point a successful and increasingly established academic. And some of the people involved were even longtime friends. So was this kind of thing what I had to look forward to in a life in academia? That didn’t seem attractive, or necessary. And it was what began the process that led me, a year and a half later, to finally choose to leave academia behind, never to return.
+
+Still, despite the “turbulence”—and in the midst of other activities—I continued to work hard on cellular automaton fluids, and by January 1986 I had the first version of a long (and, I thought, rather good) paper on their basic theory (that was finished and published later that year):
+
+As it turns out, the methods I used in that paper provide some important seeds for our Physics Project, and even in recent times I’ve often found myself referring to the paper, complete with its SMP open-code appendix:
+
+But in addition to developing the theory, I was also getting simulations done on the Connection Machine, and getting actual experimental data (particularly on flow past cylinders) to compare them to. By February 1986, we had quite a few results:
+
+But by this point there was a quite industrial effort, particularly in France, that was churning out papers on cellular automaton fluids at a high rate. I’d called my theory paper “Cellular Automaton Fluid 1: Basic Theory”. But was it really worth finishing part 2? There was a veritable army of perfectly good physicists “competing” with me. And, I thought, “I have other things to do. Just let them do this. This doesn’t need me”.
+
+And so it was that in the middle of 1986 I stopped working on cellular automaton fluids. And, yes, that freed me up to work on lots of other interesting things. But even though methods derived from cellular automaton fluids have become widely used in practical fluid dynamics computations, the key basic science that I thought could be addressed with cellular automaton fluids—about things like the origin of randomness in turbulence—has still, even to this day, not really been further explored.
+
+Getting to the Continuum
+------------------------
+
+In June 1986 I was about to launch both a research center (the Center for Complex Systems Research at the University of Illinois) and a journal (_Complex Systems_)—and I was also organizing a conference called CA ’86 (which was held at MIT). The core of the conference was poster presentations, and a few days before the conference was to start I decided I should find a “nice little project” that I could quickly turn into a poster.
+
+In studying cellular automaton fluids I had found that cellular automata with rules based on idealized physical molecular dynamics could on a large scale approximate the continuum behavior of fluids. But what if one just started from continuum behavior? Could one derive underlying rules that would reproduce it? Or perhaps even find the minimal such rules?
+
+By mid-1985 I felt I’d made decent progress on the science of cellular automata. But what about their engineering? What about constructing cellular automata with particular behavior? In May 1985 I had given a conference talk about “Cellular Automaton Engineering”, which turned into a paper about “Approaches to Complexity Engineering”—that in effect tried to set up “trainable cellular automata” in what might still be a powerful simple-programs-meet-machine-learning scheme that deserves to be explored:
+
+But so it was that a few days before the CA ’86 conference I decided to try to find a minimal “cellular automaton approximation” to a simple continuum process: diffusion in one dimension.
+
+I explained
+
+and described as my objective:
+
+I used block cellular automata, and tried to find rules that were reversible and also conserved something that could serve as “microscopic density” or “particle number”. I quickly determined that there were no such rules with 2 colors and blocks of sizes 2 or 3 that achieved any kind of randomization.
+
+To go to 3 colors, I used SMP to generate candidate rules
+
+where for example the function Apper can be literally be translated into Wolfram Language as
+
+or, more idiomatically, just
+
+then did what I have done so many times and just printed out pictures of their behavior:
+
+Some clearly did not show randomization, but a couple did. And soon I was studying what I called the “winning rule”, which—like rule 30—went from simple initial conditions to apparent randomness:
+
+I analyzed what the rule was “microscopically doing”
+
+and explored its longer-time behavior:
+
+Then I did things like analyze its cycle structure in a finite-size region by running C programs I’d basically already developed back in 1982 (though now they were modified to automatically generate troff code for typesetting):
+
+And, like rule 30, the “winning rule” that I found back in June 1986 has stayed with me, essentially as a minimal example of reversible, number-conserving randomness. It appeared in _A New Kind of Science_, and it appears now in my recent work on the Second Law—and, of course, the patterns it makes are always the same:
+
+Back in 1986 I wanted to know just how efficiently a simple rule like this could reproduce continuum behavior. And in a portent of observer theory my notes from the time talk about “optimal coarse graining, where the 2nd law is ‘most true’”, then go on to compare the distributed character of the cellular automaton with traditional “collect information into numerical value” finite-difference approximations:
+
+In a talk I gave I summarized my understanding:
+
+The phenomenon of randomization is generic in computational systems (witness rule 30, the “winning rule”, etc.) This leads to the genericity of thermodynamics. And this in turn leads to the genericity of continuum behavior, with diffusion and fluid behavior being two examples.
+
+It would take another 34 years, but these basic ideas would eventually be what underlies our Physics Project, and our understanding of the emergence of things like spacetime. As well as now being crucial to our whole understanding of the Second Law.
+
+The Second Law in _A New Kind of Science_
+-----------------------------------------
+
+By the end of 1986 I had begun the development of Mathematica, and what would become the Wolfram Language, and for most of the next five years I was submerged in technology development. But in 1991 I started to use the technology I now had, and began the project that became _A New Kind of Science_.
+
+Much of the first couple of years was spent exploring the computational universe of simple programs, and discovering that the phenomena I’d discovered in cellular automata were actually much more general. And it was seeing that generality that led me to the Principle of Computational Equivalence. In formulating the concept of computational irreducibility I’d in effect been thinking about trying to “reduce” the behavior of systems using an external as-powerful-as-possible universal computer. But now I’d realized I should just be thinking about all systems as somehow computationally equivalent. And in doing that I was pulling the conception of the “observer” and their computational ability closer to the systems they were observing.
+
+But the further development of that idea would have to wait nearly three more decades, until the arrival of our Physics Project. In _A New Kind of Science_, Chapter 7 on “Mechanisms in Programs and Nature” describes the concept of intrinsic randomness generation, and how it’s distinguished from other sources of randomness. Chapter 8 on “Implications for Everyday Systems” then has a section on fluid flow, where I describe the idea that randomness in turbulence could be intrinsically generated, making it, for example, repeatable, rather than inevitably different every time an experiment is run.
+
+And then there’s Chapter 9, entitled “Fundamental Physics”. The majority of the chapter—and its “most famous” part—is the presentation of the direct precursor to our Physics Project, including the concept of graph-rewriting-based computational models for the lowest-level structure of spacetime and the universe.
+
+But there’s an earlier part of Chapter 9 as well, and it’s about the Second Law. There’s a precursor about “The Notion of Reversibility”, and then we’re on to a section about “Irreversibility and the Second Law of Thermodynamics”, followed by “Conserved Quantities and Continuum Phenomena”, which is where the “winning rule” I discovered in 1996 appears again:
+
+My records show I wrote all of this—and generated all the pictures—between May 2 and July 11, 1995. I felt I already had a pretty good grasp of how the Second Law worked, and just needed to write it down. My emphasis was on explaining how a microscopically reversible rule—through its intrinsic ability to generate randomness—could lead to what appears to be irreversible behavior.
+
+Mostly I used reversible 1D cellular automata as my examples, showing for example randomization both forwards and backwards in time:
+
+I soon got to the nub of the issue with irreversibility and the Second Law:
+
+I talked about how “typical textbook thermodynamics” involves a bunch of details about energy and motion, and to get closer to this I showed a simple example of an “ideal gas” 2D cellular automaton:
+
+But despite my early exposure to hard-sphere gases, I never went as far as to use them as examples in _A New Kind of Science_. We did actually take some photographs of the mechanics of real-life billiards:
+
+But cellular automata always seemed like a much clearer way to understand what was going on, free from issues like numerical precision, or their physical analogs. And by looking at cellular automata I felt as if I could really see down the foundations of the Second Law, and why it was true.
+
+And mostly it was a story of computational irreducibility, and intrinsic randomness generation. But then there was rule 37R. I’ve often said that in studying the computational universe we have to remember that the “computational animals” are at least as smart as we are—and they’re always up to tricks we don’t expect.
+
+And so it is with rule 37R. In 1986 I’d published a book of cellular automaton papers, and as an appendix I’d included lots of tables of properties of cellular automata. Almost all the tables were about the ordinary elementary cellular automata. But as a kind of “throwaway” at the very end I gave a table of the behavior of the 256 second-order reversible versions of the elementary rules, including 37R starting both from completely random initial conditions
+
+and from single black cells:
+
+So far, nothing remarkable. And years go by. But then—apparently in the middle of working on the 2D systems section of _A New Kind of Science_—at 4:38am on February 21, 1994 (according to my filesystem records), I generate pictures of all the reversible elementary rules again, but now from initial conditions that are slightly more complicated than a single black cell. Opening the notebook from that time (and, yes, Wolfram Language and our notebook format have been stable enough that 28 years later that still works) it shows up tiny on a modern screen, but there it is: rule 37R doing something “interesting”:
+
+Clearly I noticed it. Because by 4:47am I’ve generated lots of pictures of rule 37R, like this one evolving from a block of 21 black cells, and showing only every other step
+
+and by 4:54am I’ve got things like:
+
+My guess is that I was looking for class 4 behavior in reversible cellular automata. And with rule 37R I’d found it. And at the time I moved on to other things. (On March 1, 1994, I slipped on some ice and broke my ankle, and was largely out of action for several weeks.)
+
+And that takes us back to May 1995, when I was working on writing about the Second Law. My filesystem records that I did quite a few more experiments on rule 37R then, looking at different initial conditions, and running it as long as I could, to see if its strange neither-simple-nor-randomizing—and not very Second-Law-like—behavior would somehow “resolve”.
+
+Up to that moment, for nearly a quarter of a century, I had always fundamentally believed in the Second Law. Yes, I thought there might be exceptions with things like self-gravitating systems. But I’d always assumed that—perhaps with some pathological exceptions—the Second Law was something quite universal, whose origins I could even now understand through computational irreducibility.
+
+But seeing rule 37R this suddenly didn’t seem right. In _A New Kind of Science_ I included a long run of rule 37R (here colorized to emphasize the structure)
+
+then explained:
+
+How could one describe what was happening in rule 37R? I discussed the idea that it was effectively forming “membranes” which could slowly move, but keep things “modular” and organized inside. I summarized at the time, tagging it as “something I wanted to explore in more detail one day”:
+
+Rounding out the rest of _A New Kind of Science_ takes another seven years of intense work. But finally in May 2002 it was published. The book talked about many things. And even within Chapter 9 my discussion of the Second Law was overshadowed by the outline I gave of an approach to finding a truly fundamental theory of physics—and of the ideas that evolved into our Physics Project.
+
+The Physics Project—and the Second Law Again
+--------------------------------------------
+
+After _A New Kind of Science_ was finished I spent many years working mainly on technology—building Wolfram|Alpha, launching the Wolfram Language and so on. But “follow up on Chapter 9” was always on my longterm to-do list. The biggest—and most difficult—part of that had to do with fundamental physics. But I still had a great intellectual attachment to the Second Law, and I always wanted to use what I’d then understood about the computational paradigm to “tighten up” and “round out” the Second Law.
+
+I’d mention it to people from time to time. Usually the response was the same: “Wasn’t the Second Law understood a century ago? What more is there to say?” Then I’d explain, and it’d be like “Oh, yes, that is interesting”. But somehow it always seemed like people felt the Second Law was “old news”, and that whatever I might do would just be “dotting an _i_ or crossing a _t_”. And in the end my Second Law project never quite made it onto my active list, despite the fact that it was something I always wanted to do.
+
+Occasionally I would write about my ideas for finding a fundamental theory of physics. And, implicitly I’d rely on the understanding I’d developed of the foundations and generalization of the Second Law. In 2015, for example, celebrating the centenary of General Relativity, I wrote about what spacetime might really be like “underneath”
+
+and how a perceived spacetime continuum might emerge from discrete underlying structure like fluid behavior emerges from molecular dynamics—in effect through the operation of a generalized Second Law:
+
+It was 17 years after the publication of _A New Kind of Science_ that (as I’ve described elsewhere) circumstances finally aligned to embark on what became our Physics Project. And after all those years, the idea of computational irreducibility—and its immediate implications for the Second Law—had come to seem so obvious to me (and to the young physicists with whom I worked) that they could just be taken for granted as conceptual building blocks in constructing the tower of ideas we needed.
+
+One of the surprising and dramatic implications of our Physics Project is that General Relativity and quantum mechanics are in a sense both manifestations of the same fundamental phenomenon—but played out respectively in physical space and in branchial space. But what really is this phenomenon?
+
+What became clear is that ultimately it’s all about the interplay between underlying computational irreducibility and our nature as observers. It’s a concept that had its origins in my thinking about the Second Law. Because even in 1984 I’d understood that the Second Law is about our inability to “decode” underlying computationally irreducible behavior.
+
+In _A New Kind of Science_ I’d devoted Chapter 10 to “Processes of Perception and Analysis”, and I’d recognized that we should view such processes—like any processes in nature or elsewhere—as being fundamentally computational. But I still thought of processes of perception and analysis as being separated from—and in some sense “outside”—actual processes we might be studying. But in our Physics Project we’re studying the whole universe, so inevitably we as observers are “inside” and part of the system.
+
+And what then became clear is the emergence of things like General Relativity and quantum mechanics depends on certain characteristics of us as observers. “Alien observers” might perceive quite different laws of physics (or no systematic laws at all). But for “observers like us”, who are computationally bounded and believe we are persistent in time, General Relativity and quantum mechanics are inevitable.
+
+In a sense, therefore, General Relativity and quantum mechanics become “abstractly derivable” given our nature as observers. And the remarkable thing is that at some level the story is exactly the same with the Second Law. To me it’s a surprising and deeply beautiful scientific unification: that all three of the great foundational theories of physics—General Relativity, quantum mechanics and statistical mechanics—are in effect manifestations of the same core phenomenon: an interplay between computational irreducibility and our nature as observers.
+
+Back in the 1970s I had no inkling of all this. And even when I chose to combine my discussions of the Second Law and of my approach to a fundamental theory of physics into a single chapter of _A New Kind of Science_, I didn’t know how deeply these would be connected. It’s been a long and winding path, that’s needed to pass through many different pieces of science and technology. But in the end the feeling I had when I first studied that book cover when I was 12 years old that “this was something fundamental” has played out on a scale almost incomprehensibly beyond what I had ever imagined.
+
+Discovering Class 4
+-------------------
+
+Most of my journey with the Second Law has had to do with understanding origins of randomness, and their relation to “typical Second-Law behavior”. But there’s another piece—still incompletely worked out—which has to do with surprises like rule 37R, and, more generally, with large-scale versions of class 4 behavior, or what I’ve begun to call the “mechanoidal phase”.
+
+I first identified class 4 behavior as part of my systematic exploration of 1D cellular automata at the beginning of 1983—with the “code 20” _k_ = 2, _r_ = 2 totalistic rule being my first clear example:
+
+Very soon my searches had identified a whole variety of localized structures in this rule:
+
+At the time, the most significant attribute of class 4 cellular automata as far as I was concerned was that they seemed likely to be computation universal—and potentially provably so. But from the beginning I was also interested in what their “thermodynamics” might be. If you start them off from random initial conditions, will their patterns die out, or will some arrangement of localized structures persist, and perhaps even grow?
+
+In most cellular automata—and indeed most systems with local rules—one expects that at least their statistical properties will somehow stabilize when one goes to the limit of infinite size. But, I asked, does that infinite-size limit even “exist” for class 4 systems—or if you progressively increase the size, will the results you get keep on jumping around forever, perhaps as you succeed in sampling progressively more exotic structures?
+
+A paper I wrote in September 1983 talks about the idea that in a sufficiently large class 4 cellular automaton one would eventually get self-reproducing structures, which would end up “taking over everything”:
+
+The idea that one might be able to see “biology-like” self-reproduction in cellular automata has a long history. Indeed, one of the multiple ways that cellular automata were invented (and the one that led to their name) was through John von Neumann’s 1952 effort to construct a complicated cellular automaton in which there could be a complicated configuration capable of self-reproduction.
+
+But could self-reproducing structures ever “occur naturally” in cellular automata? Without the benefit of intuition from things like rule 30, von Neumann assumed that something like self-reproduction would need an incredibly complicated setup, as it seems to have, for example, in biology. But having seen rule 30—and more so class 4 cellular automata—it didn’t seem so implausible to me that even with very simple underlying rules, there could be fairly simple configurations that would show phenomena like self-reproduction.
+
+But for such a configuration to “occur naturally” in a random initial condition might require a system with exponentially many cells. And I wondered if in the oceans of the early Earth there might have been only “just enough” molecules for something like a self-reproducing lifeform to occur.
+
+Back in 1983 I already had pretty efficient code for searching for structures in class 4 cellular automata. But even running for days at a time, I never found anything more complicated than purely periodic (if sometimes moving) structures. And in March 1985, following an article about my work in _Scientific American_, I appealed to the public to find “interesting structures”—like “glider guns” that would “shoot out” moving structures:
+
+As it happened, right before I made my “public appeal”, a student at Princeton working with a professor I knew had sent me a glider gun he’d found the _k_ = 2, _r_ = 3 totalistic code 88 rule:
+
+At the time, though, with computer displays only large enough to see behavior like
+
+I wasn’t convinced this was an “ordinary class 4 rule”—even though now, with the benefit of higher display resolution, it seems more convincing:
+
+The “public appeal” generated a lot of interesting feedback—but no glider guns or other exotic structures in the rules I considered “obviously class 4”. And it wasn’t until after I started working on _A New Kind of Science_ that I got back to the question. But then, on the evening of December 31, 1991, using exactly the same code as in 1983, but now with faster computers, there it was: in an ordinary class 4 rule (_k_ = 3, _r_ = 1 code 1329), after finding several localized structures, there was one that grew without bound (albeit not in the most obvious “glider gun” way):
+
+But that wasn’t all. Exemplifying the principle that in the computational universe there are always surprises, searching a little further revealed yet other unexpected structures:
+
+Every few years something else would come up with class 4 rules. In 1994, lots of work on rule 110. In 1995, the surprise of rule 37R. In 1998 efforts to find analogs of particles that might carry over to my graph-based model of space.
+
+After _A New Kind of Science_ was published in 2002, we started our annual Wolfram Summer School (at first called the NKS Summer School)—and in 2010 our High School Summer Camp. Some years we asked students to pick their “favorite cellular automaton”. Often they were class 4:
+
+And occasionally someone would do a project to explore the world of some particular class 4 rule. But beyond those specifics—and statements about computation universality—it’s never been clear quite what one could say about class 4.
+
+Back in 1984 in the series of cellular automaton postcards I’d produced, there were a couple of class 4 examples:
+
+And even then the typical response to these images was that they looked “organic”—like the kind of thing living organisms might produce. A decade later—for _A New Kind of Science_—I studied “organic forms” quite a bit, trying to understand how organisms get their overall shapes, and surface patterns. Mostly that didn’t end up being a story of class 4 behavior, though.
+
+Since the early 1980s I’ve been interested in molecular computing, and in how computation might be done at the level of molecules. My discoveries in _A New Kind of Science_ (and specifically the Principle of Computational Equivalence) convinced me that it should be possible to get even fairly simple collections of molecules to “do arbitrary computations” or even build more or less arbitrary structures (in a more general and streamlined way than happens with the whole protein synthesis structure in biology). And over the years, I sometimes thought about trying to do practical work in this area. But it didn’t feel as if the ambient technology was quite ready. So I never jumped in.
+
+Meanwhile, I’d long understood the basic correspondence between multiway systems and patterns of possible pathways for chemical reactions. And after our Physics Project was announced in 2020 and we began to develop the general multicomputational paradigm, I immediately considered molecular computing a potential application. But just what might the “choreography” of molecules be like? What causal relationships might there be, for example, between different interactions of the same molecule? That’s not something ordinary chemistry—dealing for example with liquid-phase reactions—tends to consider important.
+
+But what I increasingly started to wonder is whether in molecular biology it might actually be crucial. And even in the 20 years since _A New Kind of Science_ was published, it’s become increasingly clear that in molecular biology things are extremely “orchestrated”. It’s not about molecules randomly moving around, like in a liquid. It’s about molecules being carefully channeled and actively transported from one “event” to another.
+
+Class 3 cellular automata seem to be good “metamodels” for things like liquids, and readily give Second-Law-like behavior. But what about the kind of situation that seems to exist in molecular biology? It’s something I’ve been thinking about only recently, but I think this is a place where class 4 cellular automata can contribute. I’ve started calling the “bulk limit” of class 4 systems the “mechanoidal phase”. It’s a place where the ordinary Second Law doesn’t seem to apply.
+
+Four decades ago when I was trying to understand how structure could arise “in violation of the Second Law” I didn’t yet even know about computational irreducibility. But now we’ve come a lot further, in particular with the development of the multicomputational paradigm, and the recognition of the importance of the characteristics of the observer in defining what perceived overall laws there will be. It’s an inevitable feature of computational irreducibility that there will always be an infinite sequence of new challenges for science, and new pieces of computational reducibility to be found. So, now, yes, a challenge is to understand the mechanoidal phase. And with all the tools and ideas we’ve developed, I’m hoping the process will happen more than it has for the ordinary Second Law.
+
+The End of a 50-Year Journey
+----------------------------
+
+I began my quest to understand the Second Law a bit more than 50 years ago. And—even though there’s certainly more to say and figure out—it’s very satisfying now to be able to bring a certain amount of closure to what has been the single longest-running piece of intellectual “unfinished business” in my life. It’s been an interesting journey—that’s very much relied on, and at times helped drive, the tower of science and technology that I’ve spent my life building. There are many things that might not have happened as they did. And in the end it’s been a story of longterm intellectual tenacity—stretching across much of my life so far.
+
+For a long time I’ve kept (automatically when possible) quite extensive archives. And now these archives allow one to reconstruct in almost unprecedented detail my journey with the Second Law. One sees the gradual formation of intellectual frameworks over the course of years, then the occasional discovery or realization that allows one to take the next step in what is sometimes mere days. There’s a curious interweaving of computational and essentially philosophical methodologies—with an occasional dash of mathematics.
+
+Sometimes there’s general intuition that’s significantly ahead of specific results. But more often there’s a surprise computational discovery that seeds the development of new intuition. And, yes, it’s a little embarrassing how often I managed to generate in a computer experiment something that I completely failed to interpret or even notice at first because I didn’t have the right intellectual framework or intuition.
+
+And in the end, there’s an air of computational irreducibility to the whole process: there really wasn’t a way to shortcut the intellectual development; one just had to live it. Already in the 1990s I had taken things a fair distance, and I had even written a little about what I had figured out. But for years it hung out there as one of a small collection of unfinished projects: to finally round out the intellectual story of the Second Law, and to write down an exposition of it. But the arrival of our Physics Project just over two years ago brought both a cascade of new ideas, and for me personally a sense that even things that had been out there for a long time could in fact be brought to closure.
+
+And so it is that I’ve returned to the quest I began when I was 12 years old—but now with five decades of new tools and new ideas. The wonder and magic of the Second Law is still there. But now I’m able to see it in a much broader context, and to realize that it’s not just a law about thermodynamics and heat, but instead a window into a very general computational phenomenon. None of this I could know when I was 12 years old. But somehow the quest I was drawn to all those years ago has turned out to be deeply aligned with the whole arc of intellectual development that I have followed in my life. And no doubt it’s no coincidence.
+
+But for now I’m just grateful to have had the quest to understand Second Law as one of my guiding forces through so much of my life, and now to realize that my quest was part of something so broad and so deep.
+
+Appendix: The Backstory of the Book Cover That Started It All
+-------------------------------------------------------------
+
+What is the backstory of the book cover that launched my long journey with the Second Law? The book was published in 1965, and inside its front flap we find:
+
+On page 7 we then find:
+
+In 2001—as I was putting the finishing touches to the historical notes for _A New Kind of Science_—I tracked down Berni Alder (who died in 2020 at the age of 94) to ask him the origin of the pictures. It turned out to be a complex story, reaching back to the earliest serious uses of computers for basic science, and even beyond.
+
+The book had been born out the sense of urgency around science education in the US that followed the launch of Sputnik by the Soviet Union—with a group of professors from Berkeley and Harvard believing that the teaching of freshman college physics was in need of modernization, and that they should write a series of textbooks to enable this. (It was also the time of the “new math”, and a host of other STEM-related educational initiatives.) Fred Reif (who died at the age of 92 in 2019) was asked to write the statistical physics volume. As he explained in the preface to the book
+
+ending with:
+
+Well, it’s taken me 50 years to get to the point where I think I really understand the Second Law that is at the center of the book. And in 2001 I was able to tell Fred Reif that, yes, his book had indeed been useful. He said he was pleased to learn that, adding “It is all too rare that one’s educational efforts seem to bear some fruit.”
+
+He explained to me that when he was writing the book he thought that “the basic ideas of irreversibility and fluctuations might be very vividly illustrated by the behavior of a gas of particles spreading through a box”. He added: “It then occurred to me that Berni Alder might actually show this by a computer generated film since he had worked on molecular dynamics simulations and had also good computer facilities available to him. I was able to enlist Berni’s interest in this project, with the results shown in my book.”
+
+The acknowledgements in the book report:
+
+Berni Alder and and Fred Reif did indeed create a “film loop”, which “could be bought separately from the book and viewed in the physics lab”, as Alder told me, adding that “I understand the students liked it very much, but the venture was not a commercial success.” Still, he sent me a copy of a videotape version:
+
+The film (which has no sound) begins:
+
+Soon it’s showing an actual process of “coming to equilibrium”:
+
+“However”, as Alder explained it to me, “if a large number of particles are put in the corner and the velocities of all the particles are reversed after a certain time, the audience laughs or is supposed to after all the particles return to their original positions.” (One suspects that particularly in the 1960s this might have been reminiscent of various cartoon-film gags.)
+
+OK, so how were the pictures (and the film) made? It was done in 1964 at what’s now Lawrence Livermore Lab (that had been created in 1952 as a spinoff of the Berkeley Radiation Lab, which had initiated some key pieces for the Manhattan Project) on a computer called the LARC (“Livermore Advanced Research Computer”), first made in 1960, that was probably the most advanced scientific computer of the time. Alder explained to me, however: “We could not run the problem much longer than about 10 collision times with 64 bits [_sic_] arithmetic before the round-off error prevented the particles from returning.”
+
+Why did they start the particles off in a somewhat random configuration? (The randomness, Alder told me, had been created by a middle-square random number generator.) Apparently if they’d been in a regular array—which would have made the whole process of randomization much easier to see—the roundoff errors would have been too obvious. (And it’s issues like this that made it so hard to recognize the rule 30 phenomenon in systems based on real numbers—and without the idea of just studying simple programs not tied to traditional equation-based formulations of physics.)
+
+The actual code for the molecular dynamics simulation was written in assembler and run by Mary Ann Mansigh (Karlsen), who had a degree in math and chemistry and worked as a programmer at Livermore from 1955 until the 1980s, much of the time specifically with Alder. Here she is at the console of the LARC (yes, computers had built-in desks in those days):
+
+The program that was used was called STEP, and the original version of it had actually been written (by a certain Norm Hardy, who ended up having a long Silicon Valley career) to run on a previous generation of computer. (A still-earlier program was called APE, for “Approach to Equilibrium”.) But it was only with the LARC—and STEP—that things were fast enough to run substantial simulations, at the rate of about 200,000 collisions per hour (the simulation for the book cover involved 40 particles and about 500 collisions). At the time of the book STEP used an _n_ 2 algorithm where all pairs of particles were tested for collisions; later a neighborhood-based linked list method was used.
+
+The standard method of getting output from a computer back in 1964—and basically until the 1980s—was to print characters on paper. But the LARC could also drive an oscilloscope, and it was with this that the graphics for the book were created (capturing them from the oscilloscope screen with a Polaroid instant camera).
+
+But why was Berni Alder studying molecular dynamics and “hard sphere gases” in the first place? Well, that’s another long story. But ultimately it was driven by the effort to develop a microscopic theory of liquids.
+
+The notion that gases might consist of discrete molecules in motion had arisen in the 1700s (and even to some extent in antiquity), but it was only in the mid-1800s that serious development of the “kinetic theory” idea began. Pretty immediately it was clear how to derive the ideal gas law _P V_ = _R T_ for essentially non-interacting molecules. But what analog of this “equation of state” might apply to gases with significant interactions between molecules, or, for that matter, liquids? In 1873 Johannes Diderik van der Waals proposed, on essentially empirical grounds, the formula (_P_ + _a_/_V_ 2)(_V_–_b_) = _RT_—where the parameter _b_ represented “excluded volume” taken up by molecules, that were implicitly being viewed as hard spheres. But could such a formula be derived—like the ideal gas law—from a microscopic kinetic theory of molecules? At the time, nobody really knew how to start, and the problem languished for more than half a century.
+
+(It’s worth pointing out, by the way, that the idea of modeling gases, as opposed to liquids, as collections of hard spheres was extensively pursued in the mid-1800s, notably by Maxwell and Boltzmann—though with their traditional mathematical analysis methods, they were limited to studying average properties of what amount to dilute gases.)
+
+Meanwhile, there was increasing interest in the microscopic structure of liquids, particularly among chemists concerned for example with how chemical solutions might work. And at the end of the 1920s the technique of x-ray diffraction, which had originally been used to study the microscopic structure of crystals, was applied to liquids—allowing in particular the experimental determination of the radial distribution function (or pair correlation function) _g_(_r_), which gives the probability to find another molecule a distance _r_ from a given one.
+
+But how might this radial distribution function be computed? By the mid-1930s there were several proposals based on looking at the statistics of random assemblies of hard spheres:
+
+Some tried to get results by mathematical methods; others did physical experiments with ball bearings and gelatin balls, getting at least rough agreement with actual experiments on liquids:
+
+But then in 1939 a physical chemist named John Kirkwood gave an actual probabilistic derivation (using a variety of simplifying assumptions) that fairly closely reproduced the radial distribution function:
+
+But what about just computing from first principles, on the basis of the mechanics of colliding molecules? Back in 1872 Ludwig Boltzmann had proposed a statistical equation (the “Boltzmann transport equation”) for the behavior of collections of molecules, that was based on the approximation of independent probabilities for individual molecules. By the 1940s the independence assumption had been overcome, but at the cost of introducing an infinite hierarchy of equations (the “BBGKY hierarchy”, where the “K” stood for Kirkwood). And although the full equations were intractable, approximations were suggested that—while themselves mathematically sophisticated—seemed as if they should, at least in principle, be applicable to liquids.
+
+Meanwhile, in 1948, Berni Alder, fresh from a master’s degree in chemical engineering, and already interested in liquids, went to Caltech to work on a PhD with John Kirkwood—who suggested that he look at a couple of approximations to the BBGKY hierarchy for the case of hard spheres. This led to some nasty integro-differential equations which couldn’t be solved by analytical techniques. Caltech didn’t yet have a computer in the modern sense, but in 1949 they acquired an IBM 604 Electronic Calculating Punch, which could be wired to do calculations with input and output specified on punched cards—and it was on this machine that Alder got the calculations he needed done (the paper records that “[this] … was calculated … with the use of IBM equipment and the file of punched cards of _sin_(_ut_) employed in these laboratories for electron diffraction calculation”):
+
+Our story now moves to Los Alamos, where in 1947 Stan Ulam had suggested the Monte Carlo method as a way to study neutron diffusion. In 1949 the method was implemented on the ENIAC computer. And in 1952 Los Alamos got its own MANIAC computer. Meanwhile, there was significant interest at Los Alamos in computing equations of state for matter, especially in extreme conditions such as those in a nuclear explosion. And by 1953 the idea had arisen of using the Monte Carlo method to do this.
+
+The concept was to take a collection of hard spheres (or actually 2D disks), and move them randomly in a series of steps with the constraint that they could not overlap—then look at the statistics of the resulting “equilibrium” configurations. This was done on the MANIAC, with the resulting paper now giving “Monte Carlo results” for things like the radial distribution function:
+
+Kirkwood and Alder had been continuing their BBGKY hierarchy work, now using more realistic Lennard-Jones forces between molecules. But by 1954 Alder was also using the Monte Carlo method, implementing it partly (rather painfully) on the IBM Electronic Calculating Punch, and partly on the Manchester Mark II computer in the UK (whose documentation had been written by Alan Turing):
+
+In 1955 Alder started working full-time at Livermore, recruited by Edward Teller. Another Livermore recruit—fresh from a physics PhD—was Thomas Wainwright. And soon Alder and Wainwright came up with an alternative to the Monte Carlo method—that would eventually give the book cover pictures: just explicitly compute the dynamics of colliding hard spheres, with the expectation that after enough collisions the system would come to equilibrium and allow things like equations of state to be obtained.
+
+In 1953 Livermore had obtained its first computer: a Remington Rand Univac I. And it was on this computer that Alder and Wainwright did a first proof of concept of their method, tracing 100 hard spheres with collisions computed at the rate of about 100 per hour. Then in 1955 Livermore got IBM 704 computers, which, with their hardware floating-point capabilities, were able to compute about 2000 collisions per hour.
+
+Alder and Wainwright reported their first results at a statistical mechanics conference in Brussels in August 1956 (organized by Ilya Prigogine). The published version appeared in 1958:
+
+It gives evidence—that they tagged as “provisional”—for the emergence of a Maxwell–Boltzmann velocity distribution “after the system reached equilibrium”
+
+as well as things like the radial distribution function—and the equation of state:
+
+It was notable that there seemed to be a discrepancy between the results for the equation of state computed by explicit molecular dynamics and by the Monte Carlo method. And what is more, there seemed to be evidence of some kind of discontinuous phase-transition-like behavior as the density of spheres changed (an effect which Kirkwood had predicted in 1949).
+
+Given the small system sizes and short runtimes it was all a bit muddy. But by August 1957 Alder and Wainwright announced that they’d found a phase transition, presumably between a high-density phase where the spheres were packed together like in a crystalline solid, and a low-density phase, where they were able to more freely “wander around” like in a liquid or gas. Meanwhile, the group at Los Alamos had redone their Monte Carlo calculations, and they too now claimed a phase transition. Their papers were published back to back:
+
+But at this point no actual pictures of molecular trajectories had yet been published, or, I believe, made. All there was were traditional plots of aggregated quantities. And in 1958, these plots made their first appearance in a textbook. Tucked into Appendix C of _Elementary Statistical Physics_ by Berkeley physics professor Charles Kittel (who would later be chairman of the group developing the Berkeley Physics Course book series) were two rather confusing plots about the approach to the Maxwell–Boltzmann distribution taken from a pre-publication version of Alder and Wainwright’s paper:
+
+Alder and Wainwright’s phase transition result had created enough of a stir that they were asked to write a _Scientific American_ article about it. And in that article—entitled “Molecular Motions”, from October 1959—there were finally pictures of actual trajectories, with their caption explaining that the “paths of particles … appear as bright lines on the face of a cathode-ray tube hooked to a computer” (the paths are of the centers of the colliding disks):
+
+A technical article published at the same time gave a diagram of the logic for the dynamical computation:
+
+Then in 1960 Livermore (after various delays) took delivery of the LARC computer—arguably the first scientific supercomputer—which allowed molecular dynamics computations to be done perhaps 20 times times faster. A 1962 picture shows Berni Alder (left) and Thomas Wainwright (right) looking at outputs from the LARC with Mary Ann Mansigh (yes, in those days it was typical for male physicists to wear ties):
+
+And in 1964, the pictures for the _Statistical Physics_ book (and film loop) got made, with Mary Ann Mansigh painstakingly constructing images of disks on the oscilloscope display.
+
+Work on molecular dynamics continued, though to do it required the most powerful computers, so for many years it was pretty much restricted to places like Livermore. And in 1967, Alder and Wainwright made another discovery about hard spheres. Even in their first paper about molecular dynamics they’d plotted the velocity autocorrelation function, and noted that it decayed roughly exponentially with time. But by 1967 they had much more precise data, and realized that there was a deviation from exponential decay: a definite “long-time tail”. And soon they had figured out that this power-law tail was basically the result of a continuum hydrodynamic effect (essentially a vortex) operating even on the scale of a few molecules. (And—though it didn’t occur to me at the time—this should have suggested that even with fairly small numbers of cells cellular automaton fluid simulations had a good chance of giving recognizable hydrodynamic results.)
+
+It’s never been entirely easy to do molecular dynamics, even with hard spheres, not least because in standard computations one’s inevitably confronted with things like numerical roundoff errors. And no doubt this is why some of the obvious foundational questions about the Second Law weren’t really explored there, and why intrinsic randomness generation and the rule 30 phenomenon weren’t identified.
+
+Incidentally, even before molecular dynamics emerged, there was already one computer study of what could potentially have been Second Law behavior. Visiting Los Alamos in the early 1950s Enrico Fermi had gotten interested in using computers for physics, and wondered what would happen if one simulated the motion of an array of masses with nonlinear springs between them. The results of running this on the MANIAC computer were reported in 1955 (after Fermi had died)
+
+and it was noted that there wasn’t just exponential approach to equilibrium, but instead something more complicated (later connected to solitons). Strangely, though, instead of plotting actual particle trajectories, what were given were mode energies—but these still exhibited what, if it hadn’t been obscured by continuum issues, might have been recognized as something like the rule 30 phenomenon:
+
+But I knew none of this history when I saw the _Statistical Physics_ book cover in 1972. And indeed, for all I knew, it could have been a “standard statistical physics cover picture”. I didn’t know it was the first of its kind—and a leading-edge example of the use of computers for basic science, accessible only with the most powerful computers of the time. Of course, had I known those things, I probably wouldn’t have tried to reproduce the picture myself and I wouldn’t have had that early experience in trying to use a computer to do science. (Curiously enough, looking at the numbers now, I realize that the base speed of the LARC was only 20x the Elliott 903C, though with floating point, etc.—a factor that pales in comparison with the 500x speedup in computers in the 40 years since I started working on cellular automata.)
+
+But now I know the history of that book cover, and where it came from. And what I only just discovered now is that actually there’s a bigger circle than I knew. Because the path from Berni Alder to that book cover to my work on cellular automaton fluids came full circle—when in 1988 Alder wrote a paper based on cellular automaton fluids (though through the vicissitudes of academic behavior I don’t think he knew these had been my idea—and now it’s too late to tell him his role in seeding them):
+
+_Notes & Thanks_
+
+There are many people who’ve contributed to the 50-year journey I’ve described here. Some I’ve already mentioned by name, but others not—including many who doubtless wouldn’t even be aware that they contributed. The longtime store clerk at Blackwell’s bookstore who in 1972 sold college physics books to a 12-year old without batting an eye. (I learned his name—Keith Clack—30 years later when he organized a book signing for _A New Kind of Science_ at Blackwell’s.) John Helliwell and Lawrence Wickens who in 1977 invited me to give the first talk where I explicitly discussed the foundations of the Second Law. Douglas Abraham who in 1977 taught a course on mathematical statistical mechanics that I attended. Paul Davies who wrote a book on _The Physics of Time Asymmetry_ that I read around that time. Rocky Kolb who in 1979 and 1980 worked with me on cosmology that used statistical mechanics. The students (including professors like Steve Frautschi and David Politzer) who attended my 1981 class at Caltech about “nonequilibrium statistical mechanics”. David Pines and Elliott Lieb who in 1983 were responsible for publishing my breakout paper on “Statistical Mechanics of Cellular Automata”. Charles Bennett (curiously, a student of Berni Alder’s) with whom in the early 1980s I discussed applying computation theory (notably the ideas of Greg Chaitin) to physics. Brian Hayes who commissioned my 1984 _Scientific American_ article, and Peter Brown who edited it. Danny Hillis and Sheryl Handler who in 1984 got me involved with Thinking Machines. Jim Salem and Bruce Nemnich (Walker) who worked on fluid dynamics on the Connection Machine with me. Then—36 years later—Jonathan Gorard and Max Piskunov, who catalyzed the doing of our Physics Project.
+
+In the last 50 years, there’ve been surprisingly few people with whom I’ve directly discussed the foundations of the Second Law. Perhaps one reason is that back when I was a “professional physicist” statistical mechanics as a whole wasn’t a prominent area. But, more important, as I’ve described elsewhere, for more than a century most physicists have effectively assumed that the foundations of the Second Law are a solved (or at least merely pedantic) problem.
+
+Probably the single person with whom I had the most discussions about the foundations of the Second Law is Richard Feynman. But there are others with whom at one time or another I’ve discussed related issues, including: Bruce Boghosian, Richard Crandall, Roger Dashen, Mitchell Feigenbaum, Nigel Goldenfeld, Theodore Gray, Bill Hayes, Joel Lebowitz, David Levermore, Ed Lorenz, John Maddox, Roger Penrose, Ilya Prigogine, Rudy Rucker, David Ruelle, Rob Shaw, Yakov Sinai, Michael Trott, Léon van Hove and Larry Yaffe. (There are also many others with whom I’ve discussed general issues about origins of randomness.)
+
+Finally, one technical note about the presentation here: in an effort to maintain a clearer timeline, I’ve typically shown the earliest drafts or preprint versions of papers that I have. Their final published versions (if indeed they were ever published) appeared anything from weeks to years later, sometimes with changes.

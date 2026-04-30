@@ -1,0 +1,482 @@
+Title: Paper Title (use style: paper title)
+
+URL Source: https://www.sesarju.eu/sites/default/files/documents/sid/2018/papers/SIDs_2018_paper_3.pdf
+
+Published Time: Wed, 05 Dec 2018 09:00:06 GMT
+
+Markdown Content:
+Drone Delivery 
+
+# Urban airspace traffic density estimation 
+
+Malik Doole, Joost Ellerbroek and Jacco Hoekstra 
+
+Control and Simulation, Faculty of Aerospace Engineering 
+
+Delft University of Technology, Kluyverweg 1, 2629 HS Delft, The Netherlands 
+
+Abstract —The concept of autonomous drone delivery in urban areas has gained a favorable amount of media attention over the past few years. Companies such as Amazon, Uber and Matternet are investigating the use of drones to transport parcels in order to solve the disaggregate delivery (last-mile) problem. This solution could potentially reduce vehicular congestion in cities by replacing traditional transport modes used in last-mile delivery, such as trucks, vans and bikes, with a fleet of autonomous drones flying in an urban airspace. To realize this concept, the design of an urban airspace for drones is necessary. However, the design of an urban airspace for drones will depend on critical design metrics such as drone traffic densities, traffic distribution patterns, distance between origin-destination, and the number of distribution centers. For this study, we first tackle the first metric, drone traffic density. This metric will provide an indication for the required urban airspace capacity and its expected demand. This paper therefore establishes a framework for determining the traffic density of delivery drones for a typical urban city airspace in Europe. In addition, the paper presents a cost-analysis study for fast-food delivery via drones relative to electric bikes. 
+
+Keywords —Drone delivery, U-Space, UTM, Parcel demand forecast, Traffic density, Urban airspace, Food-delivery 
+
+I. INTRODUCTION 
+
+Approximately two to five percent of a country’s gross 
+
+domestic product (GDP) is lost to traffic congestion every year [1]. Between the US, UK and Germany alone, the cost of traffic congestion was estimated at $461 Billion in 2017 [2, 3]. This problem is mainly caused by the perennial population growth in urban cities, which is currently growing at 1.5 million urban inhabitants per week [2]. It is envisioned that novel transportation means such as delivery drones could potentially help reduce road congestion in cities, and subsequently reduce the associated greenhouse gas emissions [4, 5]. 
+
+The transport of small parcels using autonomous drones has the potential to lift some of the existing traffic into the urban airspace. This is one solution to the disaggregate delivery problem, or the so-called, last-mile delivery problem. The last-mile can be defined as the segment from a distribution center to the final destination, and is therefore the final leg of the supply chain [6]. It is one that accumulates the greatest cost because of the associated fuel, vehicle and labor cost. A recent study estimated that the last-mile delivery expends the global parcel delivery industry nearly $85 billion per year [6]. This is why E-commerce giants such as Amazon and Uber, but also start-up companies such as Matternet and Flytrex are investigating drone deliveries as a solution to this problem. 
+
+To enable large-scale delivery using drones, an Unmanned Traffic Management (UTM) needs to be in place. Hence, the National Aeronautics Space Agency (NASA), and Single European Skies ATM Research (SESAR) are working towards implementing UTM in the US and U-Space in Europe. An efficient urban airspace structure will be required to better manage the scarce urban airspace. 
+
+The goal of this paper is to estimate the demand for commercial delivery drones, and the resulting traffic densities in urban cities. These numbers are needed to design the urban airspace and to study emergent features such as airspace stability. An outlook study conducted by SESAR in 2016 estimated 100,000 delivery drones in Europe by 2050 [7]. However, this study did not specify the underlying assumptions nor the methodology for establishing these demand numbers. Furthermore, no study has looked at the drone movements per hour, or the expected drone traffic densities in an urban airspace. 
+
+A previous study on estimating delivery drones was conducted in the Metropolis study by Hoekstra et al., [8, 9]. However, their estimation was first-order, and it was not the primary focus of their study. A more recent paper employed parcel dynamics to estimate the number of delivery drones for Washington DC in the US [10]. 
+
+The current study, therefore, aims to estimate the delivery drone demand for a typical metropolitan European city. Notably, it addresses the gap in estimating the traffic density of operations for drone-enabled delivery of parcels in an urban area. In addition, this paper presents an autonomous drone delivery case-study for a typical metropolitan European city, Paris. Finally, as an example use-case, this study makes a comparison between food-delivery via autonomous drones and the more traditional and widely used electric bikes, for the city of Paris. 
+
+The remainder of this paper is organized in sections. Section II outlines the fundamental assumptions employed for the parcel demand and traffic density calculations. Section III provides an overview of the methodology that was utilized in this study. It then describes the the parcel delivery demand estimation for the US, Japan, Germany, UK and France for the years 2035-2050 respectively. In addition, a case-study for delivery drone traffic density numbers for the city of Paris is presented. Next, Section IV presents a cost analysis between Eighth SESAR Innovation Days, 3rd – 7th December 201 8delivery drones and electric-bikes for fast-food delivery for the city of Paris. Finally, Section V recaps the key ideas of the paper and presents a set of future steps to be taken in order to develop and design the urban airspace for drones. 
+
+II. ASSUMPTIONS 
+
+The set of fundamental assumptions employed in this study are outlined in this Section. 
+
+1. According to global courier company UPS, 85 percent of parcels are delivered domestically, and the remaining 15 percent are international bound parcels [10, 11]. Hence, this assumption can be incorporated into this study in order to exclude parcels with international destinations. 
+
+2. Only deliveries within an urban area will be entitled for parcel delivery via drones. This is because there is a trend in urbanization and its growth in cities [2]. 
+
+3. Only a proportion of parcels will be suitable for drone delivery, for instance not all parcel deliveries are within optimal distance from the distribution center. In a previous study, 70 percent of urban parcel delivery was assumed to be entitled for drone delivery [10]. The remaining parcels will have to be delivered via traditional transport means. 
+
+4. Parcels weighing less than or equal to 2.2kg will be delivered by drones. This is needed to keep the operating cost low [12]. And importantly, 86 percent of E-commerce orders from Amazon adhere to this weight constraint. 
+
+5. Only the last-mile segment of the delivery will be considered in this study since it is the most promising segment for delivery drones [5, 6, 12, 13, 14]. 
+
+6. In this study a delivery drone will take 30 minutes in total to complete a delivery mission for 1 parcel. This 
+
+assumption is in line with the work of D’Andr ea [12]. However, it is plausible that this assumption will change in the future with improved battery technology, which would allow delivery of multiple parcels per delivery trip. 
+
+III. D EMAND FORECAST FOR PARCEL DELIVERY VIA DRONES 
+
+The framework followed in this study in order to determine the drone traffic demand and resulting traffic density in an urban airspace is depicted in Fig 1. In this section we describe the parcel numbers for five major countries. Then, we narrow our analysis to France, and we focus on determining the delivery drone traffic density for the city of Paris. 
+
+A. Determine the current parcel delivery volume 
+
+According to a report published by Pitney Bowes, 31 billion parcels were delivered globally in 2015, a number that has been primarily driven by the growth in E-commerce demand [15]. In this figure, the US represents 11.8 billion in parcel volume, followed by Japan (9.4 billion), Germany (3.0 billion), UK (2.2 billion) and France (1.5 billion). The Pitney Bowes report predicts the above figures to be 20 percent higher in 2018. As a result, the number of global parcels to be delivered in 2018 could potentially reach 37.2 billion [15]. 
+
+From this sum of global parcel volume, it is important to determine the number of domestic/national packages. This is because we have to siphon out international parcels and only investigate domestic parcels that will be eligible for drone delivery. 
+
+According to global courier company UPS, 85 percent of a 
+
+courier’s parcels are delivered to domestic addresses in the US [11]. If we assume the same percentage of domestic parcels holds true for Japan, Germany, UK and France. This results in the number of domestic parcels delivered in the US to be 12.0 billion in 2018. Similarly, the domestic parcel numbers in 2018 for Japan, Germany, UK and France will be 9.5 billion, 3.0 billion, 2.2 billion and 1.5 billion respectively as presented in Table 1.          
+
+> TABLE 1. DOMESTIC/NATIONAL PARCEL ESTIMATES FOR 2018
+> Country US Japan Germany UK France
+> Number of Parcels (billion)
+> 12.0 9.5 3.0 2.2 1.5
+
+B. Determine the number of parcels delivered in an urban area 
+
+According to results published by the World Bank [16] in 2016, 82 percent of the American population reside in urban areas. Similarly, in Japan, 94 percent of the population are concentrated in urban areas. In Germany, 76 percent of the population live in an urban environment while the UK and France hold 83 and 80 percent of their population in urban cities. Assuming a steady urbanization growth rate for the respective countries at: 0.9, 0.3, 1.3, 1.9, and 0.7 percent per year until 2018 [16], we can determine the number of packages delivered to urban areas for the respective countries. This yields an urban population percentage for US, Japan, Germany, UK and France of 83.8, 94.6, 78.6, 85, and 81.4 percent, respectively. If we then multiply the urban percentage population by the domestic parcel numbers for the respective countries for 2018, we arrive at the number of parcels delivered to urban areas for the 5 respective countries. The resulting numbers are shown in Table 2.                 
+
+> TABLE 2. PARCELS DELIVERED TO URBAN AREAS FOR 2018
+> Country US Japan Germany UK France
+> Number of Parcels (billion)
+> 10.1 9.0 2.4 1.9 1.2
+> Fig ure 1. Framework for computing drone traffic density in an urban airspace Eighth SESAR Innovation Days, 3rd –7th December 201 82
+
+C. Determine the number of urban parcel delivery that is less than or equal to 2.2kg 
+
+Several drone delivery companies, such as Matternet, and Amazon Prime Air, Flirty and Flytrex have concentrated their efforts in designing a drone to carry a payload of 2.2kg for a distance 10 km. For Amazon, parcels below this weight limit make up 86 percent of their total number of deliveries [17]. Since parcel delivery is assumed to be proportional to E-commerce growth, it is a realistic design requirement for the urban airspace to be able to accommodate such traffic densities. Therefore taking into account the 86 percent statistic, Table 3 shows the resulting number of parcel deliveries eligible for drone transport for the US, Japan, Germany, the UK, and France.          
+
+> TABLE 3. PARCELS LESS THAN OR EQUAL TO 2.2KG DELIVERED TO URBAN AREAS IN 2018
+> Country US Japan Germany UK France
+> Number of Parcels (billion)
+> 8.6 7.8 2.0 1.6 1.0
+
+D. Determine the growth in drone-enabled parcel numbers for pessimistic, realistic and optimistic scenarios 
+
+Several research studies support the economic advantages of employing drones for the ‘last-mile ’ delivery rather than the traditional truck or van mode [5, 6, 12, 13, 14]. 
+
+This last-mile is defined as the segment of delivery between the centralized urban distribution center to the final destination. Not all parcels will be eligible for drone delivery due to range limitations. In a previous study, 70 percent of urban parcel deliveries were assumed to be eligible for drone delivery [10] therefore, we employ the same assumption for this study. The remaining 30 percent of urban parcels are categorized as exceeding the drone delivery range-payload performance envelope. Therefore, the 70 percent fraction for drone-enabled parcel delivery in urban areas is substituted into the values given in Table 3. As a result, the computed drone-enabled parcel estimates for the five countries for the year 2018 are shown in Table 4.          
+
+> TABLE 4. DRONE-ENABLED PARCEL ESTIMATES FOR 2018
+> Country US Japan Germany UK France
+> Number of Parcels (billion)
+> 6.1 5.5 1.4 1.1 0.7
+
+Based on the U-Space Masterplan from SESAR, we can assume that delivery via drones will only be feasible by 2035 [7]. Therefore, our forecast will begin from the year 2035 in order to be synchronized with the U-Space program. 
+
+The global parcel industry is growing at an average of 6 percent per year [15]. The study from Pitney Bowes indicates a strong correlation between parcel growth and E-commerce growth [15]. Assuming the demand for delivery drones to be proportional to global parcel demand, three different scenarios for parcel growth can be explored for the purpose of this study. 
+
+For the pessimistic (low growth) scenario, we assume global parcel demand to grow only at 3 percent compound annual growth rate (CAGR), while we assume a realistic growth (medium growth) of 6 percent CAGR. On the other hand, if E-commerce sales and consumer spending remain optimistic, we can assume an optimistic (high growth) scenario of 9 percent CAGR. These extrapolated annual drone-enabled parcel growth numbers for the years 2035-2050 are given in Table 5. 
+
+E. Forecast for the number of delivery drones in Paris 
+
+According to The Organization for Economic Co-operation and Development (OCED), approximately 12 million people live in and around the urban city of Paris (in an area of 2,844 km 2) as of 2014 [18, 19]. Taking into account a 0.7 percent urbanization growth rate per year since 2014, gives us 12.3 million people residing in Paris as of 2018. Then, taking into consideration the total urban population of France, the percentage of population in Paris amounts to 23 percent of the total urban population (53.5 million). As a result, the 23 percent can be factored into the values of France presented in Table 5 in order to derive the urban parcel drone delivery numbers for Paris as shown in Table 6. 
+
+> TABLE 6. URBAN DRONE DELIVERY FORECAST FOR PARIS (MILLION)
+
+From the results in Table 6, the delivery drone traffic density can be determined. Assuming deliveries take place 6 days a week all year round i.e., 313 days per year with an 8-hour work day schedule on average, results in the number of drone deliveries per hour as shown in Table 7. The delivery drone density is an important metric. It indicates the density of traffic or, drone movements, within the airspace. The predicted traffic densities allows us to visualize the required airspace design to accommodate such drone traffic densities optimally. 
+
+As presented in Table 7, by 2035 with the assumption of a 6 percent CAGR growth in parcel demand for the realistic scenario, we expect to have nearly 174,521 drones per hour within the urban airspace of Paris. To put these numbers into perspective, according to Flightradar24, 178,415 flights were recorded globally on April 5, 2018 (over a 24-hour period, 7,434 fights per hour) [20]. As one can see, this is a significant                                                                                                     
+
+> Year US Japan Germany UK France
+> Lo Med Hi Lo Med Hi Lo Med Hi Lo Med Hi Lo Med Hi
+> 2035 10.0 16.3 26.3 9.0 14 .7 23.6 2.3 3.8 6.1 1.9 3.0 4.8 1.2 1.9 3.0
+> 2040 11.6 21.9 40.4 10.5 19.7 36.4 2.7 5.0 9.3 2.1 4.0 7.5 1. 42.5 4.7
+> 2045 13.5 29.3 62.2 12.2 26.3 55.9 3.1 6.8 14.3 2.5 5.4 11.5 1.6 3.4 7.2
+> 2050 15.6 39.2 95.7 14.0 35.2 86.0 3.6 9.0 22.1 2.9 7.2 17.7 1.9 4.5 11.0
+> Year Pessimistic Realistic Optimistic
+> 2035 276 437 690
+> 2040 322 575 1, 08 1
+> 2045 368 782 1, 656
+> 2050 437 1, 035 2, 530
+> TABLE 5. EXTRAPOLATED ANNUAL URBAN PARCEL DEMAND FOR 3 VARIANT SCENARIOS
+> (BILLION) Eighth SESAR Innovation Days, 3rd –7th December 201 83
+
+number in drone traffic density for a scarce and, complex urban airspace, compared to the number of traditional commercial flights. 
+
+The E-commerce company Amazon states that a single delivery drone can deliver a parcel over a distance 10km within a 30-minute time window [17]. This delivery time represents the total time of the delivery journey (time to deliver and return to the distribution center). Therefore, the hourly drone delivery demand can simply be divided by 2 to obtain the number of delivery drones (traffic density) over the city of Paris as presented in Table 8.                               
+
+> TABLE 7. DRONE DELIVERY TRAFFIC MOVEMENTS (FLIGHTS/HOUR) FORECAST OVER PARIS
+> Year Pessimistic Realistic Optimistic
+> 2035 110,224 174,521 275,559
+> 2040 128,594 229,634 431,709
+> 2045 146,965 312,300 661,342
+> 2050 174,521 413,339 1,010,383
+> TABLE 8. DELIVERY DRONE TRAFFIC DENSITY FORECAST FOR PARIS
+> Year Pessimistic Realistic Optimistic
+> 2035 55,112 87,260 137,780
+> 2040 64,297 114,817 215,855
+> 2045 73,482 156,150 330,671
+> 2050 87,260 206,670 505,192
+
+Now that we have estimated the number of parcel delivery drones in Paris, we will also investigate the demand of fast-food delivery via drones. This is an application that is highly suited for drone deliveries because of the ability to deliver such perishables relatively faster than traditional delivery means. Companies such as Uber and Flytrex are experimenting with this use-case [21, 22]. If this application becomes viable, then the airspace will need to accommodate fast-food delivery drones in addition to parcel delivery drones. 
+
+IV. C OST COMPARISON OF FAST -FOOD DELIVERY VIA DRONE VS ELECTRIC BIKES 
+
+The delivery of fast-food via a drone has garnered a great amount of media attention [21-23]. Is this futuristic idea viable or a public relations stunt? This section will discuss the economic viability of using drones for food delivery. The reason for this is that if food delivery via drones become a viable option, then drone traffic from food delivery would also contribute a significant part of total delivery drone traffic. Therefore, these estimates will need to be considered in our traffic demand analysis. 
+
+In order to determine the feasibility, a cost analysis is conducted for fast-food delivery for the city of Paris. Acomparison is made between delivery by drone (in this example the DJI Matrice 600 Pro [24]), and delivery by E-bike/Battery-assisted bicycles. The E-bike, although a popular transport mode for fast-food delivery [25], this mode of transport has been shown to contribute to the overall existing traffic congestion problem in cities [35]. 
+
+The city of Paris has a population of 12.3 Million inhabitants as of 2018. Assuming 1 percent of the population order fast-food and request for it to be delivered to their location daily. This equates to 123,000 fast-food deliveries on a daily basis within a 6-hour time window (6pm to 12am). This results in an hourly demand rate of 20,500 deliveries. Similar to the assumptions employed in the previous sections, we assume a drone takes 30 minutes to deliver a single order to a customer (5km away) and return back to the distribution center. Hence, in 1 hour, a single drone delivers 2 fast-food orders on average to 2 independent customers. 10,250 1 drones are therefore needed to match the previously-mentioned hourly delivery demand rate. 
+
+In order to estimate the cost of delivering fast-food via a drone, three variant scenarios will be employed. Each of these scenarios will be compared against cost variables for each mode. Ultimately, the costs will be compared to the traditional electric bike delivery mode. 
+
+A. Delivery drone cost variables 
+
+1. Cost of drone: the cost of the drone for the pessimistic scenario was obtained from amanufacturer ’s cost estimate (i.e. DJI Matrice 600) [24]. This cost estimate is priced at €5,699 per unit 
+
+and it is far higher than its competitors. This price-point can be seen as a pessimistic case and hence why it is used in the pessimistic scenario. For the realistic case, the cost of a drone is assumed to be 75 percent of the pessimistic scenario cost while in the optimistic scenario the cost of the vehicle is assumed to be 50 percent of this cost estimate. This reduction in the cost of a drone can be reasoned by the future decrease in the sensor technology costs. The cost decrease of drones could mimic the sharp decrease of prices for mid-range smartphones [26]. 
+
+2. Cost of modification: modification is required to equip the drone with a payload-carrying capability i.e., a lightweight payload hull to house the fast-food order. In the pessimistic scenario, it is assumed that the modification cost is borne by the consumer. Realistically, the manufacturer could charge areasonable price for modifications. As the demand increases, we assume that the economies of scale will help reduce the cost of modification to zero. This can be seen in the optimistic scenario. 
+
+3. Cost of battery: the price of lithium-ion batteries will keep decreasing yearly [27, 28]. A recent analysis estimated the average selling price of lithium-ion            
+
+> 120,500 orders per hour multiplied by 1 drone per 2 orders per hour Eighth SESAR Innovation Days, 3rd –7th December 201 84
+
+battery packs to be $209/k Wh (€175 /kWh) which is a 24 percent decrease since 2016 and 79 percent decrease since 2010 [27]. By 2025 the price of a lithium-ion battery pack is projected to decrease to $100/ kWh (€84 /kWh) [27, 28]. The manufacturer’s 
+
+cost estimate for an extra drone battery is priced higher compared to its competitors. Therefore, the cost of an extra battery seen in the pessimistic scenario is taken from the manufactur er’s cost 
+
+estimate. And, in a realistic scenario, the cost of the 
+
+manufacturer’s drone battery is estimated to decrease by 50 percent to match competitor prices. In an optimistic scenario, we assume the cost of this battery to decrease by 75 percent in the future. 
+
+4. Annual maintenance cost per vehicle: the need for maintenance will decrease with the evolution of drone technology. Currently, the maintenance cost is assumed to be 30 percent of the cost of the vehicle. This is a relatively high cost for maintenance and as the cost of the vehicle decreases together with further advancement in technology, the cost of maintenance will decrease. The realistic scenario is expected to reduce the annual cost of maintenance to 10 percent of the cost of the vehicle and 5 percent of the cost of the drone for an optimistic scenario. 
+
+5. Annual liability insurance cost per vehicle: the liability insurance cost for delivery drones is still not well defined due to its novelty. According to [29], the cost for the annual liability insurance for consumer drones ranges between €600 to €1,600 per drone. We 
+
+believe that as drones become increasingly intelligent, and as U-Space unfolds to become amatured ecosystem for drones, the cost of annual insurance will decrease. According to [30], the cost of insurance for drones is predicted to decrease due to competitive pricing as more insurance providers enter the market. Therefore, based on the above reasons we can estimate the cost for the yearly liability insurance for a delivery drone. Hence, we assume for a
+
+pessimistic case, the cost of insurance to be €1,000 
+
+while realistically the price should be €500 and more optimistically €100 per year. 
+
+6. Airspace cost per vehicle per hour: the cost of utilizing the airspace can be viewed as a measure to control congestion in addition to making UTM/U-Space a profitable business. Hence there will always be a cost for using the airspace. However, UTM and U-Space have yet to establish such unit economics. Due to the latter, the airspace utilization cost will need to be assumed for this analysis. For the pessimistic scenario, a cost of €2 per hour per drone 
+
+is assumed. For the realistic and optimistic cases, the cost for airspace is assumed to decrease and represent 
+
+€0.50 and €0.25 for the remaining respective 
+
+scenarios. This is assumed to take place as U-Space unfolds progressively with time. 
+
+B. E-bike delivery cost variables 
+
+1. Cost of E-bike: this cost is given by the manufacturer 
+
+[24]. The manufacturer’s cost estimate is employed 
+
+for the realistic scenario. Depending on the external factors such as tax initiatives, the cost of an E-bike in a pessimistic scenario is as sumed to be €2 ,500 per bike. Similarly, in realistic and optimistic scenarios, the cost of the E-bike is assumed to decrease by 25 and 40 percent respectively lower due to factors such as tax incentives, economies of scale and competitive pricing. 
+
+2. Cost of modification: this involves modifying the E-bike with payload carrying capabilities. We assume the cost for modification decreases from the pessimistic scenario of €150 to the optimistic scenario of €50. 
+
+3. Cost of battery: similar to the delivery drone, the cost of lithium-ion batteries will decrease, 50 and 75 percent respective to the pessimistic price scenario which was derived fro m the manufacturer’s catalog 
+
+[25]. 
+
+4. Annual maintenance cost per vehicle: this cost factor is based on the usage of the bike. Estimates for maintenance cost for an E-bike was obtained from [31] in which a range is specified for maintenance cost estimates between €180 - €105 per year . The highest cost from the range is employed for the pessimis tic scenario which stands at €180 per year. Then, the average of the range, €142, is assumed for the realistic scenario. And finally, for the optimistic scenario, the lowest cost of the maintenance cost range is assumed at €105 per year. 
+
+5. Annual insurance cost per E-bike: the cost of insurance for theft and damage for E-bicycles are relatively low compared to drones. According to [32], insurance cost per E-bike can vary f rom €33 - €84 
+
+per year. For this study we assume the insurance cost for the pessimisti c scenario to be €84 i.e., we assume the highest value from the above range. The average 
+
+of the range (€58.5) is employed for the realistic 
+
+scenario and the lowest value from the range , €33, is 
+
+assumed to hold true in the optimistic case. 
+
+6. Labor cost per hour: this cost is mainly driven by the cost of employing couriers. Quick service restaurants generally employ delivery personnel between the ages of 16 and 17 years. This is evident in Europe. As a result, the cost of labor is relatively cheap since employers are not stipulated to meet the minimum wage threshold [33]. We assume that the cost of labor Eighth SESAR Innovation Days, 3rd – 7th December 201 85for couriers to remain steady at €10 per hour for all 
+
+three scenarios. 
+
+The economic feasibility of transporting fast-food via a drone can now be analyzed for three different scenarios. The calculation for this is presented in Table 9. Taking into consideration the total daily costs and the total daily fast-food demand (123,000 orders per day) results in a delivery cost 
+
+range between: €1,35 - €0,23 per order for the respective three scenarios. As a point of validation, the above delivery cost 
+
+range is in line with Amazon’s experiments of transporting a payload of 2,2kg over 16km for a cost of €0,71 per package 
+
+[34]. 
+
+From the analysis, it was also seen that the greatest cost benefit stems when the drone delivery operations become fully autonomous i.e., we assume the labor cost of operating delivery drones to be zero in the optimistic future scenario case. This is when the maximum benefit of drone enabled delivery can be expected. Autonomy will allow such applications to produce the greatest social and monetary benefits. The former will be the most beneficial since delivery drones will replace the traditional inefficient delivery modes and hence reduce traffic congestion in cities, while the latter monetary benefit will be achieved by the ability of autonomous drones to scale. 
+
+To determine the cost per delivery via the current E-bike transport mode, we first assume an E-bike is able to deliver 5 orders per hour on average. This is because it has a higher payload capacity in comparison to the delivery drone. Then taking into account the hourly fast-food demand rate of 20,500 and, the capacity of 5 orders per hour, amounts to 4,100 2 E-bikes. Aggregating the total daily costs and dividing by the total daily demand, results in a delivery cost per fast-food order , ranging from €2,04 – €2,02 for the three respective scenarios as outlined in Table 10. 
+
+C. Comparison of costs 
+
+The above analysis shows that the cost range of delivery by E-bike is twice as high as the drone delivery cost range. This can be mainly associated to the required number of couriers (4,100 couriers) to meet the daily demand when delivering by bike. This analysis indicates the potential for fast-food delivery by drones as a sustainable transport mode for urban city delivery. When combined with drone package delivery this only reinstates the need for an urban airspace design for drones that can maximize capacity for high-density traffic.                                                                                              
+
+> TABLE 9. DRONE FAST-FOOD DELIVERY COST ANALYSIS FOR 3 VARIANT SCENARIOS
+> Drone
+> Pessimistic Realistic Optimistic
+> Number of vehicles 10,250 10,250 10,250
+> Cost of vehicle € 5,699.00 €4,267.50
+> 220,833 orders per hour multiplied by 1 E-bike per 5 orders per hour
+> €2,849.50
+> Cost of
+> modification per
+> vehicle € 150.00 €50.0 €0
+> Cost of extra
+> battery € 899.00 €449.50 €224. 75
+> Annual
+> maintenance
+> cost per vehicle € 1,709. 70 €427. 50 €142. 47
+> Annual liability
+> insurance cost
+> per vehicle € 1,000. 00 €500. 00 €100. 00
+> Total
+> investment cost € 95,941,425.00 €58,868,312.50 €34,503,550.00
+> Depreciation
+> time (years) 777
+> Annual
+> investment cost € 13,848,775.00 €8,409,758.93 €4,929, 078.57
+> Number of
+> operational days 365 365 365
+> Daily
+> investment cost
+> (fixed cost) € 37,941.85 €23,040.44 €13,504.32
+> Airspace cost
+> per vehicle per
+> hour € 2. 00 €0. 50 €0. 25
+> Labor cost per
+> hour € 30. 00 €30 .00 0
+> Number of
+> operators 25 50
+> Number of
+> operational
+> hours per day 666
+> Daily
+> operational cost
+> (variable cost) € 127 ,500. 00 €31,650 .00 €15,375 .00
+> Total daily cost € 165,441.85 €54,690.44 €28,879.32
+> Delivery c ost
+> per order € 1. 35 €0. 44 €0. 23
+> TABLE 10. E-BIKE FAST-FOOD DELIVERY COST ANALYSIS FOR 3 VARIANT SCENARIOS
+> E-bike
+> Pessimistic Realistic Optimistic
+> Number of vehicles 4,100 4,100 4,100
+> Cost of vehicle €2,500. 00 € 1,87 5.00 €1,500. 00
+> Cost of modification per vehicle €150 .00 € 100. 00 €50. 00
+> Cost of extra battery €100. 00 €5 0.00 €25. 00
+> Annual maintenance cost per vehicle €180 .00 € 14 2.50 €105 .00
+> Annual insurance cost per vehicle €84 .00 € 58 .50 €33 .00
+> Total investment cost €12,357,400.00 € 9,124,550.00 €7,023,300.00
+> Depreciation time (years) 777
+> Annual €1,765,342.86 € 1,303,507.14 Eighth SESAR Innovation Days, 3rd –7th December 201 86
+
+investment cost  €1,003,328.57 
+
+Number of 
+
+operational days  365  365  365 
+
+Daily 
+
+investment cost 
+
+(fixed cost)  €4,836.56  € 3,571.25  €2,748.85 
+
+Labo r cost per 
+
+hour  €10. 00  € 10 .00  €10 .00 
+
+Number of 
+
+couriers  4,100  4,100  4,100 
+
+Number of 
+
+ope rational 
+
+hours per day  6 6 6
+
+Daily 
+
+operational cost 
+
+(variable cost)  € 246,000.00  € 246,000.00  € 246,000.00 
+
+Total daily cost  € 250,836.56  € 249,571.25  € 248,748.85 
+
+Delivery c ost 
+
+per order  €2.04  € 2.03  € 2.02 
+
+V. CONCLUSION 
+
+Delivery of parcels or fast-food via autonomous drones are potential applications for autonomous flying vehicles that would have far-reaching consequences in terms of the density of drone traffic. Compared to other commercial applications such as surveillance, photography, and agricultural crop monitoring, delivery drones would have a far greater demand. It is an application that could help ease traffic congestion in urban cities and, when applied to developing nations, delivery drones will be help in connecting isolated communities with basic necessities from cities. 
+
+This study illustrates the magnitude of the demand for parcel delivery via drones in urban environments. The realistic scenario for 2035 in Paris indicates a traffic density of 87,260 parcel delivery drones within the urban airspace of Paris. To cope with such high traffic density of drone operations in an urban airspace with a 500 ft altitude limit means that an organized and dedicated airspace design for drones is imperative. 
+
+REFERENCES 
+
+[1] Asian Development Bank, “Urban Transport ”, Transport Key Priorities, 
+
+2018.  [Online]. Available: https://www.adb.org/sectors/transport/key-priorities/urban-transport .
+
+[2] PWC, “A New Agenda: Accommodating 2 billion new urban citizens ”,2018. [Online]. Available: https://www.pwc.co.uk/issues/megatrends/rapid-urbanisation.html 
+
+[3] Economist, “Hidden cost of congestion ”, 2018. [Online]. Available: 
+
+https://www.economist.com/blogs/graphicdetail/2018/02/daily-chart-20 
+
+[4] Flying High Challenge, “Use cases for drones in your city ”, Flying high: Shaping the fugure of drones in UK cities report, 2018. [Online]. Available: 
+
+http://challenges.org/wpcontent/uploads/flyinghigh/usecases.pdf 
+
+[5] J. Stolaroff, C. Samaras, E. R. O’Neill, A. Lubers, A. S. Mitchell, and D. 
+
+Ceperley, “Energy use and life cycle greenhouse gas emissions of drones for commercial package delivery”, Nature communications , vol. 9, no. 1, p. 209, 2018. 
+
+[6] McKinsey & Company, “Parcel delivery: The future of last-mile ”,
+
+Special report, 2016. 
+
+[7] SESAR Joint Undertaking, “European drone outlook study: Unlocking 
+
+the value for Europe”, Publications office of the European Union, 
+
+Luxembourg, November 2016. 
+
+[8] J.M Hoekstra, S. Kern, O. Schneider, F. Knabe, and B. Lamiscaree, 
+
+“Metropolis – Urban airspace design: Societal demand & technology review ”, Deliverable D1.2, Delft University of Technology , Delft, The Netherlands, 2015. 
+
+[9] E. Sunil, J. M. Hoekstra, J. Ellerbroek, F. Bussink, D. Nieuwenhuisen, A. Vidosavljevic, and S. Kern , “Metropolis: Relatin g airspace structure and capacity for extreme traffic d ensities”, 11th USA/Europe Air Traffic Management Research and Development Seminar , Lisbon, Portugal, 2015. 
+
+[10] M. Narkus-Kramer, “Future demand and benefits for small-autonomous unmanned aerial systems package delivery ”, AIAA Aviation Technology, Integration and Operations Conference , Colorado, US 2017. 
+
+[11] UPS, “UPS fact sheet ”, 2017. [Online]. Available: 
+
+http://pressroom.ups.com/assets/pdf/pressroom/fact%20sheet/UPS 
+
+[12] R. D’Andrea, “ Guest editorial can drones deliver? ”, Automation Science and Engineering, IEEE transcations, vol. 11, pp.647-648, 2014. 
+
+[13] Economist, “Surging demand requires new distribution methods logistics need shake up ”, Special Report , 2017. [Online]. Available: 
+
+https://www.economist.com/news/special-report/21730540-surging-
+
+demand-requires-new-distribution-methods-logistics-need-shake-up 
+
+[14] Economist, “Taking flight ”, Technology quarterly , 2017. [Online]. Available:  https://www.economist.com/technology-quarterly/2017-06-08/civilian-drones 
+
+[15] Pitney Bowes, “ Parcel shipping index ”, 2017. [Online]. Available: 
+
+https://www.pitneybowes.com/us/shipping-and-mailing/case-studies/pitney-bowes-2017-parcel-shipping-index.html 
+
+[16] World Bank Data, “Urban population growth rates for US, Japan, 
+
+Germany, UK, and France ” , 2018. [Online]. Available: https://data.worldbank.org/indicator/SP.URB.GROW?locations=US-JP-DE-GB-FR 
+
+[17] The Verge, “Delivery drones are coming: Jeff Bezos promises half-hour shipping with Amazon Prime Air ”, 2013. [Online]. Available: 
+
+https://www.theverge.com/2013/12/1/5164340/delivery-drones-are-coming-jeff-bezos-previews-half-hour-shipping 
+
+[18] OCED, “Organisation for economic cooperation and development, 
+
+Functional urban areas in OECD countries: France” 
+
+https://www.oecd.org/cfe/regional-policy/functional-urban-areas-all-france.pdf 
+
+[19] The World Bank, “Urban population: France”, 2018 . [Online]. Available: 
+
+https://data.worldbank.org/indicator/SP.URB.TOTL.IN.ZS?locations=F R
+
+[20] Flightradar24, “Flight statistics April 5 2018 ”, 2018. [Online]. Available: 
+
+https://www.flightradar24.com/data/statistics 
+
+[21] PYMNTS, “Food in flight: Delivering mobile orders by drone ”, 2018. [Online]. Available:  https://www.pymnts.com/intelligence-of-things/2018/drone-delivery-mobile-orders-flytrex-ncdot-holly-springs/ 
+
+[22] Bloomberg Technology, “Uber plans to test food delivery by drone” 
+
+2018. [Online]. Available: 
+
+https://www.bloomberg.com/news/articles/2018-05-10/uber-plans-to-test-food-delivery-by-drone-in-under-30-minutes 
+
+[23] NBC Bay Area, “Drones deliver p izza in San Francisco as part of promotion for HB O’s Silicon Valley” , 2018. [Online]. Available: 
+
+https://www.nbcbayarea.com/news/local/Sliceline-Drones-Deliver-Pizza-in-San-Francisco-As-Part-of-Promotion-for-HBOs-Silicon-Valley-477995623.html 
+
+[24] DJI, “Products matrice Pro 600 ”, 2018. [Online]. Available: 
+
+https://store.dji.com/shop/industrial?from=menu_products 
+
+[25] E-Bike, “Electric bike d elivery, 2018. [Online]. Available: 
+
+http://www.ebike4delivery.com 
+
+[26] BBC, Game of drones: As prices plummet drone are taking off, 2015. [Online]. Available: 
+
+http://www.bbc.com/news/business-30820399 
+
+[27] Bloomberg Technology, “The latest bull case for electric cars: the 
+
+cheapest batteries ever ”, 2017. [Online]. Available: Eighth SESAR Innovation Days, 3rd – 7th December 201 87https://www.bloomberg.com/news/articles/2017-12-05/latest-bull-case-for-electric-cars-the-cheapest-batteries-ever 
+
+[28] Berkmans G, Messaagie M, Smekens J, Omar N, Vanhaverbeke L and Van Mierlo J, “Cost projection of state of the art lithium-ion batteries for electric vehicles up to 2030 ”, Energies Journal , vol 10, no. 9, 2017. [Online]. Available:  https://doi.org/10.3390/en10091314 
+
+[29] Drone Liability Insurance Coverage, 2018. [Online]. Available: 
+
+https://fitsmallbusiness.com/drone-insurance/ 
+
+[30] Travers & Associates, “Drone insurance cost ”, 2018.  [Online]. Available: 
+
+https://www.traversaviation.com/drone-insurance-cost.html 
+
+[31] EBR, “The true costs of owning and using an electric bike ”, 2018. [Online]. Available: 
+
+https://electricbikereview.com/forum/threads/the-true-costs-of-owning-and-using-an-electric-bike.22739/ 
+
+[32] EBR, “Insurance for electric bikes ”, 2018. [Online]. Available: 
+
+https://electricbikereview.com/forum/threads/insurance-for-electric-bikes.22759/ 
+
+[33] WageIndicator.org, “Minimum wages in France ”, 2017. [Online]. Available:  https://wageindicator.org/main/salary/minimum-wage/france 
+
+[34] Flexport, “Drone delivery economics ”, Report 2015. [Online]. Available: 
+
+https://www.flexport.com/blog/drone-delivery-economics/ 
+
+[35] Citylab, “New York city makes (Some) space for E-bikes ”, 2018. [Online]. Available: https://www.citylab.com/transportation/2018/04/new-york-city-makes-space-for-e-bikes/557396/ Eighth SESAR Innovation Days, 3rd – 7th December 201 88

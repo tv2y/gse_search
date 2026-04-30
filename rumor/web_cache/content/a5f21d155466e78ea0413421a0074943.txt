@@ -1,0 +1,545 @@
+Title: (unity) move the world or the character
+
+URL Source: https://gamedev.stackexchange.com/questions/72277/unity-move-the-world-or-the-character
+
+Markdown Content:
+transformation - (unity) move the world or the character - Game Development Stack Exchange
+
+===============
+
+By clicking “Sign up”, you agree to our terms of service and acknowledge you have read our privacy policy.
+
+ Sign up with Google
+
+OR
+==
+
+Email 
+
+Password 
+
+Sign up
+
+Already have an account? Log in
+
+Skip to main content
+
+#### Stack Exchange Network
+
+Stack Exchange network consists of 183 Q&A communities including Stack Overflow, the largest, most trusted online community for developers to learn, share their knowledge, and build their careers.
+
+Visit Stack Exchange
+
+Loading…
+
+1.   
+    *   Tour Start here for a quick overview of the site
+    *   Help Center Detailed answers to any questions you might have
+    *   Meta Discuss the workings and policies of this site
+    *   About Us Learn more about Stack Overflow the company, and our products
+
+3.   
+### current community
+
+   
+
+    *   Game Development help chat 
+    *    Game Development Meta
+
+### your communities
+
+Sign up or log in to customize your list. 
+
+### more stack exchange communities
+
+company blog
+
+5.   Log in
+6.   Sign up
+
+1.       1.   Home
+    2.   Questions
+    3.   Unanswered
+    4.   AI Assist Labs
+    5.   Tags
+
+    7.   Chat
+    8.   Users
+
+    10.   Companies
+
+2.   Teams Ask questions, find answers and collaborate at work with Stack Overflow for Teams.
+
+Try Teams for free Explore Teams 
+3.   Teams
+4.   Ask questions, find answers and collaborate at work with Stack Overflow for Teams. Explore Teams
+
+**Teams**
+
+Q&A for work
+
+Connect and share knowledge within a single location that is structured and easy to search.
+
+Learn more about Teams
+
+Hang on, you can't upvote just yet.
+===================================
+
+You'll need to complete a few actions and gain 15 reputation points before being able to upvote. **Upvoting** indicates when questions and answers are useful. What's reputation and how do I get it?
+
+Instead, you can save this post to reference later.
+
+ Save this post for later Not now
+
+Thanks for your vote! 
+
+ You now have 5 free votes weekly.
+==========================================================
+
+Free votes
+*   count toward the total vote score
+*   does not give reputation to the author
+
+Continue to help good content that is interesting, well-researched, and useful, rise to the top! To gain full voting privileges, earn reputation.
+
+Got it!Go to help center to learn more
+
+(unity) move the world or the character
+=======================================
+
+Ask Question
+
+Asked 11 years, 7 months ago
+
+Modified 6 years, 10 months ago
+
+Viewed 6k times 
+
+This question shows research effort; it is useful and clear
+
+ 3 
+
+Save this question.
+
+Show activity on this post.
+
+I'm making a game like this: https://www.youtube.com/watch?v=hO7573lphqI
+
+wherein a 3D ship is flying around on a 2D plane. From the player's perspective, the ship will stay stationary in the center of the screen.
+
+The question I have is whether it's better to have to ship stay stationary and the world move around the ship? Or should I have the camera follow the ship as it moves around?
+
+Notes:
+
+*   assume the ship can go infinitely in any direction
+*   this is in Unity, though I'm curious if that differs from other tools like Unreal
+*   I will be culling items that are offscreen either way
+
+Obviously, having the camera follow the ship is easier from the programming side of things, but I'm wondering if there's a good reason not to do that (if the player moves far enough in one direction does it hit an internal limit that would break the game)?
+
+Thanks!
+
+*   unity
+*   transformation
+
+Share
+
+Share a link to this question 
+
+Copy link CC BY-SA 4.0
+
+ Follow 
+
+Follow this question to receive notifications
+
+edited Dec 6, 2018 at 21:53
+
+Svend Hansen
+
+133 7 7 bronze badges
+
+ asked Mar 22, 2014 at 0:58
+
+Summitch Summitch
+
+183 1 1 silver badge 5 5 bronze badges
+
+Add a comment|
+
+4 Answers 4
+-----------
+
+ Sorted by:  Reset to default
+
+This answer is useful
+
+ 2 
+
+Save this answer.
+
+Show activity on this post.
+
+Both the points brought up by projectskillz and by twyla are important considerations. However they push in opposite directions (floating point precision means you don't want to move the player too far from the origin, but NPC ships will be extremely hard to handle if the world is moving) so you'll need to find a third-way compromise. For an infinite universe I would try a zones approach, where the world stays still within a zone, but when the player reaches the edges of the zone the world snaps over by the width of the zone, thus always keeping the player near the origin.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Mar 23, 2014 at 4:12
+
+jhocking jhocking
+
+15.8k 2 2 gold badges 45 45 silver badges 59 59 bronze badges
+
+1
+
+*     This is a solution to an implementation but not really the question he asked. But yeah thats how I would do it.Ray_Garner  –Ray_Garner 2014-03-27 00:51:49 +00:00 Commented Mar 27, 2014 at 0:51  
+
+Add a comment|
+
+This answer is useful
+
+ 2 
+
+Save this answer.
+
+Show activity on this post.
+
+There aren't any technical drawbacks in both implementations.
+
+That said, simplicity is very important when designing software. For many reasons. A game - most of the time -, simulates a subset of the reality. So trying to achieve a simulation that is more natural, that works like it would work in real life, is a noble objective to pursue. Even when there are some technical disadvantages.
+
+But in your case, attaching the camera to the ship in the Hierarchy and moving the ship is the most natural way of doing. The other way doesn't have advantages and has the disadvantage that is just... weird.
+
+You will have the challenge of making it be able to "go infinitely" to any direction, but this is a problem you'd have on both implementations.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Mar 22, 2014 at 3:13
+
+Roberto Roberto
+
+740 7 7 silver badges 15 15 bronze badges
+
+Add a comment|
+
+This answer is useful
+
+ 2 
+
+Save this answer.
+
+Show activity on this post.
+
+Asking yourself one question should make the answer glaringly apparent:
+
+"**_How many game objects need to move for either implementation?_**"
+
+Under most circumstances, the ship moving through the game world requires only the player's ship itself to move. All other objects in the game remain relatively stationary in game-world-space.
+
+If the ship is stationary and the game world moves, now you're introducing a whole world of mathematical nightmares in trying to calculate the movements of anything else which moves within game-world-space. NPC ships (and other PC ships, if ever making a multiplayer game), planets, space stations, etc.
+
+Think back to the days when people thought the Earth was the center of the universe and all the wonky, lopsided mathematical formulas they had to work out to explain how other known planets varied their orbit speed throughout the year (sometimes appearing to reverse directions). Even though you've touched on this, you don't seem to quite realize just how deep this rabbit hole can go!
+
+As others have pointed out, there are some issues concerning floating-point precision if you make your levels excessively large. Just be smart with your level designs and you'll save yourself a world of headaches.
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+ Follow 
+
+Follow this answer to receive notifications
+
+ answered Mar 23, 2014 at 2:56
+
+Twyla Naythias Fox Twyla Naythias Fox
+
+41 2 2 bronze badges
+
+1
+
+*     How would setting the world coordinates of those objects affect their speeds, rotations, etc? If they are moving 1000 units away at a certain speed and a certain direction, moving their world coordinates relative to your movement input is all you need. Everything else stays the same for that object, and this is true for both single and multiplayer games. A good read about this exact same issue in the form of a PhD paper: citeseerx.ist.psu.edu/viewdoc/…António Sérgio Simões  –António Sérgio Simões 2019-04-10 16:00:47 +00:00 Commented Apr 10, 2019 at 16:00  
+
+Add a comment|
+
+This answer is useful
+
+ 1 
+
+Save this answer.
+
+Show activity on this post.
+
+In unity you can move as far as you want off the origin point.
+
+ There is no internal limit. However you will encounter a different type of limit. The floating point precision limit.
+
+In short **floating point types** have a **precision limit** of around **7 digits** no matter the placement of the dot.
+
+So for example you moved a character past say 1000 unity units.
+
+You wanted to move an object from 1000.0000 to 1000.0001 you may or may not see jittering and your Gameobject may or may not be exactly in the place you expect it to.
+
+So in general you would want to keep your gameplay as close to the origin as possible.
+
+So if you wanted to be able to infinitely move in one direction you would absolutely need to implement a system that moves the world and loads it dynamically as you move.
+
+This is not really just a limit of unity but of just how floating point numbers work. You could get double the precision if you were to use the double type however, Unity represents everything internally as a floating point number as they are just faster and have a lower memory footprint on almost every modern system today.
+
+For a detailed explanation of this check here. http://www.davenewson.com/dev/unity-notes-on-rendering-the-big-and-the-small
+
+Share
+
+Share a link to this answer 
+
+Copy link CC BY-SA 3.0
+
+ Follow 
+
+Follow this answer to receive notifications
+
+edited Mar 22, 2014 at 6:14
+
+ answered Mar 22, 2014 at 6:08
+
+Ray_Garner Ray_Garner
+
+314 1 1 silver badge 11 11 bronze badges
+
+5
+
+*     While your answer is true, it's also not relevant to the original question. Just because the world moves around the ship, doesn't really mean the edges of the scene get closer to the practical floating point limits. Because if the origin-based player is at the edge of the scene, what that means is the rest of the scene is at `scene-width` distance from the origin. At best you get 50% of the scene size back, because you can ensure that the mid-point of the scene is at the origin.MrCranky  –MrCranky 2014-03-22 09:43:42 +00:00 Commented Mar 22, 2014 at 9:43  
+*   1  @MrCranky How is it not relevant. He asked wether he should move the world or the ship assuming the ship can move infinite distance in any direction. The floating point problem almost ensures that he has no choice but to move the world. How is that not relevant if not directly answering his question?Ray_Garner  –Ray_Garner 2014-03-22 16:21:31 +00:00 Commented Mar 22, 2014 at 16:21  
+*     @projectskillz, thank you. That's exactly what I was looking for. I assumed that, at some point, an infinite plane would run into issues. I just had no idea what those would be.Summitch  –Summitch 2014-03-23 03:29:23 +00:00 Commented Mar 23, 2014 at 3:29  
+*     Apologies, I missed that nuance in the question.MrCranky  –MrCranky 2014-03-24 08:58:27 +00:00 Commented Mar 24, 2014 at 8:58  
+*     No problem. I thought maybe that was the case.Ray_Garner  –Ray_Garner 2014-03-24 10:09:00 +00:00 Commented Mar 24, 2014 at 10:09  
+
+Add a comment|
+
+You must log in to answer this question.
+----------------------------------------
+
+Start asking to get answers
+
+Find the answer to your question by asking.
+
+Ask question
+
+Explore related questions
+
+*   unity
+*   transformation
+
+See similar questions with these tags.
+
+*    The Overflow Blog 
+*    Your runbooks are obsolete in the age of agents 
+*    Featured on Meta 
+*     A First Look: Stack Overflow Redesign 
+*     Community Asks Sprint Announcement - October/November 2025 
+
+Report this ad
+
+Report this ad
+
+#### Related
+
+1 Move Object Around Sphere in Unity3D
+
+0 Moving an object forward relative to the distance traveled by another object
+
+0 Camera Movement - Snap Camera back to origin in relation to the player object
+
+1 How to make an object move and rotate the same amount as another obejct
+
+1 Clamp rotation of a follow camera when its target is falling
+
+0 Unity RB Controller Jitter on a Moving Platform
+
+0 How to position health bars above units in Unity regardless of camera location, angle and zoom?
+
+#### Hot Network Questions
+
+*    вписан meaning in context
+*    Pope Leo 1 and worshiping towards the East - how can he say all this and still worship towards the east?
+*    Why is Position with level spec {1} evaluating on {0}?
+*    How can decompressing neutronium accelerate beta decay to form heavy elements?
+*    Can I ask the original authors not to publish a corrigendum on their own so I can publish a comment?
+*    Why are motors in racing electric vehicles so much louder than in consumer electric vehicles?
+*    Could lightning occur in fog or mist?
+*    What does the “L” marker/icon in S3 file really mean? Does it mean “latest?”
+*    Calculating standard errors in least squares and the normality assumption
+*    Do EU citizens need ETA to visit Gibraltar?
+*    Series of Afrikaans Children's stories
+*    How hot or cold would the caves on Venus be?
+*    What are these small white things I saw ants carrying?
+*    Dual US/Canada citizen: Which passport to use at airport security?
+*    \ref theorem hyperlink jumps to the wrong theorem
+*    Xubuntu Linux 25.10 - not available automatically
+*    Two triangles in a light bulb
+*    How filesystem blocks relate to NVMe blocks
+*    Origins of the Perizi
+*    What is the group of units of this ring?
+*    What percentage of federal employees are living "paycheck to paycheck"?
+*    If the Terminator was programmed to follow Kate Brewster commands, why didn't he release her when she asked him to?
+*    The usefulness of the material implication
+*    Who is Guinan referring to when she asks Data about her father in Time's Arrow?
+
+Question feed
+
+Subscribe to RSS
+================
+
+ Question feed 
+To subscribe to this RSS feed, copy and paste this URL into your RSS reader.
+
+ 
+
+lang-cs
+
+Why are you flagging this comment?
+==================================
+
+It contains harassment, bigotry or abuse. 
+This comment attacks a person or group. Learn more in our Abusive behavior policy.
+
+ 
+
+It's unfriendly or unkind. 
+This comment is rude or condescending. Learn more in our Code of Conduct.
+
+ 
+
+Not needed. 
+This comment is not relevant to the post.
+
+ 
+
+Enter at least 6 characters
+
+Something else. 
+A problem not listed above. Try to be as specific as possible.
+
+ 
+
+Enter at least 6 characters
+
+Flag comment Cancel
+
+You have 0 flags left today
+
+##### Game Development
+
+*   Tour
+*   Help
+*   Chat
+*   Contact
+*   Feedback
+
+##### Company
+
+*   Stack Overflow
+*   Teams
+*   Advertising
+*   Talent
+*   About
+*   Press
+*   Legal
+*   Privacy Policy
+*   Terms of Service
+*    Your Privacy Choices 
+*   Cookie Policy
+
+##### Stack Exchange Network
+
+*   Technology
+*   Culture & recreation
+*   Life & arts
+*   Science
+*   Professional
+*   Business
+*   API
+*   Data
+
+*   Blog
+*   Facebook
+*   Twitter
+*   LinkedIn
+*   Instagram
+
+Site design / logo © 2025 Stack Exchange Inc; user contributions licensed under CC BY-SA. rev 2025.10.21.35661
+
+By continuing to use this website, you agree Stack Exchange can store cookies on your device and disclose information in accordance with our Cookie Policy. By exiting this window, default cookies will be accepted. To reject cookies, select an option from below.
+
+Necessary cookies only
+
+Customize settings
+
+Cookie Consent Preference Center
+--------------------------------
+
+When you visit any of our websites, it may store or retrieve information on your browser, mostly in the form of cookies. This information might be about you, your preferences, or your device and is mostly used to make the site work as you expect it to. The information does not usually directly identify you, but it can give you a more personalized experience. Because we respect your right to privacy, you can choose not to allow some types of cookies. Click on the different category headings to find out more and manage your preferences. Please note, blocking some types of cookies may impact your experience of the site and the services we are able to offer. 
+
+Cookie Policy
+
+Accept all cookies
+### Manage Consent Preferences
+
+#### Strictly Necessary Cookies
+
+Always Active
+
+These cookies are necessary for the website to function and cannot be switched off in our systems. They are usually only set in response to actions made by you which amount to a request for services, such as setting your privacy preferences, logging in or filling in forms. You can set your browser to block or alert you about these cookies, but some parts of the site will not then work. These cookies do not store any personally identifiable information.
+
+#### Targeting Cookies
+
+- [x] Targeting Cookies 
+
+These cookies are used to make advertising messages more relevant to you and may be set through our site by us or by our advertising partners. They may be used to build a profile of your interests and show you relevant advertising on our site or on other sites. They do not store directly personal information, but are based on uniquely identifying your browser and internet device.
+
+#### Performance Cookies
+
+- [x] Performance Cookies 
+
+These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us to know which pages are the most and least popular and see how visitors move around the site. All information these cookies collect is aggregated and therefore anonymous. If you do not allow these cookies we will not know when you have visited our site, and will not be able to monitor its performance.
+
+#### Functional Cookies
+
+- [x] Functional Cookies 
+
+These cookies enable the website to provide enhanced functionality and personalisation. They may be set by us or by third party providers whose services we have added to our pages. If you do not allow these cookies then some or all of these services may not function properly.
+
+### Cookie List
+
+Clear
+
+*   - [x] checkbox label label 
+
+Apply Cancel
+
+Consent Leg.Interest
+
+- [x] checkbox label label
+
+- [x] checkbox label label
+
+- [x] checkbox label label
+
+Necessary cookies only Confirm My Choices
